@@ -15,27 +15,34 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Overpass:wght@400;600;800;900&display=swap" rel="stylesheet">
 <style>
-/* VOICE: a friendly night drive across America; short lines, one job per screen.
+/* VOICE: a friendly daytime road trip across America; short lines, one job per screen.
    IDEA: each day is a named American road drawn as a map; rare answers drive you further and the animal you spotted is planted where you stopped.
-   PICTURE: a full-screen night road map (national-park-poster flat shapes, lit farmhouse windows), highway signs as UI:
-     green guide sign for the next stop, brown recreation signs for landmarks, yellow wildlife-crossing diamonds for answers, a route shield for the road.
-   COLOUR and TYPE: night ground, lane yellow, sign green, park brown, interstate red/blue; Overpass (highway lettering) + Bitter (slab, for prompts).
+   PICTURE: a folded paper road atlas: cream paper, pictorial scenery, a red highway line, the trip marked in yellow highlighter;
+     green guide signs for stops, green mile-marker posts for answers (with the animal you spotted), US route shields; results share as plain text (WhatsApp-friendly).
+   COLOUR and TYPE: atlas paper, highlighter yellow, highway red, sign green, park brown, interstate red/blue; Overpass (highway lettering) + Bitter (slab, for prompts).
    LAYOUT: question on top, map in the middle, answer bar at the bottom, on every screen size. */
-:root{--bg:#0f1216;--panel:rgba(17,20,26,.92);--panel2:#20252e;--ink:#f3eee3;--ink2:#a9a395;--line:#2f3540;--lane:#f2c230;--green:#0f6b3f;--green2:#1b8a55;--brown:#6b4226;--red:#c8102e;--blue:#2c5fc4}
+:root{--bg:#efe6cf;--panel:rgba(251,247,236,.97);--panel2:#efe7d2;--ink:#26231d;--ink2:#6b6253;--line:#d6c9aa;--lane:#ffd83a;--green:#00704a;--green2:#1b8a55;--brown:#6b4226;--red:#c8102e;--blue:#1d4f9c;--paper:#f4ecd6}
 *{box-sizing:border-box;min-width:0}
 html,body{height:100%}
-html{color-scheme:dark}
+html{color-scheme:light}
 body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 Overpass,system-ui,sans-serif;overflow:hidden}
 h1,h2,h3,p{margin:0}
 button,input{font:inherit}
 a{color:var(--ink2)}
-#map{position:fixed;inset:0;width:100%;height:100%;display:block;background:#1c2420}
+#map{position:fixed;inset:0;width:100%;height:100%;display:block;background:var(--paper)}
+/* atlas page folds and paper grain, laid over the map */
+#folds{position:fixed;inset:0;pointer-events:none;z-index:1;mix-blend-mode:multiply;
+  background:
+   linear-gradient(90deg,transparent 32.6%,rgba(120,95,50,.10) 33.2%,rgba(255,255,255,.0) 33.4%,rgba(120,95,50,.05) 33.7%,transparent 34.6%),
+   linear-gradient(90deg,transparent 65.9%,rgba(120,95,50,.10) 66.5%,rgba(255,255,255,0) 66.7%,rgba(120,95,50,.05) 67%,transparent 67.9%),
+   linear-gradient(180deg,transparent 48.6%,rgba(120,95,50,.09) 49.6%,rgba(255,255,255,0) 50%,rgba(120,95,50,.05) 50.4%,transparent 51.4%),
+   radial-gradient(ellipse at center,transparent 60%,rgba(120,90,40,.16) 100%)}
 #pins{position:fixed;inset:0;pointer-events:none;overflow:hidden}
-.lbl{position:absolute;transform:translate(-50%,-100%);background:var(--brown);color:#fff;border:1.5px solid #fff;outline:1.5px solid var(--brown);border-radius:5px;padding:1px 6px 0;text-align:center;font-weight:800;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;line-height:1.2;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.5)}
+.lbl{position:absolute;transform:translate(-50%,-100%);background:var(--green);color:#fff;border:1.5px solid #fff;outline:1.5px solid var(--green);border-radius:5px;padding:1px 6px 0;text-align:center;font-weight:800;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;line-height:1.2;white-space:nowrap;box-shadow:0 2px 5px rgba(60,40,10,.35)}
 .lbl small{display:block;font-size:9px;font-weight:600;letter-spacing:.02em;text-transform:none;opacity:.9}
-.lbl.hit{background:#7d5a1e;outline-color:#7d5a1e}
-.lbl.end{background:var(--green);outline-color:var(--green)}
-.pin{position:absolute;width:34px;height:34px;transform:translate(-50%,-90%);filter:drop-shadow(0 2px 3px rgba(0,0,0,.6))}
+.lbl.hit::before{content:'✓ ';color:#ffd83a}
+.lbl.end{background:var(--blue);outline-color:var(--blue)}
+.pin{position:absolute;width:34px;height:34px;transform:translate(-50%,-90%);filter:drop-shadow(0 2px 2px rgba(60,40,10,.45))}
 #pins.far .pin{width:22px;height:22px}
 .pin.new{animation:plant .5s cubic-bezier(.3,1.6,.5,1)}
 @keyframes plant{0%{transform:translate(-50%,-90%) scale(0)}100%{transform:translate(-50%,-90%) scale(1)}}
@@ -49,34 +56,34 @@ a{color:var(--ink2)}
 /* chrome */
 .top{position:fixed;left:0;right:0;top:0;display:grid;grid-template-columns:1fr auto 1fr;align-items:start;gap:8px;padding:10px max(14px,3vw) 0;pointer-events:none;z-index:5}
 .top>*{pointer-events:auto}
-.odo{font-weight:900;font-size:28px;line-height:1;font-variant-numeric:tabular-nums;text-shadow:0 2px 8px #000}
-.odo small{font-size:12px;letter-spacing:.12em;margin-left:4px;color:var(--ink2)}
+.odo{font-weight:900;font-size:24px;line-height:1;font-variant-numeric:tabular-nums;background:#26231d;color:#fff;border-radius:6px;padding:4px 8px 2px;justify-self:start;box-shadow:0 2px 6px rgba(60,40,10,.3)}
+.odo small{font-size:11px;letter-spacing:.12em;margin-left:4px;color:#cfc6b3}
 .prog{display:flex;flex-direction:column;align-items:center;gap:3px}
 .prog .slots{display:flex;gap:3px}
 .prog .slots i{width:22px;height:22px;display:block}
 .prog .slots i svg{width:100%;height:100%}
-.prog .slots i.open{border:1.5px dashed rgba(255,255,255,.35);transform:rotate(45deg) scale(.62);border-radius:3px}
-.prog span{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--ink2);text-shadow:0 1px 4px #000}
+.prog .slots i.open{border:1.5px dashed rgba(38,35,29,.4);transform:scale(.62,.8);border-radius:3px;background:rgba(255,255,255,.5)}
+.prog span{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--ink);text-shadow:0 0 3px #fff,0 0 6px #fff}
 .guide{justify-self:end;background:var(--green);color:#fff;border:2px solid #fff;outline:2px solid var(--green);border-radius:6px;padding:3px 10px;font-weight:800;font-size:15px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.5)}
 .guide:empty{display:none}
 body.kb .top{display:none}
 body.kb .card{top:8px;max-height:40vh}
-.card{position:fixed;left:50%;transform:translateX(-50%);top:62px;width:min(600px,calc(100% - 24px));background:var(--panel);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:12px;padding:10px 14px;z-index:4;box-shadow:0 10px 30px rgba(0,0,0,.45);max-height:calc(100% - 150px);overflow:auto}
-.cat{font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#6fd39c}
+.card{position:fixed;left:50%;transform:translateX(-50%);top:62px;width:min(600px,calc(100% - 24px));background:var(--panel);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:12px;padding:10px 14px;z-index:4;box-shadow:0 8px 24px rgba(60,40,10,.25);max-height:calc(100% - 150px);overflow:auto}
+.cat{font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:var(--red)}
 .q{font-family:Bitter,Georgia,serif;font-weight:700;font-size:clamp(18px,2.4vw,23px);line-height:1.15;margin-top:2px}
 .rule{color:var(--ink2);font-size:14px;margin-top:2px}
-.bar{position:fixed;left:50%;transform:translateX(-50%);bottom:max(12px,env(safe-area-inset-bottom));width:min(600px,calc(100% - 24px));background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px;display:flex;gap:8px;align-items:center;z-index:4;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.bar{position:fixed;left:50%;transform:translateX(-50%);bottom:max(12px,env(safe-area-inset-bottom));width:min(600px,calc(100% - 24px));background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px;display:flex;gap:8px;align-items:center;z-index:4;box-shadow:0 8px 24px rgba(60,40,10,.25)}
 .bar form{display:flex;gap:8px;flex:1;align-items:center}
-.bar input{flex:1;font-size:17px;padding:8px 12px;min-height:44px;border:2px solid var(--green2);border-radius:9px;background:#0c0f13;color:var(--ink)}
+.bar input{flex:1;font-size:17px;padding:8px 12px;min-height:44px;border:2px solid var(--blue);border-radius:9px;background:#fff;color:var(--ink)}
 .btn{min-height:44px;padding:0 16px;border-radius:9px;border:2px solid var(--line);font-weight:800;cursor:pointer;background:transparent;color:var(--ink);font-size:16px;white-space:nowrap}
-.btn.go{background:var(--green);border-color:#fff;outline:2px solid var(--green);color:#fff}
+.btn.go{background:var(--blue);border-color:#fff;outline:2px solid var(--blue);color:#fff}
 .btn.wide{flex:1}
 .btn.sm{min-height:40px;font-size:14px;padding:0 12px}
 .btn:focus-visible,input:focus-visible,.chip:focus-visible{outline:2px solid var(--lane);outline-offset:2px}
 .ring{width:44px;height:44px;flex:none;position:relative;display:grid;place-items:center;font-weight:900;font-size:17px;font-variant-numeric:tabular-nums}
 .ring svg{position:absolute;inset:0;transform:rotate(-90deg)}
-.ring.low{color:#ff6b6b}
-.msg{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(max(12px,env(safe-area-inset-bottom)) + 74px);background:#000c;border-radius:999px;padding:4px 14px;font-size:14px;z-index:4;white-space:nowrap}
+.ring.low{color:var(--red)}
+.msg{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(max(12px,env(safe-area-inset-bottom)) + 74px);background:#26231de6;color:#fff;border-radius:999px;padding:4px 14px;font-size:14px;z-index:4;white-space:nowrap}
 .msg:empty{display:none}
 
 /* reveal */
@@ -85,21 +92,21 @@ body.kb .card{top:8px;max-height:40vh}
 .diamond{width:100%;height:100%;transition:transform .12s ease-in}
 .diamond.flip{transform:rotateY(90deg)}
 .rv .animal{font-family:Bitter,Georgia,serif;font-weight:700;font-size:clamp(19px,2.6vw,24px);line-height:1.05}
-.rv .gain{background:var(--green);border:2px solid #fff;outline:2px solid var(--green);border-radius:6px;padding:1px 8px;font-weight:900;font-size:16px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.rv .gain{color:#fff;background:var(--green);border:2px solid #fff;outline:2px solid var(--green);border-radius:6px;padding:1px 8px;font-weight:900;font-size:16px;white-space:nowrap;font-variant-numeric:tabular-nums}
 .rv .ans{grid-column:2/4;font-size:14px;color:var(--ink2)}
 .rv .ans b{color:var(--ink)}
-.stopban{display:flex;gap:10px;align-items:center;margin-top:8px;background:var(--brown);border:2px solid #fff;outline:2px solid var(--brown);border-radius:7px;padding:8px 12px}
+.stopban{display:flex;gap:10px;align-items:center;margin-top:8px;color:#fff;background:var(--green);border:2px solid #fff;outline:2px solid var(--green);border-radius:7px;padding:8px 12px}
 .stopban b{display:block;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
 .stopban span{font-size:13px;opacity:.9}
 .stopban svg{width:28px;height:28px;flex:none}
 .ladder{display:grid;grid-template-columns:repeat(6,1fr);gap:3px;margin-top:6px}
 .ladder div{display:flex;flex-direction:row;justify-content:center;gap:4px;align-items:center;border-radius:6px;padding:2px 0;font-weight:800;font-size:12px;color:var(--ink2)}
 .ladder div svg{width:20px;height:20px}
-.ladder div.on{background:var(--lane);color:#14161b}
+.ladder div.on{background:var(--lane);color:#26231d}
 .alt{font-size:12px;color:var(--ink2);margin-top:4px}
 
 /* panels: intro, end, trip log */
-.panel{position:fixed;z-index:4;background:var(--panel);backdrop-filter:blur(6px);border:1px solid var(--line);overflow:auto;box-shadow:0 10px 30px rgba(0,0,0,.45);padding:18px 20px}
+.panel{position:fixed;z-index:4;background:var(--panel);backdrop-filter:blur(6px);border:1px solid var(--line);overflow:auto;box-shadow:0 8px 24px rgba(60,40,10,.25);padding:18px 20px}
 .side{left:0;top:0;bottom:0;width:min(440px,100%);border-radius:0 12px 12px 0}
 .brand{display:flex;align-items:center;gap:10px}
 .brand svg{width:30px;height:32px;flex:none}
@@ -107,7 +114,7 @@ body.kb .card{top:8px;max-height:40vh}
 .brand .tag{color:var(--ink2);font-size:12px}
 .chips{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
 .chip{border:1px solid var(--line);background:transparent;color:var(--ink2);border-radius:999px;padding:5px 12px;min-height:34px;font-size:13px;font-weight:800;cursor:pointer}
-.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.chip[aria-pressed=true]{background:var(--ink);color:#fff;border-color:var(--ink)}
 .kicker{font-size:12px;font-weight:800;letter-spacing:.12em;color:var(--ink2);text-transform:uppercase}
 .shield{display:inline-grid;place-items:center;vertical-align:middle;margin-right:8px}
 .roadname{font-family:Bitter,Georgia,serif;font-size:28px;font-weight:700;line-height:1.1;margin:4px 0 4px}
@@ -128,7 +135,7 @@ pre.share{background:var(--panel2);padding:10px;border-radius:6px;white-space:pr
 .foot{color:var(--ink2);font-size:12px;margin-top:16px}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:12px 0}
 .stats div{background:var(--panel2);border-radius:6px;padding:8px 10px}
-.stats b{display:block;font-size:22px;font-weight:900;color:var(--lane);font-variant-numeric:tabular-nums;line-height:1.1}
+.stats b{display:block;font-size:22px;font-weight:900;color:var(--blue);font-variant-numeric:tabular-nums;line-height:1.1}
 .stats small{color:var(--ink2);font-size:12px}
 .log h3{font-size:13px;font-weight:800;margin:14px 0 4px;color:var(--ink2);letter-spacing:.08em;text-transform:uppercase}
 .trips li{grid-template-columns:minmax(0,1fr) auto}
@@ -164,7 +171,14 @@ pre.share{background:var(--panel2);padding:10px;border-radius:6px;white-space:pr
 .homep .how{margin-top:4px}
 .homep .homefoot{justify-content:center;gap:0;padding-top:4px;margin-top:4px}
 .homep .hp-credit{text-align:center;margin-top:4px;font-size:11px}
-.testnote{background:#5a4a12;color:#fff3c4;border-radius:6px;padding:6px 10px;font-size:13px;margin-top:10px}
+
+/* results header */
+.pc-from{font-size:13px;color:var(--ink2);font-weight:700}
+.pc-row{display:flex;align-items:flex-end;justify-content:space-between;gap:8px;flex-wrap:wrap;margin-top:4px}
+.pc-row .big{margin:0}
+.pc-signs{display:flex;gap:2px}
+.pct{font-size:15px;font-weight:700;margin:10px 0 0}.pct small{color:var(--ink2);font-weight:600}
+.testnote{background:#fff1b0;color:#5a4a12;border-radius:6px;padding:6px 10px;font-size:13px;margin-top:10px}
 /* results */
 .res-head{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap}
 .res-head .pct{font-size:15px;font-weight:700;margin:0 0 8px}
@@ -206,7 +220,7 @@ pre.share{background:var(--panel2);padding:10px;border-radius:6px;white-space:pr
 </head>
 <body>
 <svg id="map" aria-hidden="true" preserveAspectRatio="none"></svg>
-<div id="pins" aria-hidden="true"></div>
+<div id="folds"></div><div id="pins" aria-hidden="true"></div>
 <div class="top hide" id="top"><div class="odo"><span id="odo">0</span><small>MILES</small></div><div class="prog"><div class="slots" id="slots"></div><span id="qn"></span></div><div class="guide" id="guide"></div></div>
 <header class="hero hide" id="hero"></header>
 <main class="card" id="card" aria-live="polite"></main>
@@ -293,7 +307,7 @@ const ZOO=[
  {pts:100,name:'Bald eagle',d:'<path d="M50 44C36 32 20 32 4 42c14 0 24 4 34 12l6 18 6-6 6 6 6-18c10-8 20-12 34-12-16-10-32-10-46 2z"/><circle cx="50" cy="38" r="8" fill="#fff" stroke="#14161b" stroke-width="2"/><path d="M47 40l3 6 3-6z" fill="#f2c230" stroke="#14161b" stroke-width="1"/><path d="M44 72l6 10 6-10z" fill="#fff" stroke="#14161b" stroke-width="2"/>'}
 ];
 const CUTS=[.12,.28,.48,.68,.86,1.01], SECS=25, URL_='backroads.howtospeakdata.com';
-const sign=(k,size)=>`<svg viewBox="0 0 100 100" width="${size||'100%'}" height="${size||'100%'}"><rect x="15" y="15" width="70" height="70" rx="6" transform="rotate(45 50 50)" fill="${k<0?'#5b5f66':'#f2c230'}" stroke="#14161b" stroke-width="3"/><rect x="19" y="19" width="62" height="62" rx="4" transform="rotate(45 50 50)" fill="none" stroke="#14161b" stroke-width="1.5"/>${k<0?'<text x="50" y="56" text-anchor="middle" font-size="13" font-weight="900" fill="#14161b" font-family="Overpass,sans-serif">NO SIGN</text>':`<g fill="#14161b" transform="translate(20 18) scale(.6)">${ZOO[k].d}</g>`}</svg>`;
+const sign=(k,size)=>`<svg viewBox="0 0 100 100" width="${size||'100%'}" height="${size||'100%'}"><rect x="14" y="3" width="72" height="94" rx="8" fill="${k<0?'#8a8478':'#00704a'}" stroke="#fff" stroke-width="5"/>${k<0?'<text x="50" y="64" text-anchor="middle" font-size="40" font-weight="900" fill="#fff" font-family="Overpass,sans-serif">–</text>':`<g fill="#fff" transform="translate(20 4) scale(.6)">${ZOO[k].d.replace(/fill="#f2c230"/g,'fill="#ffd83a"').replace(/fill="#fff" stroke="#14161b"/g,'fill="#00704a" stroke="#fff"')}</g><text x="50" y="88" text-anchor="middle" font-size="${ZOO[k].pts>99?30:36}" font-weight="900" fill="#fff" font-family="Overpass,sans-serif">${ZOO[k].pts}</text>`}</svg>`;
 
 // ---------- matching ----------
 const norm=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/&/g,' and ').replace(/['’`.]/g,'').replace(/[^a-z0-9 ]/g,' ').replace(/\b(the|jr|sr)\b/g,' ').replace(/\bst\b/g,'saint').replace(/\bmt\b/g,'mount').replace(/\s+/g,' ').trim();
@@ -422,22 +436,22 @@ const ICON={
  mesa:SYM.mesa,
 };
 const BIOME={
- plains:{g:'#3d402b',items:[['tuft',8,26],['shrub',3,40],['oak',3,70],['field',2,150],['house',1,60],['barn',1,70],['windmill',1,80]]},
- farm:{g:'#34402b',items:[['field',6,170],['fieldB',5,170],['oak',4,72],['barn',2,72],['silo',2,70],['house',2,60],['tuft',2,26]]},
- desert:{g:'#4b3d2c',items:[['sage',6,36],['cactus',4,58],['rock',3,44],['mesa',1,170],['tuft',2,24]]},
- redrock:{g:'#55372a',items:[['mesa',3,190],['hoodoo',3,70],['rock',3,46],['sage',4,36],['cactus',1,50]]},
- forest:{g:'#24382a',items:[['pine',7,72],['oak',6,74],['cabin',1,58],['tuft',1,26]]},
- autumn:{g:'#2c3526',items:[['autumnA',6,74],['autumnB',5,74],['pine',4,72],['ridge',2,220],['cabin',1,56]]},
- pine:{g:'#22352b',items:[['pine',12,74],['rock',2,44],['tuft',1,26]]},
- coast:{g:'#2b3a2c',items:[['cypress',3,80],['pine',4,72],['shrub',5,40],['house',1,56],['rock',1,40]]},
- palm:{g:'#3e3b2b',items:[['palm',5,86],['shrub',4,38],['house',2,56],['sage',2,34]]},
- keys:{g:'#3c3e2c',items:[['palm',6,84],['shrub',6,36],['house',1,52]]},
- bayou:{g:'#263528',items:[['cypress',5,82],['moss',4,90],['shrub',3,40],['house',1,56]]},
- ranch:{g:'#45412b',items:[['tuft',5,26],['shrub',4,40],['oak',2,66],['cattle',2,34],['windmill',1,80],['derrick',1,90]]},
- mountain:{g:'#2c3431',items:[['peak',4,230],['pine',6,70],['rock',2,46]]},
- badlands:{g:'#4b3e34',items:[['hoodoo',4,70],['mesa',3,180],['tuft',4,26],['rock',2,44]]},
- tropical:{g:'#1f3a2a',items:[['palm',6,86],['oak',4,70],['shrub',4,40]]},
- alpine:{g:'#28343a',items:[['peak',4,240],['pine',7,72],['snow',3,90],['rock',1,44]]},
+ plains:{g:'#e8dfb4',items:[['tuft',8,26],['shrub',3,40],['oak',3,70],['field',2,150],['house',1,60],['barn',1,70],['windmill',1,80]]},
+ farm:{g:'#dfe3b0',items:[['field',6,170],['fieldB',5,170],['oak',4,72],['barn',2,72],['silo',2,70],['house',2,60],['tuft',2,26]]},
+ desert:{g:'#f0dcb0',items:[['sage',6,36],['cactus',4,58],['rock',3,44],['mesa',1,170],['tuft',2,24]]},
+ redrock:{g:'#ecc6a0',items:[['mesa',3,190],['hoodoo',3,70],['rock',3,46],['sage',4,36],['cactus',1,50]]},
+ forest:{g:'#cfe0b4',items:[['pine',7,72],['oak',6,74],['cabin',1,58],['tuft',1,26]]},
+ autumn:{g:'#e6d6ae',items:[['autumnA',6,74],['autumnB',5,74],['pine',4,72],['ridge',2,220],['cabin',1,56]]},
+ pine:{g:'#c9dcb2',items:[['pine',12,74],['rock',2,44],['tuft',1,26]]},
+ coast:{g:'#d7e2b8',items:[['cypress',3,80],['pine',4,72],['shrub',5,40],['house',1,56],['rock',1,40]]},
+ palm:{g:'#ece0b2',items:[['palm',5,86],['shrub',4,38],['house',2,56],['sage',2,34]]},
+ keys:{g:'#efe6c0',items:[['palm',6,84],['shrub',6,36],['house',1,52]]},
+ bayou:{g:'#cddcb2',items:[['cypress',5,82],['moss',4,90],['shrub',3,40],['house',1,56]]},
+ ranch:{g:'#ebdcab',items:[['tuft',5,26],['shrub',4,40],['oak',2,66],['cattle',2,34],['windmill',1,80],['derrick',1,90]]},
+ mountain:{g:'#d9dcc4',items:[['peak',4,230],['pine',6,70],['rock',2,46]]},
+ badlands:{g:'#e8d3b2',items:[['hoodoo',4,70],['mesa',3,180],['tuft',4,26],['rock',2,44]]},
+ tropical:{g:'#c7e0b0',items:[['palm',6,86],['oak',4,70],['shrub',4,40]]},
+ alpine:{g:'#dfe6e2',items:[['peak',4,240],['pine',7,72],['snow',3,90],['rock',1,44]]},
 };
 // ---------- map engine ----------
 const NS='http://www.w3.org/2000/svg', svg=$('map'), pinsEl=$('pins');
@@ -466,7 +480,7 @@ function buildMap(){
   const W=Math.max(...xs)-Math.min(...xs)+PAD*2,H=Math.max(...ys)-Math.min(...ys)+PAD*2;
   svg.innerHTML='';
   const defs=el('defs');svg.append(defs);
-  for(const [k,v] of Object.entries(SYM))defs.insertAdjacentHTML('beforeend',`<symbol id="s-${k}" viewBox="0 0 100 100" overflow="visible">${v}</symbol>`);
+  for(const [k,v] of Object.entries(SYM))defs.insertAdjacentHTML('beforeend',`<symbol id="s-${k}" viewBox="0 0 100 100" overflow="visible">${v.replace(/#ffd36b/g,'#9cc0d4')}</symbol>`);
   for(const [k,v] of Object.entries(ICON))defs.insertAdjacentHTML('beforeend',`<symbol id="i-${k}" viewBox="0 0 100 100" overflow="visible">${v}</symbol>`);
   const d=catmull(pts),probe=el('path',{d});svg.append(probe);
   const len=probe.getTotalLength(),S=[];
@@ -479,22 +493,25 @@ function buildMap(){
   const isWater=(n)=>water==='both'?n.d>120+40*Math.sin(n.s.s/150):(water==='R'&&n.side>0||water==='L'&&n.side<0)&&n.d>coast(n.s);
   // ground: base colour, then soft biome blotches along the road
   const g0=BIOME[bandOf(T.look,0)].g;
-  svg.append(el('rect',{x:-30000,y:-30000,width:W+60000,height:H+60000,fill:water==='both'?'#10253a':g0}));
-  const ground=el('g',{opacity:.55});svg.append(ground);
+  svg.append(el('rect',{x:-30000,y:-30000,width:W+60000,height:H+60000,fill:water==='both'?'#a9d3e6':g0}));
+  // atlas grid
+  const grid=el('g',{stroke:'#8fb1c4','stroke-width':3,opacity:.35});svg.append(grid);
+  for(let gx=-4000;gx<W+4000;gx+=800)grid.append(el('line',{x1:gx,y1:-4000,x2:gx,y2:H+4000}));for(let gy=-4000;gy<H+4000;gy+=800)grid.append(el('line',{x1:-4000,y1:gy,x2:W+4000,y2:gy}));
+  const ground=el('g',{opacity:.6});svg.append(ground);
   for(let i=0;i<S.length;i+=6){const s=S[i];ground.append(el('circle',{cx:s.x,cy:s.y,r:620,fill:BIOME[bandOf(T.look,s.t)].g}))}
   // water
   if(water==='R'||water==='L'){const sg=water==='R'?1:-1,line=S.map(s=>[s.x+s.nx*sg*coast(s),s.y+s.ny*sg*coast(s)]);
     const a0=S[0],a1=S[S.length-1],dl=Math.hypot(a1.x-a0.x,a1.y-a0.y)||1,fx=-(a1.y-a0.y)/dl*sg*9000,fy=(a1.x-a0.x)/dl*sg*9000;   // push out square to the overall route
     const far=[[line[line.length-1][0]+(a1.x-a0.x)/dl*9000+fx,line[line.length-1][1]+(a1.y-a0.y)/dl*9000+fy],[line[0][0]-(a1.x-a0.x)/dl*9000+fx,line[0][1]-(a1.y-a0.y)/dl*9000+fy]];
     line.push([line[line.length-1][0]+(a1.x-a0.x)/dl*9000,line[line.length-1][1]+(a1.y-a0.y)/dl*9000]);line.unshift([line[0][0]-(a1.x-a0.x)/dl*9000,line[0][1]-(a1.y-a0.y)/dl*9000]);
-    svg.append(el('path',{d:'M'+line.concat(far).map(p=>p.join(' ')).join('L')+'Z',fill:'#10253a',stroke:'#c9b68a','stroke-width':14,'stroke-opacity':.35}));
-    const waves=el('g',{stroke:'#2f5b7c','stroke-width':4,fill:'none','stroke-linecap':'round'});svg.append(waves);
+    svg.append(el('path',{d:'M'+line.concat(far).map(p=>p.join(' ')).join('L')+'Z',fill:'#a9d3e6',stroke:'#5f97b8','stroke-width':10,'stroke-opacity':.9}));
+    const waves=el('g',{stroke:'#7fb2cf','stroke-width':4,fill:'none','stroke-linecap':'round'});svg.append(waves);
     for(let i=0;i<S.length;i+=3)for(const k of [1.6,2.4,3.4]){const s=S[i],o=coast(s)*k+r()*60;waves.append(el('path',{d:`M${s.x+s.nx*sg*o-20} ${s.y+s.ny*sg*o}q10 -8 20 0t20 0`}))}}
-  if(water==='both'){svg.append(el('path',{d,fill:'none',stroke:'#c9b68a','stroke-opacity':.45,'stroke-width':300,'stroke-linecap':'round'}));
+  if(water==='both'){svg.append(el('path',{d,fill:'none',stroke:'#5f97b8','stroke-opacity':.9,'stroke-width':290,'stroke-linecap':'round'}));
     svg.append(el('path',{d,fill:'none',stroke:g0,'stroke-width':270,'stroke-linecap':'round'}))}
   if(water==='river'){const rv=S.map(s=>[s.x+s.nx*(150+40*Math.sin(s.s/260)),s.y+s.ny*(150+40*Math.sin(s.s/260))]);
-    svg.append(el('path',{d:'M'+rv.map(p=>p.join(' ')).join('L'),fill:'none',stroke:'#1d4a6b','stroke-width':70,'stroke-linejoin':'round','stroke-linecap':'round'}));
-    svg.append(el('path',{d:'M'+rv.map(p=>p.join(' ')).join('L'),fill:'none',stroke:'#2f6a92','stroke-width':6,'stroke-dasharray':'30 50'}))}
+    svg.append(el('path',{d:'M'+rv.map(p=>p.join(' ')).join('L'),fill:'none',stroke:'#8fc3dc','stroke-width':70,'stroke-linejoin':'round','stroke-linecap':'round'}));
+    svg.append(el('path',{d:'M'+rv.map(p=>p.join(' ')).join('L'),fill:'none',stroke:'#5f97b8','stroke-width':4,'stroke-dasharray':'30 50'}))}
   // landmark spots, alternating sides (land side on a coast)
   const spot=T.stops.map(([m],i)=>{const s=S[Math.min(S.length-1,Math.round(m/700*(S.length-1)))];
     const sg=water==='R'?-1:water==='L'?1:(i%2?1:-1),o=water==='both'?0:150;return {x:s.x+s.nx*sg*o,y:s.y+s.ny*sg*o}});
@@ -514,10 +531,11 @@ function buildMap(){
   const sc=el('g');svg.append(sc);
   for(const it of items){const u=el('use',{href:'#s-'+it.name,x:it.x-it.sz/2,y:it.y-it.sz,width:it.sz,height:it.sz});sc.append(u)}
   // road: casing, asphalt, centre line, then the travelled stretch in lane yellow
-  svg.append(el('path',{d,fill:'none',stroke:'#0b0d10','stroke-width':34,'stroke-linecap':'round','stroke-linejoin':'round'}));
-  svg.append(el('path',{d,fill:'none',stroke:'#4a4e57','stroke-width':24,'stroke-linecap':'round','stroke-linejoin':'round'}));
-  svg.append(el('path',{d,fill:'none',stroke:'#cfc7b2','stroke-width':2.5,'stroke-dasharray':'16 22','stroke-opacity':.7}));
-  const done=el('path',{d,fill:'none',stroke:'#f2c230','stroke-width':14,'stroke-linecap':'round','stroke-linejoin':'round','stroke-dasharray':`0 ${len+10}`});svg.append(done);
+  // road: the trip so far in yellow highlighter, under a red atlas highway with a white casing
+  const done=el('path',{d,fill:'none',stroke:'#ffd83a','stroke-opacity':.85,'stroke-width':64,'stroke-linecap':'round','stroke-linejoin':'round','stroke-dasharray':`0 ${len+10}`});svg.append(done);
+  svg.append(el('path',{d,fill:'none',stroke:'#fffaf0','stroke-width':24,'stroke-linecap':'round','stroke-linejoin':'round'}));
+  svg.append(el('path',{d,fill:'none',stroke:'#7a1424','stroke-width':17,'stroke-linecap':'round','stroke-linejoin':'round'}));
+  svg.append(el('path',{d,fill:'none',stroke:'#d23a3a','stroke-width':12,'stroke-linecap':'round','stroke-linejoin':'round'}));
   const path=el('path',{d,fill:'none',stroke:'none'});svg.append(path);
   const ic=el('g');svg.append(ic);
   spot.forEach((p,i)=>ic.append(el('use',{href:'#i-'+T.stops[i][2],x:p.x-80,y:p.y-150,width:160,height:160})));
@@ -602,7 +620,7 @@ function intro(){
   panel.innerHTML=`<div class="hp-top"><h1 class="ttl">Backroads</h1><span class="kicker">${lbl}</span></div>
   <div class="roadname hp-road">${shield(T,26)}<span class="rn"></span></div>
   <p class="hp-from"></p>
-  <button class="btn go wide" id="start">Start ${G.test?'the replay':mode==='daily'?'today’s drive':'this drive'}</button>
+  <button class="btn go wide" id="start">${G.test?'Replay the trip':'Hit the road'}</button>
   <details class="how"><summary>How to play</summary><p>Seven prompts${timerOn?', 25 seconds each':''}. Name something that fits. Common answers barely move you; rare ones cover real ground, and you’ll spot rarer wildlife on the way.</p>
   <div class="zoo">${ZOO.map((z,k)=>`<span>${sign(k,22)}${z.pts} mi</span>`).join('')}</div></details>
   <div class="homefoot"><button class="lnk" data-m="${mode==='daily'?'free':'daily'}">${mode==='daily'?'Unlimited':'Daily'}</button><button class="lnk" data-t>${timerOn?'Timer on':'Timer off'}</button><button class="lnk" data-log>Trip log</button><button class="lnk" data-about>About</button>${TEST?'<button class="lnk" data-replay>Test: replay today</button>':''}</div>
@@ -616,7 +634,7 @@ function ask(){panel.classList.remove('homep');
   const p=getP(G.qs[G.i]);show(hero,false);barEl.classList.remove('home');show(topEl,true);show(panel,false);show(card,true);show(barEl,true);topbar();msgEl.textContent='';
   card.innerHTML=`<div class="cat"></div><h2 class="q"></h2>${p.rule?'<p class="rule"></p>':''}`;
   card.querySelector('.cat').textContent=p.cat;card.querySelector('.q').textContent=p.q;if(p.rule)card.querySelector('.rule').textContent=p.rule;
-  barEl.innerHTML=`${timerOn?`<div class="ring" id="ring"><svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="21" fill="none" stroke="#2f3540" stroke-width="4"/><circle id="rc" cx="25" cy="25" r="21" fill="none" stroke="#1b8a55" stroke-width="4" stroke-dasharray="132 132" stroke-linecap="round"/></svg><span id="rs">${SECS}</span></div>`:''}
+  barEl.innerHTML=`${timerOn?`<div class="ring" id="ring"><svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="21" fill="none" stroke="#e2d8c0" stroke-width="4"/><circle id="rc" cx="25" cy="25" r="21" fill="none" stroke="#1d4f9c" stroke-width="4" stroke-dasharray="132 132" stroke-linecap="round"/></svg><span id="rs">${SECS}</span></div>`:''}
   <form id="f" autocomplete="off"><input id="in" aria-label="Your answer" placeholder="Your answer" autocapitalize="off" spellcheck="false" enterkeyhint="go"><button class="btn go">Go</button><button class="btn sm" type="button" id="pass">Pass</button></form>`;
   if(camMode!=='ride')cam('ride',900);else cam('ride',300);
   const inp=$('in');inp.focus({preventScroll:true});
@@ -651,7 +669,7 @@ function answer(p,it){
   const ans=card.querySelector('.ans');if(it){const b=document.createElement('b');b.textContent='“'+it.name+'” ';ans.append(b,it.live?'A deep cut: not on our list, but it’s real.':k>=4?'A rare answer.':k>=2?'A good find.':'A common answer.')}else ans.textContent='No answer this time. The car stays put.';
   if(reached)card.querySelector('.stopban b').textContent=reached[1];
   card.querySelector('.alt').textContent=rarer.length?(k===5?'Also rare: ':'Rarer answers: ')+rarer.join(', '):'';
-  barEl.innerHTML=`<button class="btn go wide" id="nx" disabled>${G.i<7?`Next question (${G.i+1} of 7)`:'See your trip'}</button>`;
+  barEl.innerHTML=`<button class="btn go wide" id="nx" disabled>${G.i<7?`Keep driving · ${G.i+1} of 7`:'Pull over and see the trip'}</button>`;
   $('nx').onclick=()=>G.i<7?ask():end();
   const dm=$('dm'),lad=[...$('ld').children];
   const go=()=>{topbar();odo(before);cam('ride',300);
@@ -690,20 +708,20 @@ function curveSVG(sim,mine,stops){
   const pts=sm.map((v,i)=>[X(i*10),Y(v)]),line='M'+pts.map(p=>p.map(n=>n.toFixed(1)).join(' ')).join('L');
   const cut=pts.filter(p=>p[0]<=X(mine)),you=[X(mine),Y(sm[Math.min(70,Math.round(mine/10))])];
   return `<svg viewBox="-10 0 ${W+20} ${H+44}" width="100%" role="img" aria-label="Estimated spread of today's scores">
-   <path d="${'M0 '+(H-8)+'L'+cut.map(p=>p.join(' ')).join('L')+'L'+you[0]+' '+(H-8)+'Z'}" fill="#f2c230" opacity=".35"/>
-   <path d="${line}" fill="none" stroke="#a9a395" stroke-width="2"/><path d="${'M0 '+(H-8)+'L'+cut.map(p=>p.join(' ')).join('L')+'L'+you.join(' ')}" fill="none" stroke="#f2c230" stroke-width="3"/>
-   <line x1="${you[0]}" y1="${you[1]}" x2="${you[0]}" y2="${H-8}" stroke="#f2c230" stroke-dasharray="3 3"/><circle cx="${you[0]}" cy="${you[1]}" r="5" fill="#f2c230"/>
-   <text x="${you[0]}" y="${you[1]-10}" text-anchor="middle" fill="#f3eee3" font-size="13" font-weight="900">YOU</text>
-   <line x1="0" y1="${H-8}" x2="${W}" y2="${H-8}" stroke="#2f3540"/>
-   ${stops.map(([m,n],i)=>`<g transform="translate(${X(m)} ${H-8})"><line y2="6" stroke="#a9a395"/><text y="20" text-anchor="${i===0?'start':i===stops.length-1?'end':'middle'}" fill="#a9a395" font-size="12" font-weight="800">${m}</text><text class="sn" data-i="${i}" y="34" text-anchor="${i===0?'start':i===stops.length-1?'end':'middle'}" fill="#a9a395" font-size="10.5"></text></g>`).join('')}</svg>`}
+   <path d="${'M0 '+(H-8)+'L'+cut.map(p=>p.join(' ')).join('L')+'L'+you[0]+' '+(H-8)+'Z'}" fill="#ffd83a" opacity=".6"/>
+   <path d="${line}" fill="none" stroke="#7a705e" stroke-width="2"/><path d="${'M0 '+(H-8)+'L'+cut.map(p=>p.join(' ')).join('L')+'L'+you.join(' ')}" fill="none" stroke="#1d4f9c" stroke-width="3"/>
+   <line x1="${you[0]}" y1="${you[1]}" x2="${you[0]}" y2="${H-8}" stroke="#1d4f9c" stroke-dasharray="3 3"/><circle cx="${you[0]}" cy="${you[1]}" r="5" fill="#1d4f9c"/>
+   <text x="${you[0]}" y="${you[1]-10}" text-anchor="middle" fill="#26231d" font-size="13" font-weight="900">YOU</text>
+   <line x1="0" y1="${H-8}" x2="${W}" y2="${H-8}" stroke="#d6c9aa"/>
+   ${stops.map(([m,n],i)=>`<g transform="translate(${X(m)} ${H-8})"><line y2="6" stroke="#7a705e"/><text y="20" text-anchor="${i===0?'start':i===stops.length-1?'end':'middle'}" fill="#7a705e" font-size="12" font-weight="800">${m}</text><text class="sn" data-i="${i}" y="34" text-anchor="${i===0?'start':i===stops.length-1?'end':'middle'}" fill="#7a705e" font-size="10.5"></text></g>`).join('')}</svg>`}
 function logSVG(){
   const W=600,H=170,cw=W/7;
   return `<svg viewBox="0 0 ${W} ${H+26}" width="100%" role="img" aria-label="Miles for each question">
-   ${[25,50,75,100].map(v=>`<line x1="0" x2="${W}" y1="${H-v*1.3}" y2="${H-v*1.3}" stroke="#2f3540"/><text x="0" y="${H-v*1.3-3}" fill="#6f6a60" font-size="10">${v}</text>`).join('')}
-   ${G.ans.map((a,i)=>{const x=cw*i+cw/2,y=H-a.pts*1.3;return `<line x1="${x}" x2="${x}" y1="${H}" y2="${y}" stroke="#a9a395" stroke-width="3"/>
+   ${[25,50,75,100].map(v=>`<line x1="0" x2="${W}" y1="${H-v*1.3}" y2="${H-v*1.3}" stroke="#d6c9aa"/><text x="0" y="${H-v*1.3-3}" fill="#6f6a60" font-size="10">${v}</text>`).join('')}
+   ${G.ans.map((a,i)=>{const x=cw*i+cw/2,y=H-a.pts*1.3;return `<line x1="${x}" x2="${x}" y1="${H}" y2="${y}" stroke="#7a705e" stroke-width="3"/>
      <g transform="translate(${x-17} ${y-36})"><svg width="34" height="34" viewBox="0 0 100 100">${sign(a.tier).replace(/^<svg[^>]*>|<\/svg>$/g,'')}</svg></g>
-     <text x="${x}" y="${y-40}" text-anchor="middle" fill="#f3eee3" font-size="13" font-weight="900">${a.pts}</text><text x="${x}" y="${H+18}" text-anchor="middle" fill="#a9a395" font-size="12" font-weight="800">${i+1}</text>`}).join('')}
-   <line x1="0" x2="${W}" y1="${H}" y2="${H}" stroke="#a9a395"/></svg>`}
+     <text x="${x}" y="${y-40}" text-anchor="middle" fill="#26231d" font-size="13" font-weight="900">${a.pts}</text><text x="${x}" y="${H+18}" text-anchor="middle" fill="#7a705e" font-size="12" font-weight="800">${i+1}</text>`}).join('')}
+   <line x1="0" x2="${W}" y1="${H}" y2="${H}" stroke="#7a705e"/></svg>`}
 function end(){
   clearInterval(tick);panel.classList.remove('homep');
   if(G.mode==='daily'&&!G.test){store.set('day2',G);const h=store.get('hist',[]);if(!h.some(x=>x.date===G.date)){
@@ -715,9 +733,10 @@ function end(){
   const mid=new Date();mid.setHours(24,0,0,0);
   show(topEl,false);show(hero,false);show(card,false);show(barEl,false);show(panel,true);msgEl.textContent='';
   panel.innerHTML=`<div class="brand">${LOGO}<div><h1>Backroads</h1><div class="tag">${G.test?'Test replay · ':''}${G.mode==='daily'?'Daily drive #'+dayNo()+' · '+new Date(G.date+'T12:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}):'Unlimited drive'}</div></div></div>
-  <div class="roadname" style="font-size:22px;margin-top:12px">${shield(T,28)}<span class="rn"></span></div>
   ${G.test?'<p class="testnote">Test replay. This drive isn’t saved to your trip log or streak.</p>':''}
-  <div class="res-head"><div class="big">${mi}<small>miles</small></div><p class="pct">Further than about <b>${pct}%</b> of players <small>(estimate)</small></p></div>
+  <div class="roadname" style="font-size:20px;margin-top:12px">${shield(T,26)}<span class="pc-road"></span></div><div class="pc-from"></div>
+  <div class="pc-row"><span class="big">${mi}<small>miles</small></span><span class="pc-signs">${G.ans.map(a=>sign(a.tier,24)).join('')}</span></div>
+  <p class="pct">Further than about <b>${pct}%</b> of drivers today <small>(estimate)</small></p>
   <div class="row"><button class="btn go wide" id="cp">Share result</button></div>
   <p class="streak">Next daily drive in <b id="cd"></b>.</p>
   <div class="stopban" style="margin-top:10px"><svg viewBox="0 0 100 100">${ICON[at[2]]||''}</svg><div><b class="fl"></b><span class="fln"></span></div></div>
@@ -738,7 +757,7 @@ function end(){
   <p class="streak" style="margin-top:16px">Know a question with loads of answers?</p>
   <div class="row"><a class="btn wide" style="display:flex;align-items:center;justify-content:space-between;text-decoration:none" href="https://github.com/acotgreave/backroads/issues/new?title=Question%20idea%3A%20" target="_blank" rel="noopener">Suggest a question <span>→</span></a></div>
   ${chips()}${credit}`;
-  panel.querySelector('.rn').textContent=`${T.name}: ${T.from} to ${T.to}`;
+  panel.querySelector('.pc-road').textContent=T.name;panel.querySelector('.pc-from').textContent=`${T.from} to ${T.to}`;
   panel.querySelector('.fl').textContent=at[1];panel.querySelector('.fln').textContent=mi>=700?'You drove the whole road.':`Furthest landmark. ${nx[1]} was ${nx[0]-mi} miles further on.`;
   panel.querySelectorAll('.sn').forEach(t=>t.textContent=T.stops[+t.dataset.i][1].split(/[ ,]/)[0]);
   const bi=pop.reduce((b,x,i)=>ps[i].items.length>ps[b].items.length?i:b,0);panel.querySelector('.popa').textContent=`“${pop[bi].name}” · ${ps[bi].q}`;

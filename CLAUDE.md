@@ -20,6 +20,9 @@ Andy wants Boreen's **journey** feel, not Krillion's **dive** feel. This is a fi
 - Each day is a trip with a start and a destination. Progress shows as distance covered and stops reached, and the result is "how far you got".
 - Rarity reads as **what you spotted along the way** (the wildlife-crossing animals), not how deep you went.
 - New features should extend the journey: new roads, roadside stops, a trip log or road atlas of past days, "furthest drive" streaks, souvenirs from rare answers.
+- **Look: a daytime paper road atlas, not Boreen's night map** (Andy, 27 Nov 2026). Cream paper with folds, pictorial scenery, a red highway line with the trip marked in yellow highlighter, green guide signs for stops, green mile-marker posts for answers (the animal spotted is drawn on the post), US route shields, Overpass (Highway Gothic style) for sign lettering. Avoid Boreen's dark palette, brown signs and yellow diamond crossing signs.
+- The result share stays **plain text** (paste into WhatsApp with no friction). No image or postcard card.
+- Test mode: `?test=1` (remembered; `?test=0` turns it off) shows "Test: replay today". Replays never save to the trip log or streak.
 - When borrowing from OpenKrillion (see the roadmap), take **backend patterns only**. Leave out its ocean scene, depth zones, dive wording and sounds.
 
 ## Repo layout
