@@ -58,10 +58,10 @@ WD = {
  'airlines': dict(body='?item wdt:P31 wd:Q46970; wdt:P17 wd:Q30.', min=20),
  # added 27 Nov 2026 so lists cover the long tail; QIDs to confirm against the first build's report
  'beer':     dict(body='{?item wdt:P31/wdt:P279? wd:Q131734} UNION {?item wdt:P31/wdt:P279? wd:Q44} ?item wdt:P17|wdt:P495 wd:Q30.', min=40),
- 'fastfood': dict(body='?item wdt:P31/wdt:P279? wd:Q18534; wdt:P17 wd:Q30.', min=40),
+ 'fastfood': dict(body='{?item wdt:P31 wd:Q18509232} UNION {?item wdt:P452 wd:Q81799} {?item wdt:P17 wd:Q30} UNION {?item wdt:P159/wdt:P17 wd:Q30}', min=40),
  'stores':   dict(body='?item wdt:P31/wdt:P279? wd:Q507619; wdt:P17 wd:Q30.', min=40),
- 'soda':     dict(body='?item wdt:P31/wdt:P279? wd:Q147538; wdt:P17|wdt:P495 wd:Q30.', min=20),
- 'cereal':   dict(body='?item wdt:P31/wdt:P279? wd:Q215185; wdt:P17|wdt:P495 wd:Q30.', min=20),
+ 'soda':     dict(body='?item wdt:P279/wdt:P279? wd:Q147538. {?item wdt:P17|wdt:P495 wd:Q30} UNION {?item wdt:P176/wdt:P17 wd:Q30} UNION {?item wdt:P127/wdt:P17 wd:Q30}', min=20),
+ 'cereal':   dict(body='?item wdt:P31 wd:Q768267. {?item wdt:P17|wdt:P495 wd:Q30} UNION {?item wdt:P176/wdt:P17 wd:Q30} UNION {?item wdt:P127/wdt:P17 wd:Q30}', min=20),
 }
 # answer sets that are a subset of another prompt reuse its page views
 SUBSET_OF = {'mstates': 'states', 'twoword': 'states', 'atlantic': 'states', 'canada': 'states'}
