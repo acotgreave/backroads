@@ -10,7 +10,7 @@ let seen = [];
 const f = async (u, o) => { const r = await fetch(u, { ...(o || {}), ...UA }); const j = await r.json(); seen.push(j); return { json: async () => j }; };
 const cases = [
   // [prompt, answer, should count?]
-  ['beer', 'Fremont Brewing', 1], ['beer', 'Elysian Brewing', 1], ['beer', 'Pliny the Elder', 1], ['beer', 'Russian River Brewing', 1],
+  ['beer', 'Fremont Brewing', 1], ['beer', 'Elysian Brewing', 1], ['beer', 'Pliny the Younger', 1], ['beer', 'Pliny the Elder', 0], ['beer', 'Russian River Brewing', 1],
   ['beer', 'Seattle', 0], ['beer', 'Heineken', 0], ['beer', 'Guinness', 0], ['beer', 'Coors Field', 0],
   ['soda', 'Moxie', 1], ['soda', 'Cheerwine', 1], ['soda', 'Irn-Bru', 0],
   ['cereal', 'Kaboom', 1], ['cereal', 'Weetabix', 0],
@@ -22,7 +22,7 @@ const cases = [
   ['rivers', 'Snoqualmie River', 1], ['rivers', 'Thames', 0],
   ['dogs', 'Boykin Spaniel', 1], ['dogs', 'Labrador Retriever', 0],
   ['simpsons', 'Hans Moleman', 1], ['simpsons', 'Peter Griffin', 0],
-  ['sesame', 'Snuffleupagus', 1], ['friends', 'Gunther', 1], ['friends', 'Sheldon Cooper', 0],
+  ['sesame', 'Snuffleupagus', 1], ['friends', 'Gunther', 1], ['simpsons', 'Disco Stu', 1], ['candy', 'Goo Goo Cluster', 1], ['candy', 'Dairy Milk', 0], ['soda', 'Vimto', 0], ['friends', 'Sheldon Cooper', 0],
 ];
 (async () => {
   let wrong = 0;

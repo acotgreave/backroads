@@ -711,27 +711,49 @@ const WIKI={
   airlines:{kw:'airline',d:/\b(airline|air carrier)\b/i,c:/\bairlines\b/i,us:1},
   rivers:{kw:'river',d:/\b(river|tributary)\b/i,c:/\brivers of\b/i,us:1},
   dogs:{kw:'dog breed',d:/\b(dog breed|breed of dog)\b/i,c:/\bdog breeds originating in the united states\b/i,us:1},
-  simpsons:{d:/\bsimpsons\b/i,c:/\bthe simpsons characters\b/i},
-  sesame:{d:/\bsesame street\b/i,c:/\bsesame street (characters|muppets)\b/i},
-  friends:{d:/\bfriends\b/i,c:/\bfriends \(1994 tv series\) characters\b/i},
+  simpsons:{kw:'Simpsons',d:/\bsimpsons\b/i,c:/\bthe simpsons characters\b/i},
+  sesame:{kw:'Sesame Street',d:/\bsesame street\b/i,c:/\bsesame street (characters|muppets)\b/i},
+  friends:{kw:'Friends',d:/\bfriends\b/i,c:/\bfriends \(1994 tv series\) characters\b/i},
 };
+const NOT_US=/\b(japanese|british|english|scottish|welsh|irish|dutch|german|canadian|mexican|belgian|french|italian|australian|swiss|chinese|korean|swedish|danish|norwegian|indian|brazilian|spanish|czech|austrian|new zealand)\b/i;
 async function wikiCheck(p,raw,fetchFn){
   const W=WIKI[p.id];if(!W)return null;fetchFn=fetchFn||fetch;
   const q=raw.trim(),want=norm(q);if(want.length<3)return null;
-  const tries=[q];if(W.kw)tries.push(q+' '+W.kw);
-  const ctl=typeof AbortController!=='undefined'?new AbortController():null,to=ctl&&setTimeout(()=>ctl.abort(),6000);
+  const ctl=typeof AbortController!=='undefined'?new AbortController():null,to=ctl&&setTimeout(()=>ctl.abort(),7000);
+  const api=x=>fetchFn('https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&origin=*&redirects=1&prop=description%7Ccategories&cllimit=max&clshow=!hidden&'+x,ctl?{signal:ctl.signal}:{}).then(r=>r.json());
+  const cats=pg=>(pg.categories||[]).map(c=>c.title.replace(/^Category:/,''));
+  // right kind of thing, and American where the prompt needs it
+  const fits=(pg,pool)=>{const d=pg.description||'',cs=cats(pg);
+    if(!(W.d.test(d)||cs.some(c=>W.c.test(c))))return false;
+    if(!W.us)return true;
+    if(US_RE.test(d))return true;
+    if(NOT_US.test(d))return false;
+    if(cs.some(c=>(W.c.test(c)||W.d.test(c))&&US_RE.test(c)))return true;
+    // "Annabelle Candy Company brands" → is Annabelle Candy Company American?
+    const owners=cs.map(c=>(c.match(/^(.+) brands$/)||[])[1]).filter(Boolean);
+    return pool.some(o=>owners.includes(o.title)&&US_RE.test(o.description||''));};
+  const strip=t=>t.replace(/\s*\(.*?\)\s*/g,' ').trim();
   try{
-    for(const t of tries){
-      const u='https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&origin=*&redirects=1&generator=search&gsrnamespace=0&gsrlimit=4&prop=description%7Ccategories&cllimit=max&clshow=!hidden&gsrsearch='+encodeURIComponent(t);
-      const j=await (await fetchFn(u,ctl?{signal:ctl.signal}:{})).json();
+    // 1. the answer as an exact page title (also follows redirects, e.g. a character that redirects to a list)
+    const tc=q.replace(/\b\w/g,c=>c.toUpperCase());
+    const L=await api('titles='+encodeURIComponent([...new Set([q,tc])].join('|')));
+    const lp=((L.query&&L.query.pages)||[]).filter(pg=>!pg.missing&&!pg.invalid);
+    const red=(L.query&&L.query.redirects)||[];
+    let exactFail=false;
+    for(const pg of lp){
+      if(/same term|disambiguation/i.test(pg.description||''))continue;
+      if(fits(pg,lp)){const r=red.find(x=>x.to===pg.title);return r&&r.tofragment?r.from:strip(pg.title)}
+      exactFail=true;
+    }
+    // 2. search: an exact title (e.g. "Pliny the Younger (beer)") always counts; a longer title ("Fremont Brewing Company")
+    //    only when the bare answer isn't a page about something else
+    for(const t of [q].concat(W.kw?[q+' '+W.kw]:[])){
+      const j=await api('generator=search&gsrnamespace=0&gsrlimit=5&gsrsearch='+encodeURIComponent(t));
       const pages=((j.query&&j.query.pages)||[]).sort((a,b)=>a.index-b.index);
       for(const pg of pages){
-        const title=pg.title.replace(/\s*\(.*?\)\s*/g,' ').trim(),nt=norm(title);
-        if(!(nt===want||lev(nt,want)<=1||nt.startsWith(want+' ')))continue;
-        const desc=pg.description||'',cats=(pg.categories||[]).map(c=>c.title.replace(/^Category:/,'')).join(' | ');
-        if(!(W.d.test(desc)||W.c.test(cats)))continue;
-        if(W.us&&!US_RE.test(desc+' | '+cats))continue;
-        return title;
+        const nt=norm(strip(pg.title)),exact=nt===want||lev(nt,want)<=1;
+        if(!exact&&(exactFail||!nt.startsWith(want+' ')))continue;
+        if(fits(pg,pages))return strip(pg.title);
       }
     }
     return null;
