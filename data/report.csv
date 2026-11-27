@@ -1,0 +1,1329 @@
+prompt,answer,wikipedia_title,title_status,views_24m,share_above,miles,tier_source,source
+airlines,Continental,United Airlines,ok,2231544,0.000,10,views,wikidata
+airlines,Delta,Delta Air Lines,ok,1997808,0.082,10,views,wikidata
+airlines,Midwest,Midwestern United States,ok,1820352,0.155,10,views,hand
+airlines,American Airlines,American Airlines,ok,1750656,0.221,10,views,wikidata
+airlines,Pan Am,Pan Am,ok,1384032,0.285,25,views,wikidata
+airlines,Southwest,Southwest Airlines,ok,1081368,0.336,25,views,wikidata
+airlines,Alaska Airlines,Alaska Airlines,ok,1034016,0.376,25,views,wikidata
+airlines,Spirit,Spirit Airlines,ok,908280,0.413,25,views,wikidata
+airlines,JetBlue,JetBlue,ok,896832,0.447,25,views,wikidata
+airlines,TWA,Trans World Airlines,ok,781440,0.480,25,views,wikidata
+airlines,Hawaiian,,disambiguation,0,,25,hand,hand
+airlines,Breeze Airways,Breeze Airways,ok,774888,0.508,40,views,wikidata
+airlines,Frontier Airlines,Frontier Airlines,ok,732408,0.536,40,views,wikidata
+airlines,Piedmont,Piedmont,ok,710280,0.563,40,views,hand
+airlines,Allegiant,Allegiant Air,ok,627888,0.589,40,views,wikidata
+airlines,Hawaiian Airlines,Hawaiian Airlines,ok,610440,0.612,40,views,wikidata
+airlines,US Airways,US Airways,ok,550632,0.635,40,views,wikidata
+airlines,Continental Airlines,Continental Airlines,ok,484824,0.655,40,views,wikidata
+airlines,Avelo,Avelo Airlines,ok,476376,0.672,40,views,wikidata
+airlines,FedEx Express,FedEx Express,ok,466992,0.690,40,views,wikidata
+airlines,Northwest Airlines,Northwest Airlines,ok,449616,0.707,60,views,wikidata
+airlines,Sun Country Airlines,Sun Country Airlines,ok,419832,0.723,60,views,wikidata
+airlines,Sun Country,Sun Country Airlines,ok,419832,0.739,60,views,hand
+airlines,Atlas Air,Atlas Air,ok,400704,0.754,60,views,wikidata
+airlines,Eastern Air Lines,Eastern Air Lines,ok,379296,0.769,60,views,wikidata
+airlines,Janet,Janet (airline),ok,360912,0.783,60,views,wikidata
+airlines,Northwest,Points of the compass,ok,337248,0.796,60,views,hand
+airlines,Virgin Galactic,Virgin Galactic,ok,336264,0.808,60,views,wikidata
+airlines,American Eagle,American Eagle (airline brand),ok,312192,0.821,60,views,wikidata
+airlines,Kalitta Air,Kalitta Air,ok,257280,0.832,60,views,wikidata
+airlines,NetJets,NetJets,ok,235392,0.841,60,views,wikidata
+airlines,PSA Airlines,PSA Airlines,ok,223128,0.850,60,views,wikidata
+airlines,Eastern,,disambiguation,0,,60,hand,hand
+airlines,Braniff International Airways,Braniff International Airways,ok,219072,0.858,80,views,wikidata
+airlines,United Express,United Express,ok,208848,0.866,80,views,wikidata
+airlines,Air America,Air America (airline),ok,199128,0.874,80,views,wikidata
+airlines,Horizon Air,Horizon Air,ok,177528,0.881,80,views,wikidata
+airlines,Aloha,Aloha,ok,177048,0.888,80,views,hand
+airlines,Delta Connection,Delta Connection,ok,174360,0.894,80,views,wikidata
+airlines,Trump Shuttle,Trump Shuttle,ok,166896,0.900,80,views,wikidata
+airlines,Cape Air,Cape Air,ok,162384,0.907,80,views,wikidata
+airlines,AirTran,AirTran Airways,ok,157152,0.912,80,views,wikidata
+airlines,National Airlines,National Airlines (N8),ok,153168,0.918,80,views,wikidata
+airlines,PSA,Pacific Southwest Airlines,ok,153048,0.924,80,views,wikidata
+airlines,Envoy Air,Envoy Air,ok,152832,0.929,80,views,wikidata
+airlines,Endeavor Air,Endeavor Air,ok,141648,0.935,80,views,wikidata
+airlines,Virgin America,Virgin America,ok,132792,0.940,80,views,wikidata
+airlines,America West,America West Airlines,ok,126408,0.945,80,views,wikidata
+airlines,Hooters Air,Hooters Air,ok,114696,0.950,80,views,wikidata
+airlines,Breeze,,disambiguation,0,,80,hand,hand
+airlines,Omni Air International,Omni Air International,ok,109584,0.954,100,views,wikidata
+airlines,Western,Western Airlines,ok,101712,0.958,100,views,wikidata
+airlines,Silver Airways,Silver Airways,ok,101664,0.962,100,views,wikidata
+airlines,Aloha Airlines,Aloha Airlines,ok,95760,0.965,100,views,wikidata
+airlines,Flying Tiger Line,Flying Tiger Line,ok,91176,0.969,100,views,wikidata
+airlines,Hughes Airwest,Hughes Airwest,ok,89784,0.972,100,views,wikidata
+airlines,GoJet Airlines LLC,GoJet Airlines,ok,82632,0.975,100,views,wikidata
+airlines,Air Wisconsin,Air Wisconsin,ok,82296,0.978,100,views,wikidata
+airlines,Justice Prisoner and Alien Transportation System,Justice Prisoner Air Transportation System,ok,81624,0.981,100,views,wikidata
+airlines,ATA Airlines,ATA Airlines,ok,80976,0.984,100,views,wikidata
+airlines,Midwest Airlines,Midwest Airlines,ok,79488,0.987,100,views,wikidata
+airlines,Mohawk Airlines,Mohawk Airlines,ok,78792,0.990,100,views,wikidata
+airlines,Frontier,Frontier,ok,78192,0.993,100,views,hand
+airlines,People Express,People Express Airlines (1980s),ok,75000,0.996,100,views,hand
+airlines,Braniff,Braniff (1983–1990),ok,31776,0.999,100,views,wikidata
+amwords,Elevator,Elevator,hand tiers,,,10,hand,hand
+amwords,Apartment,Apartment,hand tiers,,,10,hand,hand
+amwords,Cookie,Cookie,hand tiers,,,10,hand,hand
+amwords,French fries,French fries,hand tiers,,,10,hand,hand
+amwords,Truck,Truck,hand tiers,,,10,hand,hand
+amwords,Sidewalk,Sidewalk,hand tiers,,,10,hand,hand
+amwords,Pants,Pants,hand tiers,,,10,hand,hand
+amwords,Trash,Trash,hand tiers,,,25,hand,hand
+amwords,Gas,Gas,hand tiers,,,25,hand,hand
+amwords,Vacation,Vacation,hand tiers,,,25,hand,hand
+amwords,Soccer,Soccer,hand tiers,,,25,hand,hand
+amwords,Candy,Candy,hand tiers,,,25,hand,hand
+amwords,Diaper,Diaper,hand tiers,,,25,hand,hand
+amwords,Flashlight,Flashlight,hand tiers,,,25,hand,hand
+amwords,Parking lot,Parking lot,hand tiers,,,25,hand,hand
+amwords,Zucchini,Zucchini,hand tiers,,,40,hand,hand
+amwords,Eggplant,Eggplant,hand tiers,,,40,hand,hand
+amwords,Cell phone,Cell phone,hand tiers,,,40,hand,hand
+amwords,Sweater,Sweater,hand tiers,,,40,hand,hand
+amwords,Faucet,Faucet,hand tiers,,,40,hand,hand
+amwords,Restroom,Restroom,hand tiers,,,40,hand,hand
+amwords,Line,Line,hand tiers,,,40,hand,hand
+amwords,Fall,Fall,hand tiers,,,40,hand,hand
+amwords,Mail,Mail,hand tiers,,,40,hand,hand
+amwords,Hood,Hood,hand tiers,,,40,hand,hand
+amwords,Trunk,Trunk,hand tiers,,,40,hand,hand
+amwords,Windshield,Windshield,hand tiers,,,60,hand,hand
+amwords,Freeway,Freeway,hand tiers,,,60,hand,hand
+amwords,Stroller,Stroller,hand tiers,,,60,hand,hand
+amwords,Pacifier,Pacifier,hand tiers,,,60,hand,hand
+amwords,Drugstore,Drugstore,hand tiers,,,60,hand,hand
+amwords,Eraser,Eraser,hand tiers,,,60,hand,hand
+amwords,Check,Check,hand tiers,,,60,hand,hand
+amwords,Cilantro,Cilantro,hand tiers,,,60,hand,hand
+amwords,Jell-O,Jell-O,hand tiers,,,60,hand,hand
+amwords,Popsicle,Popsicle,hand tiers,,,60,hand,hand
+amwords,Band-Aid,Band-Aid,hand tiers,,,60,hand,hand
+amwords,Bangs,Bangs,hand tiers,,,80,hand,hand
+amwords,Sneakers,Sneakers,hand tiers,,,80,hand,hand
+amwords,Suspenders,Suspenders,hand tiers,,,80,hand,hand
+amwords,Vest,Vest,hand tiers,,,80,hand,hand
+amwords,Closet,Closet,hand tiers,,,80,hand,hand
+amwords,Period,Period,hand tiers,,,80,hand,hand
+amwords,Zip code,Zip code,hand tiers,,,80,hand,hand
+amwords,Overpass,Overpass,hand tiers,,,80,hand,hand
+amwords,Turn signal,Turn signal,hand tiers,,,80,hand,hand
+amwords,Tic-tac-toe,Tic-tac-toe,hand tiers,,,100,hand,hand
+amwords,Arugula,Arugula,hand tiers,,,100,hand,hand
+amwords,Scallion,Scallion,hand tiers,,,100,hand,hand
+amwords,Realtor,Realtor,hand tiers,,,100,hand,hand
+amwords,Broil,Broil,hand tiers,,,100,hand,hand
+amwords,Fanny pack,Fanny pack,hand tiers,,,100,hand,hand
+amwords,Molasses,Molasses,hand tiers,,,100,hand,hand
+atlantic,Florida,Florida,ok,3048888,0.000,10,views,hand
+atlantic,New York,New York (state),ok,2947968,0.099,10,views,hand
+atlantic,Massachusetts,Massachusetts,ok,2737392,0.195,10,views,hand
+atlantic,New Jersey,New Jersey,ok,2569704,0.284,25,views,hand
+atlantic,Georgia,Georgia (U.S. state),ok,2431608,0.367,25,views,hand
+atlantic,North Carolina,North Carolina,ok,2358696,0.446,25,views,hand
+atlantic,Virginia,Virginia,ok,2322504,0.523,40,views,hand
+atlantic,Connecticut,Connecticut,ok,2028600,0.598,40,views,hand
+atlantic,Maryland,Maryland,ok,1997088,0.664,40,views,hand
+atlantic,Maine,Maine,ok,1964064,0.729,60,views,hand
+atlantic,Rhode Island,Rhode Island,ok,1889856,0.793,60,views,hand
+atlantic,New Hampshire,New Hampshire,ok,1525680,0.855,80,views,hand
+atlantic,Delaware,Delaware,ok,1487952,0.904,80,views,hand
+atlantic,South Carolina,South Carolina,ok,1462728,0.952,100,views,hand
+beer,Samuel Adams,Samuel Adams,ok,923304,0.000,10,views,hand
+beer,Budweiser,Budweiser,ok,745560,0.139,10,views,hand
+beer,Sierra Nevada,Sierra Nevada,ok,638616,0.251,25,views,hand
+beer,Yuengling,Yuengling,ok,521472,0.346,25,views,hand
+beer,Bud Light,Anheuser-Busch brands,ok,386976,0.425,25,views,hand
+beer,Michelob Ultra,Anheuser-Busch brands,ok,386976,0.483,25,views,hand
+beer,Busch,Anheuser-Busch brands,ok,386976,0.541,40,views,hand
+beer,Pabst Blue Ribbon,Pabst Blue Ribbon,ok,327456,0.599,40,views,hand
+beer,Coors,Coors Brewing Company,ok,316080,0.648,40,views,hand
+beer,Blue Moon,Blue moon,ok,309120,0.696,40,views,hand
+beer,Schlitz,,disambiguation,0,,40,hand,hand
+beer,Miller,Miller Brewing Company,ok,286920,0.742,60,views,hand
+beer,Miller Lite,Miller Lite,ok,167400,0.785,60,views,hand
+beer,Coors Light,Coors Light,ok,150312,0.810,60,views,hand
+beer,Rolling Rock,Rolling Rock,ok,135024,0.833,60,views,hand
+beer,Lagunitas,,disambiguation,0,,60,hand,hand
+beer,Hamm's,Hamm's Brewery,ok,126048,0.853,80,views,hand
+beer,Stroh's,Stroh Brewery Company,ok,120792,0.872,80,views,hand
+beer,Grain Belt,Corn Belt,ok,116088,0.890,80,views,hand
+beer,Anchor Steam,Anchor Brewing Company,ok,92400,0.908,80,views,hand
+beer,Olympia,Olympia Brewing Company,ok,81096,0.921,80,views,hand
+beer,Old Milwaukee,Old Milwaukee,ok,65208,0.934,80,views,hand
+beer,Dogfish Head,Dogfish Head Brewery,ok,62568,0.943,80,views,hand
+beer,Narragansett,,disambiguation,0,,80,hand,hand
+beer,Goose Island,,disambiguation,0,,80,hand,hand
+beer,Brooklyn Lager,,missing,0,,80,hand,hand
+beer,Natural Light,Natural Light,ok,60216,0.953,100,views,hand
+beer,Shiner Bock,Spoetzl Brewery,ok,59736,0.962,100,views,hand
+beer,Keystone,Keystone (beer brand),ok,45264,0.971,100,views,hand
+beer,Bell's,Bell's Brewery,ok,44424,0.978,100,views,hand
+beer,Genesee,Genesee Brewing Company,ok,40320,0.984,100,views,hand
+beer,Milwaukee's Best,Milwaukee's Best,ok,34464,0.990,100,views,hand
+beer,Founders,Founders Brewing Company,ok,29808,0.996,100,views,hand
+beer,Iron City,,disambiguation,0,,100,hand,hand
+beer,Lone Star,,disambiguation,0,,100,hand,hand
+canada,Alaska,Alaska,ok,3799344,0.000,10,views,hand
+canada,Pennsylvania,Pennsylvania,ok,3003576,0.131,10,views,hand
+canada,New York,New York (state),ok,2947968,0.234,10,views,hand
+canada,Minnesota,Minnesota,ok,2651088,0.335,25,views,hand
+canada,Washington,Washington (state),ok,2401152,0.427,25,views,hand
+canada,Ohio,Ohio,ok,2385216,0.509,40,views,hand
+canada,Michigan,Michigan,ok,2280936,0.591,40,views,hand
+canada,Montana,Montana,ok,2015880,0.670,40,views,hand
+canada,Maine,Maine,ok,1964064,0.739,60,views,hand
+canada,Vermont,Vermont,ok,1663896,0.807,60,views,hand
+canada,New Hampshire,New Hampshire,ok,1525680,0.864,80,views,hand
+canada,Idaho,Idaho,ok,1366608,0.916,80,views,hand
+canada,North Dakota,North Dakota,ok,1060608,0.964,100,views,hand
+candy,M&M's,M&M's,ok,809904,0.000,10,views,hand
+candy,Snickers,Snickers,ok,486648,0.136,10,views,hand
+candy,Reese's Peanut Butter Cups,Reese's Peanut Butter Cups,ok,415488,0.218,10,views,hand
+candy,Skittles,,disambiguation,0,,10,hand,hand
+candy,Milky Way,Milky Way (chocolate bar),ok,274272,0.288,25,views,hand
+candy,Twix,Twix,ok,263880,0.334,25,views,hand
+candy,Swedish Fish,Swedish Fish,ok,239808,0.379,25,views,hand
+candy,Tootsie Roll,Tootsie Roll,ok,229248,0.419,25,views,hand
+candy,Butterfinger,Butterfinger,ok,221136,0.458,25,views,hand
+candy,Nerds,Nerds (candy),ok,215184,0.495,25,views,hand
+candy,3 Musketeers,,disambiguation,0,,25,hand,hand
+candy,Starburst,Starburst (candy),ok,200376,0.531,40,views,hand
+candy,Sour Patch Kids,Sour Patch Kids,ok,200328,0.565,40,views,hand
+candy,Jolly Rancher,Jolly Rancher,ok,191808,0.599,40,views,hand
+candy,Baby Ruth,Baby Ruth,ok,173304,0.631,40,views,hand
+candy,Necco Wafers,Necco Wafers,ok,145416,0.660,40,views,hand
+candy,Candy corn,Candy corn,ok,141912,0.685,40,views,hand
+candy,PayDay,,missing,0,,40,hand,hand
+candy,Twizzlers,Twizzlers,ok,136032,0.709,60,views,hand
+candy,Clark Bar,Clark Bar,ok,131736,0.732,60,views,hand
+candy,Hershey's Kisses,Hershey's Kisses,ok,117096,0.754,60,views,hand
+candy,Hershey's bar,Hershey bar,ok,113592,0.774,60,views,hand
+candy,Airheads,Airheads (candy),ok,112608,0.793,60,views,hand
+candy,Milk Duds,Milk Duds,ok,103464,0.812,60,views,hand
+candy,Heath,Heath bar,ok,91152,0.829,60,views,hand
+candy,Peeps,Peeps,ok,89256,0.844,60,views,hand
+candy,Whoppers,,missing,0,,60,hand,hand
+candy,100 Grand,100 Grand Bar,ok,85632,0.859,80,views,hand
+candy,Almond Joy,Almond Joy,ok,84000,0.874,80,views,hand
+candy,Mounds,Mounds (candy bar),ok,81120,0.888,80,views,hand
+candy,Charleston Chew,Charleston Chew,ok,80112,0.902,80,views,hand
+candy,Chick-O-Stick,Chick-O-Stick,ok,69000,0.915,80,views,hand
+candy,Bit-O-Honey,Bit-O-Honey,ok,63528,0.927,80,views,hand
+candy,Laffy Taffy,Laffy Taffy,ok,63000,0.937,80,views,hand
+candy,Zagnut,Zagnut,ok,50928,0.948,80,views,hand
+candy,Mary Jane,Mary Jane (candy),ok,45000,0.957,100,views,hand
+candy,Goo Goo Cluster,Goo Goo Cluster,ok,43920,0.964,100,views,hand
+candy,Sugar Daddy,Sugar Daddy (candy),ok,42624,0.972,100,views,hand
+candy,Junior Mints,Junior Mints,ok,41472,0.979,100,views,hand
+candy,Abba-Zaba,Abba-Zaba,ok,40368,0.986,100,views,hand
+candy,Mr. Goodbar,Mr. Goodbar,ok,39984,0.993,100,views,hand
+candy,Kit Kat,KitKat,ok,4032,0.999,100,views,hand
+capitals,Boston,Boston,ok,3019656,0.000,10,views,wikidata
+capitals,Atlanta,Atlanta,ok,2587920,0.069,10,views,wikidata
+capitals,Nashville,"Nashville, Tennessee",ok,1951416,0.127,10,views,wikidata
+capitals,Austin,"Austin, Texas",ok,1945584,0.172,10,views,wikidata
+capitals,Phoenix,"Phoenix, Arizona",ok,1875648,0.216,10,views,wikidata
+capitals,Salt Lake City,Salt Lake City,ok,1729056,0.259,25,views,wikidata
+capitals,Denver,Denver,ok,1691616,0.298,25,views,wikidata
+capitals,Indianapolis,Indianapolis,ok,1385664,0.336,25,views,wikidata
+capitals,Columbus,"Columbus, Ohio",ok,1363752,0.368,25,views,wikidata
+capitals,Honolulu,Honolulu,ok,1315296,0.399,25,views,wikidata
+capitals,Sacramento,"Sacramento, California",ok,1232376,0.429,25,views,wikidata
+capitals,Richmond,"Richmond, Virginia",ok,1086984,0.457,25,views,wikidata
+capitals,Raleigh,"Raleigh, North Carolina",ok,1044096,0.482,25,views,wikidata
+capitals,Santa Fe,"Santa Fe, New Mexico",ok,1043544,0.505,40,views,wikidata
+capitals,Oklahoma City,Oklahoma City,ok,1027968,0.529,40,views,wikidata
+capitals,Juneau,"Juneau, Alaska",ok,1025880,0.552,40,views,hand
+capitals,Providence,"Providence, Rhode Island",ok,971304,0.576,40,views,wikidata
+capitals,Albany,"Albany, New York",ok,911544,0.598,40,views,wikidata
+capitals,Des Moines,"Des Moines, Iowa",ok,905544,0.619,40,views,wikidata
+capitals,Boise,"Boise, Idaho",ok,901824,0.639,40,views,wikidata
+capitals,Madison,"Madison, Wisconsin",ok,857808,0.660,40,views,wikidata
+capitals,Baton Rouge,"Baton Rouge, Louisiana",ok,825960,0.679,40,views,wikidata
+capitals,Jackson,"Jackson, Mississippi",ok,729048,0.698,40,views,wikidata
+capitals,Little Rock,"Little Rock, Arkansas",ok,715152,0.715,60,views,wikidata
+capitals,Cheyenne,"Cheyenne, Wyoming",ok,709248,0.731,60,views,wikidata
+capitals,Hartford,"Hartford, Connecticut",ok,704448,0.747,60,views,wikidata
+capitals,Tallahassee,"Tallahassee, Florida",ok,690696,0.763,60,views,wikidata
+capitals,Saint Paul,"Saint Paul, Minnesota",ok,667224,0.779,60,views,wikidata
+capitals,Columbia,"Columbia, South Carolina",ok,612096,0.794,60,views,wikidata
+capitals,Montgomery,"Montgomery, Alabama",ok,597984,0.808,60,views,wikidata
+capitals,Harrisburg,"Harrisburg, Pennsylvania",ok,548040,0.821,60,views,wikidata
+capitals,Helena,"Helena, Montana",ok,525576,0.834,60,views,wikidata
+capitals,Charleston,"Charleston, West Virginia",ok,516696,0.846,60,views,wikidata
+capitals,Carson City,"Carson City, Nevada",ok,468288,0.857,80,views,wikidata
+capitals,Lincoln,"Lincoln, Nebraska",ok,464472,0.868,80,views,wikidata
+capitals,Annapolis,"Annapolis, Maryland",ok,458736,0.879,80,views,wikidata
+capitals,Springfield,"Springfield, Illinois",ok,445896,0.889,80,views,wikidata
+capitals,Trenton,"Trenton, New Jersey",ok,444408,0.899,80,views,wikidata
+capitals,Salem,"Salem, Oregon",ok,421584,0.909,80,views,wikidata
+capitals,Olympia,"Olympia, Washington",ok,417288,0.919,80,views,wikidata
+capitals,Lansing,"Lansing, Michigan",ok,406464,0.928,80,views,wikidata
+capitals,Bismarck,"Bismarck, North Dakota",ok,380640,0.938,80,views,wikidata
+capitals,Topeka,"Topeka, Kansas",ok,373008,0.946,80,views,wikidata
+capitals,Montpelier,"Montpelier, Vermont",ok,354576,0.955,100,views,wikidata
+capitals,Jefferson City,"Jefferson City, Missouri",ok,302832,0.963,100,views,wikidata
+capitals,Augusta,"Augusta, Maine",ok,286944,0.970,100,views,wikidata
+capitals,Frankfort,"Frankfort, Kentucky",ok,275688,0.976,100,views,wikidata
+capitals,Pierre,"Pierre, South Dakota",ok,261648,0.983,100,views,wikidata
+capitals,Dover,"Dover, Delaware",ok,259128,0.988,100,views,wikidata
+capitals,Concord,"Concord, New Hampshire",ok,246888,0.994,100,views,wikidata
+cars,Saturn,Saturn,ok,2620056,0.000,10,views,hand
+cars,Ford Motor Company,Ford Motor Company,ok,2264592,0.091,10,views,wikidata
+cars,General Motors,General Motors,ok,2226216,0.169,10,views,wikidata
+cars,Rivian Automotive,Rivian,ok,1244712,0.247,10,views,wikidata
+cars,Ford,,disambiguation,0,,10,hand,hand
+cars,Tesla,,disambiguation,0,,10,hand,hand
+cars,Rivian,Rivian,ok,1244712,0.290,25,views,hand
+cars,Chevrolet,Chevrolet,ok,1073808,0.333,25,views,wikidata
+cars,Lucid Motors,Lucid Motors,ok,1019616,0.370,25,views,wikidata
+cars,Jeep,Jeep,ok,1018752,0.406,25,views,wikidata
+cars,Cadillac,Cadillac,ok,1008744,0.441,25,views,wikidata
+cars,Stellantis North America,Chrysler,ok,995232,0.476,25,views,wikidata
+cars,GMC,,disambiguation,0,,25,hand,hand
+cars,Chrysler,Chrysler,ok,995232,0.510,40,views,hand
+cars,Harley-Davidson,Harley-Davidson,ok,863088,0.545,40,views,wikidata
+cars,Dodge,Dodge,ok,816168,0.575,40,views,wikidata
+cars,Buick,Buick,ok,683904,0.603,40,views,wikidata
+cars,Plymouth,Plymouth,ok,557808,0.627,40,views,hand
+cars,AMC,American Motors Corporation,ok,537720,0.646,40,views,wikidata
+cars,Ram,Ram Trucks,ok,514536,0.665,40,views,wikidata
+cars,Oldsmobile,Oldsmobile,ok,504936,0.683,40,views,wikidata
+cars,Pontiac,,disambiguation,0,,40,hand,hand
+cars,Lucid,,disambiguation,0,,40,hand,hand
+cars,Lincoln Motor Company,Lincoln Motor Company,ok,501576,0.700,60,views,wikidata
+cars,Hummer,Hummer,ok,458304,0.718,60,views,hand
+cars,Studebaker,Studebaker,ok,421344,0.733,60,views,wikidata
+cars,Indian Motorcycle,Indian Motorcycle,ok,392712,0.748,60,views,wikidata
+cars,International Harvester,International Harvester,ok,383928,0.762,60,views,wikidata
+cars,Saturn Corporation,Saturn Corporation,ok,383208,0.775,60,views,wikidata
+cars,Fisker,Fisker Inc.,ok,374760,0.788,60,views,wikidata
+cars,Carroll Shelby International,Shelby American,ok,342144,0.801,60,views,wikidata
+cars,Packard,Packard,ok,333960,0.813,60,views,hand
+cars,Edsel,Edsel,ok,309096,0.825,60,views,hand
+cars,DeLorean Motor Company,DeLorean Motor Company,ok,308568,0.835,60,views,wikidata
+cars,PACCAR,Paccar,ok,276312,0.846,60,views,wikidata
+cars,DeLorean,,disambiguation,0,,60,hand,hand
+cars,Nash,,disambiguation,0,,60,hand,hand
+cars,Duesenberg,Duesenberg,ok,276144,0.856,80,views,wikidata
+cars,International,International Motors,ok,249432,0.865,80,views,wikidata
+cars,Polaris,Polaris Inc.,ok,241944,0.874,80,views,wikidata
+cars,AM General,AM General,ok,224808,0.882,80,views,wikidata
+cars,Detroit Diesel,Detroit Diesel,ok,220488,0.890,80,views,wikidata
+cars,Willys,Willys,ok,218520,0.898,80,views,wikidata
+cars,Hudson Motor Car Company,Hudson Motor Car Company,ok,215328,0.905,80,views,wikidata
+cars,Slate Auto,Slate Auto,ok,205080,0.913,80,views,wikidata
+cars,Saleen,Saleen,ok,153624,0.920,80,views,wikidata
+cars,Western Star Trucks,Western Star Trucks,ok,153096,0.925,80,views,wikidata
+cars,REO Motor Car Company,REO Motor Car Company,ok,137496,0.931,80,views,wikidata
+cars,Nash Motors,Nash Motors,ok,130992,0.935,80,views,wikidata
+cars,Hennessey Performance Engineering,Hennessey Performance Engineering,ok,129144,0.940,80,views,wikidata
+cars,Eagle,Eagle (automobile),ok,125832,0.944,80,views,wikidata
+cars,LaSalle,LaSalle (automobile),ok,115872,0.949,80,views,wikidata
+cars,Tucker,,disambiguation,0,,80,hand,hand
+cars,Shelby,,disambiguation,0,,80,hand,hand
+cars,Imperial,,disambiguation,0,,80,hand,hand
+cars,DeSoto,,disambiguation,0,,80,hand,hand
+cars,Excalibur,Excalibur (automobile),ok,108672,0.953,100,views,wikidata
+cars,White Motor Company,White Motor Company,ok,108024,0.957,100,views,wikidata
+cars,Kaiser Motors,Kaiser Motors,ok,106872,0.960,100,views,wikidata
+cars,Buell Motorcycle Company,Buell Motorcycle Company,ok,105288,0.964,100,views,wikidata
+cars,Kaiser Jeep,Kaiser Jeep,ok,101640,0.968,100,views,wikidata
+cars,Henry Ford Company,Henry Ford Company,ok,100032,0.971,100,views,wikidata
+cars,Faraday Future,Faraday Future,ok,93312,0.975,100,views,wikidata
+cars,Canoo,Canoo,ok,87648,0.978,100,views,wikidata
+cars,Checker Motors Corporation,Checker Motors Corporation,ok,83352,0.981,100,views,wikidata
+cars,Pierce-Arrow,Pierce-Arrow Motor Car Company,ok,82056,0.984,100,views,wikidata
+cars,Vehicle Production Group,Vehicle Production Group,ok,81072,0.987,100,views,wikidata
+cars,Stanley Motor Carriage Company,Stanley Motor Carriage Company,ok,79224,0.990,100,views,wikidata
+cars,Zimmer,Zimmer (automobile),ok,76464,0.992,100,views,wikidata
+cars,Vector Motors,Vector Motors,ok,70800,0.995,100,views,wikidata
+cars,Studebaker-Packard Corporation,Studebaker-Packard Corporation,ok,70584,0.997,100,views,wikidata
+cars,Mercury,Mercury Cyclecar Company,ok,2952,1.000,100,views,wikidata
+cars,Lincoln,Lincoln (1914 automobile),ok,1584,1.000,100,views,wikidata
+cars,Hudson,Hudson (steam automobile),ok,960,1.000,100,views,wikidata
+cars,Cord,,disambiguation,0,,100,hand,hand
+cars,Auburn,,disambiguation,0,,100,hand,hand
+cars,Geo,,disambiguation,0,,100,hand,hand
+cereal,Total,General Mills,ok,512640,0.000,10,views,hand
+cereal,Corn Flakes,Corn flakes,ok,354480,0.120,10,views,hand
+cereal,Grape-Nuts,Grape-Nuts,ok,266904,0.203,10,views,hand
+cereal,Lucky Charms,Lucky Charms,ok,203640,0.266,25,views,hand
+cereal,Cap'n Crunch,Cap'n Crunch,ok,175104,0.313,25,views,hand
+cereal,Count Chocula,Monster cereals,ok,169272,0.354,25,views,hand
+cereal,Franken Berry,Monster cereals,ok,169272,0.394,25,views,hand
+cereal,Boo Berry,Monster cereals,ok,169272,0.434,25,views,hand
+cereal,Cheerios,Cheerios,ok,157728,0.473,25,views,hand
+cereal,Rice Krispies,Rice Krispies,ok,144648,0.510,40,views,hand
+cereal,Froot Loops,Froot Loops,ok,138984,0.544,40,views,hand
+cereal,Honey Smacks,Honey Smacks,ok,118296,0.577,40,views,hand
+cereal,Frosted Flakes,Frosted Flakes,ok,113664,0.604,40,views,hand
+cereal,Trix,Trix (cereal),ok,113112,0.631,40,views,hand
+cereal,Cinnamon Toast Crunch,Cinnamon Toast Crunch,ok,109800,0.658,40,views,hand
+cereal,Fruity Pebbles,Pebbles (cereal),ok,86832,0.683,40,views,hand
+cereal,Cocoa Pebbles,Pebbles (cereal),ok,86832,0.704,60,views,hand
+cereal,Cocoa Puffs,Cocoa Puffs,ok,86760,0.724,60,views,hand
+cereal,Wheaties,Wheaties,ok,81408,0.744,60,views,hand
+cereal,Cookie Crisp,Cookie Crisp,ok,80952,0.763,60,views,hand
+cereal,Honey Nut Cheerios,Honey Nut Cheerios,ok,79272,0.782,60,views,hand
+cereal,Apple Jacks,Apple Jacks,ok,71256,0.801,60,views,hand
+cereal,Special K,Special K,ok,68328,0.818,60,views,hand
+cereal,Cocoa Krispies,Cocoa Krispies,ok,67320,0.834,60,views,hand
+cereal,Corn Pops,Corn Pops,ok,61344,0.849,60,views,hand
+cereal,Kix,Kix (cereal),ok,57456,0.864,80,views,hand
+cereal,Golden Crisp,Golden Crisp,ok,57192,0.877,80,views,hand
+cereal,Chex,Chex,ok,53664,0.891,80,views,hand
+cereal,Frosted Mini-Wheats,Frosted Mini-Wheats,ok,53232,0.903,80,views,hand
+cereal,Raisin Bran,Raisin bran,ok,52104,0.916,80,views,hand
+cereal,Golden Grahams,Golden Grahams,ok,48816,0.928,80,views,hand
+cereal,Reese's Puffs,Reese's Puffs,ok,46488,0.939,80,views,hand
+cereal,Quisp,Quisp,ok,43512,0.950,100,views,hand
+cereal,Honeycomb,Honeycomb (cereal),ok,41640,0.960,100,views,hand
+cereal,Life,Life (cereal),ok,39312,0.970,100,views,hand
+cereal,Honey Bunches of Oats,Honey Bunches of Oats,ok,26784,0.979,100,views,hand
+cereal,Crispix,Crispix,ok,20832,0.986,100,views,hand
+cereal,Cracklin' Oat Bran,Cracklin' Oat Bran,ok,20184,0.991,100,views,hand
+cereal,Product 19,Product 19,ok,20112,0.995,100,views,hand
+cereal,Basic 4,,missing,0,,100,hand,hand
+dogs,American Bully,American Bully,ok,1017504,0.000,10,views,wikidata
+dogs,Australian Shepherd,Australian Shepherd,ok,952896,0.096,10,views,wikidata
+dogs,American Pit Bull Terrier,American Pit Bull Terrier,ok,950760,0.186,10,views,wikidata
+dogs,Akita,Akita (dog breed),ok,783744,0.276,25,views,wikidata
+dogs,Alaskan Malamute,Alaskan Malamute,ok,684672,0.350,25,views,hand
+dogs,Catahoula Leopard Dog,Catahoula Leopard Dog,ok,545688,0.415,25,views,wikidata
+dogs,American Staffordshire Terrier,American Staffordshire Terrier,ok,530784,0.467,25,views,wikidata
+dogs,Boston Terrier,Boston Terrier,ok,487512,0.517,40,views,wikidata
+dogs,American Bulldog,American Bulldog,ok,397080,0.563,40,views,wikidata
+dogs,Carolina Dog,Carolina Dog,ok,383256,0.600,40,views,wikidata
+dogs,Rat Terrier,Rat Terrier,ok,357600,0.637,40,views,wikidata
+dogs,Alaskan Klee Kai,Alaskan Klee Kai,ok,353616,0.670,40,views,wikidata
+dogs,American Eskimo Dog,American Eskimo Dog,ok,215784,0.704,60,views,wikidata
+dogs,Miniature American Shepherd,Miniature American Shepherd,ok,203472,0.724,60,views,wikidata
+dogs,Boykin Spaniel,Boykin Spaniel,ok,188640,0.744,60,views,wikidata
+dogs,Plott Hound,Plott Hound,ok,182448,0.761,60,views,hand
+dogs,Bluetick Coonhound,Bluetick Coonhound,ok,174144,0.779,60,views,wikidata
+dogs,Mountain Cur,Mountain Cur,ok,172848,0.795,60,views,wikidata
+dogs,Chesapeake Bay Retriever,Chesapeake Bay Retriever,ok,171720,0.811,60,views,wikidata
+dogs,American Cocker Spaniel,American Cocker Spaniel,ok,170592,0.828,60,views,wikidata
+dogs,Silken Windhound,Silken Windhound,ok,157416,0.844,60,views,wikidata
+dogs,Redbone Coonhound,Redbone Coonhound,ok,154272,0.859,80,views,wikidata
+dogs,Treeing Walker Coonhound,Treeing Walker Coonhound,ok,149160,0.873,80,views,wikidata
+dogs,Olde English Bulldogge,Olde English Bulldogge,ok,133560,0.887,80,views,wikidata
+dogs,Blue Lacy,Blue Lacy,ok,129360,0.900,80,views,wikidata
+dogs,American Foxhound,American Foxhound,ok,124872,0.912,80,views,wikidata
+dogs,English Shepherd,English Shepherd,ok,94032,0.924,80,views,wikidata
+dogs,Black and Tan Coonhound,Black and Tan Coonhound,ok,93408,0.933,80,views,wikidata
+dogs,Alapaha Blue Blood Bulldog,Alapaha Blue Blood Bulldog,ok,85848,0.942,80,views,wikidata
+dogs,Toy Fox Terrier,Toy Fox Terrier,ok,62064,0.950,80,views,wikidata
+dogs,American Water Spaniel,American Water Spaniel,ok,58536,0.956,100,views,wikidata
+dogs,American English Coonhound,American English Coonhound,ok,58512,0.961,100,views,wikidata
+dogs,American Leopard Hound,American Leopard Hound,ok,55728,0.967,100,views,wikidata
+dogs,American Hairless Terrier,American Hairless Terrier,ok,54504,0.972,100,views,wikidata
+dogs,Teddy Roosevelt Terrier,Teddy Roosevelt Terrier,ok,53304,0.977,100,views,wikidata
+dogs,Chinook,Chinook (dog breed),ok,51312,0.982,100,views,wikidata
+dogs,Toy Manchester Terrier,Toy Manchester Terrier,ok,47472,0.987,100,views,wikidata
+dogs,Treeing Tennessee Brindle,Treeing Tennessee Brindle,ok,31416,0.992,100,views,wikidata
+dogs,Treeing Cur,Treeing Cur,ok,15624,0.995,100,views,wikidata
+dogs,Stephens Cur,Stephens Stock,ok,10920,0.996,100,views,wikidata
+dogs,King Shepherd,King Shepherd,ok,8784,0.997,100,views,wikidata
+dogs,Majestic Tree Hound,Majestic Tree Hound,ok,6120,0.998,100,views,wikidata
+dogs,American Akita,American Akita,ok,5760,0.999,100,views,wikidata
+dogs,Morkie,Morkie,ok,5424,0.999,100,views,wikidata
+dogs,Shiloh Shepherd,Shiloh Shepherd dog,ok,2472,1.000,100,views,wikidata
+dogs,Leavitt Bulldog,Leavitt Bulldog,ok,1032,1.000,100,views,wikidata
+dogs,Zuchon,Zuchon,ok,864,1.000,100,views,wikidata
+fastfood,McDonald's,McDonald's,ok,3386952,0.000,10,views,hand
+fastfood,Starbucks,Starbucks,ok,2053344,0.126,10,views,hand
+fastfood,KFC,KFC,ok,1618392,0.203,10,views,hand
+fastfood,Chick-fil-A,Chick-fil-A,ok,1125384,0.263,25,views,hand
+fastfood,Burger King,Burger King,ok,1119504,0.305,25,views,hand
+fastfood,Raising Cane's,Raising Cane's Chicken Fingers,ok,941256,0.347,25,views,hand
+fastfood,In-N-Out,In-N-Out Burger,ok,936432,0.382,25,views,hand
+fastfood,Taco Bell,Taco Bell,ok,900144,0.417,25,views,hand
+fastfood,Wendy's,Wendy's,ok,803424,0.451,25,views,hand
+fastfood,Pizza Hut,Pizza Hut,ok,768984,0.481,25,views,hand
+fastfood,Subway,Subway (restaurant),ok,753096,0.510,40,views,hand
+fastfood,Dunkin',Dunkin' Donuts,ok,727680,0.538,40,views,hand
+fastfood,Domino's,Domino's,ok,696024,0.565,40,views,hand
+fastfood,Popeyes,Popeyes,ok,664152,0.591,40,views,hand
+fastfood,A&W,A&W Restaurants,ok,615096,0.616,40,views,hand
+fastfood,Five Guys,Five Guys,ok,577752,0.639,40,views,hand
+fastfood,Dairy Queen,Dairy Queen,ok,562128,0.660,40,views,hand
+fastfood,Papa John's,Papa John's,ok,541032,0.681,40,views,hand
+fastfood,White Castle,,disambiguation,0,,40,hand,hand
+fastfood,Little Caesars,Little Caesars,ok,448656,0.701,60,views,hand
+fastfood,Wingstop,Wingstop,ok,448104,0.718,60,views,hand
+fastfood,Panda Express,Panda Express,ok,448032,0.735,60,views,hand
+fastfood,Jack in the Box,Jack in the Box,ok,429768,0.752,60,views,hand
+fastfood,Shake Shack,Shake Shack,ok,425256,0.768,60,views,hand
+fastfood,Arby's,Arby's,ok,410352,0.784,60,views,hand
+fastfood,Chipotle,Chipotle,ok,397848,0.799,60,views,hand
+fastfood,Culver's,Culver's,ok,395496,0.814,60,views,hand
+fastfood,Whataburger,Whataburger,ok,387240,0.828,60,views,hand
+fastfood,Panera,Panera Bread,ok,346944,0.843,60,views,hand
+fastfood,Hardee's,Hardee's,ok,329760,0.856,80,views,hand
+fastfood,Jersey Mike's,Jersey Mike's Subs,ok,327192,0.868,80,views,hand
+fastfood,Sonic,Sonic Drive-In,ok,320376,0.880,80,views,hand
+fastfood,Carl's Jr,Carl's Jr.,ok,319824,0.892,80,views,hand
+fastfood,Church's Chicken,Church's Texas Chicken,ok,299568,0.904,80,views,hand
+fastfood,Long John Silver's,Long John Silver's,ok,284184,0.915,80,views,hand
+fastfood,Jimmy John's,Jimmy John's,ok,282912,0.926,80,views,hand
+fastfood,Steak 'n Shake,Steak 'n Shake,ok,249048,0.937,80,views,hand
+fastfood,Zaxby's,Zaxby's,ok,215160,0.946,80,views,hand
+fastfood,Bojangles,,disambiguation,0,,80,hand,hand
+fastfood,Cook Out,Cook Out (restaurant),ok,203520,0.954,100,views,hand
+fastfood,Checkers,Checkers and Rally's,ok,189096,0.962,100,views,hand
+fastfood,Wienerschnitzel,Wienerschnitzel,ok,178080,0.969,100,views,hand
+fastfood,Freddy's,Freddy's Frozen Custard & Steakburgers,ok,175416,0.975,100,views,hand
+fastfood,Del Taco,Del Taco,ok,168288,0.982,100,views,hand
+fastfood,Krystal,Krystal (restaurant),ok,125712,0.988,100,views,hand
+fastfood,Runza,Runza,ok,100368,0.993,100,views,hand
+fastfood,El Pollo Loco,El Pollo Loco,ok,92400,0.997,100,views,hand
+firstladies,Melania Trump,Melania Trump,ok,9845544,0.000,10,views,hand
+firstladies,Jacqueline Kennedy,Jacqueline Kennedy Onassis,ok,6407328,0.244,10,views,hand
+firstladies,Hillary Clinton,Hillary Clinton,ok,3812160,0.402,25,views,hand
+firstladies,Michelle Obama,Michelle Obama,ok,2986344,0.496,25,views,hand
+firstladies,Eleanor Roosevelt,Eleanor Roosevelt,ok,2328360,0.570,40,views,hand
+firstladies,Jill Biden,Jill Biden,ok,1349664,0.628,40,views,hand
+firstladies,Barbara Bush,Barbara Bush,ok,1278000,0.661,40,views,hand
+firstladies,Mary Todd Lincoln,Mary Todd Lincoln,ok,1268232,0.693,40,views,hand
+firstladies,Nancy Reagan,Nancy Reagan,ok,1077984,0.724,60,views,hand
+firstladies,Lady Bird Johnson,Lady Bird Johnson,ok,1031760,0.751,60,views,hand
+firstladies,Laura Bush,Laura Bush,ok,1005648,0.776,60,views,hand
+firstladies,Martha Washington,Martha Washington,ok,770568,0.801,60,views,hand
+firstladies,Abigail Adams,Abigail Adams,ok,742320,0.820,60,views,hand
+firstladies,Pat Nixon,Pat Nixon,ok,642912,0.839,60,views,hand
+firstladies,Mamie Eisenhower,Mamie Eisenhower,ok,549864,0.855,80,views,hand
+firstladies,Betty Ford,Betty Ford,ok,542616,0.868,80,views,hand
+firstladies,Louisa Adams,Louisa Adams,ok,456312,0.882,80,views,hand
+firstladies,Frances Cleveland,Frances Cleveland,ok,422184,0.893,80,views,hand
+firstladies,Rosalynn Carter,Rosalynn Carter,ok,405792,0.903,80,views,hand
+firstladies,Edith Wilson,Edith Wilson,ok,341424,0.914,80,views,hand
+firstladies,Dolley Madison,Dolley Madison,ok,335976,0.922,80,views,hand
+firstladies,Edith Roosevelt,Edith Roosevelt,ok,282264,0.930,80,views,hand
+firstladies,Bess Truman,Bess Truman,ok,280032,0.937,80,views,hand
+firstladies,Lucretia Garfield,Lucretia Garfield,ok,242472,0.944,80,views,hand
+firstladies,Lou Hoover,Lou Henry Hoover,ok,234864,0.950,100,views,hand
+firstladies,Grace Coolidge,Grace Coolidge,ok,182976,0.956,100,views,hand
+firstladies,Ida McKinley,Ida Saxton McKinley,ok,165360,0.961,100,views,hand
+firstladies,Helen Taft,Helen Herron Taft,ok,132000,0.965,100,views,hand
+firstladies,Julia Grant,Julia Grant,ok,131784,0.968,100,views,hand
+firstladies,Harriet Lane,Harriet Lane,ok,126864,0.971,100,views,hand
+firstladies,Florence Harding,Florence Harding,ok,112392,0.974,100,views,hand
+firstladies,Julia Tyler,Julia Gardiner Tyler,ok,104952,0.977,100,views,hand
+firstladies,Jane Pierce,Jane Pierce,ok,104064,0.980,100,views,hand
+firstladies,Sarah Polk,Sarah Childress Polk,ok,102984,0.982,100,views,hand
+firstladies,Anna Harrison,Anna Harrison,ok,88584,0.985,100,views,hand
+firstladies,Elizabeth Monroe,Elizabeth Monroe,ok,85776,0.987,100,views,hand
+firstladies,Eliza Johnson,Eliza McCardle Johnson,ok,80808,0.989,100,views,hand
+firstladies,Abigail Fillmore,Abigail Fillmore,ok,78384,0.991,100,views,hand
+firstladies,Caroline Harrison,Caroline Harrison,ok,77664,0.993,100,views,hand
+firstladies,Margaret Taylor,Margaret Taylor,ok,71544,0.995,100,views,hand
+firstladies,Lucy Hayes,Lucy Webb Hayes,ok,69648,0.997,100,views,hand
+firstladies,Letitia Tyler,Letitia Christian Tyler,ok,63120,0.998,100,views,hand
+friends,David,David,ok,2847216,0.000,10,views,hand
+friends,Joshua,Joshua,ok,791040,0.241,10,views,hand
+friends,Chandler Bing,Chandler Bing,ok,462624,0.308,25,views,wikidata
+friends,Emily Waltham,List of Friends and Joey characters,ok,413016,0.347,25,views,hand
+friends,Ugly Naked Guy,List of Friends and Joey characters,ok,413016,0.382,25,views,hand
+friends,Mr. Heckles,List of Friends and Joey characters,ok,413016,0.417,25,views,hand
+friends,Jack Geller,List of Friends and Joey characters,ok,413016,0.452,25,views,hand
+friends,Judy Geller,List of Friends and Joey characters,ok,413016,0.486,25,views,hand
+friends,Janice,,disambiguation,0,,25,hand,hand
+friends,Marcel,,disambiguation,0,,25,hand,hand
+friends,Frank Buffay Jr.,List of Friends and Joey characters,ok,413016,0.521,40,views,hand
+friends,Estelle Leonard,List of Friends and Joey characters,ok,413016,0.556,40,views,hand
+friends,Charlie Wheeler,List of Friends and Joey characters,ok,413016,0.591,40,views,hand
+friends,Tag Jones,List of Friends and Joey characters,ok,413016,0.626,40,views,hand
+friends,Janine Lecroix,List of Friends and Joey characters,ok,413016,0.661,40,views,hand
+friends,Eddie Menuek,List of Friends and Joey characters,ok,413016,0.696,40,views,hand
+friends,Mr. Treeger,List of Friends and Joey characters,ok,413016,0.731,60,views,hand
+friends,Fun Bobby,List of Friends and Joey characters,ok,413016,0.766,60,views,hand
+friends,Sandra Green,List of Friends and Joey characters,ok,413016,0.801,60,views,hand
+friends,Joey Tribbiani,Joey Tribbiani,ok,376296,0.836,60,views,wikidata
+friends,Julie,,disambiguation,0,,60,hand,hand
+friends,Phoebe Buffay,Phoebe Buffay,ok,372720,0.867,80,views,wikidata
+friends,Monica Geller,Monica Geller,ok,369120,0.899,80,views,wikidata
+friends,Rachel Green,Rachel Green,ok,329256,0.930,80,views,wikidata
+friends,Mona,,disambiguation,0,,80,hand,hand
+friends,Paul Stevens,,disambiguation,0,,80,hand,hand
+friends,Ross Geller,Ross Geller,ok,328104,0.958,100,views,wikidata
+friends,Emma Geller,Emma Geller-Green,ok,23112,0.986,100,views,wikidata
+friends,Richard Burke,Richard Burke (Friends),ok,20928,0.988,100,views,wikidata
+friends,Ursula Buffay,Ursula Buffay,ok,20856,0.989,100,views,wikidata
+friends,Ben Geller,Ben Geller,ok,16536,0.991,100,views,wikidata
+friends,Mike Hannigan,Mike Hannigan,ok,15720,0.993,100,views,wikidata
+friends,Carol Willick,Carol Willick,ok,14424,0.994,100,views,wikidata
+friends,Paolo,Paolo,ok,13704,0.995,100,views,hand
+friends,Amy Green,Amy Green,ok,10536,0.996,100,views,wikidata
+friends,Jill Green,Jill Green (Friends),ok,10272,0.997,100,views,wikidata
+friends,Pete Becker,Pete Becker,ok,8904,0.998,100,views,hand
+friends,Kathy,Kathy,ok,8088,0.999,100,views,hand
+friends,Elizabeth Stevens,Elizabeth Stevens,ok,2184,1.000,100,views,hand
+friends,Susan Bunch,Susan Bunch,ok,1704,1.000,100,views,wikidata
+friends,Gunther,Gunther (Friends),ok,1512,1.000,100,views,wikidata
+friends,Duncan,,disambiguation,0,,100,hand,hand
+friends,Gavin Mitchell,,disambiguation,0,,100,hand,hand
+friends,Leonard Green,,disambiguation,0,,100,hand,hand
+friends,Erica,,disambiguation,0,,100,hand,hand
+holidays,Juneteenth,Juneteenth,ok,1536744,0.000,10,views,hand
+holidays,Christmas,Christmas,ok,1194504,0.129,10,views,hand
+holidays,Halloween,Halloween,ok,1176024,0.229,10,views,hand
+holidays,Mardi Gras,Mardi Gras,ok,925992,0.328,25,views,hand
+holidays,Fourth of July,Independence Day (United States),ok,905856,0.406,25,views,hand
+holidays,Thanksgiving,Thanksgiving,ok,751728,0.482,25,views,hand
+holidays,Memorial Day,Memorial Day,ok,700992,0.545,40,views,hand
+holidays,Kwanzaa,Kwanzaa,ok,645360,0.604,40,views,hand
+holidays,Labor Day,Labor Day,ok,617832,0.658,40,views,hand
+holidays,Black Friday,,disambiguation,0,,40,hand,hand
+holidays,Cinco de Mayo,Cinco de Mayo,ok,546504,0.710,60,views,hand
+holidays,Columbus Day,Columbus Day,ok,413352,0.756,60,views,hand
+holidays,Groundhog Day,Groundhog Day,ok,394728,0.790,60,views,hand
+holidays,Martin Luther King Jr. Day,Martin Luther King Jr. Day,ok,379920,0.824,60,views,hand
+holidays,Earth Day,Earth Day,ok,329448,0.855,80,views,hand
+holidays,Veterans Day,Veterans Day,ok,251880,0.883,80,views,hand
+holidays,Presidents' Day,Presidents' Day,ok,213216,0.904,80,views,hand
+holidays,Arbor Day,Arbor Day,ok,158736,0.922,80,views,hand
+holidays,Patriots' Day,Patriots' Day,ok,143880,0.935,80,views,hand
+holidays,Pi Day,Pi Day,ok,143496,0.947,80,views,hand
+holidays,Leif Erikson Day,Leif Erikson Day,ok,85224,0.960,100,views,hand
+holidays,Cyber Monday,Cyber Monday,ok,68712,0.967,100,views,hand
+holidays,Casimir Pulaski Day,Casimir Pulaski Day,ok,67416,0.972,100,views,hand
+holidays,Tax Day,Tax Day,ok,64920,0.978,100,views,hand
+holidays,Pearl Harbor Remembrance Day,National Pearl Harbor Remembrance Day,ok,46680,0.984,100,views,hand
+holidays,Super Bowl Sunday,Super Bowl Sunday,ok,37032,0.987,100,views,hand
+holidays,Flag Day,Flag Day,ok,36528,0.991,100,views,hand
+holidays,Election Day,Election day,ok,31536,0.994,100,views,hand
+holidays,Constitution Day,Constitution Day,ok,25200,0.996,100,views,hand
+holidays,Kamehameha Day,King Kamehameha Day,ok,13416,0.998,100,views,hand
+holidays,Seward's Day,Seward's Day,ok,5232,1.000,100,views,hand
+holidays,Evacuation Day,,disambiguation,0,,100,hand,hand
+mlb,New York Yankees,New York Yankees,ok,2596608,0.000,10,views,wikidata
+mlb,Los Angeles Dodgers,Los Angeles Dodgers,ok,2147976,0.078,10,views,wikidata
+mlb,Boston Red Sox,Boston Red Sox,ok,1723512,0.143,10,views,wikidata
+mlb,Athletics,Athletics (baseball),ok,1647480,0.195,10,views,wikidata
+mlb,New York Mets,New York Mets,ok,1471824,0.245,10,views,wikidata
+mlb,Chicago Cubs,Chicago Cubs,ok,1373856,0.289,25,views,wikidata
+mlb,Cleveland Guardians,Cleveland Guardians,ok,1245624,0.331,25,views,wikidata
+mlb,Atlanta Braves,Atlanta Braves,ok,1206192,0.368,25,views,wikidata
+mlb,Chicago White Sox,Chicago White Sox,ok,1182672,0.405,25,views,wikidata
+mlb,Toronto Blue Jays,Toronto Blue Jays,ok,1180920,0.440,25,views,wikidata
+mlb,San Francisco Giants,San Francisco Giants,ok,1144608,0.476,25,views,wikidata
+mlb,Los Angeles Angels,Los Angeles Angels,ok,1090872,0.511,40,views,wikidata
+mlb,Philadelphia Phillies,Philadelphia Phillies,ok,1060488,0.544,40,views,wikidata
+mlb,Seattle Mariners,Seattle Mariners,ok,985296,0.576,40,views,wikidata
+mlb,St Louis Cardinals,St. Louis Cardinals,ok,984648,0.605,40,views,wikidata
+mlb,San Diego Padres,San Diego Padres,ok,942480,0.635,40,views,wikidata
+mlb,Texas Rangers,Texas Rangers (baseball),ok,939216,0.663,40,views,wikidata
+mlb,Milwaukee Brewers,Milwaukee Brewers,ok,920568,0.692,40,views,wikidata
+mlb,Houston Astros,Houston Astros,ok,917976,0.720,60,views,wikidata
+mlb,Tampa Bay Rays,Tampa Bay Rays,ok,885648,0.747,60,views,wikidata
+mlb,Miami Marlins,Miami Marlins,ok,852744,0.774,60,views,wikidata
+mlb,Detroit Tigers,Detroit Tigers,ok,840168,0.800,60,views,wikidata
+mlb,Washington Nationals,Washington Nationals,ok,825192,0.825,60,views,wikidata
+mlb,Baltimore Orioles,Baltimore Orioles,ok,817824,0.850,60,views,wikidata
+mlb,Cincinnati Reds,Cincinnati Reds,ok,807000,0.875,80,views,wikidata
+mlb,Pittsburgh Pirates,Pittsburgh Pirates,ok,771168,0.899,80,views,wikidata
+mlb,Minnesota Twins,Minnesota Twins,ok,717888,0.922,80,views,wikidata
+mlb,Colorado Rockies,Colorado Rockies,ok,655920,0.944,80,views,wikidata
+mlb,Arizona Diamondbacks,Arizona Diamondbacks,ok,609024,0.964,100,views,wikidata
+mlb,Kansas City Royals,Kansas City Royals,ok,591960,0.982,100,views,wikidata
+money,John F Kennedy,John F. Kennedy,ok,11676288,0.000,10,views,hand
+money,Franklin D Roosevelt,Franklin D. Roosevelt,ok,9422304,0.131,10,views,hand
+money,Abraham Lincoln,Abraham Lincoln,ok,8786064,0.237,10,views,hand
+money,George Washington,George Washington,ok,8396664,0.336,25,views,hand
+money,Dwight Eisenhower,Dwight D. Eisenhower,ok,6570504,0.431,25,views,hand
+money,Alexander Hamilton,Alexander Hamilton,ok,6102864,0.505,40,views,hand
+money,Thomas Jefferson,Thomas Jefferson,ok,4911192,0.574,40,views,hand
+money,Benjamin Franklin,Benjamin Franklin,ok,4256760,0.629,40,views,hand
+money,Ulysses S Grant,Ulysses S. Grant,ok,4062240,0.677,40,views,hand
+money,Andrew Jackson,Andrew Jackson,ok,3738384,0.722,60,views,hand
+money,Woodrow Wilson,Woodrow Wilson,ok,3409872,0.765,60,views,hand
+money,William McKinley,William McKinley,ok,3162144,0.803,60,views,hand
+money,Grover Cleveland,Grover Cleveland,ok,2987904,0.839,60,views,hand
+money,Eleanor Roosevelt,Eleanor Roosevelt,ok,2328360,0.872,80,views,hand
+money,James Madison,James Madison,ok,2152512,0.898,80,views,hand
+money,Maya Angelou,Maya Angelou,ok,1878960,0.923,80,views,hand
+money,Sacagawea,Sacagawea,ok,1136904,0.944,80,views,hand
+money,Sally Ride,Sally Ride,ok,1049592,0.957,100,views,hand
+money,Susan B Anthony,Susan B. Anthony,ok,850824,0.968,100,views,hand
+money,Anna May Wong,Anna May Wong,ok,571224,0.978,100,views,hand
+money,Bessie Coleman,Bessie Coleman,ok,361728,0.984,100,views,hand
+money,Salmon P Chase,Salmon P. Chase,ok,358872,0.988,100,views,hand
+money,Maria Tallchief,Maria Tallchief,ok,239328,0.993,100,views,hand
+money,Wilma Mankiller,Wilma Mankiller,ok,209448,0.995,100,views,hand
+money,Jovita Idar,Jovita Idar,ok,105600,0.998,100,views,hand
+money,Edith Kanakaole,Edith Kanakaʻole,ok,67008,0.999,100,views,hand
+money,Nina Otero-Warren,Adelina Otero-Warren,ok,43752,1.000,100,views,hand
+mstates,Massachusetts,Massachusetts,ok,2737392,0.000,10,views,hand
+mstates,Minnesota,Minnesota,ok,2651088,0.157,10,views,hand
+mstates,Michigan,Michigan,ok,2280936,0.309,25,views,hand
+mstates,Missouri,Missouri,ok,2131488,0.440,25,views,hand
+mstates,Montana,Montana,ok,2015880,0.562,40,views,hand
+mstates,Maryland,Maryland,ok,1997088,0.677,40,views,hand
+mstates,Maine,Maine,ok,1964064,0.792,60,views,hand
+mstates,Mississippi,Mississippi,ok,1668336,0.904,80,views,hand
+nba,Los Angeles Lakers,Los Angeles Lakers,ok,3210816,0.000,10,views,wikidata
+nba,Golden State Warriors,Golden State Warriors,ok,2267736,0.085,10,views,wikidata
+nba,Boston Celtics,Boston Celtics,ok,1936776,0.144,10,views,wikidata
+nba,New York Knicks,New York Knicks,ok,1725984,0.195,10,views,wikidata
+nba,Oklahoma City Thunder,Oklahoma City Thunder,ok,1725072,0.241,10,views,wikidata
+nba,Chicago Bulls,Chicago Bulls,ok,1522704,0.286,25,views,wikidata
+nba,Charlotte Hornets,Charlotte Hornets,ok,1487832,0.326,25,views,wikidata
+nba,Los Angeles Clippers,Los Angeles Clippers,ok,1413408,0.366,25,views,wikidata
+nba,San Antonio Spurs,San Antonio Spurs,ok,1342896,0.403,25,views,wikidata
+nba,Dallas Mavericks,Dallas Mavericks,ok,1253856,0.438,25,views,wikidata
+nba,Philadelphia 76ers,Philadelphia 76ers,ok,1243200,0.471,25,views,wikidata
+nba,Detroit Pistons,Detroit Pistons,ok,1229808,0.504,40,views,wikidata
+nba,Sacramento Kings,Sacramento Kings,ok,1194336,0.536,40,views,wikidata
+nba,Cleveland Cavaliers,Cleveland Cavaliers,ok,1138968,0.568,40,views,wikidata
+nba,Washington Wizards,Washington Wizards,ok,1129008,0.598,40,views,wikidata
+nba,Miami Heat,Miami Heat,ok,1120176,0.628,40,views,wikidata
+nba,Brooklyn Nets,Brooklyn Nets,ok,1084728,0.657,40,views,wikidata
+nba,Toronto Raptors,Toronto Raptors,ok,1077456,0.686,40,views,wikidata
+nba,Houston Rockets,Houston Rockets,ok,1020696,0.714,60,views,wikidata
+nba,Milwaukee Bucks,Milwaukee Bucks,ok,1010712,0.741,60,views,wikidata
+nba,Portland Trail Blazers,Portland Trail Blazers,ok,976680,0.768,60,views,wikidata
+nba,Denver Nuggets,Denver Nuggets,ok,944712,0.793,60,views,wikidata
+nba,Memphis Grizzlies,Memphis Grizzlies,ok,914400,0.818,60,views,wikidata
+nba,New Orleans Pelicans,New Orleans Pelicans,ok,895896,0.842,60,views,wikidata
+nba,Minnesota Timberwolves,Minnesota Timberwolves,ok,891912,0.866,80,views,wikidata
+nba,Utah Jazz,Utah Jazz,ok,882576,0.889,80,views,wikidata
+nba,Atlanta Hawks,Atlanta Hawks,ok,869784,0.913,80,views,wikidata
+nba,Phoenix Suns,Phoenix Suns,ok,869064,0.936,80,views,wikidata
+nba,Orlando Magic,Orlando Magic,ok,843528,0.959,100,views,wikidata
+nba,Indiana Pacers,Indiana Pacers,ok,729696,0.981,100,views,wikidata
+nfl,Dallas Cowboys,Dallas Cowboys,ok,2393040,0.000,10,views,wikidata
+nfl,Philadelphia Eagles,Philadelphia Eagles,ok,2343480,0.044,10,views,wikidata
+nfl,Washington Commanders,Washington Commanders,ok,2341392,0.087,10,views,wikidata
+nfl,New England Patriots,New England Patriots,ok,2340096,0.130,10,views,wikidata
+nfl,Kansas City Chiefs,Kansas City Chiefs,ok,2229264,0.172,10,views,wikidata
+nfl,San Francisco 49ers,San Francisco 49ers,ok,2173248,0.213,10,views,wikidata
+nfl,Cleveland Browns,Cleveland Browns,ok,2157624,0.253,25,views,wikidata
+nfl,Green Bay Packers,Green Bay Packers,ok,2141760,0.293,25,views,wikidata
+nfl,New York Giants,New York Giants,ok,2104752,0.332,25,views,wikidata
+nfl,Chicago Bears,Chicago Bears,ok,2077656,0.370,25,views,wikidata
+nfl,Buffalo Bills,Buffalo Bills,ok,2019312,0.408,25,views,wikidata
+nfl,Pittsburgh Steelers,Pittsburgh Steelers,ok,2006784,0.445,25,views,wikidata
+nfl,Los Angeles Rams,Los Angeles Rams,ok,1982448,0.482,25,views,wikidata
+nfl,Las Vegas Raiders,Las Vegas Raiders,ok,1964376,0.518,40,views,wikidata
+nfl,Seattle Seahawks,Seattle Seahawks,ok,1826616,0.554,40,views,wikidata
+nfl,New York Jets,New York Jets,ok,1529232,0.588,40,views,wikidata
+nfl,Arizona Cardinals,Arizona Cardinals,ok,1497816,0.616,40,views,wikidata
+nfl,Denver Broncos,Denver Broncos,ok,1477848,0.643,40,views,wikidata
+nfl,Tampa Bay Buccaneers,Tampa Bay Buccaneers,ok,1443480,0.670,40,views,wikidata
+nfl,Detroit Lions,Detroit Lions,ok,1391016,0.697,40,views,wikidata
+nfl,Minnesota Vikings,Minnesota Vikings,ok,1366752,0.722,60,views,wikidata
+nfl,Baltimore Ravens,Baltimore Ravens,ok,1365768,0.747,60,views,wikidata
+nfl,Miami Dolphins,Miami Dolphins,ok,1352400,0.772,60,views,wikidata
+nfl,Tennessee Titans,Tennessee Titans,ok,1330584,0.797,60,views,wikidata
+nfl,Jacksonville Jaguars,Jacksonville Jaguars,ok,1272096,0.821,60,views,wikidata
+nfl,Indianapolis Colts,Indianapolis Colts,ok,1214640,0.845,60,views,wikidata
+nfl,New Orleans Saints,New Orleans Saints,ok,1199280,0.867,80,views,wikidata
+nfl,Los Angeles Chargers,Los Angeles Chargers,ok,1145280,0.889,80,views,wikidata
+nfl,Houston Texans,Houston Texans,ok,1079496,0.910,80,views,wikidata
+nfl,Cincinnati Bengals,Cincinnati Bengals,ok,1072488,0.930,80,views,wikidata
+nfl,Carolina Panthers,Carolina Panthers,ok,1040616,0.949,80,views,wikidata
+nfl,Atlanta Falcons,Atlanta Falcons,ok,985608,0.968,100,views,wikidata
+nfl,Oakland Raiders,Oakland Raiders,ok,748512,0.986,100,views,wikidata
+notstate,Washington DC,"Washington, D.C.",ok,5305872,0.000,10,views,hand
+notstate,Puerto Rico,Puerto Rico,ok,4668720,0.261,25,views,hand
+notstate,Guam,Guam,ok,2513568,0.491,25,views,hand
+notstate,US Virgin Islands,United States Virgin Islands,ok,1850064,0.614,40,views,hand
+notstate,American Samoa,American Samoa,ok,1561560,0.705,60,views,hand
+notstate,Northern Mariana Islands,Northern Mariana Islands,ok,1179264,0.782,60,views,hand
+notstate,Midway Atoll,Midway Atoll,ok,797664,0.840,60,views,hand
+notstate,Wake Island,Wake Island,ok,604032,0.879,80,views,hand
+notstate,Palmyra Atoll,Palmyra Atoll,ok,371400,0.909,80,views,hand
+notstate,Johnston Atoll,Johnston Atoll,ok,345792,0.927,80,views,hand
+notstate,Howland Island,Howland Island,ok,338256,0.944,80,views,hand
+notstate,Navassa Island,Navassa Island,ok,268368,0.961,100,views,hand
+notstate,Baker Island,Baker Island,ok,238560,0.974,100,views,hand
+notstate,Jarvis Island,Jarvis Island,ok,172968,0.986,100,views,hand
+notstate,Kingman Reef,Kingman Reef,ok,116880,0.994,100,views,hand
+parks,Yellowstone,Yellowstone National Park,ok,1672608,0.000,10,views,wikidata
+parks,Yosemite,Yosemite National Park,ok,807864,0.125,10,views,wikidata
+parks,Chiricahua National Park,Chiricahua National Park,ok,698184,0.185,10,views,wikidata
+parks,Joshua Tree,Joshua Tree National Park,ok,490488,0.237,10,views,wikidata
+parks,Mammoth Cave,Mammoth Cave National Park,ok,440184,0.273,25,views,wikidata
+parks,Zion,Zion National Park,ok,374040,0.306,25,views,wikidata
+parks,Sequoia,Sequoia National Park,ok,368352,0.334,25,views,wikidata
+parks,Acadia,Acadia National Park,ok,368352,0.362,25,views,wikidata
+parks,Grand Teton,Grand Teton National Park,ok,366144,0.389,25,views,wikidata
+parks,Glacier,Glacier National Park (U.S.),ok,348096,0.416,25,views,wikidata
+parks,Grand Canyon,Grand Canyon National Park,ok,301824,0.442,25,views,wikidata
+parks,Olympic,Olympic National Park,ok,298944,0.465,25,views,wikidata
+parks,Bryce Canyon,Bryce Canyon National Park,ok,288072,0.487,25,views,wikidata
+parks,Arches,Arches National Park,ok,284952,0.509,40,views,wikidata
+parks,Great Smoky Mountains,Great Smoky Mountains National Park,ok,283416,0.530,40,views,wikidata
+parks,Mesa Verde,Mesa Verde National Park,ok,266808,0.551,40,views,wikidata
+parks,Death Valley,Death Valley National Park,ok,257904,0.571,40,views,wikidata
+parks,Badlands,Badlands National Park,ok,253512,0.590,40,views,wikidata
+parks,Big Bend,Big Bend National Park,ok,219744,0.609,40,views,wikidata
+parks,Dry Tortugas,Dry Tortugas National Park,ok,211152,0.625,40,views,wikidata
+parks,White Sands,White Sands National Park,ok,210960,0.641,40,views,wikidata
+parks,Carlsbad Caverns,Carlsbad Caverns National Park,ok,209376,0.657,40,views,wikidata
+parks,Everglades,Everglades National Park,ok,202320,0.672,40,views,wikidata
+parks,Petrified Forest,Petrified Forest National Park,ok,187968,0.687,40,views,wikidata
+parks,Denali National Park and Preserve,Denali National Park and Preserve,ok,178008,0.702,60,views,wikidata
+parks,Shenandoah,Shenandoah National Park,ok,174528,0.715,60,views,wikidata
+parks,Great Sand Dunes National Park and Preserve,Great Sand Dunes National Park and Preserve,ok,159072,0.728,60,views,wikidata
+parks,Crater Lake,Crater Lake National Park,ok,138024,0.740,60,views,wikidata
+parks,Kings Canyon,Kings Canyon National Park,ok,137592,0.750,60,views,wikidata
+parks,Isle Royale,Isle Royale National Park,ok,132792,0.760,60,views,wikidata
+parks,Rocky Mountain,Rocky Mountain National Park,ok,132384,0.770,60,views,wikidata
+parks,Capitol Reef,Capitol Reef National Park,ok,131808,0.780,60,views,wikidata
+parks,Gateway Arch,Gateway Arch National Park,ok,131544,0.790,60,views,wikidata
+parks,Cuyahoga Valley,Cuyahoga Valley National Park,ok,127056,0.800,60,views,wikidata
+parks,Lassen Volcanic,Lassen Volcanic National Park,ok,124248,0.809,60,views,wikidata
+parks,Theodore Roosevelt,Theodore Roosevelt National Park,ok,115224,0.818,60,views,wikidata
+parks,Indiana Dunes,Indiana Dunes National Park,ok,114192,0.827,60,views,wikidata
+parks,Canyonlands,Canyonlands National Park,ok,112920,0.835,60,views,wikidata
+parks,Pinnacles,Pinnacles National Park,ok,112032,0.844,60,views,wikidata
+parks,Mount Rainier,Mount Rainier National Park,ok,108576,0.852,80,views,wikidata
+parks,Great Basin,Great Basin National Park,ok,102288,0.860,80,views,wikidata
+parks,North Cascades,North Cascades National Park,ok,102144,0.868,80,views,wikidata
+parks,Katmai National Park and Preserve,Katmai National Park and Preserve,ok,101976,0.876,80,views,wikidata
+parks,Congaree,Congaree National Park,ok,100896,0.883,80,views,wikidata
+parks,Black Canyon of the Gunnison,Black Canyon of the Gunnison National Park,ok,100608,0.891,80,views,wikidata
+parks,Hot Springs,Hot Springs National Park,ok,99360,0.898,80,views,wikidata
+parks,Gates of the Arctic National Park and Preserve,Gates of the Arctic National Park and Preserve,ok,98208,0.906,80,views,wikidata
+parks,Saguaro,Saguaro National Park,ok,96192,0.913,80,views,wikidata
+parks,Hawaiʻi Volcanoes National Park,Hawaiʻi Volcanoes National Park,ok,91152,0.920,80,views,wikidata
+parks,Hawaii Volcanoes,Hawaiʻi Volcanoes National Park,ok,91152,0.927,80,views,hand
+parks,Channel Islands,Channel Islands National Park,ok,86832,0.934,80,views,wikidata
+parks,Wrangell–St. Elias National Park and Preserve,Wrangell–St. Elias National Park and Preserve,ok,82032,0.940,80,views,wikidata
+parks,Voyageurs,Voyageurs National Park,ok,79584,0.946,80,views,wikidata
+parks,Biscayne,Biscayne National Park,ok,77520,0.952,100,views,wikidata
+parks,Wind Cave,Wind Cave National Park,ok,76848,0.958,100,views,wikidata
+parks,Haleakala,Haleakalā National Park,ok,72720,0.964,100,views,wikidata
+parks,Guadalupe Mountains,Guadalupe Mountains National Park,ok,68784,0.969,100,views,wikidata
+parks,Glacier Bay National Park and Preserve,Glacier Bay National Park and Preserve,ok,59688,0.974,100,views,wikidata
+parks,National Park of American Samoa,National Park of American Samoa,ok,58200,0.979,100,views,wikidata
+parks,Kenai Fjords,Kenai Fjords National Park,ok,54408,0.983,100,views,wikidata
+parks,Virgin Islands,Virgin Islands National Park,ok,42888,0.987,100,views,wikidata
+parks,Kobuk Valley,Kobuk Valley National Park,ok,32928,0.990,100,views,wikidata
+parks,Redwood,Redwood National Park,ok,29472,0.993,100,views,wikidata
+parks,Katmai,Katmai National Park,ok,24216,0.995,100,views,wikidata
+parks,Denali,Denali National Park,ok,23976,0.997,100,views,wikidata
+parks,Lake Clark,Lake Clark National Park,ok,10200,0.998,100,views,wikidata
+parks,Great Sand Dunes,Great Sand Dunes National Park,ok,3912,0.999,100,views,wikidata
+parks,Glacier Bay,Glacier Bay National Park,ok,2856,1.000,100,views,wikidata
+parks,Gates of the Arctic,Gates of the Arctic National Park,ok,2736,1.000,100,views,wikidata
+parks,New River Gorge,New River Gorge National Park,ok,576,1.000,100,views,wikidata
+parks,Wrangell St Elias,Wrangell–St. Elias National Park,ok,96,1.000,100,views,wikidata
+presidents,Donald Trump,Donald Trump,ok,40054584,0.000,10,views,wikidata
+presidents,Barack Obama,Barack Obama,ok,13347768,0.155,10,views,wikidata
+presidents,John F Kennedy,John F. Kennedy,ok,11676288,0.207,10,views,wikidata
+presidents,Joe Biden,Joe Biden,ok,9712968,0.252,25,views,wikidata
+presidents,Franklin Delano Roosevelt,Franklin D. Roosevelt,ok,9422304,0.289,25,views,wikidata
+presidents,Franklin D Roosevelt,Franklin D. Roosevelt,ok,9422304,0.326,25,views,hand
+presidents,George W Bush,George W. Bush,ok,9019584,0.362,25,views,wikidata
+presidents,Ronald Reagan,Ronald Reagan,ok,8835648,0.397,25,views,wikidata
+presidents,Abraham Lincoln,Abraham Lincoln,ok,8786064,0.431,25,views,wikidata
+presidents,George Washington,George Washington,ok,8396664,0.465,25,views,wikidata
+presidents,Bill Clinton,Bill Clinton,ok,7831776,0.498,25,views,wikidata
+presidents,Theodore Roosevelt,Theodore Roosevelt,ok,7731672,0.528,40,views,wikidata
+presidents,George H W Bush,George H. W. Bush,ok,6749760,0.558,40,views,wikidata
+presidents,Richard Nixon,Richard Nixon,ok,6675000,0.584,40,views,wikidata
+presidents,Dwight Eisenhower,Dwight D. Eisenhower,ok,6570504,0.610,40,views,wikidata
+presidents,Jimmy Carter,Jimmy Carter,ok,5779632,0.636,40,views,wikidata
+presidents,Lyndon B Johnson,Lyndon B. Johnson,ok,5523912,0.658,40,views,wikidata
+presidents,Thomas Jefferson,Thomas Jefferson,ok,4911192,0.679,40,views,wikidata
+presidents,Harry Truman,Harry S. Truman,ok,4754376,0.698,40,views,wikidata
+presidents,Gerald Ford,Gerald Ford,ok,4577856,0.717,60,views,wikidata
+presidents,James A. Garfield,James A. Garfield,ok,4132440,0.734,60,views,wikidata
+presidents,James Garfield,James A. Garfield,ok,4132440,0.750,60,views,hand
+presidents,Ulysses S Grant,Ulysses S. Grant,ok,4062240,0.766,60,views,wikidata
+presidents,John Adams,John Adams,ok,3917112,0.782,60,views,wikidata
+presidents,Andrew Jackson,Andrew Jackson,ok,3738384,0.797,60,views,wikidata
+presidents,Woodrow Wilson,Woodrow Wilson,ok,3409872,0.812,60,views,wikidata
+presidents,William McKinley,William McKinley,ok,3162144,0.825,60,views,wikidata
+presidents,Grover Cleveland,Grover Cleveland,ok,2987904,0.837,60,views,wikidata
+presidents,Herbert Hoover,Herbert Hoover,ok,2934648,0.849,60,views,wikidata
+presidents,Warren G Harding,Warren G. Harding,ok,2601264,0.860,80,views,wikidata
+presidents,Calvin Coolidge,Calvin Coolidge,ok,2553120,0.870,80,views,wikidata
+presidents,William Howard Taft,William Howard Taft,ok,2438616,0.880,80,views,wikidata
+presidents,Chester A Arthur,Chester A. Arthur,ok,2353344,0.889,80,views,wikidata
+presidents,William Henry Harrison,William Henry Harrison,ok,2344296,0.899,80,views,wikidata
+presidents,Andrew Johnson,Andrew Johnson,ok,2238312,0.908,80,views,wikidata
+presidents,James Buchanan,James Buchanan,ok,2237760,0.916,80,views,wikidata
+presidents,John Quincy Adams,John Quincy Adams,ok,2161560,0.925,80,views,wikidata
+presidents,James Madison,James Madison,ok,2152512,0.933,80,views,wikidata
+presidents,Martin Van Buren,Martin Van Buren,ok,1908528,0.942,80,views,wikidata
+presidents,Zachary Taylor,Zachary Taylor,ok,1803912,0.949,80,views,wikidata
+presidents,John Tyler,John Tyler,ok,1794816,0.956,100,views,wikidata
+presidents,James K Polk,James K. Polk,ok,1737096,0.963,100,views,wikidata
+presidents,Benjamin Harrison,Benjamin Harrison,ok,1521984,0.970,100,views,wikidata
+presidents,Franklin Pierce,Franklin Pierce,ok,1511184,0.976,100,views,wikidata
+presidents,Millard Fillmore,Millard Fillmore,ok,1482120,0.981,100,views,wikidata
+presidents,Rutherford B Hayes,Rutherford B. Hayes,ok,1480968,0.987,100,views,wikidata
+presidents,James Monroe,James Monroe,ok,1442832,0.993,100,views,wikidata
+presidents,Mr. Garrison,Mr. Garrison,ok,152880,0.998,100,views,wikidata
+presidents,Zartan,Zartan,ok,86304,0.999,100,views,wikidata
+presidents,Doom 2099,Doom 2099,ok,81480,0.999,100,views,wikidata
+presidents,General Joseph Colton,General Joseph Colton,ok,32832,1.000,100,views,wikidata
+presidents,Thor,Thor (Ultimate Marvel),ok,21552,1.000,100,views,wikidata
+presidents,Prez,Prez (character),ok,17760,1.000,100,views,wikidata
+presidents,President Robert L. Booth,President Robert L. Booth,ok,3792,1.000,100,views,wikidata
+presidents,Ed Kealty,Ed Kealty,ok,1584,1.000,100,views,wikidata
+presidents,President Winthrop,President Winthrop,ok,168,1.000,100,views,wikidata
+rivers,Mississippi,Mississippi River,ok,1582608,0.000,10,views,wikidata
+rivers,Colorado,Colorado River,ok,714840,0.125,10,views,wikidata
+rivers,Hudson,Hudson River,ok,677808,0.181,10,views,wikidata
+rivers,Missouri,Missouri River,ok,671400,0.235,10,views,wikidata
+rivers,Rio Grande,Rio Grande,ok,638304,0.287,25,views,wikidata
+rivers,Ohio,Ohio River,ok,605880,0.338,25,views,wikidata
+rivers,Columbia,Columbia River,ok,501480,0.386,25,views,wikidata
+rivers,Potomac,Potomac River,ok,415008,0.425,25,views,wikidata
+rivers,St. Lawrence River,St. Lawrence River,ok,370584,0.458,25,views,wikidata
+rivers,Snake,Snake River,ok,330912,0.487,25,views,wikidata
+rivers,Susquehanna,Susquehanna River,ok,320472,0.513,40,views,wikidata
+rivers,Red,Red River of the South,ok,289872,0.538,40,views,wikidata
+rivers,Delaware,Delaware River,ok,228960,0.561,40,views,wikidata
+rivers,Arkansas,Arkansas River,ok,219528,0.579,40,views,wikidata
+rivers,Tennessee,Tennessee River,ok,205848,0.597,40,views,wikidata
+rivers,Chattahoochee,Chattahoochee River,ok,204024,0.613,40,views,hand
+rivers,Yukon,Yukon River,ok,194520,0.629,40,views,wikidata
+rivers,Brazos,Brazos River,ok,167544,0.644,40,views,wikidata
+rivers,Red River of the North,Red River of the North,ok,159432,0.657,40,views,wikidata
+rivers,Colorado River,Colorado River (Texas),ok,155664,0.670,40,views,wikidata
+rivers,Charles,Charles,ok,155088,0.682,40,views,hand
+rivers,Connecticut,Connecticut River,ok,154224,0.694,40,views,wikidata
+rivers,St. Johns River,St. Johns River,ok,138264,0.707,60,views,wikidata
+rivers,Cumberland,Cumberland River,ok,127152,0.718,60,views,wikidata
+rivers,Allegheny,Allegheny River,ok,125304,0.728,60,views,wikidata
+rivers,Wabash,Wabash River,ok,121056,0.737,60,views,wikidata
+rivers,Platte,Platte River,ok,118512,0.747,60,views,wikidata
+rivers,Yellowstone,Yellowstone River,ok,112464,0.756,60,views,wikidata
+rivers,Canadian River,Canadian River,ok,109488,0.765,60,views,wikidata
+rivers,James,James River,ok,109344,0.774,60,views,wikidata
+rivers,Trinity River,Trinity River (Texas),ok,107088,0.782,60,views,wikidata
+rivers,Sacramento,Sacramento River,ok,99336,0.791,60,views,wikidata
+rivers,New River,New River (Kanawha River tributary),ok,94728,0.799,60,views,wikidata
+rivers,Gila,Gila River,ok,93384,0.806,60,views,wikidata
+rivers,Klamath,Klamath River,ok,88368,0.814,60,views,wikidata
+rivers,Savannah,Savannah River,ok,86784,0.821,60,views,wikidata
+rivers,Illinois,Illinois River,ok,86544,0.827,60,views,wikidata
+rivers,Suwannee River,Suwannee River,ok,85152,0.834,60,views,wikidata
+rivers,Nueces River,Nueces River,ok,84960,0.841,60,views,wikidata
+rivers,Guadalupe River,Guadalupe River (Texas),ok,67368,0.848,60,views,wikidata
+rivers,Monongahela,,disambiguation,0,,60,hand,hand
+rivers,Willamette,,disambiguation,0,,60,hand,hand
+rivers,Salmon River,Salmon River (Idaho),ok,65904,0.853,80,views,wikidata
+rivers,Green,Green River (Colorado River tributary),ok,62592,0.858,80,views,wikidata
+rivers,Minnesota River,Minnesota River,ok,58992,0.863,80,views,wikidata
+rivers,San Joaquin River,San Joaquin River,ok,57960,0.868,80,views,wikidata
+rivers,South Platte River,South Platte River,ok,56568,0.872,80,views,wikidata
+rivers,Grand River,Grand River (Michigan),ok,55032,0.877,80,views,wikidata
+rivers,Penobscot,Penobscot River,ok,53880,0.881,80,views,wikidata
+rivers,Wisconsin River,Wisconsin River,ok,50688,0.885,80,views,wikidata
+rivers,Sabine,Sabine River (Texas–Louisiana),ok,49872,0.889,80,views,wikidata
+rivers,Humboldt River,Humboldt River,ok,49128,0.893,80,views,wikidata
+rivers,White River,White River (Arkansas–Missouri),ok,49080,0.897,80,views,wikidata
+rivers,North Platte River,North Platte River,ok,48456,0.901,80,views,wikidata
+rivers,Saint John River,Saint John River (Bay of Fundy),ok,46728,0.905,80,views,wikidata
+rivers,White River,White River (Indiana),ok,42432,0.908,80,views,wikidata
+rivers,Kootenay River,Kootenay River,ok,42168,0.912,80,views,wikidata
+rivers,Neuse River,Neuse River,ok,41832,0.915,80,views,wikidata
+rivers,Alabama River,Alabama River,ok,41808,0.918,80,views,wikidata
+rivers,Tombigbee,Tombigbee River,ok,41064,0.922,80,views,hand
+rivers,Roanoke River,Roanoke River,ok,40272,0.925,80,views,wikidata
+rivers,Clark Fork,Clark Fork River,ok,38928,0.928,80,views,wikidata
+rivers,Milk River,Milk River (Alberta–Montana),ok,38592,0.931,80,views,wikidata
+rivers,Kentucky River,Kentucky River,ok,38520,0.934,80,views,wikidata
+rivers,San Juan River,San Juan River (Colorado River tributary),ok,36624,0.937,80,views,wikidata
+rivers,Des Moines River,Des Moines River,ok,36072,0.940,80,views,wikidata
+rivers,Ouachita River,Ouachita River,ok,35832,0.943,80,views,wikidata
+rivers,Green River,Green River (Kentucky),ok,35472,0.946,80,views,wikidata
+rivers,Copper River,Copper River (Alaska),ok,35376,0.949,80,views,wikidata
+rivers,Shenandoah,,disambiguation,0,,80,hand,hand
+rivers,Kanawha,,disambiguation,0,,80,hand,hand
+rivers,Pecos,,disambiguation,0,,80,hand,hand
+rivers,Merrimack,,disambiguation,0,,80,hand,hand
+rivers,Pearl River,Pearl River (Mississippi–Louisiana),ok,34512,0.951,100,views,wikidata
+rivers,Rock River,Rock River (Mississippi River tributary),ok,33960,0.954,100,views,wikidata
+rivers,Bear River,Bear River (Great Salt Lake),ok,33552,0.957,100,views,wikidata
+rivers,Coosa River,Coosa River,ok,31872,0.959,100,views,wikidata
+rivers,Duck River,Duck River (Tennessee),ok,31320,0.962,100,views,wikidata
+rivers,Deschutes River,Deschutes River,ok,30816,0.964,100,views,wikidata
+rivers,Big Sioux River,Big Sioux River,ok,30312,0.967,100,views,wikidata
+rivers,Licking River,Licking River (Kentucky),ok,28344,0.969,100,views,wikidata
+rivers,Little Colorado River,Little Colorado River,ok,28320,0.972,100,views,wikidata
+rivers,Osage River,Osage River,ok,28224,0.974,100,views,wikidata
+rivers,North Canadian River,North Canadian River,ok,27624,0.976,100,views,wikidata
+rivers,Clinch River,Clinch River,ok,26664,0.978,100,views,wikidata
+rivers,Bighorn River,Bighorn River,ok,26064,0.980,100,views,wikidata
+rivers,Powder River,Powder River (Wyoming and Montana),ok,25056,0.982,100,views,wikidata
+rivers,Ocmulgee River,Ocmulgee River,ok,24696,0.984,100,views,wikidata
+rivers,Republican River,Republican River,ok,24624,0.986,100,views,wikidata
+rivers,Neches River,Neches River,ok,23784,0.988,100,views,wikidata
+rivers,Owyhee River,Owyhee River,ok,23568,0.990,100,views,wikidata
+rivers,Cimarron River,Cimarron River (Arkansas River tributary),ok,22824,0.992,100,views,wikidata
+rivers,Tanana River,Tanana River,ok,20640,0.994,100,views,wikidata
+rivers,Stikine River,Stikine River,ok,20328,0.995,100,views,wikidata
+rivers,Kuskokwim River,Kuskokwim River,ok,19704,0.997,100,views,wikidata
+rivers,Niobrara,Niobrara River,ok,19128,0.998,100,views,wikidata
+rivers,Altamaha,,disambiguation,0,,100,hand,hand
+rivers,Atchafalaya,,disambiguation,0,,100,hand,hand
+sesame,Baby Bear,Bear,ok,1426920,0.000,10,views,hand
+sesame,The Muppets,The Muppets,ok,1076928,0.190,10,views,wikidata
+sesame,Elmo,Elmo,ok,568008,0.334,25,views,wikidata
+sesame,Kermit the Frog,Kermit the Frog,ok,558216,0.409,25,views,wikidata
+sesame,Bert and Ernie,Bert and Ernie,ok,378816,0.484,25,views,wikidata
+sesame,Herry Monster,List of Sesame Street Muppets,ok,323088,0.534,40,views,hand
+sesame,Alice Snuffleupagus,List of Sesame Street Muppets,ok,323088,0.577,40,views,hand
+sesame,Forgetful Jones,List of Sesame Street Muppets,ok,323088,0.620,40,views,hand
+sesame,Mr. Snuffleupagus,Mr. Snuffleupagus,ok,292056,0.663,40,views,wikidata
+sesame,Cookie Monster,Cookie Monster,ok,275160,0.702,60,views,wikidata
+sesame,Big Bird,Big Bird,ok,273792,0.739,60,views,wikidata
+sesame,Oscar the Grouch,Oscar the Grouch,ok,208680,0.775,60,views,wikidata
+sesame,Mr. Noodle,Mr. Noodle,ok,203568,0.803,60,views,wikidata
+sesame,Count von Count,Count von Count,ok,168696,0.830,60,views,wikidata
+sesame,Slimey,,disambiguation,0,,60,hand,hand
+sesame,Gordon,,disambiguation,0,,60,hand,hand
+sesame,Maria,,disambiguation,0,,60,hand,hand
+sesame,Grover,Grover,ok,148392,0.853,80,views,wikidata
+sesame,Super Grover,Grover,ok,148392,0.872,80,views,hand
+sesame,Mr. Hooper,Mr. Hooper,ok,123576,0.892,80,views,wikidata
+sesame,Abby Cadabby,Abby Cadabby,ok,103152,0.909,80,views,wikidata
+sesame,Susan,Susan,ok,91560,0.922,80,views,hand
+sesame,The Robinson family,The Robinson family (Sesame Street),ok,64704,0.935,80,views,wikidata
+sesame,Julia,Julia (Sesame Street),ok,64296,0.943,80,views,wikidata
+sesame,Bob,,disambiguation,0,,80,hand,hand
+sesame,Sesame Street,Sesame Street (fictional location),ok,52632,0.952,100,views,wikidata
+sesame,Luis,Luis,ok,49824,0.959,100,views,hand
+sesame,Rosita,Rosita (Sesame Street),ok,46392,0.965,100,views,wikidata
+sesame,Guy Smiley,Guy Smiley,ok,36624,0.972,100,views,wikidata
+sesame,Roosevelt Franklin,Roosevelt Franklin,ok,23952,0.976,100,views,wikidata
+sesame,Hooper's Store,Hooper's Store,ok,23544,0.980,100,views,wikidata
+sesame,Two-Headed Monster,Two-Headed Monster,ok,22824,0.983,100,views,wikidata
+sesame,Ernie,Ernie (Sesame Street),ok,22248,0.986,100,views,wikidata
+sesame,Bert,Bert (Sesame Street),ok,20856,0.989,100,views,wikidata
+sesame,Murray Monster,Murray Monster,ok,13800,0.992,100,views,wikidata
+sesame,Telly Monster,Telly Monster,ok,11328,0.993,100,views,wikidata
+sesame,Sherlock Hemlock,Sherlock Hemlock,ok,9720,0.995,100,views,wikidata
+sesame,Lefty,Lefty,ok,6216,0.996,100,views,hand
+sesame,Zoe,Zoe (Sesame Street),ok,5136,0.997,100,views,wikidata
+sesame,Linda,Linda (Sesame Street),ok,4032,0.998,100,views,wikidata
+sesame,Natasha,Natasha (Sesame Street),ok,2784,0.998,100,views,wikidata
+sesame,Hoots the Owl,Hoots the Owl,ok,2040,0.999,100,views,wikidata
+sesame,Grundgetta,Grundgetta,ok,1800,0.999,100,views,wikidata
+sesame,Mr. Johnson,Mr. Johnson (Sesame Street),ok,1608,0.999,100,views,wikidata
+sesame,Barkley,Barkley (Sesame Street),ok,1320,0.999,100,views,wikidata
+sesame,Chaos,Chaos (Sesame Park),ok,1296,1.000,100,views,wikidata
+sesame,Prairie Dawn,Prairie Dawn,ok,1032,1.000,100,views,wikidata
+sesame,Trash Gordon,Trash Gordon,ok,816,1.000,100,views,wikidata
+sesame,Honkers,Honkers,ok,312,1.000,100,views,wikidata
+sesame,Roxie Marie,Roxie Marie,ok,168,1.000,100,views,wikidata
+sesame,Granny Bird,Granny Bird,ok,120,1.000,100,views,wikidata
+signers,Thomas Jefferson,Thomas Jefferson,ok,4911192,0.000,10,views,wikidata
+signers,Benjamin Franklin,Benjamin Franklin,ok,4256760,0.264,25,views,wikidata
+signers,John Adams,John Adams,ok,3917112,0.493,25,views,hand
+signers,Samuel Adams,Samuel Adams,ok,923304,0.703,60,views,wikidata
+signers,John Hancock,John Hancock,ok,859608,0.753,60,views,wikidata
+signers,Elbridge Gerry,Elbridge Gerry,ok,297024,0.799,60,views,wikidata
+signers,Robert Morris,Robert Morris (financier),ok,278784,0.815,60,views,wikidata
+signers,Roger Sherman,Roger Sherman,ok,265896,0.830,60,views,wikidata
+signers,Benjamin Rush,Benjamin Rush,ok,256416,0.844,60,views,wikidata
+signers,William Williams,,disambiguation,0,,60,hand,hand
+signers,Richard Henry Lee,Richard Henry Lee,ok,217944,0.858,80,views,wikidata
+signers,Charles Carroll,Charles Carroll of Carrollton,ok,217608,0.870,80,views,wikidata
+signers,Benjamin Harrison,Benjamin Harrison V,ok,186624,0.882,80,views,wikidata
+signers,James Wilson,James Wilson (Founding Father),ok,150024,0.892,80,views,wikidata
+signers,John Witherspoon,John Witherspoon,ok,128520,0.900,80,views,wikidata
+signers,Samuel Chase,Samuel Chase,ok,105072,0.907,80,views,wikidata
+signers,Edward Rutledge,Edward Rutledge,ok,100008,0.912,80,views,wikidata
+signers,Button Gwinnett,Button Gwinnett,ok,94776,0.918,80,views,wikidata
+signers,Caesar Rodney,Caesar Rodney,ok,80304,0.923,80,views,wikidata
+signers,Josiah Bartlett,Josiah Bartlett,ok,78672,0.927,80,views,wikidata
+signers,George Wythe,George Wythe,ok,70200,0.931,80,views,wikidata
+signers,Thomas McKean,Thomas McKean,ok,68952,0.935,80,views,wikidata
+signers,Richard Stockton,Richard Stockton (Continental Congressman),ok,59808,0.939,80,views,wikidata
+signers,Francis Hopkinson,Francis Hopkinson,ok,58008,0.942,80,views,wikidata
+signers,Stephen Hopkins,Stephen Hopkins (politician),ok,55248,0.945,80,views,wikidata
+signers,Francis Lightfoot Lee,Francis Lightfoot Lee,ok,52320,0.948,80,views,wikidata
+signers,Samuel Huntington,Samuel Huntington (Connecticut politician),ok,50232,0.951,100,views,wikidata
+signers,Oliver Wolcott,Oliver Wolcott,ok,49032,0.954,100,views,wikidata
+signers,Robert Treat Paine,Robert Treat Paine,ok,47904,0.956,100,views,wikidata
+signers,William Whipple,William Whipple,ok,43656,0.959,100,views,wikidata
+signers,Thomas Nelson,Thomas Nelson Jr.,ok,42408,0.961,100,views,wikidata
+signers,William Floyd,William Floyd,ok,41688,0.963,100,views,wikidata
+signers,John Morton,John Morton (American politician),ok,41160,0.966,100,views,wikidata
+signers,Lyman Hall,Lyman Hall,ok,38040,0.968,100,views,wikidata
+signers,Philip Livingston,Philip Livingston,ok,36384,0.970,100,views,wikidata
+signers,William Ellery,William Ellery,ok,33072,0.972,100,views,wikidata
+signers,Francis Lewis,Francis Lewis,ok,32592,0.974,100,views,wikidata
+signers,George Walton,George Walton,ok,31896,0.975,100,views,wikidata
+signers,Lewis Morris,Lewis Morris,ok,31776,0.977,100,views,wikidata
+signers,William Paca,William Paca,ok,31344,0.979,100,views,wikidata
+signers,Arthur Middleton,Arthur Middleton,ok,29928,0.981,100,views,wikidata
+signers,George Clymer,George Clymer,ok,27432,0.982,100,views,wikidata
+signers,George Read,"George Read (American politician, born 1733)",ok,26808,0.984,100,views,wikidata
+signers,Carter Braxton,Carter Braxton,ok,26160,0.985,100,views,wikidata
+signers,Thomas Stone,Thomas Stone,ok,26088,0.987,100,views,wikidata
+signers,John Hart,John Hart (New Jersey politician),ok,25920,0.988,100,views,wikidata
+signers,Matthew Thornton,Matthew Thornton,ok,25776,0.989,100,views,wikidata
+signers,Thomas Lynch,Thomas Lynch Jr.,ok,22848,0.991,100,views,wikidata
+signers,Joseph Hewes,Joseph Hewes,ok,22800,0.992,100,views,wikidata
+signers,William Hooper,William Hooper,ok,22608,0.993,100,views,wikidata
+signers,Abraham Clark,Abraham Clark,ok,21336,0.994,100,views,wikidata
+signers,George Taylor,George Taylor (Pennsylvania politician),ok,17520,0.996,100,views,wikidata
+signers,Thomas Heyward,Thomas Heyward Jr.,ok,16512,0.996,100,views,wikidata
+signers,William William,William Williams (Connecticut politician),ok,15624,0.997,100,views,wikidata
+signers,George Ross,George Ross (American politician),ok,14928,0.998,100,views,wikidata
+signers,John Penn,John Penn (North Carolina politician),ok,10776,0.999,100,views,wikidata
+signers,James Smith,James Smith (Pennsylvania politician),ok,8304,1.000,100,views,wikidata
+simpsons,Bart Simpson,Bart Simpson,ok,820560,0.000,10,views,wikidata
+simpsons,Homer Simpson,Homer Simpson,ok,709536,0.095,10,views,wikidata
+simpsons,Sideshow Bob,Sideshow Bob,ok,453888,0.177,10,views,wikidata
+simpsons,Marge Simpson,Marge Simpson,ok,440088,0.230,10,views,wikidata
+simpsons,Apu,Apu Nahasapeemapetilon,ok,418728,0.281,25,views,wikidata
+simpsons,Mr. Burns,Mr. Burns,ok,342504,0.329,25,views,wikidata
+simpsons,Simpson family,Simpson family,ok,321432,0.369,25,views,wikidata
+simpsons,Lisa Simpson,Lisa Simpson,ok,304968,0.406,25,views,wikidata
+simpsons,Ned Flanders,Ned Flanders,ok,275856,0.441,25,views,wikidata
+simpsons,Springfield,Springfield (The Simpsons),ok,259368,0.473,25,views,wikidata
+simpsons,Edna Krabappel,Edna Krabappel,ok,234216,0.503,40,views,wikidata
+simpsons,Maggie Simpson,Maggie Simpson,ok,219144,0.530,40,views,wikidata
+simpsons,Troy McClure,Troy McClure,ok,206352,0.556,40,views,wikidata
+simpsons,Krusty the Clown,Krusty the Clown,ok,173088,0.579,40,views,wikidata
+simpsons,The Itchy & Scratchy Show,The Itchy & Scratchy Show,ok,160344,0.600,40,views,wikidata
+simpsons,Moe Szyslak,Moe Szyslak,ok,160128,0.618,40,views,wikidata
+simpsons,Selma Bouvier,Patty and Selma,ok,144624,0.637,40,views,wikidata
+simpsons,Milhouse,Milhouse Van Houten,ok,139032,0.653,40,views,wikidata
+simpsons,Smithers,Waylon Smithers,ok,138072,0.669,40,views,wikidata
+simpsons,Lionel Hutz,Lionel Hutz,ok,128640,0.685,40,views,wikidata
+simpsons,Ralph Wiggum,Ralph Wiggum,ok,124632,0.700,60,views,wikidata
+simpsons,Comic Book Guy,Comic Book Guy,ok,119544,0.715,60,views,wikidata
+simpsons,D'oh!,D'oh!,ok,116256,0.729,60,views,wikidata
+simpsons,Grampa Simpson,Grampa Simpson,ok,113136,0.742,60,views,wikidata
+simpsons,The Simpsons' house,The Simpsons house,ok,111552,0.755,60,views,wikidata
+simpsons,Principal Skinner,Principal Skinner,ok,108672,0.768,60,views,wikidata
+simpsons,Santa's Little Helper,Santa's Little Helper,ok,107472,0.781,60,views,wikidata
+simpsons,Fat Tony,Fat Tony (The Simpsons),ok,104952,0.793,60,views,wikidata
+simpsons,Barney Gumble,Barney Gumble,ok,99072,0.805,60,views,wikidata
+simpsons,Duff Beer,Duff Beer,ok,94728,0.817,60,views,wikidata
+simpsons,Nelson Muntz,Nelson Muntz,ok,86160,0.828,60,views,wikidata
+simpsons,Groundskeeper Willie,Groundskeeper Willie,ok,85536,0.838,60,views,wikidata
+simpsons,Chief Wiggum,Chief Wiggum,ok,84984,0.848,60,views,wikidata
+simpsons,Dr. Hibbert,Dr. Hibbert,ok,81024,0.857,80,views,wikidata
+simpsons,Kang and Kodos,Kang and Kodos,ok,79800,0.867,80,views,wikidata
+simpsons,Kwik-E-Mart,Kwik-E-Mart,ok,71496,0.876,80,views,wikidata
+simpsons,Mayor Quimby,Mayor Quimby,ok,65664,0.884,80,views,wikidata
+simpsons,list of The Simpsons guest stars,List of The Simpsons guest stars (seasons 21–present),ok,63600,0.892,80,views,wikidata
+simpsons,Mona Simpson,Mona Simpson (The Simpsons),ok,61224,0.899,80,views,wikidata
+simpsons,Manjula Nahasapeemapetilon,Manjula Nahasapeemapetilon,ok,58032,0.906,80,views,wikidata
+simpsons,Professor Frink,Professor Frink,ok,57672,0.913,80,views,wikidata
+simpsons,Reverend Lovejoy,Reverend Lovejoy,ok,47736,0.920,80,views,wikidata
+simpsons,Kent Brockman,Kent Brockman,ok,40920,0.925,80,views,wikidata
+simpsons,Duffman,Duffman,ok,39120,0.930,80,views,wikidata
+simpsons,Martin Prince,Martin Prince,ok,31296,0.934,80,views,wikidata
+simpsons,Maude Flanders,Maude Flanders,ok,30312,0.938,80,views,wikidata
+simpsons,Cletus,Cletus,ok,25488,0.942,80,views,hand
+simpsons,Superintendent Chalmers,Superintendent Chalmers,ok,22920,0.945,80,views,wikidata
+simpsons,Carl Carlson,Carl Carlson,ok,22320,0.947,80,views,wikidata
+simpsons,Kirk Van Houten,Kirk Van Houten,ok,21408,0.950,80,views,wikidata
+simpsons,Springfield Nuclear Power Plant,Springfield Nuclear Power Plant,ok,19536,0.952,100,views,wikidata
+simpsons,Jimbo Jones,Jimbo Jones,ok,19464,0.955,100,views,wikidata
+simpsons,Otto Mann,Otto Mann,ok,17856,0.957,100,views,wikidata
+simpsons,Hans Moleman,Hans Moleman,ok,16776,0.959,100,views,wikidata
+simpsons,Snake Jailbird,Snake Jailbird,ok,16776,0.961,100,views,wikidata
+simpsons,Sherri and Terri,Sherri and Terri,ok,15936,0.963,100,views,wikidata
+simpsons,Bleeding Gums Murphy,Bleeding Gums Murphy,ok,15216,0.965,100,views,wikidata
+simpsons,Cletus Spuckler,Cletus Spuckler,ok,15168,0.966,100,views,wikidata
+simpsons,Lenny Leonard,Lenny Leonard,ok,14664,0.968,100,views,wikidata
+simpsons,Sideshow Mel,Sideshow Mel,ok,13392,0.970,100,views,wikidata
+simpsons,Frank Grimes,Frank Grimes (The Simpsons),ok,13152,0.971,100,views,wikidata
+simpsons,Todd Flanders,Todd Flanders,ok,12216,0.973,100,views,wikidata
+simpsons,Moe's Tavern,Moe's Tavern,ok,11376,0.974,100,views,wikidata
+simpsons,Clancy Bouvier,Clancy Bouvier,ok,10704,0.976,100,views,wikidata
+simpsons,Artie Ziff,Artie Ziff,ok,10608,0.977,100,views,wikidata
+simpsons,Patty Bouvier,Patty Bouvier,ok,10584,0.978,100,views,wikidata
+simpsons,Springfield Elementary School,Springfield Elementary School,ok,10392,0.979,100,views,wikidata
+simpsons,Fallout Boy,Fallout Boy (The Simpsons),ok,10152,0.980,100,views,wikidata
+simpsons,Bumblebee Man,Bumblebee Man,ok,9936,0.982,100,views,wikidata
+simpsons,Sanjay Nahasapeemapetilon,Sanjay Nahasapeemapetilon,ok,9936,0.983,100,views,wikidata
+simpsons,Drederick Tatum,Drederick Tatum,ok,9360,0.984,100,views,wikidata
+simpsons,Agnes Tamzarian,Agnes Skinner,ok,9120,0.985,100,views,wikidata
+simpsons,Selma Bouvier,Selma Bouvier,ok,9048,0.986,100,views,wikidata
+simpsons,Sarah Wiggum,Sarah Wiggum,ok,8880,0.987,100,views,wikidata
+simpsons,Luann Van Houten,Luann Van Houten,ok,8544,0.988,100,views,wikidata
+simpsons,Lurleen Lumpkin,Lurleen Lumpkin,ok,8352,0.989,100,views,wikidata
+simpsons,Kearney Zzyzwicz,Kearney Zzyzwicz,ok,7536,0.990,100,views,wikidata
+simpsons,Rod Flanders,Rod Flanders,ok,7248,0.991,100,views,wikidata
+simpsons,Helen Lovejoy,Helen Lovejoy,ok,6432,0.992,100,views,wikidata
+simpsons,Kumiko Albertson,Kumiko Albertson,ok,6216,0.993,100,views,wikidata
+simpsons,Rainier Wolfcastle,Rainier Wolfcastle,ok,6168,0.993,100,views,wikidata
+simpsons,Herbert Powell,Herbert Powell (The Simpsons),ok,5688,0.994,100,views,wikidata
+simpsons,Sophie Krustofsky,Sophie Krustofsky,ok,5304,0.995,100,views,wikidata
+simpsons,Hank Scorpio,Hank Scorpio,ok,5088,0.995,100,views,wikidata
+simpsons,Dolph,Dolph Starbeam,ok,5016,0.996,100,views,wikidata
+simpsons,Tomacco,Tomacco,ok,4944,0.996,100,views,wikidata
+simpsons,Ruth Powers,Ruth Powers,ok,4872,0.997,100,views,wikidata
+simpsons,Disco Stu,Disco Stu,ok,4680,0.998,100,views,wikidata
+simpsons,Gil Gunderson,Gil Gunderson,ok,4608,0.998,100,views,wikidata
+simpsons,Dr. Nick,Dr. Nick,ok,4392,0.999,100,views,wikidata
+simpsons,Snowball II,Snowball (The Simpsons),ok,4128,0.999,100,views,wikidata
+simpsons,Lunchlady Doris,Lunchlady Doris,ok,2664,1.000,100,views,wikidata
+simpsons,Scratchy,Scratchy (The Simpsons),ok,192,1.000,100,views,wikidata
+simpsons,Itchy,Itchy (The Simpsons),ok,120,1.000,100,views,wikidata
+soda,Coca-Cola,Coca-Cola,ok,2886624,0.000,10,views,hand
+soda,Dr Pepper,Dr Pepper,ok,1663512,0.246,10,views,hand
+soda,Pepsi,Pepsi,ok,1258320,0.387,25,views,hand
+soda,Root beer,Root beer,ok,847056,0.494,25,views,hand
+soda,Sprite,,disambiguation,0,,25,hand,hand
+soda,Mountain Dew,Mountain Dew,ok,773856,0.566,40,views,hand
+soda,7 Up,7 Up,ok,560520,0.632,40,views,hand
+soda,RC Cola,RC Cola,ok,511368,0.680,40,views,hand
+soda,Sunkist,,disambiguation,0,,40,hand,hand
+soda,Tab,Tab (drink),ok,352992,0.723,60,views,hand
+soda,Moxie,Moxie,ok,273816,0.753,60,views,hand
+soda,Fresca,Fresca,ok,218688,0.777,60,views,hand
+soda,A&W Root Beer,A&W Root Beer,ok,216192,0.795,60,views,hand
+soda,Sierra Mist,Sierra Mist,ok,209592,0.814,60,views,hand
+soda,Faygo,Faygo,ok,207168,0.831,60,views,hand
+soda,Mello Yello,Mello Yello,ok,196728,0.849,60,views,hand
+soda,Big Red,Big Red (soft drink),ok,187872,0.866,80,views,hand
+soda,Jolt Cola,Jolt Cola,ok,172152,0.882,80,views,hand
+soda,Surge,Surge (drink),ok,166080,0.896,80,views,hand
+soda,Barq's,Barq's,ok,156768,0.911,80,views,hand
+soda,Cheerwine,Cheerwine,ok,156696,0.924,80,views,hand
+soda,Squirt,Squirt (drink),ok,148128,0.937,80,views,hand
+soda,Vernors,Vernors,ok,143736,0.950,80,views,hand
+soda,Crush,Crush (drink),ok,127200,0.962,100,views,hand
+soda,Sun Drop,Sun Drop,ok,114408,0.973,100,views,hand
+soda,Mug,Mug Root Beer,ok,105024,0.983,100,views,hand
+soda,IBC,IBC Root Beer,ok,53424,0.992,100,views,hand
+soda,Dad's,Dad's Root Beer,ok,44640,0.996,100,views,hand
+soda,Shasta,Shasta Beverages,ok,912,1.000,100,views,hand
+states,Hawaii,Hawaii,ok,6027648,0.000,10,views,wikidata
+states,California,California,ok,5653152,0.054,10,views,wikidata
+states,Texas,Texas,ok,4060704,0.106,10,views,wikidata
+states,Alaska,Alaska,ok,3799344,0.142,10,views,wikidata
+states,Florida,Florida,ok,3048888,0.177,10,views,wikidata
+states,Pennsylvania,Pennsylvania,ok,3003576,0.204,10,views,wikidata
+states,New York,New York (state),ok,2947968,0.231,10,views,wikidata
+states,Massachusetts,Massachusetts,ok,2737392,0.258,25,views,wikidata
+states,Minnesota,Minnesota,ok,2651088,0.283,25,views,wikidata
+states,New Jersey,New Jersey,ok,2569704,0.307,25,views,wikidata
+states,Georgia,Georgia (U.S. state),ok,2431608,0.330,25,views,wikidata
+states,Washington,Washington (state),ok,2401152,0.352,25,views,wikidata
+states,Ohio,Ohio,ok,2385216,0.374,25,views,wikidata
+states,North Carolina,North Carolina,ok,2358696,0.395,25,views,wikidata
+states,Virginia,Virginia,ok,2322504,0.416,25,views,wikidata
+states,Michigan,Michigan,ok,2280936,0.437,25,views,wikidata
+states,Utah,Utah,ok,2167872,0.458,25,views,wikidata
+states,Wyoming,Wyoming,ok,2140104,0.478,25,views,wikidata
+states,Missouri,Missouri,ok,2131488,0.497,25,views,wikidata
+states,New Mexico,New Mexico,ok,2077752,0.516,40,views,wikidata
+states,Illinois,Illinois,ok,2052336,0.535,40,views,wikidata
+states,Colorado,Colorado,ok,2033472,0.554,40,views,wikidata
+states,Arizona,Arizona,ok,2029176,0.572,40,views,hand
+states,Connecticut,Connecticut,ok,2028600,0.590,40,views,wikidata
+states,Montana,Montana,ok,2015880,0.609,40,views,wikidata
+states,Maryland,Maryland,ok,1997088,0.627,40,views,wikidata
+states,Tennessee,Tennessee,ok,1990176,0.645,40,views,wikidata
+states,Wisconsin,Wisconsin,ok,1967424,0.663,40,views,wikidata
+states,Maine,Maine,ok,1964064,0.681,40,views,wikidata
+states,Louisiana,Louisiana,ok,1948968,0.698,40,views,wikidata
+states,Oklahoma,Oklahoma,ok,1908264,0.716,60,views,wikidata
+states,Rhode Island,Rhode Island,ok,1889856,0.733,60,views,wikidata
+states,Alabama,Alabama,ok,1888896,0.750,60,views,wikidata
+states,Oregon,Oregon,ok,1862976,0.767,60,views,wikidata
+states,Indiana,Indiana,ok,1731840,0.784,60,views,wikidata
+states,Mississippi,Mississippi,ok,1668336,0.800,60,views,wikidata
+states,Kentucky,Kentucky,ok,1664904,0.815,60,views,wikidata
+states,Vermont,Vermont,ok,1663896,0.830,60,views,wikidata
+states,West Virginia,West Virginia,ok,1627824,0.845,60,views,wikidata
+states,Kansas,Kansas,ok,1592472,0.860,80,views,wikidata
+states,Arkansas,Arkansas,ok,1555608,0.874,80,views,wikidata
+states,New Hampshire,New Hampshire,ok,1525680,0.888,80,views,wikidata
+states,Nevada,Nevada,ok,1488144,0.902,80,views,wikidata
+states,Delaware,Delaware,ok,1487952,0.916,80,views,wikidata
+states,South Carolina,South Carolina,ok,1462728,0.929,80,views,wikidata
+states,Iowa,Iowa,ok,1448304,0.942,80,views,wikidata
+states,Nebraska,Nebraska,ok,1386960,0.955,100,views,wikidata
+states,Idaho,Idaho,ok,1366608,0.968,100,views,wikidata
+states,South Dakota,South Dakota,ok,1134120,0.980,100,views,wikidata
+states,North Dakota,North Dakota,ok,1060608,0.990,100,views,wikidata
+stores,Walmart,Walmart,ok,2744064,0.000,10,views,hand
+stores,Costco,Costco,ok,1992936,0.206,10,views,hand
+stores,Target,Target Corporation,ok,1242432,0.355,25,views,hand
+stores,Sears,Sears,ok,1149624,0.448,25,views,hand
+stores,Kmart,Kmart,ok,924432,0.534,40,views,hand
+stores,JCPenney,JCPenney,ok,566472,0.604,40,views,hand
+stores,Macy's,Macy's,ok,551592,0.646,40,views,hand
+stores,Nordstrom,Nordstrom,ok,362832,0.688,40,views,hand
+stores,TJ Maxx,TJ Maxx,ok,289248,0.715,60,views,hand
+stores,Montgomery Ward,Montgomery Ward,ok,286608,0.736,60,views,hand
+stores,Saks Fifth Avenue,Saks Fifth Avenue,ok,279048,0.758,60,views,hand
+stores,Kohl's,Kohl's,ok,274344,0.779,60,views,hand
+stores,Ross,Ross Stores,ok,270480,0.799,60,views,hand
+stores,Neiman Marcus,Neiman Marcus,ok,230400,0.820,60,views,hand
+stores,Dillard's,Dillard's,ok,224376,0.837,60,views,hand
+stores,Burlington,,disambiguation,0,,60,hand,hand
+stores,Bloomingdale's,Bloomingdale's,ok,222360,0.854,80,views,hand
+stores,Marshalls,Marshalls,ok,184752,0.871,80,views,hand
+stores,Marshall Field's,Marshall Field's,ok,160656,0.884,80,views,hand
+stores,Barneys,Barneys New York,ok,152712,0.896,80,views,hand
+stores,Lord & Taylor,Lord & Taylor,ok,149640,0.908,80,views,hand
+stores,Bergdorf Goodman,Bergdorf Goodman,ok,147216,0.919,80,views,hand
+stores,Belk,Belk,ok,140136,0.930,80,views,hand
+stores,Gimbels,Gimbels,ok,115704,0.941,80,views,hand
+stores,Mervyn's,Mervyn's,ok,113592,0.949,80,views,hand
+stores,Hudson's,,missing,0,,80,hand,hand
+stores,Zayre,Zayre,ok,109224,0.958,100,views,hand
+stores,Boscov's,Boscov's,ok,104616,0.966,100,views,hand
+stores,Wanamaker's,Wanamaker's,ok,104568,0.974,100,views,hand
+stores,Ames,Ames Department Stores,ok,84528,0.982,100,views,hand
+stores,Bon-Ton,The Bon-Ton,ok,71112,0.988,100,views,hand
+stores,Filene's,Filene's,ok,52680,0.993,100,views,hand
+stores,Woolworth,Woolworth,ok,36024,0.997,100,views,hand
+thanks,Corn,Maize,ok,1425048,0.000,10,views,hand
+thanks,Sweet potato casserole,Sweet potato,ok,891312,0.165,10,views,hand
+thanks,Deviled eggs,Deviled egg,ok,554592,0.268,25,views,hand
+thanks,Brussels sprouts,Brussels sprout,ok,535968,0.332,25,views,hand
+thanks,Mac and cheese,Macaroni and cheese,ok,492288,0.394,25,views,hand
+thanks,Collard greens,Collard (plant),ok,462816,0.451,25,views,hand
+thanks,Waldorf salad,Waldorf salad,ok,431808,0.505,40,views,hand
+thanks,Ambrosia salad,Ambrosia (fruit salad),ok,390624,0.554,40,views,hand
+thanks,Butternut squash,Butternut squash,ok,374952,0.600,40,views,hand
+thanks,Ham,Ham,ok,356232,0.643,40,views,hand
+thanks,Gravy,Gravy,ok,332280,0.684,40,views,hand
+thanks,Succotash,Succotash,ok,318144,0.723,60,views,hand
+thanks,Apple pie,Apple pie,ok,287232,0.759,60,views,hand
+thanks,Cornbread,Cornbread,ok,285168,0.793,60,views,hand
+thanks,Mashed potatoes,Mashed potato,ok,224256,0.826,60,views,hand
+thanks,Watergate salad,Watergate salad,ok,183408,0.852,80,views,hand
+thanks,Dinner rolls,Bread roll,ok,133416,0.873,80,views,hand
+thanks,Mincemeat pie,Mince pie,ok,131616,0.888,80,views,hand
+thanks,Pecan pie,Pecan pie,ok,120336,0.903,80,views,hand
+thanks,Chess pie,Chess pie,ok,115776,0.917,80,views,hand
+thanks,Pumpkin pie,Pumpkin pie,ok,87168,0.931,80,views,hand
+thanks,Creamed corn,Creamed corn,ok,85728,0.941,80,views,hand
+thanks,Oyster stuffing,,missing,0,,80,hand,hand
+thanks,Cornbread dressing,,missing,0,,80,hand,hand
+thanks,Giblet gravy,,missing,0,,80,hand,hand
+thanks,Jell-O salad,Jello salad,ok,85440,0.951,100,views,hand
+thanks,Stuffing,Stuffing,ok,76296,0.961,100,views,hand
+thanks,Turkey,Turkey as food,ok,71112,0.969,100,views,hand
+thanks,Green bean casserole,Green bean casserole,ok,54960,0.978,100,views,hand
+thanks,Sweet potato pie,Sweet potato pie,ok,45432,0.984,100,views,hand
+thanks,Cranberry sauce,Cranberry sauce,ok,36840,0.989,100,views,hand
+thanks,Spoonbread,Spoonbread,ok,36456,0.994,100,views,hand
+thanks,Corn pudding,Corn pudding,ok,19488,0.998,100,views,hand
+thanks,Parker House rolls,,missing,0,,100,hand,hand
+twoword,New York,New York (state),ok,2947968,0.000,10,views,hand
+twoword,New Jersey,New Jersey,ok,2569704,0.158,10,views,hand
+twoword,North Carolina,North Carolina,ok,2358696,0.296,25,views,hand
+twoword,New Mexico,New Mexico,ok,2077752,0.422,25,views,hand
+twoword,Rhode Island,Rhode Island,ok,1889856,0.534,40,views,hand
+twoword,West Virginia,West Virginia,ok,1627824,0.635,40,views,hand
+twoword,New Hampshire,New Hampshire,ok,1525680,0.722,60,views,hand
+twoword,South Carolina,South Carolina,ok,1462728,0.804,60,views,hand
+twoword,South Dakota,South Dakota,ok,1134120,0.882,80,views,hand
+twoword,North Dakota,North Dakota,ok,1060608,0.943,80,views,hand
