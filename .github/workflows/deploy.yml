@@ -46,7 +46,18 @@ jobs:
         run: python3 scripts/build_bank.py
 
       - name: Check the built bank (warnings only)
+        continue-on-error: true
         run: node scripts/check_answers.js --warn-only
+
+      - name: Keep the build report for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bank-report
+          path: |
+            data/report.csv
+            data/bank.js
+          if-no-files-found: ignore
 
       - name: Commit refreshed bank
         run: |

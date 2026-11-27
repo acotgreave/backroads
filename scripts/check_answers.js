@@ -45,6 +45,7 @@ function check(label, env) {
         if (!a || owner.get(a) !== it) continue;          // already reported as a clash
         const r = judge(p, a);
         if (!r || r.trap) problems.push(`${p.id}: typing "${a}" hits a trap instead of "${it.name}"`);
+        else if (!r.it) problems.push(`${p.id}: typing "${a}" isn't accepted at all (meant for "${it.name}")`);
         else if (r.it !== it) problems.push(`${p.id}: typing "${a}" scores as "${r.it.name}", not "${it.name}"`);
       }
     }
