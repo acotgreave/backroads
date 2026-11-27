@@ -699,10 +699,10 @@ function answer(p,it){
 // ---------- wikipedia check ----------
 // Last resort for an answer missing from the list and from Wikidata: search English Wikipedia (open, no key, CORS ok)
 // and accept the top hit when its title is the answer and its description or categories say it is the right kind of thing.
-const US_RE=/\b(american|united states|u\.s\.|usa|alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia \(u\.s\. state\)|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|new york|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington \(state\)|washington, d\.c\.|west virginia|wisconsin|wyoming|seattle|portland|chicago|los angeles|san francisco|san diego|denver|boston|atlanta|houston|dallas|milwaukee|st\. louis|detroit|philadelphia|brooklyn)\b/i;
+const US_RE=/\b(american|united states|u\.s\.|usa|alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia \(u\.s\. state\)|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|new york|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington \(state\)|washington, d\.c\.|west virginia|wisconsin|wyoming|seattle|portland|chicago|los angeles|san francisco|san diego|denver|boston|atlanta|houston|dallas|milwaukee|st\. louis|detroit|philadelphia|brooklyn|nashville|new orleans|miami|minneapolis|pittsburgh|cleveland|cincinnati|baltimore|phoenix|austin|san antonio|honolulu|las vegas|salt lake city|kansas city|hershey|memphis|louisville|omaha|tulsa)\b/i;
 const WIKI={
   beer:{kw:'brewery',d:/\b(brewery|brewing|brewpub|beer|lager|ale|stout|pilsner|ipa)\b/i,c:/\b(breweries|brewing companies|beer brands)\b/i,us:1},
-  soda:{kw:'soft drink',d:/\b(soft drink|soda|cola|root beer|ginger ale|cream soda|carbonated)\b/i,c:/\b(soft drinks|cola brands)\b/i,us:1},
+  soda:{kw:'soft drink',d:/\b(soft drink|soda|cola|root beer|ginger ale|cream soda|carbonated)\b/i,c:/\b(soft drinks|cola brands|carbonated drinks|drink (companies|brands))\b/i,us:1},
   cereal:{kw:'cereal',d:/\bcereal\b/i,c:/\bbreakfast cereals\b/i,us:1},
   candy:{kw:'candy',d:/\b(candy|chocolate|confection|confectionery|lollipop|licorice|taffy|toffee|chewing gum|jelly bean)\b/i,c:/\b(candy|confectionery|chocolate bars|brand name confectionery)\b/i,us:1},
   fastfood:{kw:'restaurant chain',d:/\b(fast[- ]food|restaurant chain|chain of restaurants|drive-in|quick[- ]service|fast casual)\b/i,c:/\b(fast-food|fast food)\b/i,us:1},
@@ -742,7 +742,7 @@ async function wikiCheck(p,raw,fetchFn){
     let exactFail=false;
     for(const pg of lp){
       if(/same term|disambiguation/i.test(pg.description||''))continue;
-      if(fits(pg,lp)){const r=red.find(x=>x.to===pg.title);return r&&r.tofragment?r.from:strip(pg.title)}
+      if(fits(pg,lp)){const r=red.find(x=>x.to===pg.title);return r&&!norm(strip(pg.title)).includes(want)?r.from:strip(pg.title)}
       exactFail=true;
     }
     // 2. search: an exact title (e.g. "Pliny the Younger (beer)") always counts; a longer title ("Fremont Brewing Company")
