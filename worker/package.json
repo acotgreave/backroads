@@ -1,0 +1,12 @@
+{
+  "name": "backroads-api",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler d1 migrations apply backroads --local && wrangler dev",
+    "test": "node test/smoke.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "4.161.0"
+  }
+}

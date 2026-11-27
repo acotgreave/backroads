@@ -40,6 +40,7 @@ Andy wants Boreen's **journey** feel, not Krillion's **dive** feel. This is a fi
 | `scripts/check_wiki.js` + `wiki-check.yml` | Runs `wikiCheck` against live Wikipedia for known right and wrong answers on branch pushes. Wikipedia rate-limits shared CI addresses, so 429s show as SKIP. |
 | `.github/workflows/bank-check.yml` | On any branch except `main`: builds the bank from live Wikidata without committing or deploying, and uploads `report.csv` + `bank.js` as an artifact. Use it to check query changes. |
 | `scripts/build_site.py` | Copies `public/` into `dist/` and writes `dist/index.html` with the bank baked in. It refuses to publish a mock bank. |
+| `worker/` | **Crowd results API**: Cloudflare Worker + D1 on `backroads-api.<subdomain>.workers.dev`. Logs each finished daily drive (random player id, miles, answers, wrong guesses; no PII) and serves day totals. The results page swaps its estimates for real numbers once `CROWD_MIN` (3) drivers have finished. `deploy.yml` deploys it when the `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` secrets exist and bakes its URL into the page at `/*API*/`. See `worker/README.md`. |
 | `public/` | `CNAME` (backroads.howtospeakdata.com), `og.png` share card, `favicon.svg`, `.nojekyll` |
 | `.github/workflows/deploy.yml` | On push, every Monday at 04:23 UTC, or a manual run: extract, then build bank (`continue-on-error`), commit the refreshed `data/`, build the site, and deploy to GitHub Pages. API responses are cached per ISO week in `.cache/`. |
 
@@ -97,7 +98,7 @@ The older prototype is a claude.ai artifact titled "Backroad: US edition". This 
 
 ## Roadmap (agreed direction, not built yet)
 
-1. **Crowd rarity (the long-term engine).** Page views are a proxy. The real Krillion/Boreen model tiers answers by how often players actually give them. The plan:
+1. **Crowd rarity (the long-term engine).** *Logging and the results page are built (`worker/`); the nightly tier blend is not.* Page views are a proxy. The real Krillion/Boreen model tiers answers by how often players actually give them. The plan:
    - Add a small **Cloudflare Worker + D1** that logs each daily answer, with no personal data: an anonymous player id cookie and one daily run per player.
    - Run a nightly job that blends page-view tiers with crowd frequency, shifting toward the crowd as play counts grow.
    - Keep the static GitHub Pages site. The Worker is just an `/api` endpoint, so if it's down the game still works on page-view tiers.

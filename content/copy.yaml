@@ -62,6 +62,24 @@ results:
   share_partial: "🚗 {miles}/700 mi, made it to {stop}"
   share_header: "🛣️ Backroads #{n} · {road}"
   share_footer: "🇺🇸 {url}"
+  # Real numbers from other players. {drivers} reads "1 driver" or "12 drivers".
+  crowd_one: 1 driver
+  crowd_many: "{n} drivers"
+  crowd_today: "{drivers} today"
+  crowd_few: "{drivers} so far today. Real numbers show up at {min}."
+  crowd_percentile: "Further than **{pct}%** of today's {drivers}"
+  compare_estimate: estimate
+  curve_title: Where everyone ended up
+  said_title: What players said
+  popular_estimate: Most popular answer today, by Wikipedia popularity
+  popular_crowd: Most popular answer today
+  rarest: Rarest sighting
+  rarest_crowd: "Rarest sighting · spotted by {drivers}"
+  nonanswer: Most-tried non-answer
+  nonanswer_crowd: "Most-tried non-answer · {drivers} tried it"
+  not_yet: Shows up once enough people have played
+  said_pct: "{pct}% of today's drivers said this"
+  said_only: Nobody else said this today
 
 triplog:
   title: Trip log
@@ -96,9 +114,9 @@ about:
     Where do the answers come from?: |
       Most lists come from [Wikidata](https://www.wikidata.org), the free database behind Wikipedia, and are refreshed every week. A few are written by hand. For huge categories like beers, stores and rivers, if your answer isn't in the list, the game asks Wikidata on the spot. If it's not there either, it checks Wikipedia. If either one knows it, it counts as a deep cut and is worth the full 100 miles.
     How is rarity decided?: |
-      Work In Progress. For now it's an educated guess. Each answer is ranked by how often its Wikipedia page was read over the last two years. Heavily read pages are the answers most people think of first. Once enough people are playing, real answers will replace the guess.
+      Work In Progress. For now it's an educated guess. Each answer is ranked by how often its Wikipedia page was read over the last two years. Heavily read pages are the answers most people think of first. We now count what players actually answer, and once enough people are playing, those counts will replace the guess.
     Are the "players said" numbers real?: |
-      Not yet. The percentages on the results screen, like "further than about 60% of drivers," are estimates worked out from page views. Each one is labeled as an estimate. Real counts are coming.
+      Yes, once three or more people have finished that day's drive. Until then the results screen shows estimates worked out from page views, labeled as estimates. If the game can't reach our server, you'll see the estimates too.
     Why didn't my answer count?: |
       It might not fit the prompt, the spelling might be too far off, or we simply missed it. Small typos are forgiven. If you think it should count, suggest it using the link below.
     Do I need to sign up?: |
@@ -112,11 +130,21 @@ about:
     Why "Backroads"?: |
       Because the interesting stuff is never on the interstate.
   privacy_title: Privacy
-  privacy_intro: Backroads needs nothing from you to play. No accounts, no ads, no analytics, no tracking cookies.
+  privacy_intro: Backroads needs nothing from you to play. No accounts, no ads, no analytics, no cookies.
   privacy:
     What's kept on your device: |
-      Your browser stores today's game, your trip history, streaks and souvenirs (in local storage, under names starting "backroad:"). None of it is sent to us. Clear this site's data in your browser and it's gone.
+      Your browser stores today's game, your trip history, streaks and souvenirs (in local storage, under names starting "backroad:"). It also makes up a random player number, which isn't linked to you, your name or your device. Clear this site's data in your browser and it's all gone, and you get a new number next time.
+    What we collect: |
+      When you finish a daily drive, the game sends us: the date, your random player number, your total miles, the answer you gave to each prompt (or that you passed), and the wrong guesses you typed. That's all. No name, email, location or account. Test replays and Unlimited drives are never sent.
+
+      It's stored on Cloudflare (our server runs as a Cloudflare Worker) and used only to show everyone the day's real numbers: how far people got, the most popular answers and the rarest sightings. Later it will help set how rare each answer is. The player number only stops the same drive being counted twice.
+
+      A wrong guess only appears on the results page once at least two different players have typed it, so nothing you type alone is ever shown.
+
+      Cloudflare, like any web host, sees your IP address when the drive arrives. We never save it. To stop abuse, the server counts requests per scrambled IP address; the scrambling changes every day and these counts are deleted after two days.
     What leaves your device: |
+      **Your finished drive.** As described above, sent to our Cloudflare server.
+
       **Live answer checks.** When you type an answer that isn't on our list, that answer, and only that, is sent to Wikidata and Wikipedia (both run by the Wikimedia Foundation) to look it up.
 
       **Fonts.** The lettering loads from Google Fonts, so Google sees your IP address when the page opens.
@@ -125,5 +153,5 @@ about:
 
       **Suggestions.** Suggesting a question opens GitHub, where your suggestion is public under your GitHub account.
     If this changes: |
-      Real "what players said" counts will need answers to be sent to a server. When that arrives, this page will say exactly what is collected, before it starts.
+      If we ever collect anything else, this page will say so before it starts.
   back: Back to the road

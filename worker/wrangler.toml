@@ -1,0 +1,19 @@
+# Backroads crowd results API. Deployed by .github/workflows/deploy.yml.
+# Lives at https://backroads-api.<your-subdomain>.workers.dev
+name = "backroads-api"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+[vars]
+ORIGINS = "https://backroads.howtospeakdata.com,https://acotgreave.github.io"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "backroads"
+# CI looks the real id up (or creates the database) and fills this in at deploy time.
+database_id = "00000000-0000-0000-0000-000000000000"
+migrations_dir = "migrations"
+
+[triggers]
+crons = ["17 3 * * *"]   # daily: clear old rate-limit counters
