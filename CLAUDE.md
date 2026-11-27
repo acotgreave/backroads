@@ -27,6 +27,7 @@ Andy wants Boreen's **journey** feel, not Krillion's **dive** feel. This is a fi
 | Path | What it is |
 |---|---|
 | `src/template.html` | **The whole game**, a single file. The `P` list near the top of the script holds the curated prompts (wording, answers, `=alias;alias`, traps). `/*BANK*/` is where the generated bank is injected. |
+| `src/template.html` → `ROADS` | Each road is one data line (heading, terrain bands, water, stops with landmark icons). The full-screen map is generated from it with a seeded RNG, so adding a road needs no art. Daily drives cycle through every road in both directions before repeating. |
 | `scripts/extract_curated.js` | Reads `P` out of the template and writes `data/curated.json`. Keeps the template as the single source of truth. |
 | `scripts/build_bank.py` | Pulls answer lists from Wikidata, gets 24 months of Wikipedia page views, assigns tiers, and writes `data/bank.js` and `data/report.csv`. Python stdlib only. Flags: `--mock` (offline fake views), `--only states,parks`. |
 | `scripts/check_answers.js` | Runs the game's own matching code over every answer and alias. Fails on aliases shared by two answers, aliases that score as a different answer, and traps that shadow a right answer. CI runs it hard on the hand lists and as warnings on the built bank. |
