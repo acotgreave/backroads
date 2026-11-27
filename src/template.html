@@ -345,6 +345,12 @@ function judge(p,raw){
 const $=id=>document.getElementById(id), card=$('card');
 const store={get(k,d){try{return JSON.parse(localStorage.getItem('backroad:'+k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem('backroad:'+k,JSON.stringify(v))}catch(e){}}};
 const calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+// site wording: content/copy.yaml is baked in here by build_site.py; each C() call carries its own fallback
+const COPY=/*COPY*/{};
+const C=(k,d,v)=>{let s=k.split('.').reduce((o,x)=>o&&o[x],COPY);if(typeof s!=='string')s=d;return v?s.replace(/\{(\w+)\}/g,(m,x)=>x in v?v[x]:m):s};
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+const md=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g,'<a href="$2" target="_blank" rel="noopener">$1</a>');
+const paras=(s,v)=>s.trim().split(/\n\s*\n/).map(x=>x.trim()==='{signs}'&&v&&v.signs?v.signs:`<p>${md(x)}</p>`).join('');
 const EXTRAS=false;   // Unlimited mode and the timer toggle are hidden for now; set true to bring the buttons back
 let mode='daily',timerOn=EXTRAS?store.get('timer',true):true,G=null,tick=null;
 // test mode: ?test=1 turns it on (remembered), ?test=0 turns it off. Lets you replay today's drive; replays never count.
@@ -353,7 +359,7 @@ function replay(road,rev){clearInterval(tick);mode='daily';G=newGame('backroad-'
 // test mode: pick any of the road/direction trips to preview
 function tripPicker(){const o=[];ROADS.forEach((R,i)=>{const a=R.stops[0][1],b=R.stops[R.stops.length-1][1];
   o.push(`<option value="${i}-0">${R.name}: ${a} to ${b}</option>`,`<option value="${i}-1">${R.name}: ${b} to ${a}</option>`)});
-  return `<label class="tpick"><span class="kicker">Test: try another road</span><select id="tpick"><option value="">Today’s road</option>${o.join('')}</select></label>`}
+  return `<label class="tpick"><span class="kicker">${esc(C('home.test_picker','Test: try another road'))}</span><select id="tpick"><option value="">Today’s road</option>${o.join('')}</select></label>`}
 const today=(d=new Date())=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 const dayNo=()=>Math.floor((Date.parse(today())-Date.parse('2026-11-27'))/864e5)+1;
 function rng(seed){let h=1779033703^seed.length;for(const ch of seed){h=Math.imul(h^ch.charCodeAt(0),3432918353);h=h<<13|h>>>19}
@@ -611,7 +617,7 @@ function topbar(){
   const nx=T.stops.find(([sm])=>sm>m);$('guide').textContent=nx?`↑ ${nx[1]} ${nx[0]-m}`:'End of the road';
 }
 function shield(T,size=34){return T.sh?`<span class="shield"><svg width="${size}" height="${size}" viewBox="0 0 54 58" aria-label="Route ${T.sh}"><path d="M4 4h46c3 12 2 26-4 36-5 8-12 12-19 16-7-4-14-8-19-16C2 30 1 16 4 4z" fill="#fff" stroke="#14161b" stroke-width="3"/><text x="27" y="38" text-anchor="middle" font-family="Overpass,sans-serif" font-weight="900" font-size="${T.sh.length>2?17:22}" fill="#14161b">${T.sh}</text></svg></span>`:''}
-function chips(){return `<div class="chips">${EXTRAS?`<button class="chip" data-m="daily" aria-pressed="${mode==='daily'}">Daily</button><button class="chip" data-m="free" aria-pressed="${mode==='free'}">Unlimited</button><button class="chip" data-t aria-pressed="${timerOn}">${timerOn?'Timer on':'Timer off'}</button>`:''}<button class="chip" data-log>Trip log</button><button class="chip" data-about>About</button></div>`}
+function chips(){return `<div class="chips">${EXTRAS?`<button class="chip" data-m="daily" aria-pressed="${mode==='daily'}">Daily</button><button class="chip" data-m="free" aria-pressed="${mode==='free'}">Unlimited</button><button class="chip" data-t aria-pressed="${timerOn}">${timerOn?'Timer on':'Timer off'}</button>`:''}<button class="chip" data-log>${esc(C('home.trip_log','Trip log'))}</button><button class="chip" data-about>${esc(C('home.about','About'))}</button></div>`}
 function wireChips(root){root.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>setMode(b.dataset.m));
   root.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>{timerOn=!timerOn;store.set('timer',timerOn);b.setAttribute('aria-pressed',timerOn);b.textContent=timerOn?'Timer on':'Timer off'});
   root.querySelectorAll('[data-log]').forEach(b=>b.onclick=tripLog);
@@ -624,16 +630,16 @@ function fillSrc(root){const s=root.querySelector('.src');if(s)s.textContent=typ
 function intro(){
   const T=M.T;show(topEl,false);show(hero,false);show(card,false);show(barEl,false);show(panel,true);msgEl.textContent='';
   panel.classList.add('homep');
-  const lbl=G.test?'Test replay':mode==='daily'?'Drive #'+dayNo():'Unlimited';
-  panel.innerHTML=`<div class="hp-top"><h1 class="ttl">Backroads</h1><span class="kicker">${lbl}</span></div>
+  const lbl=G.test?C('home.test_label','Test replay'):mode==='daily'?C('home.drive_label','Drive #{n}',{n:dayNo()}):'Unlimited';
+  panel.innerHTML=`<div class="hp-top"><h1 class="ttl">${esc(C('home.title','Backroads'))}</h1><span class="kicker">${lbl}</span></div>
   <div class="roadname hp-road">${shield(T,26)}<span class="rn"></span></div>
   <p class="hp-from"></p>
-  <button class="btn go wide" id="start">${G.test?'Replay the trip':'Hit the road'}</button>
+  <button class="btn go wide" id="start">${esc(G.test?C('home.start_test','Replay the trip'):C('home.start','Hit the road'))}</button>
   ${TEST?tripPicker():''}
-  <details class="how"><summary>How to play</summary><p>Seven prompts${timerOn?', 25 seconds each':''}. Name something that fits. Common answers barely move you; rare ones cover real ground, and you’ll spot rarer wildlife on the way.</p>
+  <details class="how"><summary>${esc(C('home.how_title','How to play'))}</summary><p>${md(C('home.how_text','Seven prompts. Name something that fits. Rare answers go further.'))}</p>
   <div class="zoo">${ZOO.map((z,k)=>`<span>${sign(k,22)}${z.pts} mi</span>`).join('')}</div></details>
-  <div class="homefoot">${EXTRAS?`<button class="lnk" data-m="${mode==='daily'?'free':'daily'}">${mode==='daily'?'Unlimited':'Daily'}</button><button class="lnk" data-t>${timerOn?'Timer on':'Timer off'}</button>`:''}<button class="lnk" data-log>Trip log</button><button class="lnk" data-about>About</button>${TEST?'<button class="lnk" data-replay>Test: replay today</button>':''}</div>
-  <p class="foot hp-credit">A US take on Boreen and Krillion, from <a href="https://howtospeakdata.com">How To Speak Data</a>.</p>`;
+  <div class="homefoot">${EXTRAS?`<button class="lnk" data-m="${mode==='daily'?'free':'daily'}">${mode==='daily'?'Unlimited':'Daily'}</button><button class="lnk" data-t>${timerOn?'Timer on':'Timer off'}</button>`:''}<button class="lnk" data-log>${esc(C('home.trip_log','Trip log'))}</button><button class="lnk" data-about>${esc(C('home.about','About'))}</button>${TEST?`<button class="lnk" data-replay>${esc(C('home.test_replay','Test: replay today'))}</button>`:''}</div>
+  <p class="foot hp-credit">${md(C('home.credit','A US take on Boreen and Krillion, from [How To Speak Data](https://howtospeakdata.com).'))}</p>`;
   panel.querySelector('.rn').textContent=T.name;panel.querySelector('.hp-from').textContent=`${T.from} to ${T.to}`;
   wireChips(panel);
   const tp=$('tpick');if(tp){if(G.test&&G.pick)tp.value=G.pick;tp.onchange=()=>{const v=tp.value;if(!v){replay();return}const [a,b]=v.split('-').map(Number);replay(a,!!b);G.pick=v;$('tpick').value=v}}
@@ -645,17 +651,17 @@ function ask(){panel.classList.remove('homep');
   card.innerHTML=`<div class="cat"></div><h2 class="q"></h2>${p.rule?'<p class="rule"></p>':''}`;
   card.querySelector('.cat').textContent=p.cat;card.querySelector('.q').textContent=p.q;if(p.rule)card.querySelector('.rule').textContent=p.rule;
   barEl.innerHTML=`${timerOn?`<div class="ring" id="ring"><svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="21" fill="none" stroke="#e2d8c0" stroke-width="4"/><circle id="rc" cx="25" cy="25" r="21" fill="none" stroke="#1d4f9c" stroke-width="4" stroke-dasharray="132 132" stroke-linecap="round"/></svg><span id="rs">${SECS}</span></div>`:''}
-  <form id="f" autocomplete="off"><input id="in" aria-label="Your answer" placeholder="Your answer" autocapitalize="off" spellcheck="false" enterkeyhint="go"><button class="btn go">Go</button><button class="btn sm" type="button" id="pass">Pass</button></form>`;
+  <form id="f" autocomplete="off"><input id="in" aria-label="${esc(C('question.placeholder','Your answer'))}" placeholder="${esc(C('question.placeholder','Your answer'))}" autocapitalize="off" spellcheck="false" enterkeyhint="go"><button class="btn go">${esc(C('question.go','Go'))}</button><button class="btn sm" type="button" id="pass">${esc(C('question.pass','Pass'))}</button></form>`;
   if(camMode!=='ride')cam('ride',900);else cam('ride',300);
   const inp=$('in');inp.focus({preventScroll:true});
   const qi=G.i;
   $('f').onsubmit=async e=>{e.preventDefault();if(inp.disabled)return;const r=judge(p,inp.value);if(!r)return;
     if(r.trap){msgEl.textContent=r.trap;inp.select();return}
     if(r.miss&&p.live&&inp.value.trim().length>2){   // not on our list: ask Wikidata whether it's a real one
-      inp.disabled=true;msgEl.textContent='Checking the map…';const name=await liveCheck(p,inp.value);inp.disabled=false;
+      inp.disabled=true;msgEl.textContent=C('question.checking','Checking the map…');const name=await liveCheck(p,inp.value);inp.disabled=false;
       if(G.i!==qi)return;
       if(name){const dup=p.items.find(x=>norm(x.name)===norm(name)),it=dup||{name,al:[norm(name)],tier:5,rank:p.items.length,live:true};if(!dup)p.items.push(it);answer(p,it);return}}
-    if(r.miss){msgEl.textContent='Not on the map. Try another.';inp.focus();inp.select();return}
+    if(r.miss){msgEl.textContent=C('question.not_found','Not on the map. Try another.');inp.focus();inp.select();return}
     answer(p,r.it)};
   $('pass').onclick=()=>answer(p,null);
   if(timerOn){const t0=performance.now();
@@ -672,14 +678,14 @@ function answer(p,it){
   const rarer=p.items.filter(x=>x.tier===5&&(!it||x.name!==it.name)).sort(()=>Math.random()-.5).slice(0,2).map(x=>x.name);
   card.innerHTML=`<div class="cat"></div><div class="rule qq"></div>
   <div class="rv" style="margin-top:8px"><div class="xing"><div class="diamond" id="dm">${sign(0)}</div></div><div class="animal"></div><div class="gain">+${pts} mi</div><div class="ans"></div></div>
-  ${reached?`<div class="stopban">${`<svg viewBox="0 0 100 100">${ICON[reached[2]]||''}</svg>`}<div><b></b><span>Reached at ${reached[0]} miles</span></div></div>`:''}
+  ${reached?`<div class="stopban">${`<svg viewBox="0 0 100 100">${ICON[reached[2]]||''}</svg>`}<div><b></b><span>${esc(C('question.reached','Reached at {miles} miles',{miles:reached[0]}))}</span></div></div>`:''}
   <div class="ladder" id="ld">${ZOO.map((z,j)=>`<div>${sign(j)}${z.pts}</div>`).join('')}</div><div class="alt"></div>`;
   card.querySelector('.cat').textContent=p.cat;card.querySelector('.qq').textContent=p.q;
-  card.querySelector('.animal').textContent=it?ZOO[k].name:'Nothing spotted';
-  const ans=card.querySelector('.ans');if(it){const b=document.createElement('b');b.textContent='“'+it.name+'” ';ans.append(b,it.live?'A deep cut: not on our list, but it’s real.':k>=4?'A rare answer.':k>=2?'A good find.':'A common answer.')}else ans.textContent='No answer this time. The car stays put.';
+  card.querySelector('.animal').textContent=it?ZOO[k].name:C('question.nothing','Nothing spotted');
+  const ans=card.querySelector('.ans');if(it){const b=document.createElement('b');b.textContent='“'+it.name+'” ';ans.append(b,it.live?C('question.deep_cut','A deep cut.'):k>=4?C('question.rare','A rare answer.'):k>=2?C('question.good','A good find.'):C('question.common','A common answer.'))}else ans.textContent=C('question.no_answer','No answer this time.');
   if(reached)card.querySelector('.stopban b').textContent=reached[1];
-  card.querySelector('.alt').textContent=rarer.length?(k===5?'Also rare: ':'Rarer answers: ')+rarer.join(', '):'';
-  barEl.innerHTML=`<button class="btn go wide" id="nx" disabled>${G.i<7?`Keep driving · ${G.i+1} of 7`:'Pull over and see the trip'}</button>`;
+  card.querySelector('.alt').textContent=rarer.length?(k===5?C('question.also_rare','Also rare:'):C('question.rarer','Rarer answers:'))+' '+rarer.join(', '):'';
+  barEl.innerHTML=`<button class="btn go wide" id="nx" disabled>${esc(G.i<7?C('question.keep_driving','Keep driving · {n} of 7',{n:G.i+1}):C('question.last','See the trip'))}</button>`;
   $('nx').onclick=()=>G.i<7?ask():end();
   const dm=$('dm'),lad=[...$('ld').children];
   const go=()=>{topbar();odo(before);cam('ride',300);
@@ -738,37 +744,37 @@ function end(){
     h.push({date:G.date,mi:miles(),road:M.T.name,tiers:G.ans.map(a=>a.tier),rare:G.ans.filter(a=>a.tier>=4).map(a=>[a.a,a.tier,a.q])});store.set('hist',h.slice(-400))}}
   const T=M.T,mi=miles(),tl=trips(),sim=simulate(),below=sim.filter(m=>m<mi).length+sim.filter(m=>m===mi).length/2,pct=Math.round(below/sim.length*100);
   let at=T.stops[0];for(const s of T.stops)if(mi>=s[0])at=s;const nx=T.stops.find(([m])=>m>mi);
-  const share=`🛣️ Backroads ${G.mode==='daily'?'#'+dayNo():'(unlimited)'} · ${T.name}\n${G.ans.map(a=>a.tier<0?'⬛':EMO[a.tier]).join('')}\n${mi>=700?'🏁 700/700 mi, drove the whole road!':`🚗 ${mi}/700 mi, made it to ${at[1]}`}\n🇺🇸 ${URL_}`;
+  const share=[C('results.share_header','Backroads #{n} · {road}',{n:G.mode==='daily'?dayNo():'(unlimited)',road:T.name}),G.ans.map(a=>a.tier<0?'⬛':EMO[a.tier]).join(''),mi>=700?C('results.share_full','700/700 mi'):C('results.share_partial','{miles}/700 mi, made it to {stop}',{miles:mi,stop:at[1]}),C('results.share_footer','{url}',{url:URL_})].join('\n');
   const ps=G.qs.map(getP),pop=ps.map(p=>p.items.slice().sort((a,b)=>a.tier-b.tier||a.rank-b.rank)[0]);
   const mid=new Date();mid.setHours(24,0,0,0);
   show(topEl,false);show(hero,false);show(card,false);show(barEl,false);show(panel,true);msgEl.textContent='';
   panel.innerHTML=`<div class="brand">${LOGO}<div><h1>Backroads</h1><div class="tag">${G.test?'Test replay · ':''}${G.mode==='daily'?'Daily drive #'+dayNo()+' · '+new Date(G.date+'T12:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}):'Unlimited drive'}</div></div></div>
-  ${G.test?'<p class="testnote">Test replay. This drive isn’t saved to your trip log or streak.</p>':''}
+  ${G.test?`<p class="testnote">${md(C('results.test_note','Test replay. Not saved.'))}</p>`:''}
   <div class="roadname" style="font-size:20px;margin-top:12px">${shield(T,26)}<span class="pc-road"></span></div><div class="pc-from"></div>
   <div class="pc-row"><span class="big">${mi}<small>miles</small></span><span class="pc-signs">${G.ans.map(a=>sign(a.tier,24)).join('')}</span></div>
-  <p class="pct">Further than about <b>${pct}%</b> of drivers today <small>(estimate)</small></p>
-  <div class="row"><button class="btn go wide" id="cp">Share result</button></div>
-  <p class="streak">Next daily drive in <b id="cd"></b>.</p>
+  <p class="pct">${md(C('results.percentile','Further than about **{pct}%** of drivers today',{pct}))} <small>${esc(C('results.estimate','(estimate)'))}</small></p>
+  <div class="row"><button class="btn go wide" id="cp">${esc(C('results.share','Share result'))}</button></div>
+  <p class="streak" id="cdl"></p>
   <div class="stopban" style="margin-top:10px"><svg viewBox="0 0 100 100">${ICON[at[2]]||''}</svg><div><b class="fl"></b><span class="fln"></span></div></div>
-  <details class="sec" open><summary>Your answers</summary><div id="answers"></div></details>
-  <details class="sec"><summary>How you compare <small>estimate</small></summary>
+  <details class="sec" open><summary>${esc(C('results.your_answers','Your answers'))}</summary><div id="answers"></div></details>
+  <details class="sec"><summary>${esc(C('results.compare','How you compare'))} <small>estimate</small></summary>
    <h3 class="kicker" style="margin-top:6px">Where everyone ended up</h3>${curveSVG(sim,mi,T.stops)}
    <h3 class="kicker" style="margin-top:14px">What players said</h3>
    <ul class="res"><li>${sign(0,28)}<div><span class="popa"></span><small>Most popular answer today, by Wikipedia popularity</small></div><b></b></li>
    <li>${sign(5,28)}<div>Rarest sighting<small>Shows up once enough people have played</small></div><b></b></li>
    <li>${sign(-1,28)}<div>Most-tried non-answer<small>Shows up once enough people have played</small></div><b></b></li></ul></details>
-  <details class="sec"><summary>Trip log and streak</summary>
+  <details class="sec"><summary>${esc(C('results.trip_log','Trip log and streak'))}</summary>
    <div class="stats"><div><b>${G.mode==='daily'&&!G.test?tl.streak:'–'}</b><small>day streak</small></div><div><b>${tl.longest}</b><small>best streak</small></div><div><b>${tl.days}</b><small>daily drives</small></div></div>
    <h3 class="kicker" style="display:flex;justify-content:space-between">Recent drives <span style="letter-spacing:0;text-transform:none">Higher is rarer</span></h3>${logSVG()}</details>
-  <details class="sec"><summary>The wildlife</summary>
+  <details class="sec"><summary>${esc(C('results.wildlife','The wildlife'))}</summary>
    <ul class="res">${ZOO.map((z,k)=>`<li>${sign(k,28)}<div>${z.name}<small>${ODDS[k]}</small></div><b>${z.pts} mi</b></li>`).join('')}</ul></details>
-  <div class="row" style="margin-top:14px">${EXTRAS||G.mode!=='daily'?`<button class="btn wide" id="again">${G.mode==='daily'?'Play Unlimited':'Drive again'}</button>`:''}<button class="btn" id="lg">Trip log</button>${TEST?'<button class="btn" data-replay>Test: replay</button>':''}</div>
+  <div class="row" style="margin-top:14px">${EXTRAS||G.mode!=='daily'?`<button class="btn wide" id="again">${G.mode==='daily'?'Play Unlimited':'Drive again'}</button>`:''}<button class="btn" id="lg">Trip log</button>${TEST?`<button class="btn" data-replay>${esc(C('home.test_replay','Test: replay'))}</button>`:''}</div>
   <pre class="share hide" id="sh"></pre>
-  <p class="streak" style="margin-top:16px">Know a question with loads of answers?</p>
-  <div class="row"><a class="btn wide" style="display:flex;align-items:center;justify-content:space-between;text-decoration:none" href="https://github.com/acotgreave/backroads/issues/new?title=Question%20idea%3A%20" target="_blank" rel="noopener">Suggest a question <span>→</span></a></div>
+  <p class="streak" style="margin-top:16px">${md(C('results.suggest_lead','Know a question with loads of answers?'))}</p>
+  <div class="row"><a class="btn wide" style="display:flex;align-items:center;justify-content:space-between;text-decoration:none" href="https://github.com/acotgreave/backroads/issues/new?title=Question%20idea%3A%20" target="_blank" rel="noopener">${esc(C('results.suggest','Suggest a question'))} <span>→</span></a></div>
   ${chips()}${credit}`;
   panel.querySelector('.pc-road').textContent=T.name;panel.querySelector('.pc-from').textContent=`${T.from} to ${T.to}`;
-  panel.querySelector('.fl').textContent=at[1];panel.querySelector('.fln').textContent=mi>=700?'You drove the whole road.':`Furthest landmark. ${nx[1]} was ${nx[0]-mi} miles further on.`;
+  panel.querySelector('.fl').textContent=at[1];panel.querySelector('.fln').textContent=mi>=700?C('results.whole_road','You drove the whole road.'):C('results.furthest','Furthest landmark. {next} was {left} miles further on.',{next:nx[1],left:nx[0]-mi});
   panel.querySelectorAll('.sn').forEach(t=>t.textContent=T.stops[+t.dataset.i][1].split(/[ ,]/)[0]);
   const bi=pop.reduce((b,x,i)=>ps[i].items.length>ps[b].items.length?i:b,0);panel.querySelector('.popa').textContent=`“${pop[bi].name}” · ${ps[bi].q}`;
   const A=$('answers');
@@ -783,41 +789,29 @@ function end(){
       const row=document.createElement('p');row.style.margin='4px 0';const b=document.createElement('b');b.style.color='var(--ink)';b.textContent=ZOO[t].pts+' mi: ';row.append(b,names.join(', '));all.append(row)}
     A.append(d)});
   $('sh').textContent=share;
-  $('cp').onclick=async e=>{try{if(navigator.share&&matchMedia('(pointer:coarse)').matches){await navigator.share({text:share});return}await navigator.clipboard.writeText(share);e.target.textContent='Copied'}catch(_){e.target.textContent='Select the text below to copy';show($('sh'),true)}};
+  $('cp').onclick=async e=>{try{if(navigator.share&&matchMedia('(pointer:coarse)').matches){await navigator.share({text:share});return}await navigator.clipboard.writeText(share);e.target.textContent=C('results.copied','Copied')}catch(_){e.target.textContent=C('results.copy_fallback','Select the text below to copy');show($('sh'),true)}};
   if($('again'))$('again').onclick=()=>setMode('free');$('lg').onclick=tripLog;wireChips(panel);fillSrc(panel);
-  const cd=()=>{const s=Math.max(0,Math.round((mid-new Date())/1000)),el=$('cd');if(!el)return;el.textContent=`${Math.floor(s/3600)}h ${String(Math.floor(s/60)%60).padStart(2,'0')}m`;setTimeout(cd,30000)};cd();
+  const cd=()=>{const s=Math.max(0,Math.round((mid-new Date())/1000)),el=$('cdl');if(!el)return;el.innerHTML=md(C('results.next_drive','Next daily drive in **{time}**.',{time:`${Math.floor(s/3600)}h ${String(Math.floor(s/60)%60).padStart(2,'0')}m`}));setTimeout(cd,30000)};cd();
   panel.scrollTop=0;cam('over',calm?0:1200);
 }
 function about(){
   clearInterval(tick);panel.classList.remove('homep');
   show(topEl,false);show(hero,false);show(card,false);show(barEl,false);show(panel,true);
-  const qa=(q,a,open)=>`<details class="qa"${open?' open':''}><summary>${q}</summary><div>${a}</div></details>`;
-  panel.innerHTML=`<div class="brand">${LOGO}<div><h1>About Backroads</h1><div class="tag">A daily drive through America, seven questions long</div></div></div>
+  const A=COPY.about||{},v={signs:`<div class="zoo">${ZOO.map((z,k)=>`<span>${sign(k,22)}${z.pts} mi</span>`).join('')}</div>`};
+  const qa=(q,a,open)=>`<details class="qa"${open?' open':''}><summary>${esc(q)}</summary><div>${paras(a,v)}</div></details>`;
+  panel.innerHTML=`<div class="brand">${LOGO}<div><h1>${esc(A.title||'About Backroads')}</h1><div class="tag">${esc(A.tagline||'')}</div></div></div>
   <div class="about">
-  <p>Backroads is a daily trivia game about the United States. You get seven prompts, like “Name a US state capital” or “Name an American beer.” Answer with something that fits. The more obvious the answer, the shorter the hop down the road. Think of something nobody else will, and you’ll cover real miles.</p>
-  <h3>Why it exists</h3>
-  <p>Backroads borrows its shape from two games I love, <a href="https://krillion.io" target="_blank" rel="noopener">Krillion</a> and <a href="https://boreen.co.uk" target="_blank" rel="noopener">Boreen</a>. But I built it for one person: my friend Aaron, an American living in Brill, a small village in England. Aaron plays Boreen, and he kept getting stuck on questions that assume you grew up in Britain. So here’s a game where the home advantage is his.</p>
-  <p class="sig">Andy Cotgreave, <a href="https://howtospeakdata.com" target="_blank" rel="noopener">How To Speak Data</a></p>
-  <h3>Questions people ask</h3>
-  ${qa('How does it play?',`<p>Seven prompts a day. Type an answer and press Go. Wrong guesses cost nothing, so keep trying until you land one or pass. With the timer on you get 25 seconds a question.</p><p>Every answer counts for something, and rarer ones go further. There are six wildlife sightings along the way:</p><div class="zoo">${ZOO.map((z,k)=>`<span>${sign(k,22)}${z.pts} mi</span>`).join('')}</div><p>The best possible drive is 700 miles.</p>`,true)}
-  ${qa('When does a new drive start?','<p>At midnight where you are. Everyone gets the same seven prompts on the same road that day. Want more? Unlimited mode deals a fresh set whenever you like, though it doesn’t count toward your streak.</p>')}
-  ${qa('Where does the road go?','<p>Sixteen classic American roads, from Route 66 and the Blue Ridge Parkway to the Road to Hana and the Seward Highway. Each day picks a road and a direction, so the trip starts and ends somewhere different. Every right answer drives you on, and the landmarks you pass show up on the map.</p>')}
-  ${qa('Where do the answers come from?','<p>Most lists come from <a href="https://www.wikidata.org" target="_blank" rel="noopener">Wikidata</a>, the free database behind Wikipedia, and are refreshed every week. A few are written by hand. For huge categories like beers, stores and rivers, if your answer isn’t in the list, the game asks Wikidata on the spot. If it’s there, it counts as a deep cut and is worth the full 100 miles.</p>')}
-  ${qa('How is rarity decided?','<p>For now it’s an educated guess. Each answer is ranked by how often its Wikipedia page was read over the last two years. Heavily read pages are the answers most people think of first. Once enough people are playing, real answers will replace the guess.</p>')}
-  ${qa('Are the “players said” numbers real?','<p>Not yet. The percentages on the results screen, like “further than about 60% of drivers,” are estimates worked out from page views. Each one is labeled as an estimate. Real counts are coming.</p>')}
-  ${qa('Why didn’t my answer count?','<p>It might not fit the prompt, the spelling might be too far off, or we simply missed it. Small typos are forgiven. If you think it should count, suggest it using the link below.</p>')}
-  ${qa('Do I need to sign up?','<p>No. There are no accounts. Your streak, trip log and souvenirs live in this browser, so they won’t follow you to another phone or computer, and clearing your browser’s site data wipes them.</p>')}
-  ${qa('What’s a souvenir?','<p>Spot a black bear or a bald eagle (an 80 or 100 mile answer) and the sign goes into your trip log as a keepsake.</p>')}
-  ${qa('Is it free?','<p>Yes. No ads, no paywall.</p>')}
-  ${qa('Can I suggest a question?','<p>Please do. <a href="https://github.com/acotgreave/backroads/issues/new?title=Question%20idea%3A%20" target="_blank" rel="noopener">Open a suggestion on GitHub</a>. The same link works for an answer you think should count.</p>')}
-  ${qa('Why “Backroads”?','<p>Because the interesting stuff is never on the interstate.</p>')}
-  <h3 id="privacy">Privacy</h3>
-  <p>Backroads needs nothing from you to play. No accounts, no ads, no analytics, no tracking cookies.</p>
-  ${qa('What’s kept on your device','<p>Your browser stores today’s game, your trip history, streaks, souvenirs and the timer setting (in local storage, under names starting “backroad:”). None of it is sent to us. Clear this site’s data in your browser and it’s gone.</p>')}
-  ${qa('What leaves your device','<p><b>Live answer checks.</b> When you type an answer that isn’t in a big list, that answer, and only that, is sent to Wikidata (run by the Wikimedia Foundation) to look it up.</p><p><b>Fonts.</b> The lettering loads from Google Fonts, so Google sees your IP address when the page opens.</p><p><b>Hosting.</b> The site is served by GitHub Pages. GitHub may log visits for security, as any web host does.</p><p><b>Suggestions.</b> Suggesting a question opens GitHub, where your suggestion is public under your GitHub account.</p>')}
-  ${qa('If this changes','<p>Real “what players said” counts will need answers to be sent to a server. When that arrives, this page will say exactly what is collected, before it starts.</p>')}
+  ${paras(A.intro||'')}
+  <h3>${esc(A.why_title||'Why it exists')}</h3>
+  ${paras(A.why||'')}
+  ${A.signature?`<p class="sig">${md(A.signature)}</p>`:''}
+  <h3>${esc(A.faq_title||'Questions people ask')}</h3>
+  ${Object.entries(A.faq||{}).map(([q,a],i)=>qa(q,a,i===0)).join('')}
+  <h3 id="privacy">${esc(A.privacy_title||'Privacy')}</h3>
+  ${paras(A.privacy_intro||'')}
+  ${Object.entries(A.privacy||{}).map(([q,a])=>qa(q,a)).join('')}
   </div>
-  <div class="row" style="margin-top:14px"><button class="btn go wide" id="back">Back to the road</button></div>`;
+  <div class="row" style="margin-top:14px"><button class="btn go wide" id="back">${esc(A.back||'Back to the road')}</button></div>`;
   $('back').onclick=start;panel.scrollTop=0;cam('over');
   if(location.hash==='#privacy')setTimeout(()=>{const p=$('privacy');if(p)p.scrollIntoView()},50);
 }
@@ -825,12 +819,12 @@ function tripLog(){
   clearInterval(tick);panel.classList.remove('homep');const t=trips();
   const fmt=s=>new Date(s+'T12:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
   show(topEl,false);show(hero,false);show(card,false);show(barEl,false);show(panel,true);
-  panel.innerHTML=`<div class="brand">${LOGO}<div><h1>Trip log</h1><div class="tag">${t.days} daily drive${t.days===1?'':'s'}</div></div></div>
+  panel.innerHTML=`<div class="brand">${LOGO}<div><h1>${esc(C('triplog.title','Trip log'))}</h1><div class="tag">${t.days} daily drive${t.days===1?'':'s'}</div></div></div>
   <div class="log">${t.days?`<div class="stats"><div><b>${t.streak}</b><small>day streak (best ${t.longest})</small></div><div><b>${t.best}</b><small>mi, furthest drive</small></div><div><b>${t.total.toLocaleString('en-US')}</b><small>total miles</small></div></div>
   <h3>Souvenirs</h3>${t.souv.length?`<div class="souv">${t.souv.slice(0,40).map(()=>'<span></span>').join('')}</div>`:'<p class="streak">Spot a black bear or bald eagle (80 or 100 mi) to pick up a souvenir.</p>'}
   <h3>Past trips</h3><ul class="res trips">${t.h.slice().reverse().slice(0,60).map(()=>`<li><div><span></span><small></small></div><b></b></li>`).join('')}</ul>`
-  :'<p class="streak" style="margin:12px 0">No trips logged yet. Finish today’s daily drive and it’ll show up here.</p>'}</div>
-  <div class="row"><button class="btn go wide" id="back">Back to the road</button></div>`;
+  :`<p class="streak" style="margin:12px 0">${md(C('triplog.empty','No trips logged yet.'))}</p>`}</div>
+  <div class="row"><button class="btn go wide" id="back">${esc(C('triplog.back','Back to the road'))}</button></div>`;
   panel.querySelectorAll('.souv span').forEach((el,i)=>{const s=t.souv[i];el.innerHTML=sign(s.t,22);el.append(s.a);el.title=s.q+' · '+fmt(s.date)});
   const rev=t.h.slice().reverse();
   panel.querySelectorAll('.trips li').forEach((li,i)=>{const x=rev[i];li.querySelector('span').textContent=(x.road||'Daily drive')+' · '+fmt(x.date);

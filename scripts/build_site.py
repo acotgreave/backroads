@@ -15,5 +15,16 @@ if os.path.exists(bank_path):
     print('baked in data/bank.js')
 else:
     print('no data/bank.js: publishing hand-set tiers')
+# site wording from content/copy.yaml
+import json, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from copy_yaml import parse
+copy_path = os.path.join(ROOT, 'content/copy.yaml')
+try:
+    copy = parse(open(copy_path, encoding='utf8').read())
+except ValueError as e:
+    raise SystemExit(f'content/copy.yaml: {e}')
+html = html.replace('/*COPY*/{}', json.dumps(copy, ensure_ascii=False).replace('</', '<\\/'))
+print('baked in content/copy.yaml')
 open(os.path.join(dist, 'index.html'), 'w', encoding='utf8').write(html)
 print('wrote dist/index.html')
