@@ -26,11 +26,13 @@ function load(bankSrc) {
     '\nreturn {P,prep,judge,norm};')();
 }
 
+let hard = 0;   // problems that always fail the build, even with --warn-only
 function check(label, env) {
   const { P, prep, judge, norm } = env;
   const problems = [];
   for (const raw of P) {
     const p = prep(raw);
+    if (!p.items.some(it => it.tier === 5)) { problems.push(`${p.id}: no 100-mile answer (rarest tier is ${Math.max(...p.items.map(it => it.tier))})`); hard++; }
     const owner = new Map();
     for (const it of p.items) {
       for (const a of it.al) {
@@ -61,4 +63,4 @@ function check(label, env) {
 let bad = check('hand lists', load());
 const bankPath = path.join(root, 'data/bank.js');
 if (fs.existsSync(bankPath) && !process.argv.includes('--hand-only')) bad += check('data/bank.js', load(fs.readFileSync(bankPath, 'utf8')));
-if (bad && !process.argv.includes('--warn-only')) process.exit(1);
+if (hard || (bad && !process.argv.includes('--warn-only'))) process.exit(1);
