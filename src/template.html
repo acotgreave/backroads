@@ -209,7 +209,7 @@ const P=[
 ];
 /*BANK*/
 // A generated bank (Wikidata answers + page-view rarity) replaces the hand lists; prompt wording and traps stay curated.
-if(typeof BANK!=='undefined'){const m=Object.fromEntries(BANK.map(b=>[b.id,b]));for(const p of P){const b=m[p.id];if(b&&b.bank&&b.bank.length)p.bank=b.bank}}
+if(typeof BANK!=='undefined'){const m=Object.fromEntries(BANK.map(b=>[b.id,b]));for(const p of P){const b=m[p.id];if(b&&b.bank&&b.bank.length)p.bank=b.bank;if(b&&b.live)p.live=b.live}}
 const CATS=[['American life',['fastfood','cereal','candy','thanks','beer','soda','stores']],['Geography',['states','mstates','twoword','atlantic','canada','capitals','notstate','parks','rivers']],['Music & entertainment',['simpsons','friends','sesame']],['History',['presidents','firstladies','signers','money']],['Sport',['nfl','mlb','nba']],['Words & culture',['amwords','holidays']],['General knowledge',['cars','airlines','dogs']]];
 for(const [c,ids] of CATS)for(const id of ids){const p=P.find(x=>x.id===id);if(p)p.cat=c}
 // ---------- roads ----------
@@ -564,9 +564,14 @@ function ask(){
   <form id="f" autocomplete="off"><input id="in" aria-label="Your answer" placeholder="Your answer" autocapitalize="off" spellcheck="false" enterkeyhint="go"><button class="btn go">Go</button><button class="btn sm" type="button" id="pass">Pass</button></form>`;
   if(camMode!=='ride')cam('ride',900);else cam('ride',300);
   const inp=$('in');inp.focus({preventScroll:true});
-  $('f').onsubmit=e=>{e.preventDefault();const r=judge(p,inp.value);if(!r)return;
+  const qi=G.i;
+  $('f').onsubmit=async e=>{e.preventDefault();if(inp.disabled)return;const r=judge(p,inp.value);if(!r)return;
     if(r.trap){msgEl.textContent=r.trap;inp.select();return}
-    if(r.miss){msgEl.textContent='Not on the map. Try another.';inp.select();return}
+    if(r.miss&&p.live&&inp.value.trim().length>2){   // not on our list: ask Wikidata whether it's a real one
+      inp.disabled=true;msgEl.textContent='Checking the map…';const name=await liveCheck(p,inp.value);inp.disabled=false;
+      if(G.i!==qi)return;
+      if(name){const dup=p.items.find(x=>norm(x.name)===norm(name)),it=dup||{name,al:[norm(name)],tier:5,rank:p.items.length,live:true};if(!dup)p.items.push(it);answer(p,it);return}}
+    if(r.miss){msgEl.textContent='Not on the map. Try another.';inp.focus();inp.select();return}
     answer(p,r.it)};
   $('pass').onclick=()=>answer(p,null);
   if(timerOn){const t0=performance.now();
@@ -587,7 +592,7 @@ function answer(p,it){
   <div class="ladder" id="ld">${ZOO.map((z,j)=>`<div>${sign(j)}${z.pts}</div>`).join('')}</div><div class="alt"></div>`;
   card.querySelector('.cat').textContent=p.cat;card.querySelector('.qq').textContent=p.q;
   card.querySelector('.animal').textContent=it?ZOO[k].name:'Nothing spotted';
-  const ans=card.querySelector('.ans');if(it){const b=document.createElement('b');b.textContent='“'+it.name+'” ';ans.append(b,k>=4?'A rare answer.':k>=2?'A good find.':'A common answer.')}else ans.textContent='No answer this time. The car stays put.';
+  const ans=card.querySelector('.ans');if(it){const b=document.createElement('b');b.textContent='“'+it.name+'” ';ans.append(b,it.live?'A deep cut: not on our list, but it’s real.':k>=4?'A rare answer.':k>=2?'A good find.':'A common answer.')}else ans.textContent='No answer this time. The car stays put.';
   if(reached)card.querySelector('.stopban b').textContent=reached[1];
   card.querySelector('.alt').textContent=rarer.length?(k===5?'Also rare: ':'Rarer answers: ')+rarer.join(', '):'';
   barEl.innerHTML=`<button class="btn go wide" id="nx" disabled>${G.i<7?`Next question (${G.i+1} of 7)`:'See your trip'}</button>`;
@@ -599,6 +604,22 @@ function answer(p,it){
   let j=0;(function flip(){dm.classList.add('flip');
     setTimeout(()=>{dm.innerHTML=sign(j);dm.classList.remove('flip');lad.forEach((l,x)=>l.classList.toggle('on',x===j));
       if(j<k){j++;setTimeout(flip,70+j*40)}else go()},110)})();
+}
+
+// ---------- live check ----------
+// An answer missing from the list is looked up on Wikidata and accepted (at 100 mi) if it is the right kind of thing.
+async function liveCheck(p,raw){
+  const q=raw.trim(),tries=[q];if(p.strip&&p.strip.length&&!norm(q).includes(norm(p.strip[0])))tries.push(q+' '+p.strip[0]);
+  const ctl=new AbortController(),to=setTimeout(()=>ctl.abort(),5000);
+  try{
+    const ids=new Set();
+    for(const t of tries){const j=await (await fetch('https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&origin=*&language=en&uselang=en&type=item&limit=7&search='+encodeURIComponent(t),{signal:ctl.signal})).json();
+      const want=norm(t);for(const h of j.search||[]){const mt=norm((h.match&&h.match.text)||h.label||'');if(mt===want||lev(mt,want)<=1||mt.startsWith(want+' '))ids.add(h.id)}}
+    if(!ids.size)return null;
+    const sq=`SELECT ?item ?itemLabel WHERE { VALUES ?item { ${[...ids].map(i=>'wd:'+i).join(' ')} } ${p.live} SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } } LIMIT 1`;
+    const j=await (await fetch('https://query.wikidata.org/sparql?format=json&query='+encodeURIComponent(sq),{signal:ctl.signal,headers:{Accept:'application/sparql-results+json'}})).json();
+    const b=j.results.bindings[0];return b?b.itemLabel.value.replace(/\s*\(.*?\)\s*/g,' ').trim():null;
+  }catch(e){return null}finally{clearTimeout(to)}
 }
 
 // ---------- results ----------

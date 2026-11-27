@@ -34,23 +34,34 @@ START = (END.replace(year=END.year - 2) + datetime.timedelta(days=1)).replace(da
 
 # Prompts whose answer lists come from Wikidata. body binds ?item.
 #   min: fewer results than this means the query is wrong -> fall back to the hand list
-#   cap: keep only the N most-viewed (plus every hand-picked answer) to trim long tails
+#   views: page views are fetched for every hand answer plus the N best-known Wikidata answers (by Wikipedia
+#          language count); the long tail beyond that is still accepted, at 100 mi (default 150)
+#   keep: hard limit on list size, best-known first (default 1500)
+#   live: in the game, an answer not on the list is looked up on Wikidata and accepted at 100 mi if it matches
+#         this body (default: the list body). False = the list is complete, no lookup.
 WD = {
- 'states':   dict(body='?item wdt:P31 wd:Q35657.', min=45),   # live: 49 found; missing hand answers are merged back in
- 'capitals': dict(body='?s wdt:P31 wd:Q35657; wdt:P36 ?item.', min=45),
- 'parks':    dict(body='?item wdt:P31 wd:Q34918903.', min=55),
- 'presidents': dict(body='?item wdt:P39 wd:Q11696.', min=44),
- 'signers':  dict(body='wd:Q127912 wdt:P1891 ?item.', min=50),
- 'nfl':      dict(body='?item wdt:P118 wd:Q1215884; wdt:P31/wdt:P279* wd:Q12973014. FILTER NOT EXISTS{?item wdt:P576 []}', min=30, cap=40),
- 'mlb':      dict(body='?item wdt:P118 wd:Q1163715; wdt:P31/wdt:P279* wd:Q12973014. FILTER NOT EXISTS{?item wdt:P576 []}', min=28, cap=36),
- 'nba':      dict(body='?item wdt:P118 wd:Q155223; wdt:P31/wdt:P279* wd:Q12973014. FILTER NOT EXISTS{?item wdt:P576 []}', min=28, cap=36),
- 'rivers':   dict(body='?item wdt:P31 wd:Q4022; wdt:P17 wd:Q30; wdt:P2043 ?len. FILTER(?len > 400)', min=40, cap=90),
- 'simpsons': dict(body='?item wdt:P1441 wd:Q886. FILTER NOT EXISTS{?item wdt:P31 wd:Q5}', min=30, cap=90),
- 'friends':  dict(body='?item wdt:P1441 wd:Q79784. FILTER NOT EXISTS{?item wdt:P31 wd:Q5}', min=10, cap=60),
- 'sesame':   dict(body='?item wdt:P1441 wd:Q155629. FILTER NOT EXISTS{?item wdt:P31 wd:Q5}', min=15, cap=60),
- 'dogs':     dict(body='?item wdt:P31 wd:Q39367; wdt:P495 wd:Q30.', min=15, cap=50),
- 'cars':     dict(body='?item wdt:P31/wdt:P279* wd:Q786820; wdt:P17 wd:Q30.', min=20, cap=60),
- 'airlines': dict(body='?item wdt:P31 wd:Q46970; wdt:P17 wd:Q30.', min=20, cap=60),
+ 'states':   dict(body='?item wdt:P31 wd:Q35657.', min=45, live=False),   # 49 found live; missing hand answers are merged back in
+ 'capitals': dict(body='?s wdt:P31 wd:Q35657; wdt:P36 ?item.', min=45, live=False),
+ 'parks':    dict(body='?item wdt:P31 wd:Q34918903.', min=55, live=False),
+ 'presidents': dict(body='?item wdt:P39 wd:Q11696.', min=44, live=False),
+ 'signers':  dict(body='wd:Q127912 wdt:P1891 ?item.', min=50, live=False),
+ 'nfl':      dict(body='?item wdt:P118 wd:Q1215884; wdt:P31/wdt:P279* wd:Q12973014. FILTER NOT EXISTS{?item wdt:P576 []}', min=30, live=False),
+ 'mlb':      dict(body='?item wdt:P118 wd:Q1163715; wdt:P31/wdt:P279* wd:Q12973014. FILTER NOT EXISTS{?item wdt:P576 []}', min=28, live=False),
+ 'nba':      dict(body='?item wdt:P118 wd:Q155223; wdt:P31/wdt:P279* wd:Q12973014. FILTER NOT EXISTS{?item wdt:P576 []}', min=28, live=False),
+ 'rivers':   dict(body='?item wdt:P31 wd:Q4022; wdt:P17 wd:Q30; wdt:P2043 ?len. FILTER(?len > 400)', min=40,
+             live='?item wdt:P31/wdt:P279? wd:Q4022; wdt:P17 wd:Q30.'),
+ 'simpsons': dict(body='?item wdt:P1441 wd:Q886. FILTER NOT EXISTS{?item wdt:P31 wd:Q5}', min=30),
+ 'friends':  dict(body='?item wdt:P1441 wd:Q79784. FILTER NOT EXISTS{?item wdt:P31 wd:Q5}', min=10, live=False),
+ 'sesame':   dict(body='?item wdt:P1441 wd:Q155629. FILTER NOT EXISTS{?item wdt:P31 wd:Q5}', min=15, live=False),
+ 'dogs':     dict(body='?item wdt:P31 wd:Q39367; wdt:P495 wd:Q30.', min=15),
+ 'cars':     dict(body='?item wdt:P31/wdt:P279* wd:Q786820; wdt:P17 wd:Q30.', min=20),
+ 'airlines': dict(body='?item wdt:P31 wd:Q46970; wdt:P17 wd:Q30.', min=20),
+ # added 27 Nov 2026 so lists cover the long tail; QIDs to confirm against the first build's report
+ 'beer':     dict(body='{?item wdt:P31/wdt:P279? wd:Q131734} UNION {?item wdt:P31/wdt:P279? wd:Q44} ?item wdt:P17|wdt:P495 wd:Q30.', min=40),
+ 'fastfood': dict(body='?item wdt:P31/wdt:P279? wd:Q18534; wdt:P17 wd:Q30.', min=40),
+ 'stores':   dict(body='?item wdt:P31/wdt:P279? wd:Q507619; wdt:P17 wd:Q30.', min=40),
+ 'soda':     dict(body='?item wdt:P31/wdt:P279? wd:Q147538; wdt:P17|wdt:P495 wd:Q30.', min=20),
+ 'cereal':   dict(body='?item wdt:P31/wdt:P279? wd:Q215185; wdt:P17|wdt:P495 wd:Q30.', min=20),
 }
 # answer sets that are a subset of another prompt reuse its page views
 SUBSET_OF = {'mstates': 'states', 'twoword': 'states', 'atlantic': 'states', 'canada': 'states'}
@@ -123,12 +134,13 @@ def good_alias(a, name):
     return 2 < len(a) <= 40 and not re.search(r'\d{4}', a) and norm(a) != norm(name)
 
 def sparql(body):
-    q = f'''SELECT ?item ?itemLabel ?article (GROUP_CONCAT(DISTINCT ?alt;separator="|") AS ?alts) WHERE {{
+    q = f'''SELECT ?item ?itemLabel ?article ?links (GROUP_CONCAT(DISTINCT ?alt;separator="|") AS ?alts) WHERE {{
       {body}
+      OPTIONAL {{ ?item wikibase:sitelinks ?links }}
       OPTIONAL {{ ?article schema:about ?item; schema:isPartOf <https://en.wikipedia.org/>. }}
       OPTIONAL {{ ?item skos:altLabel ?alt FILTER(LANG(?alt)="en") }}
       SERVICE wikibase:label {{ bd:serviceParam wikibase:language "en". }}
-    }} GROUP BY ?item ?itemLabel ?article'''
+    }} GROUP BY ?item ?itemLabel ?article ?links'''
     data = get_json('https://query.wikidata.org/sparql?format=json&query=' + urllib.parse.quote(q))
     seen, out = set(), []
     for b in data['results']['bindings']:
@@ -138,7 +150,8 @@ def sparql(body):
         art = b.get('article', {}).get('value')
         title = urllib.parse.unquote(art.rsplit('/', 1)[1]).replace('_', ' ') if art else None
         alts = [a for a in b.get('alts', {}).get('value', '').split('|') if a]
-        out.append(dict(name=clean(label), title=title, aliases=alts, qid=qid))
+        out.append(dict(name=clean(label), title=title, aliases=alts, qid=qid, links=int(b.get('links', {}).get('value', 0))))
+    out.sort(key=lambda w: -w['links'])
     return out
 
 def resolve_titles(titles):
@@ -208,7 +221,8 @@ def main():
                         k = key(w['name'])
                         if k in by_key:   # two items with one name (several White Rivers): one answer
                             by_key[k]['aliases'] += al; continue
-                        by_key[k] = dict(name=w['name'], aliases=al, title=w['title'], src='wikidata', qid=w['qid'])
+                        if len(items) >= WD[pid].get('keep', 1500): continue
+                        by_key[k] = dict(name=w['name'], aliases=al, title=w['title'], src='wikidata', qid=w['qid'], links=w['links'])
                         items.append(by_key[k])
                     idx = {key(it['name']): it for it in reversed(items)}   # a name beats an alias
                     for it in items:
@@ -268,9 +282,13 @@ def main():
                 w['aliases'] = list(dict.fromkeys(w['aliases'] + [w['name']] + h['aliases']))
                 w['name'], w['hand'] = h['name'], h['hand']
                 items.remove(h)
+            top = {id(it) for it in sorted((it for it in items if it['src'] != 'hand' and 'hand' not in it), key=lambda it: -it.get('links', 0))[:WD.get(pid, {}).get('views', 150)]}
+            ranked = [it for it in items if 'hand' in it or id(it) in top]
+            for it in items:
+                if not ('hand' in it or id(it) in top): it['views'], it['why'] = None, 'long tail: not ranked'
             with ThreadPoolExecutor(4) as ex:
-                vs = list(ex.map(lambda it: views(it['title']) if it.get('title') else 0, items))
-            for it, v in zip(items, vs): it['views'] = v
+                vs = list(ex.map(lambda it: views(it['title']) if it.get('title') else 0, ranked))
+            for it, v in zip(ranked, vs): it['views'] = v
 
             owner = {}
             for it in items:
@@ -281,15 +299,12 @@ def main():
                 if it.get('title') and owner[it['title']] is not it:
                     it['views'], it['why'] = 0, 'shares page with ' + owner[it['title']]['name']
 
-        cap = WD.get(pid, {}).get('cap')
-        if cap and len(items) > cap:
-            items.sort(key=lambda it: -(it['views'] or 0))
-            items = [it for k, it in enumerate(items) if k < cap or 'hand' in it]
 
         # if page views mostly failed for this prompt, don't trust them
         with_views = sum(1 for it in items if it.get('views'))
-        if pid not in HAND_TIERS and with_views < 0.6 * len(items):
-            note += f'; only {with_views}/{len(items)} have views: hand tiers'
+        considered = sum(1 for it in items if it.get('why') != 'long tail: not ranked')
+        if pid not in HAND_TIERS and with_views < 0.6 * considered:
+            note += f'; only {with_views}/{considered} have views: hand tiers'
             for it in items: it['views'] = None
         parent[pid] = {norm(a): (it.get('title'), it.get('views') or 0) for it in items for a in [it['name']] + it['aliases']}
         tierize(items)
@@ -301,7 +316,11 @@ def main():
                 it['tier'], it['tier_src'] = next(k for k, c in enumerate(cuts) if h / n_hand < c), 'hand'
         items.sort(key=lambda it: (it['tier'], -(it.get('views') or 0)))
 
-        out.append(dict(id=pid, bank=[[it['name'], [a for a in it['aliases'] if a][:10], it['tier']] for it in items]))
+        tail = lambda it: it.get('why') == 'long tail: not ranked'
+        entry = dict(id=pid, bank=[[it['name'], [a for a in it['aliases'] if a][:3 if tail(it) else 10], it['tier']] for it in items])
+        live = WD.get(pid, {}).get('live', WD.get(pid, {}).get('body'))
+        if live and not MOCK and note.startswith('wikidata ('): entry['live'] = live
+        out.append(entry)
         for it in items:
             report.append([pid, it['name'], it.get('title') or '', it.get('why', ''), it['views'] if it.get('views') is not None else '',
                            f"{it['above']:.3f}" if 'above' in it else '', MILES[it['tier']], it['tier_src'], it['src']])
