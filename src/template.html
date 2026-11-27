@@ -657,8 +657,8 @@ function ask(){panel.classList.remove('homep');
   const qi=G.i;
   $('f').onsubmit=async e=>{e.preventDefault();if(inp.disabled)return;const r=judge(p,inp.value);if(!r)return;
     if(r.trap){msgEl.textContent=r.trap;inp.select();return}
-    if(r.miss&&p.live&&inp.value.trim().length>2){   // not on our list: ask Wikidata whether it's a real one
-      inp.disabled=true;msgEl.textContent=C('question.checking','Checking the map…');const name=await liveCheck(p,inp.value);inp.disabled=false;
+    if(r.miss&&(p.live||WIKI[p.id])&&inp.value.trim().length>2){   // not on our list: ask Wikidata, then Wikipedia, whether it's a real one
+      inp.disabled=true;msgEl.textContent=C('question.checking','Checking the map…');const name=(p.live&&await liveCheck(p,inp.value))||await wikiCheck(p,inp.value);inp.disabled=false;
       if(G.i!==qi)return;
       if(name){const dup=p.items.find(x=>norm(x.name)===norm(name)),it=dup||{name,al:[norm(name)],tier:5,rank:p.items.length,live:true};if(!dup)p.items.push(it);answer(p,it);return}}
     if(r.miss){msgEl.textContent=C('question.not_found','Not on the map. Try another.');inp.focus();inp.select();return}
@@ -696,6 +696,70 @@ function answer(p,it){
       if(j<k){j++;setTimeout(flip,70+j*40)}else go()},110)})();
 }
 
+// ---------- wikipedia check ----------
+// Last resort for an answer missing from the list and from Wikidata: search English Wikipedia (open, no key, CORS ok)
+// and accept the top hit when its title is the answer and its description or categories say it is the right kind of thing.
+const US_RE=/\b(american|united states|u\.s\.|usa|alabama|alaska|arizona|arkansas|california|colorado|connecticut|delaware|florida|georgia \(u\.s\. state\)|hawaii|idaho|illinois|indiana|iowa|kansas|kentucky|louisiana|maine|maryland|massachusetts|michigan|minnesota|mississippi|missouri|montana|nebraska|nevada|new hampshire|new jersey|new mexico|new york|north carolina|north dakota|ohio|oklahoma|oregon|pennsylvania|rhode island|south carolina|south dakota|tennessee|texas|utah|vermont|virginia|washington \(state\)|washington, d\.c\.|west virginia|wisconsin|wyoming|seattle|portland|chicago|los angeles|san francisco|san diego|denver|boston|atlanta|houston|dallas|milwaukee|st\. louis|detroit|philadelphia|brooklyn|nashville|new orleans|miami|minneapolis|pittsburgh|cleveland|cincinnati|baltimore|phoenix|austin|san antonio|honolulu|las vegas|salt lake city|kansas city|hershey|memphis|louisville|omaha|tulsa)\b/i;
+const WIKI={
+  beer:{kw:'brewery',d:/\b(brewery|brewing|brewpub|beer|lager|ale|stout|pilsner|ipa)\b/i,c:/\b(breweries|brewing companies|beer brands)\b/i,us:1},
+  soda:{kw:'soft drink',d:/\b(soft drink|soda|cola|root beer|ginger ale|cream soda|carbonated)\b/i,c:/\b(soft drinks|cola brands|carbonated drinks|drink (companies|brands))\b/i,us:1},
+  cereal:{kw:'cereal',d:/\bcereal\b/i,c:/\bbreakfast cereals\b/i,us:1},
+  candy:{kw:'candy',d:/\b(candy|chocolate|confection|confectionery|lollipop|licorice|taffy|toffee|chewing gum|jelly bean)\b/i,c:/\b(candy|confectionery|chocolate bars|brand name confectionery)\b/i,us:1},
+  fastfood:{kw:'restaurant chain',d:/\b(fast[- ]food|restaurant chain|chain of restaurants|drive-in|quick[- ]service|fast casual)\b/i,c:/\b(fast-food|fast food)\b/i,us:1},
+  stores:{kw:'store',d:/\b(retailer|retail chain|department store|chain of [\w -]*stores|supermarket|grocery|discount store|pharmacy chain|convenience store)\b/i,c:/\b(retail companies|department stores|supermarkets|retailers|discount stores|convenience stores)\b/i,us:1},
+  cars:{kw:'automobile',d:/\b(automobile|automotive|car|motor vehicle|truck)s? (manufacturer|maker|company|brand|marque|division)\b|\b(automaker|marque)\b/i,c:/\b(car|motor vehicle|automobile|vehicle) manufacturers\b|\bcar brands\b/i,us:1},
+  airlines:{kw:'airline',d:/\b(airline|air carrier)\b/i,c:/\bairlines\b/i,us:1},
+  rivers:{kw:'river',d:/\b(river|tributary)\b/i,c:/\brivers of\b/i,us:1},
+  dogs:{kw:'dog breed',d:/\b(dog breed|breed of dog)\b/i,c:/\bdog breeds originating in the united states\b/i,us:1},
+  simpsons:{kw:'Simpsons',d:/\bsimpsons\b/i,c:/\bthe simpsons characters\b/i},
+  sesame:{kw:'Sesame Street',d:/\bsesame street\b/i,c:/\bsesame street (characters|muppets)\b/i},
+  friends:{kw:'Friends',d:/\bfriends\b/i,c:/\bfriends \(1994 tv series\) characters\b/i},
+};
+const NOT_US=/\b(japanese|british|english|scottish|welsh|irish|dutch|german|canadian|mexican|belgian|french|italian|australian|swiss|chinese|korean|swedish|danish|norwegian|indian|brazilian|spanish|czech|austrian|new zealand)\b/i;
+async function wikiCheck(p,raw,fetchFn){
+  const W=WIKI[p.id];if(!W)return null;fetchFn=fetchFn||fetch;
+  const q=raw.trim(),want=norm(q);if(want.length<3)return null;
+  const ctl=typeof AbortController!=='undefined'?new AbortController():null,to=ctl&&setTimeout(()=>ctl.abort(),7000);
+  const api=x=>fetchFn('https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&origin=*&redirects=1&prop=description%7Ccategories&cllimit=max&clshow=!hidden&'+x,ctl?{signal:ctl.signal}:{}).then(r=>r.json());
+  const cats=pg=>(pg.categories||[]).map(c=>c.title.replace(/^Category:/,''));
+  // right kind of thing, and American where the prompt needs it
+  const fits=(pg,pool)=>{const d=pg.description||'',cs=cats(pg);
+    if(!(W.d.test(d)||cs.some(c=>W.c.test(c))))return false;
+    if(!W.us)return true;
+    if(US_RE.test(d))return true;
+    if(NOT_US.test(d))return false;
+    if(cs.some(c=>(W.c.test(c)||W.d.test(c))&&US_RE.test(c)))return true;
+    // "Annabelle Candy Company brands" → is Annabelle Candy Company American?
+    const owners=cs.map(c=>(c.match(/^(.+) brands$/)||[])[1]).filter(Boolean);
+    return pool.some(o=>owners.includes(o.title)&&US_RE.test(o.description||''));};
+  const strip=t=>t.replace(/\s*\(.*?\)\s*/g,' ').trim();
+  try{
+    // 1. the answer as an exact page title (also follows redirects, e.g. a character that redirects to a list)
+    const tc=q.replace(/\b\w/g,c=>c.toUpperCase());
+    const L=await api('titles='+encodeURIComponent([...new Set([q,tc])].join('|')));
+    const lp=((L.query&&L.query.pages)||[]).filter(pg=>!pg.missing&&!pg.invalid);
+    const red=(L.query&&L.query.redirects)||[];
+    let exactFail=false;
+    for(const pg of lp){
+      if(/same term|disambiguation/i.test(pg.description||''))continue;
+      if(fits(pg,lp)){const r=red.find(x=>x.to===pg.title);return r&&!norm(strip(pg.title)).includes(want)?r.from:strip(pg.title)}
+      exactFail=true;
+    }
+    // 2. search: an exact title (e.g. "Pliny the Younger (beer)") always counts; a longer title ("Fremont Brewing Company")
+    //    only when the bare answer isn't a page about something else
+    for(const t of [q].concat(W.kw?[q+' '+W.kw]:[])){
+      const j=await api('generator=search&gsrnamespace=0&gsrlimit=5&gsrsearch='+encodeURIComponent(t));
+      const pages=((j.query&&j.query.pages)||[]).sort((a,b)=>a.index-b.index);
+      for(const pg of pages){
+        const nt=norm(strip(pg.title)),exact=nt===want||lev(nt,want)<=1;
+        if(!exact&&(exactFail||!nt.startsWith(want+' ')))continue;
+        if(fits(pg,pages))return strip(pg.title);
+      }
+    }
+    return null;
+  }catch(e){return null}finally{to&&clearTimeout(to)}
+}
+// ---------- end wikipedia check ----------
 // ---------- live check ----------
 // An answer missing from the list is looked up on Wikidata and accepted (at 100 mi) if it is the right kind of thing.
 async function liveCheck(p,raw){
