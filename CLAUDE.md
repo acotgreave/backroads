@@ -12,6 +12,16 @@ Read this first. It covers what the project is, where it stands, and what to do 
 - The Daily mode uses a date-seeded set of prompts, one per category. Unlimited mode is random. The share text uses animal emoji and ends with the URL.
 - Target URL: **https://backroads.howtospeakdata.com**
 
+## Design direction: a journey, not a dive
+
+Andy wants Boreen's **journey** feel, not Krillion's **dive** feel. This is a fixed rule for every change.
+
+- Points move you **forward along a road**: miles, landmarks, an odometer, the car driving on. Never "descending", depth, or an ocean or underwater look.
+- Each day is a trip with a start and a destination. Progress shows as distance covered and stops reached, and the result is "how far you got".
+- Rarity reads as **what you spotted along the way** (the wildlife-crossing animals), not how deep you went.
+- New features should extend the journey: new roads, roadside stops, a trip log or road atlas of past days, "furthest drive" streaks, souvenirs from rare answers.
+- When borrowing from OpenKrillion (see the roadmap), take **backend patterns only**. Leave out its ocean scene, depth zones, dive wording and sounds.
+
 ## Repo layout
 
 | Path | What it is |
@@ -81,6 +91,7 @@ The older prototype is a claude.ai artifact titled "Backroad: US edition". This 
    - Run a nightly job that blends page-view tiers with crowd frequency, shifting toward the crowd as play counts grow.
    - Keep the static GitHub Pages site. The Worker is just an `/api` endpoint, so if it's down the game still works on page-view tiers.
 2. **Reference implementation for (1):** [VulcanEon/openkrillion.com-service](https://github.com/VulcanEon/openkrillion.com-service) is MIT licensed, Cloudflare Worker + D1, last updated Oct 2026.
+   - Borrow server code only, never its dive/ocean presentation (see "Design direction").
    - Worth borrowing: the schema (`runs`, `answers`, `rate_limits`), the one-daily-run-per-player unique index, the cookie and CSRF handling, rate limiting, and the D1 test setup with in-memory SQLite.
    - Keep its MIT notice in anything copied.
    - **Don't** use its "reference sync". It pulls krillion.io's daily prompts and tiers, which isn't ours to use and isn't US content anyway.
