@@ -94,7 +94,7 @@ about:
     Where does the road go?: |
       Sixteen classic American roads, from Route 66 and the Blue Ridge Parkway to the Road to Hana and the Seward Highway.
     Where do the answers come from?: |
-      Most lists come from [Wikidata](https://www.wikidata.org), the free database behind Wikipedia, and are refreshed every week. A few are written by hand. For huge categories like beers, stores and rivers, if your answer isn't in the list, the game asks Wikidata on the spot. If it's there, it counts as a deep cut and is worth the full 100 miles.
+      Most lists come from [Wikidata](https://www.wikidata.org), the free database behind Wikipedia, and are refreshed every week. A few are written by hand. For huge categories like beers, stores and rivers, if your answer isn't in the list, the game asks Wikidata on the spot. If it's not there either, it checks Wikipedia. If either one knows it, it counts as a deep cut and is worth the full 100 miles.
     How is rarity decided?: |
       Work In Progress. For now it's an educated guess. Each answer is ranked by how often its Wikipedia page was read over the last two years. Heavily read pages are the answers most people think of first. Once enough people are playing, real answers will replace the guess.
     Are the "players said" numbers real?: |
@@ -117,7 +117,7 @@ about:
     What's kept on your device: |
       Your browser stores today's game, your trip history, streaks and souvenirs (in local storage, under names starting "backroad:"). None of it is sent to us. Clear this site's data in your browser and it's gone.
     What leaves your device: |
-      **Live answer checks.** When you type an answer that isn't in a big list, that answer, and only that, is sent to Wikidata (run by the Wikimedia Foundation) to look it up.
+      **Live answer checks.** When you type an answer that isn't on our list, that answer, and only that, is sent to Wikidata and Wikipedia (both run by the Wikimedia Foundation) to look it up.
 
       **Fonts.** The lettering loads from Google Fonts, so Google sees your IP address when the page opens.
 
