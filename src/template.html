@@ -142,6 +142,15 @@ pre.share{background:var(--panel2);padding:10px;border-radius:6px;white-space:pr
 .how summary{cursor:pointer;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--ink2);padding:4px}
 .how p{text-align:left;color:var(--ink2);font-size:14px;margin-top:4px}
 .how .zoo{justify-content:center}
+.about p{font-size:15px;line-height:1.5;margin:8px 0}
+.about a{color:inherit}
+.about h3{font-size:13px;font-weight:800;margin:18px 0 4px;color:var(--ink2);letter-spacing:.08em;text-transform:uppercase}
+.about .sig{color:var(--ink2);font-size:14px;font-style:italic}
+.qa{border-top:1px solid var(--line);padding:2px 0}
+.qa summary{cursor:pointer;font-weight:800;font-size:15px;padding:9px 0;list-style-position:outside}
+.qa div{padding:0 0 8px}
+.qa .zoo{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
+.qa .zoo span{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:700}
 .homefoot{display:flex;justify-content:space-between;align-items:center;gap:8px;border-top:1px solid var(--line);padding-top:8px;flex-wrap:wrap}
 .lnk{background:none;border:0;color:var(--ink2);font-weight:800;font-size:13px;cursor:pointer;padding:6px 8px;text-decoration:underline;text-underline-offset:3px}
 .lnk[aria-pressed=false]{opacity:.7}
@@ -532,10 +541,11 @@ function topbar(){
   const nx=T.stops.find(([sm])=>sm>m);$('guide').textContent=nx?`↑ ${nx[1]} ${nx[0]-m}`:'End of the road';
 }
 function shield(T,size=34){return T.sh?`<span class="shield"><svg width="${size}" height="${size}" viewBox="0 0 54 58" aria-label="Route ${T.sh}"><path d="M4 4h46c3 12 2 26-4 36-5 8-12 12-19 16-7-4-14-8-19-16C2 30 1 16 4 4z" fill="#fff" stroke="#14161b" stroke-width="3"/><text x="27" y="38" text-anchor="middle" font-family="Overpass,sans-serif" font-weight="900" font-size="${T.sh.length>2?17:22}" fill="#14161b">${T.sh}</text></svg></span>`:''}
-function chips(){return `<div class="chips"><button class="chip" data-m="daily" aria-pressed="${mode==='daily'}">Daily</button><button class="chip" data-m="free" aria-pressed="${mode==='free'}">Unlimited</button><button class="chip" data-t aria-pressed="${timerOn}">${timerOn?'Timer on':'Timer off'}</button><button class="chip" data-log>Trip log</button></div>`}
+function chips(){return `<div class="chips"><button class="chip" data-m="daily" aria-pressed="${mode==='daily'}">Daily</button><button class="chip" data-m="free" aria-pressed="${mode==='free'}">Unlimited</button><button class="chip" data-t aria-pressed="${timerOn}">${timerOn?'Timer on':'Timer off'}</button><button class="chip" data-log>Trip log</button><button class="chip" data-about>About</button></div>`}
 function wireChips(root){root.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>setMode(b.dataset.m));
   root.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>{timerOn=!timerOn;store.set('timer',timerOn);b.setAttribute('aria-pressed',timerOn);b.textContent=timerOn?'Timer on':'Timer off'});
-  root.querySelectorAll('[data-log]').forEach(b=>b.onclick=tripLog)}
+  root.querySelectorAll('[data-log]').forEach(b=>b.onclick=tripLog);
+  root.querySelectorAll('[data-about]').forEach(b=>b.onclick=about)}
 const credit=`<p class="foot">A US take on Boreen and Krillion, from <a href="https://howtospeakdata.com">How To Speak Data</a>. <span class="src"></span></p>`;
 function fillSrc(root){const s=root.querySelector('.src');if(s)s.textContent=typeof BANK_META!=='undefined'?`Answers from Wikidata; rarity from Wikipedia page views, refreshed ${BANK_META.built}.`:'Rarity tiers are set by hand for now.'}
 
@@ -550,7 +560,7 @@ function intro(){
   barEl.innerHTML=`<button class="btn go wide" id="start">Start ${mode==='daily'?'today’s':'this'} drive</button>
   <details class="how"><summary>How to play</summary><p>Name something that fits the prompt. Common answers barely move you; rare ones cover real ground, and you’ll spot rarer wildlife on the way.</p>
   <div class="zoo">${ZOO.map((z,k)=>`<span>${sign(k,22)}${z.pts} mi</span>`).join('')}</div></details>
-  <div class="homefoot"><span class="kicker">${mode==='daily'?'Drive #'+dayNo():'Unlimited'}</span><span class="links"><button class="lnk" data-m="${mode==='daily'?'free':'daily'}">${mode==='daily'?'Unlimited':'Daily'}</button><button class="lnk" data-t>${timerOn?'Timer on':'Timer off'}</button><button class="lnk" data-log>Trip log</button></span></div>
+  <div class="homefoot"><span class="kicker">${mode==='daily'?'Drive #'+dayNo():'Unlimited'}</span><span class="links"><button class="lnk" data-m="${mode==='daily'?'free':'daily'}">${mode==='daily'?'Unlimited':'Daily'}</button><button class="lnk" data-t>${timerOn?'Timer on':'Timer off'}</button><button class="lnk" data-log>Trip log</button><button class="lnk" data-about>About</button></span></div>
   <p class="foot" style="margin-top:6px;text-align:center">A US take on Boreen and Krillion, from <a href="https://howtospeakdata.com">How To Speak Data</a>.</p>`;
   wireChips(barEl);barEl.querySelector('[data-t]').addEventListener('click',()=>{const m=hero.querySelector('.meta');m.textContent=`7 questions${timerOn?' · 25 seconds each':''} · rarer answers go further`});
   $('start').onclick=()=>{show(hero,false);barEl.classList.remove('home');cam('ride',1100);ask()};
@@ -703,6 +713,39 @@ function end(){
   const cd=()=>{const s=Math.max(0,Math.round((mid-new Date())/1000)),el=$('cd');if(!el)return;el.textContent=`${Math.floor(s/3600)}h ${String(Math.floor(s/60)%60).padStart(2,'0')}m`;setTimeout(cd,30000)};cd();
   panel.scrollTop=0;cam('over',calm?0:1200);
 }
+function about(){
+  clearInterval(tick);
+  show(topEl,false);show(hero,false);show(card,false);show(barEl,false);show(panel,true);
+  const qa=(q,a,open)=>`<details class="qa"${open?' open':''}><summary>${q}</summary><div>${a}</div></details>`;
+  panel.innerHTML=`<div class="brand">${LOGO}<div><h1>About Backroads</h1><div class="tag">A daily drive through America, seven questions long</div></div></div>
+  <div class="about">
+  <p>Backroads is a daily trivia game about the United States. You get seven prompts, like “Name a US state capital” or “Name an American beer.” Answer with something that fits. The more obvious the answer, the shorter the hop down the road. Think of something nobody else will, and you’ll cover real miles.</p>
+  <h3>Why it exists</h3>
+  <p>Backroads borrows its shape from two games I love, <a href="https://krillion.io" target="_blank" rel="noopener">Krillion</a> and <a href="https://boreen.co.uk" target="_blank" rel="noopener">Boreen</a>. But I built it for one person: my friend Aaron, an American living in Brill, a small village in England. Aaron plays Boreen, and he kept getting stuck on questions that assume you grew up in Britain. So here’s a game where the home advantage is his.</p>
+  <p class="sig">Andy Cotgreave, <a href="https://howtospeakdata.com" target="_blank" rel="noopener">How To Speak Data</a></p>
+  <h3>Questions people ask</h3>
+  ${qa('How does it play?',`<p>Seven prompts a day. Type an answer and press Go. Wrong guesses cost nothing, so keep trying until you land one or pass. With the timer on you get 25 seconds a question.</p><p>Every answer counts for something, and rarer ones go further. There are six wildlife sightings along the way:</p><div class="zoo">${ZOO.map((z,k)=>`<span>${sign(k,22)}${z.pts} mi</span>`).join('')}</div><p>The best possible drive is 700 miles.</p>`,true)}
+  ${qa('When does a new drive start?','<p>At midnight where you are. Everyone gets the same seven prompts on the same road that day. Want more? Unlimited mode deals a fresh set whenever you like, though it doesn’t count toward your streak.</p>')}
+  ${qa('Where does the road go?','<p>Sixteen classic American roads, from Route 66 and the Blue Ridge Parkway to the Road to Hana and the Seward Highway. Each day picks a road and a direction, so the trip starts and ends somewhere different. Every right answer drives you on, and the landmarks you pass show up on the map.</p>')}
+  ${qa('Where do the answers come from?','<p>Most lists come from <a href="https://www.wikidata.org" target="_blank" rel="noopener">Wikidata</a>, the free database behind Wikipedia, and are refreshed every week. A few are written by hand. For huge categories like beers, stores and rivers, if your answer isn’t in the list, the game asks Wikidata on the spot. If it’s there, it counts as a deep cut and is worth the full 100 miles.</p>')}
+  ${qa('How is rarity decided?','<p>For now it’s an educated guess. Each answer is ranked by how often its Wikipedia page was read over the last two years. Heavily read pages are the answers most people think of first. Once enough people are playing, real answers will replace the guess.</p>')}
+  ${qa('Are the “players said” numbers real?','<p>Not yet. The percentages on the results screen, like “further than about 60% of drivers,” are estimates worked out from page views. Each one is labeled as an estimate. Real counts are coming.</p>')}
+  ${qa('Why didn’t my answer count?','<p>It might not fit the prompt, the spelling might be too far off, or we simply missed it. Small typos are forgiven. If you think it should count, suggest it using the link below.</p>')}
+  ${qa('Do I need to sign up?','<p>No. There are no accounts. Your streak, trip log and souvenirs live in this browser, so they won’t follow you to another phone or computer, and clearing your browser’s site data wipes them.</p>')}
+  ${qa('What’s a souvenir?','<p>Spot a black bear or a bald eagle (an 80 or 100 mile answer) and the sign goes into your trip log as a keepsake.</p>')}
+  ${qa('Is it free?','<p>Yes. No ads, no paywall.</p>')}
+  ${qa('Can I suggest a question?','<p>Please do. <a href="https://github.com/acotgreave/backroads/issues/new?title=Question%20idea%3A%20" target="_blank" rel="noopener">Open a suggestion on GitHub</a>. The same link works for an answer you think should count.</p>')}
+  ${qa('Why “Backroads”?','<p>Because the interesting stuff is never on the interstate.</p>')}
+  <h3 id="privacy">Privacy</h3>
+  <p>Backroads needs nothing from you to play. No accounts, no ads, no analytics, no tracking cookies.</p>
+  ${qa('What’s kept on your device','<p>Your browser stores today’s game, your trip history, streaks, souvenirs and the timer setting (in local storage, under names starting “backroad:”). None of it is sent to us. Clear this site’s data in your browser and it’s gone.</p>')}
+  ${qa('What leaves your device','<p><b>Live answer checks.</b> When you type an answer that isn’t in a big list, that answer, and only that, is sent to Wikidata (run by the Wikimedia Foundation) to look it up.</p><p><b>Fonts.</b> The lettering loads from Google Fonts, so Google sees your IP address when the page opens.</p><p><b>Hosting.</b> The site is served by GitHub Pages. GitHub may log visits for security, as any web host does.</p><p><b>Suggestions.</b> Suggesting a question opens GitHub, where your suggestion is public under your GitHub account.</p>')}
+  ${qa('If this changes','<p>Real “what players said” counts will need answers to be sent to a server. When that arrives, this page will say exactly what is collected, before it starts.</p>')}
+  </div>
+  <div class="row" style="margin-top:14px"><button class="btn go wide" id="back">Back to the road</button></div>`;
+  $('back').onclick=start;panel.scrollTop=0;cam('over');
+  if(location.hash==='#privacy')setTimeout(()=>{const p=$('privacy');if(p)p.scrollIntoView()},50);
+}
 function tripLog(){
   clearInterval(tick);const t=trips();
   const fmt=s=>new Date(s+'T12:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
@@ -728,7 +771,7 @@ function start(){
 function setMode(m){mode=m;start()}
 // keep the answer bar above the on-screen keyboard
 if(window.visualViewport)visualViewport.addEventListener('resize',()=>{const k=Math.max(0,innerHeight-visualViewport.height-visualViewport.offsetTop);barEl.style.bottom=k?k+8+'px':'';msgEl.style.bottom=k?k+82+'px':''});
-start();
+if(/^#(about|privacy)$/.test(location.hash)){start();about()}else start();
 }
 </script>
 </body>
