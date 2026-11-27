@@ -1,0 +1,129 @@
+# Backroads: the words on the site.
+#
+# Edit the text on the right of each colon, then commit. The site rebuilds and goes live in about 2 minutes.
+# You can edit this file straight on GitHub: open it, click the pencil, change the text, then "Commit changes".
+#
+# Rules that keep it working:
+# - Keep the names on the left (like "start:") exactly as they are, and keep the indenting (spaces, not tabs).
+# - Words in {curly braces} are filled in by the game, such as {road} or {miles}. Keep them, but move them around freely.
+# - Text after "|" can run over several lines. Leave a blank line to start a new paragraph.
+# - **double stars** make text bold, and [words](https://example.com) makes a link.
+# - If the build can't read this file, the site stays on the last version and the GitHub Actions run turns red.
+
+home:
+  title: Backroads
+  drive_label: "Drive #{n}"
+  test_label: Test replay
+  start: Hit the road
+  start_test: Replay the trip
+  how_title: How to play
+  how_text: Seven prompts, 25 seconds each. Name something that fits. Common answers barely move you; rare ones cover real ground, and you'll spot rarer wildlife on the way.
+  trip_log: Trip log
+  about: About
+  test_replay: "Test: replay today"
+  test_picker: "Test: try another road"
+  credit: A US take on Boreen and Krillion, from [How To Speak Data](https://howtospeakdata.com).
+
+question:
+  placeholder: Your answer
+  go: Go
+  pass: Pass
+  checking: Checking the map…
+  not_found: Not on the map. Try another.
+  keep_driving: "Keep driving · {n} of 7"
+  last: Pull over and see the trip
+  nothing: Nothing spotted
+  no_answer: No answer this time. The car stays put.
+  deep_cut: "A deep cut: not on our list, but it's real."
+  rare: A rare answer.
+  good: A good find.
+  common: A common answer.
+  reached: "Reached at {miles} miles"
+  also_rare: "Also rare:"
+  rarer: "Rarer answers:"
+
+results:
+  test_note: Test replay. This drive isn't saved to your trip log or streak.
+  percentile: "Further than about **{pct}%** of drivers today"
+  estimate: (estimate)
+  share: Share result
+  copied: Copied
+  copy_fallback: Select the text below to copy
+  next_drive: "Next daily drive in **{time}**."
+  whole_road: You drove the whole road.
+  furthest: "Furthest landmark. {next} was {left} miles further on."
+  your_answers: Your answers
+  compare: How you compare
+  trip_log: Trip log and streak
+  wildlife: The wildlife
+  suggest_lead: Know a question with loads of answers?
+  suggest: Suggest a question
+  share_full: "🏁 700/700 mi, drove the whole road!"
+  share_partial: "🚗 {miles}/700 mi, made it to {stop}"
+  share_header: "🛣️ Backroads #{n} · {road}"
+  share_footer: "🇺🇸 {url}"
+
+triplog:
+  title: Trip log
+  empty: No trips logged yet. Finish today's daily drive and it'll show up here.
+  back: Back to the road
+
+about:
+  title: About Backroads
+  tagline: A daily drive through America, seven questions long
+  intro: |
+    Backroads is a daily trivia game about the United States. You get seven prompts, like "Name a US state capital" or "Name an American beer." Answer with something that fits. The more obvious the answer, the shorter the hop down the road. Think of something nobody else will, and you'll cover real miles.
+  why_title: Why it exists
+  why: |
+    Backroads borrows its shape from two games I love, [Krillion](https://krillion.io) and [Boreen](https://boreen.co.uk). But I built it for one person: my friend Aaron, an American living in Brill, a small village in England. Aaron plays Boreen, and he kept getting stuck on questions that assume you grew up in Britain. So here's a game where the home advantage is his.
+  signature: Andy Cotgreave, [How To Speak Data](https://howtospeakdata.com)
+  faq_title: Questions people ask
+  # Each question is the name on the left; its answer is the indented text below it.
+  # {signs} shows the row of mile-marker signs.
+  faq:
+    How does it play?: |
+      Seven prompts a day. Type an answer and press Go. Wrong guesses cost nothing, so keep trying until you land one or pass. You get 25 seconds a question.
+
+      Every answer counts for something, and rarer ones go further. There are six wildlife sightings along the way:
+
+      {signs}
+
+      The best possible drive is 700 miles.
+    When does a new drive start?: |
+      At midnight where you are. Everyone gets the same seven prompts on the same road that day.
+    Where does the road go?: |
+      Sixteen classic American roads, from Route 66 and the Blue Ridge Parkway to the Road to Hana and the Seward Highway. Each day picks a road and a direction, so the trip starts and ends somewhere different. Every right answer drives you on, and the landmarks you pass show up on the map.
+    Where do the answers come from?: |
+      Most lists come from [Wikidata](https://www.wikidata.org), the free database behind Wikipedia, and are refreshed every week. A few are written by hand. For huge categories like beers, stores and rivers, if your answer isn't in the list, the game asks Wikidata on the spot. If it's there, it counts as a deep cut and is worth the full 100 miles.
+    How is rarity decided?: |
+      For now it's an educated guess. Each answer is ranked by how often its Wikipedia page was read over the last two years. Heavily read pages are the answers most people think of first. Once enough people are playing, real answers will replace the guess.
+    Are the "players said" numbers real?: |
+      Not yet. The percentages on the results screen, like "further than about 60% of drivers," are estimates worked out from page views. Each one is labeled as an estimate. Real counts are coming.
+    Why didn't my answer count?: |
+      It might not fit the prompt, the spelling might be too far off, or we simply missed it. Small typos are forgiven. If you think it should count, suggest it using the link below.
+    Do I need to sign up?: |
+      No. There are no accounts. Your streak, trip log and souvenirs live in this browser, so they won't follow you to another phone or computer, and clearing your browser's site data wipes them.
+    What's a souvenir?: |
+      Spot a black bear or a bald eagle (an 80 or 100 mile answer) and the sign goes into your trip log as a keepsake.
+    Is it free?: |
+      Yes. No ads, no paywall.
+    Can I suggest a question?: |
+      Please do. [Open a suggestion on GitHub](https://github.com/acotgreave/backroads/issues/new?title=Question%20idea%3A%20). The same link works for an answer you think should count.
+    Why "Backroads"?: |
+      Because the interesting stuff is never on the interstate.
+  privacy_title: Privacy
+  privacy_intro: Backroads needs nothing from you to play. No accounts, no ads, no analytics, no tracking cookies.
+  privacy:
+    What's kept on your device: |
+      Your browser stores today's game, your trip history, streaks and souvenirs (in local storage, under names starting "backroad:"). None of it is sent to us. Clear this site's data in your browser and it's gone.
+    What leaves your device: |
+      **Live answer checks.** When you type an answer that isn't in a big list, that answer, and only that, is sent to Wikidata (run by the Wikimedia Foundation) to look it up.
+
+      **Fonts.** The lettering loads from Google Fonts, so Google sees your IP address when the page opens.
+
+      **Hosting.** The site is served by GitHub Pages. GitHub may log visits for security, as any web host does.
+
+      **Suggestions.** Suggesting a question opens GitHub, where your suggestion is public under your GitHub account.
+    If this changes: |
+      Real "what players said" counts will need answers to be sent to a server. When that arrives, this page will say exactly what is collected, before it starts.
+  back: Back to the road
