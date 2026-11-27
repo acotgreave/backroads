@@ -17,7 +17,7 @@ home:
   start: Hit the road
   start_test: Replay the trip
   how_title: How to play
-  how_text: Seven prompts, 25 seconds each. Name something that fits. Common answers barely move you; rare ones cover real ground, and you'll spot rarer wildlife on the way.
+  how_text: Seven questions, 25 seconds each. Name something that fits. Rarer answers are better, you'll spot wildlife on the way.
   trip_log: Trip log
   about: About
   test_replay: "Test: replay today"
@@ -72,17 +72,17 @@ about:
   title: About Backroads
   tagline: A daily drive through America, seven questions long
   intro: |
-    Backroads is a daily trivia game about the United States. You get seven prompts, like "Name a US state capital" or "Name an American beer." Answer with something that fits. The more obvious the answer, the shorter the hop down the road. Think of something nobody else will, and you'll cover real miles.
+    Backroads is a daily trivia game about the United States. You get seven question. The less obvious the answer, the further you'll go.
   why_title: Why it exists
   why: |
-    Backroads borrows its shape from two games I love, [Krillion](https://krillion.io) and [Boreen](https://boreen.co.uk). But I built it for one person: my friend Aaron, an American living in Brill, a small village in England. Aaron plays Boreen, and he kept getting stuck on questions that assume you grew up in Britain. So here's a game where the home advantage is his.
+    Backroads borrows is inspired by two games, [Krillion](https://krillion.io) and [Boreen](https://boreen.co.uk). I built it for my friend Aaron, an American living in Brill, a small village in England. Aaron plays Boreen, and he kept getting stuck on questions that assume you grew up in Britain. Backroads gives him the advantage.
   signature: Andy Cotgreave, [How To Speak Data](https://howtospeakdata.com)
   faq_title: Questions people ask
   # Each question is the name on the left; its answer is the indented text below it.
   # {signs} shows the row of mile-marker signs.
   faq:
     How does it play?: |
-      Seven prompts a day. Type an answer and press Go. Wrong guesses cost nothing, so keep trying until you land one or pass. You get 25 seconds a question.
+      Seven questions a day. Type an answer and press Go. Wrong guesses cost nothing, so keep trying until you land one or pass. You get 25 seconds a question.
 
       Every answer counts for something, and rarer ones go further. There are six wildlife sightings along the way:
 
@@ -92,11 +92,11 @@ about:
     When does a new drive start?: |
       At midnight where you are. Everyone gets the same seven prompts on the same road that day.
     Where does the road go?: |
-      Sixteen classic American roads, from Route 66 and the Blue Ridge Parkway to the Road to Hana and the Seward Highway. Each day picks a road and a direction, so the trip starts and ends somewhere different. Every right answer drives you on, and the landmarks you pass show up on the map.
+      Sixteen classic American roads, from Route 66 and the Blue Ridge Parkway to the Road to Hana and the Seward Highway.
     Where do the answers come from?: |
       Most lists come from [Wikidata](https://www.wikidata.org), the free database behind Wikipedia, and are refreshed every week. A few are written by hand. For huge categories like beers, stores and rivers, if your answer isn't in the list, the game asks Wikidata on the spot. If it's there, it counts as a deep cut and is worth the full 100 miles.
     How is rarity decided?: |
-      For now it's an educated guess. Each answer is ranked by how often its Wikipedia page was read over the last two years. Heavily read pages are the answers most people think of first. Once enough people are playing, real answers will replace the guess.
+      Work In Progress. For now it's an educated guess. Each answer is ranked by how often its Wikipedia page was read over the last two years. Heavily read pages are the answers most people think of first. Once enough people are playing, real answers will replace the guess.
     Are the "players said" numbers real?: |
       Not yet. The percentages on the results screen, like "further than about 60% of drivers," are estimates worked out from page views. Each one is labeled as an estimate. Real counts are coming.
     Why didn't my answer count?: |
