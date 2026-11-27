@@ -31,7 +31,7 @@ const cases = [
   let wrong = 0;
   for (const [id, a, want] of cases) {
     try {
-    seen = []; await new Promise(r => setTimeout(r, 400));
+    seen = []; await new Promise(r => setTimeout(r, 1500));
     const got = await wikiCheck({ id }, a, f);
     const ok = !!got === !!want; if (!ok) wrong++;
     console.log(`${ok ? 'ok  ' : 'MISS'} ${id.padEnd(9)} ${a.padEnd(22)} want ${want ? 'yes' : 'no '}  got ${got || '-'}`);
