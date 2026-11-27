@@ -320,6 +320,8 @@ function prep(p){
   if(p.people){const seen=new Set();for(const it of items){const last=it.al[0].split(' ').pop();if(last.length>2&&!seen.has(last)){it.al.push(last);seen.add(last)}else seen.add(last)}}
   const n=items.length;
   if(!p.bank)items.forEach(it=>{const q=it.rank/n;it.tier=CUTS.findIndex(c=>q<c)});
+  // every prompt must have 100-mile answers: stretch the tiers so the rarest ones reach the top
+  const mx=Math.max(...items.map(it=>it.tier));if(mx>0&&mx<5)items.forEach(it=>{it.tier=Math.round(it.tier*5/mx)});
   p.items=items;p.trapMap=Object.fromEntries(Object.entries(p.traps||{}).map(([k,v])=>[norm(k),v]));p.ready=true;return p;
 }
 function lev(a,b){if(Math.abs(a.length-b.length)>2)return 9;const d=[...Array(b.length+1).keys()];
@@ -735,7 +737,7 @@ function end(){
     h.push({date:G.date,mi:miles(),road:M.T.name,tiers:G.ans.map(a=>a.tier),rare:G.ans.filter(a=>a.tier>=4).map(a=>[a.a,a.tier,a.q])});store.set('hist',h.slice(-400))}}
   const T=M.T,mi=miles(),tl=trips(),sim=simulate(),below=sim.filter(m=>m<mi).length+sim.filter(m=>m===mi).length/2,pct=Math.round(below/sim.length*100);
   let at=T.stops[0];for(const s of T.stops)if(mi>=s[0])at=s;const nx=T.stops.find(([m])=>m>mi);
-  const share=`Backroads ${G.mode==='daily'?'#'+dayNo():'(unlimited)'} · ${T.name}\n${G.ans.map(a=>a.tier<0?'⬛':EMO[a.tier]).join('')} ${mi}/700 mi\n${URL_}`;
+  const share=`🛣️ Backroads ${G.mode==='daily'?'#'+dayNo():'(unlimited)'} · ${T.name}\n${G.ans.map(a=>a.tier<0?'⬛':EMO[a.tier]).join('')}\n${mi>=700?'🏁 700/700 mi, drove the whole road!':`🚗 ${mi}/700 mi, made it to ${at[1]}`}\n🇺🇸 ${URL_}`;
   const ps=G.qs.map(getP),pop=ps.map(p=>p.items.slice().sort((a,b)=>a.tier-b.tier||a.rank-b.rank)[0]);
   const mid=new Date();mid.setHours(24,0,0,0);
   show(topEl,false);show(hero,false);show(card,false);show(barEl,false);show(panel,true);msgEl.textContent='';
