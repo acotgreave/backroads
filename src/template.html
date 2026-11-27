@@ -355,6 +355,30 @@ const EXTRAS=false;   // Unlimited mode and the timer toggle are hidden for now;
 let mode='daily',timerOn=EXTRAS?store.get('timer',true):true,G=null,tick=null;
 // test mode: ?test=1 turns it on (remembered), ?test=0 turns it off. Lets you replay today's drive; replays never count.
 const TEST=(()=>{const q=new URLSearchParams(location.search).get('test');if(q==='1')store.set('test',true);if(q==='0')store.set('test',false);return store.get('test',false)})();
+// ---------- crowd results ----------
+// Each finished daily drive is sent, with no personal data, to a small Cloudflare Worker (worker/ in the repo).
+// It sends back today's totals for the results page. If it can't be reached, the results page keeps its estimates
+// and the drive waits in an outbox until next time.
+const API=String((TEST&&new URLSearchParams(location.search).get('api'))||/*API*/'').replace(/\/+$/,'');
+const CROWD_MIN=3;   // real comparisons replace the estimates once this many drivers have finished today
+function playerId(){let p=store.get('pid',null);
+  if(!p){p=crypto.randomUUID?crypto.randomUUID():Array.from(crypto.getRandomValues(new Uint8Array(16)),b=>b.toString(16).padStart(2,'0')).join('');store.set('pid',p)}return p}
+async function api(path,body){const ctl=new AbortController(),to=setTimeout(()=>ctl.abort(),6000);
+  try{const r=await fetch(API+path,body?{method:'POST',headers:{'Content-Type':'text/plain'},body:JSON.stringify(body),signal:ctl.signal}:{signal:ctl.signal});
+    return {status:r.status,data:r.ok?await r.json():null}}catch(e){return {status:0,data:null}}finally{clearTimeout(to)}}
+function noteMiss(p,v){if(G.mode!=='daily'||G.test)return;v=v.trim().slice(0,40);if(v.length<2)return;
+  const m=G.miss||(G.miss={}),l=m[p.id]||(m[p.id]=[]);if(l.length<15&&!l.some(x=>norm(x)===norm(v)))l.push(v)}
+function queueRun(){const o=store.get('outbox',[]).filter(x=>x.day!==G.date);
+  o.push({day:G.date,pid:playerId(),miles:miles(),ans:G.ans.map(a=>({id:a.id,a:a.a,tier:a.tier})),misses:G.miss||{}});store.set('outbox',o.slice(-5))}
+// send anything waiting, then return today's totals for `day` (or null when offline or switched off)
+async function crowdSync(day){
+  if(!API)return null;let got=null;const keep=[];
+  for(const run of store.get('outbox',[])){const r=await api('/api/run',run);
+    if(r.data&&run.day===day)got=r.data;
+    if(r.status===0||r.status===429||r.status>=500)keep.push(run)}   // other refusals (too old, bad data) are dropped
+  store.set('outbox',keep);
+  if(got||!day)return got;
+  const r=await api('/api/day?d='+day);return r.data}
 function replay(road,rev){clearInterval(tick);mode='daily';G=newGame('backroad-'+today());if(road!=null){G.road=road;G.rev=rev}G.test=true;shown=0;buildMap();intro()}
 // test mode: pick any of the road/direction trips to preview
 function tripPicker(){const o=[];ROADS.forEach((R,i)=>{const a=R.stops[0][1],b=R.stops[R.stops.length-1][1];
@@ -656,12 +680,12 @@ function ask(){panel.classList.remove('homep');
   const inp=$('in');inp.focus({preventScroll:true});
   const qi=G.i;
   $('f').onsubmit=async e=>{e.preventDefault();if(inp.disabled)return;const r=judge(p,inp.value);if(!r)return;
-    if(r.trap){msgEl.textContent=r.trap;inp.select();return}
+    if(r.trap){noteMiss(p,inp.value);msgEl.textContent=r.trap;inp.select();return}
     if(r.miss&&(p.live||WIKI[p.id])&&inp.value.trim().length>2){   // not on our list: ask Wikidata, then Wikipedia, whether it's a real one
       inp.disabled=true;msgEl.textContent=C('question.checking','Checking the map…');const name=(p.live&&await liveCheck(p,inp.value))||await wikiCheck(p,inp.value);inp.disabled=false;
       if(G.i!==qi)return;
       if(name){const dup=p.items.find(x=>norm(x.name)===norm(name)),it=dup||{name,al:[norm(name)],tier:5,rank:p.items.length,live:true};if(!dup)p.items.push(it);answer(p,it);return}}
-    if(r.miss){msgEl.textContent=C('question.not_found','Not on the map. Try another.');inp.focus();inp.select();return}
+    if(r.miss){noteMiss(p,inp.value);msgEl.textContent=C('question.not_found','Not on the map. Try another.');inp.focus();inp.select();return}
     answer(p,r.it)};
   $('pass').onclick=()=>answer(p,null);
   if(timerOn){const t0=performance.now();
@@ -781,13 +805,13 @@ function weights(p){const n=[0,0,0,0,0,0];for(const it of p.items)n[it.tier]++;r
 function simulate(){   // typical players, guessing in proportion to Wikipedia popularity, about 1 in 7 drawing a blank
   const r=rng('sim-'+G.date+G.qs.join()),ps=G.qs.map(getP),tiers=ps.map(p=>{const c=[0,0,0,0,0,0];for(const it of p.items)c[it.tier]=1;const w=BAND.map((b,t)=>b*c[t]),s=w.reduce((a,b)=>a+b,0);return w.map(x=>x/s)});
   const out=[];for(let n=0;n<4000;n++){let m=0;for(const w of tiers){if(r()<.14)continue;let u=r(),t=0;while(t<5&&(u-=w[t])>0)t++;m+=ZOO[t].pts}out.push(m)}return out}
-function curveSVG(sim,mine,stops){
+function curveSVG(sim,mine,stops,label){
   const W=600,H=150,bins=Array(71).fill(0);for(const m of sim)bins[Math.min(70,Math.round(m/10))]++;
   const sm=bins.map((_,i)=>{let s=0,w=0;for(let d=-3;d<=3;d++){const v=bins[i+d];if(v!=null){const k=4-Math.abs(d);s+=v*k;w+=k}}return s/w});
   const mx=Math.max(...sm),X=m=>m/700*W,Y=v=>H-8-v/mx*(H-30);
   const pts=sm.map((v,i)=>[X(i*10),Y(v)]),line='M'+pts.map(p=>p.map(n=>n.toFixed(1)).join(' ')).join('L');
   const cut=pts.filter(p=>p[0]<=X(mine)),you=[X(mine),Y(sm[Math.min(70,Math.round(mine/10))])];
-  return `<svg viewBox="-10 0 ${W+20} ${H+44}" width="100%" role="img" aria-label="Estimated spread of today's scores">
+  return `<svg viewBox="-10 0 ${W+20} ${H+44}" width="100%" role="img" aria-label="${esc(label||"Estimated spread of today's scores")}">
    <path d="${'M0 '+(H-8)+'L'+cut.map(p=>p.join(' ')).join('L')+'L'+you[0]+' '+(H-8)+'Z'}" fill="#ffd83a" opacity=".6"/>
    <path d="${line}" fill="none" stroke="#7a705e" stroke-width="2"/><path d="${'M0 '+(H-8)+'L'+cut.map(p=>p.join(' ')).join('L')+'L'+you.join(' ')}" fill="none" stroke="#1d4f9c" stroke-width="3"/>
    <line x1="${you[0]}" y1="${you[1]}" x2="${you[0]}" y2="${H-8}" stroke="#1d4f9c" stroke-dasharray="3 3"/><circle cx="${you[0]}" cy="${you[1]}" r="5" fill="#1d4f9c"/>
@@ -805,7 +829,7 @@ function logSVG(){
 function end(){
   clearInterval(tick);panel.classList.remove('homep');
   if(G.mode==='daily'&&!G.test){store.set('day2',G);const h=store.get('hist',[]);if(!h.some(x=>x.date===G.date)){
-    h.push({date:G.date,mi:miles(),road:M.T.name,tiers:G.ans.map(a=>a.tier),rare:G.ans.filter(a=>a.tier>=4).map(a=>[a.a,a.tier,a.q])});store.set('hist',h.slice(-400))}}
+    h.push({date:G.date,mi:miles(),road:M.T.name,tiers:G.ans.map(a=>a.tier),rare:G.ans.filter(a=>a.tier>=4).map(a=>[a.a,a.tier,a.q])});store.set('hist',h.slice(-400));queueRun()}}
   const T=M.T,mi=miles(),tl=trips(),sim=simulate(),below=sim.filter(m=>m<mi).length+sim.filter(m=>m===mi).length/2,pct=Math.round(below/sim.length*100);
   let at=T.stops[0];for(const s of T.stops)if(mi>=s[0])at=s;const nx=T.stops.find(([m])=>m>mi);
   const share=[C('results.share_header','Backroads #{n} · {road}',{n:G.mode==='daily'?dayNo():'(unlimited)',road:T.name}),G.ans.map(a=>a.tier<0?'⬛':EMO[a.tier]).join(''),mi>=700?C('results.share_full','700/700 mi'):C('results.share_partial','{miles}/700 mi, made it to {stop}',{miles:mi,stop:at[1]}),C('results.share_footer','{url}',{url:URL_})].join('\n');
@@ -816,17 +840,17 @@ function end(){
   ${G.test?`<p class="testnote">${md(C('results.test_note','Test replay. Not saved.'))}</p>`:''}
   <div class="roadname" style="font-size:20px;margin-top:12px">${shield(T,26)}<span class="pc-road"></span></div><div class="pc-from"></div>
   <div class="pc-row"><span class="big">${mi}<small>miles</small></span><span class="pc-signs">${G.ans.map(a=>sign(a.tier,24)).join('')}</span></div>
-  <p class="pct">${md(C('results.percentile','Further than about **{pct}%** of drivers today',{pct}))} <small>${esc(C('results.estimate','(estimate)'))}</small></p>
+  <p class="pct" id="pct">${md(C('results.percentile','Further than about **{pct}%** of drivers today',{pct}))} <small>${esc(C('results.estimate','(estimate)'))}</small></p>
   <div class="row"><button class="btn go wide" id="cp">${esc(C('results.share','Share result'))}</button></div>
   <p class="streak" id="cdl"></p>
   <div class="stopban" style="margin-top:10px"><svg viewBox="0 0 100 100">${ICON[at[2]]||''}</svg><div><b class="fl"></b><span class="fln"></span></div></div>
   <details class="sec" open><summary>${esc(C('results.your_answers','Your answers'))}</summary><div id="answers"></div></details>
-  <details class="sec"><summary>${esc(C('results.compare','How you compare'))} <small>estimate</small></summary>
-   <h3 class="kicker" style="margin-top:6px">Where everyone ended up</h3>${curveSVG(sim,mi,T.stops)}
-   <h3 class="kicker" style="margin-top:14px">What players said</h3>
-   <ul class="res"><li>${sign(0,28)}<div><span class="popa"></span><small>Most popular answer today, by Wikipedia popularity</small></div><b></b></li>
-   <li>${sign(5,28)}<div>Rarest sighting<small>Shows up once enough people have played</small></div><b></b></li>
-   <li>${sign(-1,28)}<div>Most-tried non-answer<small>Shows up once enough people have played</small></div><b></b></li></ul></details>
+  <details class="sec"><summary>${esc(C('results.compare','How you compare'))} <small id="cmpn">${esc(C('results.compare_estimate','estimate'))}</small></summary>
+   <h3 class="kicker" style="margin-top:6px">${esc(C('results.curve_title','Where everyone ended up'))}</h3><div id="curve">${curveSVG(sim,mi,T.stops)}</div>
+   <h3 class="kicker" style="margin-top:14px">${esc(C('results.said_title','What players said'))}</h3>
+   <ul class="res" id="said"><li>${sign(0,28)}<div><span class="popa"></span><small>${esc(C('results.popular_estimate','Most popular answer today, by Wikipedia popularity'))}</small></div><b></b></li>
+   <li>${sign(5,28)}<div><span>${esc(C('results.rarest','Rarest sighting'))}</span><small>${esc(C('results.not_yet','Shows up once enough people have played'))}</small></div><b></b></li>
+   <li>${sign(-1,28)}<div><span>${esc(C('results.nonanswer','Most-tried non-answer'))}</span><small>${esc(C('results.not_yet','Shows up once enough people have played'))}</small></div><b></b></li></ul></details>
   <details class="sec"><summary>${esc(C('results.trip_log','Trip log and streak'))}</summary>
    <div class="stats"><div><b>${G.mode==='daily'&&!G.test?tl.streak:'–'}</b><small>day streak</small></div><div><b>${tl.longest}</b><small>best streak</small></div><div><b>${tl.days}</b><small>daily drives</small></div></div>
    <h3 class="kicker" style="display:flex;justify-content:space-between">Recent drives <span style="letter-spacing:0;text-transform:none">Higher is rarer</span></h3>${logSVG()}</details>
@@ -839,7 +863,7 @@ function end(){
   ${chips()}${credit}`;
   panel.querySelector('.pc-road').textContent=T.name;panel.querySelector('.pc-from').textContent=`${T.from} to ${T.to}`;
   panel.querySelector('.fl').textContent=at[1];panel.querySelector('.fln').textContent=mi>=700?C('results.whole_road','You drove the whole road.'):C('results.furthest','Furthest landmark. {next} was {left} miles further on.',{next:nx[1],left:nx[0]-mi});
-  panel.querySelectorAll('.sn').forEach(t=>t.textContent=T.stops[+t.dataset.i][1].split(/[ ,]/)[0]);
+  const stopNames=()=>panel.querySelectorAll('.sn').forEach(t=>t.textContent=T.stops[+t.dataset.i][1].split(/[ ,]/)[0]);stopNames();
   const bi=pop.reduce((b,x,i)=>ps[i].items.length>ps[b].items.length?i:b,0);panel.querySelector('.popa').textContent=`“${pop[bi].name}” · ${ps[bi].q}`;
   const A=$('answers');
   G.ans.forEach((a,i)=>{const p=ps[i],w=weights(p),it=p.items.find(x=>x.name===a.a);
@@ -847,7 +871,7 @@ function end(){
     d.innerHTML=`<div class="q" style="font-size:19px"></div><div style="display:grid;grid-template-columns:36px minmax(0,1fr) auto;gap:10px;align-items:center;margin-top:6px">${sign(a.tier,36)}<div><b class="an"></b><small style="display:block;color:#6fd39c" class="est"></small></div><b style="font-size:17px">+${a.pts} mi</b></div>
       <details style="margin-top:6px"><summary style="cursor:pointer;color:var(--ink2);font-size:13px;text-decoration:underline">See all ${p.items.length} answers</summary><div class="all" style="font-size:13px;color:var(--ink2);margin-top:6px"></div></details>`;
     d.querySelector('.q').textContent=p.q;d.querySelector('.an').textContent=a.a||'No answer';
-    d.querySelector('.est').textContent=it?`About ${Math.max(1,Math.round(w[it.tier]*86))}% of players would say this (estimate)`:'';
+    d.querySelector('.est').dataset.i=i;d.querySelector('.est').textContent=it?`About ${Math.max(1,Math.round(w[it.tier]*86))}% of players would say this (estimate)`:'';
     const all=d.querySelector('.all');
     for(let t=0;t<6;t++){const names=p.items.filter(x=>x.tier===t).map(x=>x.name).sort();if(!names.length)continue;
       const row=document.createElement('p');row.style.margin='4px 0';const b=document.createElement('b');b.style.color='var(--ink)';b.textContent=ZOO[t].pts+' mi: ';row.append(b,names.join(', '));all.append(row)}
@@ -857,6 +881,36 @@ function end(){
   if($('again'))$('again').onclick=()=>setMode('free');$('lg').onclick=tripLog;wireChips(panel);fillSrc(panel);
   const cd=()=>{const s=Math.max(0,Math.round((mid-new Date())/1000)),el=$('cdl');if(!el)return;el.innerHTML=md(C('results.next_drive','Next daily drive in **{time}**.',{time:`${Math.floor(s/3600)}h ${String(Math.floor(s/60)%60).padStart(2,'0')}m`}));setTimeout(cd,30000)};cd();
   panel.scrollTop=0;cam('over',calm?0:1200);
+  if(G.mode==='daily'&&!G.test){const g=G;crowdSync(G.date).then(S=>{if(G===g&&S&&$('said'))applyCrowd(S,mi,T,ps,stopNames)})}
+}
+// swap the estimates on the results page for today's real numbers
+function applyCrowd(S,mi,T,ps,stopNames){
+  const N=S.players,cnt=n=>n===1?C('results.crowd_one','1 driver'):C('results.crowd_many','{n} drivers',{n:n.toLocaleString('en-US')});
+  if(N<CROWD_MIN){$('cmpn').textContent=C('results.crowd_few','{drivers} so far today. Real numbers show up at {min}.',{drivers:cnt(N),min:CROWD_MIN});return}
+  $('cmpn').textContent=C('results.crowd_today','{drivers} today',{drivers:cnt(N)});
+  // where you rank among everyone else today
+  let below=0,same=0;for(const [m,n] of S.miles){if(m<mi)below+=n;else if(m===mi)same+=n}
+  const pct=Math.round((below+Math.max(0,same-1)/2)/Math.max(1,N-1)*100);
+  $('pct').innerHTML=md(C('results.crowd_percentile','Further than **{pct}%** of today\'s {drivers}',{pct,drivers:cnt(N)}));
+  const all=[];for(const [m,n] of S.miles)for(let k=0;k<n;k++)all.push(m);
+  $('curve').innerHTML=curveSVG(all,mi,T.stops,"Spread of today's scores");stopNames();
+  // what players said: only answers that are on today's lists, so nothing odd can be shown
+  const said=[],miss=[];
+  ps.forEach(p=>{const x=S.prompts[p.id];if(!x||x.players<CROWD_MIN)return;
+    for(const [a,t,n] of x.answers){const it=p.items.find(i=>i.name===a);if(it)said.push({p,a,t:it.tier,n,share:n/Math.max(1,x.players)})}
+    for(const [g,n] of x.misses)miss.push({p,g,n})});
+  const li=[...$('said').children],put=(el,sg,name,q,note,right)=>{el.firstElementChild.outerHTML=sign(sg,28);
+    const sp=el.querySelector('span');sp.textContent=name?`“${name}” · ${q}`:sp.textContent;el.querySelector('small').textContent=note;el.querySelector('b').textContent=right||''};
+  if(said.length){const top=said.reduce((b,x)=>x.share>b.share||x.share===b.share&&x.n>b.n?x:b);
+    put(li[0],top.t,top.a,top.p.q,C('results.popular_crowd','Most popular answer today'),Math.round(top.share*100)+'%');
+    const rare=said.reduce((b,x)=>x.n<b.n||x.n===b.n&&x.t>b.t?x:b);
+    put(li[1],rare.t,rare.a,rare.p.q,C('results.rarest_crowd','Rarest sighting · spotted by {drivers}',{drivers:cnt(rare.n)}),ZOO[rare.t].pts+' mi')}
+  if(miss.length){const m=miss.reduce((b,x)=>x.n>b.n?x:b);
+    put(li[2],-1,m.g,m.p.q,C('results.nonanswer_crowd','Most-tried non-answer · {drivers} tried it',{drivers:cnt(m.n)}))}
+  // under each of your answers: how many said the same
+  panel.querySelectorAll('#answers .est').forEach(el=>{const a=G.ans[+el.dataset.i],x=a&&S.prompts[a.id];
+    if(!a||!a.a||!x||x.players<CROWD_MIN)return;const r=x.answers.find(y=>y[0]===a.a),n=r?r[2]:1;
+    el.textContent=n<=1?C('results.said_only','Nobody else said this today'):C('results.said_pct','{pct}% of today\'s drivers said this',{pct:Math.max(1,Math.round(n/x.players*100))})});
 }
 function about(){
   clearInterval(tick);panel.classList.remove('homep');
@@ -910,6 +964,7 @@ if(window.visualViewport){const vv=visualViewport;
   vv.addEventListener('resize',fit);vv.addEventListener('scroll',fit);
   document.addEventListener('focusin',()=>{setTimeout(fit,50);setTimeout(fit,350)});document.addEventListener('focusout',()=>setTimeout(fit,100))}
 if(/^#(about|privacy)$/.test(location.hash)){start();about()}else start();
+if(API&&store.get('outbox',[]).length)setTimeout(()=>crowdSync(null),3000);
 }
 </script>
 </body>

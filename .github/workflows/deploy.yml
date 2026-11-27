@@ -17,7 +17,71 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Crowd results API: a Cloudflare Worker + D1 database (worker/). Skipped until the two Cloudflare
+  # secrets are added; the site then keeps showing estimates. A failure here never blocks the site.
+  worker:
+    runs-on: ubuntu-latest
+    outputs:
+      url: ${{ steps.url.outputs.url }}
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    defaults:
+      run:
+        working-directory: worker
+    steps:
+      - name: Cloudflare set up?
+        id: on
+        working-directory: .
+        run: |
+          if [ -n "$CLOUDFLARE_API_TOKEN" ] && [ -n "$CLOUDFLARE_ACCOUNT_ID" ]; then echo "on=1" >> "$GITHUB_OUTPUT"
+          else echo "::notice::No Cloudflare secrets yet, so no crowd results: the site keeps its estimates."; fi
+
+      - uses: actions/checkout@v5
+        if: steps.on.outputs.on
+      - uses: actions/setup-node@v4
+        if: steps.on.outputs.on
+        with:
+          node-version: '22'
+      - name: Install wrangler
+        if: steps.on.outputs.on
+        run: npm ci
+
+      - name: Find or create the D1 database
+        if: steps.on.outputs.on
+        run: |
+          find_id() { npx wrangler d1 list --json | jq -r '.[] | select(.name=="backroads") | .uuid'; }
+          id=$(find_id)
+          if [ -z "$id" ]; then npx wrangler d1 create backroads; id=$(find_id); fi
+          [ -n "$id" ] || { echo "::error::could not find or create the backroads D1 database"; exit 1; }
+          sed -i "s/00000000-0000-0000-0000-000000000000/$id/" wrangler.toml
+
+      - name: Update the database tables
+        if: steps.on.outputs.on
+        run: npx wrangler d1 migrations apply backroads --remote
+
+      - name: Deploy the worker
+        if: steps.on.outputs.on
+        run: |
+          npx wrangler deploy
+          # fresh salt for scrambling IP addresses in the rate limiter; never stored anywhere else
+          openssl rand -hex 16 | npx wrangler secret put SALT
+
+      - name: Worker address
+        id: url
+        if: always() && steps.on.outputs.on
+        run: |
+          sub=$(curl -sf -H "Authorization: Bearer $CLOUDFLARE_API_TOKEN" \
+            "https://api.cloudflare.com/client/v4/accounts/$CLOUDFLARE_ACCOUNT_ID/workers/subdomain" | jq -r '.result.subdomain // empty')
+          [ -n "$sub" ] || { echo "::error::no workers.dev subdomain: open Workers & Pages in the Cloudflare dashboard once to pick one"; exit 1; }
+          url="https://backroads-api.$sub.workers.dev"
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+          echo "Crowd API: $url"
+          sleep 5; curl -sf "$url/api/health" || echo "::warning::$url/api/health did not answer yet"
+
   build:
+    needs: worker
+    if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v5
@@ -74,6 +138,8 @@ jobs:
           fi
 
       - name: Assemble site
+        env:
+          CROWD_API: ${{ needs.worker.outputs.url || vars.CROWD_API_URL }}
         run: python3 scripts/build_site.py
 
       - uses: actions/configure-pages@v5

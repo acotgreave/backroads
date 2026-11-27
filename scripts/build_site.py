@@ -26,5 +26,11 @@ except ValueError as e:
     raise SystemExit(f'content/copy.yaml: {e}')
 html = html.replace('/*COPY*/{}', json.dumps(copy, ensure_ascii=False).replace('</', '<\\/'))
 print('baked in content/copy.yaml')
+# crowd results API (the Cloudflare Worker in worker/); empty = the results page keeps its estimates
+api = os.environ.get('CROWD_API', '').strip().rstrip('/')
+if api and not api.startswith('https://'):
+    raise SystemExit(f'CROWD_API must start with https:// (got {api!r})')
+html = html.replace("/*API*/''", json.dumps(api))
+print(f'crowd API: {api or "none (estimates only)"}')
 open(os.path.join(dist, 'index.html'), 'w', encoding='utf8').write(html)
 print('wrote dist/index.html')
