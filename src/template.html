@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
 <title>Backroads: the US road-trip quiz</title>
 <meta name="description" content="Seven all-American prompts a day. Common answers barely move you; the rarest right answer takes you furthest.">
 <meta property="og:title" content="Backroads: the US road-trip quiz">
@@ -31,11 +31,12 @@ button,input{font:inherit}
 a{color:var(--ink2)}
 #map{position:fixed;inset:0;width:100%;height:100%;display:block;background:#1c2420}
 #pins{position:fixed;inset:0;pointer-events:none;overflow:hidden}
-.lbl{position:absolute;transform:translate(-50%,-100%);background:var(--brown);color:#fff;border:2px solid #fff;outline:2px solid var(--brown);border-radius:5px;padding:2px 8px 1px;text-align:center;font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;line-height:1.2;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.5)}
-.lbl small{display:block;font-size:10.5px;font-weight:600;letter-spacing:.02em;text-transform:none;opacity:.9}
+.lbl{position:absolute;transform:translate(-50%,-100%);background:var(--brown);color:#fff;border:1.5px solid #fff;outline:1.5px solid var(--brown);border-radius:5px;padding:1px 6px 0;text-align:center;font-weight:800;font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;line-height:1.2;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.5)}
+.lbl small{display:block;font-size:9px;font-weight:600;letter-spacing:.02em;text-transform:none;opacity:.9}
 .lbl.hit{background:#7d5a1e;outline-color:#7d5a1e}
 .lbl.end{background:var(--green);outline-color:var(--green)}
 .pin{position:absolute;width:34px;height:34px;transform:translate(-50%,-90%);filter:drop-shadow(0 2px 3px rgba(0,0,0,.6))}
+#pins.far .pin{width:22px;height:22px}
 .pin.new{animation:plant .5s cubic-bezier(.3,1.6,.5,1)}
 @keyframes plant{0%{transform:translate(-50%,-90%) scale(0)}100%{transform:translate(-50%,-90%) scale(1)}}
 .car{position:absolute;width:46px;height:46px;transform:translate(-50%,-50%);z-index:3}
@@ -58,6 +59,8 @@ a{color:var(--ink2)}
 .prog span{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--ink2);text-shadow:0 1px 4px #000}
 .guide{justify-self:end;background:var(--green);color:#fff;border:2px solid #fff;outline:2px solid var(--green);border-radius:6px;padding:3px 10px;font-weight:800;font-size:15px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.5)}
 .guide:empty{display:none}
+body.kb .top{display:none}
+body.kb .card{top:8px;max-height:40vh}
 .card{position:fixed;left:50%;transform:translateX(-50%);top:62px;width:min(600px,calc(100% - 24px));background:var(--panel);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:12px;padding:10px 14px;z-index:4;box-shadow:0 10px 30px rgba(0,0,0,.45);max-height:calc(100% - 150px);overflow:auto}
 .cat{font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#6fd39c}
 .q{font-family:Bitter,Georgia,serif;font-weight:700;font-size:clamp(18px,2.4vw,23px);line-height:1.15;margin-top:2px}
@@ -151,12 +154,42 @@ pre.share{background:var(--panel2);padding:10px;border-radius:6px;white-space:pr
 .qa div{padding:0 0 8px}
 .qa .zoo{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0}
 .qa .zoo span{display:inline-flex;align-items:center;gap:4px;font-size:13px;font-weight:700}
+
+/* home panel: floating card on the left (desktop), short bottom sheet (mobile) */
+.panel.homep{top:20px;left:20px;bottom:auto;width:340px;border-radius:12px;padding:16px 18px 12px}
+.homep .hp-top{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.homep .ttl{font-family:Bitter,Georgia,serif;font-weight:700;font-size:34px;line-height:1;margin:0}
+.homep .hp-road{font-size:19px;margin:10px 0 0;display:flex;align-items:center}
+.homep .hp-from{color:var(--ink2);font-size:14px;margin:2px 0 10px}
+.homep .how{margin-top:4px}
+.homep .homefoot{justify-content:center;gap:0;padding-top:4px;margin-top:4px}
+.homep .hp-credit{text-align:center;margin-top:4px;font-size:11px}
+.testnote{background:#5a4a12;color:#fff3c4;border-radius:6px;padding:6px 10px;font-size:13px;margin-top:10px}
+/* results */
+.res-head{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap}
+.res-head .pct{font-size:15px;font-weight:700;margin:0 0 8px}
+.res-head .pct small{color:var(--ink2);font-weight:600}
+.sec{border-top:1px solid var(--line);margin-top:10px;padding-top:2px}
+.sec>summary{cursor:pointer;font-weight:800;font-size:15px;padding:10px 0;display:flex;justify-content:space-between;align-items:center}
+.sec>summary small{color:var(--ink2);font-weight:600;font-size:12px;margin-left:auto;margin-right:8px}
+.sec>summary::after{content:'+';font-size:20px;color:var(--ink2);line-height:1}
+.sec[open]>summary::after{content:'–'}
+.sec>summary::-webkit-details-marker{display:none}
+/* small stop markers when signs would collide */
+.lbl.dot{width:12px;height:12px;padding:0;border-radius:50%;border-width:2px;outline:0;font-size:0;transform:translate(-50%,-50%)}
+.lbl.dot *{display:none}
 .homefoot{display:flex;justify-content:space-between;align-items:center;gap:8px;border-top:1px solid var(--line);padding-top:8px;flex-wrap:wrap}
 .lnk{background:none;border:0;color:var(--ink2);font-weight:800;font-size:13px;cursor:pointer;padding:6px 8px;text-decoration:underline;text-underline-offset:3px}
 .lnk[aria-pressed=false]{opacity:.7}
 .hide{display:none!important}
 @media(max-width:700px){
-  .side{top:auto;left:0;right:0;width:auto;bottom:0;max-height:62%;border-radius:14px 14px 0 0}
+  .panel.homep{top:auto;left:0;right:0;bottom:0;width:auto;border-radius:14px 14px 0 0;padding:12px 16px calc(8px + env(safe-area-inset-bottom))}
+  .homep .ttl{font-size:28px}
+  .homep .hp-road{font-size:17px;margin-top:6px}
+  .homep .hp-from{margin-bottom:8px}
+  .big{font-size:48px}
+  .big small{font-size:17px}
+  .side{top:auto;left:0;right:0;width:auto;bottom:0;max-height:58%;border-radius:14px 14px 0 0}
   .card{top:56px;padding:12px 14px}
   .odo{font-size:22px}
   .prog .slots i{width:17px;height:17px}
@@ -164,7 +197,6 @@ pre.share{background:var(--panel2);padding:10px;border-radius:6px;white-space:pr
   .rv .xing{width:40px;height:40px}
   .ladder div{flex-direction:column;gap:0}
   .ladder div svg{width:18px;height:18px}
-  .big{font-size:56px}
   .bar input{font-size:16px;min-height:42px}
   .btn{min-height:42px;padding:0 12px}
   .ring{width:40px;height:40px}
@@ -297,6 +329,9 @@ const $=id=>document.getElementById(id), card=$('card');
 const store={get(k,d){try{return JSON.parse(localStorage.getItem('backroad:'+k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem('backroad:'+k,JSON.stringify(v))}catch(e){}}};
 const calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 let mode='daily',timerOn=store.get('timer',true),G=null,tick=null;
+// test mode: ?test=1 turns it on (remembered), ?test=0 turns it off. Lets you replay today's drive; replays never count.
+const TEST=(()=>{const q=new URLSearchParams(location.search).get('test');if(q==='1')store.set('test',true);if(q==='0')store.set('test',false);return store.get('test',false)})();
+function replay(){clearInterval(tick);mode='daily';G=newGame('backroad-'+today());G.test=true;shown=0;buildMap();intro()}
 const today=(d=new Date())=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 const dayNo=()=>Math.floor((Date.parse(today())-Date.parse('2026-11-27'))/864e5)+1;
 function rng(seed){let h=1779033703^seed.length;for(const ch of seed){h=Math.imul(h^ch.charCodeAt(0),3432918353);h=h<<13|h>>>19}
@@ -491,6 +526,7 @@ function buildMap(){
   pinsEl.innerHTML=T.stops.map(([m,n],i)=>`<div class="lbl ${i===T.stops.length-1?'end':''}" data-i="${i}"><span></span><small>${m} miles</small></div>`).join('')+
     `<div class="car" id="car"><div class="ride" id="ride"></div><div class="badge"><svg viewBox="0 0 76 40"><path d="M6 20h62c4 0 6 3 6 6v4H2v-5c0-3 2-5 4-5z" fill="#fff"/><path d="M18 20l7-11h22l10 11z" fill="#fff"/><circle cx="18" cy="31" r="6" fill="#14161b"/><circle cx="58" cy="31" r="6" fill="#14161b"/></svg></div></div>`;
   pinsEl.querySelectorAll('.lbl span').forEach((s,i)=>s.textContent=T.stops[i][1]);
+  pinsEl.querySelectorAll('.lbl').forEach(l=>{l._w=l.offsetWidth;l._h=l.offsetHeight});
   M.pins=[];let acc=0;for(const a of G.ans){acc+=a.pts;if(a.tier>=0)addPin(acc,a.tier,false)}
   setPos(shown);
 }
@@ -506,7 +542,7 @@ function safe(){const cw=innerWidth,ch=innerHeight;let t=0,b=ch,l=0,rr=cw;
   return {l,t,r:rr,b,cw,ch}}
 function camFor(){const A=safe(),{cw,ch}=A;
   if(camMode==='ride'){const p=M.at(shown),w=RIDE_W(),h=w*ch/cw;return {x:p.x-((A.l+A.r)/2)/cw*w,y:p.y-((A.t+A.b)/2)/ch*h,w,h}}
-  const xs=M.S.map(s=>s.x),ys=M.S.map(s=>s.y),x0=Math.min(...xs)-220,x1=Math.max(...xs)+220,y0=Math.min(...ys)-260,y1=Math.max(...ys)+160;
+  const xs=M.S.map(s=>s.x),ys=M.S.map(s=>s.y),x0=Math.min(...xs)-220,x1=Math.max(...xs)+220,y0=Math.min(...ys)-360,y1=Math.max(...ys)+160;
   const sw=Math.max(80,A.r-A.l),sh=Math.max(80,A.b-A.t),k=Math.min(sw/(x1-x0),sh/(y1-y0)),w=cw/k,h=ch/k;
   return {x:(x0+x1)/2-((A.l+A.r)/2)/k,y:(y0+y1)/2-((A.t+A.b)/2)/k,w,h}}
 function cam(mode,dur=900){camMode=mode;const to=camFor(),from={...vb};cancelAnimationFrame(camAnim);
@@ -517,8 +553,16 @@ function applyVB(){svg.setAttribute('viewBox',`${vb.x} ${vb.y} ${vb.w} ${vb.h}`)
 const scr=p=>({x:(p.x-vb.x)/vb.w*innerWidth,y:(p.y-vb.y)/vb.h*innerHeight});
 function place(){if(!M)return;
   pinsEl.querySelectorAll('.lbl').forEach((l,i)=>{const p=scr(M.spot[i]),q=scr(M.at(M.T.stops[i][0]));l.style.left=p.x+'px';l.style.top=(p.y-150/vb.w*innerWidth-4)+'px'});
+  pinsEl.classList.toggle('far',camMode==='over');declutter();
   for(const pn of M.pins){const p=scr(M.at(pn.m));pn.el.style.left=p.x+'px';pn.el.style.top=p.y+'px'}
   const c=$('car');if(c){const p=scr(M.at(shown));c.style.left=p.x+'px';c.style.top=p.y+'px'}}
+// signs that would overlap shrink to small markers: finish, start and the stops you've reached win
+function declutter(){const ls=[...pinsEl.querySelectorAll('.lbl')],n=ls.length;if(!n)return;
+  const hit=ls.map((l,i)=>i).filter(i=>i>0&&i<n-1&&ls[i].classList.contains('hit')).reverse(),rest=ls.map((l,i)=>i).filter(i=>i>0&&i<n-1&&!hit.includes(i));
+  const placed=[];
+  for(const i of [n-1,0,...hit,...rest]){const l=ls[i],x=parseFloat(l.style.left),y=parseFloat(l.style.top),w=(l._w||80)+6,h=(l._h||30)+4;
+    const cx=Math.max(w/2+2,Math.min(innerWidth-w/2-2,x));if(cx!==x)l.style.left=cx+'px';const r={a:cx-w/2,b:cx+w/2,c:y-h,d:y};const clash=placed.some(q=>r.a<q.b&&r.b>q.a&&r.c<q.d&&r.d>q.c);
+    l.classList.toggle('dot',clash);if(!clash)placed.push(r);if(l.title!==l.textContent)l.title=l.querySelector('span').textContent}}
 function drive(target,k,done){
   const from=shown,dist=target-from;if(k>=0)$('ride').innerHTML=sign(k);
   if(dist<=0||calm){setPos(target);if(camMode==='ride')cam('ride',0);done&&done();return}
@@ -545,28 +589,30 @@ function chips(){return `<div class="chips"><button class="chip" data-m="daily" 
 function wireChips(root){root.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>setMode(b.dataset.m));
   root.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>{timerOn=!timerOn;store.set('timer',timerOn);b.setAttribute('aria-pressed',timerOn);b.textContent=timerOn?'Timer on':'Timer off'});
   root.querySelectorAll('[data-log]').forEach(b=>b.onclick=tripLog);
-  root.querySelectorAll('[data-about]').forEach(b=>b.onclick=about)}
+  root.querySelectorAll('[data-about]').forEach(b=>b.onclick=about);
+  root.querySelectorAll('[data-replay]').forEach(b=>b.onclick=replay)}
 const credit=`<p class="foot">A US take on Boreen and Krillion, from <a href="https://howtospeakdata.com">How To Speak Data</a>. <span class="src"></span></p>`;
 function fillSrc(root){const s=root.querySelector('.src');if(s)s.textContent=typeof BANK_META!=='undefined'?`Answers from Wikidata; rarity from Wikipedia page views, refreshed ${BANK_META.built}.`:'Rarity tiers are set by hand for now.'}
 
 // ---------- screens ----------
 function intro(){
-  const T=M.T;show(topEl,false);show(panel,false);show(card,false);show(barEl,true);show(hero,true);msgEl.textContent='';
-  hero.innerHTML=`<h1 class="ttl">Backroads</h1><div class="sub">The daily drive</div>
-  <p class="meta">7 questions${timerOn?' · 25 seconds each':''} · rarer answers go further</p>
-  <p class="today">${mode==='daily'?'Today':'Unlimited'}: <span></span></p>`;
-  hero.querySelector('.today span').textContent=`${T.name}, ${T.from} to ${T.to}`;
-  barEl.classList.add('home');
-  barEl.innerHTML=`<button class="btn go wide" id="start">Start ${mode==='daily'?'today’s':'this'} drive</button>
-  <details class="how"><summary>How to play</summary><p>Name something that fits the prompt. Common answers barely move you; rare ones cover real ground, and you’ll spot rarer wildlife on the way.</p>
+  const T=M.T;show(topEl,false);show(hero,false);show(card,false);show(barEl,false);show(panel,true);msgEl.textContent='';
+  panel.classList.add('homep');
+  const lbl=G.test?'Test replay':mode==='daily'?'Drive #'+dayNo():'Unlimited';
+  panel.innerHTML=`<div class="hp-top"><h1 class="ttl">Backroads</h1><span class="kicker">${lbl}</span></div>
+  <div class="roadname hp-road">${shield(T,26)}<span class="rn"></span></div>
+  <p class="hp-from"></p>
+  <button class="btn go wide" id="start">Start ${G.test?'the replay':mode==='daily'?'today’s drive':'this drive'}</button>
+  <details class="how"><summary>How to play</summary><p>Seven prompts${timerOn?', 25 seconds each':''}. Name something that fits. Common answers barely move you; rare ones cover real ground, and you’ll spot rarer wildlife on the way.</p>
   <div class="zoo">${ZOO.map((z,k)=>`<span>${sign(k,22)}${z.pts} mi</span>`).join('')}</div></details>
-  <div class="homefoot"><span class="kicker">${mode==='daily'?'Drive #'+dayNo():'Unlimited'}</span><span class="links"><button class="lnk" data-m="${mode==='daily'?'free':'daily'}">${mode==='daily'?'Unlimited':'Daily'}</button><button class="lnk" data-t>${timerOn?'Timer on':'Timer off'}</button><button class="lnk" data-log>Trip log</button><button class="lnk" data-about>About</button></span></div>
-  <p class="foot" style="margin-top:6px;text-align:center">A US take on Boreen and Krillion, from <a href="https://howtospeakdata.com">How To Speak Data</a>.</p>`;
-  wireChips(barEl);barEl.querySelector('[data-t]').addEventListener('click',()=>{const m=hero.querySelector('.meta');m.textContent=`7 questions${timerOn?' · 25 seconds each':''} · rarer answers go further`});
-  $('start').onclick=()=>{show(hero,false);barEl.classList.remove('home');cam('ride',1100);ask()};
-  cam('over',0);
+  <div class="homefoot"><button class="lnk" data-m="${mode==='daily'?'free':'daily'}">${mode==='daily'?'Unlimited':'Daily'}</button><button class="lnk" data-t>${timerOn?'Timer on':'Timer off'}</button><button class="lnk" data-log>Trip log</button><button class="lnk" data-about>About</button>${TEST?'<button class="lnk" data-replay>Test: replay today</button>':''}</div>
+  <p class="foot hp-credit">A US take on Boreen and Krillion, from <a href="https://howtospeakdata.com">How To Speak Data</a>.</p>`;
+  panel.querySelector('.rn').textContent=T.name;panel.querySelector('.hp-from').textContent=`${T.from} to ${T.to}`;
+  wireChips(panel);
+  $('start').onclick=()=>{panel.classList.remove('homep');show(panel,false);cam('ride',1100);ask()};
+  panel.scrollTop=0;cam('over',0);
 }
-function ask(){
+function ask(){panel.classList.remove('homep');
   const p=getP(G.qs[G.i]);show(hero,false);barEl.classList.remove('home');show(topEl,true);show(panel,false);show(card,true);show(barEl,true);topbar();msgEl.textContent='';
   card.innerHTML=`<div class="cat"></div><h2 class="q"></h2>${p.rule?'<p class="rule"></p>':''}`;
   card.querySelector('.cat').textContent=p.cat;card.querySelector('.q').textContent=p.q;if(p.rule)card.querySelector('.rule').textContent=p.rule;
@@ -593,7 +639,7 @@ function answer(p,it){
   clearInterval(tick);msgEl.textContent='';
   const k=it?it.tier:-1,pts=it?ZOO[k].pts:0,before=miles();
   G.ans.push({q:p.q,id:p.id,a:it?it.name:'',pts,tier:k});G.i++;
-  if(mode==='daily')store.set('day2',G);
+  if(mode==='daily'&&!G.test)store.set('day2',G);
   const after=miles(),reached=M.T.stops.filter(([sm])=>sm>before&&sm<=after).pop();
   const rarer=p.items.filter(x=>x.tier===5&&(!it||x.name!==it.name)).sort(()=>Math.random()-.5).slice(0,2).map(x=>x.name);
   card.innerHTML=`<div class="cat"></div><div class="rule qq"></div>
@@ -659,8 +705,8 @@ function logSVG(){
      <text x="${x}" y="${y-40}" text-anchor="middle" fill="#f3eee3" font-size="13" font-weight="900">${a.pts}</text><text x="${x}" y="${H+18}" text-anchor="middle" fill="#a9a395" font-size="12" font-weight="800">${i+1}</text>`}).join('')}
    <line x1="0" x2="${W}" y1="${H}" y2="${H}" stroke="#a9a395"/></svg>`}
 function end(){
-  clearInterval(tick);
-  if(G.mode==='daily'){store.set('day2',G);const h=store.get('hist',[]);if(!h.some(x=>x.date===G.date)){
+  clearInterval(tick);panel.classList.remove('homep');
+  if(G.mode==='daily'&&!G.test){store.set('day2',G);const h=store.get('hist',[]);if(!h.some(x=>x.date===G.date)){
     h.push({date:G.date,mi:miles(),road:M.T.name,tiers:G.ans.map(a=>a.tier),rare:G.ans.filter(a=>a.tier>=4).map(a=>[a.a,a.tier,a.q])});store.set('hist',h.slice(-400))}}
   const T=M.T,mi=miles(),tl=trips(),sim=simulate(),below=sim.filter(m=>m<mi).length+sim.filter(m=>m===mi).length/2,pct=Math.round(below/sim.length*100);
   let at=T.stops[0];for(const s of T.stops)if(mi>=s[0])at=s;const nx=T.stops.find(([m])=>m>mi);
@@ -668,27 +714,27 @@ function end(){
   const ps=G.qs.map(getP),pop=ps.map(p=>p.items.slice().sort((a,b)=>a.tier-b.tier||a.rank-b.rank)[0]);
   const mid=new Date();mid.setHours(24,0,0,0);
   show(topEl,false);show(hero,false);show(card,false);show(barEl,false);show(panel,true);msgEl.textContent='';
-  panel.innerHTML=`<div class="brand">${LOGO}<div><h1>Backroads</h1><div class="tag">${G.mode==='daily'?'Daily drive #'+dayNo()+' · '+new Date(G.date+'T12:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}):'Unlimited drive'}</div></div></div>
+  panel.innerHTML=`<div class="brand">${LOGO}<div><h1>Backroads</h1><div class="tag">${G.test?'Test replay · ':''}${G.mode==='daily'?'Daily drive #'+dayNo()+' · '+new Date(G.date+'T12:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}):'Unlimited drive'}</div></div></div>
   <div class="roadname" style="font-size:22px;margin-top:12px">${shield(T,28)}<span class="rn"></span></div>
-  <div class="big">${mi}<small>miles</small></div>
-  <p style="font-size:17px;font-weight:800">You drove further than about ${pct}% of players.</p>
-  <p class="streak">An estimate from how popular each answer is on Wikipedia, until enough people have played to count for real.</p>
-  <div class="row"><button class="btn go wide" id="cp">Copy result</button></div>
-  <div class="stopban" style="margin-top:14px"><svg viewBox="0 0 100 100">${ICON[at[2]]||''}</svg><div><b class="fl"></b><span class="fln"></span></div></div>
-  <h3 class="kicker" style="margin-top:18px">Where everyone ended up (estimate)</h3>${curveSVG(sim,mi,T.stops)}
-  <h3 class="kicker" style="margin-top:14px;display:flex;justify-content:space-between">Trip log <span style="letter-spacing:0;text-transform:none">Higher is rarer</span></h3>${logSVG()}
-  <h3 class="kicker" style="margin-top:14px">The wildlife</h3>
-  <ul class="res">${ZOO.map((z,k)=>`<li>${sign(k,28)}<div>${z.name}<small>${ODDS[k]}</small></div><b>${z.pts} mi</b></li>`).join('')}</ul>
-  <div class="stats"><div><b>${G.mode==='daily'?tl.streak:'–'}</b><small>day streak</small></div><div><b>${tl.longest}</b><small>best streak</small></div><div><b>${tl.days}</b><small>daily drives</small></div></div>
+  ${G.test?'<p class="testnote">Test replay. This drive isn’t saved to your trip log or streak.</p>':''}
+  <div class="res-head"><div class="big">${mi}<small>miles</small></div><p class="pct">Further than about <b>${pct}%</b> of players <small>(estimate)</small></p></div>
+  <div class="row"><button class="btn go wide" id="cp">Share result</button></div>
   <p class="streak">Next daily drive in <b id="cd"></b>.</p>
-  <h3 class="kicker" style="margin-top:18px">What players said</h3>
-  <ul class="res"><li>${sign(0,28)}<div><span class="popa"></span><small>Most popular answer today, by Wikipedia popularity</small></div><b></b></li>
+  <div class="stopban" style="margin-top:10px"><svg viewBox="0 0 100 100">${ICON[at[2]]||''}</svg><div><b class="fl"></b><span class="fln"></span></div></div>
+  <details class="sec" open><summary>Your answers</summary><div id="answers"></div></details>
+  <details class="sec"><summary>How you compare <small>estimate</small></summary>
+   <h3 class="kicker" style="margin-top:6px">Where everyone ended up</h3>${curveSVG(sim,mi,T.stops)}
+   <h3 class="kicker" style="margin-top:14px">What players said</h3>
+   <ul class="res"><li>${sign(0,28)}<div><span class="popa"></span><small>Most popular answer today, by Wikipedia popularity</small></div><b></b></li>
    <li>${sign(5,28)}<div>Rarest sighting<small>Shows up once enough people have played</small></div><b></b></li>
-   <li>${sign(-1,28)}<div>Most-tried non-answer<small>Shows up once enough people have played</small></div><b></b></li></ul>
-  <h3 class="kicker" style="margin-top:18px">Your answers</h3>
-  <div id="answers"></div>
-  <div class="row" style="margin-top:14px"><button class="btn wide" id="again">${G.mode==='daily'?'Play Unlimited':'Drive again'}</button><button class="btn" id="lg">Trip log</button></div>
-  <pre class="share" id="sh"></pre>
+   <li>${sign(-1,28)}<div>Most-tried non-answer<small>Shows up once enough people have played</small></div><b></b></li></ul></details>
+  <details class="sec"><summary>Trip log and streak</summary>
+   <div class="stats"><div><b>${G.mode==='daily'&&!G.test?tl.streak:'–'}</b><small>day streak</small></div><div><b>${tl.longest}</b><small>best streak</small></div><div><b>${tl.days}</b><small>daily drives</small></div></div>
+   <h3 class="kicker" style="display:flex;justify-content:space-between">Recent drives <span style="letter-spacing:0;text-transform:none">Higher is rarer</span></h3>${logSVG()}</details>
+  <details class="sec"><summary>The wildlife</summary>
+   <ul class="res">${ZOO.map((z,k)=>`<li>${sign(k,28)}<div>${z.name}<small>${ODDS[k]}</small></div><b>${z.pts} mi</b></li>`).join('')}</ul></details>
+  <div class="row" style="margin-top:14px"><button class="btn wide" id="again">${G.mode==='daily'?'Play Unlimited':'Drive again'}</button><button class="btn" id="lg">Trip log</button>${TEST?'<button class="btn" data-replay>Test: replay</button>':''}</div>
+  <pre class="share hide" id="sh"></pre>
   <p class="streak" style="margin-top:16px">Know a question with loads of answers?</p>
   <div class="row"><a class="btn wide" style="display:flex;align-items:center;justify-content:space-between;text-decoration:none" href="https://github.com/acotgreave/backroads/issues/new?title=Question%20idea%3A%20" target="_blank" rel="noopener">Suggest a question <span>→</span></a></div>
   ${chips()}${credit}`;
@@ -708,13 +754,13 @@ function end(){
       const row=document.createElement('p');row.style.margin='4px 0';const b=document.createElement('b');b.style.color='var(--ink)';b.textContent=ZOO[t].pts+' mi: ';row.append(b,names.join(', '));all.append(row)}
     A.append(d)});
   $('sh').textContent=share;
-  $('cp').onclick=async e=>{try{if(navigator.share&&matchMedia('(pointer:coarse)').matches){await navigator.share({text:share});return}await navigator.clipboard.writeText(share);e.target.textContent='Copied'}catch(_){e.target.textContent='Select the text below to copy'}};
+  $('cp').onclick=async e=>{try{if(navigator.share&&matchMedia('(pointer:coarse)').matches){await navigator.share({text:share});return}await navigator.clipboard.writeText(share);e.target.textContent='Copied'}catch(_){e.target.textContent='Select the text below to copy';show($('sh'),true)}};
   $('again').onclick=()=>setMode('free');$('lg').onclick=tripLog;wireChips(panel);fillSrc(panel);
   const cd=()=>{const s=Math.max(0,Math.round((mid-new Date())/1000)),el=$('cd');if(!el)return;el.textContent=`${Math.floor(s/3600)}h ${String(Math.floor(s/60)%60).padStart(2,'0')}m`;setTimeout(cd,30000)};cd();
   panel.scrollTop=0;cam('over',calm?0:1200);
 }
 function about(){
-  clearInterval(tick);
+  clearInterval(tick);panel.classList.remove('homep');
   show(topEl,false);show(hero,false);show(card,false);show(barEl,false);show(panel,true);
   const qa=(q,a,open)=>`<details class="qa"${open?' open':''}><summary>${q}</summary><div>${a}</div></details>`;
   panel.innerHTML=`<div class="brand">${LOGO}<div><h1>About Backroads</h1><div class="tag">A daily drive through America, seven questions long</div></div></div>
@@ -747,7 +793,7 @@ function about(){
   if(location.hash==='#privacy')setTimeout(()=>{const p=$('privacy');if(p)p.scrollIntoView()},50);
 }
 function tripLog(){
-  clearInterval(tick);const t=trips();
+  clearInterval(tick);panel.classList.remove('homep');const t=trips();
   const fmt=s=>new Date(s+'T12:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
   show(topEl,false);show(hero,false);show(card,false);show(barEl,false);show(panel,true);
   panel.innerHTML=`<div class="brand">${LOGO}<div><h1>Trip log</h1><div class="tag">${t.days} daily drive${t.days===1?'':'s'}</div></div></div>
@@ -770,7 +816,12 @@ function start(){
 }
 function setMode(m){mode=m;start()}
 // keep the answer bar above the on-screen keyboard
-if(window.visualViewport)visualViewport.addEventListener('resize',()=>{const k=Math.max(0,innerHeight-visualViewport.height-visualViewport.offsetTop);barEl.style.bottom=k?k+8+'px':'';msgEl.style.bottom=k?k+82+'px':''});
+if(window.visualViewport){const vv=visualViewport;
+  const fit=()=>{const k=Math.max(0,innerHeight-vv.height-vv.offsetTop);const kb=k>60;
+    barEl.style.bottom=kb?k+8+'px':'';msgEl.style.bottom=kb?k+70+'px':'';
+    card.style.top=kb&&vv.offsetTop?vv.offsetTop+8+'px':'';document.body.classList.toggle('kb',kb)};
+  vv.addEventListener('resize',fit);vv.addEventListener('scroll',fit);
+  document.addEventListener('focusin',()=>{setTimeout(fit,50);setTimeout(fit,350)});document.addEventListener('focusout',()=>setTimeout(fit,100))}
 if(/^#(about|privacy)$/.test(location.hash)){start();about()}else start();
 }
 </script>
