@@ -25,6 +25,7 @@ MOCK = '--mock' in sys.argv
 ONLY = next((a.split('=', 1)[1] if '=' in a else sys.argv[sys.argv.index(a) + 1] for a in sys.argv if a.startswith('--only')), None)
 ONLY = set(ONLY.split(',')) if ONLY else None
 os.makedirs(CACHE, exist_ok=True)
+FAILED = []   # page-view lookups that failed after retries
 
 MILES = [10, 25, 40, 60, 80, 100]
 TIER_CUTS = [0.25, 0.50, 0.70, 0.85, 0.95]          # share of views held by MORE popular answers
@@ -35,8 +36,8 @@ START = (END.replace(year=END.year - 2) + datetime.timedelta(days=1)).replace(da
 #   min: fewer results than this means the query is wrong -> fall back to the hand list
 #   cap: keep only the N most-viewed (plus every hand-picked answer) to trim long tails
 WD = {
- 'states':   dict(body='?item wdt:P31 wd:Q35657.', min=50),
- 'capitals': dict(body='?s wdt:P31 wd:Q35657; wdt:P36 ?item.', min=50),
+ 'states':   dict(body='?item wdt:P31 wd:Q35657.', min=45),   # live: 49 found; missing hand answers are merged back in
+ 'capitals': dict(body='?s wdt:P31 wd:Q35657; wdt:P36 ?item.', min=45),
  'parks':    dict(body='?item wdt:P31 wd:Q34918903.', min=55),
  'presidents': dict(body='?item wdt:P39 wd:Q11696.', min=44),
  'signers':  dict(body='wd:Q127912 wdt:P1891 ?item.', min=50),
@@ -73,7 +74,7 @@ TITLES = {
 }
 
 # ---------------------------------------------------------------- http + cache
-def get_json(url, key=None, tries=4):
+def get_json(url, key=None, tries=6):
     path = os.path.join(CACHE, (key or hashlib.sha1(url.encode()).hexdigest()) + '.json')
     if os.path.exists(path):
         with open(path) as f: return json.load(f)
@@ -85,7 +86,8 @@ def get_json(url, key=None, tries=4):
             return data
         except urllib.error.HTTPError as e:
             if e.code == 404: return None
-            time.sleep(2 ** t + (5 if e.code == 429 else 0))
+            wait = e.headers.get('Retry-After', '') if e.headers else ''
+            time.sleep(int(wait) if wait.isdigit() else 2 ** t + (5 if e.code == 429 else 0))
         except Exception:
             time.sleep(2 ** t)
     raise RuntimeError('failed after retries: ' + url[:120])
@@ -151,7 +153,10 @@ def views(title):
     t = urllib.parse.quote(title.replace(' ', '_'), safe='')
     url = (f'https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/user/{t}/monthly/'
            f'{START:%Y%m%d}00/{END:%Y%m%d}00')
-    d = get_json(url, key='pv_' + hashlib.sha1(url.encode()).hexdigest())
+    try:
+        d = get_json(url, key='pv_' + hashlib.sha1(url.encode()).hexdigest())
+    except RuntimeError:
+        FAILED.append(title); return 0   # one stubborn page shouldn't sink the whole build
     months = sorted(x['views'] for x in (d or {}).get('items', []))
     return months[len(months) // 2] * 24 if months else 0   # median month: one viral month can't make an answer common
 
@@ -218,7 +223,7 @@ def main():
                 if it['src'] == 'hand':
                     it['title'], it['why'] = (it['title'], 'ok') if MOCK else title_cache.get(it['title'], (None, 'unresolved'))
                 else: it['why'] = 'ok'
-            with ThreadPoolExecutor(6) as ex:
+            with ThreadPoolExecutor(4) as ex:
                 vs = list(ex.map(lambda it: views(it['title']) if it.get('title') else 0, items))
             for it, v in zip(items, vs): it['views'] = v
 
@@ -259,6 +264,7 @@ def main():
         w.writerow(['prompt', 'answer', 'wikipedia_title', 'title_status', 'views_24m', 'share_above', 'miles', 'tier_source', 'source'])
         w.writerows(sorted(report, key=lambda r: (r[0], r[6])))
     print(f'\nwrote data/bank.js and data/report.csv · {len(report)} answers')
+    if FAILED: print(f'page views failed for {len(FAILED)} titles (scored as no views): ' + ', '.join(FAILED[:30]))
 
 if __name__ == '__main__':
     main()
