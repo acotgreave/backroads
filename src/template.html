@@ -178,6 +178,7 @@ pre.share{background:var(--panel2);padding:10px;border-radius:6px;white-space:pr
 .pc-row .big{margin:0}
 .pc-signs{display:flex;gap:2px}
 .pct{font-size:15px;font-weight:700;margin:10px 0 0}.pct small{color:var(--ink2);font-weight:600}
+.tpick{display:flex;flex-direction:column;gap:3px;margin:8px 0 2px}.tpick select{font:inherit;font-size:14px;padding:6px 8px;border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--ink)}
 .testnote{background:#fff1b0;color:#5a4a12;border-radius:6px;padding:6px 10px;font-size:13px;margin-top:10px}
 /* results */
 .res-head{display:flex;align-items:flex-end;gap:14px;flex-wrap:wrap}
@@ -345,7 +346,11 @@ const calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
 let mode='daily',timerOn=store.get('timer',true),G=null,tick=null;
 // test mode: ?test=1 turns it on (remembered), ?test=0 turns it off. Lets you replay today's drive; replays never count.
 const TEST=(()=>{const q=new URLSearchParams(location.search).get('test');if(q==='1')store.set('test',true);if(q==='0')store.set('test',false);return store.get('test',false)})();
-function replay(){clearInterval(tick);mode='daily';G=newGame('backroad-'+today());G.test=true;shown=0;buildMap();intro()}
+function replay(road,rev){clearInterval(tick);mode='daily';G=newGame('backroad-'+today());if(road!=null){G.road=road;G.rev=rev}G.test=true;shown=0;buildMap();intro()}
+// test mode: pick any of the road/direction trips to preview
+function tripPicker(){const o=[];ROADS.forEach((R,i)=>{const a=R.stops[0][1],b=R.stops[R.stops.length-1][1];
+  o.push(`<option value="${i}-0">${R.name}: ${a} to ${b}</option>`,`<option value="${i}-1">${R.name}: ${b} to ${a}</option>`)});
+  return `<label class="tpick"><span class="kicker">Test: try another road</span><select id="tpick"><option value="">Today’s road</option>${o.join('')}</select></label>`}
 const today=(d=new Date())=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
 const dayNo=()=>Math.floor((Date.parse(today())-Date.parse('2026-11-27'))/864e5)+1;
 function rng(seed){let h=1779033703^seed.length;for(const ch of seed){h=Math.imul(h^ch.charCodeAt(0),3432918353);h=h<<13|h>>>19}
@@ -621,12 +626,14 @@ function intro(){
   <div class="roadname hp-road">${shield(T,26)}<span class="rn"></span></div>
   <p class="hp-from"></p>
   <button class="btn go wide" id="start">${G.test?'Replay the trip':'Hit the road'}</button>
+  ${TEST?tripPicker():''}
   <details class="how"><summary>How to play</summary><p>Seven prompts${timerOn?', 25 seconds each':''}. Name something that fits. Common answers barely move you; rare ones cover real ground, and you’ll spot rarer wildlife on the way.</p>
   <div class="zoo">${ZOO.map((z,k)=>`<span>${sign(k,22)}${z.pts} mi</span>`).join('')}</div></details>
   <div class="homefoot"><button class="lnk" data-m="${mode==='daily'?'free':'daily'}">${mode==='daily'?'Unlimited':'Daily'}</button><button class="lnk" data-t>${timerOn?'Timer on':'Timer off'}</button><button class="lnk" data-log>Trip log</button><button class="lnk" data-about>About</button>${TEST?'<button class="lnk" data-replay>Test: replay today</button>':''}</div>
   <p class="foot hp-credit">A US take on Boreen and Krillion, from <a href="https://howtospeakdata.com">How To Speak Data</a>.</p>`;
   panel.querySelector('.rn').textContent=T.name;panel.querySelector('.hp-from').textContent=`${T.from} to ${T.to}`;
   wireChips(panel);
+  const tp=$('tpick');if(tp){if(G.test&&G.pick)tp.value=G.pick;tp.onchange=()=>{const v=tp.value;if(!v){replay();return}const [a,b]=v.split('-').map(Number);replay(a,!!b);G.pick=v;$('tpick').value=v}}
   $('start').onclick=()=>{panel.classList.remove('homep');show(panel,false);cam('ride',1100);ask()};
   panel.scrollTop=0;cam('over',0);
 }
