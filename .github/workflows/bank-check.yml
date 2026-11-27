@@ -1,0 +1,36 @@
+name: Check answer bank (branches)
+
+# Builds the bank on any branch except main, without committing or deploying,
+# so Wikidata query changes can be checked before they go live.
+on:
+  push:
+    branches-ignore: [main]
+  workflow_dispatch:
+
+jobs:
+  bank:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: node scripts/extract_curated.js
+      - run: node scripts/check_answers.js --hand-only
+      - name: Week number (cache key)
+        id: wk
+        run: echo "week=$(date +%G-%V)" >> "$GITHUB_OUTPUT"
+      - uses: actions/cache/restore@v4
+        with:
+          path: .cache
+          key: wikidata-${{ steps.wk.outputs.week }}
+      - run: python3 scripts/build_bank.py
+      - run: node scripts/check_answers.js --warn-only
+      - run: ls -la data/ && python3 scripts/build_site.py && ls -la dist/
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: bank-report
+          path: |
+            data/report.csv
+            data/bank.js

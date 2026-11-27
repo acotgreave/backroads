@@ -20,6 +20,9 @@ Andy wants Boreen's **journey** feel, not Krillion's **dive** feel. This is a fi
 - Each day is a trip with a start and a destination. Progress shows as distance covered and stops reached, and the result is "how far you got".
 - Rarity reads as **what you spotted along the way** (the wildlife-crossing animals), not how deep you went.
 - New features should extend the journey: new roads, roadside stops, a trip log or road atlas of past days, "furthest drive" streaks, souvenirs from rare answers.
+- **Look: a daytime paper road atlas, not Boreen's night map** (Andy, 27 Nov 2026). Cream paper with folds, pictorial scenery, a red highway line with the trip marked in yellow highlighter, green guide signs for stops, green mile-marker posts for answers (the animal spotted is drawn on the post), US route shields, Overpass (Highway Gothic style) for sign lettering. Avoid Boreen's dark palette, brown signs and yellow diamond crossing signs.
+- The result share stays **plain text** (paste into WhatsApp with no friction). No image or postcard card.
+- Test mode: `?test=1` (remembered; `?test=0` turns it off) shows "Test: replay today". Replays never save to the trip log or streak.
 - When borrowing from OpenKrillion (see the roadmap), take **backend patterns only**. Leave out its ocean scene, depth zones, dive wording and sounds.
 
 ## Repo layout
@@ -27,9 +30,11 @@ Andy wants Boreen's **journey** feel, not Krillion's **dive** feel. This is a fi
 | Path | What it is |
 |---|---|
 | `src/template.html` | **The whole game**, a single file. The `P` list near the top of the script holds the curated prompts (wording, answers, `=alias;alias`, traps). `/*BANK*/` is where the generated bank is injected. |
+| `src/template.html` → `ROADS` | Each road is one data line (heading, terrain bands, water, stops with landmark icons). The full-screen map is generated from it with a seeded RNG, so adding a road needs no art. Daily drives cycle through every road in both directions before repeating. |
 | `scripts/extract_curated.js` | Reads `P` out of the template and writes `data/curated.json`. Keeps the template as the single source of truth. |
 | `scripts/build_bank.py` | Pulls answer lists from Wikidata, gets 24 months of Wikipedia page views, assigns tiers, and writes `data/bank.js` and `data/report.csv`. Python stdlib only. Flags: `--mock` (offline fake views), `--only states,parks`. |
 | `scripts/check_answers.js` | Runs the game's own matching code over every answer and alias. Fails on aliases shared by two answers, aliases that score as a different answer, and traps that shadow a right answer. CI runs it hard on the hand lists and as warnings on the built bank. |
+| `.github/workflows/bank-check.yml` | On any branch except `main`: builds the bank from live Wikidata without committing or deploying, and uploads `report.csv` + `bank.js` as an artifact. Use it to check query changes. |
 | `scripts/build_site.py` | Copies `public/` into `dist/` and writes `dist/index.html` with the bank baked in. It refuses to publish a mock bank. |
 | `public/` | `CNAME` (backroads.howtospeakdata.com), `og.png` share card, `favicon.svg`, `.nojekyll` |
 | `.github/workflows/deploy.yml` | On push, every Monday at 04:23 UTC, or a manual run: extract, then build bank (`continue-on-error`), commit the refreshed `data/`, build the site, and deploy to GitHub Pages. API responses are cached per ISO week in `.cache/`. |
@@ -45,6 +50,9 @@ Exceptions:
 - If under 60% of a prompt's answers get page views, the whole prompt falls back to hand tiers.
 
 ### Wikidata prompts
+
+Lists are no longer trimmed. Page views are fetched for hand answers plus the 150 best-known Wikidata answers (by Wikipedia language count); the long tail is still accepted at 100 mi. Prompts whose `WD` entry doesn't say `live=False` also get an in-game live check: an answer not on the list is searched on Wikidata and accepted at 100 mi ("a deep cut") if it matches the prompt's query body.
+
 
 These are set in the `WD` dict in `build_bank.py`: states, capitals, parks, presidents, signers, nfl, mlb, nba, rivers (>400 km), simpsons, friends, sesame, dogs, cars, airlines.
 
