@@ -231,6 +231,13 @@ def main():
                         own = key(it['name'])
                         it['aliases'] = list(dict.fromkeys(a for a in it['aliases']
                                              if key(a) == own or (prim.get(key(a), it) is it and count.get(key(a), 0) <= 1)))
+                    # the game adds each person's surname as an alias, so a bare "Bush" alias on a second Bush clashes
+                    surnames = {norm(it['name']).split(' ')[-1] for it in items} if p['people'] else set()
+                    for it in items:
+                        own = key(it['name'])
+                        al = [a for a in it['aliases'] if norm(a) not in surnames]
+                        # only 10 aliases ship: the stripped name first, then the shortest (most typeable)
+                        it['aliases'] = sorted(dict.fromkeys(al), key=lambda a: (key(a) != own, len(a)))
                     note = f'wikidata ({len(wd)} found)'
                 else:
                     note = f'wikidata gave {len(wd)} (< {WD[pid]["min"]}): hand list'
