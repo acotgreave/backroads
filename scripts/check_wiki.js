@@ -6,10 +6,10 @@ const cut = (a, b) => { const i = html.indexOf(a), j = html.indexOf(b, i); if (i
 const code = cut('const norm=', '\n') + '\n' + cut('function lev(', '\nfunction judge') + '\n' + cut('// ---------- wikipedia check', '// ---------- end wikipedia check');
 const { wikiCheck } = new Function(code + '\nreturn {wikiCheck};')();
 const UA = { headers: { 'User-Agent': 'BackroadsQuiz/1.0 (https://backroads.howtospeakdata.com; answer-check test)' } };
-let seen = [];
+let seen = [], limited = false;
 const f = async (u, o) => {
   const r = await fetch(u, { ...(o || {}), ...UA });
-  if (!r.ok) console.log(`       ! HTTP ${r.status} ${(await r.clone().text()).slice(0, 160)}`);
+  if (r.status === 429) limited = true; else if (!r.ok) console.log(`       ! HTTP ${r.status} ${(await r.clone().text()).slice(0, 160)}`);
   const j = await r.json(); seen.push(j); return { json: async () => j }; };
 const cases = [
   // [prompt, answer, should count?]
@@ -28,16 +28,17 @@ const cases = [
   ['sesame', 'Snuffleupagus', 1], ['friends', 'Gunther', 1], ['simpsons', 'Disco Stu', 1], ['candy', 'Goo Goo Cluster', 1], ['candy', 'Dairy Milk', 0], ['soda', 'Vimto', 0], ['friends', 'Sheldon Cooper', 0],
 ];
 (async () => {
-  let wrong = 0;
+  let wrong = 0, skipped = 0;
   for (const [id, a, want] of cases) {
     try {
-    seen = []; await new Promise(r => setTimeout(r, 1500));
+    seen = []; limited = false; await new Promise(r => setTimeout(r, 1500));
     const got = await wikiCheck({ id }, a, f);
+    if (limited) { skipped++; console.log(`SKIP ${id.padEnd(9)} ${a.padEnd(22)} (Wikipedia rate limit)`); continue; }
     const ok = !!got === !!want; if (!ok) wrong++;
     console.log(`${ok ? 'ok  ' : 'MISS'} ${id.padEnd(9)} ${a.padEnd(22)} want ${want ? 'yes' : 'no '}  got ${got || '-'}`);
     if (!ok) for (const j of seen) for (const pg of ((j.query && j.query.pages) || []).sort((x, y) => x.index - y.index))
       console.log(`       · ${pg.title} — ${pg.description || '(no description)'} — ${(pg.categories || []).map(c => c.title.slice(9)).slice(0, 12).join(' | ')}`);
     } catch (e) { console.log('       ! ' + e.message); }
   }
-  console.log(`${cases.length - wrong}/${cases.length} as expected`);
+  console.log(`${cases.length - wrong - skipped}/${cases.length - skipped} as expected${skipped ? `, ${skipped} skipped by rate limit` : ''}`);
 })();
