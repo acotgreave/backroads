@@ -1,167 +1,167 @@
 prompt,answer,wikipedia_title,title_status,views_24m,share_above,miles,tier_source,source
 airlines,Continental,United Airlines,ok,2231544,0.000,10,views,wikidata
-airlines,Delta,Delta Air Lines,ok,1997808,0.080,10,views,wikidata
+airlines,Delta,Delta Air Lines,ok,1997808,0.079,10,views,wikidata
 airlines,American Airlines,American Airlines,ok,1750656,0.151,10,views,wikidata
 airlines,Pan Am,Pan Am,ok,1384032,0.213,10,views,wikidata
-airlines,Southwest,Southwest Airlines,ok,1081368,0.263,25,views,wikidata
+airlines,Southwest,Southwest Airlines,ok,1081368,0.262,25,views,wikidata
 airlines,Alaska Airlines,Alaska Airlines,ok,1034016,0.301,25,views,wikidata
 airlines,Spirit,Spirit Airlines,ok,908280,0.338,25,views,wikidata
 airlines,JetBlue,JetBlue,ok,896832,0.370,25,views,wikidata
 airlines,TWA,Trans World Airlines,ok,781440,0.402,25,views,wikidata
 airlines,Breeze,Breeze Airways,ok,774888,0.430,25,views,wikidata
-airlines,Frontier Airlines,Frontier Airlines,ok,732408,0.458,25,views,wikidata
-airlines,Piedmont,Piedmont,ok,710280,0.484,25,views,hand
+airlines,Frontier Airlines,Frontier Airlines,ok,732408,0.457,25,views,wikidata
+airlines,Piedmont,Piedmont,ok,710280,0.483,25,views,hand
 airlines,Allegiant,Allegiant Air,ok,627888,0.509,40,views,wikidata
-airlines,Hawaiian,Hawaiian Airlines,ok,610440,0.532,40,views,wikidata
-airlines,US Airways,US Airways,ok,550632,0.554,40,views,wikidata
-airlines,Continental Airlines,Continental Airlines,ok,484824,0.573,40,views,wikidata
+airlines,Hawaiian,Hawaiian Airlines,ok,610440,0.531,40,views,wikidata
+airlines,US Airways,US Airways,ok,550632,0.553,40,views,wikidata
+airlines,Continental Airlines,Continental Airlines,ok,484824,0.572,40,views,wikidata
 airlines,Avelo,Avelo Airlines,ok,476376,0.590,40,views,wikidata
 airlines,FedEx Express,FedEx Express,ok,466992,0.607,40,views,wikidata
-airlines,Northwest Airlines,Northwest Airlines,ok,449616,0.624,40,views,wikidata
-airlines,Sun Country,Sun Country Airlines,ok,419832,0.640,40,views,wikidata
-airlines,Atlas Air,Atlas Air,ok,400704,0.655,40,views,wikidata
+airlines,Northwest Airlines,Northwest Airlines,ok,449616,0.623,40,views,wikidata
+airlines,Sun Country,Sun Country Airlines,ok,419832,0.639,40,views,wikidata
+airlines,Atlas Air,Atlas Air,ok,400704,0.654,40,views,wikidata
 airlines,Eastern,Eastern Air Lines,ok,379296,0.669,40,views,wikidata
-airlines,Janet,Janet (airline),ok,360912,0.683,40,views,wikidata
-airlines,Northwest,Points of the compass,ok,337248,0.696,40,views,hand
-airlines,Virgin Galactic,Virgin Galactic,ok,336264,0.708,60,views,wikidata
-airlines,American Eagle,American Eagle (airline brand),ok,312192,0.720,60,views,wikidata
-airlines,Kalitta Air,Kalitta Air,ok,257280,0.731,60,views,wikidata
-airlines,NetJets,NetJets,ok,235392,0.740,60,views,wikidata
+airlines,Janet,Janet (airline),ok,360912,0.682,40,views,wikidata
+airlines,Northwest,Points of the compass,ok,337248,0.695,40,views,hand
+airlines,Virgin Galactic,Virgin Galactic,ok,336264,0.707,60,views,wikidata
+airlines,American Eagle,American Eagle (airline brand),ok,312192,0.719,60,views,wikidata
+airlines,Kalitta Air,Kalitta Air,ok,257280,0.730,60,views,wikidata
+airlines,NetJets,NetJets,ok,235392,0.739,60,views,wikidata
 airlines,PSA Airlines,PSA Airlines,ok,223128,0.748,60,views,wikidata
 airlines,Braniff International Airways,Braniff International Airways,ok,219072,0.756,60,views,wikidata
-airlines,United Express,United Express,ok,208848,0.764,60,views,wikidata
-airlines,Air America,Air America (airline),ok,199128,0.772,60,views,wikidata
-airlines,Horizon Air,Horizon Air,ok,177528,0.779,60,views,wikidata
-airlines,Aloha,Aloha,ok,177048,0.785,60,views,hand
-airlines,Delta Connection,Delta Connection,ok,174360,0.791,60,views,wikidata
-airlines,Trump Shuttle,Trump Shuttle,ok,166896,0.798,60,views,wikidata
-airlines,Cape Air,Cape Air,ok,162384,0.804,60,views,wikidata
-airlines,AirTran,AirTran Airways,ok,157152,0.809,60,views,wikidata
-airlines,National Airlines,National Airlines (N8),ok,153168,0.815,60,views,wikidata
-airlines,PSA,Pacific Southwest Airlines,ok,153048,0.820,60,views,wikidata
-airlines,Envoy Air,Envoy Air,ok,152832,0.826,60,views,wikidata
-airlines,Endeavor Air,Endeavor Air,ok,141648,0.831,60,views,wikidata
-airlines,Virgin America,Virgin America,ok,132792,0.836,60,views,wikidata
-airlines,America West,America West Airlines,ok,126408,0.841,60,views,wikidata
-airlines,Hooters Air,Hooters Air,ok,114696,0.846,60,views,wikidata
-airlines,Omni Air International,Omni Air International,ok,109584,0.850,60,views,wikidata
-airlines,Western Airlines,Western Airlines,ok,101712,0.854,80,views,wikidata
-airlines,Silver Airways,Silver Airways,ok,101664,0.857,80,views,wikidata
-airlines,Aloha Airlines,Aloha Airlines,ok,95760,0.861,80,views,wikidata
-airlines,Flying Tiger Line,Flying Tiger Line,ok,91176,0.864,80,views,wikidata
-airlines,Hughes Airwest,Hughes Airwest,ok,89784,0.868,80,views,wikidata
-airlines,GoJet Airlines LLC,GoJet Airlines,ok,82632,0.871,80,views,wikidata
-airlines,Air Wisconsin,Air Wisconsin,ok,82296,0.874,80,views,wikidata
-airlines,Justice Prisoner and Alien Transportation System,Justice Prisoner Air Transportation System,ok,81624,0.877,80,views,wikidata
-airlines,ATA Airlines,ATA Airlines,ok,80976,0.880,80,views,wikidata
-airlines,Midwest,Midwest Airlines,ok,79488,0.882,80,views,wikidata
-airlines,Frontier,Frontier,ok,78192,0.885,80,views,hand
-airlines,People Express,People Express Airlines (1980s),ok,75000,0.888,80,views,wikidata
-airlines,Allegheny Airlines,Allegheny Airlines,ok,74736,0.891,80,views,wikidata
-airlines,"Eastern Airlines, LLC",Eastern Airlines (2018),ok,68664,0.893,80,views,wikidata
-airlines,Omega Aerial Refueling Services,Omega Aerial Refueling Services,ok,68016,0.896,80,views,wikidata
-airlines,Ameriflight,Ameriflight,ok,67944,0.898,80,views,wikidata
-airlines,Polar Air Cargo,Polar Air Cargo,ok,66768,0.901,80,views,wikidata
-airlines,Western Global Airlines,Western Global Airlines,ok,66072,0.903,80,views,wikidata
-airlines,World Airways,World Airways,ok,65832,0.905,80,views,wikidata
-airlines,USA Jet Airlines,USA Jet Airlines,ok,64608,0.908,80,views,wikidata
-airlines,New Pacific Airlines,New Pacific Airlines,ok,63744,0.910,80,views,wikidata
-airlines,Air Florida,Air Florida,ok,63336,0.912,80,views,wikidata
-airlines,Key Lime Air,Key Lime Air,ok,62736,0.915,80,views,wikidata
-airlines,Evergreen International Airlines,Evergreen International Airlines,ok,61992,0.917,80,views,wikidata
-airlines,Mokulele Airlines,Mokulele Airlines,ok,59808,0.919,80,views,wikidata
-airlines,Chalk's International Airlines,Chalk's International Airlines,ok,59424,0.921,80,views,wikidata
-airlines,Air Transport International,Air Transport International,ok,56712,0.923,80,views,wikidata
-airlines,Southern Airways,Southern Airways,ok,54336,0.925,80,views,wikidata
-airlines,ABX Air,ABX Air,ok,53976,0.927,80,views,wikidata
-airlines,Amerijet International,Amerijet International,ok,49896,0.929,80,views,wikidata
-airlines,World Atlantic Airlines,World Atlantic Airlines,ok,46464,0.931,80,views,wikidata
-airlines,Tower Air,Tower Air,ok,46392,0.933,80,views,wikidata
-airlines,Republic Airlines,Republic Airlines,ok,45432,0.934,80,views,wikidata
-airlines,Air California,Air California,ok,43920,0.936,80,views,wikidata
-airlines,Song,Song (airline),ok,42864,0.938,80,views,wikidata
-airlines,ExpressJet,ExpressJet,ok,42696,0.939,80,views,wikidata
-airlines,Northeast Airlines,Northeast Airlines,ok,42624,0.941,80,views,wikidata
-airlines,New Eastern Air Lines,Eastern Air Lines (2015),ok,40080,0.942,80,views,wikidata
-airlines,Comair,Comair (United States),ok,39096,0.944,80,views,wikidata
-airlines,Kalitta Charters,Kalitta Charters,ok,37824,0.945,80,views,wikidata
-airlines,Aloha Air Cargo,Aloha Air Cargo,ok,34800,0.946,80,views,wikidata
-airlines,Capital Airlines,Capital Airlines (United States),ok,34296,0.947,80,views,wikidata
-airlines,Ted,Ted (airline),ok,34248,0.949,80,views,wikidata
-airlines,Atlantic Southeast Airlines,Atlantic Southeast Airlines,ok,34104,0.950,80,views,wikidata
-airlines,Bering Air,Bering Air,ok,32280,0.951,100,views,wikidata
-airlines,North Central Airlines,North Central Airlines,ok,32160,0.952,100,views,wikidata
-airlines,Empire Airlines,Empire Airlines,ok,31848,0.953,100,views,wikidata
-airlines,Braniff,Braniff (1983–1990),ok,31776,0.955,100,views,wikidata
-airlines,Continental Micronesia,Continental Micronesia,ok,31680,0.956,100,views,wikidata
-airlines,Kenmore Air,Kenmore Air,ok,31632,0.957,100,views,wikidata
-airlines,Everts Air,Everts Air,ok,28752,0.958,100,views,wikidata
-airlines,Compass Airlines,Compass Airlines (North America),ok,28632,0.959,100,views,wikidata
-airlines,21 Air,21 Air,ok,28152,0.960,100,views,wikidata
-airlines,Mesaba Airlines,Mesaba Airlines,ok,27984,0.961,100,views,wikidata
-airlines,US Airways Express,US Airways Express,ok,27696,0.962,100,views,wikidata
-airlines,Erickson Inc.,Erickson Inc.,ok,27288,0.963,100,views,wikidata
+airlines,United Express,United Express,ok,208848,0.763,60,views,wikidata
+airlines,Air America,Air America (airline),ok,199128,0.771,60,views,wikidata
+airlines,Horizon Air,Horizon Air,ok,177528,0.778,60,views,wikidata
+airlines,Aloha,Aloha,ok,177048,0.784,60,views,hand
+airlines,Delta Connection,Delta Connection,ok,174360,0.790,60,views,wikidata
+airlines,Trump Shuttle,Trump Shuttle,ok,166896,0.797,60,views,wikidata
+airlines,Cape Air,Cape Air,ok,162384,0.803,60,views,wikidata
+airlines,AirTran,AirTran Airways,ok,157152,0.808,60,views,wikidata
+airlines,National Airlines,National Airlines (N8),ok,153168,0.814,60,views,wikidata
+airlines,PSA,Pacific Southwest Airlines,ok,153048,0.819,60,views,wikidata
+airlines,Envoy Air,Envoy Air,ok,152832,0.825,60,views,wikidata
+airlines,Endeavor Air,Endeavor Air,ok,141648,0.830,60,views,wikidata
+airlines,Virgin America,Virgin America,ok,132792,0.835,60,views,wikidata
+airlines,America West,America West Airlines,ok,126408,0.840,60,views,wikidata
+airlines,Hooters Air,Hooters Air,ok,114696,0.845,60,views,wikidata
+airlines,Omni Air International,Omni Air International,ok,109584,0.849,60,views,wikidata
+airlines,Western Airlines,Western Airlines,ok,101712,0.853,80,views,wikidata
+airlines,Silver Airways,Silver Airways,ok,101664,0.856,80,views,wikidata
+airlines,Aloha Airlines,Aloha Airlines,ok,95760,0.860,80,views,wikidata
+airlines,Flying Tiger Line,Flying Tiger Line,ok,91176,0.863,80,views,wikidata
+airlines,Hughes Airwest,Hughes Airwest,ok,89784,0.867,80,views,wikidata
+airlines,GoJet Airlines LLC,GoJet Airlines,ok,82632,0.870,80,views,wikidata
+airlines,Air Wisconsin,Air Wisconsin,ok,82296,0.873,80,views,wikidata
+airlines,Justice Prisoner and Alien Transportation System,Justice Prisoner Air Transportation System,ok,81624,0.876,80,views,wikidata
+airlines,ATA Airlines,ATA Airlines,ok,80976,0.879,80,views,wikidata
+airlines,Midwest,Midwest Airlines,ok,79488,0.881,80,views,wikidata
+airlines,Frontier,Frontier,ok,78192,0.884,80,views,hand
+airlines,People Express,People Express Airlines (1980s),ok,75000,0.887,80,views,wikidata
+airlines,Allegheny Airlines,Allegheny Airlines,ok,74736,0.890,80,views,wikidata
+airlines,"Eastern Airlines, LLC",Eastern Airlines (2018),ok,68664,0.892,80,views,wikidata
+airlines,Omega Aerial Refueling Services,Omega Aerial Refueling Services,ok,68016,0.895,80,views,wikidata
+airlines,Ameriflight,Ameriflight,ok,67944,0.897,80,views,wikidata
+airlines,Polar Air Cargo,Polar Air Cargo,ok,66768,0.900,80,views,wikidata
+airlines,Western Global Airlines,Western Global Airlines,ok,66072,0.902,80,views,wikidata
+airlines,World Airways,World Airways,ok,65832,0.904,80,views,wikidata
+airlines,USA Jet Airlines,USA Jet Airlines,ok,64608,0.907,80,views,wikidata
+airlines,New Pacific Airlines,New Pacific Airlines,ok,63744,0.909,80,views,wikidata
+airlines,Air Florida,Air Florida,ok,63336,0.911,80,views,wikidata
+airlines,Key Lime Air,Key Lime Air,ok,62736,0.914,80,views,wikidata
+airlines,Evergreen International Airlines,Evergreen International Airlines,ok,61992,0.916,80,views,wikidata
+airlines,Mokulele Airlines,Mokulele Airlines,ok,59808,0.918,80,views,wikidata
+airlines,Chalk's International Airlines,Chalk's International Airlines,ok,59424,0.920,80,views,wikidata
+airlines,Air Transport International,Air Transport International,ok,56712,0.922,80,views,wikidata
+airlines,Southern Airways,Southern Airways,ok,54336,0.924,80,views,wikidata
+airlines,ABX Air,ABX Air,ok,53976,0.926,80,views,wikidata
+airlines,Amerijet International,Amerijet International,ok,49896,0.928,80,views,wikidata
+airlines,World Atlantic Airlines,World Atlantic Airlines,ok,46464,0.930,80,views,wikidata
+airlines,Tower Air,Tower Air,ok,46392,0.932,80,views,wikidata
+airlines,Republic Airlines,Republic Airlines,ok,45432,0.933,80,views,wikidata
+airlines,Air California,Air California,ok,43920,0.935,80,views,wikidata
+airlines,Song,Song (airline),ok,42864,0.936,80,views,wikidata
+airlines,ExpressJet,ExpressJet,ok,42696,0.938,80,views,wikidata
+airlines,Northeast Airlines,Northeast Airlines,ok,42624,0.939,80,views,wikidata
+airlines,New Eastern Air Lines,Eastern Air Lines (2015),ok,40080,0.941,80,views,wikidata
+airlines,Comair,Comair (United States),ok,39096,0.942,80,views,wikidata
+airlines,Kalitta Charters,Kalitta Charters,ok,37824,0.944,80,views,wikidata
+airlines,Aloha Air Cargo,Aloha Air Cargo,ok,34800,0.945,80,views,wikidata
+airlines,Capital Airlines,Capital Airlines (United States),ok,34296,0.946,80,views,wikidata
+airlines,Ted,Ted (airline),ok,34248,0.948,80,views,wikidata
+airlines,Atlantic Southeast Airlines,Atlantic Southeast Airlines,ok,34104,0.949,80,views,wikidata
+airlines,Bering Air,Bering Air,ok,32280,0.950,80,views,wikidata
+airlines,North Central Airlines,North Central Airlines,ok,32160,0.951,100,views,wikidata
+airlines,Empire Airlines,Empire Airlines,ok,31848,0.952,100,views,wikidata
+airlines,Braniff,Braniff (1983–1990),ok,31776,0.953,100,views,wikidata
+airlines,Continental Micronesia,Continental Micronesia,ok,31680,0.955,100,views,wikidata
+airlines,Kenmore Air,Kenmore Air,ok,31632,0.956,100,views,wikidata
+airlines,Everts Air,Everts Air,ok,28752,0.957,100,views,wikidata
+airlines,Compass Airlines,Compass Airlines (North America),ok,28632,0.958,100,views,wikidata
+airlines,21 Air,21 Air,ok,28152,0.959,100,views,wikidata
+airlines,Mesaba Airlines,Mesaba Airlines,ok,27984,0.960,100,views,wikidata
+airlines,US Airways Express,US Airways Express,ok,27696,0.961,100,views,wikidata
+airlines,Erickson Inc.,Erickson Inc.,ok,27288,0.962,100,views,wikidata
+airlines,iAero Airways,IAero Airways,ok,26160,0.963,100,views,wikidata
 airlines,Ryan International Airlines,Ryan International Airlines,ok,25392,0.964,100,views,wikidata
 airlines,Northern Air Cargo,Northern Air Cargo,ok,24720,0.965,100,views,wikidata
 airlines,Sky Lease Cargo,Sky Lease Cargo,ok,24696,0.966,100,views,wikidata
-airlines,Skybus Airlines,Skybus Airlines,ok,24528,0.967,100,views,wikidata
-airlines,Continental Express,Continental Express,ok,23784,0.968,100,views,wikidata
+airlines,Skybus Airlines,Skybus Airlines,ok,24528,0.966,100,views,wikidata
+airlines,Continental Express,Continental Express,ok,23784,0.967,100,views,wikidata
 airlines,Northwest Airlink,Northwest Airlink,ok,23712,0.968,100,views,wikidata
 airlines,SeaPort Airlines,SeaPort Airlines,ok,23664,0.969,100,views,wikidata
 airlines,Great Lakes Airlines,Great Lakes Airlines,ok,23280,0.970,100,views,wikidata
 airlines,Trans Executive Airlines,Trans Executive Airlines,ok,22848,0.971,100,views,wikidata
-airlines,Contract Air Cargo,IFL Group,ok,22848,0.972,100,views,wikidata
-airlines,Grant Aviation,Grant Aviation,ok,22704,0.973,100,views,wikidata
+airlines,Contract Air Cargo,IFL Group,ok,22848,0.971,100,views,wikidata
+airlines,Grant Aviation,Grant Aviation,ok,22704,0.972,100,views,wikidata
 airlines,PenAir,PenAir,ok,22128,0.973,100,views,wikidata
 airlines,Emery Worldwide,Emery Worldwide Airlines,ok,22104,0.974,100,views,wikidata
 airlines,Pan American-Grace Airways,Pan American-Grace Airways,ok,21624,0.975,100,views,wikidata
-airlines,Overseas National Airways,Overseas National Airways,ok,21408,0.976,100,views,wikidata
+airlines,Overseas National Airways,Overseas National Airways,ok,21408,0.975,100,views,wikidata
 airlines,Chautauqua Airlines,Chautauqua Airlines,ok,21144,0.976,100,views,wikidata
 airlines,Trans States Airlines,Trans States Airlines,ok,21072,0.977,100,views,wikidata
 airlines,New York Air,New York Air,ok,20808,0.978,100,views,wikidata
+airlines,Sierra Pacific Airlines,Sierra Pacific Airlines,ok,20760,0.978,100,views,wikidata
 airlines,Lynden Air Cargo,Lynden Air Cargo,ok,20688,0.979,100,views,wikidata
-airlines,Asia Pacific Airlines,Asia Pacific Airlines (Guam),ok,20088,0.979,100,views,wikidata
-airlines,Grand Canyon Airlines,Grand Canyon Airlines,ok,19608,0.980,100,views,wikidata
+airlines,Asia Pacific Airlines,Asia Pacific Airlines (Guam),ok,20088,0.980,100,views,wikidata
+airlines,Grand Canyon Airlines,Grand Canyon Airlines,ok,19608,0.981,100,views,wikidata
 airlines,Wright Air Service,Wright Air Service,ok,18816,0.981,100,views,wikidata
 airlines,Era Aviation,Era Aviation,ok,18792,0.982,100,views,wikidata
-airlines,Air Midwest,Air Midwest,ok,18744,0.982,100,views,wikidata
+airlines,Air Midwest,Air Midwest,ok,18744,0.983,100,views,wikidata
 airlines,North American Airlines,North American Airlines,ok,18696,0.983,100,views,wikidata
 airlines,Seaborne Airlines,Seaborne Airlines,ok,18144,0.984,100,views,wikidata
-airlines,St. Petersburg-Tampa Airboat Line,St. Petersburg–Tampa Airboat Line,ok,17976,0.984,100,views,wikidata
+airlines,St. Petersburg-Tampa Airboat Line,St. Petersburg–Tampa Airboat Line,ok,17976,0.985,100,views,wikidata
 airlines,Independence Air,Independence Air,ok,17616,0.985,100,views,wikidata
-airlines,Miami Air International,Miami Air International,ok,16920,0.985,100,views,wikidata
-airlines,Air Cargo Carriers,Air Cargo Carriers,ok,16896,0.986,100,views,wikidata
+airlines,Miami Air International,Miami Air International,ok,16920,0.986,100,views,wikidata
+airlines,Air Cargo Carriers,Air Cargo Carriers,ok,16896,0.987,100,views,wikidata
 airlines,Ameristar Jet Charter,Ameristar Jet Charter,ok,16584,0.987,100,views,wikidata
-airlines,Champion Air,Champion Air,ok,16272,0.987,100,views,wikidata
+airlines,Champion Air,Champion Air,ok,16272,0.988,100,views,wikidata
 airlines,American Overseas Airlines,American Overseas Airlines,ok,16008,0.988,100,views,wikidata
-airlines,Continental Connection,Continental Connection,ok,15864,0.988,100,views,wikidata
+airlines,Continental Connection,Continental Connection,ok,15864,0.989,100,views,wikidata
 airlines,Shuttle America,Shuttle America,ok,15072,0.989,100,views,wikidata
-airlines,New England Airlines,New England Airlines,ok,15048,0.989,100,views,wikidata
+airlines,New England Airlines,New England Airlines,ok,15048,0.990,100,views,wikidata
 airlines,Seaboard World Airlines,Seaboard World Airlines,ok,14688,0.990,100,views,wikidata
 airlines,Bemidji Airlines,Bemidji Airlines,ok,14256,0.991,100,views,wikidata
-airlines,Alaska Central Express,Alaska Central Express,ok,13968,0.991,100,views,wikidata
+airlines,Alaska Central Express,Alaska Central Express,ok,13968,0.992,100,views,wikidata
 airlines,Simmons Airlines,Simmons Airlines,ok,13632,0.992,100,views,wikidata
-airlines,Island Air,Island Air (Hawaii),ok,12912,0.992,100,views,wikidata
+airlines,Island Air,Island Air (Hawaii),ok,12912,0.993,100,views,wikidata
 airlines,Vision Airlines,Vision Airlines,ok,12552,0.993,100,views,wikidata
 airlines,AirNet Express,AirNet Express,ok,12312,0.993,100,views,wikidata
-airlines,Tepper Aviation,Tepper Aviation,ok,11160,0.993,100,views,wikidata
+airlines,Tepper Aviation,Tepper Aviation,ok,11160,0.994,100,views,wikidata
 airlines,Executive Airlines,Executive Airlines,ok,10992,0.994,100,views,wikidata
-airlines,Taquan Air,Taquan Air,ok,10440,0.994,100,views,wikidata
+airlines,Taquan Air,Taquan Air,ok,10440,0.995,100,views,wikidata
 airlines,Big Sky Airlines,Big Sky Airlines,ok,10056,0.995,100,views,wikidata
 airlines,Boston-Maine Airways,Boston-Maine Airways,ok,9720,0.995,100,views,wikidata
-airlines,AmericanConnection,AmericanConnection,ok,9408,0.995,100,views,wikidata
+airlines,AmericanConnection,AmericanConnection,ok,9408,0.996,100,views,wikidata
 airlines,Centurion Air Cargo,Centurion Air Cargo,ok,9264,0.996,100,views,wikidata
 airlines,Eos Airlines,Eos Airlines,ok,8664,0.996,100,views,wikidata
-airlines,USA3000 Airlines,USA3000 Airlines,ok,8544,0.996,100,views,wikidata
+airlines,USA3000 Airlines,USA3000 Airlines,ok,8544,0.997,100,views,wikidata
 airlines,Slick Airways,Slick Airways,ok,8232,0.997,100,views,wikidata
-airlines,Jet America Airlines,Jet America Airlines,ok,7800,0.997,100,views,wikidata
 airlines,Air Sunshine,Air Sunshine,ok,7680,0.997,100,views,wikidata
-airlines,Air Choice One,Air Choice One,ok,7320,0.997,100,views,wikidata
+airlines,Air Choice One,Air Choice One,ok,7320,0.998,100,views,wikidata
 airlines,Gemini Air Cargo,Gemini Air Cargo,ok,6168,0.998,100,views,wikidata
 airlines,Freedom Airlines,Freedom Airlines,ok,5928,0.998,100,views,wikidata
 airlines,Frontier Flying Service,Frontier Flying Service,ok,5256,0.998,100,views,wikidata
 airlines,Astar Air Cargo,Astar Air Cargo,ok,5088,0.998,100,views,wikidata
-airlines,Pet Airways,Pet Airways,ok,4752,0.998,100,views,wikidata
 airlines,Florida West International Airways,Florida West International Airways,ok,4704,0.999,100,views,wikidata
 airlines,Servant Air,Servant Air,ok,4536,0.999,100,views,wikidata
 airlines,Hageland Aviation Services,Hageland Aviation Services,ok,4320,0.999,100,views,wikidata
@@ -177,6 +177,8 @@ airlines,Lynx Air International,Lynx Air International,ok,1584,1.000,100,views,w
 airlines,Western,Western Airlines (2007),ok,1176,1.000,100,views,wikidata
 airlines,Silver Air,Silver Air (Djibouti),ok,600,1.000,100,views,wikidata
 airlines,Aero Contractors,Triangle Aviation Solutions,ok,0,,100,hand,wikidata
+airlines,Pet Airways,Pet Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Jet America Airlines,Jet America Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Warbelow's Air Ventures,Warbelow's Air Ventures,long tail: not ranked,,,100,hand,wikidata
 airlines,Air Flamenco,Air Flamenco,long tail: not ranked,,,100,hand,wikidata
 airlines,Alpine Air Express,Alpine Air Express,long tail: not ranked,,,100,hand,wikidata
@@ -195,8 +197,6 @@ airlines,Scenic Airlines,Scenic Airlines,long tail: not ranked,,,100,hand,wikida
 airlines,Ultimate Air Shuttle,Ultimate Jet,long tail: not ranked,,,100,hand,wikidata
 airlines,Elite Airways,Elite Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,Surf Air,Surf Air,long tail: not ranked,,,100,hand,wikidata
-airlines,Sierra Pacific Airlines,Sierra Pacific Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,iAero Airways,IAero Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,Wien Air Alaska,Wien Air Alaska,long tail: not ranked,,,100,hand,wikidata
 airlines,Nations Air Express,Nations Air,long tail: not ranked,,,100,hand,wikidata
 airlines,Cargo 360,Cargo 360,long tail: not ranked,,,100,hand,wikidata
@@ -207,6 +207,9 @@ airlines,Empire Airways,Empire Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,Freight Runners Express,Freight Runners Express,long tail: not ranked,,,100,hand,wikidata
 airlines,RegionsAir,RegionsAir,long tail: not ranked,,,100,hand,wikidata
 airlines,Air Grand Canyon,Grand Canyon Scenic Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Songbird Airways,Songbird Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Transcontinental Air Transport,Transcontinental Air Transport,long tail: not ranked,,,100,hand,wikidata
+airlines,US Airways Shuttle,US Airways Shuttle,long tail: not ranked,,,100,hand,wikidata
 airlines,Federico Bravo,Indigo Partners,long tail: not ranked,,,100,hand,wikidata
 airlines,GeorgiaSkies,GeorgiaSkies,long tail: not ranked,,,100,hand,wikidata
 airlines,Primaris Airlines,Primaris Airlines,long tail: not ranked,,,100,hand,wikidata
@@ -246,9 +249,6 @@ airlines,Morris Air,Morris Air,long tail: not ranked,,,100,hand,wikidata
 airlines,IBC Airways,IBC Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,Tradewind Aviation,Tradewind Aviation,long tail: not ranked,,,100,hand,wikidata
 airlines,Gulfstream International Airlines,Gulfstream International Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Songbird Airways,Songbird Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Transcontinental Air Transport,Transcontinental Air Transport,long tail: not ranked,,,100,hand,wikidata
-airlines,US Airways Shuttle,US Airways Shuttle,long tail: not ranked,,,100,hand,wikidata
 airlines,Kitty Hawk Aircargo,Kitty Hawk Aircargo,long tail: not ranked,,,100,hand,wikidata
 airlines,MAXjet Airways,MAXjet Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,Pan American Airways,Pan Am (1996–1998),long tail: not ranked,,,100,hand,wikidata
@@ -259,6 +259,13 @@ airlines,CSA Air,CSA Air,long tail: not ranked,,,100,hand,wikidata
 airlines,Chicago Express Airlines,Chicago Express Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Aero Union,Aero Union,long tail: not ranked,,,100,hand,wikidata
 airlines,Alaska Coastal Airlines,Alaska Coastal Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Rocky Mountain Airways,Rocky Mountain Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Star Air Service,Star Air Service,long tail: not ranked,,,100,hand,wikidata
+airlines,Sun Air International,Sun Air Express,long tail: not ranked,,,100,hand,wikidata
+airlines,Transocean Airlines,Transocean Air Lines,long tail: not ranked,,,100,hand,wikidata
+airlines,Varney Air Lines,Varney Air Lines,long tail: not ranked,,,100,hand,wikidata
+airlines,WestAir Commuter Airlines,WestAir Commuter Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Midstate Airlines,Midstate Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Mohawk Airlines,Mohawk Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Airlift International,Airlift International,long tail: not ranked,,,100,hand,wikidata
 airlines,Midwest Connect,Midwest Connect,long tail: not ranked,,,100,hand,wikidata
@@ -307,13 +314,6 @@ airlines,Island Airways,Island Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,Buzz Airways,Buzz Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,California Central Airlines,California Central Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,GLO Airlines,GLO Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Rocky Mountain Airways,Rocky Mountain Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Star Air Service,Star Air Service,long tail: not ranked,,,100,hand,wikidata
-airlines,Sun Air International,Sun Air Express,long tail: not ranked,,,100,hand,wikidata
-airlines,Transocean Airlines,Transocean Air Lines,long tail: not ranked,,,100,hand,wikidata
-airlines,Varney Air Lines,Varney Air Lines,long tail: not ranked,,,100,hand,wikidata
-airlines,WestAir Commuter Airlines,WestAir Commuter Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Midstate Airlines,Midstate Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,L-3 Flight International Aviation,L-3 Flight International Aviation,long tail: not ranked,,,100,hand,wikidata
 airlines,L.A.B. Flying Service,L.A.B. Flying Service,long tail: not ranked,,,100,hand,wikidata
 airlines,Merlin Express,Merlin Express,long tail: not ranked,,,100,hand,wikidata
@@ -329,16 +329,19 @@ airlines,Essair Airways,Pioneer Air Lines,long tail: not ranked,,,100,hand,wikid
 airlines,FS Air Service,FS Air Service,long tail: not ranked,,,100,hand,wikidata
 airlines,AAXICO Airlines,AAXICO Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Aeromarine Airways,Aeromarine West Indies Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Ryan Airline Company,Ryan Airline Company,long tail: not ranked,,,100,hand,wikidata
+airlines,StatesWest Airlines,StatesWest Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,TranStar Airlines,TranStar Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Transwestern Airlines,Transwestern Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,West Air,West Air (United States),long tail: not ranked,,,100,hand,wikidata
+airlines,Zantop International Airlines,Zantop International Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,PEOPLExpress,People Express Airlines (2010s),long tail: not ranked,,,100,hand,wikidata
+airlines,Griffing Flying Service,Griffing Flying Service,long tail: not ranked,,,100,hand,wikidata
 airlines,Texas International Airlines,Texas International Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Orange Air,Orange Air,long tail: not ranked,,,100,hand,wikidata
 airlines,OneJet,OneJet,long tail: not ranked,,,100,hand,wikidata
 airlines,Great Lakes Air,Great Lakes Air,long tail: not ranked,,,100,hand,wikidata
 airlines,Ludington Airlines,Ludington Airline,long tail: not ranked,,,100,hand,wikidata
-airlines,McCulloch International Airlines,McCulloch International Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Paradise Airlines,Paradise Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,United States Overseas Airlines,United States Overseas Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Mackey International,Mackey International,long tail: not ranked,,,100,hand,wikidata
-airlines,Monmouth Airlines,Monmouth Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Salmon Air,Salmon Air,long tail: not ranked,,,100,hand,wikidata
 airlines,Samoa Air,Samoa Air (1987–2003),long tail: not ranked,,,100,hand,wikidata
 airlines,Skyway Airlines,Skyway Airlines,long tail: not ranked,,,100,hand,wikidata
@@ -428,22 +431,23 @@ airlines,Reliant Air,Reliant Air,long tail: not ranked,,,100,hand,wikidata
 airlines,Tropic Ocean Airways,Tropic Ocean Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,TriStar Airlines,TriStar Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Skymax,Skymax,long tail: not ranked,,,100,hand,wikidata
-airlines,Ryan Airline Company,Ryan Airline Company,long tail: not ranked,,,100,hand,wikidata
-airlines,StatesWest Airlines,StatesWest Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,TranStar Airlines,TranStar Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Transwestern Airlines,Transwestern Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,West Air,West Air (United States),long tail: not ranked,,,100,hand,wikidata
-airlines,Zantop International Airlines,Zantop International Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,PEOPLExpress,People Express Airlines (2010s),long tail: not ranked,,,100,hand,wikidata
-airlines,Griffing Flying Service,Griffing Flying Service,long tail: not ranked,,,100,hand,wikidata
+airlines,McCulloch International Airlines,McCulloch International Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Paradise Airlines,Paradise Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,United States Overseas Airlines,United States Overseas Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Mackey International,Mackey International,long tail: not ranked,,,100,hand,wikidata
+airlines,Monmouth Airlines,Monmouth Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Kitty Hawk Airways,Kitty Hawk Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,L'Express Airlines,L'Express Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,National Air Transport,National Air Transport,long tail: not ranked,,,100,hand,wikidata
 airlines,National Parks Airways,National Parks Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,AccessAir,AccessAir,long tail: not ranked,,,100,hand,wikidata
+airlines,Sunbird Airlines,Sunbird Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Universal Air Lines,Universal Air Lines Corporation,long tail: not ranked,,,100,hand,wikidata
+airlines,Pro Air,Pro Air,long tail: not ranked,,,100,hand,wikidata
+airlines,Wings West Airlines,Wings West Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Gilpin Airlines,Gilpin Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,People and Pets Dog Airlines,People and Pets Dog Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Baltia Airlines,USGlobal Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Mercer Airlines,Mercer Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,ATA Connection,ATA Connection,long tail: not ranked,,,100,hand,wikidata
 airlines,Air Chaparral,Air Chaparral,long tail: not ranked,,,100,hand,wikidata
 airlines,Air Cortez,Air Cortez,long tail: not ranked,,,100,hand,wikidata
@@ -547,11 +551,7 @@ airlines,Shoreline Aviation,Shoreline Aviation,long tail: not ranked,,,100,hand,
 airlines,Aerodynamics Inc.,Aerodynamics Inc.,long tail: not ranked,,,100,hand,wikidata
 airlines,Rectrix Aviation,Rectrix Aviation,long tail: not ranked,,,100,hand,wikidata
 airlines,Boone County Airlines,Boone County Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Sunbird Airlines,Sunbird Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Universal Air Lines,Universal Air Lines Corporation,long tail: not ranked,,,100,hand,wikidata
-airlines,Pro Air,Pro Air,long tail: not ranked,,,100,hand,wikidata
-airlines,Wings West Airlines,Wings West Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Gilpin Airlines,Gilpin Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Mercer Airlines,Mercer Airlines,long tail: not ranked,,,100,hand,wikidata
 amwords,Elevator,Elevator,hand tiers,,,10,hand,hand
 amwords,Apartment,Apartment,hand tiers,,,10,hand,hand
 amwords,Cookie,Cookie,hand tiers,,,10,hand,hand
@@ -1323,12 +1323,12 @@ cars,Lincoln Motor Car Works,Lincoln Motor Car Works,long tail: not ranked,,,100
 cars,Thor,Thor (motorcycles),long tail: not ranked,,,100,hand,wikidata
 cars,Manta Cars,Manta Cars,long tail: not ranked,,,100,hand,wikidata
 cars,Shawmut Motor Company,Shawmut Motor Company,long tail: not ranked,,,100,hand,wikidata
-cars,Cleveland Motorcycle Manufacturing Company,Cleveland Motorcycle Manufacturing Company,long tail: not ranked,,,100,hand,wikidata
+cars,Apollo,Apollo (1906 automobile),long tail: not ranked,,,100,hand,wikidata
+cars,Brew-Hatcher,Brew-Hatcher,long tail: not ranked,,,100,hand,wikidata
 cars,Glide,Glide (automobile),long tail: not ranked,,,100,hand,wikidata
 cars,Hoffman,Hoffman (Cleveland automobile),long tail: not ranked,,,100,hand,wikidata
 cars,James,James (automobile company),long tail: not ranked,,,100,hand,wikidata
-cars,Apollo,Apollo (1906 automobile),long tail: not ranked,,,100,hand,wikidata
-cars,Brew-Hatcher,Brew-Hatcher,long tail: not ranked,,,100,hand,wikidata
+cars,Cleveland Motorcycle Manufacturing Company,Cleveland Motorcycle Manufacturing Company,long tail: not ranked,,,100,hand,wikidata
 cars,Telo Trucks,Telo Trucks,long tail: not ranked,,,100,hand,wikidata
 cars,Slate Auto,Slate Auto,long tail: not ranked,,,100,hand,wikidata
 cars,Black Motor Company,Black Motor Company,long tail: not ranked,,,100,hand,wikidata
@@ -1433,11 +1433,11 @@ cars,Spaulding Manufacturing Company,Spaulding Manufacturing Company,long tail: 
 cars,The Adams Brothers Company,Adams Brothers Manufacturing Company,long tail: not ranked,,,100,hand,wikidata
 cars,Reber Manufacturing Company,Reber (automobile),long tail: not ranked,,,100,hand,wikidata
 cars,Pan-American Motor Company,Pan-American Motor Company,long tail: not ranked,,,100,hand,wikidata
-cars,Mitsubishi Motors North America,Mitsubishi Motors North America,long tail: not ranked,,,100,hand,wikidata
-cars,Pungs Finch,Pungs-Finch,long tail: not ranked,,,100,hand,wikidata
 cars,Arrow,Whitmore Arrow,long tail: not ranked,,,100,hand,wikidata
 cars,Campbell,Campbell Motor Car Company,long tail: not ranked,,,100,hand,wikidata
 cars,Carhartt,Carhartt (automobile),long tail: not ranked,,,100,hand,wikidata
+cars,Mitsubishi Motors North America,Mitsubishi Motors North America,long tail: not ranked,,,100,hand,wikidata
+cars,Pungs Finch,Pungs-Finch,long tail: not ranked,,,100,hand,wikidata
 cars,Ronn Motor Company,Ronn Motor Group,long tail: not ranked,,,100,hand,wikidata
 cars,Staver,Staver,long tail: not ranked,,,100,hand,wikidata
 cars,Roberts Motor Manufacturing Company,Roberts Motor Company,long tail: not ranked,,,100,hand,wikidata
@@ -1471,8 +1471,8 @@ cars,Maytag-Mason Motor Company,Maytag-Mason Motor Company,long tail: not ranked
 cars,Ajax Motor Vehicle Company,Ajax Motor Vehicle Company,long tail: not ranked,,,100,hand,wikidata
 cars,Maccar Truck Company,Maccar Truck Company,long tail: not ranked,,,100,hand,wikidata
 cars,Corwin Manufacturing Company,Corwin Manufacturing Company,long tail: not ranked,,,100,hand,wikidata
-cars,Single Center,Single Center,long tail: not ranked,,,100,hand,wikidata
 cars,Ajax Motors Company,Ajax Motors Company,long tail: not ranked,,,100,hand,wikidata
+cars,Single Center,Single Center,long tail: not ranked,,,100,hand,wikidata
 cars,The Hug Company,The Hug Company,long tail: not ranked,,,100,hand,wikidata
 cars,LiveWire,LiveWire (company),long tail: not ranked,,,100,hand,wikidata
 cars,Amalgamated,Amalgamated (1917 automobile),long tail: not ranked,,,100,hand,wikidata
@@ -2435,7 +2435,7 @@ simpsons,Krusty the Clown,Krusty the Clown,ok,173088,0.572,40,views,wikidata
 simpsons,The Itchy & Scratchy Show,The Itchy & Scratchy Show,ok,160344,0.591,40,views,wikidata
 simpsons,Moe Szyslak,Moe Szyslak,ok,160128,0.610,40,views,wikidata
 simpsons,Patty and Selma,Patty and Selma,ok,144624,0.628,40,views,wikidata
-simpsons,Milhouse,Milhouse Van Houten,ok,139032,0.644,40,views,wikidata
+simpsons,Milhouse,Milhouse Van Houten,ok,139032,0.645,40,views,wikidata
 simpsons,Smithers,Waylon Smithers,ok,138072,0.660,40,views,wikidata
 simpsons,Lionel Hutz,Lionel Hutz,ok,128640,0.676,40,views,wikidata
 simpsons,Ralph Wiggum,Ralph Wiggum,ok,124632,0.691,40,views,wikidata
@@ -2474,7 +2474,7 @@ simpsons,Otto Mann,Otto Mann,ok,17856,0.944,80,views,wikidata
 simpsons,Hans Moleman,Hans Moleman,ok,16776,0.946,80,views,wikidata
 simpsons,Snake Jailbird,Snake Jailbird,ok,16776,0.948,80,views,wikidata
 simpsons,Sherri and Terri,Sherri and Terri,ok,15936,0.950,80,views,wikidata
-simpsons,Bleeding Gums Murphy,Bleeding Gums Murphy,ok,15216,0.951,100,views,wikidata
+simpsons,Bleeding Gums Murphy,Bleeding Gums Murphy,ok,15216,0.952,100,views,wikidata
 simpsons,Cletus Spuckler,Cletus Spuckler,ok,15168,0.953,100,views,wikidata
 simpsons,Lenny Leonard,Lenny Leonard,ok,14664,0.955,100,views,wikidata
 simpsons,Sideshow Mel,Sideshow Mel,ok,13392,0.957,100,views,wikidata
@@ -2487,7 +2487,7 @@ simpsons,Patty Bouvier,Patty Bouvier,ok,10584,0.965,100,views,wikidata
 simpsons,Springfield Elementary School,Springfield Elementary School,ok,10392,0.966,100,views,wikidata
 simpsons,Fallout Boy,Fallout Boy (The Simpsons),ok,10152,0.967,100,views,wikidata
 simpsons,Bumblebee Man,Bumblebee Man,ok,9936,0.968,100,views,wikidata
-simpsons,Sanjay Nahasapeemapetilon,Sanjay Nahasapeemapetilon,ok,9936,0.969,100,views,wikidata
+simpsons,Sanjay Nahasapeemapetilon,Sanjay Nahasapeemapetilon,ok,9936,0.970,100,views,wikidata
 simpsons,Drederick Tatum,Drederick Tatum,ok,9360,0.971,100,views,wikidata
 simpsons,Agnes Tamzarian,Agnes Skinner,ok,9120,0.972,100,views,wikidata
 simpsons,Selma Bouvier,Selma Bouvier,ok,9048,0.973,100,views,wikidata
@@ -2504,7 +2504,7 @@ simpsons,Sophie Krustofsky,Sophie Krustofsky,ok,5304,0.981,100,views,wikidata
 simpsons,Hank Scorpio,Hank Scorpio,ok,5088,0.982,100,views,wikidata
 simpsons,Dolph,Dolph Starbeam,ok,5016,0.982,100,views,wikidata
 simpsons,Tomacco,Tomacco,ok,4944,0.983,100,views,wikidata
-simpsons,Ruth Powers,Ruth Powers,ok,4872,0.983,100,views,wikidata
+simpsons,Ruth Powers,Ruth Powers,ok,4872,0.984,100,views,wikidata
 simpsons,Disco Stu,Disco Stu,ok,4680,0.984,100,views,wikidata
 simpsons,Gil Gunderson,Gil Gunderson,ok,4608,0.985,100,views,wikidata
 simpsons,Dr. Nick,Dr. Nick,ok,4392,0.985,100,views,wikidata
@@ -2519,13 +2519,13 @@ simpsons,Mrs. Muntz,Mrs. Muntz,ok,3672,0.989,100,views,wikidata
 simpsons,Legs and Louie,Legs and Louie,ok,3648,0.989,100,views,wikidata
 simpsons,Constance Harm,Judge Constance Harm,ok,3528,0.990,100,views,wikidata
 simpsons,Bernice Hibbert,Bernice Hibbert,ok,3408,0.990,100,views,wikidata
-simpsons,Cecil Terwilliger,Cecil Terwilliger,ok,3144,0.990,100,views,wikidata
+simpsons,Cecil Terwilliger,Cecil Terwilliger,ok,3144,0.991,100,views,wikidata
 simpsons,Jebediah Springfield,Jebediah Springfield,ok,2952,0.991,100,views,wikidata
 simpsons,Larry Burns,Larry Burns (The Simpsons),ok,2952,0.991,100,views,wikidata
-simpsons,Elizabeth Hoover,Elizabeth Hoover,ok,2928,0.991,100,views,wikidata
+simpsons,Elizabeth Hoover,Elizabeth Hoover,ok,2928,0.992,100,views,wikidata
 simpsons,Radioactive Man,Radioactive Man (The Simpsons),ok,2904,0.992,100,views,wikidata
 simpsons,Jasper Beardly,Jasper Beardsley,ok,2904,0.992,100,views,wikidata
-simpsons,Krusty Burger,Krusty Burger,ok,2736,0.992,100,views,wikidata
+simpsons,Krusty Burger,Krusty Burger,ok,2736,0.993,100,views,wikidata
 simpsons,Lunchlady Doris,Lunchlady Doris,ok,2664,0.993,100,views,wikidata
 simpsons,Shauna Chalmers,Shauna Chalmers,ok,2328,0.993,100,views,wikidata
 simpsons,Herman Hermann,Herman Hermann,ok,2304,0.993,100,views,wikidata
@@ -2537,18 +2537,17 @@ simpsons,Lucius Sweet,Lucius Sweet,ok,2016,0.995,100,views,wikidata
 simpsons,Crazy Cat Lady,Crazy Cat Lady,ok,1968,0.995,100,views,wikidata
 simpsons,Janey Powell,Janey Powell,ok,1920,0.995,100,views,wikidata
 simpsons,Luigi Risotto,Luigi Risotto,ok,1872,0.995,100,views,wikidata
-simpsons,Martha Quimby,Martha Quimby,ok,1872,0.995,100,views,wikidata
+simpsons,Martha Quimby,Martha Quimby,ok,1872,0.996,100,views,wikidata
 simpsons,Shelbyville,Shelbyville (The Simpsons),ok,1800,0.996,100,views,wikidata
 simpsons,Brandine Spuckler,Brandine Spuckler,ok,1776,0.996,100,views,wikidata
 simpsons,Declan Desmond,Declan Desmond,ok,1632,0.996,100,views,wikidata
 simpsons,Plopper,Plopper,ok,1536,0.996,100,views,wikidata
-simpsons,Database,Database (The Simpsons),ok,1488,0.996,100,views,wikidata
+simpsons,Database,Database (The Simpsons),ok,1488,0.997,100,views,wikidata
 simpsons,Jacqueline Bouvier,Jacqueline Bouvier (The Simpsons),ok,1296,0.997,100,views,wikidata
 simpsons,Charlie,Charlie (The Simpsons),ok,1248,0.997,100,views,wikidata
 simpsons,Judge Snyder,Judge Snyder (The Simpsons),ok,1200,0.997,100,views,wikidata
 simpsons,Hugo Simpson,Hugo Simpson,ok,1176,0.997,100,views,wikidata
 simpsons,Baby Gerald,Baby Gerald,ok,1176,0.997,100,views,wikidata
-simpsons,Amber Simpson,Amber Simpson (The Simpsons),ok,1128,0.997,100,views,wikidata
 simpsons,Eddie and Lou,Eddie and Lou,ok,1104,0.997,100,views,wikidata
 simpsons,Lyle Lanley,Lyle Lanley,ok,960,0.998,100,views,wikidata
 simpsons,Akira Kurosawa,Akira (The Simpsons),ok,960,0.998,100,views,wikidata
@@ -2560,12 +2559,12 @@ simpsons,Buzz Cola,Buzz Cola,ok,768,0.998,100,views,wikidata
 simpsons,Flanders family,Flanders family,ok,744,0.998,100,views,wikidata
 simpsons,Wendell Borton,Wendell Borton,ok,744,0.998,100,views,wikidata
 simpsons,Lois Pennycandy,Lois Pennycandy,ok,744,0.998,100,views,wikidata
-simpsons,Leon Kompowsky,Leon Kompowsky,ok,696,0.999,100,views,wikidata
+simpsons,Leon Kompowsky,Leon Kompowsky,ok,696,0.998,100,views,wikidata
 simpsons,Mindy Simmons,Mindy Simmons,ok,624,0.999,100,views,wikidata
 simpsons,Blinky,Blinky (The Simpsons),ok,576,0.999,100,views,wikidata
-simpsons,Principal Dondelinger,Principal Dondelinger,ok,576,0.999,100,views,wikidata
 simpsons,Doctor Colossus,Doctor Colossus,ok,552,0.999,100,views,wikidata
 simpsons,Gina Vendetti,Gina Vendetti,ok,504,0.999,100,views,wikidata
+simpsons,Wendy Sage,Wendy Sage,ok,504,0.999,100,views,wikidata
 simpsons,Rod and Todd Flanders,Rod and Todd Flanders,ok,480,0.999,100,views,wikidata
 simpsons,Greta Wolfcastle,Greta Wolfcastle,ok,480,0.999,100,views,wikidata
 simpsons,Booberella,Booberella,ok,480,0.999,100,views,wikidata
@@ -2576,6 +2575,7 @@ simpsons,Yes Guy,Yes Guy,ok,432,0.999,100,views,wikidata
 simpsons,Van Houten family,Van Houten family,ok,408,0.999,100,views,wikidata
 simpsons,Gloria,Gloria (The Simpsons),ok,408,0.999,100,views,wikidata
 simpsons,Mrs. Glick,Mrs. Glick,ok,384,0.999,100,views,wikidata
+simpsons,Sneed's Feed & Seed,Sneed's Feed & Seed,ok,384,0.999,100,views,wikidata
 simpsons,Ms. Albright,Ms. Albright,ok,384,0.999,100,views,wikidata
 simpsons,Opal,Opal (The Simpsons),ok,360,0.999,100,views,wikidata
 simpsons,State Comptroller Atkins,State Comptroller Atkins,ok,360,1.000,100,views,wikidata
@@ -2586,13 +2586,14 @@ simpsons,Scott Christian,Scott Christian,ok,264,1.000,100,views,wikidata
 simpsons,Asa Phelps,Asa Phelps,ok,216,1.000,100,views,wikidata
 simpsons,Orville Simpson,Orville Simpson,ok,192,1.000,100,views,wikidata
 simpsons,Scratchy,Scratchy (The Simpsons),ok,192,1.000,100,views,wikidata
+simpsons,Juliet Hobbes,Juliet Hobbes,ok,168,1.000,100,views,wikidata
 simpsons,Brad Goodman,Brad Goodman,ok,168,1.000,100,views,wikidata
 simpsons,Dr. J. Loren Pryor,Dr. J. Loren Pryor,ok,144,1.000,100,views,wikidata
 simpsons,Aristotle Amadopolis,Aristotle Amadopolis,ok,144,1.000,100,views,wikidata
 simpsons,Itchy,Itchy (The Simpsons),ok,120,1.000,100,views,wikidata
 simpsons,Mary Spuckler,Mary Spuckler,ok,120,1.000,100,views,wikidata
-simpsons,Audrey McConnell,Audrey McConnell,ok,120,1.000,100,views,wikidata
 simpsons,Dave Shutton,Dave Shutton,ok,120,1.000,100,views,wikidata
+simpsons,Audrey McConnell,Audrey McConnell,ok,120,1.000,100,views,wikidata
 simpsons,McBain,McBain (The Simpsons),ok,96,1.000,100,views,wikidata
 simpsons,Steve Mobbs,Steve Mobbs,ok,96,1.000,100,views,wikidata
 simpsons,Abbie Simpson,Abbie Simpson,ok,72,1.000,100,views,wikidata
@@ -2606,21 +2607,20 @@ simpsons,Red Barclay,Red Barclay,ok,48,1.000,100,views,wikidata
 simpsons,Señor Ding-Dong,Señor Ding-Dong,ok,48,1.000,100,views,wikidata
 simpsons,Dia-Betty,Dia-Betty,ok,48,1.000,100,views,wikidata
 simpsons,Frank Grimes Junior,"Frank Grimes, Jr.",ok,24,1.000,100,views,wikidata
-simpsons,Yuma Hickman,Yuma Hickman,ok,24,1.000,100,views,wikidata
 simpsons,Lucille Botzcowski,Lucille Botzcowski,ok,24,1.000,100,views,wikidata
+simpsons,Yuma Hickman,Yuma Hickman,ok,24,1.000,100,views,wikidata
+simpsons,Beatrice Simmons,Beatrice Simmons,ok,24,1.000,100,views,wikidata
 simpsons,Mr. Bergstrom,Mr. Bergstrom,ok,24,1.000,100,views,wikidata
 simpsons,Comic Book Gay,Comic Book Gay,ok,24,1.000,100,views,wikidata
 simpsons,Arnie Gumble,Arnie Gumble,ok,24,1.000,100,views,wikidata
 simpsons,Lily Bancroft,Lily Bancroft,ok,24,1.000,100,views,wikidata
 simpsons,Mimsy Bancroft,Mimsy Bancroft,ok,24,1.000,100,views,wikidata
-simpsons,Beatrice Simmons,Beatrice Simmons,ok,24,1.000,100,views,wikidata
-simpsons,The Winfields,The Winfields,ok,24,1.000,100,views,wikidata
 simpsons,Ray Magini,Ray Magini,ok,24,1.000,100,views,wikidata
 simpsons,Homer Glumplich,Homer Glumplich,ok,24,1.000,100,views,wikidata
 simpsons,Roy,Roy (The Simpsons),ok,24,1.000,100,views,wikidata
-simpsons,Wendy Sage,Wendy Sage,long tail: not ranked,,,100,hand,wikidata
-simpsons,Sneed's Feed & Seed,Sneed's Feed & Seed,long tail: not ranked,,,100,hand,wikidata
-simpsons,Juliet Hobbes,Juliet Hobbes,long tail: not ranked,,,100,hand,wikidata
+simpsons,Amber Simpson,Amber Simpson (The Simpsons),long tail: not ranked,,,100,hand,wikidata
+simpsons,The Winfields,The Winfields,long tail: not ranked,,,100,hand,wikidata
+simpsons,Principal Dondelinger,Principal Dondelinger,long tail: not ranked,,,100,hand,wikidata
 soda,Coca-Cola,Coca-Cola,ok,2886624,0.000,10,views,hand
 soda,Dr Pepper,Dr Pepper,ok,1663512,0.149,10,views,wikidata
 soda,Pepsi,Pepsi,ok,1258320,0.236,10,views,hand
@@ -2777,166 +2777,166 @@ states,South Dakota,South Dakota,ok,1134120,0.980,100,views,wikidata
 states,North Dakota,North Dakota,ok,1060608,0.990,100,views,wikidata
 stores,Walmart,Walmart,ok,2744064,0.000,10,views,hand
 stores,Costco,Costco,ok,1992936,0.048,10,views,wikidata
-stores,7-Eleven,7-Eleven,ok,1541496,0.084,10,views,wikidata
-stores,Target,Target Corporation,ok,1242432,0.111,10,views,hand
-stores,Sears,Sears,ok,1149624,0.133,10,views,hand
+stores,7-Eleven,7-Eleven,ok,1541496,0.083,10,views,wikidata
+stores,Target,Target Corporation,ok,1242432,0.110,10,views,hand
+stores,Sears,Sears,ok,1149624,0.132,10,views,hand
 stores,The Home Depot,Home Depot,ok,1116840,0.153,10,views,wikidata
-stores,ExxonMobil,ExxonMobil,ok,1060464,0.173,10,views,wikidata
-stores,Raising Cane's Chicken Fingers,Raising Cane's Chicken Fingers,ok,941256,0.192,10,views,wikidata
-stores,Kmart,Kmart,ok,924432,0.208,10,views,wikidata
-stores,Chevron Corporation,Chevron Corporation,ok,884640,0.225,10,views,wikidata
-stores,Ben & Jerry's,Ben & Jerry's,ok,857112,0.240,10,views,wikidata
-stores,Chipotle Mexican Grill,Chipotle Mexican Grill,ok,855576,0.255,25,views,wikidata
-stores,"Toys ""R"" Us","Toys ""R"" Us",ok,821592,0.270,25,views,wikidata
-stores,Kroger,Kroger,ok,799824,0.285,25,views,wikidata
-stores,Häagen-Dazs,Häagen-Dazs,ok,775344,0.299,25,views,wikidata
-stores,Chuck E. Cheese,Chuck E. Cheese,ok,711600,0.313,25,views,wikidata
-stores,Hooters,Hooters,ok,656064,0.325,25,views,wikidata
-stores,Levi Strauss & Co.,Levi Strauss & Co.,ok,631464,0.337,25,views,wikidata
-stores,A&W Restaurants,A&W Restaurants,ok,615096,0.348,25,views,wikidata
-stores,Hard Rock Cafe,Hard Rock Cafe,ok,602280,0.359,25,views,wikidata
-stores,"Crocs, Inc.",Crocs,ok,571032,0.370,25,views,wikidata
-stores,JCPenney,JCPenney,ok,566472,0.380,25,views,wikidata
-stores,Best Buy,Best Buy,ok,566280,0.390,25,views,wikidata
-stores,Dairy Queen,Dairy Queen,ok,562128,0.400,25,views,wikidata
-stores,Macy's,Macy's,ok,551592,0.410,25,views,wikidata
-stores,Wawa,Wawa (company),ok,548736,0.419,25,views,wikidata
-stores,Sam's Club,Sam's Club,ok,540648,0.429,25,views,wikidata
-stores,Lowe's,Lowe's,ok,540336,0.439,25,views,wikidata
-stores,Abercrombie & Fitch,Abercrombie & Fitch,ok,528552,0.448,25,views,wikidata
-stores,Tiffany & Co.,Tiffany & Co.,ok,498192,0.458,25,views,wikidata
-stores,GameStop,GameStop,ok,491808,0.466,25,views,wikidata
-stores,Gap Inc.,Gap Inc.,ok,474096,0.475,25,views,wikidata
-stores,Krispy Kreme,Krispy Kreme,ok,468984,0.483,25,views,wikidata
-stores,AMC Theatres,AMC Theatres,ok,455712,0.492,25,views,wikidata
-stores,Baskin-Robbins,Baskin-Robbins,ok,448680,0.500,25,views,wikidata
-stores,Walgreens,Walgreens,ok,423144,0.508,40,views,wikidata
-stores,"Patagonia, Inc.","Patagonia, Inc.",ok,419112,0.515,40,views,wikidata
-stores,Olive Garden,Olive Garden,ok,414264,0.523,40,views,wikidata
-stores,CVS Pharmacy,CVS Pharmacy,ok,406272,0.530,40,views,wikidata
-stores,Texas Roadhouse,Texas Roadhouse,ok,392832,0.537,40,views,wikidata
-stores,RadioShack,RadioShack,ok,392496,0.544,40,views,wikidata
-stores,Benihana,Benihana,ok,392184,0.551,40,views,wikidata
-stores,Big Boy Restaurants,Big Boy Restaurants,ok,386328,0.558,40,views,wikidata
-stores,Barnes & Noble,Barnes & Noble,ok,381432,0.565,40,views,wikidata
-stores,Cracker Barrel,Cracker Barrel,ok,377256,0.571,40,views,wikidata
-stores,Denny's,Denny's,ok,375648,0.578,40,views,wikidata
-stores,The Cheesecake Factory,The Cheesecake Factory,ok,366408,0.585,40,views,wikidata
-stores,Meijer,Meijer,ok,363648,0.591,40,views,wikidata
-stores,Nordstrom,Nordstrom,ok,362832,0.598,40,views,hand
-stores,Dollar General,Dollar General,ok,350376,0.604,40,views,wikidata
-stores,Panera Bread,Panera Bread,ok,346944,0.610,40,views,wikidata
-stores,BJ's Wholesale Club,BJ's Wholesale Club,ok,342672,0.616,40,views,wikidata
-stores,Din Tai Fung,Din Tai Fung,ok,341112,0.622,40,views,wikidata
-stores,Esso,Esso,ok,337344,0.628,40,views,wikidata
-stores,Hobby Lobby,Hobby Lobby,ok,336720,0.634,40,views,wikidata
-stores,Red Lobster,Red Lobster,ok,335232,0.640,40,views,wikidata
-stores,Chili's,Chili's,ok,313128,0.646,40,views,wikidata
-stores,State Farm Insurance,State Farm,ok,311808,0.652,40,views,wikidata
-stores,Harbor Freight Tools,Harbor Freight Tools,ok,309144,0.657,40,views,wikidata
-stores,Menards,Menards,ok,301152,0.663,40,views,wikidata
-stores,Church's Texas Chicken,Church's Texas Chicken,ok,299568,0.668,40,views,wikidata
-stores,Texaco,Texaco,ok,298128,0.673,40,views,wikidata
-stores,TGI Fridays,TGI Fridays,ok,290208,0.679,40,views,wikidata
-stores,Dollar Tree,Dollar Tree,ok,289848,0.684,40,views,wikidata
-stores,TJ Maxx,TJ Maxx,ok,289248,0.689,40,views,hand
-stores,Montgomery Ward,Montgomery Ward,ok,286608,0.694,40,views,hand
-stores,Apple Store,Apple Store,ok,284280,0.699,40,views,wikidata
-stores,Jimmy John's,Jimmy John's,ok,282912,0.704,60,views,wikidata
-stores,National Amusements,National Amusements,ok,282312,0.709,60,views,wikidata
-stores,Pathé,Pathé,ok,280536,0.714,60,views,wikidata
-stores,Saks Fifth Avenue,Saks Fifth Avenue,ok,279048,0.719,60,views,hand
-stores,Kohl's,Kohl's,ok,274344,0.724,60,views,wikidata
-stores,Buffalo Wild Wings,Buffalo Wild Wings,ok,270696,0.729,60,views,wikidata
-stores,Ross,Ross Stores,ok,270480,0.734,60,views,wikidata
-stores,Applebee's,Applebee's,ok,269808,0.738,60,views,wikidata
-stores,Steak 'n Shake,Steak 'n Shake,ok,249048,0.743,60,views,wikidata
-stores,Fry's Electronics,Fry's Electronics,ok,248520,0.748,60,views,wikidata
-stores,Phillips 66,Phillips 66,ok,244896,0.752,60,views,wikidata
-stores,Quiznos,Quiznos,ok,242376,0.756,60,views,wikidata
-stores,Rite Aid,Rite Aid,ok,237672,0.761,60,views,wikidata
-stores,Staples Inc.,Staples Inc.,ok,235176,0.765,60,views,wikidata
-stores,Orange Julius,Orange Julius,ok,234288,0.769,60,views,wikidata
-stores,Neiman Marcus,Neiman Marcus,ok,230400,0.773,60,views,hand
-stores,P. F. Chang's China Bistro,P. F. Chang's,ok,230232,0.777,60,views,wikidata
-stores,Dillard's,Dillard's,ok,224376,0.781,60,views,wikidata
-stores,Goodwill Industries,Goodwill Industries,ok,223608,0.785,60,views,wikidata
-stores,Bloomingdale's,Bloomingdale's,ok,222360,0.789,60,views,hand
-stores,Eataly,Eataly,ok,221520,0.793,60,views,wikidata
-stores,Rainforest Cafe,Rainforest Cafe,ok,216432,0.797,60,views,wikidata
-stores,Zaxby's,Zaxby's,ok,215160,0.801,60,views,wikidata
-stores,Banana Republic,Banana Republic,ok,213744,0.805,60,views,wikidata
-stores,Hallmark Cards,Hallmark Cards,ok,212136,0.808,60,views,wikidata
-stores,Sizzler,Sizzler,ok,212016,0.812,60,views,wikidata
-stores,Getty Oil,Getty Oil,ok,205056,0.816,60,views,wikidata
-stores,Hot Topic,Hot Topic,ok,198360,0.819,60,views,wikidata
-stores,QuikTrip,QuikTrip,ok,197616,0.823,60,views,wikidata
-stores,Great Atlantic & Pacific Tea Company,A&P,ok,196656,0.826,60,views,wikidata
-stores,Marathon Petroleum,Marathon Petroleum,ok,196344,0.830,60,views,wikidata
-stores,Haidilao,Haidilao,ok,192696,0.833,60,views,wikidata
-stores,House of Blues,House of Blues,ok,190032,0.837,60,views,wikidata
-stores,Quiksilver,Quiksilver,ok,189192,0.840,60,views,wikidata
-stores,Marshalls,Marshalls,ok,184752,0.843,60,views,wikidata
-stores,The Cannon Group,"The Cannon Group, Inc.",ok,184248,0.847,60,views,wikidata
-stores,Regal Cinemas,Regal Cinemas,ok,182688,0.850,80,views,wikidata
-stores,Sunoco,Sunoco,ok,181848,0.853,80,views,wikidata
-stores,Ulta Beauty,Ulta Beauty,ok,180216,0.856,80,views,wikidata
-stores,Verizon,Verizon (wireless service),ok,174288,0.860,80,views,wikidata
-stores,Fred Meyer,Fred Meyer,ok,169032,0.863,80,views,wikidata
-stores,AutoZone,AutoZone,ok,168072,0.866,80,views,wikidata
-stores,Sinclair Oil Corporation,Sinclair Oil Corporation,ok,167304,0.869,80,views,wikidata
-stores,Hess Corporation,Hess Corporation,ok,165984,0.872,80,views,wikidata
-stores,Citgo,Citgo,ok,165888,0.875,80,views,wikidata
-stores,Auntie Anne's,Auntie Anne's,ok,165288,0.877,80,views,wikidata
-stores,Love's Travel Stops & Country Stores,Love's,ok,162960,0.880,80,views,wikidata
-stores,J.Crew,J.Crew,ok,160728,0.883,80,views,wikidata
-stores,Marshall Field's,Marshall Field's,ok,160656,0.886,80,views,hand
-stores,Valero Energy,Valero Energy,ok,157992,0.889,80,views,wikidata
-stores,FAO Schwarz,FAO Schwarz,ok,155040,0.892,80,views,wikidata
-stores,Barneys,Barneys New York,ok,152712,0.895,80,views,hand
-stores,Lord & Taylor,Lord & Taylor,ok,149640,0.897,80,views,wikidata
-stores,Caltex,Caltex,ok,148872,0.900,80,views,wikidata
-stores,ARCO,ARCO,ok,147408,0.902,80,views,wikidata
-stores,Bergdorf Goodman,Bergdorf Goodman,ok,147216,0.905,80,views,hand
-stores,PetSmart,PetSmart,ok,146016,0.908,80,views,wikidata
-stores,Red Robin,Red Robin,ok,145680,0.910,80,views,wikidata
-stores,Cinemark,Cinemark Theatres,ok,140664,0.913,80,views,wikidata
-stores,Belk,Belk,ok,140136,0.915,80,views,hand
-stores,Family Dollar,Family Dollar,ok,138720,0.918,80,views,wikidata
-stores,Sweetgreen,Sweetgreen,ok,135744,0.920,80,views,wikidata
-stores,Bed Bath & Beyond Inc.,Bed Bath & Beyond (1987–2023),ok,129552,0.923,80,views,wikidata
-stores,Cold Stone Creamery,Cold Stone Creamery,ok,129216,0.925,80,views,wikidata
-stores,Burlington,Burlington Stores (off-price retailer),ok,128784,0.927,80,views,hand
-stores,Johnny Rockets,Johnny Rockets,ok,126840,0.929,80,views,wikidata
-stores,Loews Cineplex Entertainment,Loews Cineplex Entertainment,ok,125472,0.932,80,views,wikidata
-stores,Fatburger,Fatburger,ok,123696,0.934,80,views,wikidata
-stores,Claire's,Claire's,ok,122376,0.936,80,views,wikidata
-stores,Amazon Go,Amazon Go,ok,118176,0.938,80,views,wikidata
-stores,NAPA,NAPA Auto Parts,ok,116856,0.940,80,views,wikidata
-stores,Ruby Tuesday,Ruby Tuesday (restaurant),ok,116592,0.942,80,views,wikidata
-stores,Gimbels,Gimbels,ok,115704,0.945,80,views,wikidata
-stores,Mervyn's,Mervyn's,ok,113592,0.947,80,views,hand
-stores,Einstein Bros. Bagels,Einstein Bros. Bagels,ok,111984,0.949,80,views,wikidata
+stores,ExxonMobil,ExxonMobil,ok,1060464,0.172,10,views,wikidata
+stores,Raising Cane's Chicken Fingers,Raising Cane's Chicken Fingers,ok,941256,0.191,10,views,wikidata
+stores,Kmart,Kmart,ok,924432,0.207,10,views,wikidata
+stores,Chevron Corporation,Chevron Corporation,ok,884640,0.224,10,views,wikidata
+stores,Ben & Jerry's,Ben & Jerry's,ok,857112,0.239,10,views,wikidata
+stores,Chipotle Mexican Grill,Chipotle Mexican Grill,ok,855576,0.254,25,views,wikidata
+stores,"Toys ""R"" Us","Toys ""R"" Us",ok,821592,0.269,25,views,wikidata
+stores,Kroger,Kroger,ok,799824,0.284,25,views,wikidata
+stores,Häagen-Dazs,Häagen-Dazs,ok,775344,0.298,25,views,wikidata
+stores,Chuck E. Cheese,Chuck E. Cheese,ok,711600,0.312,25,views,wikidata
+stores,Hooters,Hooters,ok,656064,0.324,25,views,wikidata
+stores,Levi Strauss & Co.,Levi Strauss & Co.,ok,631464,0.336,25,views,wikidata
+stores,A&W Restaurants,A&W Restaurants,ok,615096,0.347,25,views,wikidata
+stores,Hard Rock Cafe,Hard Rock Cafe,ok,602280,0.358,25,views,wikidata
+stores,"Crocs, Inc.",Crocs,ok,571032,0.368,25,views,wikidata
+stores,JCPenney,JCPenney,ok,566472,0.378,25,views,wikidata
+stores,Best Buy,Best Buy,ok,566280,0.388,25,views,wikidata
+stores,Dairy Queen,Dairy Queen,ok,562128,0.398,25,views,wikidata
+stores,Macy's,Macy's,ok,551592,0.408,25,views,wikidata
+stores,Wawa,Wawa (company),ok,548736,0.418,25,views,wikidata
+stores,Sam's Club,Sam's Club,ok,540648,0.427,25,views,wikidata
+stores,Lowe's,Lowe's,ok,540336,0.437,25,views,wikidata
+stores,Abercrombie & Fitch,Abercrombie & Fitch,ok,528552,0.446,25,views,wikidata
+stores,Tiffany & Co.,Tiffany & Co.,ok,498192,0.456,25,views,wikidata
+stores,GameStop,GameStop,ok,491808,0.465,25,views,wikidata
+stores,Gap Inc.,Gap Inc.,ok,474096,0.473,25,views,wikidata
+stores,Krispy Kreme,Krispy Kreme,ok,468984,0.482,25,views,wikidata
+stores,AMC Theatres,AMC Theatres,ok,455712,0.490,25,views,wikidata
+stores,Baskin-Robbins,Baskin-Robbins,ok,448680,0.498,25,views,wikidata
+stores,Walgreens,Walgreens,ok,423144,0.506,40,views,wikidata
+stores,"Patagonia, Inc.","Patagonia, Inc.",ok,419112,0.513,40,views,wikidata
+stores,Olive Garden,Olive Garden,ok,414264,0.521,40,views,wikidata
+stores,CVS Pharmacy,CVS Pharmacy,ok,406272,0.528,40,views,wikidata
+stores,Texas Roadhouse,Texas Roadhouse,ok,392832,0.535,40,views,wikidata
+stores,RadioShack,RadioShack,ok,392496,0.542,40,views,wikidata
+stores,Benihana,Benihana,ok,392184,0.549,40,views,wikidata
+stores,Big Boy Restaurants,Big Boy Restaurants,ok,386328,0.556,40,views,wikidata
+stores,Barnes & Noble,Barnes & Noble,ok,381432,0.562,40,views,wikidata
+stores,Cracker Barrel,Cracker Barrel,ok,377256,0.569,40,views,wikidata
+stores,Denny's,Denny's,ok,375648,0.576,40,views,wikidata
+stores,The Cheesecake Factory,The Cheesecake Factory,ok,366408,0.582,40,views,wikidata
+stores,Meijer,Meijer,ok,363648,0.589,40,views,wikidata
+stores,Nordstrom,Nordstrom,ok,362832,0.595,40,views,hand
+stores,Dollar General,Dollar General,ok,350376,0.602,40,views,wikidata
+stores,Panera Bread,Panera Bread,ok,346944,0.608,40,views,wikidata
+stores,BJ's Wholesale Club,BJ's Wholesale Club,ok,342672,0.614,40,views,wikidata
+stores,Din Tai Fung,Din Tai Fung,ok,341112,0.620,40,views,wikidata
+stores,Esso,Esso,ok,337344,0.626,40,views,wikidata
+stores,Hobby Lobby,Hobby Lobby,ok,336720,0.632,40,views,wikidata
+stores,Red Lobster,Red Lobster,ok,335232,0.638,40,views,wikidata
+stores,Chili's,Chili's,ok,313128,0.644,40,views,wikidata
+stores,State Farm Insurance,State Farm,ok,311808,0.649,40,views,wikidata
+stores,Harbor Freight Tools,Harbor Freight Tools,ok,309144,0.655,40,views,wikidata
+stores,Menards,Menards,ok,301152,0.660,40,views,wikidata
+stores,Church's Texas Chicken,Church's Texas Chicken,ok,299568,0.665,40,views,wikidata
+stores,Texaco,Texaco,ok,298128,0.671,40,views,wikidata
+stores,Bass Pro Shops,Bass Pro Shops,ok,297000,0.676,40,views,wikidata
+stores,TGI Fridays,TGI Fridays,ok,290208,0.681,40,views,wikidata
+stores,Dollar Tree,Dollar Tree,ok,289848,0.686,40,views,wikidata
+stores,TJ Maxx,TJ Maxx,ok,289248,0.691,40,views,hand
+stores,Montgomery Ward,Montgomery Ward,ok,286608,0.697,40,views,hand
+stores,Apple Store,Apple Store,ok,284280,0.702,60,views,wikidata
+stores,Jimmy John's,Jimmy John's,ok,282912,0.707,60,views,wikidata
+stores,National Amusements,National Amusements,ok,282312,0.712,60,views,wikidata
+stores,Pathé,Pathé,ok,280536,0.717,60,views,wikidata
+stores,Saks Fifth Avenue,Saks Fifth Avenue,ok,279048,0.721,60,views,hand
+stores,Kohl's,Kohl's,ok,274344,0.726,60,views,wikidata
+stores,Buffalo Wild Wings,Buffalo Wild Wings,ok,270696,0.731,60,views,wikidata
+stores,Ross,Ross Stores,ok,270480,0.736,60,views,wikidata
+stores,Applebee's,Applebee's,ok,269808,0.741,60,views,wikidata
+stores,Steak 'n Shake,Steak 'n Shake,ok,249048,0.745,60,views,wikidata
+stores,Fry's Electronics,Fry's Electronics,ok,248520,0.750,60,views,wikidata
+stores,Phillips 66,Phillips 66,ok,244896,0.754,60,views,wikidata
+stores,Quiznos,Quiznos,ok,242376,0.759,60,views,wikidata
+stores,Rite Aid,Rite Aid,ok,237672,0.763,60,views,wikidata
+stores,Staples Inc.,Staples Inc.,ok,235176,0.767,60,views,wikidata
+stores,Orange Julius,Orange Julius,ok,234288,0.771,60,views,wikidata
+stores,Neiman Marcus,Neiman Marcus,ok,230400,0.775,60,views,hand
+stores,P. F. Chang's China Bistro,P. F. Chang's,ok,230232,0.779,60,views,wikidata
+stores,Dillard's,Dillard's,ok,224376,0.783,60,views,wikidata
+stores,Goodwill Industries,Goodwill Industries,ok,223608,0.787,60,views,wikidata
+stores,Bloomingdale's,Bloomingdale's,ok,222360,0.791,60,views,hand
+stores,Eataly,Eataly,ok,221520,0.795,60,views,wikidata
+stores,Rainforest Cafe,Rainforest Cafe,ok,216432,0.799,60,views,wikidata
+stores,Zaxby's,Zaxby's,ok,215160,0.803,60,views,wikidata
+stores,Banana Republic,Banana Republic,ok,213744,0.807,60,views,wikidata
+stores,Hallmark Cards,Hallmark Cards,ok,212136,0.810,60,views,wikidata
+stores,Sizzler,Sizzler,ok,212016,0.814,60,views,wikidata
+stores,Getty Oil,Getty Oil,ok,205056,0.818,60,views,wikidata
+stores,Hot Topic,Hot Topic,ok,198360,0.821,60,views,wikidata
+stores,QuikTrip,QuikTrip,ok,197616,0.825,60,views,wikidata
+stores,Great Atlantic & Pacific Tea Company,A&P,ok,196656,0.828,60,views,wikidata
+stores,Marathon Petroleum,Marathon Petroleum,ok,196344,0.832,60,views,wikidata
+stores,Haidilao,Haidilao,ok,192696,0.835,60,views,wikidata
+stores,House of Blues,House of Blues,ok,190032,0.839,60,views,wikidata
+stores,Quiksilver,Quiksilver,ok,189192,0.842,60,views,wikidata
+stores,Marshalls,Marshalls,ok,184752,0.845,60,views,wikidata
+stores,The Cannon Group,"The Cannon Group, Inc.",ok,184248,0.849,60,views,wikidata
+stores,Regal Cinemas,Regal Cinemas,ok,182688,0.852,80,views,wikidata
+stores,Sunoco,Sunoco,ok,181848,0.855,80,views,wikidata
+stores,Ulta Beauty,Ulta Beauty,ok,180216,0.858,80,views,wikidata
+stores,Verizon,Verizon (wireless service),ok,174288,0.861,80,views,wikidata
+stores,Fred Meyer,Fred Meyer,ok,169032,0.865,80,views,wikidata
+stores,AutoZone,AutoZone,ok,168072,0.868,80,views,wikidata
+stores,Sinclair Oil Corporation,Sinclair Oil Corporation,ok,167304,0.870,80,views,wikidata
+stores,Hess Corporation,Hess Corporation,ok,165984,0.873,80,views,wikidata
+stores,Citgo,Citgo,ok,165888,0.876,80,views,wikidata
+stores,Auntie Anne's,Auntie Anne's,ok,165288,0.879,80,views,wikidata
+stores,Love's Travel Stops & Country Stores,Love's,ok,162960,0.882,80,views,wikidata
+stores,J.Crew,J.Crew,ok,160728,0.885,80,views,wikidata
+stores,Marshall Field's,Marshall Field's,ok,160656,0.888,80,views,hand
+stores,Valero Energy,Valero Energy,ok,157992,0.891,80,views,wikidata
+stores,FAO Schwarz,FAO Schwarz,ok,155040,0.893,80,views,wikidata
+stores,Barneys,Barneys New York,ok,152712,0.896,80,views,hand
+stores,Lord & Taylor,Lord & Taylor,ok,149640,0.899,80,views,wikidata
+stores,Caltex,Caltex,ok,148872,0.902,80,views,wikidata
+stores,ARCO,ARCO,ok,147408,0.904,80,views,wikidata
+stores,Bergdorf Goodman,Bergdorf Goodman,ok,147216,0.907,80,views,hand
+stores,PetSmart,PetSmart,ok,146016,0.909,80,views,wikidata
+stores,Red Robin,Red Robin,ok,145680,0.912,80,views,wikidata
+stores,Cinemark,Cinemark Theatres,ok,140664,0.914,80,views,wikidata
+stores,Belk,Belk,ok,140136,0.917,80,views,hand
+stores,Family Dollar,Family Dollar,ok,138720,0.919,80,views,wikidata
+stores,Sweetgreen,Sweetgreen,ok,135744,0.922,80,views,wikidata
+stores,Bed Bath & Beyond Inc.,Bed Bath & Beyond (1987–2023),ok,129552,0.924,80,views,wikidata
+stores,Cold Stone Creamery,Cold Stone Creamery,ok,129216,0.927,80,views,wikidata
+stores,Burlington,Burlington Stores (off-price retailer),ok,128784,0.929,80,views,hand
+stores,Johnny Rockets,Johnny Rockets,ok,126840,0.931,80,views,wikidata
+stores,Loews Cineplex Entertainment,Loews Cineplex Entertainment,ok,125472,0.933,80,views,wikidata
+stores,Fatburger,Fatburger,ok,123696,0.935,80,views,wikidata
+stores,Claire's,Claire's,ok,122376,0.938,80,views,wikidata
+stores,Amazon Go,Amazon Go,ok,118176,0.940,80,views,wikidata
+stores,NAPA,NAPA Auto Parts,ok,116856,0.942,80,views,wikidata
+stores,Ruby Tuesday,Ruby Tuesday (restaurant),ok,116592,0.944,80,views,wikidata
+stores,Gimbels,Gimbels,ok,115704,0.946,80,views,wikidata
+stores,Mervyn's,Mervyn's,ok,113592,0.948,80,views,hand
 stores,Hudson's,,missing,0,,80,hand,hand
-stores,Advance Auto Parts,Advance Auto Parts,ok,110880,0.951,100,views,wikidata
-stores,Office Depot,Office Depot,ok,110016,0.952,100,views,wikidata
-stores,Zayre,Zayre,ok,109224,0.954,100,views,hand
-stores,Petco,Petco,ok,106128,0.956,100,views,wikidata
-stores,Boscov's,Boscov's,ok,104616,0.958,100,views,hand
-stores,California Pizza Kitchen,California Pizza Kitchen,ok,104088,0.960,100,views,wikidata
-stores,Jamba,Jamba Juice,ok,100080,0.962,100,views,wikidata
-stores,Jockey International,Jockey International,ok,94848,0.964,100,views,wikidata
-stores,Braum's,Braum's,ok,94248,0.965,100,views,wikidata
-stores,Ryder,Ryder,ok,94032,0.967,100,views,wikidata
-stores,El Pollo Loco,El Pollo Loco,ok,92400,0.969,100,views,wikidata
-stores,The Halal Guys,The Halal Guys,ok,86280,0.970,100,views,wikidata
-stores,Pottery Barn,Pottery Barn,ok,85680,0.972,100,views,wikidata
-stores,Aéropostale,Aéropostale (clothing brand),ok,84984,0.973,100,views,wikidata
-stores,Ames,Ames Department Stores,ok,84528,0.975,100,views,hand
-stores,Pinkberry,Pinkberry,ok,82248,0.976,100,views,wikidata
-stores,Smashburger,Smashburger (restaurant chain),ok,80736,0.978,100,views,wikidata
-stores,Club Monaco,Club Monaco,ok,80736,0.979,100,views,wikidata
-stores,RaceTrac,RaceTrac,ok,73488,0.981,100,views,wikidata
+stores,Einstein Bros. Bagels,Einstein Bros. Bagels,ok,111984,0.950,100,views,wikidata
+stores,Advance Auto Parts,Advance Auto Parts,ok,110880,0.952,100,views,wikidata
+stores,Office Depot,Office Depot,ok,110016,0.954,100,views,wikidata
+stores,Zayre,Zayre,ok,109224,0.956,100,views,hand
+stores,Petco,Petco,ok,106128,0.958,100,views,wikidata
+stores,Boscov's,Boscov's,ok,104616,0.960,100,views,hand
+stores,California Pizza Kitchen,California Pizza Kitchen,ok,104088,0.962,100,views,wikidata
+stores,Jamba,Jamba Juice,ok,100080,0.963,100,views,wikidata
+stores,Jockey International,Jockey International,ok,94848,0.965,100,views,wikidata
+stores,Braum's,Braum's,ok,94248,0.967,100,views,wikidata
+stores,Ryder,Ryder,ok,94032,0.968,100,views,wikidata
+stores,El Pollo Loco,El Pollo Loco,ok,92400,0.970,100,views,wikidata
+stores,The Halal Guys,The Halal Guys,ok,86280,0.972,100,views,wikidata
+stores,Pottery Barn,Pottery Barn,ok,85680,0.973,100,views,wikidata
+stores,Aéropostale,Aéropostale (clothing brand),ok,84984,0.975,100,views,wikidata
+stores,Ames,Ames Department Stores,ok,84528,0.976,100,views,hand
+stores,Pinkberry,Pinkberry,ok,82248,0.978,100,views,wikidata
+stores,Smashburger,Smashburger (restaurant chain),ok,80736,0.979,100,views,wikidata
+stores,Club Monaco,Club Monaco,ok,80736,0.981,100,views,wikidata
 stores,FedEx Office,FedEx Office,ok,73128,0.982,100,views,wikidata
 stores,La Senza,La Senza,ok,72840,0.983,100,views,wikidata
 stores,OfficeMax,OfficeMax,ok,72768,0.985,100,views,wikidata
@@ -2958,29 +2958,33 @@ stores,Wanamaker's,John Wanamaker Store,ok,30840,0.999,100,views,wikidata
 stores,Standard Oil of Ohio,Standard Oil Company (Ohio),ok,26760,0.999,100,views,wikidata
 stores,Cineworld,Regal Global Entertainment,ok,10320,1.000,100,views,wikidata
 stores,Crumbl Cookies,Crumbl,ok,8040,1.000,100,views,wikidata
+stores,W. W. Grainger,W. W. Grainger,long tail: not ranked,,,100,hand,wikidata
+stores,76,76 (gas station),long tail: not ranked,,,100,hand,wikidata
+stores,RaceTrac,RaceTrac,long tail: not ranked,,,100,hand,wikidata
 stores,Randy's Donuts,Randy's Donuts,long tail: not ranked,,,100,hand,wikidata
 stores,Carvel,Carvel (franchise),long tail: not ranked,,,100,hand,wikidata
 stores,Corner Bakery Cafe,Corner Bakery Cafe,long tail: not ranked,,,100,hand,wikidata
 stores,Wetzel's Pretzels,Wetzel's Pretzels,long tail: not ranked,,,100,hand,wikidata
 stores,Murphy USA,Murphy USA,long tail: not ranked,,,100,hand,wikidata
-stores,Bass Pro Shops,Bass Pro Shops,long tail: not ranked,,,100,hand,wikidata
-stores,W. W. Grainger,W. W. Grainger,long tail: not ranked,,,100,hand,wikidata
-stores,76,76 (gas station),long tail: not ranked,,,100,hand,wikidata
 stores,Bruster's Ice Cream,Bruster's Ice Cream,long tail: not ranked,,,100,hand,wikidata
 stores,Dave & Buster's,Dave & Buster's,long tail: not ranked,,,100,hand,wikidata
-stores,L.L.Bean,L.L.Bean,long tail: not ranked,,,100,hand,wikidata
 stores,Sunglass Hut,Sunglass Hut,long tail: not ranked,,,100,hand,wikidata
 stores,Skyline Chili,Skyline Chili,long tail: not ranked,,,100,hand,wikidata
+stores,Cicis,Cicis Pizza,long tail: not ranked,,,100,hand,wikidata
 stores,Michaels,Michaels,long tail: not ranked,,,100,hand,wikidata
 stores,Noodles & Company,Noodles & Company,long tail: not ranked,,,100,hand,wikidata
 stores,PriceSmart,PriceSmart,long tail: not ranked,,,100,hand,wikidata
+stores,Stop & Shop,Stop & Shop,long tail: not ranked,,,100,hand,wikidata
+stores,99 Cents Only Stores,99 Cents Only Stores,long tail: not ranked,,,100,hand,wikidata
+stores,Murphy Oil,Murphy Oil,long tail: not ranked,,,100,hand,wikidata
+stores,L.L.Bean,L.L.Bean,long tail: not ranked,,,100,hand,wikidata
 stores,Speedway,Speedway (store),long tail: not ranked,,,100,hand,wikidata
 stores,TravelCenters of America,TravelCenters of America,long tail: not ranked,,,100,hand,wikidata
 stores,True Value,True Value,long tail: not ranked,,,100,hand,wikidata
-stores,Delek US,Delek US,long tail: not ranked,,,100,hand,wikidata
 stores,Qdoba Mexican Eats,Qdoba,long tail: not ranked,,,100,hand,wikidata
 stores,Pilot Flying J,Pilot Flying J,long tail: not ranked,,,100,hand,wikidata
 stores,Giant Eagle,Giant Eagle,long tail: not ranked,,,100,hand,wikidata
+stores,Delek US,Delek US,long tail: not ranked,,,100,hand,wikidata
 stores,Theater Owners Booking Association,Theatre Owners Booking Association,long tail: not ranked,,,100,hand,wikidata
 stores,Cabela's,Cabela's,long tail: not ranked,,,100,hand,wikidata
 stores,Carmike Cinemas,Carmike Cinemas,long tail: not ranked,,,100,hand,wikidata
@@ -2990,30 +2994,30 @@ stores,Sheetz,Sheetz,long tail: not ranked,,,100,hand,wikidata
 stores,Twin Peaks,Twin Peaks (restaurant chain),long tail: not ranked,,,100,hand,wikidata
 stores,Wayback Burgers,Wayback Burgers,long tail: not ranked,,,100,hand,wikidata
 stores,Club 33,Club 33,long tail: not ranked,,,100,hand,wikidata
-stores,Cicis,Cicis Pizza,long tail: not ranked,,,100,hand,wikidata
-stores,Stop & Shop,Stop & Shop,long tail: not ranked,,,100,hand,wikidata
-stores,99 Cents Only Stores,99 Cents Only Stores,long tail: not ranked,,,100,hand,wikidata
-stores,Murphy Oil,Murphy Oil,long tail: not ranked,,,100,hand,wikidata
 stores,Bruegger's,Bruegger's,long tail: not ranked,,,100,hand,wikidata
 stores,Claim Jumper,Claim Jumper,long tail: not ranked,,,100,hand,wikidata
 stores,Cost Plus World Market,World Market (store),long tail: not ranked,,,100,hand,wikidata
 stores,Così,Così (restaurant),long tail: not ranked,,,100,hand,wikidata
 stores,Ascena Retail Group,KnitWell Group,long tail: not ranked,,,100,hand,wikidata
 stores,Duane Reade,Duane Reade,long tail: not ranked,,,100,hand,wikidata
+stores,Michael Hill Jeweller,Michael Hill Jeweller,long tail: not ranked,,,100,hand,wikidata
+stores,Mattress Firm,Mattress Firm,long tail: not ranked,,,100,hand,wikidata
+stores,Rubio's Coastal Grill,Rubio's Coastal Grill,long tail: not ranked,,,100,hand,wikidata
+stores,The Children's Place,The Children's Place,long tail: not ranked,,,100,hand,wikidata
+stores,Abraham & Straus,Abraham & Straus,long tail: not ranked,,,100,hand,wikidata
+stores,Ann Taylor,Ann Inc.,long tail: not ranked,,,100,hand,wikidata
 stores,Fred Harvey Company,Fred Harvey Company,long tail: not ranked,,,100,hand,wikidata
 stores,Graeter's,Graeter's,long tail: not ranked,,,100,hand,wikidata
 stores,Hecht's,Hecht's,long tail: not ranked,,,100,hand,wikidata
 stores,Howard Johnson's,Howard Johnson's,long tail: not ranked,,,100,hand,wikidata
 stores,JoAnn Fabrics,JoAnn Fabrics,long tail: not ranked,,,100,hand,wikidata
-stores,Biggby Coffee,Biggby Coffee,long tail: not ranked,,,100,hand,wikidata
-stores,Mattress Firm,Mattress Firm,long tail: not ranked,,,100,hand,wikidata
-stores,Rubio's Coastal Grill,Rubio's Coastal Grill,long tail: not ranked,,,100,hand,wikidata
 stores,Showcase Cinemas,Showcase Cinemas,long tail: not ranked,,,100,hand,wikidata
 stores,Tropical Smoothie Cafe,Tropical Smoothie Cafe,long tail: not ranked,,,100,hand,wikidata
-stores,Gyu-Kaku,Gyu-Kaku,long tail: not ranked,,,100,hand,wikidata
-stores,Cumberland Farms,Cumberland Farms,long tail: not ranked,,,100,hand,wikidata
 stores,Phở Hòa,Phở Hòa,long tail: not ranked,,,100,hand,wikidata
 stores,The Michaels Companies,The Michaels Companies,long tail: not ranked,,,100,hand,wikidata
+stores,Biggby Coffee,Biggby Coffee,long tail: not ranked,,,100,hand,wikidata
+stores,Cumberland Farms,Cumberland Farms,long tail: not ranked,,,100,hand,wikidata
+stores,Gyu-Kaku,Gyu-Kaku,long tail: not ranked,,,100,hand,wikidata
 stores,Office 1 Superstore,Office 1 Superstore,long tail: not ranked,,,100,hand,wikidata
 stores,Amoeba Music,Amoeba Music,long tail: not ranked,,,100,hand,wikidata
 stores,Bebe Stores,Bebe Stores,long tail: not ranked,,,100,hand,wikidata
@@ -3029,29 +3033,27 @@ stores,Shoney's,Shoney's,long tail: not ranked,,,100,hand,wikidata
 stores,Supercuts,Supercuts,long tail: not ranked,,,100,hand,wikidata
 stores,Marble Slab Creamery,Marble Slab Creamery,long tail: not ranked,,,100,hand,wikidata
 stores,Chicken Salad Chick,Chicken Salad Chick,long tail: not ranked,,,100,hand,wikidata
-stores,Michael Hill Jeweller,Michael Hill Jeweller,long tail: not ranked,,,100,hand,wikidata
-stores,The Children's Place,The Children's Place,long tail: not ranked,,,100,hand,wikidata
-stores,Abraham & Straus,Abraham & Straus,long tail: not ranked,,,100,hand,wikidata
-stores,Ann Taylor,Ann Inc.,long tail: not ranked,,,100,hand,wikidata
 stores,Burgerville,Burgerville,long tail: not ranked,,,100,hand,wikidata
 stores,Capriotti's,Capriotti's Sandwich Shop,long tail: not ranked,,,100,hand,wikidata
-stores,I. Magnin,I. Magnin,long tail: not ranked,,,100,hand,wikidata
-stores,Jack's,Jack's,long tail: not ranked,,,100,hand,wikidata
-stores,Blake's Lotaburger,Blake's Lotaburger,long tail: not ranked,,,100,hand,wikidata
-stores,Landmark Theatres,Landmark Theatres,long tail: not ranked,,,100,hand,wikidata
-stores,Lee's Famous Recipe Chicken,Lee's Famous Recipe Chicken,long tail: not ranked,,,100,hand,wikidata
+stores,Orpheum Circuit,Orpheum Circuit,long tail: not ranked,,,100,hand,wikidata
+stores,Century Theatres,Century Theatres,long tail: not ranked,,,100,hand,wikidata
 stores,Nestlé Toll House Café,Nestlé Toll House Café,long tail: not ranked,,,100,hand,wikidata
 stores,Ollie's Bargain Outlet,Ollie's Bargain Outlet,long tail: not ranked,,,100,hand,wikidata
 stores,P. C. Richard & Son,P. C. Richard & Son,long tail: not ranked,,,100,hand,wikidata
 stores,Pier 1 Imports,Pier 1 Imports,long tail: not ranked,,,100,hand,wikidata
 stores,Roadhouse Grill,Roadhouse Grill,long tail: not ranked,,,100,hand,wikidata
-stores,Souplantation,Souplantation and Sweet Tomatoes,long tail: not ranked,,,100,hand,wikidata
+stores,Landmark Theatres,Landmark Theatres,long tail: not ranked,,,100,hand,wikidata
+stores,Lee's Famous Recipe Chicken,Lee's Famous Recipe Chicken,long tail: not ranked,,,100,hand,wikidata
+stores,I. Magnin,I. Magnin,long tail: not ranked,,,100,hand,wikidata
+stores,Jack's,Jack's,long tail: not ranked,,,100,hand,wikidata
 stores,The Container Store,The Container Store,long tail: not ranked,,,100,hand,wikidata
 stores,The Original Pancake House,The Original Pancake House,long tail: not ranked,,,100,hand,wikidata
 stores,Tilted Kilt Pub & Eatery,Tilted Kilt Pub & Eatery,long tail: not ranked,,,100,hand,wikidata
 stores,United Dairy Farmers,United Dairy Farmers,long tail: not ranked,,,100,hand,wikidata
 stores,W. T. Grant,W. T. Grant,long tail: not ranked,,,100,hand,wikidata
 stores,Woodward & Lothrop,Woodward & Lothrop,long tail: not ranked,,,100,hand,wikidata
+stores,Souplantation,Souplantation and Sweet Tomatoes,long tail: not ranked,,,100,hand,wikidata
+stores,Blake's Lotaburger,Blake's Lotaburger,long tail: not ranked,,,100,hand,wikidata
 stores,Salsarita's Fresh Mexican Grill,Salsarita's Fresh Mexican Grill,long tail: not ranked,,,100,hand,wikidata
 stores,Keith-Albee-Orpheum,Keith-Albee-Orpheum,long tail: not ranked,,,100,hand,wikidata
 stores,Billy Goat Tavern,Billy Goat Tavern,long tail: not ranked,,,100,hand,wikidata
@@ -3088,33 +3090,28 @@ stores,McAlister's Deli,McAlister's Deli,long tail: not ranked,,,100,hand,wikida
 stores,Robeks,Robeks,long tail: not ranked,,,100,hand,wikidata
 stores,Slim Chickens,Slim Chickens,long tail: not ranked,,,100,hand,wikidata
 stores,Freedom Fuel,Freedom Fuel,long tail: not ranked,,,100,hand,wikidata
-stores,Orpheum Circuit,Orpheum Circuit,long tail: not ranked,,,100,hand,wikidata
-stores,Century Theatres,Century Theatres,long tail: not ranked,,,100,hand,wikidata
 stores,Bright Horizons,Bright Horizons,long tail: not ranked,,,100,hand,wikidata
 stores,Buffalo Wings & Rings,Buffalo Wings & Rings,long tail: not ranked,,,100,hand,wikidata
 stores,Bullock's,Bullock's,long tail: not ranked,,,100,hand,wikidata
 stores,Dinosaur Bar-B-Que,Dinosaur Bar-B-Que,long tail: not ranked,,,100,hand,wikidata
-stores,Gabe's,Gabe's,long tail: not ranked,,,100,hand,wikidata
-stores,Jazzercise,Jazzercise,long tail: not ranked,,,100,hand,wikidata
-stores,Joseph-Beth Booksellers,Joseph-Beth Booksellers,long tail: not ranked,,,100,hand,wikidata
-stores,Kwik Trip,Kwik Trip,long tail: not ranked,,,100,hand,wikidata
-stores,Lawry's,Lawry's The Prime Rib,long tail: not ranked,,,100,hand,wikidata
-stores,Maggiano's Little Italy,Maggiano's Little Italy,long tail: not ranked,,,100,hand,wikidata
+stores,Pearle Vision,Pearle Vision,long tail: not ranked,,,100,hand,wikidata
 stores,Megaplex Theatres,Megaplex Theatres,long tail: not ranked,,,100,hand,wikidata
 stores,Perkins Restaurant & Bakery,Perkins Restaurant & Bakery,long tail: not ranked,,,100,hand,wikidata
 stores,Piccadilly Restaurants,Piccadilly Restaurants,long tail: not ranked,,,100,hand,wikidata
 stores,Quaker Steak & Lube,Quaker Steak & Lube,long tail: not ranked,,,100,hand,wikidata
 stores,QuickChek,QuickChek,long tail: not ranked,,,100,hand,wikidata
-stores,Sweet Frog,Sweet Frog,long tail: not ranked,,,100,hand,wikidata
-stores,L. S. Ayres,L. S. Ayres,long tail: not ranked,,,100,hand,wikidata
-stores,Jason's Deli,Jason's Deli,long tail: not ranked,,,100,hand,wikidata
-stores,Malco Theatres,Malco Theatres,long tail: not ranked,,,100,hand,wikidata
-stores,"Hwy 55 Burgers, Shakes & Fries",Hwy 55 Burgers Shakes & Fries,long tail: not ranked,,,100,hand,wikidata
-stores,"Babies ""R"" Us","Babies ""R"" Us",long tail: not ranked,,,100,hand,wikidata
-stores,Salt and Straw,Salt & Straw,long tail: not ranked,,,100,hand,wikidata
-stores,Milk Bar,Milk Bar (bakery),long tail: not ranked,,,100,hand,wikidata
-stores,Dickey's Barbecue Pit,Dickey's Barbecue Pit,long tail: not ranked,,,100,hand,wikidata
-stores,Hodad's,Hodad's,long tail: not ranked,,,100,hand,wikidata
+stores,Dolly Parton's Dixie Stampede,Dolly Parton's Stampede,long tail: not ranked,,,100,hand,wikidata
+stores,Aloha Petroleum,Aloha Petroleum,long tail: not ranked,,,100,hand,wikidata
+stores,Art Van,Art Van Furniture,long tail: not ranked,,,100,hand,wikidata
+stores,BJ's Restaurant & Brewery,BJ's Restaurants,long tail: not ranked,,,100,hand,wikidata
+stores,Bakers Square,Bakers Square,long tail: not ranked,,,100,hand,wikidata
+stores,Ben Franklin,Ben Franklin (company),long tail: not ranked,,,100,hand,wikidata
+stores,Joseph-Beth Booksellers,Joseph-Beth Booksellers,long tail: not ranked,,,100,hand,wikidata
+stores,Kwik Trip,Kwik Trip,long tail: not ranked,,,100,hand,wikidata
+stores,Lawry's,Lawry's The Prime Rib,long tail: not ranked,,,100,hand,wikidata
+stores,Maggiano's Little Italy,Maggiano's Little Italy,long tail: not ranked,,,100,hand,wikidata
+stores,Gabe's,Gabe's,long tail: not ranked,,,100,hand,wikidata
+stores,Jazzercise,Jazzercise,long tail: not ranked,,,100,hand,wikidata
 stores,rue21,Rue21,long tail: not ranked,,,100,hand,wikidata
 stores,Sally Beauty Holdings,Sally Beauty Holdings,long tail: not ranked,,,100,hand,wikidata
 stores,Shane Company,Shane Company,long tail: not ranked,,,100,hand,wikidata
@@ -3126,12 +3123,21 @@ stores,The UPS Store,The UPS Store,long tail: not ranked,,,100,hand,wikidata
 stores,The Vitamin Shoppe,The Vitamin Shoppe,long tail: not ranked,,,100,hand,wikidata
 stores,United Club,United Club,long tail: not ranked,,,100,hand,wikidata
 stores,Weathervane Seafood Restaurants,Weathervane Seafood Restaurants,long tail: not ranked,,,100,hand,wikidata
-stores,Cava Group,Cava Group,long tail: not ranked,,,100,hand,wikidata
-stores,Bricks & Minifigs,Bricks & Minifigs,long tail: not ranked,,,100,hand,wikidata
+stores,Sweet Frog,Sweet Frog,long tail: not ranked,,,100,hand,wikidata
+stores,L. S. Ayres,L. S. Ayres,long tail: not ranked,,,100,hand,wikidata
+stores,Jason's Deli,Jason's Deli,long tail: not ranked,,,100,hand,wikidata
+stores,Malco Theatres,Malco Theatres,long tail: not ranked,,,100,hand,wikidata
+stores,"Hwy 55 Burgers, Shakes & Fries",Hwy 55 Burgers Shakes & Fries,long tail: not ranked,,,100,hand,wikidata
+stores,"Babies ""R"" Us","Babies ""R"" Us",long tail: not ranked,,,100,hand,wikidata
+stores,Salt and Straw,Salt & Straw,long tail: not ranked,,,100,hand,wikidata
+stores,Milk Bar,Milk Bar (bakery),long tail: not ranked,,,100,hand,wikidata
+stores,Dickey's Barbecue Pit,Dickey's Barbecue Pit,long tail: not ranked,,,100,hand,wikidata
+stores,Hodad's,Hodad's,long tail: not ranked,,,100,hand,wikidata
 stores,Halo Top Creamery,Halo Top Creamery,long tail: not ranked,,,100,hand,wikidata
 stores,uBreakiFix,UBreakiFix,long tail: not ranked,,,100,hand,wikidata
 stores,Primo Hoagies,Primo Hoagies,long tail: not ranked,,,100,hand,wikidata
-stores,Pearle Vision,Pearle Vision,long tail: not ranked,,,100,hand,wikidata
+stores,Cava Group,Cava Group,long tail: not ranked,,,100,hand,wikidata
+stores,Bricks & Minifigs,Bricks & Minifigs,long tail: not ranked,,,100,hand,wikidata
 stores,Atlanta Bread Company,Atlanta Bread Company,long tail: not ranked,,,100,hand,wikidata
 stores,Ten Thousand Villages,Ten Thousand Villages,long tail: not ranked,,,100,hand,wikidata
 stores,The Varsity,The Varsity (restaurant),long tail: not ranked,,,100,hand,wikidata
@@ -3193,20 +3199,26 @@ stores,Licorice Pizza,Licorice Pizza (store),long tail: not ranked,,,100,hand,wi
 stores,Van Leeuwen Ice Cream,Van Leeuwen Ice Cream,long tail: not ranked,,,100,hand,wikidata
 stores,Paseo,Paseo (restaurant),long tail: not ranked,,,100,hand,wikidata
 stores,Trump Burger,Trump Burger,long tail: not ranked,,,100,hand,wikidata
-stores,Dolly Parton's Dixie Stampede,Dolly Parton's Stampede,long tail: not ranked,,,100,hand,wikidata
-stores,Aloha Petroleum,Aloha Petroleum,long tail: not ranked,,,100,hand,wikidata
-stores,Art Van,Art Van Furniture,long tail: not ranked,,,100,hand,wikidata
-stores,BJ's Restaurant & Brewery,BJ's Restaurants,long tail: not ranked,,,100,hand,wikidata
-stores,Bakers Square,Bakers Square,long tail: not ranked,,,100,hand,wikidata
-stores,Ben Franklin,Ben Franklin (company),long tail: not ranked,,,100,hand,wikidata
 stores,Buffum's,Buffums,long tail: not ranked,,,100,hand,wikidata
 stores,Buybuy BABY,Buy Buy Baby,long tail: not ranked,,,100,hand,wikidata
 stores,Clark Brands,Clark Brands,long tail: not ranked,,,100,hand,wikidata
 stores,Conn's,Conn's,long tail: not ranked,,,100,hand,wikidata
 stores,Eddie V's,Eddie V's Prime Seafood,long tail: not ranked,,,100,hand,wikidata
 stores,First Watch,First Watch (restaurant chain),long tail: not ranked,,,100,hand,wikidata
-stores,W. S. Butterfield Theatres,W. S. Butterfield Theatres,long tail: not ranked,,,100,hand,wikidata
-stores,Maryland Fried Chicken,Maryland Fried Chicken,long tail: not ranked,,,100,hand,wikidata
+stores,Marie Callender's,Marie Callender's,long tail: not ranked,,,100,hand,wikidata
+stores,McCrory Stores,McCrory Stores,long tail: not ranked,,,100,hand,wikidata
+stores,Applegreen,Applegreen,long tail: not ranked,,,100,hand,wikidata
+stores,Pilot Company,Pilot Company,long tail: not ranked,,,100,hand,wikidata
+stores,Portland's Centers for the Arts,Portland's Centers for the Arts,long tail: not ranked,,,100,hand,wikidata
+stores,Primanti Brothers,Primanti Bros.,long tail: not ranked,,,100,hand,wikidata
+stores,Raleigh Haberdasher,Raleigh Haberdasher,long tail: not ranked,,,100,hand,wikidata
+stores,Thrifty Ice Cream,Thrifty Ice Cream,long tail: not ranked,,,100,hand,wikidata
+stores,Sushisamba,Sushisamba,long tail: not ranked,,,100,hand,wikidata
+stores,Big Gay Ice Cream,Big Gay Ice Cream,long tail: not ranked,,,100,hand,wikidata
+stores,Joseph Magnin Co.,Joseph Magnin,long tail: not ranked,,,100,hand,wikidata
+stores,KB Theatres,KB Theatres,long tail: not ranked,,,100,hand,wikidata
+stores,KB Toys,KB Toys,long tail: not ranked,,,100,hand,wikidata
+stores,Kelly-Moore Paints,Kelly-Moore Paints,long tail: not ranked,,,100,hand,wikidata
 stores,Frisch's,Frisch's,long tail: not ranked,,,100,hand,wikidata
 stores,G. C. Murphy,G. C. Murphy,long tail: not ranked,,,100,hand,wikidata
 stores,At Home,At Home (store),long tail: not ranked,,,100,hand,wikidata
@@ -3215,18 +3227,13 @@ stores,Goodrich Quality Theaters,Goodrich Quality Theaters,long tail: not ranked
 stores,Gott's Roadside,Gott's Roadside,long tail: not ranked,,,100,hand,wikidata
 stores,Harvard/MIT Cooperative Society,MIT Cooperative Society,long tail: not ranked,,,100,hand,wikidata
 stores,High's Dairy Store,High's Dairy Store,long tail: not ranked,,,100,hand,wikidata
-stores,Bill Miller Bar-B-Q Enterprises,Bill Miller Bar-B-Q Enterprises,long tail: not ranked,,,100,hand,wikidata
-stores,Joseph Magnin Co.,Joseph Magnin,long tail: not ranked,,,100,hand,wikidata
-stores,KB Theatres,KB Theatres,long tail: not ranked,,,100,hand,wikidata
-stores,KB Toys,KB Toys,long tail: not ranked,,,100,hand,wikidata
-stores,Kelly-Moore Paints,Kelly-Moore Paints,long tail: not ranked,,,100,hand,wikidata
-stores,Marie Callender's,Marie Callender's,long tail: not ranked,,,100,hand,wikidata
-stores,McCrory Stores,McCrory Stores,long tail: not ranked,,,100,hand,wikidata
-stores,Applegreen,Applegreen,long tail: not ranked,,,100,hand,wikidata
-stores,Pilot Company,Pilot Company,long tail: not ranked,,,100,hand,wikidata
-stores,Portland's Centers for the Arts,Portland's Centers for the Arts,long tail: not ranked,,,100,hand,wikidata
-stores,Primanti Brothers,Primanti Bros.,long tail: not ranked,,,100,hand,wikidata
-stores,Raleigh Haberdasher,Raleigh Haberdasher,long tail: not ranked,,,100,hand,wikidata
+stores,Sambo's,Sambo's,long tail: not ranked,,,100,hand,wikidata
+stores,"Spec's Wine, Spirits & Finer Foods","Spec's Wine, Spirits & Finer Foods",long tail: not ranked,,,100,hand,wikidata
+stores,T. A. Chapman Co.,T. A. Chapman Co.,long tail: not ranked,,,100,hand,wikidata
+stores,Thorntons LLC,Thorntons LLC,long tail: not ranked,,,100,hand,wikidata
+stores,TitleMax,TitleMax,long tail: not ranked,,,100,hand,wikidata
+stores,Wahoo's Fish Taco,Wahoo's Fish Taco,long tail: not ranked,,,100,hand,wikidata
+stores,Western Sizzlin',Western Sizzlin',long tail: not ranked,,,100,hand,wikidata
 stores,Longs Drugs,Longs Drugs,long tail: not ranked,,,100,hand,wikidata
 stores,Hens and Kelly,Hens and Kelly,long tail: not ranked,,,100,hand,wikidata
 stores,Tire Kingdom,Tire Kingdom,long tail: not ranked,,,100,hand,wikidata
@@ -3235,23 +3242,6 @@ stores,Orange Leaf Frozen Yogurt,Orange Leaf Frozen Yogurt,long tail: not ranked
 stores,Lids,Lids (store),long tail: not ranked,,,100,hand,wikidata
 stores,Yard House,Yard House,long tail: not ranked,,,100,hand,wikidata
 stores,Buona,Buona,long tail: not ranked,,,100,hand,wikidata
-stores,Mashti Malone's,Mashti Malone's,long tail: not ranked,,,100,hand,wikidata
-stores,Sambo's,Sambo's,long tail: not ranked,,,100,hand,wikidata
-stores,"Spec's Wine, Spirits & Finer Foods","Spec's Wine, Spirits & Finer Foods",long tail: not ranked,,,100,hand,wikidata
-stores,T. A. Chapman Co.,T. A. Chapman Co.,long tail: not ranked,,,100,hand,wikidata
-stores,Thorntons LLC,Thorntons LLC,long tail: not ranked,,,100,hand,wikidata
-stores,TitleMax,TitleMax,long tail: not ranked,,,100,hand,wikidata
-stores,Wahoo's Fish Taco,Wahoo's Fish Taco,long tail: not ranked,,,100,hand,wikidata
-stores,Western Sizzlin',Western Sizzlin',long tail: not ranked,,,100,hand,wikidata
-stores,Thrifty Ice Cream,Thrifty Ice Cream,long tail: not ranked,,,100,hand,wikidata
-stores,Sushisamba,Sushisamba,long tail: not ranked,,,100,hand,wikidata
-stores,SuperTarget,SuperTarget,long tail: not ranked,,,100,hand,wikidata
-stores,Boston Store,Boston Stores (California-based department store),long tail: not ranked,,,100,hand,wikidata
-stores,Broadway Stores,Broadway Stores,long tail: not ranked,,,100,hand,wikidata
-stores,Rodney Scott's Whole Hog BBQ,Rodney Scott's Whole Hog BBQ,long tail: not ranked,,,100,hand,wikidata
-stores,Freeway Insurance,Freeway Insurance,long tail: not ranked,,,100,hand,wikidata
-stores,Boot Barn,Boot Barn,long tail: not ranked,,,100,hand,wikidata
-stores,Mendocino Farms,Mendocino Farms,long tail: not ranked,,,100,hand,wikidata
 stores,Quality Dairy Company,Quality Dairy Company,long tail: not ranked,,,100,hand,wikidata
 stores,Chicken in the Rough,Chicken in the Rough,long tail: not ranked,,,100,hand,wikidata
 stores,Hale's,Hale Bros.,long tail: not ranked,,,100,hand,wikidata
@@ -3260,8 +3250,19 @@ stores,Aldens,Aldens (department store),long tail: not ranked,,,100,hand,wikidat
 stores,Ojos Locos,Ojos Locos,long tail: not ranked,,,100,hand,wikidata
 stores,Walker Scott,Walker Scott,long tail: not ranked,,,100,hand,wikidata
 stores,Poodle Dog Restaurants,Poodle Dog Restaurants,long tail: not ranked,,,100,hand,wikidata
+stores,W. S. Butterfield Theatres,W. S. Butterfield Theatres,long tail: not ranked,,,100,hand,wikidata
+stores,Maryland Fried Chicken,Maryland Fried Chicken,long tail: not ranked,,,100,hand,wikidata
 stores,Harris & Frank,Harris & Frank,long tail: not ranked,,,100,hand,wikidata
 stores,Russeks,Russeks,long tail: not ranked,,,100,hand,wikidata
+stores,Bill Miller Bar-B-Q Enterprises,Bill Miller Bar-B-Q Enterprises,long tail: not ranked,,,100,hand,wikidata
+stores,Mashti Malone's,Mashti Malone's,long tail: not ranked,,,100,hand,wikidata
+stores,SuperTarget,SuperTarget,long tail: not ranked,,,100,hand,wikidata
+stores,Boston Store,Boston Stores (California-based department store),long tail: not ranked,,,100,hand,wikidata
+stores,Broadway Stores,Broadway Stores,long tail: not ranked,,,100,hand,wikidata
+stores,Rodney Scott's Whole Hog BBQ,Rodney Scott's Whole Hog BBQ,long tail: not ranked,,,100,hand,wikidata
+stores,Freeway Insurance,Freeway Insurance,long tail: not ranked,,,100,hand,wikidata
+stores,Boot Barn,Boot Barn,long tail: not ranked,,,100,hand,wikidata
+stores,Mendocino Farms,Mendocino Farms,long tail: not ranked,,,100,hand,wikidata
 stores,Taco Mayo,Taco Mayo,long tail: not ranked,,,100,hand,wikidata
 stores,Aladdin's Eatery,Aladdin's Eatery,long tail: not ranked,,,100,hand,wikidata
 stores,Aubuchon Hardware,Aubuchon Hardware,long tail: not ranked,,,100,hand,wikidata
@@ -3438,7 +3439,6 @@ stores,Dollar General Market,Dollar General Market,long tail: not ranked,,,100,h
 stores,Taqueria El Farolito,Taqueria El Farolito,long tail: not ranked,,,100,hand,wikidata
 stores,Shirtzenpantz,Shirtzenpantz,long tail: not ranked,,,100,hand,wikidata
 stores,Ivar's,Ivar's,long tail: not ranked,,,100,hand,wikidata
-stores,Big Gay Ice Cream,Big Gay Ice Cream,long tail: not ranked,,,100,hand,wikidata
 stores,Café Gratitude,Café Gratitude,long tail: not ranked,,,100,hand,wikidata
 stores,Johnny Carino's,Johnny Carino's,long tail: not ranked,,,100,hand,wikidata
 stores,Cheer Athletics,Cheer Athletics,long tail: not ranked,,,100,hand,wikidata
@@ -3448,15 +3448,7 @@ stores,Design Research,Design Research (store),long tail: not ranked,,,100,hand,
 stores,Dopo / Adesso, Adesso,long tail: not ranked,,,100,hand,wikidata
 stores,Fiorella's Jack Stack Barbecue,Fiorella's Jack Stack Barbecue,long tail: not ranked,,,100,hand,wikidata
 stores,Fox's Pizza Den,Fox's Pizza Den,long tail: not ranked,,,100,hand,wikidata
-stores,Tatte Bakery & Cafe,Tatte Bakery & Café,long tail: not ranked,,,100,hand,wikidata
-stores,Fleet Feet,Fleet Feet,long tail: not ranked,,,100,hand,wikidata
-stores,Fred Loya Insurance,Fred Loya Insurance,long tail: not ranked,,,100,hand,wikidata
-stores,General Cinema Corporation,General Cinema,long tail: not ranked,,,100,hand,wikidata
-stores,Giant Industries,Giant Industries,long tail: not ranked,,,100,hand,wikidata
-stores,Hard Times Cafe,Hard Times Cafe (chain restaurant),long tail: not ranked,,,100,hand,wikidata
-stores,Health Mart,Health Mart,long tail: not ranked,,,100,hand,wikidata
-stores,Sunbrella IMAX 3D Theaters at Jordan's Furniture,Jordan's IMAX,long tail: not ranked,,,100,hand,wikidata
-stores,Kerasotes Theatres,Kerasotes Theatres,long tail: not ranked,,,100,hand,wikidata
+stores,Bigg's,Bigg's,long tail: not ranked,,,100,hand,wikidata
 stores,Martinizing Dry Cleaning,Martinizing Dry Cleaning,long tail: not ranked,,,100,hand,wikidata
 stores,Milio's Sandwiches,Milio's Sandwiches,long tail: not ranked,,,100,hand,wikidata
 stores,Official All Star Café,Official All Star Café,long tail: not ranked,,,100,hand,wikidata
@@ -3465,25 +3457,32 @@ stores,"Petland Discounts, Inc.",Petland Discounts,long tail: not ranked,,,100,h
 stores,Primrose Schools,Primrose Schools,long tail: not ranked,,,100,hand,wikidata
 stores,Pussycat Theater,Pussycat Theaters,long tail: not ranked,,,100,hand,wikidata
 stores,RibCrib,Rib Crib,long tail: not ranked,,,100,hand,wikidata
+stores,MOTO Pizza,Moto Pizza,long tail: not ranked,,,100,hand,wikidata
+stores,Apple Cinemas,Apple Cinemas,long tail: not ranked,,,100,hand,wikidata
+stores,Gasho of Japan,Gasho of Japan,long tail: not ranked,,,100,hand,wikidata
+stores,Best & Co.,Best & Co.,long tail: not ranked,,,100,hand,wikidata
+stores,Sunbrella IMAX 3D Theaters at Jordan's Furniture,Jordan's IMAX,long tail: not ranked,,,100,hand,wikidata
+stores,Kerasotes Theatres,Kerasotes Theatres,long tail: not ranked,,,100,hand,wikidata
+stores,Fred Loya Insurance,Fred Loya Insurance,long tail: not ranked,,,100,hand,wikidata
+stores,General Cinema Corporation,General Cinema,long tail: not ranked,,,100,hand,wikidata
+stores,Giant Industries,Giant Industries,long tail: not ranked,,,100,hand,wikidata
+stores,Hard Times Cafe,Hard Times Cafe (chain restaurant),long tail: not ranked,,,100,hand,wikidata
+stores,Health Mart,Health Mart,long tail: not ranked,,,100,hand,wikidata
+stores,Ruth's Hospitality Group,Ruth's Hospitality Group,long tail: not ranked,,,100,hand,wikidata
+stores,Soup Kitchen International,The Original Soupman,long tail: not ranked,,,100,hand,wikidata
+stores,Twistee Treat,Twistee Treat,long tail: not ranked,,,100,hand,wikidata
+stores,Zoës Kitchen,Zoës Kitchen,long tail: not ranked,,,100,hand,wikidata
 stores,Tacotote,El Taco Tote,long tail: not ranked,,,100,hand,wikidata
 stores,Laemmle Theatres,Laemmle Theatres,long tail: not ranked,,,100,hand,wikidata
 stores,"Petland, Inc.",Petland,long tail: not ranked,,,100,hand,wikidata
 stores,Phil's BBQ,Phil's BBQ,long tail: not ranked,,,100,hand,wikidata
 stores,Woodcraft Supply,Woodcraft Supply,long tail: not ranked,,,100,hand,wikidata
-stores,Ruth's Hospitality Group,Ruth's Hospitality Group,long tail: not ranked,,,100,hand,wikidata
-stores,Soup Kitchen International,The Original Soupman,long tail: not ranked,,,100,hand,wikidata
-stores,Twistee Treat,Twistee Treat,long tail: not ranked,,,100,hand,wikidata
-stores,Zoës Kitchen,Zoës Kitchen,long tail: not ranked,,,100,hand,wikidata
-stores,MOTO Pizza,Moto Pizza,long tail: not ranked,,,100,hand,wikidata
-stores,Apple Cinemas,Apple Cinemas,long tail: not ranked,,,100,hand,wikidata
-stores,Gasho of Japan,Gasho of Japan,long tail: not ranked,,,100,hand,wikidata
-stores,Marden's,Marden's,long tail: not ranked,,,100,hand,wikidata
-stores,Gingiss Formalwear,Gingiss Formalwear,long tail: not ranked,,,100,hand,wikidata
-stores,Torchy’s Tacos,Torchy's Tacos,long tail: not ranked,,,100,hand,wikidata
 stores,Wong's King,Wong's King,long tail: not ranked,,,100,hand,wikidata
 stores,McCoy Corporation,McCoy's Building Supply,long tail: not ranked,,,100,hand,wikidata
 stores,"Abbey, Schoeffel and Grau","Abbey, Schoeffel and Grau",long tail: not ranked,,,100,hand,wikidata
 stores,Huck's Food & Fuel,Huck's Market,long tail: not ranked,,,100,hand,wikidata
+stores,Tatte Bakery & Cafe,Tatte Bakery & Café,long tail: not ranked,,,100,hand,wikidata
+stores,Fleet Feet,Fleet Feet,long tail: not ranked,,,100,hand,wikidata
 stores,Palm Beach Tan,Palm Beach Tan,long tail: not ranked,,,100,hand,wikidata
 stores,Aladdin Bail Bonds,Aladdin Bail Bonds,long tail: not ranked,,,100,hand,wikidata
 stores,Western Dental,Western Dental,long tail: not ranked,,,100,hand,wikidata
@@ -3491,6 +3490,9 @@ stores,Fine Wine & Good Spirits,Fine Wine & Good Spirits,long tail: not ranked,,
 stores,Children's Learning Adventure,Children's Learning Adventure,long tail: not ranked,,,100,hand,wikidata
 stores,PrintWithMe,PrintWithMe,long tail: not ranked,,,100,hand,wikidata
 stores,DressBarn,Dressbarn,long tail: not ranked,,,100,hand,wikidata
+stores,Marden's,Marden's,long tail: not ranked,,,100,hand,wikidata
+stores,Gingiss Formalwear,Gingiss Formalwear,long tail: not ranked,,,100,hand,wikidata
+stores,Torchy’s Tacos,Torchy's Tacos,long tail: not ranked,,,100,hand,wikidata
 stores,Abbott's Frozen Custard,Abbott's Frozen Custard,long tail: not ranked,,,100,hand,wikidata
 stores,Al's Formal Wear,Al's Formal Wear,long tail: not ranked,,,100,hand,wikidata
 stores,Amy's Ice Creams,Amy's Ice Creams,long tail: not ranked,,,100,hand,wikidata
@@ -3697,8 +3699,6 @@ stores,Runnings,Runnings,long tail: not ranked,,,100,hand,wikidata
 stores,Value Village,Value Village,long tail: not ranked,,,100,hand,wikidata
 stores,ChòpnBlọk,ChòpnBlọk,long tail: not ranked,,,100,hand,wikidata
 stores,Rainbow Cobblers,Rainbow Cobblers,long tail: not ranked,,,100,hand,wikidata
-stores,Bigg's,Bigg's,long tail: not ranked,,,100,hand,wikidata
-stores,Best & Co.,Best & Co.,long tail: not ranked,,,100,hand,wikidata
 thanks,Corn,Maize,ok,1425048,0.000,10,views,hand
 thanks,Sweet potato casserole,Sweet potato,ok,891312,0.165,10,views,hand
 thanks,Deviled eggs,Deviled egg,ok,554592,0.268,25,views,hand
