@@ -71,6 +71,18 @@ TITLES = {
  'Target':'Target Corporation','Ross':'Ross Stores','Hudson\'s':'Hudson\'s (department store)','Ames':'Ames (department store)',
  'Corn':'Maize','Dinner rolls':'Bread roll','Turkey':'Turkey as food','Gravy':'Gravy','Stuffing':'Stuffing',
  'Halloween':'Halloween','Christmas':'Christmas','Columbus Day':'Columbus Day',
+ # from the first live build's report (27 Nov 2026): disambiguation pages and wrong pages
+ 'Hawaiian':'Hawaiian Airlines','Eastern':'Eastern Air Lines','Breeze':'Breeze Airways','Midwest':'Midwest Airlines','Continental':'Continental Airlines',
+ 'Schlitz':'Joseph Schlitz Brewing Company','Lagunitas':'Lagunitas Brewing Company','Narragansett':'Narragansett Brewing Company',
+ 'Goose Island':'Goose Island Brewery','Brooklyn Lager':'Brooklyn Brewery','Iron City':'Iron City Brewing Company','Lone Star':'Lone Star Beer',
+ 'Skittles':'Skittles (confectionery)','3 Musketeers':'3 Musketeers (chocolate bar)',
+ 'Ford':'Ford Motor Company','Tesla':'Tesla, Inc.','GMC':'GMC (automobile)','Pontiac':'Pontiac (automobile)','Lucid':'Lucid Motors',
+ 'DeLorean':'DeLorean Motor Company','Nash':'Nash Motors','Tucker':'Tucker Car Corporation','Shelby':'Shelby American','Imperial':'Imperial (automobile)',
+ 'DeSoto':'DeSoto (automobile)','Cord':'Cord Automobile','Auburn':'Auburn Automobile','Geo':'Geo (automobile)','Saturn':'Saturn Corporation',
+ 'White Castle':'White Castle (restaurant)','Bojangles':'Bojangles (restaurant)','Black Friday':'Black Friday (shopping)',
+ 'Sprite':'Sprite (drink)','Sunkist':'Sunkist (soft drink)','Burlington':'Burlington Stores','Janice':'Janice Litman Goralnik',
+ # bare first names that land on someone else's page: no page of their own, so hand rank decides
+ 'David':None,'Joshua':None,'Baby Bear':None,'Marcel':None,'Julie':None,'Mona':None,'Erica':None,'Gordon':None,'Maria':None,'Bob':None,
 }
 
 # ---------------------------------------------------------------- http + cache
@@ -185,24 +197,40 @@ def main():
             try:
                 wd = sparql(WD[pid]['body'])
                 if len(wd) >= WD[pid]['min']:
-                    items = []
+                    # match on what the game compares: player input has the prompt's strip words removed
+                    # ("Lewis River" is typed, "lewis" is compared), so aliases are stored stripped too
+                    key = lambda a: strip_words(a, p['strip']) or norm(a)
+                    items, by_key = [], {}
                     for w in wd:
                         if not w['title']: continue
-                        al = [a for a in w['aliases'] if good_alias(a, w['name'])]
-                        short = strip_words(w['name'], p['strip'])
-                        if short and short != norm(w['name']): al.append(short)
-                        items.append(dict(name=w['name'], aliases=al, title=w['title'], src='wikidata', qid=w['qid']))
-                    idx = {}
+                        al = [key(a) for a in w['aliases'] if good_alias(a, w['name'])]
+                        if key(w['name']) != norm(w['name']): al.append(key(w['name']))
+                        k = key(w['name'])
+                        if k in by_key:   # two items with one name (several White Rivers): one answer
+                            by_key[k]['aliases'] += al; continue
+                        by_key[k] = dict(name=w['name'], aliases=al, title=w['title'], src='wikidata', qid=w['qid'])
+                        items.append(by_key[k])
+                    idx = {key(it['name']): it for it in reversed(items)}   # a name beats an alias
                     for it in items:
-                        for a in [it['name']] + it['aliases']: idx.setdefault(norm(a), it)
+                        for a in it['aliases']: idx.setdefault(key(a), it)
                     for h in hand:   # merge hand answers: keep their nicer names, aliases and rank
-                        keys = [norm(h['name'])] + [norm(a) for a in h['aliases']]
+                        keys = [key(h['name'])] + [key(a) for a in h['aliases']]
                         hit = next((idx[k] for k in keys if k in idx), None)
                         if hit:
                             hit['aliases'] = list(dict.fromkeys(hit['aliases'] + [hit['name']] + h['aliases']))
                             hit['name'], hit['hand'] = h['name'], h['hand']
                         else:
                             items.append(h)   # Wikidata missed it: keep it
+                    # an alias that is another answer's name, or is shared by two answers, is noise
+                    # (Wikidata lists "Colorado River" as an old name of the Brazos)
+                    prim = {key(it['name']): it for it in items}
+                    count = {}
+                    for it in items:
+                        for a in set(key(x) for x in it['aliases']): count[a] = count.get(a, 0) + 1
+                    for it in items:
+                        own = key(it['name'])
+                        it['aliases'] = list(dict.fromkeys(a for a in it['aliases']
+                                             if key(a) == own or (prim.get(key(a), it) is it and count.get(key(a), 0) <= 1)))
                     note = f'wikidata ({len(wd)} found)'
                 else:
                     note = f'wikidata gave {len(wd)} (< {WD[pid]["min"]}): hand list'
@@ -217,15 +245,34 @@ def main():
         elif pid in HAND_TIERS:
             for it in items: it['views'], it['why'] = None, 'hand tiers'
         else:
-            need = [it['title'] for it in items if it['src'] == 'hand' and it['title'] not in title_cache]
+            need = [it['title'] for it in items if it['src'] == 'hand' and it['title'] and it['title'] not in title_cache]
             if need and not MOCK: title_cache.update(resolve_titles(need))
             for it in items:
-                if it['src'] == 'hand':
+                if it['src'] == 'hand' and not it['title']:
+                    it['why'] = 'no page (TITLES)'
+                elif it['src'] == 'hand':
                     it['title'], it['why'] = (it['title'], 'ok') if MOCK else title_cache.get(it['title'], (None, 'unresolved'))
                 else: it['why'] = 'ok'
+            # a hand answer on the same page as a Wikidata answer ("Rivian" / "Rivian Automotive") is that answer
+            wd_by_title = {it['title']: it for it in items if it['src'] == 'wikidata' and it.get('title')}
+            for h in [it for it in items if it['src'] == 'hand' and it.get('title') in wd_by_title]:
+                w = wd_by_title[h['title']]
+                if 'hand' in w: continue   # already carries another hand answer: keep both
+                w['aliases'] = list(dict.fromkeys(w['aliases'] + [w['name']] + h['aliases']))
+                w['name'], w['hand'] = h['name'], h['hand']
+                items.remove(h)
             with ThreadPoolExecutor(4) as ex:
                 vs = list(ex.map(lambda it: views(it['title']) if it.get('title') else 0, items))
             for it, v in zip(items, vs): it['views'] = v
+
+            owner = {}
+            for it in items:
+                if it.get('title') and it['src'] != 'hand': owner.setdefault(it['title'], it)
+            for it in items:
+                if it.get('title'): owner.setdefault(it['title'], it)
+            for it in items:
+                if it.get('title') and owner[it['title']] is not it:
+                    it['views'], it['why'] = 0, 'shares page with ' + owner[it['title']]['name']
 
         cap = WD.get(pid, {}).get('cap')
         if cap and len(items) > cap:

@@ -54,13 +54,11 @@ These are set in the `WD` dict in `build_bank.py`: states, capitals, parks, pres
 
 ## Current status (27 Nov 2026)
 
-- [x] Game built and tested in headless Chromium, both with a mock bank and without any bank.
-- [x] Pipeline tested end to end with `--mock`.
-- [x] One local commit `9cc081a`. A copy of the repo is at `C:\Users\andyc\Projects\Backroads\backroads`.
-- [ ] **GitHub repo not created yet.** Andy will create an empty **public** repo `acotgreave/backroads` (free GitHub Pages needs a public repo). Then add the remote and push `main`.
-- [ ] Repo settings → Pages → Source: **GitHub Actions**. Custom domain: `backroads.howtospeakdata.com`. Tick Enforce HTTPS once the certificate is issued.
-- [ ] DNS (at howtospeakdata.com's DNS provider): **CNAME** `backroads` → `acotgreave.github.io`.
-- [ ] Watch the first Actions run, which is the first real Wikidata build. Then go through `data/report.csv` (see the checklist below).
+- [x] Repo `acotgreave/backroads` live; Pages source = GitHub Actions; DNS CNAME at GoDaddy. Site live at https://backroads.howtospeakdata.com.
+- [x] First live Wikidata build: every `WD` prompt returns live results (states/capitals give 49, merged with hand answers). Team queries now restricted to sports teams.
+- [x] First review of `report.csv`: extremes look right (California/Texas/Yellowstone/Homer 10 mi, North Dakota/Kobuk Valley 100 mi). Fixed: Wikidata aliases stored with strip words removed, shared/foreign aliases dropped, same-name items merged, hand answers merged with the Wikidata answer on the same page, answers that share another answer's page fall back to hand rank, ~45 `TITLES` fixes. `TITLES` value `None` = no page of its own.
+- [x] Journey features: trip log, day streak, furthest drive, souvenirs (80/100 mi answers). Daily drive rolls over at local midnight.
+- [ ] Re-check the next build's report for leftover `disambiguation`/`missing` rows and odd 10 mi answers.
 - [ ] Share the link with Aaron.
 
 The older prototype is a claude.ai artifact titled "Backroad: US edition". This repo supersedes it.
