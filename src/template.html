@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Backroads: the US road-trip quiz</title>
+<meta name="description" content="Seven all-American prompts a day. Common answers barely move you; the rarest right answer takes you furthest.">
+<meta property="og:title" content="Backroads: the US road-trip quiz">
+<meta property="og:description" content="Seven all-American prompts a day. The rarest right answer takes you furthest.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://backroads.howtospeakdata.com/">
+<meta property="og:image" content="https://backroads.howtospeakdata.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+/* VOICE: a friendly night drive across America; short lines, one job per screen.
+   IDEA: each day is a named American road; rare answers drive you further and spot rarer wildlife.
+   PICTURE: a parallax night scene with your car, a route strip of landmarks, and a yellow wildlife-crossing sign that spins to reveal each answer.
+   COLOUR and TYPE: night asphalt ground, lane yellow, sign green, interstate red/blue; Overpass (highway lettering). Night palette in both themes.
+   LAYOUT: compact header, scene, route strip, one card at a time; stacks on phones. */
+:root{--bg:#101318;--card:#181c23;--card2:#20252e;--ink:#f1ece2;--ink2:#a9a395;--line:#2b313c;--lane:#f2c230;--green:#0d6b3e;--red:#c8102e;--blue:#2c5fc4}
+*{box-sizing:border-box;min-width:0}
+html{color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Overpass,system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3,p{margin:0}
+button,input{font:inherit}
+a{color:var(--ink2)}
+.wrap{max-width:760px;margin:0 auto;padding:0 max(4vw,12px)}
+header{display:flex;align-items:center;gap:10px;padding:14px 0 10px;flex-wrap:wrap}
+header svg{width:30px;height:32px;flex:none}
+header h1{font-size:22px;font-weight:900;letter-spacing:.01em}
+header .tag{color:var(--ink2);font-size:13px}
+.modes{margin-left:auto;display:flex;gap:6px}
+.chip{border:1px solid var(--line);background:transparent;color:var(--ink2);border-radius:999px;padding:5px 12px;min-height:34px;font-size:13px;font-weight:800;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+/* scene */
+.scene{position:relative;height:150px;border-radius:10px;overflow:hidden;background:linear-gradient(#0a1226,#1b1f3a 55%,#3a2638);border:1px solid var(--line)}
+.scene .l{position:absolute;left:0;right:0;background-repeat:repeat-x}
+.stars{inset:0;opacity:.8}
+.moon{position:absolute;right:34%;top:14px;width:22px;height:22px;border-radius:50%;background:#f4ecd2;box-shadow:0 0 18px 4px rgba(244,236,210,.35)}
+.far{bottom:44px;height:70px;background-size:auto 70px}
+.mid{bottom:44px;height:80px;background-size:auto 80px}
+.road{bottom:0;height:46px;background:#24272d}
+.dash{bottom:20px;height:4px;background-image:repeating-linear-gradient(90deg,var(--lane) 0 22px,transparent 22px 48px)}
+.car{position:absolute;left:18%;bottom:12px;width:76px;height:40px}
+.car .wheel{transform-box:fill-box;transform-origin:center}
+.scene.go .car{animation:bob .35s ease-in-out infinite}
+.scene.go .wheel{animation:spin .4s linear infinite}
+.beam{position:absolute;left:calc(18% + 70px);bottom:14px;width:140px;height:34px;background:linear-gradient(90deg,rgba(255,236,170,.35),transparent);clip-path:polygon(0 40%,100% 0,100% 100%,0 70%)}
+@keyframes bob{50%{transform:translateY(-2px)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+.odo{position:absolute;right:10px;top:10px;background:rgba(0,0,0,.55);border:1px solid var(--line);border-radius:6px;padding:3px 10px;font-weight:900;font-variant-numeric:tabular-nums;font-size:18px}
+.odo small{font-size:11px;font-weight:600;color:var(--ink2);margin-left:3px}
+/* route */
+.route{position:relative;margin:10px 14px 4px;height:58px}
+.route .track{position:absolute;left:0;right:0;top:27px;height:4px;border-radius:2px;background:var(--line)}
+.route .fill{position:absolute;left:0;top:27px;height:4px;border-radius:2px;background:var(--lane);width:0;transition:width .2s linear}
+.st{position:absolute;transform:translateX(-50%);font-size:11px;color:var(--ink2);white-space:nowrap;display:flex;flex-direction:column;align-items:center;line-height:1.2}
+.st i{width:10px;height:10px;border-radius:50%;background:var(--bg);border:2px solid var(--line)}
+.st.up{bottom:24px}.st.up i{margin-top:3px}
+.st.dn{top:24px;flex-direction:column-reverse}.st.dn i{margin-bottom:3px}
+.st.hit{color:var(--ink)}.st.hit i{border-color:var(--lane);background:var(--lane)}
+.st.first{transform:translateX(-5px);align-items:flex-start}
+.st.last{transform:translateX(calc(-100% + 5px));align-items:flex-end}
+.marker{position:absolute;top:22px;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--red);border:2px solid #fff;transition:left .2s linear;z-index:2}
+/* card */
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:18px;margin:10px 0 18px;min-height:250px}
+.meta{display:flex;justify-content:space-between;gap:8px;font-size:12px;font-weight:800;color:var(--ink2);letter-spacing:.02em}
+.sign{background:var(--green);border:2px solid #fff;outline:2px solid var(--green);border-radius:8px;padding:14px 16px;margin:10px 0 4px;text-align:center}
+.sign .cat{font-size:12px;opacity:.8}
+.sign h2{font-size:clamp(19px,3.4vw,25px);font-weight:800;line-height:1.15;margin-top:2px;color:#fff}
+.sign .rule{font-size:13px;opacity:.85;margin-top:2px;color:#fff}
+.timer{height:5px;background:var(--card2);border-radius:3px;overflow:hidden;margin:10px 0}
+.timer i{display:block;height:100%;background:var(--lane);width:100%}
+.timer.low i{background:var(--red)}
+form{display:flex;gap:6px}
+form input{flex:1;font-size:17px;padding:9px 12px;min-height:44px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
+.btn{min-height:44px;padding:0 16px;border-radius:8px;border:1px solid var(--line);font-weight:800;cursor:pointer;background:transparent;color:var(--ink);font-size:15px}
+.btn.go{background:var(--lane);border-color:var(--lane);color:#14161b}
+.btn:focus-visible,input:focus-visible,.chip:focus-visible{outline:2px solid var(--lane);outline-offset:2px}
+.msg{min-height:20px;margin-top:6px;color:var(--ink2);font-size:13px}
+/* reveal */
+.reveal{display:grid;grid-template-columns:auto minmax(0,1fr);gap:18px;align-items:center;margin-top:12px}
+.xing{width:118px;height:118px;perspective:500px}
+.diamond{width:100%;height:100%;transition:transform .12s ease-in}
+.diamond.flip{transform:rotateY(90deg)}
+.diamond.land{animation:land .5s cubic-bezier(.3,1.6,.5,1)}
+@keyframes land{0%{transform:scale(.8)}60%{transform:scale(1.12)}100%{transform:scale(1)}}
+.rv .ans{font-size:19px;font-weight:800;opacity:0;transform:translateY(6px);transition:.35s}
+.rv .animal{font-size:13px;color:var(--ink2);opacity:0;transition:.35s .1s}
+.rv .mi{font-size:34px;font-weight:900;color:var(--lane);font-variant-numeric:tabular-nums;line-height:1.1;opacity:0;transition:.3s}
+.rv.show .ans,.rv.show .animal,.rv.show .mi{opacity:1;transform:none}
+.rv .alt{font-size:13px;color:var(--ink2);margin-top:4px;opacity:0;transition:.4s .3s}
+.rv.show .alt{opacity:1}
+.ladder{display:flex;gap:4px;margin-top:8px}
+.ladder i{flex:1;height:5px;border-radius:2px;background:var(--line);transition:background .1s}
+.next{margin-top:14px;display:flex;justify-content:flex-end;opacity:0;transition:.3s}
+.next.on{opacity:1}
+/* intro + end */
+.intro h2{font-size:24px;font-weight:900;margin:6px 0 2px}
+.intro p{color:var(--ink2)}
+.zoo{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 14px}
+.zoo span{display:flex;align-items:center;gap:6px;background:var(--card2);border-radius:999px;padding:3px 10px 3px 4px;font-size:12px;color:var(--ink2)}
+.zoo svg{width:24px;height:24px}
+.big{font-size:44px;font-weight:900;line-height:1;margin:6px 0 2px;color:var(--lane);font-variant-numeric:tabular-nums}
+.res{list-style:none;padding:0;margin:12px 0;display:grid;gap:4px}
+.res li{display:grid;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;align-items:center;padding:6px 10px;background:var(--card2);border-radius:6px;font-size:14px}
+.res li small{display:block;color:var(--ink2);font-size:12px}
+.res li b{font-variant-numeric:tabular-nums}
+.res svg{width:28px;height:28px}
+.row{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+pre.share{background:var(--card2);padding:10px;border-radius:6px;white-space:pre-wrap;font:13px/1.4 Overpass,sans-serif;margin:8px 0 0}
+footer{color:var(--ink2);font-size:12px;padding-bottom:24px}
+@media(max-width:560px){.st.mstop:not(.nextup) span{display:none}.xing{width:96px;height:96px}.reveal{gap:12px}.scene{height:130px}.modes{margin-left:0}}
+@media(prefers-reduced-motion:reduce){.scene.go .car,.scene.go .wheel{animation:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <svg viewBox="0 0 54 58" aria-hidden="true"><path d="M4 6h46c2 10 2 22-3 32-4 8-12 14-20 18C19 52 11 46 7 38 2 28 2 16 4 6z" fill="#2c5fc4" stroke="#fff" stroke-width="3"/><path d="M4 6h46c.6 3 .9 6 1 9H3c.1-3 .4-6 1-9z" fill="#c8102e"/></svg>
+  <div><h1>Backroads</h1><div class="tag">The rarest right answer takes you furthest</div></div>
+  <div class="modes"><button class="chip" id="mDaily" aria-pressed="true">Daily</button><button class="chip" id="mFree" aria-pressed="false">Unlimited</button><button class="chip" id="mTimer" aria-pressed="true">Timer</button></div>
+</header>
+
+<div class="scene" id="scene" aria-hidden="true">
+  <div class="l stars" id="stars"></div><div class="moon"></div>
+  <div class="l far" id="far"></div><div class="l mid" id="mid"></div>
+  <div class="l road"></div><div class="l dash" id="dash"></div>
+  <div class="beam"></div>
+  <svg class="car" viewBox="0 0 76 40"><path d="M6 20h62c4 0 6 3 6 6v4H2v-5c0-3 2-5 4-5z" fill="#c8102e"/><path d="M18 20l7-11h22l10 11z" fill="#a50d26"/><path d="M21 20l5-8h9v8zM38 20v-8h8l7 8z" fill="#9fc3f0" opacity=".75"/><rect x="70" y="23" width="5" height="3" rx="1" fill="#ffe9a8"/><rect x="2" y="23" width="3" height="3" fill="#ff5a5a"/><g class="wheel"><circle cx="19" cy="31" r="7" fill="#111"/><circle cx="19" cy="31" r="3" fill="#888"/><rect x="18" y="25" width="2" height="12" fill="#555"/></g><g class="wheel"><circle cx="57" cy="31" r="7" fill="#111"/><circle cx="57" cy="31" r="3" fill="#888"/><rect x="56" y="25" width="2" height="12" fill="#555"/></g></svg>
+  <div class="odo"><span id="odo">0</span><small>mi</small></div>
+</div>
+<div class="route" id="route" aria-hidden="true"></div>
+
+<main class="card" id="card" aria-live="polite"></main>
+<footer><span id="src">Rarity tiers are set by hand for now.</span> A US take on Boreen and Krillion, from <a href="https://howtospeakdata.com">How To Speak Data</a>.</footer>
+</div>
+
+<script>
+{
+const P=[
+{id:'states',q:'Name a US state',list:`California|Texas|New York|Florida|Hawaii|Alaska|Washington|Ohio|Georgia|Michigan|Illinois|Arizona|Colorado|Nevada|Pennsylvania|Massachusetts|Oregon|New Jersey|Virginia|North Carolina|Tennessee|Louisiana|Utah|Kentucky|Montana|Minnesota|Wisconsin|Alabama|Mississippi|Missouri|Kansas|Oklahoma|Indiana|Iowa|South Carolina|Maine|Vermont|New Mexico|Connecticut|Maryland|Arkansas|Idaho|Nebraska|Wyoming|West Virginia|New Hampshire|Rhode Island|Delaware|South Dakota|North Dakota`},
+{id:'mstates',q:'Name a state beginning with M',list:`Michigan|Massachusetts|Montana|Minnesota|Mississippi|Missouri|Maryland|Maine`},
+{id:'twoword',q:'Name a state with a two-word name',list:`New York|New Jersey|North Carolina|South Carolina|New Mexico|West Virginia|North Dakota|South Dakota|New Hampshire|Rhode Island`},
+{id:'atlantic',q:'Name a state with an Atlantic coastline',list:`Florida|New York|Maine|Massachusetts|North Carolina|New Jersey|South Carolina|Georgia|Virginia|Maryland|Connecticut|Rhode Island|Delaware|New Hampshire`,traps:{pennsylvania:'So close: Pennsylvania only reaches the Delaware River estuary, not the ocean.',vermont:'Vermont is landlocked.','washington dc':'DC is on the Potomac, not the coast.'}},
+{id:'canada',q:'Name a state that borders Canada',rule:'Land or water border both count',list:`Alaska|Washington|Michigan|New York|Maine|Minnesota|Montana|Vermont|North Dakota|Idaho|New Hampshire|Ohio|Pennsylvania`},
+{id:'capitals',q:'Name a state capital',list:`Austin|Sacramento|Boston|Denver|Atlanta|Phoenix|Nashville|Honolulu|Albany|Tallahassee|Salt Lake City=salt lake|Indianapolis|Columbus|Richmond|Boise|Santa Fe|Juneau|Olympia|Springfield|Lansing|Raleigh|Baton Rouge|Oklahoma City|Providence|Hartford|Annapolis|Madison|Saint Paul|Des Moines|Little Rock|Carson City|Cheyenne|Lincoln|Trenton|Harrisburg|Columbia|Charleston|Frankfort|Jackson|Montgomery|Topeka|Jefferson City|Helena|Salem|Concord|Montpelier|Augusta|Dover|Bismarck|Pierre`,traps:{'new york city':'Albany is the capital of New York, not NYC.','los angeles':'Sacramento is the capital of California.','chicago':'Springfield is the capital of Illinois.','washington dc':'That is the national capital, not a state capital.'}},
+{id:'notstate',q:'Name a part of the US that isn’t a state',rule:'Territories, DC, tiny islands',list:`Puerto Rico|Washington DC=washington dc;district of columbia;dc|Guam|US Virgin Islands=virgin islands;usvi;us virgin islands|American Samoa|Northern Mariana Islands=northern marianas;mariana islands;saipan|Midway Atoll=midway;midway island|Wake Island=wake|Johnston Atoll|Baker Island|Howland Island|Jarvis Island|Kingman Reef|Navassa Island|Palmyra Atoll`},
+{id:'parks',q:'Name a US national park',strip:['national park','national parks','np','park'],list:`Yellowstone|Grand Canyon|Yosemite|Zion|Grand Teton=tetons|Glacier|Rocky Mountain=rockies|Arches|Everglades|Acadia|Great Smoky Mountains=smokies;great smokies;smoky mountains|Joshua Tree|Bryce Canyon=bryce|Death Valley|Olympic|Mount Rainier=rainier;mt rainier|Sequoia|Redwood=redwoods|Denali|Shenandoah|Canyonlands|Badlands|Crater Lake|Hawaii Volcanoes|Big Bend|Mammoth Cave|Carlsbad Caverns|Kings Canyon|Saguaro|Capitol Reef|Haleakala|Petrified Forest|Mesa Verde|Glacier Bay|Wind Cave|Hot Springs|Great Sand Dunes|Theodore Roosevelt|Lassen Volcanic=lassen|Channel Islands|Biscayne|Cuyahoga Valley|Voyageurs|Indiana Dunes|Black Canyon of the Gunnison=black canyon|Great Basin|Pinnacles|White Sands|Guadalupe Mountains|New River Gorge|Congaree|North Cascades|Isle Royale|Dry Tortugas|Virgin Islands|Kenai Fjords|Katmai|Wrangell St Elias=wrangell|Lake Clark|Gates of the Arctic|Kobuk Valley|National Park of American Samoa=american samoa|Gateway Arch`},
+{id:'rivers',q:'Name a US river',strip:['river'],list:`Mississippi|Missouri|Colorado|Hudson|Rio Grande|Ohio|Potomac|Columbia|Snake|Delaware|Arkansas|Tennessee|Red|Platte|Susquehanna|Connecticut|Sacramento|Yukon|Charles|Chattahoochee|Savannah|James|Allegheny|Monongahela|Brazos|Gila|Yellowstone|Green|Willamette|Wabash|Cumberland|Illinois|Shenandoah|Kanawha|Pecos|Merrimack|Penobscot|Niobrara|Klamath|Sabine|Altamaha|Tombigbee|Atchafalaya`},
+{id:'presidents',q:'Name a US president',people:true,list:`George Washington|Abraham Lincoln=abe lincoln;honest abe|Barack Obama|Donald Trump|Joe Biden|John F Kennedy=jfk;john kennedy|Ronald Reagan|George W Bush=george bush;dubya;w bush|Bill Clinton|Richard Nixon|Franklin D Roosevelt=fdr;franklin roosevelt|Theodore Roosevelt=teddy roosevelt;teddy|Thomas Jefferson|Jimmy Carter|Dwight Eisenhower=ike|Harry Truman|John Adams|Andrew Jackson|James Madison|Gerald Ford|James Monroe|Ulysses S Grant=ulysses grant|Lyndon B Johnson=lbj;lyndon johnson|Woodrow Wilson|George H W Bush=bush senior;bush sr;george hw bush|Herbert Hoover|William Howard Taft|William McKinley|Calvin Coolidge|Warren G Harding=warren harding|James K Polk=james polk|John Quincy Adams=jqa|Andrew Johnson|Martin Van Buren=van buren|Grover Cleveland|James Garfield|William Henry Harrison|John Tyler|Zachary Taylor|Millard Fillmore|Franklin Pierce|James Buchanan|Rutherford B Hayes=rutherford hayes|Chester A Arthur=chester arthur|Benjamin Harrison`,traps:{'benjamin franklin':'Franklin was never president.','alexander hamilton':'Hamilton was Treasury Secretary, never president.'}},
+{id:'firstladies',q:'Name a First Lady',people:true,list:`Michelle Obama=michelle|Jacqueline Kennedy=jackie kennedy;jackie o;jackie onassis;jackie;jacqueline onassis|Melania Trump=melania|Hillary Clinton=hillary|Eleanor Roosevelt=eleanor|Nancy Reagan|Laura Bush|Barbara Bush|Martha Washington|Jill Biden|Abigail Adams|Mary Todd Lincoln=mary lincoln|Dolley Madison=dolley;dolly madison|Rosalynn Carter|Betty Ford|Lady Bird Johnson=lady bird|Pat Nixon|Mamie Eisenhower=mamie|Bess Truman|Edith Wilson|Lou Hoover|Grace Coolidge|Florence Harding|Helen Taft|Edith Roosevelt|Ida McKinley|Frances Cleveland|Caroline Harrison|Lucretia Garfield|Lucy Hayes=lemonade lucy|Julia Grant|Eliza Johnson|Sarah Polk|Julia Tyler|Letitia Tyler|Margaret Taylor|Abigail Fillmore|Jane Pierce|Harriet Lane|Louisa Adams|Elizabeth Monroe|Anna Harrison`},
+{id:'signers',q:'Name a signer of the Declaration of Independence',people:true,list:`Thomas Jefferson|John Hancock|Benjamin Franklin=ben franklin|John Adams|Samuel Adams=sam adams|Roger Sherman|Benjamin Rush|Richard Henry Lee|Charles Carroll|Elbridge Gerry|Stephen Hopkins|John Witherspoon|Robert Morris|Button Gwinnett|Caesar Rodney|George Wythe|Francis Hopkinson|Josiah Bartlett|Thomas McKean|Edward Rutledge|Benjamin Harrison|Lyman Hall|George Walton|William Whipple|Matthew Thornton|Robert Treat Paine|William Ellery|Samuel Huntington|William Williams|Oliver Wolcott|William Floyd|Philip Livingston|Francis Lewis|Lewis Morris|Richard Stockton|John Hart|Abraham Clark|John Morton|George Clymer|James Smith|George Taylor|James Wilson|George Ross|George Read|Samuel Chase|William Paca|Thomas Stone|Thomas Nelson|Francis Lightfoot Lee|Carter Braxton|William Hooper|Joseph Hewes|John Penn|Thomas Heyward|Thomas Lynch|Arthur Middleton`,traps:{'george washington':'Washington didn’t sign: he was in New York commanding the army.',washington:'Washington didn’t sign: he was in New York commanding the army.','alexander hamilton':'Hamilton didn’t sign the Declaration (he did sign the Constitution).','james madison':'Madison signed the Constitution, not the Declaration.'}},
+{id:'money',q:'Name someone who’s appeared on US money',rule:'Coins or bills, past or present',people:true,list:`George Washington|Abraham Lincoln|Benjamin Franklin=ben franklin|Alexander Hamilton|Andrew Jackson|Thomas Jefferson|Ulysses S Grant=ulysses grant|Franklin D Roosevelt=fdr;franklin roosevelt|John F Kennedy=jfk;john kennedy|Sacagawea|Susan B Anthony=susan anthony|Dwight Eisenhower=ike|Maya Angelou|Sally Ride|Eleanor Roosevelt|Salmon P Chase=salmon chase|William McKinley|Grover Cleveland|James Madison|Woodrow Wilson|Wilma Mankiller|Anna May Wong|Bessie Coleman|Nina Otero-Warren|Maria Tallchief|Jovita Idar|Edith Kanakaole`,traps:{'harriet tubman':'Not yet: the Tubman $20 has been announced but hasn’t gone into circulation.'}},
+{id:'nfl',q:'Name an NFL team',list:`Dallas Cowboys=cowboys;dallas|New England Patriots=patriots;pats;new england|Green Bay Packers=packers;green bay|Pittsburgh Steelers=steelers;pittsburgh|Kansas City Chiefs=chiefs;kansas city|San Francisco 49ers=49ers;niners;forty niners;san francisco|New York Giants=giants|Philadelphia Eagles=eagles;philadelphia|Chicago Bears=bears;chicago|Denver Broncos=broncos;denver|Las Vegas Raiders=raiders;oakland raiders;las vegas|Miami Dolphins=dolphins;miami|Seattle Seahawks=seahawks;seattle|New York Jets=jets|Los Angeles Rams=rams|New Orleans Saints=saints;new orleans|Tampa Bay Buccaneers=buccaneers;bucs;tampa bay|Baltimore Ravens=ravens;baltimore|Buffalo Bills=bills;buffalo|Minnesota Vikings=vikings;minnesota|Detroit Lions=lions;detroit|Indianapolis Colts=colts;indianapolis|Cincinnati Bengals=bengals;cincinnati|Cleveland Browns=browns;cleveland|Atlanta Falcons=falcons;atlanta|Los Angeles Chargers=chargers|Carolina Panthers=panthers;carolina|Washington Commanders=commanders;redskins;washington football team|Arizona Cardinals=cardinals;arizona|Tennessee Titans=titans;tennessee|Houston Texans=texans;houston|Jacksonville Jaguars=jaguars;jags;jacksonville`},
+{id:'mlb',q:'Name an MLB team',list:`New York Yankees=yankees|Boston Red Sox=red sox;boston|Los Angeles Dodgers=dodgers|Chicago Cubs=cubs|San Francisco Giants=giants|New York Mets=mets|St Louis Cardinals=cardinals;cards;st louis|Atlanta Braves=braves;atlanta|Houston Astros=astros;houston|Chicago White Sox=white sox|Philadelphia Phillies=phillies;philadelphia|Detroit Tigers=tigers;detroit|Baltimore Orioles=orioles;os;baltimore|Seattle Mariners=mariners;seattle|Texas Rangers=rangers;texas|Toronto Blue Jays=blue jays;jays;toronto|Los Angeles Angels=angels;anaheim angels|San Diego Padres=padres;san diego|Minnesota Twins=twins;minnesota|Milwaukee Brewers=brewers;milwaukee|Cincinnati Reds=reds;cincinnati|Pittsburgh Pirates=pirates;pittsburgh|Kansas City Royals=royals;kansas city|Cleveland Guardians=guardians;cleveland indians;cleveland|Athletics=oakland athletics;as;oakland as;a s|Tampa Bay Rays=rays;tampa bay|Miami Marlins=marlins;florida marlins;miami|Colorado Rockies=rockies;colorado|Arizona Diamondbacks=diamondbacks;dbacks;d backs;arizona|Washington Nationals=nationals;nats;washington`},
+{id:'nba',q:'Name an NBA team',list:`Los Angeles Lakers=lakers|Chicago Bulls=bulls;chicago|Boston Celtics=celtics;boston|Golden State Warriors=warriors;golden state|New York Knicks=knicks|Miami Heat=heat;miami|San Antonio Spurs=spurs;san antonio|Cleveland Cavaliers=cavaliers;cavs;cleveland|Houston Rockets=rockets;houston|Brooklyn Nets=nets;brooklyn;new jersey nets|Dallas Mavericks=mavericks;mavs;dallas|Philadelphia 76ers=76ers;sixers;seventy sixers;philadelphia|Los Angeles Clippers=clippers|Phoenix Suns=suns;phoenix|Detroit Pistons=pistons;detroit|Milwaukee Bucks=bucks;milwaukee|Oklahoma City Thunder=thunder;okc;oklahoma city|Denver Nuggets=nuggets;denver|Toronto Raptors=raptors;toronto|Utah Jazz=jazz;utah|Portland Trail Blazers=trail blazers;blazers;portland|Orlando Magic=magic;orlando|Atlanta Hawks=hawks;atlanta|Sacramento Kings=kings;sacramento|Minnesota Timberwolves=timberwolves;wolves;minnesota|Indiana Pacers=pacers;indiana|Memphis Grizzlies=grizzlies;memphis|Charlotte Hornets=hornets;charlotte|New Orleans Pelicans=pelicans;new orleans|Washington Wizards=wizards;washington`},
+{id:'fastfood',q:'Name a US fast-food chain',list:`McDonald's=mcdonalds;maccies;mcds|Burger King|Wendy's|Taco Bell|KFC=kentucky fried chicken|Subway|Chick-fil-A=chick fil a;chickfila|Pizza Hut|Domino's|Starbucks|Dunkin'=dunkin donuts;dunkin|Arby's|Sonic|Popeyes|Chipotle|Five Guys|In-N-Out=in n out;in and out|Jack in the Box|Dairy Queen=dq|Papa John's|Carl's Jr|Hardee's|White Castle|Panda Express|Shake Shack|Whataburger|Culver's|Little Caesars|Wingstop|Raising Cane's=canes|Jimmy John's|Panera|Del Taco|Checkers|Krystal|Long John Silver's|A&W|Steak 'n Shake|Bojangles|Church's Chicken|El Pollo Loco|Zaxby's|Jersey Mike's|Wienerschnitzel|Freddy's|Cook Out|Runza`},
+{id:'cereal',q:'Name an American breakfast cereal',list:`Cheerios|Frosted Flakes=frosties|Froot Loops=fruit loops|Lucky Charms|Cinnamon Toast Crunch|Corn Flakes|Rice Krispies|Cap'n Crunch=captain crunch|Cocoa Puffs|Honey Nut Cheerios|Raisin Bran|Special K|Trix|Apple Jacks|Frosted Mini-Wheats=mini wheats|Fruity Pebbles|Cocoa Pebbles|Honey Bunches of Oats|Corn Pops|Golden Grahams|Kix|Life|Reese's Puffs|Cocoa Krispies|Grape-Nuts|Wheaties|Chex|Honeycomb|Count Chocula|Crispix|Cracklin' Oat Bran|Total|Honey Smacks=smacks|Franken Berry|Boo Berry|Cookie Crisp|Golden Crisp|Basic 4|Product 19|Quisp`},
+{id:'candy',q:'Name an American candy',rule:'Bars, chews, the lot',list:`Snickers|Reese's Peanut Butter Cups=reeses;reese s|M&M's=m and ms;m ms;mms|Hershey's bar=hersheys;hershey bar;hershey|Kit Kat|Skittles|Twix|Milky Way|3 Musketeers=three musketeers|Butterfinger|Baby Ruth|Tootsie Roll|Almond Joy|Mounds|PayDay|Starburst|Jolly Rancher|Twizzlers|Hershey's Kisses=kisses|Sour Patch Kids|Swedish Fish|Laffy Taffy|Nerds|Whoppers|Junior Mints|Milk Duds|Peeps|Candy corn|Airheads|Charleston Chew|Heath|Mr. Goodbar|100 Grand|Zagnut|Clark Bar|Abba-Zaba|Goo Goo Cluster|Necco Wafers|Bit-O-Honey|Chick-O-Stick|Sugar Daddy|Mary Jane`},
+{id:'thanks',q:'Name a Thanksgiving dish',list:`Turkey|Mashed potatoes|Stuffing=dressing|Pumpkin pie|Cranberry sauce|Gravy|Green bean casserole|Sweet potato casserole=candied yams;yams;sweet potatoes|Mac and cheese=macaroni and cheese|Dinner rolls=rolls|Corn|Cornbread|Pecan pie|Apple pie|Deviled eggs|Brussels sprouts|Collard greens|Sweet potato pie|Corn pudding|Creamed corn|Ham|Butternut squash|Succotash|Ambrosia salad=ambrosia|Jell-O salad=jello salad|Waldorf salad|Watergate salad|Oyster stuffing|Cornbread dressing|Giblet gravy|Parker House rolls|Mincemeat pie|Chess pie|Spoonbread`},
+{id:'cars',q:'Name an American car brand',rule:'Current or long gone',list:`Ford|Chevrolet=chevy|Tesla|Jeep|Dodge|Cadillac|GMC|Chrysler|Buick|Lincoln|Ram|Pontiac|Oldsmobile|Hummer|Plymouth|Saturn|Mercury|Rivian|Lucid|DeLorean|AMC|Studebaker|Packard|Hudson|Nash|Duesenberg|Edsel|Tucker|Willys|Shelby|Fisker|Saleen|Imperial|DeSoto|Pierce-Arrow|Cord|Auburn|Eagle|Geo`},
+{id:'airlines',q:'Name a US airline',rule:'Flying today or long grounded',list:`Delta|American Airlines=american|United|Southwest|JetBlue|Alaska Airlines=alaska|Spirit|Frontier|Hawaiian|Pan Am=pan american|TWA=trans world airlines|Allegiant|Sun Country|Continental|Northwest|US Airways|Eastern|Virgin America|AirTran|Braniff|Western|Piedmont|People Express|Breeze|Avelo|Midwest|Aloha|America West|PSA=pacific southwest`},
+{id:'stores',q:'Name a US store chain',list:`Walmart|Target|Macy's|Nordstrom|Kohl's|JCPenney=jc penney;penneys;penney s|Sears|Costco|Bloomingdale's=bloomies|Saks Fifth Avenue=saks|Neiman Marcus|Dillard's|Kmart|TJ Maxx=tj maxx|Marshalls|Ross|Burlington|Bergdorf Goodman=bergdorfs|Lord & Taylor|Belk|Barneys|Marshall Field's|Montgomery Ward|Boscov's|Woolworth=woolworths|Gimbels|Wanamaker's|Hudson's|Filene's|Mervyn's|Ames|Zayre|Bon-Ton`},
+{id:'beer',q:'Name an American beer',list:`Budweiser=bud|Coors|Miller|Bud Light|Coors Light|Miller Lite|Michelob Ultra=michelob|Pabst Blue Ribbon=pbr;pabst|Samuel Adams=sam adams|Blue Moon|Busch|Natural Light=natty light|Yuengling|Keystone|Rolling Rock|Sierra Nevada|Schlitz|Anchor Steam|Lagunitas|Shiner Bock=shiner|Stroh's|Genesee|Hamm's|Olympia|Narragansett|Old Milwaukee|Milwaukee's Best=beast|Dogfish Head|Goose Island|Brooklyn Lager|Bell's|Founders|Iron City|Lone Star|Grain Belt`},
+{id:'soda',q:'Name an American soda',list:`Coca-Cola=coke;coca cola|Pepsi|Dr Pepper|Mountain Dew=mtn dew|Sprite|7 Up=seven up|A&W Root Beer=a and w|Root beer|Barq's|Sunkist|Mug|Crush|Squirt|RC Cola=royal crown|Big Red|Cheerwine|Vernors|Moxie|Faygo|Shasta|Sierra Mist|Mello Yello|Fresca|Tab|Surge|Sun Drop|IBC|Dad's|Jolt Cola=jolt`,traps:{fanta:'Fanta was invented in Germany.','canada dry':'Canada Dry started out in, well, Canada.','irn bru':'Nice try. That one’s Scottish.'}},
+{id:'dogs',q:'Name an American dog breed',list:`Boston Terrier|Alaskan Malamute=malamute|American Pit Bull Terrier=pit bull;pitbull|Chesapeake Bay Retriever=chessie|American Eskimo Dog=american eskimo|American Staffordshire Terrier=amstaff|American Bulldog|Coonhound|Bluetick Coonhound|Redbone Coonhound|Treeing Walker Coonhound|Black and Tan Coonhound|American Foxhound|Rat Terrier|Catahoula Leopard Dog=catahoula|Boykin Spaniel|American Water Spaniel|Toy Fox Terrier|Plott Hound=plott|Chinook|American Hairless Terrier|Mountain Cur|Carolina Dog|Alaskan Klee Kai|Australian Shepherd=aussie`,traps:{'siberian husky':'The husky comes from Siberia.',husky:'The husky comes from Siberia.'}}
+,{id:'simpsons',q:'Name a Simpsons character',list:`Homer Simpson=homer|Bart Simpson=bart|Marge Simpson=marge|Lisa Simpson=lisa|Maggie Simpson=maggie|Mr. Burns=burns;montgomery burns|Ned Flanders=flanders;ned|Moe Szyslak=moe|Krusty the Clown=krusty|Apu=apu nahasapeemapetilon|Milhouse=milhouse van houten|Smithers=waylon smithers|Chief Wiggum=wiggum;clancy wiggum|Ralph Wiggum=ralph|Barney Gumble=barney|Sideshow Bob|Nelson Muntz=nelson|Principal Skinner=skinner;seymour skinner|Grampa Simpson=grampa;grandpa simpson;abe simpson|Patty Bouvier=patty|Selma Bouvier=selma|Comic Book Guy|Groundskeeper Willie=willie|Edna Krabappel=krabappel;mrs krabappel|Otto Mann=otto|Lenny Leonard=lenny|Carl Carlson=carl|Dr. Hibbert=hibbert|Troy McClure|Itchy|Scratchy|Snowball II=snowball|Santa's Little Helper|Kent Brockman=brockman|Mayor Quimby=quimby|Fat Tony|Martin Prince|Jimbo Jones=jimbo|Hans Moleman=moleman|Lionel Hutz=hutz|Professor Frink=frink|Cletus|Disco Stu|Bumblebee Man|Gil Gunderson|Kirk Van Houten|Rainier Wolfcastle=wolfcastle|Superintendent Chalmers=chalmers|Lunchlady Doris|Dr. Nick=dr nick riviera`},
+{id:'friends',q:'Name a character from Friends',list:`Rachel Green=rachel|Ross Geller=ross|Joey Tribbiani=joey|Chandler Bing=chandler|Monica Geller=monica|Phoebe Buffay=phoebe|Gunther|Janice|Mike Hannigan=mike|Marcel|Emily Waltham=emily|Carol Willick=carol|Susan Bunch=susan|Ben Geller=ben|Emma Geller=emma|Richard Burke=richard|Ugly Naked Guy|Mr. Heckles=heckles|Jack Geller|Judy Geller|Ursula Buffay=ursula|Frank Buffay Jr.=frank jr|Estelle Leonard=estelle|Paolo|Julie|Charlie Wheeler|Tag Jones=tag|Janine Lecroix=janine|Eddie Menuek=eddie|Kathy|Mr. Treeger=treeger|Pete Becker|David|Mona|Elizabeth Stevens|Paul Stevens|Fun Bobby|Duncan|Joshua|Gavin Mitchell|Leonard Green|Sandra Green|Erica`},
+{id:'sesame',q:'Name a Sesame Street character',list:`Elmo|Big Bird|Cookie Monster|Oscar the Grouch=oscar|Bert|Ernie|Grover|Count von Count=the count;count|Kermit the Frog=kermit|Mr. Snuffleupagus=snuffleupagus;snuffy|Abby Cadabby=abby|Zoe|Telly Monster=telly|Rosita|Baby Bear|Super Grover|Prairie Dawn|Mr. Hooper=hooper|Herry Monster=herry|Guy Smiley|Slimey|Gordon|Maria|Bob|Luis|Susan|Hoots the Owl=hoots|Julia|Murray Monster=murray|Alice Snuffleupagus|Forgetful Jones|Sherlock Hemlock|Lefty`},
+{id:'amwords',q:'Name an American word where Brits say something else',rule:'Elevator, not lift',list:`Elevator|Apartment|Cookie|French fries=fries|Truck|Sidewalk|Pants|Trash=garbage|Gas=gasoline|Vacation|Soccer|Candy|Diaper|Flashlight|Parking lot|Zucchini|Eggplant|Cell phone=cellphone|Sweater|Faucet|Restroom|Line|Fall|Mail|Hood|Trunk|Windshield|Freeway|Stroller|Pacifier|Drugstore|Eraser|Check|Cilantro|Jell-O|Popsicle|Band-Aid|Bangs|Sneakers|Suspenders|Vest|Closet|Period|Zip code|Overpass|Turn signal|Tic-tac-toe|Arugula|Scallion|Realtor|Broil|Fanny pack|Molasses`},
+{id:'holidays',q:'Name an American holiday or special day',list:`Thanksgiving|Fourth of July=independence day;july 4th;july fourth|Halloween|Christmas|Memorial Day|Labor Day|Presidents' Day=presidents day;washington s birthday|Martin Luther King Jr. Day=mlk day;martin luther king day|Veterans Day|Juneteenth|Columbus Day=indigenous peoples day|Groundhog Day|Black Friday|Super Bowl Sunday|Cinco de Mayo|Mardi Gras|Flag Day|Earth Day|Cyber Monday|Arbor Day|Election Day|Tax Day|Kwanzaa|Pearl Harbor Remembrance Day=pearl harbor day|Patriots' Day|Constitution Day|Pi Day|Casimir Pulaski Day|Leif Erikson Day|Seward's Day|Kamehameha Day|Evacuation Day`}
+];
+/*BANK*/
+// A generated bank (Wikidata answers + page-view rarity) replaces the hand lists; prompt wording and traps stay curated.
+if(typeof BANK!=='undefined'){const m=Object.fromEntries(BANK.map(b=>[b.id,b]));for(const p of P){const b=m[p.id];if(b&&b.bank&&b.bank.length)p.bank=b.bank}}
+const CATS=[['American life',['fastfood','cereal','candy','thanks','beer','soda','stores']],['Geography',['states','mstates','twoword','atlantic','canada','capitals','notstate','parks','rivers']],['Music & entertainment',['simpsons','friends','sesame']],['History',['presidents','firstladies','signers','money']],['Sport',['nfl','mlb','nba']],['Words & culture',['amwords','holidays']],['General knowledge',['cars','airlines','dogs']]];
+for(const [c,ids] of CATS)for(const id of ids){const p=P.find(x=>x.id===id);if(p)p.cat=c}
+const ROADS=[
+ {name:'Route 66',stops:[[0,'Chicago'],[110,'St. Louis'],[230,'Tulsa'],[340,'Amarillo'],[440,'Albuquerque'],[560,'Grand Canyon'],[700,'Santa Monica Pier']]},
+ {name:'Pacific Coast Highway',stops:[[0,'Golden Gate Bridge'],[130,'Monterey'],[260,'Big Sur'],[380,'Hearst Castle'],[520,'Santa Barbara'],[620,'Malibu'],[700,'San Diego']]},
+ {name:'Blue Ridge Parkway',stops:[[0,'Shenandoah'],[150,'Natural Bridge'],[280,'Mabry Mill'],[420,'Grandfather Mountain'],[580,'Asheville'],[700,'Great Smoky Mountains']]},
+ {name:'Great River Road',stops:[[0,'Lake Itasca'],[120,'Minneapolis'],[260,'Hannibal'],[400,'St. Louis'],[520,'Graceland'],[620,'Natchez'],[700,'New Orleans']]},
+ {name:'Lincoln Highway',stops:[[0,'Times Square'],[160,'Gettysburg'],[290,'Pittsburgh'],[450,'Chicago'],[580,'Omaha'],[700,'Rocky Mountains']]},
+ {name:'Overland to Texas',stops:[[0,'Nashville'],[140,'Memphis'],[300,'Hot Springs'],[450,'Dallas'],[580,'Austin'],[700,'The Alamo']]}
+];
+// six animals, commonest to rarest
+const ZOO=[
+ {pts:10,name:'Gray squirrel',d:'<ellipse cx="46" cy="64" rx="15" ry="12"/><circle cx="60" cy="49" r="9"/><path d="M57 41l3-8 4 7z"/><path d="M34 66C12 62 10 30 28 24c12-4 18 8 10 16-6 6-6 14 0 20z"/><rect x="50" y="72" width="5" height="8" rx="2"/><rect x="38" y="72" width="5" height="8" rx="2"/>'},
+ {pts:25,name:'Raccoon',d:'<ellipse cx="48" cy="62" rx="22" ry="12"/><circle cx="72" cy="54" r="10"/><path d="M66 45l2-8 5 6zM76 45l3-7 3 8z"/><path d="M82 56l8 2-8 3z"/><rect x="34" y="70" width="5" height="11" rx="2"/><rect x="56" y="70" width="5" height="11" rx="2"/><path d="M28 60l-8 2-3 6 3 6 9-2z"/><rect x="14" y="62" width="4" height="9" fill="#f2c230"/><rect x="21" y="61" width="3" height="10" fill="#f2c230"/>'},
+ {pts:40,name:'White-tailed deer',d:'<ellipse cx="46" cy="52" rx="20" ry="9"/><path d="M60 48l8-16 7 2-6 18z"/><path d="M68 32l12 4-2 4-10-2z"/><path d="M70 30l-2-10M70 24l-5-4M70 22l4-6M74 31l4-9M76 25l5-3" stroke="#14161b" stroke-width="2.5" fill="none" stroke-linecap="round"/><path d="M32 56l-3 24M38 58l2 22M54 58l-2 22M60 56l4 24" stroke="#14161b" stroke-width="4" stroke-linecap="round"/><path d="M27 48l-6-4 3 8z"/>'},
+ {pts:60,name:'Coyote',d:'<ellipse cx="46" cy="56" rx="19" ry="9"/><path d="M60 52l6-12 6 0 12 8-2 3-10-2-6 10z"/><path d="M64 40l1-8 4 6z"/><path d="M28 54C18 58 14 66 12 74l6-1 10-12z"/><path d="M34 60l-2 20M40 62l1 18M54 62l-1 18M60 58l3 22" stroke="#14161b" stroke-width="4" stroke-linecap="round"/>'},
+ {pts:80,name:'Black bear',d:'<path d="M16 74c0-22 14-34 34-32 10-4 22-2 28 6l8 6c2 3 0 6-3 6l-6 0v14h-8l-2-10-12 0-2 10h-8l-2-8-10 2-2 6z"/><circle cx="74" cy="44" r="4"/>'},
+ {pts:100,name:'Bald eagle',d:'<path d="M50 44C36 32 20 32 4 42c14 0 24 4 34 12l6 18 6-6 6 6 6-18c10-8 20-12 34-12-16-10-32-10-46 2z"/><circle cx="50" cy="38" r="8" fill="#fff" stroke="#14161b" stroke-width="2"/><path d="M47 40l3 6 3-6z" fill="#f2c230" stroke="#14161b" stroke-width="1"/><path d="M44 72l6 10 6-10z" fill="#fff" stroke="#14161b" stroke-width="2"/>'}
+];
+const CUTS=[.12,.28,.48,.68,.86,1.01], SECS=25, URL_='backroads.howtospeakdata.com';
+const sign=(k,size)=>`<svg viewBox="0 0 100 100" width="${size||'100%'}" height="${size||'100%'}"><rect x="15" y="15" width="70" height="70" rx="6" transform="rotate(45 50 50)" fill="${k<0?'#5b5f66':'#f2c230'}" stroke="#14161b" stroke-width="3"/><rect x="19" y="19" width="62" height="62" rx="4" transform="rotate(45 50 50)" fill="none" stroke="#14161b" stroke-width="1.5"/>${k<0?'<text x="50" y="56" text-anchor="middle" font-size="13" font-weight="900" fill="#14161b" font-family="Overpass,sans-serif">NO SIGN</text>':`<g fill="#14161b" transform="translate(20 18) scale(.6)">${ZOO[k].d}</g>`}</svg>`;
+
+// ---------- matching ----------
+const norm=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/&/g,' and ').replace(/['’`.]/g,'').replace(/[^a-z0-9 ]/g,' ').replace(/\b(the|jr|sr)\b/g,' ').replace(/\bst\b/g,'saint').replace(/\bmt\b/g,'mount').replace(/\s+/g,' ').trim();
+function prep(p){
+  if(p.ready)return p;
+  const items=p.bank
+    ?p.bank.map(([name,al,tier],i)=>({name,al:[name,...al].map(norm).filter(Boolean),rank:i,tier}))
+    :p.list.split('|').map((e,i)=>{const [name,al]=e.split('=');return {name:name.trim(),al:[name,...(al?al.split(';'):[])].map(norm),rank:i}});
+  if(p.people){const seen=new Set();for(const it of items){const last=it.al[0].split(' ').pop();if(last.length>2&&!seen.has(last)){it.al.push(last);seen.add(last)}else seen.add(last)}}
+  const n=items.length;
+  if(!p.bank)items.forEach(it=>{const q=it.rank/n;it.tier=CUTS.findIndex(c=>q<c)});
+  p.items=items;p.trapMap=Object.fromEntries(Object.entries(p.traps||{}).map(([k,v])=>[norm(k),v]));p.ready=true;return p;
+}
+function lev(a,b){if(Math.abs(a.length-b.length)>2)return 9;const d=[...Array(b.length+1).keys()];
+  for(let i=1;i<=a.length;i++){let prev=d[0];d[0]=i;for(let j=1;j<=b.length;j++){const t=d[j];d[j]=Math.min(d[j]+1,d[j-1]+1,prev+(a[i-1]===b[j-1]?0:1));prev=t}}return d[b.length]}
+function judge(p,raw){
+  let s=norm(raw);if(!s)return null;
+  for(const w of (p.strip||[]).map(norm))s=s.replace(new RegExp('\\b'+w+'\\b','g'),' ').replace(/\s+/g,' ').trim();
+  if(p.trapMap[s])return {trap:p.trapMap[s]};
+  let best=null,score=0;
+  for(const it of p.items)for(const a of it.al){
+    let sc=0;if(s===a)sc=1000+a.length;else if(a.length>=4&&(' '+s+' ').includes(' '+a+' '))sc=a.length;
+    if(sc>score){score=sc;best=it}}
+  if(best)return {it:best};
+  let bd=9;for(const it of p.items)for(const a of it.al){const lim=a.length>=9?2:a.length>=5?1:0;const d=lev(s,a);if(d<=lim&&d<bd){bd=d;best=it}}
+  return best?{it:best,fuzzy:true}:{miss:true};
+}
+
+
+// ---------- state ----------
+const $=id=>document.getElementById(id), card=$('card');
+const store={get(k,d){try{return JSON.parse(localStorage.getItem('backroad:'+k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem('backroad:'+k,JSON.stringify(v))}catch(e){}}};
+const calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let mode='daily',timerOn=store.get('timer',true),G=null,tick=null,shown=0;
+const today=()=>new Date().toISOString().slice(0,10);
+const dayNo=()=>Math.floor((Date.parse(today())-Date.parse('2026-11-27'))/864e5)+1;
+function rng(seed){let h=1779033703^seed.length;for(const ch of seed){h=Math.imul(h^ch.charCodeAt(0),3432918353);h=h<<13|h>>>19}
+  return()=>{h=Math.imul(h^h>>>16,2246822507);h=Math.imul(h^h>>>13,3266489909);return((h^=h>>>16)>>>0)/4294967296}}
+function newGame(seed){const r=seed?rng(seed):Math.random;
+  const qs=CATS.map(([c,ids])=>ids[Math.floor(r()*ids.length)]);
+  return {date:today(),mode,road:Math.floor(r()*ROADS.length)%ROADS.length,qs,i:0,ans:[]}}
+const getP=id=>prep(P.find(p=>p.id===id));
+const miles=()=>G.ans.reduce((a,x)=>a+x.pts,0);
+const road=()=>ROADS[G.road];
+
+// ---------- scene ----------
+const svgUrl=s=>`url("data:image/svg+xml,${encodeURIComponent(s)}")`;
+$('stars').style.backgroundImage=svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="300" height="100">${Array.from({length:26},(_,i)=>`<circle cx="${(i*73)%300}" cy="${(i*37)%90}" r="${i%5?0.8:1.4}" fill="#fff" opacity="${.4+(i%3)*.2}"/>`).join('')}</svg>`);
+$('far').style.backgroundImage=svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="640" height="70" viewBox="0 0 640 70"><path d="M0 70V48l40-6 20-22h70l16 20 60 4 30-18 40 2 14 16 90 4 20-26h80l18 24 50 2 30-14 32 6v38z" fill="#232741"/></svg>`);
+$('mid').style.backgroundImage=svgUrl(`<svg xmlns="http://www.w3.org/2000/svg" width="420" height="80" viewBox="0 0 420 80"><g fill="#0c0e13"><rect x="40" y="6" width="4" height="74"/><rect x="28" y="12" width="28" height="3"/><path d="M0 78h420v2H0z"/><path d="M150 80V48c0-4 6-4 6 0v8h4V40c0-6 8-6 8 0v40zm28 0V60c0-3 5-3 5 0v20z"/><rect x="250" y="6" width="4" height="74"/><rect x="238" y="12" width="28" height="3"/><path d="M330 80V52c0-4 5-4 5 0v6h4V44c0-5 7-5 7 0v14h4v-6c0-4 5-4 5 0v28z"/></g><path d="M44 14Q147 30 250 14M44 18Q147 34 250 18" stroke="#0c0e13" fill="none" stroke-width="1"/></svg>`);
+let off=0;
+function paint(){$('far').style.backgroundPositionX=(-off*.15)+'px';$('mid').style.backgroundPositionX=(-off*.5)+'px';$('dash').style.backgroundPositionX=(-off*1.4)+'px';$('stars').style.backgroundPositionX=(-off*.03)+'px'}
+function routeHTML(){
+  const r=road(),last=r.stops.length-1;
+  $('route').innerHTML=`<div class="track"></div><div class="fill" id="fill"></div><div class="marker" id="mk"></div>`+r.stops.map(([m,n],i)=>
+    `<div class="st ${i%2?'dn':'up'} ${i===0?'first':i===last?'last':'mstop'}" data-m="${m}" style="left:${m/7}%"><span></span><i></i></div>`).join('');
+  $('route').querySelectorAll('.st span').forEach((s,i)=>s.textContent=r.stops[i][1]);
+  setPos(shown);
+}
+function setPos(m){
+  const f=Math.min(1,m/700);$('fill').style.width=f*100+'%';$('mk').style.left=f*100+'%';$('odo').textContent=Math.round(m);
+  let nx=null;document.querySelectorAll('.st').forEach(s=>{const hit=m>=+s.dataset.m;s.classList.toggle('hit',hit);s.classList.remove('nextup');if(!hit&&!nx)nx=s});
+  if(nx)nx.classList.add('nextup');
+}
+function drive(target,done){
+  const from=shown,dist=target-from;
+  if(dist<=0||calm){shown=target;setPos(target);done&&done();return}
+  const dur=Math.min(2600,700+dist*16);$('scene').classList.add('go');const t0=performance.now();let last=t0;
+  const step=now=>{const k=Math.min(1,(now-t0)/dur),e=1-Math.pow(1-k,3);off+=(now-last)*0.35*(1.2-k);last=now;shown=from+dist*e;setPos(shown);paint();
+    if(k<1)requestAnimationFrame(step);else{$('scene').classList.remove('go');shown=target;setPos(target);done&&done()}};
+  requestAnimationFrame(step);
+}
+// gentle idle cruise
+(function idle(){if(!calm&&!$('scene').classList.contains('go')){off+=0.6;paint()}requestAnimationFrame(idle)})();
+
+// ---------- screens ----------
+function intro(){
+  const r=road();
+  card.innerHTML=`<div class="meta"><span>${mode==='daily'?'Daily drive #'+dayNo():'Unlimited drive'}</span><span>7 prompts · 25s each</span></div>
+  <div class="intro"><h2></h2><p>${r.stops[0][1]} to ${r.stops[r.stops.length-1][1]}. Common answers barely move you. Rare ones cover real ground.</p></div>
+  <div class="zoo">${ZOO.map((z,k)=>`<span>${sign(k,24)}${z.pts} mi</span>`).join('')}</div>
+  <button class="btn go" id="start">Start ${mode==='daily'?'today’s':'this'} drive</button>`;
+  card.querySelector('h2').textContent=r.name;
+  $('start').onclick=ask;
+}
+function ask(){
+  const p=getP(G.qs[G.i]);
+  card.innerHTML=`<div class="meta"><span>${G.i+1} of 7</span><span>${road().name}</span></div>
+  <div class="sign"><div class="cat"></div><h2></h2>${p.rule?'<div class="rule"></div>':''}</div>
+  ${timerOn?'<div class="timer" id="tm"><i></i></div>':'<div style="height:10px"></div>'}
+  <form id="f" autocomplete="off"><input id="in" aria-label="Your answer" placeholder="Your answer" autocapitalize="off" spellcheck="false"><button class="btn go">Go</button><button class="btn" type="button" id="pass">Pass</button></form>
+  <div class="msg" id="msg"></div>`;
+  card.querySelector('.cat').textContent=p.cat;card.querySelector('h2').textContent=p.q;if(p.rule)card.querySelector('.rule').textContent=p.rule;
+  const inp=$('in');inp.focus({preventScroll:true});
+  $('f').onsubmit=e=>{e.preventDefault();const r=judge(p,inp.value);if(!r)return;
+    if(r.trap){$('msg').textContent=r.trap;inp.select();return}
+    if(r.miss){$('msg').textContent='Not on the map. Try another.';inp.select();return}
+    answer(p,r.it)};
+  $('pass').onclick=()=>answer(p,null);
+  if(timerOn){const t0=performance.now(),bar=$('tm');
+    tick=setInterval(()=>{const left=SECS-(performance.now()-t0)/1000;bar.firstChild.style.width=Math.max(0,left/SECS*100)+'%';bar.classList.toggle('low',left<6);
+      if(left<=0){clearInterval(tick);const r=judge(p,inp.value);answer(p,r&&r.it?r.it:null)}},100)}
+}
+function answer(p,it){
+  clearInterval(tick);
+  const k=it?it.tier:-1, pts=it?ZOO[k].pts:0;
+  G.ans.push({q:p.q,a:it?it.name:'',pts,tier:k});G.i++;
+  if(mode==='daily')store.set('day2',G);
+  const rarer=p.items.filter(x=>x.tier===5&&(!it||x.name!==it.name)).sort(()=>Math.random()-.5).slice(0,2).map(x=>x.name);
+  card.querySelector('#f').outerHTML=`<div class="reveal"><div class="xing"><div class="diamond" id="dm">${sign(0)}</div></div>
+    <div class="rv" id="rv"><div class="mi" id="mi">+0 mi</div><div class="ans"></div><div class="animal"></div><div class="ladder" id="ld">${ZOO.map(()=>'<i></i>').join('')}</div><div class="alt"></div></div></div>
+    <div class="next" id="nxw"><button class="btn go" id="nx">${G.i<7?'Next':'See your drive'}</button></div>`;
+  $('msg').remove();const tm=$('tm');if(tm)tm.remove();
+  const rv=$('rv');rv.querySelector('.ans').textContent=it?it.name:'No answer';
+  rv.querySelector('.animal').textContent=it?'You spotted a '+ZOO[k].name.toLowerCase():'Nothing spotted this time';
+  rv.querySelector('.alt').textContent=rarer.length?(k===5?'Also rare: ':'Rarer: ')+rarer.join(', '):'';
+  const dm=$('dm'),lad=[...$('ld').children];
+  const finish=()=>{dm.classList.add('land');rv.classList.add('show');
+    const target=miles();const t0=performance.now();
+    const miEl=$('mi');(function cnt(now){const e=Math.min(1,(now-t0)/600);if(!miEl.isConnected)return;miEl.textContent='+'+Math.round(pts*e)+' mi';if(e<1)requestAnimationFrame(cnt)})(t0);
+    drive(target,()=>{$('nxw').classList.add('on');$('nx').focus({preventScroll:true})});};
+  $('nx').onclick=()=>G.i<7?ask():end();
+  // spin the sign up through the animals until it lands on this answer's
+  const stops=k<0?[0,1,-1]:Array.from({length:k+1},(_,j)=>j);
+  if(calm){dm.innerHTML=sign(k);lad.forEach((l,j)=>l.style.background=j<=k?'var(--lane)':'');finish();return}
+  let j=0;
+  (function flip(){const v=stops[j];dm.classList.add('flip');
+    setTimeout(()=>{dm.innerHTML=sign(v);dm.classList.remove('flip');lad.forEach((l,x)=>l.style.background=x<=v&&v>=0?'var(--lane)':'');
+      j++;if(j<stops.length)setTimeout(flip,90+j*45);else setTimeout(finish,120)},120)})();
+}
+function end(){
+  if(mode==='daily'){store.set('day2',G);const h=store.get('hist',[]);if(!h.some(x=>x.date===G.date)){h.push({date:G.date,mi:miles()});store.set('hist',h.slice(-90))}}
+  const mi=miles(),r=road();let at=r.stops[0][1];for(const [m,n] of r.stops)if(mi>=m)at=n;
+  const share=`Backroads ${G.mode==='daily'?'#'+dayNo():'(unlimited)'} · ${r.name}\n${G.ans.map(a=>a.tier<0?'⬛':['🐿️','🦝','🦌','🐺','🐻','🦅'][a.tier]).join('')} ${mi}/700 mi\n${URL_}`;
+  card.innerHTML=`<div class="meta"><span>${r.name}</span><span>${G.mode==='daily'?'Daily #'+dayNo():'Unlimited'}</span></div>
+  <div class="big">${mi} mi</div><p style="color:var(--ink2)">${mi>=700?'All the way to '+at+'.':'You made it to '+at+'.'}</p>
+  <ul class="res">${G.ans.map(a=>`<li>${sign(a.tier,28)}<div><span></span><small></small></div><b>${a.pts}</b></li>`).join('')}</ul>
+  <pre class="share" id="sh"></pre>
+  <div class="row"><button class="btn go" id="cp">Copy result</button><button class="btn" id="again">${G.mode==='daily'?'Play Unlimited':'Drive again'}</button></div>`;
+  card.querySelectorAll('.res li').forEach((li,k)=>{li.querySelector('span').textContent=G.ans[k].a||'No answer';li.querySelector('small').textContent=G.ans[k].q});
+  $('sh').textContent=share;
+  $('cp').onclick=async e=>{try{if(navigator.share&&matchMedia('(pointer:coarse)').matches){await navigator.share({text:share});return}await navigator.clipboard.writeText(share);e.target.textContent='Copied'}catch(_){e.target.textContent='Select the text to copy'}};
+  $('again').onclick=()=>setMode('free');
+}
+function start(){
+  clearInterval(tick);
+  const saved=mode==='daily'?store.get('day2',null):null;
+  if(saved&&saved.date===today()&&saved.qs){G=saved;shown=miles();routeHTML();if(G.i>=7)end();else ask();return}
+  G=newGame(mode==='daily'?'backroad-'+today():null);shown=0;routeHTML();intro();
+}
+function setMode(m){mode=m;$('mDaily').setAttribute('aria-pressed',m==='daily');$('mFree').setAttribute('aria-pressed',m==='free');start()}
+$('mDaily').onclick=()=>setMode('daily');$('mFree').onclick=()=>setMode('free');
+const tb=$('mTimer');const syncT=()=>{tb.setAttribute('aria-pressed',timerOn);tb.textContent=timerOn?'Timer on':'Timer off'};syncT();
+tb.onclick=()=>{timerOn=!timerOn;store.set('timer',timerOn);syncT()};
+if(typeof BANK_META!=='undefined')$('src').textContent=`Answers from Wikidata; rarity from Wikipedia page views (${BANK_META.window}), refreshed ${BANK_META.built}.`;
+paint();start();
+}
+</script>
+</body>
+</html>

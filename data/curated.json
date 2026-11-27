@@ -1,0 +1,5421 @@
+[
+ {
+  "id": "states",
+  "q": "Name a US state",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "California",
+    "aliases": []
+   },
+   {
+    "name": "Texas",
+    "aliases": []
+   },
+   {
+    "name": "New York",
+    "aliases": []
+   },
+   {
+    "name": "Florida",
+    "aliases": []
+   },
+   {
+    "name": "Hawaii",
+    "aliases": []
+   },
+   {
+    "name": "Alaska",
+    "aliases": []
+   },
+   {
+    "name": "Washington",
+    "aliases": []
+   },
+   {
+    "name": "Ohio",
+    "aliases": []
+   },
+   {
+    "name": "Georgia",
+    "aliases": []
+   },
+   {
+    "name": "Michigan",
+    "aliases": []
+   },
+   {
+    "name": "Illinois",
+    "aliases": []
+   },
+   {
+    "name": "Arizona",
+    "aliases": []
+   },
+   {
+    "name": "Colorado",
+    "aliases": []
+   },
+   {
+    "name": "Nevada",
+    "aliases": []
+   },
+   {
+    "name": "Pennsylvania",
+    "aliases": []
+   },
+   {
+    "name": "Massachusetts",
+    "aliases": []
+   },
+   {
+    "name": "Oregon",
+    "aliases": []
+   },
+   {
+    "name": "New Jersey",
+    "aliases": []
+   },
+   {
+    "name": "Virginia",
+    "aliases": []
+   },
+   {
+    "name": "North Carolina",
+    "aliases": []
+   },
+   {
+    "name": "Tennessee",
+    "aliases": []
+   },
+   {
+    "name": "Louisiana",
+    "aliases": []
+   },
+   {
+    "name": "Utah",
+    "aliases": []
+   },
+   {
+    "name": "Kentucky",
+    "aliases": []
+   },
+   {
+    "name": "Montana",
+    "aliases": []
+   },
+   {
+    "name": "Minnesota",
+    "aliases": []
+   },
+   {
+    "name": "Wisconsin",
+    "aliases": []
+   },
+   {
+    "name": "Alabama",
+    "aliases": []
+   },
+   {
+    "name": "Mississippi",
+    "aliases": []
+   },
+   {
+    "name": "Missouri",
+    "aliases": []
+   },
+   {
+    "name": "Kansas",
+    "aliases": []
+   },
+   {
+    "name": "Oklahoma",
+    "aliases": []
+   },
+   {
+    "name": "Indiana",
+    "aliases": []
+   },
+   {
+    "name": "Iowa",
+    "aliases": []
+   },
+   {
+    "name": "South Carolina",
+    "aliases": []
+   },
+   {
+    "name": "Maine",
+    "aliases": []
+   },
+   {
+    "name": "Vermont",
+    "aliases": []
+   },
+   {
+    "name": "New Mexico",
+    "aliases": []
+   },
+   {
+    "name": "Connecticut",
+    "aliases": []
+   },
+   {
+    "name": "Maryland",
+    "aliases": []
+   },
+   {
+    "name": "Arkansas",
+    "aliases": []
+   },
+   {
+    "name": "Idaho",
+    "aliases": []
+   },
+   {
+    "name": "Nebraska",
+    "aliases": []
+   },
+   {
+    "name": "Wyoming",
+    "aliases": []
+   },
+   {
+    "name": "West Virginia",
+    "aliases": []
+   },
+   {
+    "name": "New Hampshire",
+    "aliases": []
+   },
+   {
+    "name": "Rhode Island",
+    "aliases": []
+   },
+   {
+    "name": "Delaware",
+    "aliases": []
+   },
+   {
+    "name": "South Dakota",
+    "aliases": []
+   },
+   {
+    "name": "North Dakota",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "mstates",
+  "q": "Name a state beginning with M",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Michigan",
+    "aliases": []
+   },
+   {
+    "name": "Massachusetts",
+    "aliases": []
+   },
+   {
+    "name": "Montana",
+    "aliases": []
+   },
+   {
+    "name": "Minnesota",
+    "aliases": []
+   },
+   {
+    "name": "Mississippi",
+    "aliases": []
+   },
+   {
+    "name": "Missouri",
+    "aliases": []
+   },
+   {
+    "name": "Maryland",
+    "aliases": []
+   },
+   {
+    "name": "Maine",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "twoword",
+  "q": "Name a state with a two-word name",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "New York",
+    "aliases": []
+   },
+   {
+    "name": "New Jersey",
+    "aliases": []
+   },
+   {
+    "name": "North Carolina",
+    "aliases": []
+   },
+   {
+    "name": "South Carolina",
+    "aliases": []
+   },
+   {
+    "name": "New Mexico",
+    "aliases": []
+   },
+   {
+    "name": "West Virginia",
+    "aliases": []
+   },
+   {
+    "name": "North Dakota",
+    "aliases": []
+   },
+   {
+    "name": "South Dakota",
+    "aliases": []
+   },
+   {
+    "name": "New Hampshire",
+    "aliases": []
+   },
+   {
+    "name": "Rhode Island",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "atlantic",
+  "q": "Name a state with an Atlantic coastline",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {
+   "pennsylvania": "So close: Pennsylvania only reaches the Delaware River estuary, not the ocean.",
+   "vermont": "Vermont is landlocked.",
+   "washington dc": "DC is on the Potomac, not the coast."
+  },
+  "items": [
+   {
+    "name": "Florida",
+    "aliases": []
+   },
+   {
+    "name": "New York",
+    "aliases": []
+   },
+   {
+    "name": "Maine",
+    "aliases": []
+   },
+   {
+    "name": "Massachusetts",
+    "aliases": []
+   },
+   {
+    "name": "North Carolina",
+    "aliases": []
+   },
+   {
+    "name": "New Jersey",
+    "aliases": []
+   },
+   {
+    "name": "South Carolina",
+    "aliases": []
+   },
+   {
+    "name": "Georgia",
+    "aliases": []
+   },
+   {
+    "name": "Virginia",
+    "aliases": []
+   },
+   {
+    "name": "Maryland",
+    "aliases": []
+   },
+   {
+    "name": "Connecticut",
+    "aliases": []
+   },
+   {
+    "name": "Rhode Island",
+    "aliases": []
+   },
+   {
+    "name": "Delaware",
+    "aliases": []
+   },
+   {
+    "name": "New Hampshire",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "canada",
+  "q": "Name a state that borders Canada",
+  "rule": "Land or water border both count",
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Alaska",
+    "aliases": []
+   },
+   {
+    "name": "Washington",
+    "aliases": []
+   },
+   {
+    "name": "Michigan",
+    "aliases": []
+   },
+   {
+    "name": "New York",
+    "aliases": []
+   },
+   {
+    "name": "Maine",
+    "aliases": []
+   },
+   {
+    "name": "Minnesota",
+    "aliases": []
+   },
+   {
+    "name": "Montana",
+    "aliases": []
+   },
+   {
+    "name": "Vermont",
+    "aliases": []
+   },
+   {
+    "name": "North Dakota",
+    "aliases": []
+   },
+   {
+    "name": "Idaho",
+    "aliases": []
+   },
+   {
+    "name": "New Hampshire",
+    "aliases": []
+   },
+   {
+    "name": "Ohio",
+    "aliases": []
+   },
+   {
+    "name": "Pennsylvania",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "capitals",
+  "q": "Name a state capital",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {
+   "new york city": "Albany is the capital of New York, not NYC.",
+   "los angeles": "Sacramento is the capital of California.",
+   "chicago": "Springfield is the capital of Illinois.",
+   "washington dc": "That is the national capital, not a state capital."
+  },
+  "items": [
+   {
+    "name": "Austin",
+    "aliases": []
+   },
+   {
+    "name": "Sacramento",
+    "aliases": []
+   },
+   {
+    "name": "Boston",
+    "aliases": []
+   },
+   {
+    "name": "Denver",
+    "aliases": []
+   },
+   {
+    "name": "Atlanta",
+    "aliases": []
+   },
+   {
+    "name": "Phoenix",
+    "aliases": []
+   },
+   {
+    "name": "Nashville",
+    "aliases": []
+   },
+   {
+    "name": "Honolulu",
+    "aliases": []
+   },
+   {
+    "name": "Albany",
+    "aliases": []
+   },
+   {
+    "name": "Tallahassee",
+    "aliases": []
+   },
+   {
+    "name": "Salt Lake City",
+    "aliases": [
+     "salt lake"
+    ]
+   },
+   {
+    "name": "Indianapolis",
+    "aliases": []
+   },
+   {
+    "name": "Columbus",
+    "aliases": []
+   },
+   {
+    "name": "Richmond",
+    "aliases": []
+   },
+   {
+    "name": "Boise",
+    "aliases": []
+   },
+   {
+    "name": "Santa Fe",
+    "aliases": []
+   },
+   {
+    "name": "Juneau",
+    "aliases": []
+   },
+   {
+    "name": "Olympia",
+    "aliases": []
+   },
+   {
+    "name": "Springfield",
+    "aliases": []
+   },
+   {
+    "name": "Lansing",
+    "aliases": []
+   },
+   {
+    "name": "Raleigh",
+    "aliases": []
+   },
+   {
+    "name": "Baton Rouge",
+    "aliases": []
+   },
+   {
+    "name": "Oklahoma City",
+    "aliases": []
+   },
+   {
+    "name": "Providence",
+    "aliases": []
+   },
+   {
+    "name": "Hartford",
+    "aliases": []
+   },
+   {
+    "name": "Annapolis",
+    "aliases": []
+   },
+   {
+    "name": "Madison",
+    "aliases": []
+   },
+   {
+    "name": "Saint Paul",
+    "aliases": []
+   },
+   {
+    "name": "Des Moines",
+    "aliases": []
+   },
+   {
+    "name": "Little Rock",
+    "aliases": []
+   },
+   {
+    "name": "Carson City",
+    "aliases": []
+   },
+   {
+    "name": "Cheyenne",
+    "aliases": []
+   },
+   {
+    "name": "Lincoln",
+    "aliases": []
+   },
+   {
+    "name": "Trenton",
+    "aliases": []
+   },
+   {
+    "name": "Harrisburg",
+    "aliases": []
+   },
+   {
+    "name": "Columbia",
+    "aliases": []
+   },
+   {
+    "name": "Charleston",
+    "aliases": []
+   },
+   {
+    "name": "Frankfort",
+    "aliases": []
+   },
+   {
+    "name": "Jackson",
+    "aliases": []
+   },
+   {
+    "name": "Montgomery",
+    "aliases": []
+   },
+   {
+    "name": "Topeka",
+    "aliases": []
+   },
+   {
+    "name": "Jefferson City",
+    "aliases": []
+   },
+   {
+    "name": "Helena",
+    "aliases": []
+   },
+   {
+    "name": "Salem",
+    "aliases": []
+   },
+   {
+    "name": "Concord",
+    "aliases": []
+   },
+   {
+    "name": "Montpelier",
+    "aliases": []
+   },
+   {
+    "name": "Augusta",
+    "aliases": []
+   },
+   {
+    "name": "Dover",
+    "aliases": []
+   },
+   {
+    "name": "Bismarck",
+    "aliases": []
+   },
+   {
+    "name": "Pierre",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "notstate",
+  "q": "Name a part of the US that isn’t a state",
+  "rule": "Territories, DC, tiny islands",
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Puerto Rico",
+    "aliases": []
+   },
+   {
+    "name": "Washington DC",
+    "aliases": [
+     "washington dc",
+     "district of columbia",
+     "dc"
+    ]
+   },
+   {
+    "name": "Guam",
+    "aliases": []
+   },
+   {
+    "name": "US Virgin Islands",
+    "aliases": [
+     "virgin islands",
+     "usvi",
+     "us virgin islands"
+    ]
+   },
+   {
+    "name": "American Samoa",
+    "aliases": []
+   },
+   {
+    "name": "Northern Mariana Islands",
+    "aliases": [
+     "northern marianas",
+     "mariana islands",
+     "saipan"
+    ]
+   },
+   {
+    "name": "Midway Atoll",
+    "aliases": [
+     "midway",
+     "midway island"
+    ]
+   },
+   {
+    "name": "Wake Island",
+    "aliases": [
+     "wake"
+    ]
+   },
+   {
+    "name": "Johnston Atoll",
+    "aliases": []
+   },
+   {
+    "name": "Baker Island",
+    "aliases": []
+   },
+   {
+    "name": "Howland Island",
+    "aliases": []
+   },
+   {
+    "name": "Jarvis Island",
+    "aliases": []
+   },
+   {
+    "name": "Kingman Reef",
+    "aliases": []
+   },
+   {
+    "name": "Navassa Island",
+    "aliases": []
+   },
+   {
+    "name": "Palmyra Atoll",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "parks",
+  "q": "Name a US national park",
+  "rule": null,
+  "strip": [
+   "national park",
+   "national parks",
+   "np",
+   "park"
+  ],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Yellowstone",
+    "aliases": []
+   },
+   {
+    "name": "Grand Canyon",
+    "aliases": []
+   },
+   {
+    "name": "Yosemite",
+    "aliases": []
+   },
+   {
+    "name": "Zion",
+    "aliases": []
+   },
+   {
+    "name": "Grand Teton",
+    "aliases": [
+     "tetons"
+    ]
+   },
+   {
+    "name": "Glacier",
+    "aliases": []
+   },
+   {
+    "name": "Rocky Mountain",
+    "aliases": [
+     "rockies"
+    ]
+   },
+   {
+    "name": "Arches",
+    "aliases": []
+   },
+   {
+    "name": "Everglades",
+    "aliases": []
+   },
+   {
+    "name": "Acadia",
+    "aliases": []
+   },
+   {
+    "name": "Great Smoky Mountains",
+    "aliases": [
+     "smokies",
+     "great smokies",
+     "smoky mountains"
+    ]
+   },
+   {
+    "name": "Joshua Tree",
+    "aliases": []
+   },
+   {
+    "name": "Bryce Canyon",
+    "aliases": [
+     "bryce"
+    ]
+   },
+   {
+    "name": "Death Valley",
+    "aliases": []
+   },
+   {
+    "name": "Olympic",
+    "aliases": []
+   },
+   {
+    "name": "Mount Rainier",
+    "aliases": [
+     "rainier",
+     "mt rainier"
+    ]
+   },
+   {
+    "name": "Sequoia",
+    "aliases": []
+   },
+   {
+    "name": "Redwood",
+    "aliases": [
+     "redwoods"
+    ]
+   },
+   {
+    "name": "Denali",
+    "aliases": []
+   },
+   {
+    "name": "Shenandoah",
+    "aliases": []
+   },
+   {
+    "name": "Canyonlands",
+    "aliases": []
+   },
+   {
+    "name": "Badlands",
+    "aliases": []
+   },
+   {
+    "name": "Crater Lake",
+    "aliases": []
+   },
+   {
+    "name": "Hawaii Volcanoes",
+    "aliases": []
+   },
+   {
+    "name": "Big Bend",
+    "aliases": []
+   },
+   {
+    "name": "Mammoth Cave",
+    "aliases": []
+   },
+   {
+    "name": "Carlsbad Caverns",
+    "aliases": []
+   },
+   {
+    "name": "Kings Canyon",
+    "aliases": []
+   },
+   {
+    "name": "Saguaro",
+    "aliases": []
+   },
+   {
+    "name": "Capitol Reef",
+    "aliases": []
+   },
+   {
+    "name": "Haleakala",
+    "aliases": []
+   },
+   {
+    "name": "Petrified Forest",
+    "aliases": []
+   },
+   {
+    "name": "Mesa Verde",
+    "aliases": []
+   },
+   {
+    "name": "Glacier Bay",
+    "aliases": []
+   },
+   {
+    "name": "Wind Cave",
+    "aliases": []
+   },
+   {
+    "name": "Hot Springs",
+    "aliases": []
+   },
+   {
+    "name": "Great Sand Dunes",
+    "aliases": []
+   },
+   {
+    "name": "Theodore Roosevelt",
+    "aliases": []
+   },
+   {
+    "name": "Lassen Volcanic",
+    "aliases": [
+     "lassen"
+    ]
+   },
+   {
+    "name": "Channel Islands",
+    "aliases": []
+   },
+   {
+    "name": "Biscayne",
+    "aliases": []
+   },
+   {
+    "name": "Cuyahoga Valley",
+    "aliases": []
+   },
+   {
+    "name": "Voyageurs",
+    "aliases": []
+   },
+   {
+    "name": "Indiana Dunes",
+    "aliases": []
+   },
+   {
+    "name": "Black Canyon of the Gunnison",
+    "aliases": [
+     "black canyon"
+    ]
+   },
+   {
+    "name": "Great Basin",
+    "aliases": []
+   },
+   {
+    "name": "Pinnacles",
+    "aliases": []
+   },
+   {
+    "name": "White Sands",
+    "aliases": []
+   },
+   {
+    "name": "Guadalupe Mountains",
+    "aliases": []
+   },
+   {
+    "name": "New River Gorge",
+    "aliases": []
+   },
+   {
+    "name": "Congaree",
+    "aliases": []
+   },
+   {
+    "name": "North Cascades",
+    "aliases": []
+   },
+   {
+    "name": "Isle Royale",
+    "aliases": []
+   },
+   {
+    "name": "Dry Tortugas",
+    "aliases": []
+   },
+   {
+    "name": "Virgin Islands",
+    "aliases": []
+   },
+   {
+    "name": "Kenai Fjords",
+    "aliases": []
+   },
+   {
+    "name": "Katmai",
+    "aliases": []
+   },
+   {
+    "name": "Wrangell St Elias",
+    "aliases": [
+     "wrangell"
+    ]
+   },
+   {
+    "name": "Lake Clark",
+    "aliases": []
+   },
+   {
+    "name": "Gates of the Arctic",
+    "aliases": []
+   },
+   {
+    "name": "Kobuk Valley",
+    "aliases": []
+   },
+   {
+    "name": "National Park of American Samoa",
+    "aliases": [
+     "american samoa"
+    ]
+   },
+   {
+    "name": "Gateway Arch",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "rivers",
+  "q": "Name a US river",
+  "rule": null,
+  "strip": [
+   "river"
+  ],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Mississippi",
+    "aliases": []
+   },
+   {
+    "name": "Missouri",
+    "aliases": []
+   },
+   {
+    "name": "Colorado",
+    "aliases": []
+   },
+   {
+    "name": "Hudson",
+    "aliases": []
+   },
+   {
+    "name": "Rio Grande",
+    "aliases": []
+   },
+   {
+    "name": "Ohio",
+    "aliases": []
+   },
+   {
+    "name": "Potomac",
+    "aliases": []
+   },
+   {
+    "name": "Columbia",
+    "aliases": []
+   },
+   {
+    "name": "Snake",
+    "aliases": []
+   },
+   {
+    "name": "Delaware",
+    "aliases": []
+   },
+   {
+    "name": "Arkansas",
+    "aliases": []
+   },
+   {
+    "name": "Tennessee",
+    "aliases": []
+   },
+   {
+    "name": "Red",
+    "aliases": []
+   },
+   {
+    "name": "Platte",
+    "aliases": []
+   },
+   {
+    "name": "Susquehanna",
+    "aliases": []
+   },
+   {
+    "name": "Connecticut",
+    "aliases": []
+   },
+   {
+    "name": "Sacramento",
+    "aliases": []
+   },
+   {
+    "name": "Yukon",
+    "aliases": []
+   },
+   {
+    "name": "Charles",
+    "aliases": []
+   },
+   {
+    "name": "Chattahoochee",
+    "aliases": []
+   },
+   {
+    "name": "Savannah",
+    "aliases": []
+   },
+   {
+    "name": "James",
+    "aliases": []
+   },
+   {
+    "name": "Allegheny",
+    "aliases": []
+   },
+   {
+    "name": "Monongahela",
+    "aliases": []
+   },
+   {
+    "name": "Brazos",
+    "aliases": []
+   },
+   {
+    "name": "Gila",
+    "aliases": []
+   },
+   {
+    "name": "Yellowstone",
+    "aliases": []
+   },
+   {
+    "name": "Green",
+    "aliases": []
+   },
+   {
+    "name": "Willamette",
+    "aliases": []
+   },
+   {
+    "name": "Wabash",
+    "aliases": []
+   },
+   {
+    "name": "Cumberland",
+    "aliases": []
+   },
+   {
+    "name": "Illinois",
+    "aliases": []
+   },
+   {
+    "name": "Shenandoah",
+    "aliases": []
+   },
+   {
+    "name": "Kanawha",
+    "aliases": []
+   },
+   {
+    "name": "Pecos",
+    "aliases": []
+   },
+   {
+    "name": "Merrimack",
+    "aliases": []
+   },
+   {
+    "name": "Penobscot",
+    "aliases": []
+   },
+   {
+    "name": "Niobrara",
+    "aliases": []
+   },
+   {
+    "name": "Klamath",
+    "aliases": []
+   },
+   {
+    "name": "Sabine",
+    "aliases": []
+   },
+   {
+    "name": "Altamaha",
+    "aliases": []
+   },
+   {
+    "name": "Tombigbee",
+    "aliases": []
+   },
+   {
+    "name": "Atchafalaya",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "presidents",
+  "q": "Name a US president",
+  "rule": null,
+  "strip": [],
+  "people": true,
+  "traps": {
+   "benjamin franklin": "Franklin was never president.",
+   "alexander hamilton": "Hamilton was Treasury Secretary, never president."
+  },
+  "items": [
+   {
+    "name": "George Washington",
+    "aliases": []
+   },
+   {
+    "name": "Abraham Lincoln",
+    "aliases": [
+     "abe lincoln",
+     "honest abe"
+    ]
+   },
+   {
+    "name": "Barack Obama",
+    "aliases": []
+   },
+   {
+    "name": "Donald Trump",
+    "aliases": []
+   },
+   {
+    "name": "Joe Biden",
+    "aliases": []
+   },
+   {
+    "name": "John F Kennedy",
+    "aliases": [
+     "jfk",
+     "john kennedy"
+    ]
+   },
+   {
+    "name": "Ronald Reagan",
+    "aliases": []
+   },
+   {
+    "name": "George W Bush",
+    "aliases": [
+     "george bush",
+     "dubya",
+     "w bush"
+    ]
+   },
+   {
+    "name": "Bill Clinton",
+    "aliases": []
+   },
+   {
+    "name": "Richard Nixon",
+    "aliases": []
+   },
+   {
+    "name": "Franklin D Roosevelt",
+    "aliases": [
+     "fdr",
+     "franklin roosevelt"
+    ]
+   },
+   {
+    "name": "Theodore Roosevelt",
+    "aliases": [
+     "teddy roosevelt",
+     "teddy"
+    ]
+   },
+   {
+    "name": "Thomas Jefferson",
+    "aliases": []
+   },
+   {
+    "name": "Jimmy Carter",
+    "aliases": []
+   },
+   {
+    "name": "Dwight Eisenhower",
+    "aliases": [
+     "ike"
+    ]
+   },
+   {
+    "name": "Harry Truman",
+    "aliases": []
+   },
+   {
+    "name": "John Adams",
+    "aliases": []
+   },
+   {
+    "name": "Andrew Jackson",
+    "aliases": []
+   },
+   {
+    "name": "James Madison",
+    "aliases": []
+   },
+   {
+    "name": "Gerald Ford",
+    "aliases": []
+   },
+   {
+    "name": "James Monroe",
+    "aliases": []
+   },
+   {
+    "name": "Ulysses S Grant",
+    "aliases": [
+     "ulysses grant"
+    ]
+   },
+   {
+    "name": "Lyndon B Johnson",
+    "aliases": [
+     "lbj",
+     "lyndon johnson"
+    ]
+   },
+   {
+    "name": "Woodrow Wilson",
+    "aliases": []
+   },
+   {
+    "name": "George H W Bush",
+    "aliases": [
+     "bush senior",
+     "bush sr",
+     "george hw bush"
+    ]
+   },
+   {
+    "name": "Herbert Hoover",
+    "aliases": []
+   },
+   {
+    "name": "William Howard Taft",
+    "aliases": []
+   },
+   {
+    "name": "William McKinley",
+    "aliases": []
+   },
+   {
+    "name": "Calvin Coolidge",
+    "aliases": []
+   },
+   {
+    "name": "Warren G Harding",
+    "aliases": [
+     "warren harding"
+    ]
+   },
+   {
+    "name": "James K Polk",
+    "aliases": [
+     "james polk"
+    ]
+   },
+   {
+    "name": "John Quincy Adams",
+    "aliases": [
+     "jqa"
+    ]
+   },
+   {
+    "name": "Andrew Johnson",
+    "aliases": []
+   },
+   {
+    "name": "Martin Van Buren",
+    "aliases": [
+     "van buren"
+    ]
+   },
+   {
+    "name": "Grover Cleveland",
+    "aliases": []
+   },
+   {
+    "name": "James Garfield",
+    "aliases": []
+   },
+   {
+    "name": "William Henry Harrison",
+    "aliases": []
+   },
+   {
+    "name": "John Tyler",
+    "aliases": []
+   },
+   {
+    "name": "Zachary Taylor",
+    "aliases": []
+   },
+   {
+    "name": "Millard Fillmore",
+    "aliases": []
+   },
+   {
+    "name": "Franklin Pierce",
+    "aliases": []
+   },
+   {
+    "name": "James Buchanan",
+    "aliases": []
+   },
+   {
+    "name": "Rutherford B Hayes",
+    "aliases": [
+     "rutherford hayes"
+    ]
+   },
+   {
+    "name": "Chester A Arthur",
+    "aliases": [
+     "chester arthur"
+    ]
+   },
+   {
+    "name": "Benjamin Harrison",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "firstladies",
+  "q": "Name a First Lady",
+  "rule": null,
+  "strip": [],
+  "people": true,
+  "traps": {},
+  "items": [
+   {
+    "name": "Michelle Obama",
+    "aliases": [
+     "michelle"
+    ]
+   },
+   {
+    "name": "Jacqueline Kennedy",
+    "aliases": [
+     "jackie kennedy",
+     "jackie o",
+     "jackie onassis",
+     "jackie",
+     "jacqueline onassis"
+    ]
+   },
+   {
+    "name": "Melania Trump",
+    "aliases": [
+     "melania"
+    ]
+   },
+   {
+    "name": "Hillary Clinton",
+    "aliases": [
+     "hillary"
+    ]
+   },
+   {
+    "name": "Eleanor Roosevelt",
+    "aliases": [
+     "eleanor"
+    ]
+   },
+   {
+    "name": "Nancy Reagan",
+    "aliases": []
+   },
+   {
+    "name": "Laura Bush",
+    "aliases": []
+   },
+   {
+    "name": "Barbara Bush",
+    "aliases": []
+   },
+   {
+    "name": "Martha Washington",
+    "aliases": []
+   },
+   {
+    "name": "Jill Biden",
+    "aliases": []
+   },
+   {
+    "name": "Abigail Adams",
+    "aliases": []
+   },
+   {
+    "name": "Mary Todd Lincoln",
+    "aliases": [
+     "mary lincoln"
+    ]
+   },
+   {
+    "name": "Dolley Madison",
+    "aliases": [
+     "dolley",
+     "dolly madison"
+    ]
+   },
+   {
+    "name": "Rosalynn Carter",
+    "aliases": []
+   },
+   {
+    "name": "Betty Ford",
+    "aliases": []
+   },
+   {
+    "name": "Lady Bird Johnson",
+    "aliases": [
+     "lady bird"
+    ]
+   },
+   {
+    "name": "Pat Nixon",
+    "aliases": []
+   },
+   {
+    "name": "Mamie Eisenhower",
+    "aliases": [
+     "mamie"
+    ]
+   },
+   {
+    "name": "Bess Truman",
+    "aliases": []
+   },
+   {
+    "name": "Edith Wilson",
+    "aliases": []
+   },
+   {
+    "name": "Lou Hoover",
+    "aliases": []
+   },
+   {
+    "name": "Grace Coolidge",
+    "aliases": []
+   },
+   {
+    "name": "Florence Harding",
+    "aliases": []
+   },
+   {
+    "name": "Helen Taft",
+    "aliases": []
+   },
+   {
+    "name": "Edith Roosevelt",
+    "aliases": []
+   },
+   {
+    "name": "Ida McKinley",
+    "aliases": []
+   },
+   {
+    "name": "Frances Cleveland",
+    "aliases": []
+   },
+   {
+    "name": "Caroline Harrison",
+    "aliases": []
+   },
+   {
+    "name": "Lucretia Garfield",
+    "aliases": []
+   },
+   {
+    "name": "Lucy Hayes",
+    "aliases": [
+     "lemonade lucy"
+    ]
+   },
+   {
+    "name": "Julia Grant",
+    "aliases": []
+   },
+   {
+    "name": "Eliza Johnson",
+    "aliases": []
+   },
+   {
+    "name": "Sarah Polk",
+    "aliases": []
+   },
+   {
+    "name": "Julia Tyler",
+    "aliases": []
+   },
+   {
+    "name": "Letitia Tyler",
+    "aliases": []
+   },
+   {
+    "name": "Margaret Taylor",
+    "aliases": []
+   },
+   {
+    "name": "Abigail Fillmore",
+    "aliases": []
+   },
+   {
+    "name": "Jane Pierce",
+    "aliases": []
+   },
+   {
+    "name": "Harriet Lane",
+    "aliases": []
+   },
+   {
+    "name": "Louisa Adams",
+    "aliases": []
+   },
+   {
+    "name": "Elizabeth Monroe",
+    "aliases": []
+   },
+   {
+    "name": "Anna Harrison",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "signers",
+  "q": "Name a signer of the Declaration of Independence",
+  "rule": null,
+  "strip": [],
+  "people": true,
+  "traps": {
+   "george washington": "Washington didn’t sign: he was in New York commanding the army.",
+   "washington": "Washington didn’t sign: he was in New York commanding the army.",
+   "alexander hamilton": "Hamilton didn’t sign the Declaration (he did sign the Constitution).",
+   "james madison": "Madison signed the Constitution, not the Declaration."
+  },
+  "items": [
+   {
+    "name": "Thomas Jefferson",
+    "aliases": []
+   },
+   {
+    "name": "John Hancock",
+    "aliases": []
+   },
+   {
+    "name": "Benjamin Franklin",
+    "aliases": [
+     "ben franklin"
+    ]
+   },
+   {
+    "name": "John Adams",
+    "aliases": []
+   },
+   {
+    "name": "Samuel Adams",
+    "aliases": [
+     "sam adams"
+    ]
+   },
+   {
+    "name": "Roger Sherman",
+    "aliases": []
+   },
+   {
+    "name": "Benjamin Rush",
+    "aliases": []
+   },
+   {
+    "name": "Richard Henry Lee",
+    "aliases": []
+   },
+   {
+    "name": "Charles Carroll",
+    "aliases": []
+   },
+   {
+    "name": "Elbridge Gerry",
+    "aliases": []
+   },
+   {
+    "name": "Stephen Hopkins",
+    "aliases": []
+   },
+   {
+    "name": "John Witherspoon",
+    "aliases": []
+   },
+   {
+    "name": "Robert Morris",
+    "aliases": []
+   },
+   {
+    "name": "Button Gwinnett",
+    "aliases": []
+   },
+   {
+    "name": "Caesar Rodney",
+    "aliases": []
+   },
+   {
+    "name": "George Wythe",
+    "aliases": []
+   },
+   {
+    "name": "Francis Hopkinson",
+    "aliases": []
+   },
+   {
+    "name": "Josiah Bartlett",
+    "aliases": []
+   },
+   {
+    "name": "Thomas McKean",
+    "aliases": []
+   },
+   {
+    "name": "Edward Rutledge",
+    "aliases": []
+   },
+   {
+    "name": "Benjamin Harrison",
+    "aliases": []
+   },
+   {
+    "name": "Lyman Hall",
+    "aliases": []
+   },
+   {
+    "name": "George Walton",
+    "aliases": []
+   },
+   {
+    "name": "William Whipple",
+    "aliases": []
+   },
+   {
+    "name": "Matthew Thornton",
+    "aliases": []
+   },
+   {
+    "name": "Robert Treat Paine",
+    "aliases": []
+   },
+   {
+    "name": "William Ellery",
+    "aliases": []
+   },
+   {
+    "name": "Samuel Huntington",
+    "aliases": []
+   },
+   {
+    "name": "William Williams",
+    "aliases": []
+   },
+   {
+    "name": "Oliver Wolcott",
+    "aliases": []
+   },
+   {
+    "name": "William Floyd",
+    "aliases": []
+   },
+   {
+    "name": "Philip Livingston",
+    "aliases": []
+   },
+   {
+    "name": "Francis Lewis",
+    "aliases": []
+   },
+   {
+    "name": "Lewis Morris",
+    "aliases": []
+   },
+   {
+    "name": "Richard Stockton",
+    "aliases": []
+   },
+   {
+    "name": "John Hart",
+    "aliases": []
+   },
+   {
+    "name": "Abraham Clark",
+    "aliases": []
+   },
+   {
+    "name": "John Morton",
+    "aliases": []
+   },
+   {
+    "name": "George Clymer",
+    "aliases": []
+   },
+   {
+    "name": "James Smith",
+    "aliases": []
+   },
+   {
+    "name": "George Taylor",
+    "aliases": []
+   },
+   {
+    "name": "James Wilson",
+    "aliases": []
+   },
+   {
+    "name": "George Ross",
+    "aliases": []
+   },
+   {
+    "name": "George Read",
+    "aliases": []
+   },
+   {
+    "name": "Samuel Chase",
+    "aliases": []
+   },
+   {
+    "name": "William Paca",
+    "aliases": []
+   },
+   {
+    "name": "Thomas Stone",
+    "aliases": []
+   },
+   {
+    "name": "Thomas Nelson",
+    "aliases": []
+   },
+   {
+    "name": "Francis Lightfoot Lee",
+    "aliases": []
+   },
+   {
+    "name": "Carter Braxton",
+    "aliases": []
+   },
+   {
+    "name": "William Hooper",
+    "aliases": []
+   },
+   {
+    "name": "Joseph Hewes",
+    "aliases": []
+   },
+   {
+    "name": "John Penn",
+    "aliases": []
+   },
+   {
+    "name": "Thomas Heyward",
+    "aliases": []
+   },
+   {
+    "name": "Thomas Lynch",
+    "aliases": []
+   },
+   {
+    "name": "Arthur Middleton",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "money",
+  "q": "Name someone who’s appeared on US money",
+  "rule": "Coins or bills, past or present",
+  "strip": [],
+  "people": true,
+  "traps": {
+   "harriet tubman": "Not yet: the Tubman $20 has been announced but hasn’t gone into circulation."
+  },
+  "items": [
+   {
+    "name": "George Washington",
+    "aliases": []
+   },
+   {
+    "name": "Abraham Lincoln",
+    "aliases": []
+   },
+   {
+    "name": "Benjamin Franklin",
+    "aliases": [
+     "ben franklin"
+    ]
+   },
+   {
+    "name": "Alexander Hamilton",
+    "aliases": []
+   },
+   {
+    "name": "Andrew Jackson",
+    "aliases": []
+   },
+   {
+    "name": "Thomas Jefferson",
+    "aliases": []
+   },
+   {
+    "name": "Ulysses S Grant",
+    "aliases": [
+     "ulysses grant"
+    ]
+   },
+   {
+    "name": "Franklin D Roosevelt",
+    "aliases": [
+     "fdr",
+     "franklin roosevelt"
+    ]
+   },
+   {
+    "name": "John F Kennedy",
+    "aliases": [
+     "jfk",
+     "john kennedy"
+    ]
+   },
+   {
+    "name": "Sacagawea",
+    "aliases": []
+   },
+   {
+    "name": "Susan B Anthony",
+    "aliases": [
+     "susan anthony"
+    ]
+   },
+   {
+    "name": "Dwight Eisenhower",
+    "aliases": [
+     "ike"
+    ]
+   },
+   {
+    "name": "Maya Angelou",
+    "aliases": []
+   },
+   {
+    "name": "Sally Ride",
+    "aliases": []
+   },
+   {
+    "name": "Eleanor Roosevelt",
+    "aliases": []
+   },
+   {
+    "name": "Salmon P Chase",
+    "aliases": [
+     "salmon chase"
+    ]
+   },
+   {
+    "name": "William McKinley",
+    "aliases": []
+   },
+   {
+    "name": "Grover Cleveland",
+    "aliases": []
+   },
+   {
+    "name": "James Madison",
+    "aliases": []
+   },
+   {
+    "name": "Woodrow Wilson",
+    "aliases": []
+   },
+   {
+    "name": "Wilma Mankiller",
+    "aliases": []
+   },
+   {
+    "name": "Anna May Wong",
+    "aliases": []
+   },
+   {
+    "name": "Bessie Coleman",
+    "aliases": []
+   },
+   {
+    "name": "Nina Otero-Warren",
+    "aliases": []
+   },
+   {
+    "name": "Maria Tallchief",
+    "aliases": []
+   },
+   {
+    "name": "Jovita Idar",
+    "aliases": []
+   },
+   {
+    "name": "Edith Kanakaole",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "nfl",
+  "q": "Name an NFL team",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Dallas Cowboys",
+    "aliases": [
+     "cowboys",
+     "dallas"
+    ]
+   },
+   {
+    "name": "New England Patriots",
+    "aliases": [
+     "patriots",
+     "pats",
+     "new england"
+    ]
+   },
+   {
+    "name": "Green Bay Packers",
+    "aliases": [
+     "packers",
+     "green bay"
+    ]
+   },
+   {
+    "name": "Pittsburgh Steelers",
+    "aliases": [
+     "steelers",
+     "pittsburgh"
+    ]
+   },
+   {
+    "name": "Kansas City Chiefs",
+    "aliases": [
+     "chiefs",
+     "kansas city"
+    ]
+   },
+   {
+    "name": "San Francisco 49ers",
+    "aliases": [
+     "49ers",
+     "niners",
+     "forty niners",
+     "san francisco"
+    ]
+   },
+   {
+    "name": "New York Giants",
+    "aliases": [
+     "giants"
+    ]
+   },
+   {
+    "name": "Philadelphia Eagles",
+    "aliases": [
+     "eagles",
+     "philadelphia"
+    ]
+   },
+   {
+    "name": "Chicago Bears",
+    "aliases": [
+     "bears",
+     "chicago"
+    ]
+   },
+   {
+    "name": "Denver Broncos",
+    "aliases": [
+     "broncos",
+     "denver"
+    ]
+   },
+   {
+    "name": "Las Vegas Raiders",
+    "aliases": [
+     "raiders",
+     "oakland raiders",
+     "las vegas"
+    ]
+   },
+   {
+    "name": "Miami Dolphins",
+    "aliases": [
+     "dolphins",
+     "miami"
+    ]
+   },
+   {
+    "name": "Seattle Seahawks",
+    "aliases": [
+     "seahawks",
+     "seattle"
+    ]
+   },
+   {
+    "name": "New York Jets",
+    "aliases": [
+     "jets"
+    ]
+   },
+   {
+    "name": "Los Angeles Rams",
+    "aliases": [
+     "rams"
+    ]
+   },
+   {
+    "name": "New Orleans Saints",
+    "aliases": [
+     "saints",
+     "new orleans"
+    ]
+   },
+   {
+    "name": "Tampa Bay Buccaneers",
+    "aliases": [
+     "buccaneers",
+     "bucs",
+     "tampa bay"
+    ]
+   },
+   {
+    "name": "Baltimore Ravens",
+    "aliases": [
+     "ravens",
+     "baltimore"
+    ]
+   },
+   {
+    "name": "Buffalo Bills",
+    "aliases": [
+     "bills",
+     "buffalo"
+    ]
+   },
+   {
+    "name": "Minnesota Vikings",
+    "aliases": [
+     "vikings",
+     "minnesota"
+    ]
+   },
+   {
+    "name": "Detroit Lions",
+    "aliases": [
+     "lions",
+     "detroit"
+    ]
+   },
+   {
+    "name": "Indianapolis Colts",
+    "aliases": [
+     "colts",
+     "indianapolis"
+    ]
+   },
+   {
+    "name": "Cincinnati Bengals",
+    "aliases": [
+     "bengals",
+     "cincinnati"
+    ]
+   },
+   {
+    "name": "Cleveland Browns",
+    "aliases": [
+     "browns",
+     "cleveland"
+    ]
+   },
+   {
+    "name": "Atlanta Falcons",
+    "aliases": [
+     "falcons",
+     "atlanta"
+    ]
+   },
+   {
+    "name": "Los Angeles Chargers",
+    "aliases": [
+     "chargers"
+    ]
+   },
+   {
+    "name": "Carolina Panthers",
+    "aliases": [
+     "panthers",
+     "carolina"
+    ]
+   },
+   {
+    "name": "Washington Commanders",
+    "aliases": [
+     "commanders",
+     "redskins",
+     "washington football team"
+    ]
+   },
+   {
+    "name": "Arizona Cardinals",
+    "aliases": [
+     "cardinals",
+     "arizona"
+    ]
+   },
+   {
+    "name": "Tennessee Titans",
+    "aliases": [
+     "titans",
+     "tennessee"
+    ]
+   },
+   {
+    "name": "Houston Texans",
+    "aliases": [
+     "texans",
+     "houston"
+    ]
+   },
+   {
+    "name": "Jacksonville Jaguars",
+    "aliases": [
+     "jaguars",
+     "jags",
+     "jacksonville"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "mlb",
+  "q": "Name an MLB team",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "New York Yankees",
+    "aliases": [
+     "yankees"
+    ]
+   },
+   {
+    "name": "Boston Red Sox",
+    "aliases": [
+     "red sox",
+     "boston"
+    ]
+   },
+   {
+    "name": "Los Angeles Dodgers",
+    "aliases": [
+     "dodgers"
+    ]
+   },
+   {
+    "name": "Chicago Cubs",
+    "aliases": [
+     "cubs"
+    ]
+   },
+   {
+    "name": "San Francisco Giants",
+    "aliases": [
+     "giants"
+    ]
+   },
+   {
+    "name": "New York Mets",
+    "aliases": [
+     "mets"
+    ]
+   },
+   {
+    "name": "St Louis Cardinals",
+    "aliases": [
+     "cardinals",
+     "cards",
+     "st louis"
+    ]
+   },
+   {
+    "name": "Atlanta Braves",
+    "aliases": [
+     "braves",
+     "atlanta"
+    ]
+   },
+   {
+    "name": "Houston Astros",
+    "aliases": [
+     "astros",
+     "houston"
+    ]
+   },
+   {
+    "name": "Chicago White Sox",
+    "aliases": [
+     "white sox"
+    ]
+   },
+   {
+    "name": "Philadelphia Phillies",
+    "aliases": [
+     "phillies",
+     "philadelphia"
+    ]
+   },
+   {
+    "name": "Detroit Tigers",
+    "aliases": [
+     "tigers",
+     "detroit"
+    ]
+   },
+   {
+    "name": "Baltimore Orioles",
+    "aliases": [
+     "orioles",
+     "os",
+     "baltimore"
+    ]
+   },
+   {
+    "name": "Seattle Mariners",
+    "aliases": [
+     "mariners",
+     "seattle"
+    ]
+   },
+   {
+    "name": "Texas Rangers",
+    "aliases": [
+     "rangers",
+     "texas"
+    ]
+   },
+   {
+    "name": "Toronto Blue Jays",
+    "aliases": [
+     "blue jays",
+     "jays",
+     "toronto"
+    ]
+   },
+   {
+    "name": "Los Angeles Angels",
+    "aliases": [
+     "angels",
+     "anaheim angels"
+    ]
+   },
+   {
+    "name": "San Diego Padres",
+    "aliases": [
+     "padres",
+     "san diego"
+    ]
+   },
+   {
+    "name": "Minnesota Twins",
+    "aliases": [
+     "twins",
+     "minnesota"
+    ]
+   },
+   {
+    "name": "Milwaukee Brewers",
+    "aliases": [
+     "brewers",
+     "milwaukee"
+    ]
+   },
+   {
+    "name": "Cincinnati Reds",
+    "aliases": [
+     "reds",
+     "cincinnati"
+    ]
+   },
+   {
+    "name": "Pittsburgh Pirates",
+    "aliases": [
+     "pirates",
+     "pittsburgh"
+    ]
+   },
+   {
+    "name": "Kansas City Royals",
+    "aliases": [
+     "royals",
+     "kansas city"
+    ]
+   },
+   {
+    "name": "Cleveland Guardians",
+    "aliases": [
+     "guardians",
+     "cleveland indians",
+     "cleveland"
+    ]
+   },
+   {
+    "name": "Athletics",
+    "aliases": [
+     "oakland athletics",
+     "as",
+     "oakland as",
+     "a s"
+    ]
+   },
+   {
+    "name": "Tampa Bay Rays",
+    "aliases": [
+     "rays",
+     "tampa bay"
+    ]
+   },
+   {
+    "name": "Miami Marlins",
+    "aliases": [
+     "marlins",
+     "florida marlins",
+     "miami"
+    ]
+   },
+   {
+    "name": "Colorado Rockies",
+    "aliases": [
+     "rockies",
+     "colorado"
+    ]
+   },
+   {
+    "name": "Arizona Diamondbacks",
+    "aliases": [
+     "diamondbacks",
+     "dbacks",
+     "d backs",
+     "arizona"
+    ]
+   },
+   {
+    "name": "Washington Nationals",
+    "aliases": [
+     "nationals",
+     "nats",
+     "washington"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "nba",
+  "q": "Name an NBA team",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Los Angeles Lakers",
+    "aliases": [
+     "lakers"
+    ]
+   },
+   {
+    "name": "Chicago Bulls",
+    "aliases": [
+     "bulls",
+     "chicago"
+    ]
+   },
+   {
+    "name": "Boston Celtics",
+    "aliases": [
+     "celtics",
+     "boston"
+    ]
+   },
+   {
+    "name": "Golden State Warriors",
+    "aliases": [
+     "warriors",
+     "golden state"
+    ]
+   },
+   {
+    "name": "New York Knicks",
+    "aliases": [
+     "knicks"
+    ]
+   },
+   {
+    "name": "Miami Heat",
+    "aliases": [
+     "heat",
+     "miami"
+    ]
+   },
+   {
+    "name": "San Antonio Spurs",
+    "aliases": [
+     "spurs",
+     "san antonio"
+    ]
+   },
+   {
+    "name": "Cleveland Cavaliers",
+    "aliases": [
+     "cavaliers",
+     "cavs",
+     "cleveland"
+    ]
+   },
+   {
+    "name": "Houston Rockets",
+    "aliases": [
+     "rockets",
+     "houston"
+    ]
+   },
+   {
+    "name": "Brooklyn Nets",
+    "aliases": [
+     "nets",
+     "brooklyn",
+     "new jersey nets"
+    ]
+   },
+   {
+    "name": "Dallas Mavericks",
+    "aliases": [
+     "mavericks",
+     "mavs",
+     "dallas"
+    ]
+   },
+   {
+    "name": "Philadelphia 76ers",
+    "aliases": [
+     "76ers",
+     "sixers",
+     "seventy sixers",
+     "philadelphia"
+    ]
+   },
+   {
+    "name": "Los Angeles Clippers",
+    "aliases": [
+     "clippers"
+    ]
+   },
+   {
+    "name": "Phoenix Suns",
+    "aliases": [
+     "suns",
+     "phoenix"
+    ]
+   },
+   {
+    "name": "Detroit Pistons",
+    "aliases": [
+     "pistons",
+     "detroit"
+    ]
+   },
+   {
+    "name": "Milwaukee Bucks",
+    "aliases": [
+     "bucks",
+     "milwaukee"
+    ]
+   },
+   {
+    "name": "Oklahoma City Thunder",
+    "aliases": [
+     "thunder",
+     "okc",
+     "oklahoma city"
+    ]
+   },
+   {
+    "name": "Denver Nuggets",
+    "aliases": [
+     "nuggets",
+     "denver"
+    ]
+   },
+   {
+    "name": "Toronto Raptors",
+    "aliases": [
+     "raptors",
+     "toronto"
+    ]
+   },
+   {
+    "name": "Utah Jazz",
+    "aliases": [
+     "jazz",
+     "utah"
+    ]
+   },
+   {
+    "name": "Portland Trail Blazers",
+    "aliases": [
+     "trail blazers",
+     "blazers",
+     "portland"
+    ]
+   },
+   {
+    "name": "Orlando Magic",
+    "aliases": [
+     "magic",
+     "orlando"
+    ]
+   },
+   {
+    "name": "Atlanta Hawks",
+    "aliases": [
+     "hawks",
+     "atlanta"
+    ]
+   },
+   {
+    "name": "Sacramento Kings",
+    "aliases": [
+     "kings",
+     "sacramento"
+    ]
+   },
+   {
+    "name": "Minnesota Timberwolves",
+    "aliases": [
+     "timberwolves",
+     "wolves",
+     "minnesota"
+    ]
+   },
+   {
+    "name": "Indiana Pacers",
+    "aliases": [
+     "pacers",
+     "indiana"
+    ]
+   },
+   {
+    "name": "Memphis Grizzlies",
+    "aliases": [
+     "grizzlies",
+     "memphis"
+    ]
+   },
+   {
+    "name": "Charlotte Hornets",
+    "aliases": [
+     "hornets",
+     "charlotte"
+    ]
+   },
+   {
+    "name": "New Orleans Pelicans",
+    "aliases": [
+     "pelicans",
+     "new orleans"
+    ]
+   },
+   {
+    "name": "Washington Wizards",
+    "aliases": [
+     "wizards",
+     "washington"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "fastfood",
+  "q": "Name a US fast-food chain",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "McDonald's",
+    "aliases": [
+     "mcdonalds",
+     "maccies",
+     "mcds"
+    ]
+   },
+   {
+    "name": "Burger King",
+    "aliases": []
+   },
+   {
+    "name": "Wendy's",
+    "aliases": []
+   },
+   {
+    "name": "Taco Bell",
+    "aliases": []
+   },
+   {
+    "name": "KFC",
+    "aliases": [
+     "kentucky fried chicken"
+    ]
+   },
+   {
+    "name": "Subway",
+    "aliases": []
+   },
+   {
+    "name": "Chick-fil-A",
+    "aliases": [
+     "chick fil a",
+     "chickfila"
+    ]
+   },
+   {
+    "name": "Pizza Hut",
+    "aliases": []
+   },
+   {
+    "name": "Domino's",
+    "aliases": []
+   },
+   {
+    "name": "Starbucks",
+    "aliases": []
+   },
+   {
+    "name": "Dunkin'",
+    "aliases": [
+     "dunkin donuts",
+     "dunkin"
+    ]
+   },
+   {
+    "name": "Arby's",
+    "aliases": []
+   },
+   {
+    "name": "Sonic",
+    "aliases": []
+   },
+   {
+    "name": "Popeyes",
+    "aliases": []
+   },
+   {
+    "name": "Chipotle",
+    "aliases": []
+   },
+   {
+    "name": "Five Guys",
+    "aliases": []
+   },
+   {
+    "name": "In-N-Out",
+    "aliases": [
+     "in n out",
+     "in and out"
+    ]
+   },
+   {
+    "name": "Jack in the Box",
+    "aliases": []
+   },
+   {
+    "name": "Dairy Queen",
+    "aliases": [
+     "dq"
+    ]
+   },
+   {
+    "name": "Papa John's",
+    "aliases": []
+   },
+   {
+    "name": "Carl's Jr",
+    "aliases": []
+   },
+   {
+    "name": "Hardee's",
+    "aliases": []
+   },
+   {
+    "name": "White Castle",
+    "aliases": []
+   },
+   {
+    "name": "Panda Express",
+    "aliases": []
+   },
+   {
+    "name": "Shake Shack",
+    "aliases": []
+   },
+   {
+    "name": "Whataburger",
+    "aliases": []
+   },
+   {
+    "name": "Culver's",
+    "aliases": []
+   },
+   {
+    "name": "Little Caesars",
+    "aliases": []
+   },
+   {
+    "name": "Wingstop",
+    "aliases": []
+   },
+   {
+    "name": "Raising Cane's",
+    "aliases": [
+     "canes"
+    ]
+   },
+   {
+    "name": "Jimmy John's",
+    "aliases": []
+   },
+   {
+    "name": "Panera",
+    "aliases": []
+   },
+   {
+    "name": "Del Taco",
+    "aliases": []
+   },
+   {
+    "name": "Checkers",
+    "aliases": []
+   },
+   {
+    "name": "Krystal",
+    "aliases": []
+   },
+   {
+    "name": "Long John Silver's",
+    "aliases": []
+   },
+   {
+    "name": "A&W",
+    "aliases": []
+   },
+   {
+    "name": "Steak 'n Shake",
+    "aliases": []
+   },
+   {
+    "name": "Bojangles",
+    "aliases": []
+   },
+   {
+    "name": "Church's Chicken",
+    "aliases": []
+   },
+   {
+    "name": "El Pollo Loco",
+    "aliases": []
+   },
+   {
+    "name": "Zaxby's",
+    "aliases": []
+   },
+   {
+    "name": "Jersey Mike's",
+    "aliases": []
+   },
+   {
+    "name": "Wienerschnitzel",
+    "aliases": []
+   },
+   {
+    "name": "Freddy's",
+    "aliases": []
+   },
+   {
+    "name": "Cook Out",
+    "aliases": []
+   },
+   {
+    "name": "Runza",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "cereal",
+  "q": "Name an American breakfast cereal",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Cheerios",
+    "aliases": []
+   },
+   {
+    "name": "Frosted Flakes",
+    "aliases": [
+     "frosties"
+    ]
+   },
+   {
+    "name": "Froot Loops",
+    "aliases": [
+     "fruit loops"
+    ]
+   },
+   {
+    "name": "Lucky Charms",
+    "aliases": []
+   },
+   {
+    "name": "Cinnamon Toast Crunch",
+    "aliases": []
+   },
+   {
+    "name": "Corn Flakes",
+    "aliases": []
+   },
+   {
+    "name": "Rice Krispies",
+    "aliases": []
+   },
+   {
+    "name": "Cap'n Crunch",
+    "aliases": [
+     "captain crunch"
+    ]
+   },
+   {
+    "name": "Cocoa Puffs",
+    "aliases": []
+   },
+   {
+    "name": "Honey Nut Cheerios",
+    "aliases": []
+   },
+   {
+    "name": "Raisin Bran",
+    "aliases": []
+   },
+   {
+    "name": "Special K",
+    "aliases": []
+   },
+   {
+    "name": "Trix",
+    "aliases": []
+   },
+   {
+    "name": "Apple Jacks",
+    "aliases": []
+   },
+   {
+    "name": "Frosted Mini-Wheats",
+    "aliases": [
+     "mini wheats"
+    ]
+   },
+   {
+    "name": "Fruity Pebbles",
+    "aliases": []
+   },
+   {
+    "name": "Cocoa Pebbles",
+    "aliases": []
+   },
+   {
+    "name": "Honey Bunches of Oats",
+    "aliases": []
+   },
+   {
+    "name": "Corn Pops",
+    "aliases": []
+   },
+   {
+    "name": "Golden Grahams",
+    "aliases": []
+   },
+   {
+    "name": "Kix",
+    "aliases": []
+   },
+   {
+    "name": "Life",
+    "aliases": []
+   },
+   {
+    "name": "Reese's Puffs",
+    "aliases": []
+   },
+   {
+    "name": "Cocoa Krispies",
+    "aliases": []
+   },
+   {
+    "name": "Grape-Nuts",
+    "aliases": []
+   },
+   {
+    "name": "Wheaties",
+    "aliases": []
+   },
+   {
+    "name": "Chex",
+    "aliases": []
+   },
+   {
+    "name": "Honeycomb",
+    "aliases": []
+   },
+   {
+    "name": "Count Chocula",
+    "aliases": []
+   },
+   {
+    "name": "Crispix",
+    "aliases": []
+   },
+   {
+    "name": "Cracklin' Oat Bran",
+    "aliases": []
+   },
+   {
+    "name": "Total",
+    "aliases": []
+   },
+   {
+    "name": "Honey Smacks",
+    "aliases": [
+     "smacks"
+    ]
+   },
+   {
+    "name": "Franken Berry",
+    "aliases": []
+   },
+   {
+    "name": "Boo Berry",
+    "aliases": []
+   },
+   {
+    "name": "Cookie Crisp",
+    "aliases": []
+   },
+   {
+    "name": "Golden Crisp",
+    "aliases": []
+   },
+   {
+    "name": "Basic 4",
+    "aliases": []
+   },
+   {
+    "name": "Product 19",
+    "aliases": []
+   },
+   {
+    "name": "Quisp",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "candy",
+  "q": "Name an American candy",
+  "rule": "Bars, chews, the lot",
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Snickers",
+    "aliases": []
+   },
+   {
+    "name": "Reese's Peanut Butter Cups",
+    "aliases": [
+     "reeses",
+     "reese s"
+    ]
+   },
+   {
+    "name": "M&M's",
+    "aliases": [
+     "m and ms",
+     "m ms",
+     "mms"
+    ]
+   },
+   {
+    "name": "Hershey's bar",
+    "aliases": [
+     "hersheys",
+     "hershey bar",
+     "hershey"
+    ]
+   },
+   {
+    "name": "Kit Kat",
+    "aliases": []
+   },
+   {
+    "name": "Skittles",
+    "aliases": []
+   },
+   {
+    "name": "Twix",
+    "aliases": []
+   },
+   {
+    "name": "Milky Way",
+    "aliases": []
+   },
+   {
+    "name": "3 Musketeers",
+    "aliases": [
+     "three musketeers"
+    ]
+   },
+   {
+    "name": "Butterfinger",
+    "aliases": []
+   },
+   {
+    "name": "Baby Ruth",
+    "aliases": []
+   },
+   {
+    "name": "Tootsie Roll",
+    "aliases": []
+   },
+   {
+    "name": "Almond Joy",
+    "aliases": []
+   },
+   {
+    "name": "Mounds",
+    "aliases": []
+   },
+   {
+    "name": "PayDay",
+    "aliases": []
+   },
+   {
+    "name": "Starburst",
+    "aliases": []
+   },
+   {
+    "name": "Jolly Rancher",
+    "aliases": []
+   },
+   {
+    "name": "Twizzlers",
+    "aliases": []
+   },
+   {
+    "name": "Hershey's Kisses",
+    "aliases": [
+     "kisses"
+    ]
+   },
+   {
+    "name": "Sour Patch Kids",
+    "aliases": []
+   },
+   {
+    "name": "Swedish Fish",
+    "aliases": []
+   },
+   {
+    "name": "Laffy Taffy",
+    "aliases": []
+   },
+   {
+    "name": "Nerds",
+    "aliases": []
+   },
+   {
+    "name": "Whoppers",
+    "aliases": []
+   },
+   {
+    "name": "Junior Mints",
+    "aliases": []
+   },
+   {
+    "name": "Milk Duds",
+    "aliases": []
+   },
+   {
+    "name": "Peeps",
+    "aliases": []
+   },
+   {
+    "name": "Candy corn",
+    "aliases": []
+   },
+   {
+    "name": "Airheads",
+    "aliases": []
+   },
+   {
+    "name": "Charleston Chew",
+    "aliases": []
+   },
+   {
+    "name": "Heath",
+    "aliases": []
+   },
+   {
+    "name": "Mr. Goodbar",
+    "aliases": []
+   },
+   {
+    "name": "100 Grand",
+    "aliases": []
+   },
+   {
+    "name": "Zagnut",
+    "aliases": []
+   },
+   {
+    "name": "Clark Bar",
+    "aliases": []
+   },
+   {
+    "name": "Abba-Zaba",
+    "aliases": []
+   },
+   {
+    "name": "Goo Goo Cluster",
+    "aliases": []
+   },
+   {
+    "name": "Necco Wafers",
+    "aliases": []
+   },
+   {
+    "name": "Bit-O-Honey",
+    "aliases": []
+   },
+   {
+    "name": "Chick-O-Stick",
+    "aliases": []
+   },
+   {
+    "name": "Sugar Daddy",
+    "aliases": []
+   },
+   {
+    "name": "Mary Jane",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "thanks",
+  "q": "Name a Thanksgiving dish",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Turkey",
+    "aliases": []
+   },
+   {
+    "name": "Mashed potatoes",
+    "aliases": []
+   },
+   {
+    "name": "Stuffing",
+    "aliases": [
+     "dressing"
+    ]
+   },
+   {
+    "name": "Pumpkin pie",
+    "aliases": []
+   },
+   {
+    "name": "Cranberry sauce",
+    "aliases": []
+   },
+   {
+    "name": "Gravy",
+    "aliases": []
+   },
+   {
+    "name": "Green bean casserole",
+    "aliases": []
+   },
+   {
+    "name": "Sweet potato casserole",
+    "aliases": [
+     "candied yams",
+     "yams",
+     "sweet potatoes"
+    ]
+   },
+   {
+    "name": "Mac and cheese",
+    "aliases": [
+     "macaroni and cheese"
+    ]
+   },
+   {
+    "name": "Dinner rolls",
+    "aliases": [
+     "rolls"
+    ]
+   },
+   {
+    "name": "Corn",
+    "aliases": []
+   },
+   {
+    "name": "Cornbread",
+    "aliases": []
+   },
+   {
+    "name": "Pecan pie",
+    "aliases": []
+   },
+   {
+    "name": "Apple pie",
+    "aliases": []
+   },
+   {
+    "name": "Deviled eggs",
+    "aliases": []
+   },
+   {
+    "name": "Brussels sprouts",
+    "aliases": []
+   },
+   {
+    "name": "Collard greens",
+    "aliases": []
+   },
+   {
+    "name": "Sweet potato pie",
+    "aliases": []
+   },
+   {
+    "name": "Corn pudding",
+    "aliases": []
+   },
+   {
+    "name": "Creamed corn",
+    "aliases": []
+   },
+   {
+    "name": "Ham",
+    "aliases": []
+   },
+   {
+    "name": "Butternut squash",
+    "aliases": []
+   },
+   {
+    "name": "Succotash",
+    "aliases": []
+   },
+   {
+    "name": "Ambrosia salad",
+    "aliases": [
+     "ambrosia"
+    ]
+   },
+   {
+    "name": "Jell-O salad",
+    "aliases": [
+     "jello salad"
+    ]
+   },
+   {
+    "name": "Waldorf salad",
+    "aliases": []
+   },
+   {
+    "name": "Watergate salad",
+    "aliases": []
+   },
+   {
+    "name": "Oyster stuffing",
+    "aliases": []
+   },
+   {
+    "name": "Cornbread dressing",
+    "aliases": []
+   },
+   {
+    "name": "Giblet gravy",
+    "aliases": []
+   },
+   {
+    "name": "Parker House rolls",
+    "aliases": []
+   },
+   {
+    "name": "Mincemeat pie",
+    "aliases": []
+   },
+   {
+    "name": "Chess pie",
+    "aliases": []
+   },
+   {
+    "name": "Spoonbread",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "cars",
+  "q": "Name an American car brand",
+  "rule": "Current or long gone",
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Ford",
+    "aliases": []
+   },
+   {
+    "name": "Chevrolet",
+    "aliases": [
+     "chevy"
+    ]
+   },
+   {
+    "name": "Tesla",
+    "aliases": []
+   },
+   {
+    "name": "Jeep",
+    "aliases": []
+   },
+   {
+    "name": "Dodge",
+    "aliases": []
+   },
+   {
+    "name": "Cadillac",
+    "aliases": []
+   },
+   {
+    "name": "GMC",
+    "aliases": []
+   },
+   {
+    "name": "Chrysler",
+    "aliases": []
+   },
+   {
+    "name": "Buick",
+    "aliases": []
+   },
+   {
+    "name": "Lincoln",
+    "aliases": []
+   },
+   {
+    "name": "Ram",
+    "aliases": []
+   },
+   {
+    "name": "Pontiac",
+    "aliases": []
+   },
+   {
+    "name": "Oldsmobile",
+    "aliases": []
+   },
+   {
+    "name": "Hummer",
+    "aliases": []
+   },
+   {
+    "name": "Plymouth",
+    "aliases": []
+   },
+   {
+    "name": "Saturn",
+    "aliases": []
+   },
+   {
+    "name": "Mercury",
+    "aliases": []
+   },
+   {
+    "name": "Rivian",
+    "aliases": []
+   },
+   {
+    "name": "Lucid",
+    "aliases": []
+   },
+   {
+    "name": "DeLorean",
+    "aliases": []
+   },
+   {
+    "name": "AMC",
+    "aliases": []
+   },
+   {
+    "name": "Studebaker",
+    "aliases": []
+   },
+   {
+    "name": "Packard",
+    "aliases": []
+   },
+   {
+    "name": "Hudson",
+    "aliases": []
+   },
+   {
+    "name": "Nash",
+    "aliases": []
+   },
+   {
+    "name": "Duesenberg",
+    "aliases": []
+   },
+   {
+    "name": "Edsel",
+    "aliases": []
+   },
+   {
+    "name": "Tucker",
+    "aliases": []
+   },
+   {
+    "name": "Willys",
+    "aliases": []
+   },
+   {
+    "name": "Shelby",
+    "aliases": []
+   },
+   {
+    "name": "Fisker",
+    "aliases": []
+   },
+   {
+    "name": "Saleen",
+    "aliases": []
+   },
+   {
+    "name": "Imperial",
+    "aliases": []
+   },
+   {
+    "name": "DeSoto",
+    "aliases": []
+   },
+   {
+    "name": "Pierce-Arrow",
+    "aliases": []
+   },
+   {
+    "name": "Cord",
+    "aliases": []
+   },
+   {
+    "name": "Auburn",
+    "aliases": []
+   },
+   {
+    "name": "Eagle",
+    "aliases": []
+   },
+   {
+    "name": "Geo",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "airlines",
+  "q": "Name a US airline",
+  "rule": "Flying today or long grounded",
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Delta",
+    "aliases": []
+   },
+   {
+    "name": "American Airlines",
+    "aliases": [
+     "american"
+    ]
+   },
+   {
+    "name": "United",
+    "aliases": []
+   },
+   {
+    "name": "Southwest",
+    "aliases": []
+   },
+   {
+    "name": "JetBlue",
+    "aliases": []
+   },
+   {
+    "name": "Alaska Airlines",
+    "aliases": [
+     "alaska"
+    ]
+   },
+   {
+    "name": "Spirit",
+    "aliases": []
+   },
+   {
+    "name": "Frontier",
+    "aliases": []
+   },
+   {
+    "name": "Hawaiian",
+    "aliases": []
+   },
+   {
+    "name": "Pan Am",
+    "aliases": [
+     "pan american"
+    ]
+   },
+   {
+    "name": "TWA",
+    "aliases": [
+     "trans world airlines"
+    ]
+   },
+   {
+    "name": "Allegiant",
+    "aliases": []
+   },
+   {
+    "name": "Sun Country",
+    "aliases": []
+   },
+   {
+    "name": "Continental",
+    "aliases": []
+   },
+   {
+    "name": "Northwest",
+    "aliases": []
+   },
+   {
+    "name": "US Airways",
+    "aliases": []
+   },
+   {
+    "name": "Eastern",
+    "aliases": []
+   },
+   {
+    "name": "Virgin America",
+    "aliases": []
+   },
+   {
+    "name": "AirTran",
+    "aliases": []
+   },
+   {
+    "name": "Braniff",
+    "aliases": []
+   },
+   {
+    "name": "Western",
+    "aliases": []
+   },
+   {
+    "name": "Piedmont",
+    "aliases": []
+   },
+   {
+    "name": "People Express",
+    "aliases": []
+   },
+   {
+    "name": "Breeze",
+    "aliases": []
+   },
+   {
+    "name": "Avelo",
+    "aliases": []
+   },
+   {
+    "name": "Midwest",
+    "aliases": []
+   },
+   {
+    "name": "Aloha",
+    "aliases": []
+   },
+   {
+    "name": "America West",
+    "aliases": []
+   },
+   {
+    "name": "PSA",
+    "aliases": [
+     "pacific southwest"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "stores",
+  "q": "Name a US store chain",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Walmart",
+    "aliases": []
+   },
+   {
+    "name": "Target",
+    "aliases": []
+   },
+   {
+    "name": "Macy's",
+    "aliases": []
+   },
+   {
+    "name": "Nordstrom",
+    "aliases": []
+   },
+   {
+    "name": "Kohl's",
+    "aliases": []
+   },
+   {
+    "name": "JCPenney",
+    "aliases": [
+     "jc penney",
+     "penneys",
+     "penney s"
+    ]
+   },
+   {
+    "name": "Sears",
+    "aliases": []
+   },
+   {
+    "name": "Costco",
+    "aliases": []
+   },
+   {
+    "name": "Bloomingdale's",
+    "aliases": [
+     "bloomies"
+    ]
+   },
+   {
+    "name": "Saks Fifth Avenue",
+    "aliases": [
+     "saks"
+    ]
+   },
+   {
+    "name": "Neiman Marcus",
+    "aliases": []
+   },
+   {
+    "name": "Dillard's",
+    "aliases": []
+   },
+   {
+    "name": "Kmart",
+    "aliases": []
+   },
+   {
+    "name": "TJ Maxx",
+    "aliases": [
+     "tj maxx"
+    ]
+   },
+   {
+    "name": "Marshalls",
+    "aliases": []
+   },
+   {
+    "name": "Ross",
+    "aliases": []
+   },
+   {
+    "name": "Burlington",
+    "aliases": []
+   },
+   {
+    "name": "Bergdorf Goodman",
+    "aliases": [
+     "bergdorfs"
+    ]
+   },
+   {
+    "name": "Lord & Taylor",
+    "aliases": []
+   },
+   {
+    "name": "Belk",
+    "aliases": []
+   },
+   {
+    "name": "Barneys",
+    "aliases": []
+   },
+   {
+    "name": "Marshall Field's",
+    "aliases": []
+   },
+   {
+    "name": "Montgomery Ward",
+    "aliases": []
+   },
+   {
+    "name": "Boscov's",
+    "aliases": []
+   },
+   {
+    "name": "Woolworth",
+    "aliases": [
+     "woolworths"
+    ]
+   },
+   {
+    "name": "Gimbels",
+    "aliases": []
+   },
+   {
+    "name": "Wanamaker's",
+    "aliases": []
+   },
+   {
+    "name": "Hudson's",
+    "aliases": []
+   },
+   {
+    "name": "Filene's",
+    "aliases": []
+   },
+   {
+    "name": "Mervyn's",
+    "aliases": []
+   },
+   {
+    "name": "Ames",
+    "aliases": []
+   },
+   {
+    "name": "Zayre",
+    "aliases": []
+   },
+   {
+    "name": "Bon-Ton",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "beer",
+  "q": "Name an American beer",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Budweiser",
+    "aliases": [
+     "bud"
+    ]
+   },
+   {
+    "name": "Coors",
+    "aliases": []
+   },
+   {
+    "name": "Miller",
+    "aliases": []
+   },
+   {
+    "name": "Bud Light",
+    "aliases": []
+   },
+   {
+    "name": "Coors Light",
+    "aliases": []
+   },
+   {
+    "name": "Miller Lite",
+    "aliases": []
+   },
+   {
+    "name": "Michelob Ultra",
+    "aliases": [
+     "michelob"
+    ]
+   },
+   {
+    "name": "Pabst Blue Ribbon",
+    "aliases": [
+     "pbr",
+     "pabst"
+    ]
+   },
+   {
+    "name": "Samuel Adams",
+    "aliases": [
+     "sam adams"
+    ]
+   },
+   {
+    "name": "Blue Moon",
+    "aliases": []
+   },
+   {
+    "name": "Busch",
+    "aliases": []
+   },
+   {
+    "name": "Natural Light",
+    "aliases": [
+     "natty light"
+    ]
+   },
+   {
+    "name": "Yuengling",
+    "aliases": []
+   },
+   {
+    "name": "Keystone",
+    "aliases": []
+   },
+   {
+    "name": "Rolling Rock",
+    "aliases": []
+   },
+   {
+    "name": "Sierra Nevada",
+    "aliases": []
+   },
+   {
+    "name": "Schlitz",
+    "aliases": []
+   },
+   {
+    "name": "Anchor Steam",
+    "aliases": []
+   },
+   {
+    "name": "Lagunitas",
+    "aliases": []
+   },
+   {
+    "name": "Shiner Bock",
+    "aliases": [
+     "shiner"
+    ]
+   },
+   {
+    "name": "Stroh's",
+    "aliases": []
+   },
+   {
+    "name": "Genesee",
+    "aliases": []
+   },
+   {
+    "name": "Hamm's",
+    "aliases": []
+   },
+   {
+    "name": "Olympia",
+    "aliases": []
+   },
+   {
+    "name": "Narragansett",
+    "aliases": []
+   },
+   {
+    "name": "Old Milwaukee",
+    "aliases": []
+   },
+   {
+    "name": "Milwaukee's Best",
+    "aliases": [
+     "beast"
+    ]
+   },
+   {
+    "name": "Dogfish Head",
+    "aliases": []
+   },
+   {
+    "name": "Goose Island",
+    "aliases": []
+   },
+   {
+    "name": "Brooklyn Lager",
+    "aliases": []
+   },
+   {
+    "name": "Bell's",
+    "aliases": []
+   },
+   {
+    "name": "Founders",
+    "aliases": []
+   },
+   {
+    "name": "Iron City",
+    "aliases": []
+   },
+   {
+    "name": "Lone Star",
+    "aliases": []
+   },
+   {
+    "name": "Grain Belt",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "soda",
+  "q": "Name an American soda",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {
+   "fanta": "Fanta was invented in Germany.",
+   "canada dry": "Canada Dry started out in, well, Canada.",
+   "irn bru": "Nice try. That one’s Scottish."
+  },
+  "items": [
+   {
+    "name": "Coca-Cola",
+    "aliases": [
+     "coke",
+     "coca cola"
+    ]
+   },
+   {
+    "name": "Pepsi",
+    "aliases": []
+   },
+   {
+    "name": "Dr Pepper",
+    "aliases": []
+   },
+   {
+    "name": "Mountain Dew",
+    "aliases": [
+     "mtn dew"
+    ]
+   },
+   {
+    "name": "Sprite",
+    "aliases": []
+   },
+   {
+    "name": "7 Up",
+    "aliases": [
+     "seven up"
+    ]
+   },
+   {
+    "name": "A&W Root Beer",
+    "aliases": [
+     "a and w"
+    ]
+   },
+   {
+    "name": "Root beer",
+    "aliases": []
+   },
+   {
+    "name": "Barq's",
+    "aliases": []
+   },
+   {
+    "name": "Sunkist",
+    "aliases": []
+   },
+   {
+    "name": "Mug",
+    "aliases": []
+   },
+   {
+    "name": "Crush",
+    "aliases": []
+   },
+   {
+    "name": "Squirt",
+    "aliases": []
+   },
+   {
+    "name": "RC Cola",
+    "aliases": [
+     "royal crown"
+    ]
+   },
+   {
+    "name": "Big Red",
+    "aliases": []
+   },
+   {
+    "name": "Cheerwine",
+    "aliases": []
+   },
+   {
+    "name": "Vernors",
+    "aliases": []
+   },
+   {
+    "name": "Moxie",
+    "aliases": []
+   },
+   {
+    "name": "Faygo",
+    "aliases": []
+   },
+   {
+    "name": "Shasta",
+    "aliases": []
+   },
+   {
+    "name": "Sierra Mist",
+    "aliases": []
+   },
+   {
+    "name": "Mello Yello",
+    "aliases": []
+   },
+   {
+    "name": "Fresca",
+    "aliases": []
+   },
+   {
+    "name": "Tab",
+    "aliases": []
+   },
+   {
+    "name": "Surge",
+    "aliases": []
+   },
+   {
+    "name": "Sun Drop",
+    "aliases": []
+   },
+   {
+    "name": "IBC",
+    "aliases": []
+   },
+   {
+    "name": "Dad's",
+    "aliases": []
+   },
+   {
+    "name": "Jolt Cola",
+    "aliases": [
+     "jolt"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "dogs",
+  "q": "Name an American dog breed",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {
+   "siberian husky": "The husky comes from Siberia.",
+   "husky": "The husky comes from Siberia."
+  },
+  "items": [
+   {
+    "name": "Boston Terrier",
+    "aliases": []
+   },
+   {
+    "name": "Alaskan Malamute",
+    "aliases": [
+     "malamute"
+    ]
+   },
+   {
+    "name": "American Pit Bull Terrier",
+    "aliases": [
+     "pit bull",
+     "pitbull"
+    ]
+   },
+   {
+    "name": "Chesapeake Bay Retriever",
+    "aliases": [
+     "chessie"
+    ]
+   },
+   {
+    "name": "American Eskimo Dog",
+    "aliases": [
+     "american eskimo"
+    ]
+   },
+   {
+    "name": "American Staffordshire Terrier",
+    "aliases": [
+     "amstaff"
+    ]
+   },
+   {
+    "name": "American Bulldog",
+    "aliases": []
+   },
+   {
+    "name": "Coonhound",
+    "aliases": []
+   },
+   {
+    "name": "Bluetick Coonhound",
+    "aliases": []
+   },
+   {
+    "name": "Redbone Coonhound",
+    "aliases": []
+   },
+   {
+    "name": "Treeing Walker Coonhound",
+    "aliases": []
+   },
+   {
+    "name": "Black and Tan Coonhound",
+    "aliases": []
+   },
+   {
+    "name": "American Foxhound",
+    "aliases": []
+   },
+   {
+    "name": "Rat Terrier",
+    "aliases": []
+   },
+   {
+    "name": "Catahoula Leopard Dog",
+    "aliases": [
+     "catahoula"
+    ]
+   },
+   {
+    "name": "Boykin Spaniel",
+    "aliases": []
+   },
+   {
+    "name": "American Water Spaniel",
+    "aliases": []
+   },
+   {
+    "name": "Toy Fox Terrier",
+    "aliases": []
+   },
+   {
+    "name": "Plott Hound",
+    "aliases": [
+     "plott"
+    ]
+   },
+   {
+    "name": "Chinook",
+    "aliases": []
+   },
+   {
+    "name": "American Hairless Terrier",
+    "aliases": []
+   },
+   {
+    "name": "Mountain Cur",
+    "aliases": []
+   },
+   {
+    "name": "Carolina Dog",
+    "aliases": []
+   },
+   {
+    "name": "Alaskan Klee Kai",
+    "aliases": []
+   },
+   {
+    "name": "Australian Shepherd",
+    "aliases": [
+     "aussie"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "simpsons",
+  "q": "Name a Simpsons character",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Homer Simpson",
+    "aliases": [
+     "homer"
+    ]
+   },
+   {
+    "name": "Bart Simpson",
+    "aliases": [
+     "bart"
+    ]
+   },
+   {
+    "name": "Marge Simpson",
+    "aliases": [
+     "marge"
+    ]
+   },
+   {
+    "name": "Lisa Simpson",
+    "aliases": [
+     "lisa"
+    ]
+   },
+   {
+    "name": "Maggie Simpson",
+    "aliases": [
+     "maggie"
+    ]
+   },
+   {
+    "name": "Mr. Burns",
+    "aliases": [
+     "burns",
+     "montgomery burns"
+    ]
+   },
+   {
+    "name": "Ned Flanders",
+    "aliases": [
+     "flanders",
+     "ned"
+    ]
+   },
+   {
+    "name": "Moe Szyslak",
+    "aliases": [
+     "moe"
+    ]
+   },
+   {
+    "name": "Krusty the Clown",
+    "aliases": [
+     "krusty"
+    ]
+   },
+   {
+    "name": "Apu",
+    "aliases": [
+     "apu nahasapeemapetilon"
+    ]
+   },
+   {
+    "name": "Milhouse",
+    "aliases": [
+     "milhouse van houten"
+    ]
+   },
+   {
+    "name": "Smithers",
+    "aliases": [
+     "waylon smithers"
+    ]
+   },
+   {
+    "name": "Chief Wiggum",
+    "aliases": [
+     "wiggum",
+     "clancy wiggum"
+    ]
+   },
+   {
+    "name": "Ralph Wiggum",
+    "aliases": [
+     "ralph"
+    ]
+   },
+   {
+    "name": "Barney Gumble",
+    "aliases": [
+     "barney"
+    ]
+   },
+   {
+    "name": "Sideshow Bob",
+    "aliases": []
+   },
+   {
+    "name": "Nelson Muntz",
+    "aliases": [
+     "nelson"
+    ]
+   },
+   {
+    "name": "Principal Skinner",
+    "aliases": [
+     "skinner",
+     "seymour skinner"
+    ]
+   },
+   {
+    "name": "Grampa Simpson",
+    "aliases": [
+     "grampa",
+     "grandpa simpson",
+     "abe simpson"
+    ]
+   },
+   {
+    "name": "Patty Bouvier",
+    "aliases": [
+     "patty"
+    ]
+   },
+   {
+    "name": "Selma Bouvier",
+    "aliases": [
+     "selma"
+    ]
+   },
+   {
+    "name": "Comic Book Guy",
+    "aliases": []
+   },
+   {
+    "name": "Groundskeeper Willie",
+    "aliases": [
+     "willie"
+    ]
+   },
+   {
+    "name": "Edna Krabappel",
+    "aliases": [
+     "krabappel",
+     "mrs krabappel"
+    ]
+   },
+   {
+    "name": "Otto Mann",
+    "aliases": [
+     "otto"
+    ]
+   },
+   {
+    "name": "Lenny Leonard",
+    "aliases": [
+     "lenny"
+    ]
+   },
+   {
+    "name": "Carl Carlson",
+    "aliases": [
+     "carl"
+    ]
+   },
+   {
+    "name": "Dr. Hibbert",
+    "aliases": [
+     "hibbert"
+    ]
+   },
+   {
+    "name": "Troy McClure",
+    "aliases": []
+   },
+   {
+    "name": "Itchy",
+    "aliases": []
+   },
+   {
+    "name": "Scratchy",
+    "aliases": []
+   },
+   {
+    "name": "Snowball II",
+    "aliases": [
+     "snowball"
+    ]
+   },
+   {
+    "name": "Santa's Little Helper",
+    "aliases": []
+   },
+   {
+    "name": "Kent Brockman",
+    "aliases": [
+     "brockman"
+    ]
+   },
+   {
+    "name": "Mayor Quimby",
+    "aliases": [
+     "quimby"
+    ]
+   },
+   {
+    "name": "Fat Tony",
+    "aliases": []
+   },
+   {
+    "name": "Martin Prince",
+    "aliases": []
+   },
+   {
+    "name": "Jimbo Jones",
+    "aliases": [
+     "jimbo"
+    ]
+   },
+   {
+    "name": "Hans Moleman",
+    "aliases": [
+     "moleman"
+    ]
+   },
+   {
+    "name": "Lionel Hutz",
+    "aliases": [
+     "hutz"
+    ]
+   },
+   {
+    "name": "Professor Frink",
+    "aliases": [
+     "frink"
+    ]
+   },
+   {
+    "name": "Cletus",
+    "aliases": []
+   },
+   {
+    "name": "Disco Stu",
+    "aliases": []
+   },
+   {
+    "name": "Bumblebee Man",
+    "aliases": []
+   },
+   {
+    "name": "Gil Gunderson",
+    "aliases": []
+   },
+   {
+    "name": "Kirk Van Houten",
+    "aliases": []
+   },
+   {
+    "name": "Rainier Wolfcastle",
+    "aliases": [
+     "wolfcastle"
+    ]
+   },
+   {
+    "name": "Superintendent Chalmers",
+    "aliases": [
+     "chalmers"
+    ]
+   },
+   {
+    "name": "Lunchlady Doris",
+    "aliases": []
+   },
+   {
+    "name": "Dr. Nick",
+    "aliases": [
+     "dr nick riviera"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "friends",
+  "q": "Name a character from Friends",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Rachel Green",
+    "aliases": [
+     "rachel"
+    ]
+   },
+   {
+    "name": "Ross Geller",
+    "aliases": [
+     "ross"
+    ]
+   },
+   {
+    "name": "Joey Tribbiani",
+    "aliases": [
+     "joey"
+    ]
+   },
+   {
+    "name": "Chandler Bing",
+    "aliases": [
+     "chandler"
+    ]
+   },
+   {
+    "name": "Monica Geller",
+    "aliases": [
+     "monica"
+    ]
+   },
+   {
+    "name": "Phoebe Buffay",
+    "aliases": [
+     "phoebe"
+    ]
+   },
+   {
+    "name": "Gunther",
+    "aliases": []
+   },
+   {
+    "name": "Janice",
+    "aliases": []
+   },
+   {
+    "name": "Mike Hannigan",
+    "aliases": [
+     "mike"
+    ]
+   },
+   {
+    "name": "Marcel",
+    "aliases": []
+   },
+   {
+    "name": "Emily Waltham",
+    "aliases": [
+     "emily"
+    ]
+   },
+   {
+    "name": "Carol Willick",
+    "aliases": [
+     "carol"
+    ]
+   },
+   {
+    "name": "Susan Bunch",
+    "aliases": [
+     "susan"
+    ]
+   },
+   {
+    "name": "Ben Geller",
+    "aliases": [
+     "ben"
+    ]
+   },
+   {
+    "name": "Emma Geller",
+    "aliases": [
+     "emma"
+    ]
+   },
+   {
+    "name": "Richard Burke",
+    "aliases": [
+     "richard"
+    ]
+   },
+   {
+    "name": "Ugly Naked Guy",
+    "aliases": []
+   },
+   {
+    "name": "Mr. Heckles",
+    "aliases": [
+     "heckles"
+    ]
+   },
+   {
+    "name": "Jack Geller",
+    "aliases": []
+   },
+   {
+    "name": "Judy Geller",
+    "aliases": []
+   },
+   {
+    "name": "Ursula Buffay",
+    "aliases": [
+     "ursula"
+    ]
+   },
+   {
+    "name": "Frank Buffay Jr.",
+    "aliases": [
+     "frank jr"
+    ]
+   },
+   {
+    "name": "Estelle Leonard",
+    "aliases": [
+     "estelle"
+    ]
+   },
+   {
+    "name": "Paolo",
+    "aliases": []
+   },
+   {
+    "name": "Julie",
+    "aliases": []
+   },
+   {
+    "name": "Charlie Wheeler",
+    "aliases": []
+   },
+   {
+    "name": "Tag Jones",
+    "aliases": [
+     "tag"
+    ]
+   },
+   {
+    "name": "Janine Lecroix",
+    "aliases": [
+     "janine"
+    ]
+   },
+   {
+    "name": "Eddie Menuek",
+    "aliases": [
+     "eddie"
+    ]
+   },
+   {
+    "name": "Kathy",
+    "aliases": []
+   },
+   {
+    "name": "Mr. Treeger",
+    "aliases": [
+     "treeger"
+    ]
+   },
+   {
+    "name": "Pete Becker",
+    "aliases": []
+   },
+   {
+    "name": "David",
+    "aliases": []
+   },
+   {
+    "name": "Mona",
+    "aliases": []
+   },
+   {
+    "name": "Elizabeth Stevens",
+    "aliases": []
+   },
+   {
+    "name": "Paul Stevens",
+    "aliases": []
+   },
+   {
+    "name": "Fun Bobby",
+    "aliases": []
+   },
+   {
+    "name": "Duncan",
+    "aliases": []
+   },
+   {
+    "name": "Joshua",
+    "aliases": []
+   },
+   {
+    "name": "Gavin Mitchell",
+    "aliases": []
+   },
+   {
+    "name": "Leonard Green",
+    "aliases": []
+   },
+   {
+    "name": "Sandra Green",
+    "aliases": []
+   },
+   {
+    "name": "Erica",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "sesame",
+  "q": "Name a Sesame Street character",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Elmo",
+    "aliases": []
+   },
+   {
+    "name": "Big Bird",
+    "aliases": []
+   },
+   {
+    "name": "Cookie Monster",
+    "aliases": []
+   },
+   {
+    "name": "Oscar the Grouch",
+    "aliases": [
+     "oscar"
+    ]
+   },
+   {
+    "name": "Bert",
+    "aliases": []
+   },
+   {
+    "name": "Ernie",
+    "aliases": []
+   },
+   {
+    "name": "Grover",
+    "aliases": []
+   },
+   {
+    "name": "Count von Count",
+    "aliases": [
+     "the count",
+     "count"
+    ]
+   },
+   {
+    "name": "Kermit the Frog",
+    "aliases": [
+     "kermit"
+    ]
+   },
+   {
+    "name": "Mr. Snuffleupagus",
+    "aliases": [
+     "snuffleupagus",
+     "snuffy"
+    ]
+   },
+   {
+    "name": "Abby Cadabby",
+    "aliases": [
+     "abby"
+    ]
+   },
+   {
+    "name": "Zoe",
+    "aliases": []
+   },
+   {
+    "name": "Telly Monster",
+    "aliases": [
+     "telly"
+    ]
+   },
+   {
+    "name": "Rosita",
+    "aliases": []
+   },
+   {
+    "name": "Baby Bear",
+    "aliases": []
+   },
+   {
+    "name": "Super Grover",
+    "aliases": []
+   },
+   {
+    "name": "Prairie Dawn",
+    "aliases": []
+   },
+   {
+    "name": "Mr. Hooper",
+    "aliases": [
+     "hooper"
+    ]
+   },
+   {
+    "name": "Herry Monster",
+    "aliases": [
+     "herry"
+    ]
+   },
+   {
+    "name": "Guy Smiley",
+    "aliases": []
+   },
+   {
+    "name": "Slimey",
+    "aliases": []
+   },
+   {
+    "name": "Gordon",
+    "aliases": []
+   },
+   {
+    "name": "Maria",
+    "aliases": []
+   },
+   {
+    "name": "Bob",
+    "aliases": []
+   },
+   {
+    "name": "Luis",
+    "aliases": []
+   },
+   {
+    "name": "Susan",
+    "aliases": []
+   },
+   {
+    "name": "Hoots the Owl",
+    "aliases": [
+     "hoots"
+    ]
+   },
+   {
+    "name": "Julia",
+    "aliases": []
+   },
+   {
+    "name": "Murray Monster",
+    "aliases": [
+     "murray"
+    ]
+   },
+   {
+    "name": "Alice Snuffleupagus",
+    "aliases": []
+   },
+   {
+    "name": "Forgetful Jones",
+    "aliases": []
+   },
+   {
+    "name": "Sherlock Hemlock",
+    "aliases": []
+   },
+   {
+    "name": "Lefty",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "amwords",
+  "q": "Name an American word where Brits say something else",
+  "rule": "Elevator, not lift",
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Elevator",
+    "aliases": []
+   },
+   {
+    "name": "Apartment",
+    "aliases": []
+   },
+   {
+    "name": "Cookie",
+    "aliases": []
+   },
+   {
+    "name": "French fries",
+    "aliases": [
+     "fries"
+    ]
+   },
+   {
+    "name": "Truck",
+    "aliases": []
+   },
+   {
+    "name": "Sidewalk",
+    "aliases": []
+   },
+   {
+    "name": "Pants",
+    "aliases": []
+   },
+   {
+    "name": "Trash",
+    "aliases": [
+     "garbage"
+    ]
+   },
+   {
+    "name": "Gas",
+    "aliases": [
+     "gasoline"
+    ]
+   },
+   {
+    "name": "Vacation",
+    "aliases": []
+   },
+   {
+    "name": "Soccer",
+    "aliases": []
+   },
+   {
+    "name": "Candy",
+    "aliases": []
+   },
+   {
+    "name": "Diaper",
+    "aliases": []
+   },
+   {
+    "name": "Flashlight",
+    "aliases": []
+   },
+   {
+    "name": "Parking lot",
+    "aliases": []
+   },
+   {
+    "name": "Zucchini",
+    "aliases": []
+   },
+   {
+    "name": "Eggplant",
+    "aliases": []
+   },
+   {
+    "name": "Cell phone",
+    "aliases": [
+     "cellphone"
+    ]
+   },
+   {
+    "name": "Sweater",
+    "aliases": []
+   },
+   {
+    "name": "Faucet",
+    "aliases": []
+   },
+   {
+    "name": "Restroom",
+    "aliases": []
+   },
+   {
+    "name": "Line",
+    "aliases": []
+   },
+   {
+    "name": "Fall",
+    "aliases": []
+   },
+   {
+    "name": "Mail",
+    "aliases": []
+   },
+   {
+    "name": "Hood",
+    "aliases": []
+   },
+   {
+    "name": "Trunk",
+    "aliases": []
+   },
+   {
+    "name": "Windshield",
+    "aliases": []
+   },
+   {
+    "name": "Freeway",
+    "aliases": []
+   },
+   {
+    "name": "Stroller",
+    "aliases": []
+   },
+   {
+    "name": "Pacifier",
+    "aliases": []
+   },
+   {
+    "name": "Drugstore",
+    "aliases": []
+   },
+   {
+    "name": "Eraser",
+    "aliases": []
+   },
+   {
+    "name": "Check",
+    "aliases": []
+   },
+   {
+    "name": "Cilantro",
+    "aliases": []
+   },
+   {
+    "name": "Jell-O",
+    "aliases": []
+   },
+   {
+    "name": "Popsicle",
+    "aliases": []
+   },
+   {
+    "name": "Band-Aid",
+    "aliases": []
+   },
+   {
+    "name": "Bangs",
+    "aliases": []
+   },
+   {
+    "name": "Sneakers",
+    "aliases": []
+   },
+   {
+    "name": "Suspenders",
+    "aliases": []
+   },
+   {
+    "name": "Vest",
+    "aliases": []
+   },
+   {
+    "name": "Closet",
+    "aliases": []
+   },
+   {
+    "name": "Period",
+    "aliases": []
+   },
+   {
+    "name": "Zip code",
+    "aliases": []
+   },
+   {
+    "name": "Overpass",
+    "aliases": []
+   },
+   {
+    "name": "Turn signal",
+    "aliases": []
+   },
+   {
+    "name": "Tic-tac-toe",
+    "aliases": []
+   },
+   {
+    "name": "Arugula",
+    "aliases": []
+   },
+   {
+    "name": "Scallion",
+    "aliases": []
+   },
+   {
+    "name": "Realtor",
+    "aliases": []
+   },
+   {
+    "name": "Broil",
+    "aliases": []
+   },
+   {
+    "name": "Fanny pack",
+    "aliases": []
+   },
+   {
+    "name": "Molasses",
+    "aliases": []
+   }
+  ]
+ },
+ {
+  "id": "holidays",
+  "q": "Name an American holiday or special day",
+  "rule": null,
+  "strip": [],
+  "people": false,
+  "traps": {},
+  "items": [
+   {
+    "name": "Thanksgiving",
+    "aliases": []
+   },
+   {
+    "name": "Fourth of July",
+    "aliases": [
+     "independence day",
+     "july 4th",
+     "july fourth"
+    ]
+   },
+   {
+    "name": "Halloween",
+    "aliases": []
+   },
+   {
+    "name": "Christmas",
+    "aliases": []
+   },
+   {
+    "name": "Memorial Day",
+    "aliases": []
+   },
+   {
+    "name": "Labor Day",
+    "aliases": []
+   },
+   {
+    "name": "Presidents' Day",
+    "aliases": [
+     "presidents day",
+     "washington s birthday"
+    ]
+   },
+   {
+    "name": "Martin Luther King Jr. Day",
+    "aliases": [
+     "mlk day",
+     "martin luther king day"
+    ]
+   },
+   {
+    "name": "Veterans Day",
+    "aliases": []
+   },
+   {
+    "name": "Juneteenth",
+    "aliases": []
+   },
+   {
+    "name": "Columbus Day",
+    "aliases": [
+     "indigenous peoples day"
+    ]
+   },
+   {
+    "name": "Groundhog Day",
+    "aliases": []
+   },
+   {
+    "name": "Black Friday",
+    "aliases": []
+   },
+   {
+    "name": "Super Bowl Sunday",
+    "aliases": []
+   },
+   {
+    "name": "Cinco de Mayo",
+    "aliases": []
+   },
+   {
+    "name": "Mardi Gras",
+    "aliases": []
+   },
+   {
+    "name": "Flag Day",
+    "aliases": []
+   },
+   {
+    "name": "Earth Day",
+    "aliases": []
+   },
+   {
+    "name": "Cyber Monday",
+    "aliases": []
+   },
+   {
+    "name": "Arbor Day",
+    "aliases": []
+   },
+   {
+    "name": "Election Day",
+    "aliases": []
+   },
+   {
+    "name": "Tax Day",
+    "aliases": []
+   },
+   {
+    "name": "Kwanzaa",
+    "aliases": []
+   },
+   {
+    "name": "Pearl Harbor Remembrance Day",
+    "aliases": [
+     "pearl harbor day"
+    ]
+   },
+   {
+    "name": "Patriots' Day",
+    "aliases": []
+   },
+   {
+    "name": "Constitution Day",
+    "aliases": []
+   },
+   {
+    "name": "Pi Day",
+    "aliases": []
+   },
+   {
+    "name": "Casimir Pulaski Day",
+    "aliases": []
+   },
+   {
+    "name": "Leif Erikson Day",
+    "aliases": []
+   },
+   {
+    "name": "Seward's Day",
+    "aliases": []
+   },
+   {
+    "name": "Kamehameha Day",
+    "aliases": []
+   },
+   {
+    "name": "Evacuation Day",
+    "aliases": []
+   }
+  ]
+ }
+]

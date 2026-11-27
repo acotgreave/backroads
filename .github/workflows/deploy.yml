@@ -1,0 +1,75 @@
+name: Build questions and deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '23 4 * * 1'   # Mondays 04:23 UTC: refresh Wikidata answers + page views
+  workflow_dispatch:        # "Run workflow" button in the Actions tab
+
+permissions:
+  contents: write           # commit the refreshed data/bank.js
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Read curated prompts from the game page
+        run: node scripts/extract_curated.js
+
+      - name: Week number (cache key)
+        id: wk
+        run: echo "week=$(date +%G-%V)" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/cache@v4      # pushes in the same week reuse the API responses: polite to Wikimedia
+        with:
+          path: .cache
+          key: wikidata-${{ steps.wk.outputs.week }}
+
+      - name: Rebuild the answer bank from Wikidata + page views
+        continue-on-error: true      # if Wikidata is down, the last committed bank is used
+        run: python3 scripts/build_bank.py
+
+      - name: Commit refreshed bank
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/bank.js data/report.csv data/curated.json 2>/dev/null || true
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh answer bank from Wikidata"
+            git pull --rebase && git push
+          elif [ "${{ github.event_name }}" = "schedule" ] && \
+               [ $(( $(date +%s) - $(git log -1 --format=%ct) )) -gt $(( 45 * 86400 )) ]; then
+            git commit --allow-empty -m "Keep scheduled refresh active"   # GitHub pauses schedules after 60 quiet days
+            git pull --rebase && git push
+          fi
+
+      - name: Assemble site
+        run: python3 scripts/build_site.py
+
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
