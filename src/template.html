@@ -345,7 +345,8 @@ function judge(p,raw){
 const $=id=>document.getElementById(id), card=$('card');
 const store={get(k,d){try{return JSON.parse(localStorage.getItem('backroad:'+k))??d}catch(e){return d}},set(k,v){try{localStorage.setItem('backroad:'+k,JSON.stringify(v))}catch(e){}}};
 const calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
-let mode='daily',timerOn=store.get('timer',true),G=null,tick=null;
+const EXTRAS=false;   // Unlimited mode and the timer toggle are hidden for now; set true to bring the buttons back
+let mode='daily',timerOn=EXTRAS?store.get('timer',true):true,G=null,tick=null;
 // test mode: ?test=1 turns it on (remembered), ?test=0 turns it off. Lets you replay today's drive; replays never count.
 const TEST=(()=>{const q=new URLSearchParams(location.search).get('test');if(q==='1')store.set('test',true);if(q==='0')store.set('test',false);return store.get('test',false)})();
 function replay(road,rev){clearInterval(tick);mode='daily';G=newGame('backroad-'+today());if(road!=null){G.road=road;G.rev=rev}G.test=true;shown=0;buildMap();intro()}
@@ -610,12 +611,12 @@ function topbar(){
   const nx=T.stops.find(([sm])=>sm>m);$('guide').textContent=nx?`↑ ${nx[1]} ${nx[0]-m}`:'End of the road';
 }
 function shield(T,size=34){return T.sh?`<span class="shield"><svg width="${size}" height="${size}" viewBox="0 0 54 58" aria-label="Route ${T.sh}"><path d="M4 4h46c3 12 2 26-4 36-5 8-12 12-19 16-7-4-14-8-19-16C2 30 1 16 4 4z" fill="#fff" stroke="#14161b" stroke-width="3"/><text x="27" y="38" text-anchor="middle" font-family="Overpass,sans-serif" font-weight="900" font-size="${T.sh.length>2?17:22}" fill="#14161b">${T.sh}</text></svg></span>`:''}
-function chips(){return `<div class="chips"><button class="chip" data-m="daily" aria-pressed="${mode==='daily'}">Daily</button><button class="chip" data-m="free" aria-pressed="${mode==='free'}">Unlimited</button><button class="chip" data-t aria-pressed="${timerOn}">${timerOn?'Timer on':'Timer off'}</button><button class="chip" data-log>Trip log</button><button class="chip" data-about>About</button></div>`}
+function chips(){return `<div class="chips">${EXTRAS?`<button class="chip" data-m="daily" aria-pressed="${mode==='daily'}">Daily</button><button class="chip" data-m="free" aria-pressed="${mode==='free'}">Unlimited</button><button class="chip" data-t aria-pressed="${timerOn}">${timerOn?'Timer on':'Timer off'}</button>`:''}<button class="chip" data-log>Trip log</button><button class="chip" data-about>About</button></div>`}
 function wireChips(root){root.querySelectorAll('[data-m]').forEach(b=>b.onclick=()=>setMode(b.dataset.m));
   root.querySelectorAll('[data-t]').forEach(b=>b.onclick=()=>{timerOn=!timerOn;store.set('timer',timerOn);b.setAttribute('aria-pressed',timerOn);b.textContent=timerOn?'Timer on':'Timer off'});
   root.querySelectorAll('[data-log]').forEach(b=>b.onclick=tripLog);
   root.querySelectorAll('[data-about]').forEach(b=>b.onclick=about);
-  root.querySelectorAll('[data-replay]').forEach(b=>b.onclick=replay)}
+  root.querySelectorAll('[data-replay]').forEach(b=>b.onclick=()=>replay())}
 const credit=`<p class="foot">A US take on Boreen and Krillion, from <a href="https://howtospeakdata.com">How To Speak Data</a>. <span class="src"></span></p>`;
 function fillSrc(root){const s=root.querySelector('.src');if(s)s.textContent=typeof BANK_META!=='undefined'?`Answers from Wikidata; rarity from Wikipedia page views, refreshed ${BANK_META.built}.`:'Rarity tiers are set by hand for now.'}
 
@@ -631,7 +632,7 @@ function intro(){
   ${TEST?tripPicker():''}
   <details class="how"><summary>How to play</summary><p>Seven prompts${timerOn?', 25 seconds each':''}. Name something that fits. Common answers barely move you; rare ones cover real ground, and you’ll spot rarer wildlife on the way.</p>
   <div class="zoo">${ZOO.map((z,k)=>`<span>${sign(k,22)}${z.pts} mi</span>`).join('')}</div></details>
-  <div class="homefoot"><button class="lnk" data-m="${mode==='daily'?'free':'daily'}">${mode==='daily'?'Unlimited':'Daily'}</button><button class="lnk" data-t>${timerOn?'Timer on':'Timer off'}</button><button class="lnk" data-log>Trip log</button><button class="lnk" data-about>About</button>${TEST?'<button class="lnk" data-replay>Test: replay today</button>':''}</div>
+  <div class="homefoot">${EXTRAS?`<button class="lnk" data-m="${mode==='daily'?'free':'daily'}">${mode==='daily'?'Unlimited':'Daily'}</button><button class="lnk" data-t>${timerOn?'Timer on':'Timer off'}</button>`:''}<button class="lnk" data-log>Trip log</button><button class="lnk" data-about>About</button>${TEST?'<button class="lnk" data-replay>Test: replay today</button>':''}</div>
   <p class="foot hp-credit">A US take on Boreen and Krillion, from <a href="https://howtospeakdata.com">How To Speak Data</a>.</p>`;
   panel.querySelector('.rn').textContent=T.name;panel.querySelector('.hp-from').textContent=`${T.from} to ${T.to}`;
   wireChips(panel);
@@ -761,7 +762,7 @@ function end(){
    <h3 class="kicker" style="display:flex;justify-content:space-between">Recent drives <span style="letter-spacing:0;text-transform:none">Higher is rarer</span></h3>${logSVG()}</details>
   <details class="sec"><summary>The wildlife</summary>
    <ul class="res">${ZOO.map((z,k)=>`<li>${sign(k,28)}<div>${z.name}<small>${ODDS[k]}</small></div><b>${z.pts} mi</b></li>`).join('')}</ul></details>
-  <div class="row" style="margin-top:14px"><button class="btn wide" id="again">${G.mode==='daily'?'Play Unlimited':'Drive again'}</button><button class="btn" id="lg">Trip log</button>${TEST?'<button class="btn" data-replay>Test: replay</button>':''}</div>
+  <div class="row" style="margin-top:14px">${EXTRAS||G.mode!=='daily'?`<button class="btn wide" id="again">${G.mode==='daily'?'Play Unlimited':'Drive again'}</button>`:''}<button class="btn" id="lg">Trip log</button>${TEST?'<button class="btn" data-replay>Test: replay</button>':''}</div>
   <pre class="share hide" id="sh"></pre>
   <p class="streak" style="margin-top:16px">Know a question with loads of answers?</p>
   <div class="row"><a class="btn wide" style="display:flex;align-items:center;justify-content:space-between;text-decoration:none" href="https://github.com/acotgreave/backroads/issues/new?title=Question%20idea%3A%20" target="_blank" rel="noopener">Suggest a question <span>→</span></a></div>
@@ -783,7 +784,7 @@ function end(){
     A.append(d)});
   $('sh').textContent=share;
   $('cp').onclick=async e=>{try{if(navigator.share&&matchMedia('(pointer:coarse)').matches){await navigator.share({text:share});return}await navigator.clipboard.writeText(share);e.target.textContent='Copied'}catch(_){e.target.textContent='Select the text below to copy';show($('sh'),true)}};
-  $('again').onclick=()=>setMode('free');$('lg').onclick=tripLog;wireChips(panel);fillSrc(panel);
+  if($('again'))$('again').onclick=()=>setMode('free');$('lg').onclick=tripLog;wireChips(panel);fillSrc(panel);
   const cd=()=>{const s=Math.max(0,Math.round((mid-new Date())/1000)),el=$('cd');if(!el)return;el.textContent=`${Math.floor(s/3600)}h ${String(Math.floor(s/60)%60).padStart(2,'0')}m`;setTimeout(cd,30000)};cd();
   panel.scrollTop=0;cam('over',calm?0:1200);
 }
