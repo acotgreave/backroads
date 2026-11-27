@@ -29,6 +29,9 @@ jobs:
       - name: Read curated prompts from the game page
         run: node scripts/extract_curated.js
 
+      - name: Check hand answers and aliases
+        run: node scripts/check_answers.js --hand-only
+
       - name: Week number (cache key)
         id: wk
         run: echo "week=$(date +%G-%V)" >> "$GITHUB_OUTPUT"
@@ -41,6 +44,9 @@ jobs:
       - name: Rebuild the answer bank from Wikidata + page views
         continue-on-error: true      # if Wikidata is down, the last committed bank is used
         run: python3 scripts/build_bank.py
+
+      - name: Check the built bank (warnings only)
+        run: node scripts/check_answers.js --warn-only
 
       - name: Commit refreshed bank
         run: |

@@ -28,5 +28,6 @@ Commit to `main` and the site rebuilds in about two minutes. Force a refresh fro
 ## Run locally
 
     node scripts/extract_curated.js
+    node scripts/check_answers.js        # alias clashes, answers that score as the wrong answer
     python3 scripts/build_bank.py        # --mock for an offline dry run; --only states,parks for a quick test
     python3 scripts/build_site.py        # writes dist/index.html

@@ -29,6 +29,7 @@ Andy wants Boreen's **journey** feel, not Krillion's **dive** feel. This is a fi
 | `src/template.html` | **The whole game**, a single file. The `P` list near the top of the script holds the curated prompts (wording, answers, `=alias;alias`, traps). `/*BANK*/` is where the generated bank is injected. |
 | `scripts/extract_curated.js` | Reads `P` out of the template and writes `data/curated.json`. Keeps the template as the single source of truth. |
 | `scripts/build_bank.py` | Pulls answer lists from Wikidata, gets 24 months of Wikipedia page views, assigns tiers, and writes `data/bank.js` and `data/report.csv`. Python stdlib only. Flags: `--mock` (offline fake views), `--only states,parks`. |
+| `scripts/check_answers.js` | Runs the game's own matching code over every answer and alias. Fails on aliases shared by two answers, aliases that score as a different answer, and traps that shadow a right answer. CI runs it hard on the hand lists and as warnings on the built bank. |
 | `scripts/build_site.py` | Copies `public/` into `dist/` and writes `dist/index.html` with the bank baked in. It refuses to publish a mock bank. |
 | `public/` | `CNAME` (backroads.howtospeakdata.com), `og.png` share card, `favicon.svg`, `.nojekyll` |
 | `.github/workflows/deploy.yml` | On push, every Monday at 04:23 UTC, or a manual run: extract, then build bank (`continue-on-error`), commit the refreshed `data/`, build the site, and deploy to GitHub Pages. API responses are cached per ISO week in `.cache/`. |
@@ -79,7 +80,7 @@ The older prototype is a claude.ai artifact titled "Backroad: US edition". This 
 - Keep the game a **single self-contained HTML file** with no framework or build step beyond the Python injection. Python is stdlib only.
 - The prompt wording, traps and hand aliases live in `P` in `src/template.html`. Edit them there; never hand-edit `data/curated.json`, which is generated.
 - Commit messages are short and plain. Push to `main` deploys, and the site goes live about 2 minutes later.
-- Before pushing a game change, run `node scripts/extract_curated.js && python3 scripts/build_bank.py --mock` and play a round locally. Don't commit a mock `bank.js`, because `build_site.py` refuses to publish one anyway.
+- Before pushing a game change, run `node scripts/extract_curated.js && node scripts/check_answers.js --hand-only && python3 scripts/build_bank.py --mock` and play a round locally. Don't commit a mock `bank.js`, because `build_site.py` refuses to publish one anyway.
 - Tone in the game: short, friendly road-trip lines, US spelling in the UI.
 - Credit stays in the footer: "A US take on Boreen and Krillion". Don't use either game's name or visuals in marketing.
 - Andy's sister site is `acotgreave/howtospeakdata-website` (Astro, also on GitHub Pages via Actions). Use its `deploy.yml` as the house pattern.
