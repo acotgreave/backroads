@@ -58,19 +58,19 @@ a{color:var(--ink2)}
 .prog span{font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--ink2);text-shadow:0 1px 4px #000}
 .guide{justify-self:end;background:var(--green);color:#fff;border:2px solid #fff;outline:2px solid var(--green);border-radius:6px;padding:3px 10px;font-weight:800;font-size:15px;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.5)}
 .guide:empty{display:none}
-.card{position:fixed;left:50%;transform:translateX(-50%);top:62px;width:min(760px,calc(100% - 24px));background:var(--panel);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:12px;padding:14px 18px;z-index:4;box-shadow:0 10px 30px rgba(0,0,0,.45);max-height:calc(100% - 150px);overflow:auto}
-.cat{font-size:12px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#6fd39c}
-.q{font-family:Bitter,Georgia,serif;font-weight:700;font-size:clamp(21px,3.6vw,32px);line-height:1.15;margin-top:2px}
+.card{position:fixed;left:50%;transform:translateX(-50%);top:62px;width:min(600px,calc(100% - 24px));background:var(--panel);backdrop-filter:blur(6px);border:1px solid var(--line);border-radius:12px;padding:10px 14px;z-index:4;box-shadow:0 10px 30px rgba(0,0,0,.45);max-height:calc(100% - 150px);overflow:auto}
+.cat{font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#6fd39c}
+.q{font-family:Bitter,Georgia,serif;font-weight:700;font-size:clamp(18px,2.4vw,23px);line-height:1.15;margin-top:2px}
 .rule{color:var(--ink2);font-size:14px;margin-top:2px}
-.bar{position:fixed;left:50%;transform:translateX(-50%);bottom:max(12px,env(safe-area-inset-bottom));width:min(760px,calc(100% - 24px));background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px;display:flex;gap:8px;align-items:center;z-index:4;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+.bar{position:fixed;left:50%;transform:translateX(-50%);bottom:max(12px,env(safe-area-inset-bottom));width:min(600px,calc(100% - 24px));background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:8px;display:flex;gap:8px;align-items:center;z-index:4;box-shadow:0 10px 30px rgba(0,0,0,.45)}
 .bar form{display:flex;gap:8px;flex:1;align-items:center}
-.bar input{flex:1;font-size:18px;padding:10px 14px;min-height:50px;border:2px solid var(--green2);border-radius:9px;background:#0c0f13;color:var(--ink)}
-.btn{min-height:50px;padding:0 18px;border-radius:9px;border:2px solid var(--line);font-weight:800;cursor:pointer;background:transparent;color:var(--ink);font-size:16px;white-space:nowrap}
+.bar input{flex:1;font-size:17px;padding:8px 12px;min-height:44px;border:2px solid var(--green2);border-radius:9px;background:#0c0f13;color:var(--ink)}
+.btn{min-height:44px;padding:0 16px;border-radius:9px;border:2px solid var(--line);font-weight:800;cursor:pointer;background:transparent;color:var(--ink);font-size:16px;white-space:nowrap}
 .btn.go{background:var(--green);border-color:#fff;outline:2px solid var(--green);color:#fff}
 .btn.wide{flex:1}
 .btn.sm{min-height:40px;font-size:14px;padding:0 12px}
 .btn:focus-visible,input:focus-visible,.chip:focus-visible{outline:2px solid var(--lane);outline-offset:2px}
-.ring{width:50px;height:50px;flex:none;position:relative;display:grid;place-items:center;font-weight:900;font-size:17px;font-variant-numeric:tabular-nums}
+.ring{width:44px;height:44px;flex:none;position:relative;display:grid;place-items:center;font-weight:900;font-size:17px;font-variant-numeric:tabular-nums}
 .ring svg{position:absolute;inset:0;transform:rotate(-90deg)}
 .ring.low{color:#ff6b6b}
 .msg{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(max(12px,env(safe-area-inset-bottom)) + 74px);background:#000c;border-radius:999px;padding:4px 14px;font-size:14px;z-index:4;white-space:nowrap}
@@ -78,22 +78,22 @@ a{color:var(--ink2)}
 
 /* reveal */
 .rv{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:4px 14px;align-items:center}
-.rv .xing{width:76px;height:76px;grid-row:span 2;perspective:400px}
+.rv .xing{width:46px;height:46px;grid-row:span 2;perspective:400px}
 .diamond{width:100%;height:100%;transition:transform .12s ease-in}
 .diamond.flip{transform:rotateY(90deg)}
-.rv .animal{font-family:Bitter,Georgia,serif;font-weight:700;font-size:clamp(24px,4.4vw,38px);line-height:1.05}
-.rv .gain{background:var(--green);border:2px solid #fff;outline:2px solid var(--green);border-radius:6px;padding:2px 10px;font-weight:900;font-size:22px;white-space:nowrap;font-variant-numeric:tabular-nums}
-.rv .ans{grid-column:2/4;font-size:16px;color:var(--ink2)}
+.rv .animal{font-family:Bitter,Georgia,serif;font-weight:700;font-size:clamp(19px,2.6vw,24px);line-height:1.05}
+.rv .gain{background:var(--green);border:2px solid #fff;outline:2px solid var(--green);border-radius:6px;padding:1px 8px;font-weight:900;font-size:16px;white-space:nowrap;font-variant-numeric:tabular-nums}
+.rv .ans{grid-column:2/4;font-size:14px;color:var(--ink2)}
 .rv .ans b{color:var(--ink)}
-.stopban{display:flex;gap:12px;align-items:center;margin-top:10px;background:var(--brown);border:2px solid #fff;outline:2px solid var(--brown);border-radius:7px;padding:8px 12px}
-.stopban b{display:block;font-size:16px;letter-spacing:.06em;text-transform:uppercase}
+.stopban{display:flex;gap:10px;align-items:center;margin-top:8px;background:var(--brown);border:2px solid #fff;outline:2px solid var(--brown);border-radius:7px;padding:8px 12px}
+.stopban b{display:block;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
 .stopban span{font-size:13px;opacity:.9}
-.stopban svg{width:38px;height:38px;flex:none}
-.ladder{display:grid;grid-template-columns:repeat(6,1fr);gap:4px;margin-top:10px}
-.ladder div{display:flex;flex-direction:column;align-items:center;border-radius:7px;padding:4px 0 2px;font-weight:800;font-size:13px;color:var(--ink2)}
-.ladder div svg{width:34px;height:34px}
+.stopban svg{width:28px;height:28px;flex:none}
+.ladder{display:grid;grid-template-columns:repeat(6,1fr);gap:3px;margin-top:6px}
+.ladder div{display:flex;flex-direction:row;justify-content:center;gap:4px;align-items:center;border-radius:6px;padding:2px 0;font-weight:800;font-size:12px;color:var(--ink2)}
+.ladder div svg{width:20px;height:20px}
 .ladder div.on{background:var(--lane);color:#14161b}
-.alt{font-size:13px;color:var(--ink2);margin-top:6px}
+.alt{font-size:12px;color:var(--ink2);margin-top:4px}
 
 /* panels: intro, end, trip log */
 .panel{position:fixed;z-index:4;background:var(--panel);backdrop-filter:blur(6px);border:1px solid var(--line);overflow:auto;box-shadow:0 10px 30px rgba(0,0,0,.45);padding:18px 20px}
@@ -132,6 +132,19 @@ pre.share{background:var(--panel2);padding:10px;border-radius:6px;white-space:pr
 .souv{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0}
 .souv span{display:flex;align-items:center;gap:6px;background:var(--panel2);border-radius:999px;padding:3px 10px 3px 4px;font-size:13px}
 .souv svg{width:22px;height:22px}
+.hero{position:fixed;left:0;right:0;top:0;text-align:center;padding:5vh 16px 0;z-index:4;pointer-events:none;text-shadow:0 2px 12px rgba(0,0,0,.85),0 0 30px rgba(0,0,0,.6)}
+.hero .ttl{font-family:Bitter,Georgia,serif;font-weight:700;font-size:clamp(52px,9vw,104px);line-height:1;letter-spacing:-.01em}
+.hero .sub{color:#6fd39c;font-weight:900;letter-spacing:.32em;text-transform:uppercase;font-size:clamp(12px,1.6vw,16px);margin-top:6px}
+.hero .meta{margin-top:14px;font-size:clamp(14px,1.6vw,17px)}
+.hero .today{font-weight:800;font-size:clamp(14px,1.6vw,17px);margin-top:4px}
+.bar.home{flex-direction:column;align-items:stretch;gap:6px;padding:12px 14px 10px;width:min(560px,calc(100% - 24px))}
+.how{text-align:center}
+.how summary{cursor:pointer;font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:13px;color:var(--ink2);padding:4px}
+.how p{text-align:left;color:var(--ink2);font-size:14px;margin-top:4px}
+.how .zoo{justify-content:center}
+.homefoot{display:flex;justify-content:space-between;align-items:center;gap:8px;border-top:1px solid var(--line);padding-top:8px;flex-wrap:wrap}
+.lnk{background:none;border:0;color:var(--ink2);font-weight:800;font-size:13px;cursor:pointer;padding:6px 8px;text-decoration:underline;text-underline-offset:3px}
+.lnk[aria-pressed=false]{opacity:.7}
 .hide{display:none!important}
 @media(max-width:700px){
   .side{top:auto;left:0;right:0;width:auto;bottom:0;max-height:62%;border-radius:14px 14px 0 0}
@@ -139,13 +152,13 @@ pre.share{background:var(--panel2);padding:10px;border-radius:6px;white-space:pr
   .odo{font-size:22px}
   .prog .slots i{width:17px;height:17px}
   .guide{font-size:13px;padding:2px 7px}
-  .rv .xing{width:58px;height:58px}
-  .rv .gain{font-size:18px}
-  .ladder div svg{width:26px;height:26px}
+  .rv .xing{width:40px;height:40px}
+  .ladder div{flex-direction:column;gap:0}
+  .ladder div svg{width:18px;height:18px}
   .big{font-size:56px}
-  .bar input{font-size:17px;min-height:46px}
-  .btn{min-height:46px;padding:0 14px}
-  .ring{width:44px;height:44px}
+  .bar input{font-size:16px;min-height:42px}
+  .btn{min-height:42px;padding:0 12px}
+  .ring{width:40px;height:40px}
 }
 @media(prefers-reduced-motion:reduce){.car.riding .ride{animation:none}.pin.new{animation:none}}
 </style>
@@ -154,6 +167,7 @@ pre.share{background:var(--panel2);padding:10px;border-radius:6px;white-space:pr
 <svg id="map" aria-hidden="true" preserveAspectRatio="none"></svg>
 <div id="pins" aria-hidden="true"></div>
 <div class="top hide" id="top"><div class="odo"><span id="odo">0</span><small>MILES</small></div><div class="prog"><div class="slots" id="slots"></div><span id="qn"></span></div><div class="guide" id="guide"></div></div>
+<header class="hero hide" id="hero"></header>
 <main class="card" id="card" aria-live="polite"></main>
 <div class="bar" id="bar"></div>
 <div class="msg" id="msg" role="status"></div>
@@ -477,7 +491,7 @@ function setPos(m){shown=m;M.done.setAttribute('stroke-dasharray',`${M.len*Math.
   pinsEl.querySelectorAll('.lbl').forEach((l,i)=>l.classList.toggle('hit',i>0&&m>=M.T.stops[i][0]));place()}
 // camera: world -> screen, keeping the focus point in the clear space between the card and the answer bar
 function safe(){const cw=innerWidth,ch=innerHeight;let t=0,b=ch,l=0,rr=cw;
-  for(const e of document.querySelectorAll('.card:not(.hide),.top:not(.hide)')){const q=e.getBoundingClientRect();if(q.height)t=Math.max(t,q.bottom)}
+  for(const e of document.querySelectorAll('.card:not(.hide),.top:not(.hide),.hero:not(.hide)')){const q=e.getBoundingClientRect();if(q.height)t=Math.max(t,q.bottom)}
   for(const e of document.querySelectorAll('.bar:not(.hide)')){const q=e.getBoundingClientRect();if(q.height)b=Math.min(b,q.top)}
   const p=document.querySelector('.panel:not(.hide)');if(p){const q=p.getBoundingClientRect();if(q.width<cw-10)l=q.right;else b=Math.min(b,q.top)}
   return {l,t,r:rr,b,cw,ch}}
@@ -506,7 +520,7 @@ function drive(target,k,done){
 }
 addEventListener('resize',()=>{if(M)cam(camMode,0)});
 // ---------- chrome ----------
-const topEl=$('top'),barEl=$('bar'),panel=$('panel'),msgEl=$('msg');
+const topEl=$('top'),barEl=$('bar'),panel=$('panel'),msgEl=$('msg'),hero=$('hero');
 const show=(e,on)=>e.classList.toggle('hide',!on);
 const BAND=[.25,.25,.2,.15,.1,.05];
 const ODDS=['Most people’s first thought','A popular pick','Plenty of people get there','Fewer people think of it','Not many people say it','Hardly anyone says this'];
@@ -527,19 +541,23 @@ function fillSrc(root){const s=root.querySelector('.src');if(s)s.textContent=typ
 
 // ---------- screens ----------
 function intro(){
-  const T=M.T;show(topEl,false);show(panel,false);show(card,true);show(barEl,true);msgEl.textContent='';
-  card.innerHTML=`<div class="kicker">${mode==='daily'?'Daily drive #'+dayNo():'Unlimited drive'} · 7 prompts${timerOn?' · 25s each':''}</div>
-  <div class="roadname">${shield(T)}<span></span></div>
-  <p class="lede"><b class="from"></b> to <b class="to"></b>. Common answers barely move you. Rare ones cover real ground, and you’ll spot rarer wildlife on the way.</p>
-  <div class="zoo">${ZOO.map((z,k)=>`<span>${sign(k,24)}${z.pts} mi</span>`).join('')}</div>${chips()}${credit}`;
-  card.querySelector('.roadname span').textContent=T.name;card.querySelector('.from').textContent=T.from;card.querySelector('.to').textContent=T.to;
-  wireChips(card);fillSrc(card);
-  barEl.innerHTML=`<button class="btn go wide" id="start">Start ${mode==='daily'?'today’s':'this'} drive</button>`;
-  $('start').onclick=()=>{cam('ride',1100);ask()};
+  const T=M.T;show(topEl,false);show(panel,false);show(card,false);show(barEl,true);show(hero,true);msgEl.textContent='';
+  hero.innerHTML=`<h1 class="ttl">Backroads</h1><div class="sub">The daily drive</div>
+  <p class="meta">7 questions${timerOn?' · 25 seconds each':''} · rarer answers go further</p>
+  <p class="today">${mode==='daily'?'Today':'Unlimited'}: <span></span></p>`;
+  hero.querySelector('.today span').textContent=`${T.name}, ${T.from} to ${T.to}`;
+  barEl.classList.add('home');
+  barEl.innerHTML=`<button class="btn go wide" id="start">Start ${mode==='daily'?'today’s':'this'} drive</button>
+  <details class="how"><summary>How to play</summary><p>Name something that fits the prompt. Common answers barely move you; rare ones cover real ground, and you’ll spot rarer wildlife on the way.</p>
+  <div class="zoo">${ZOO.map((z,k)=>`<span>${sign(k,22)}${z.pts} mi</span>`).join('')}</div></details>
+  <div class="homefoot"><span class="kicker">${mode==='daily'?'Drive #'+dayNo():'Unlimited'}</span><span class="links"><button class="lnk" data-m="${mode==='daily'?'free':'daily'}">${mode==='daily'?'Unlimited':'Daily'}</button><button class="lnk" data-t>${timerOn?'Timer on':'Timer off'}</button><button class="lnk" data-log>Trip log</button></span></div>
+  <p class="foot" style="margin-top:6px;text-align:center">A US take on Boreen and Krillion, from <a href="https://howtospeakdata.com">How To Speak Data</a>.</p>`;
+  wireChips(barEl);barEl.querySelector('[data-t]').addEventListener('click',()=>{const m=hero.querySelector('.meta');m.textContent=`7 questions${timerOn?' · 25 seconds each':''} · rarer answers go further`});
+  $('start').onclick=()=>{show(hero,false);barEl.classList.remove('home');cam('ride',1100);ask()};
   cam('over',0);
 }
 function ask(){
-  const p=getP(G.qs[G.i]);show(topEl,true);show(panel,false);show(card,true);show(barEl,true);topbar();msgEl.textContent='';
+  const p=getP(G.qs[G.i]);show(hero,false);barEl.classList.remove('home');show(topEl,true);show(panel,false);show(card,true);show(barEl,true);topbar();msgEl.textContent='';
   card.innerHTML=`<div class="cat"></div><h2 class="q"></h2>${p.rule?'<p class="rule"></p>':''}`;
   card.querySelector('.cat').textContent=p.cat;card.querySelector('.q').textContent=p.q;if(p.rule)card.querySelector('.rule').textContent=p.rule;
   barEl.innerHTML=`${timerOn?`<div class="ring" id="ring"><svg viewBox="0 0 50 50"><circle cx="25" cy="25" r="21" fill="none" stroke="#2f3540" stroke-width="4"/><circle id="rc" cx="25" cy="25" r="21" fill="none" stroke="#1b8a55" stroke-width="4" stroke-dasharray="132 132" stroke-linecap="round"/></svg><span id="rs">${SECS}</span></div>`:''}
@@ -618,7 +636,7 @@ function end(){
   const share=`Backroads ${G.mode==='daily'?'#'+dayNo():'(unlimited)'} · ${T.name}\n${G.ans.map(a=>a.tier<0?'⬛':EMO[a.tier]).join('')} ${mi}/700 mi\n${URL_}`;
   const ps=G.qs.map(getP),pop=ps.map(p=>p.items.slice().sort((a,b)=>a.tier-b.tier||a.rank-b.rank)[0]);
   const mid=new Date();mid.setHours(24,0,0,0);
-  show(topEl,false);show(card,false);show(barEl,false);show(panel,true);msgEl.textContent='';
+  show(topEl,false);show(hero,false);show(card,false);show(barEl,false);show(panel,true);msgEl.textContent='';
   panel.innerHTML=`<div class="brand">${LOGO}<div><h1>Backroads</h1><div class="tag">${G.mode==='daily'?'Daily drive #'+dayNo()+' · '+new Date(G.date+'T12:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'}):'Unlimited drive'}</div></div></div>
   <div class="roadname" style="font-size:22px;margin-top:12px">${shield(T,28)}<span class="rn"></span></div>
   <div class="big">${mi}<small>miles</small></div>
@@ -667,7 +685,7 @@ function end(){
 function tripLog(){
   clearInterval(tick);const t=trips();
   const fmt=s=>new Date(s+'T12:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
-  show(topEl,false);show(card,false);show(barEl,false);show(panel,true);
+  show(topEl,false);show(hero,false);show(card,false);show(barEl,false);show(panel,true);
   panel.innerHTML=`<div class="brand">${LOGO}<div><h1>Trip log</h1><div class="tag">${t.days} daily drive${t.days===1?'':'s'}</div></div></div>
   <div class="log">${t.days?`<div class="stats"><div><b>${t.streak}</b><small>day streak (best ${t.longest})</small></div><div><b>${t.best}</b><small>mi, furthest drive</small></div><div><b>${t.total.toLocaleString('en-US')}</b><small>total miles</small></div></div>
   <h3>Souvenirs</h3>${t.souv.length?`<div class="souv">${t.souv.slice(0,40).map(()=>'<span></span>').join('')}</div>`:'<p class="streak">Spot a black bear or bald eagle (80 or 100 mi) to pick up a souvenir.</p>'}
