@@ -6,7 +6,8 @@ const cut = (a, b) => { const i = html.indexOf(a), j = html.indexOf(b, i); if (i
 const code = cut('const norm=', '\n') + '\n' + cut('function lev(', '\nfunction judge') + '\n' + cut('// ---------- wikipedia check', '// ---------- end wikipedia check');
 const { wikiCheck } = new Function(code + '\nreturn {wikiCheck};')();
 const UA = { headers: { 'User-Agent': 'BackroadsQuiz/1.0 (https://backroads.howtospeakdata.com; answer-check test)' } };
-const f = (u, o) => fetch(u, { ...(o || {}), ...UA });
+let seen = [];
+const f = async (u, o) => { const r = await fetch(u, { ...(o || {}), ...UA }); const j = await r.json(); seen.push(j); return { json: async () => j }; };
 const cases = [
   // [prompt, answer, should count?]
   ['beer', 'Fremont Brewing', 1], ['beer', 'Elysian Brewing', 1], ['beer', 'Pliny the Elder', 1], ['beer', 'Russian River Brewing', 1],
@@ -26,9 +27,12 @@ const cases = [
 (async () => {
   let wrong = 0;
   for (const [id, a, want] of cases) {
+    seen = [];
     const got = await wikiCheck({ id }, a, f);
     const ok = !!got === !!want; if (!ok) wrong++;
     console.log(`${ok ? 'ok  ' : 'MISS'} ${id.padEnd(9)} ${a.padEnd(22)} want ${want ? 'yes' : 'no '}  got ${got || '-'}`);
+    if (!ok) for (const j of seen) for (const pg of ((j.query && j.query.pages) || []).sort((x, y) => x.index - y.index))
+      console.log(`       · ${pg.title} — ${pg.description || '(no description)'} — ${(pg.categories || []).map(c => c.title.slice(9)).slice(0, 12).join(' | ')}`);
   }
   console.log(`${cases.length - wrong}/${cases.length} as expected`);
 })();
