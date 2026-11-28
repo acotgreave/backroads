@@ -96,6 +96,9 @@ jobs:
       - name: Check hand answers and aliases
         run: node scripts/check_answers.js --hand-only
 
+      - name: Check daily prompts never repeat within 3 days
+        run: node scripts/check_days.js
+
       - name: Week number (cache key)
         id: wk
         run: echo "week=$(date +%G-%V)" >> "$GITHUB_OUTPUT"

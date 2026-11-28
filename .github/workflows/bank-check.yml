@@ -17,6 +17,7 @@ jobs:
           python-version: '3.12'
       - run: node scripts/extract_curated.js
       - run: node scripts/check_answers.js --hand-only
+      - run: node scripts/check_days.js
       - name: Week number (cache key)
         id: wk
         run: echo "week=$(date +%G-%V)" >> "$GITHUB_OUTPUT"

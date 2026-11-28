@@ -3301,6 +3301,183 @@
    {
     "name": "Mary Jane",
     "aliases": []
+   },
+   {
+    "name": "Life Savers",
+    "aliases": [
+     "lifesavers"
+    ]
+   },
+   {
+    "name": "Smarties",
+    "aliases": []
+   },
+   {
+    "name": "SweeTarts",
+    "aliases": [
+     "sweetarts"
+    ]
+   },
+   {
+    "name": "Pez",
+    "aliases": []
+   },
+   {
+    "name": "Tootsie Pop",
+    "aliases": [
+     "tootsie pops"
+    ]
+   },
+   {
+    "name": "Blow Pop",
+    "aliases": [
+     "blow pops"
+    ]
+   },
+   {
+    "name": "Dum Dums",
+    "aliases": []
+   },
+   {
+    "name": "Red Vines",
+    "aliases": []
+   },
+   {
+    "name": "Hot Tamales",
+    "aliases": []
+   },
+   {
+    "name": "Mike and Ike",
+    "aliases": [
+     "mike and ikes"
+    ]
+   },
+   {
+    "name": "Good & Plenty",
+    "aliases": [
+     "good and plenty"
+    ]
+   },
+   {
+    "name": "Lemonheads",
+    "aliases": []
+   },
+   {
+    "name": "Atomic FireBall",
+    "aliases": [
+     "atomic fireballs",
+     "fireballs"
+    ]
+   },
+   {
+    "name": "Jelly Belly",
+    "aliases": [
+     "jelly bellies"
+    ]
+   },
+   {
+    "name": "Rolo",
+    "aliases": [
+     "rolos"
+    ]
+   },
+   {
+    "name": "York Peppermint Pattie",
+    "aliases": [
+     "york peppermint patty",
+     "peppermint pattie",
+     "york"
+    ]
+   },
+   {
+    "name": "Whatchamacallit",
+    "aliases": []
+   },
+   {
+    "name": "Take 5",
+    "aliases": []
+   },
+   {
+    "name": "Reese's Pieces",
+    "aliases": [
+     "reeses pieces"
+    ]
+   },
+   {
+    "name": "Krackel",
+    "aliases": []
+   },
+   {
+    "name": "Big Hunk",
+    "aliases": []
+   },
+   {
+    "name": "Cow Tales",
+    "aliases": []
+   },
+   {
+    "name": "Fun Dip",
+    "aliases": []
+   },
+   {
+    "name": "Pixy Stix",
+    "aliases": []
+   },
+   {
+    "name": "Ring Pop",
+    "aliases": []
+   },
+   {
+    "name": "Push Pop",
+    "aliases": []
+   },
+   {
+    "name": "Runts",
+    "aliases": []
+   },
+   {
+    "name": "Warheads",
+    "aliases": []
+   },
+   {
+    "name": "Andes mints",
+    "aliases": [
+     "andes"
+    ]
+   },
+   {
+    "name": "Circus peanuts",
+    "aliases": []
+   },
+   {
+    "name": "Cotton candy",
+    "aliases": []
+   },
+   {
+    "name": "Saltwater taffy",
+    "aliases": []
+   },
+   {
+    "name": "Gobstoppers",
+    "aliases": [
+     "everlasting gobstopper",
+     "gobstopper"
+    ]
+   },
+   {
+    "name": "Razzles",
+    "aliases": []
+   },
+   {
+    "name": "Boston Baked Beans",
+    "aliases": []
+   },
+   {
+    "name": "Necco Sweethearts",
+    "aliases": [
+     "sweethearts",
+     "conversation hearts"
+    ]
    }
   ]
  },
@@ -3460,6 +3637,86 @@
    },
    {
     "name": "Spoonbread",
+    "aliases": []
+   },
+   {
+    "name": "Turducken",
+    "aliases": []
+   },
+   {
+    "name": "Green beans",
+    "aliases": [
+     "string beans"
+    ]
+   },
+   {
+    "name": "Biscuits",
+    "aliases": []
+   },
+   {
+    "name": "Glazed carrots",
+    "aliases": [
+     "carrots"
+    ]
+   },
+   {
+    "name": "Scalloped potatoes",
+    "aliases": []
+   },
+   {
+    "name": "Baked potatoes",
+    "aliases": []
+   },
+   {
+    "name": "Wild rice",
+    "aliases": []
+   },
+   {
+    "name": "Pumpkin bread",
+    "aliases": []
+   },
+   {
+    "name": "Pumpkin roll",
+    "aliases": []
+   },
+   {
+    "name": "Cherry pie",
+    "aliases": []
+   },
+   {
+    "name": "Cheese ball",
+    "aliases": []
+   },
+   {
+    "name": "Relish tray",
+    "aliases": []
+   },
+   {
+    "name": "Salad",
+    "aliases": [
+     "green salad"
+    ]
+   },
+   {
+    "name": "Apple cider",
+    "aliases": [
+     "cider"
+    ]
+   },
+   {
+    "name": "Roasted vegetables",
+    "aliases": [
+     "roast vegetables"
+    ]
+   },
+   {
+    "name": "Fried turkey",
+    "aliases": [
+     "deep fried turkey"
+    ]
+   },
+   {
+    "name": "Pumpkin cheesecake",
     "aliases": []
    }
   ]
@@ -5265,6 +5522,186 @@
    {
     "name": "Molasses",
     "aliases": []
+   },
+   {
+    "name": "Chips",
+    "aliases": []
+   },
+   {
+    "name": "Mailman",
+    "aliases": [
+     "mail carrier",
+     "postman"
+    ]
+   },
+   {
+    "name": "Garbage can",
+    "aliases": [
+     "trash can"
+    ]
+   },
+   {
+    "name": "Ground beef",
+    "aliases": []
+   },
+   {
+    "name": "Movie theater",
+    "aliases": [
+     "movie theatre",
+     "theater"
+    ]
+   },
+   {
+    "name": "Highway",
+    "aliases": []
+   },
+   {
+    "name": "Subway",
+    "aliases": []
+   },
+   {
+    "name": "Gas station",
+    "aliases": []
+   },
+   {
+    "name": "Takeout",
+    "aliases": []
+   },
+   {
+    "name": "Bathroom",
+    "aliases": []
+   },
+   {
+    "name": "Napkin",
+    "aliases": []
+   },
+   {
+    "name": "Jelly",
+    "aliases": []
+   },
+   {
+    "name": "Math",
+    "aliases": []
+   },
+   {
+    "name": "Undershirt",
+    "aliases": []
+   },
+   {
+    "name": "Panties",
+    "aliases": []
+   },
+   {
+    "name": "Tuxedo",
+    "aliases": []
+   },
+   {
+    "name": "Pantyhose",
+    "aliases": []
+   },
+   {
+    "name": "Wrench",
+    "aliases": []
+   },
+   {
+    "name": "Fender",
+    "aliases": []
+   },
+   {
+    "name": "Detour",
+    "aliases": []
+   },
+   {
+    "name": "Crosswalk",
+    "aliases": []
+   },
+   {
+    "name": "Mom",
+    "aliases": []
+   },
+   {
+    "name": "Can",
+    "aliases": []
+   },
+   {
+    "name": "Pitcher",
+    "aliases": []
+   },
+   {
+    "name": "Stove",
+    "aliases": []
+   },
+   {
+    "name": "Counterclockwise",
+    "aliases": []
+   },
+   {
+    "name": "Semester",
+    "aliases": []
+   },
+   {
+    "name": "Résumé",
+    "aliases": [
+     "resume"
+    ]
+   },
+   {
+    "name": "Attorney",
+    "aliases": []
+   },
+   {
+    "name": "Cotton candy",
+    "aliases": []
+   },
+   {
+    "name": "Cart",
+    "aliases": [
+     "shopping cart"
+    ]
+   },
+   {
+    "name": "Gotten",
+    "aliases": []
+   },
+   {
+    "name": "Sophomore",
+    "aliases": []
+   },
+   {
+    "name": "Daylight saving time",
+    "aliases": []
+   },
+   {
+    "name": "Rain check",
+    "aliases": []
+   },
+   {
+    "name": "Bill",
+    "aliases": [
+     "dollar bill"
+    ]
+   },
+   {
+    "name": "Teller",
+    "aliases": []
+   },
+   {
+    "name": "Kindergarten",
+    "aliases": []
+   },
+   {
+    "name": "Dumpster",
+    "aliases": []
+   },
+   {
+    "name": "Hood ornament",
+    "aliases": []
+   },
+   {
+    "name": "Cell",
+    "aliases": [
+     "cellphone number"
+    ]
    }
   ]
  },
@@ -5274,7 +5711,16 @@
   "rule": null,
   "strip": [],
   "people": false,
-  "traps": {},
+  "traps": {
+   "boxing day": "Boxing Day is British. Americans just call December 26 the day after Christmas.",
+   "bonfire night": "Bonfire Night is a British thing.",
+   "guy fawkes night": "Guy Fawkes Night is a British thing.",
+   "pancake day": "Americans call it Mardi Gras or Fat Tuesday.",
+   "canada day": "Wrong side of the border.",
+   "bastille day": "That’s French.",
+   "remembrance day": "The US version is Veterans Day.",
+   "remembrance sunday": "The US version is Memorial Day or Veterans Day."
+  },
   "items": [
    {
     "name": "Thanksgiving",
@@ -5350,7 +5796,9 @@
    },
    {
     "name": "Mardi Gras",
-    "aliases": []
+    "aliases": [
+     "fat tuesday"
+    ]
    },
    {
     "name": "Flag Day",
@@ -5416,6 +5864,147 @@
    },
    {
     "name": "Evacuation Day",
+    "aliases": []
+   },
+   {
+    "name": "Easter",
+    "aliases": [
+     "easter sunday"
+    ]
+   },
+   {
+    "name": "Valentine's Day",
+    "aliases": [
+     "valentines day",
+     "valentines"
+    ]
+   },
+   {
+    "name": "New Year's Day",
+    "aliases": [
+     "new years day",
+     "new years",
+     "new year"
+    ]
+   },
+   {
+    "name": "New Year's Eve",
+    "aliases": [
+     "new years eve"
+    ]
+   },
+   {
+    "name": "Christmas Eve",
+    "aliases": []
+   },
+   {
+    "name": "Mother's Day",
+    "aliases": [
+     "mothers day"
+    ]
+   },
+   {
+    "name": "Father's Day",
+    "aliases": [
+     "fathers day"
+    ]
+   },
+   {
+    "name": "St. Patrick's Day",
+    "aliases": [
+     "st patricks day",
+     "saint patricks day",
+     "st paddys day",
+     "patricks day"
+    ]
+   },
+   {
+    "name": "Hanukkah",
+    "aliases": [
+     "chanukah",
+     "hannukah"
+    ]
+   },
+   {
+    "name": "Passover",
+    "aliases": []
+   },
+   {
+    "name": "Good Friday",
+    "aliases": []
+   },
+   {
+    "name": "Rosh Hashanah",
+    "aliases": []
+   },
+   {
+    "name": "Yom Kippur",
+    "aliases": []
+   },
+   {
+    "name": "Lunar New Year",
+    "aliases": [
+     "chinese new year"
+    ]
+   },
+   {
+    "name": "Día de los Muertos",
+    "aliases": [
+     "dia de los muertos",
+     "day of the dead"
+    ]
+   },
+   {
+    "name": "Eid al-Fitr",
+    "aliases": [
+     "eid"
+    ]
+   },
+   {
+    "name": "Diwali",
+    "aliases": []
+   },
+   {
+    "name": "April Fools' Day",
+    "aliases": [
+     "april fools day",
+     "april fools"
+    ]
+   },
+   {
+    "name": "Inauguration Day",
+    "aliases": []
+   },
+   {
+    "name": "Lincoln's Birthday",
+    "aliases": [
+     "lincolns birthday"
+    ]
+   },
+   {
+    "name": "Grandparents Day",
+    "aliases": []
+   },
+   {
+    "name": "Women's Equality Day",
+    "aliases": []
+   },
+   {
+    "name": "Native American Heritage Day",
+    "aliases": []
+   },
+   {
+    "name": "Sadie Hawkins Day",
+    "aliases": []
+   },
+   {
+    "name": "National Donut Day",
+    "aliases": [
+     "donut day"
+    ]
+   },
+   {
+    "name": "Leap Day",
     "aliases": []
    }
   ]
