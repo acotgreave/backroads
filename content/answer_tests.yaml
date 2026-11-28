@@ -1,0 +1,126 @@
+# Answer tests: the obvious answers each prompt MUST get right. Edit freely (on GitHub is fine).
+# Every push runs these through the game's own matching code (scripts/check_answers.js).
+#
+#   accept: answers (and spellings) that must count. Separate with |. The build FAILS if one doesn't.
+#   reject: answers that must NOT count (wrong country, wrong kind of thing). The build FAILS if one does.
+#   common: answers everyone thinks of first. On the weekly answer bank they should score 40 mi or less;
+#           any that score more are listed as warnings (and on the dashboard), because they make 100 mi too easy.
+
+states:
+  accept: California | Texas | New York | Rhode Island | Hawaii
+  reject: Puerto Rico | Washington DC | Ontario
+  common: California | Texas | Florida | New York
+mstates:
+  accept: Maine | Michigan | Mississippi | Missouri | Montana
+  reject: Ohio | Nevada
+  common: Michigan | Massachusetts
+twoword:
+  accept: New York | North Dakota | West Virginia | Rhode Island
+  reject: Texas | New England
+atlantic:
+  accept: Florida | Maine | Delaware | Georgia
+  reject: California | Vermont | Pennsylvania
+canada:
+  accept: Alaska | Washington | Michigan | New York | Maine
+  reject: Texas | Oregon
+capitals:
+  accept: Sacramento | Austin | Albany | Juneau | Montpelier | Salt Lake City
+  reject: Los Angeles | New York City | Chicago
+  common: Sacramento | Austin | Boston
+notstate:
+  accept: Puerto Rico | Guam | Washington DC | DC | American Samoa
+  reject: Hawaii | Alaska | Canada
+parks:
+  accept: Yellowstone | Grand Canyon | Yosemite | Zion | Yellowstone National Park | Gateway Arch
+  reject: Central Park | Hyde Park | Banff
+  common: Yellowstone | Grand Canyon | Yosemite
+rivers:
+  accept: Mississippi | Missouri | Mississippi River | Rio Grande | Hudson
+  reject: Thames | Nile | Amazon
+  common: Mississippi | Missouri
+presidents:
+  accept: Lincoln | Abraham Lincoln | George Washington | Obama | JFK | FDR | Teddy Roosevelt
+  reject: Benjamin Franklin | Alexander Hamilton | Kamala Harris
+  common: George Washington | Abraham Lincoln | Barack Obama
+firstladies:
+  accept: Michelle Obama | Jackie Kennedy | Eleanor Roosevelt | Martha Washington | Melania Trump | Hillary Clinton
+  reject: Princess Diana | Kamala Harris
+  common: Michelle Obama | Jackie Kennedy
+signers:
+  accept: Thomas Jefferson | John Hancock | Benjamin Franklin | John Adams
+  reject: George Washington | Alexander Hamilton
+  common: Thomas Jefferson | John Hancock | Benjamin Franklin
+money:
+  accept: George Washington | Abraham Lincoln | Benjamin Franklin | Alexander Hamilton | Andrew Jackson | Sacagawea
+  reject: Queen Elizabeth | Donald Trump | Harriet Tubman
+  common: George Washington | Abraham Lincoln | Benjamin Franklin
+nfl:
+  accept: Dallas Cowboys | Cowboys | Patriots | Green Bay Packers | Chiefs | 49ers | Niners
+  reject: Yankees | Lakers | Arsenal
+  common: Dallas Cowboys | New England Patriots
+mlb:
+  accept: Yankees | Red Sox | Dodgers | Cubs | New York Yankees
+  reject: Cowboys | Lakers
+  common: New York Yankees | Boston Red Sox
+nba:
+  accept: Lakers | Celtics | Bulls | Warriors | Knicks | Chicago Bulls
+  reject: Yankees | Cowboys
+  common: Los Angeles Lakers | Chicago Bulls
+fastfood:
+  accept: McDonald's | McDonalds | Burger King | Taco Bell | KFC | Chick-fil-A | Wendy's | In-N-Out
+  reject: Greggs | Pret a Manger | Tim Hortons
+  common: McDonald's | Burger King
+cereal:
+  accept: Cheerios | Froot Loops | Fruit Loops | Lucky Charms | Frosted Flakes | Cap'n Crunch
+  reject: Weetabix | Shreddies
+  common: Cheerios | Frosted Flakes
+candy:
+  accept: Snickers | Reese's | Reeses | M&Ms | Hershey's | Twizzlers | Skittles
+  reject: Cadbury Dairy Milk | Mars bar | Haribo
+  common: Snickers | Reese's Peanut Butter Cups
+thanks:
+  accept: Turkey | Stuffing | Pumpkin pie | Cranberry sauce | Mashed potatoes | Gravy | Green bean casserole
+  reject: Haggis | Yorkshire pudding
+  common: Turkey | Pumpkin pie
+beer:
+  accept: Budweiser | Bud Light | Coors | Miller Lite | Samuel Adams | Sam Adams | PBR | Yuengling
+  reject: Heineken | Guinness | Stella Artois | Corona
+  common: Budweiser | Bud Light | Coors
+soda:
+  accept: Coca-Cola | Coke | Pepsi | Dr Pepper | Mountain Dew | Sprite | Root beer
+  reject: Irn-Bru | Vimto | Tango
+  common: Coca-Cola | Pepsi
+cars:
+  accept: Ford | Chevrolet | Chevy | Tesla | Jeep | Cadillac | Dodge
+  reject: Toyota | BMW | Vauxhall
+  common: Ford | Chevrolet
+airlines:
+  accept: Delta | American Airlines | United | Southwest | JetBlue
+  reject: British Airways | Ryanair | Air Canada
+  common: Delta | American Airlines
+stores:
+  accept: Walmart | Target | Costco | Macy's | Home Depot | Kohl's
+  reject: Tesco | Marks and Spencer | Aldi
+  common: Walmart | Target
+dogs:
+  accept: Boston Terrier | Alaskan Malamute | Pit bull | Australian Shepherd
+  reject: Labrador Retriever | Corgi | Pug
+simpsons:
+  accept: Homer | Bart | Marge | Lisa | Maggie | Mr Burns | Ned Flanders | Krusty
+  reject: Peter Griffin | Stewie
+  common: Homer Simpson | Bart Simpson
+friends:
+  accept: Rachel | Ross | Joey | Chandler | Monica | Phoebe | Gunther | Janice
+  reject: Sheldon Cooper | Ted Mosby
+  common: Rachel Green | Ross Geller
+sesame:
+  accept: Elmo | Big Bird | Cookie Monster | Oscar the Grouch | Bert | Ernie | Grover
+  reject: Miss Piggy | Peppa Pig
+  common: Elmo | Big Bird
+amwords:
+  accept: Elevator | Apartment | Cookie | Fries | Sidewalk | Pants | Trash | Gas | Vacation | Soccer
+  reject: Lift | Flat | Biscuit
+holidays:
+  accept: Thanksgiving | Christmas | Easter | Halloween | Fourth of July | July 4th | Valentine's Day | Mother's Day | Father's Day | St. Patrick's Day | St Patricks Day | New Year's Day | New Year's Eve | Memorial Day | Labor Day | MLK Day | Juneteenth | Hanukkah
+  reject: Boxing Day | Bonfire Night | Guy Fawkes Night | Canada Day | Bastille Day
+  common: Thanksgiving | Christmas | Fourth of July | Halloween | Easter

@@ -60,7 +60,53 @@ function check(label, env) {
   return problems.length;
 }
 
+// ---- answer tests from content/answer_tests.yaml (prompt: accept / reject / common, values split by |)
+function readTests() {
+  const p = path.join(root, 'content/answer_tests.yaml');
+  if (!fs.existsSync(p)) return {};
+  const out = {}; let cur = null;
+  fs.readFileSync(p, 'utf8').split('\n').forEach((line, i) => {
+    if (!line.trim() || line.trim().startsWith('#')) return;
+    const m = line.match(/^(\s*)([\w-]+):\s*(.*)$/);
+    if (!m) throw new Error(`content/answer_tests.yaml line ${i + 1}: expected "name: value"`);
+    if (!m[1]) { cur = out[m[2]] = {}; return; }
+    if (!cur) throw new Error(`content/answer_tests.yaml line ${i + 1}: indented line before any prompt`);
+    cur[m[2]] = m[3].split('|').map(s => s.trim()).filter(Boolean);
+  });
+  return out;
+}
+const TESTS = readTests();
+const RESULTS = {};   // per prompt, for the dashboard (data/checks.json)
+function runTests(label, env, bank) {
+  const { P, prep, judge, norm } = env, fails = [], warns = [];
+  for (const [id, t] of Object.entries(TESTS)) {
+    const raw = P.find(p => p.id === id);
+    if (!raw) { fails.push(`${id}: no such prompt`); continue; }
+    const p = prep(raw), f0 = fails.length, w0 = warns.length;
+    for (const a of t.accept || []) { const r = judge(p, a); if (!r || !r.it) fails.push(`${id}: "${a}" should count but ${r && r.trap ? 'hits a trap' : 'is not accepted'}`); }
+    for (const a of t.reject || []) { const r = judge(p, a); if (r && r.it) fails.push(`${id}: "${a}" should NOT count but scores as "${r.it.name}"${r.fuzzy ? ' (typo match)' : ` (via "${r.it.al.find(x => (' ' + norm(a) + ' ').includes(' ' + x + ' ')) || '?'}")`}`); }
+    if (bank) for (const a of t.common || []) { const r = judge(p, a);
+      if (!r || !r.it) fails.push(`${id}: common answer "${a}" is not accepted`);
+      else if (r.it.tier > 2) warns.push(`${id}: common answer "${a}" scores ${[10, 25, 40, 60, 80, 100][r.it.tier]} mi`); }
+    const n = (t.accept || []).length + (t.reject || []).length + (bank ? (t.common || []).length : 0);
+    RESULTS[id] = { [bank ? 'bank' : 'hand']: { checks: n, failed: fails.slice(f0).map(x => x.replace(id + ': ', '')), warnings: warns.slice(w0).map(x => x.replace(id + ': ', '')) }, ...(RESULTS[id] || {}) };
+  }
+  const n = Object.values(TESTS).reduce((s, t) => s + (t.accept || []).length + (t.reject || []).length + (bank ? (t.common || []).length : 0), 0);
+  console.log(`answer tests on ${label}: ${n} checks, ${fails.length ? fails.length + ' failed' : 'all pass'}${warns.length ? `, ${warns.length} warning(s)` : ''}`);
+  fails.forEach(s => console.log('  FAIL ' + s)); warns.forEach(s => console.log('  warn ' + s));
+  return fails.length;
+}
+
 let bad = check('hand lists', load());
+hard += runTests('hand lists', load(), false);
 const bankPath = path.join(root, 'data/bank.js');
-if (fs.existsSync(bankPath) && !process.argv.includes('--hand-only')) bad += check('data/bank.js', load(fs.readFileSync(bankPath, 'utf8')));
+if (fs.existsSync(bankPath) && !process.argv.includes('--hand-only')) {
+  const env = load(fs.readFileSync(bankPath, 'utf8'));
+  bad += check('data/bank.js', env);
+  bad += runTests('data/bank.js', env, true);   // a weekly bank that drops an answer warns; it never blocks the deploy
+}
+if (process.argv.includes('--json')) {
+  fs.writeFileSync(path.join(root, 'data/checks.json'), JSON.stringify({ updated: new Date().toISOString().slice(0, 10), prompts: RESULTS }) + '\n');
+  console.log('wrote data/checks.json');
+}
 if (hard || (bad && !process.argv.includes('--warn-only'))) process.exit(1);

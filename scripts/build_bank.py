@@ -28,14 +28,15 @@ os.makedirs(CACHE, exist_ok=True)
 FAILED = []   # page-view lookups that failed after retries
 
 MILES = [10, 25, 40, 60, 80, 100]
-TIER_CUTS = [0.25, 0.50, 0.70, 0.85, 0.95]          # share of views held by MORE popular answers
+TIER_CUTS = [0.25, 0.50, 0.70, 0.85, 0.99]          # share of views held by MORE popular answers
+# 100 mi is only for the last 1% of attention (was 5%: two in three answers scored 100 mi, Nov 2026)
 END = datetime.date.today().replace(day=1) - datetime.timedelta(days=1)
 START = (END.replace(year=END.year - 2) + datetime.timedelta(days=1)).replace(day=1)   # 24 full months
 
 # Prompts whose answer lists come from Wikidata. body binds ?item.
 #   min: fewer results than this means the query is wrong -> fall back to the hand list
 #   views: page views are fetched for every hand answer plus the N best-known Wikidata answers (by Wikipedia
-#          language count); the long tail beyond that is still accepted, at 100 mi (default 150)
+#          language count); any beyond that are accepted at 80 mi (default 1500, i.e. all of them)
 #   keep: hard limit on list size, best-known first (default 1500)
 #   live: in the game, an answer not on the list is looked up on Wikidata and accepted at 100 mi if it matches
 #         this body (default: the list body). False = the list is complete, no lookup.
@@ -66,7 +67,7 @@ WD = {
 # answer sets that are a subset of another prompt reuse its page views
 SUBSET_OF = {'mstates': 'states', 'twoword': 'states', 'atlantic': 'states', 'canada': 'states'}
 # page views say nothing about how often people SAY these: keep hand tiers
-HAND_TIERS = {'amwords'}
+HAND_TIERS = {'amwords', 'thanks'}   # thanks: 'Turkey', 'Corn' pages get views for other reasons (Nov 2026)
 # hand answers whose bare name lands on the wrong Wikipedia page
 TITLES = {
  'Life':'Life (cereal)','Total':'Total (cereal)','Trix':'Trix (cereal)','Kix':'Kix (cereal)','Honeycomb':'Honeycomb (cereal)',
@@ -170,6 +171,26 @@ def resolve_titles(titles):
             p = pages.get(v, {})
             res[t] = (None, 'missing') if 'missing' in p else (None, 'disambiguation') if 'disambiguation' in p.get('pageprops', {}) else (v, 'ok')
     return res
+
+def redirects(titles):
+    """Every redirect to each page: the ways Wikipedia editors found people actually type it."""
+    out, titles = {}, list(dict.fromkeys(t for t in titles if t))
+    if MOCK: return out
+    for i in range(0, len(titles), 50):
+        chunk, cont = titles[i:i + 50], {}
+        for _ in range(20):
+            url = ('https://en.wikipedia.org/w/api.php?action=query&format=json&prop=redirects&rdnamespace=0&rdlimit=max&titles='
+                   + urllib.parse.quote('|'.join(chunk)) + ''.join(f'&{k}={urllib.parse.quote(str(v))}' for k, v in cont.items()))
+            try: d = get_json(url) or {}
+            except RuntimeError: break
+            for pg in d.get('query', {}).get('pages', {}).values():
+                out.setdefault(pg.get('title'), []).extend(r['title'] for r in pg.get('redirects', []))
+            cont = d.get('continue', {})
+            if not cont: break
+    return out
+
+# redirects that are about the page rather than other names for it
+BAD_REDIRECT = re.compile(r'^(list|history|lists|timeline|outline|index|glossary) of\b|:|\b(disambiguation)\b|#', re.I)
 
 def views(title):
     if MOCK:
@@ -282,7 +303,7 @@ def main():
                 w['aliases'] = list(dict.fromkeys(w['aliases'] + [w['name']] + h['aliases']))
                 w['name'], w['hand'] = h['name'], h['hand']
                 items.remove(h)
-            top = {id(it) for it in sorted((it for it in items if it['src'] != 'hand' and 'hand' not in it), key=lambda it: -it.get('links', 0))[:WD.get(pid, {}).get('views', 150)]}
+            top = {id(it) for it in sorted((it for it in items if it['src'] != 'hand' and 'hand' not in it), key=lambda it: -it.get('links', 0))[:WD.get(pid, {}).get('views', 1500)]}
             ranked = [it for it in items if 'hand' in it or id(it) in top]
             for it in items:
                 if not ('hand' in it or id(it) in top): it['views'], it['why'] = None, 'long tail: not ranked'
@@ -300,6 +321,28 @@ def main():
                     it['views'], it['why'] = 0, 'shares page with ' + owner[it['title']]['name']
 
 
+        # Wikipedia redirects become aliases ("Bud" -> Budweiser, "Easter Sunday" -> Easter); any alias that would
+        # point at two answers, or at another answer's name, is dropped
+        if pid not in HAND_TIERS and pid not in SUBSET_OF:
+            key = lambda a: strip_words(a, p['strip']) or norm(a)
+            red = redirects([it['title'] for it in items if it.get('title') and it.get('why') == 'ok'])
+            names = {key(it['name']) for it in items}
+            # a word shared by several answers' names ("retriever", "airlines") is too generic to be an alias on its own:
+            # the game also matches an alias inside a longer answer, so "Retriever" would swallow "Labrador Retriever"
+            wc = {}
+            for it in items:
+                for w in set(key(it['name']).split()): wc[w] = wc.get(w, 0) + 1
+            generic = lambda a: len(a.split()) == 1 and wc.get(a, 0) >= 2
+            for it in items:
+                extra = [clean(r) for r in red.get(it.get('title'), []) if '(' not in r and not BAD_REDIRECT.search(r) and good_alias(r, it['name'])]
+                it['redirects'] = [key(r) for r in sorted(set(extra), key=len) if key(r) and key(r) not in names and not generic(key(r))][:12]
+            seen = {}
+            for it in items:
+                for a in set(it['redirects']): seen[a] = seen.get(a, 0) + 1
+            have = {key(a) for it in items for a in it['aliases']}
+            for it in items:
+                it['aliases'] = list(dict.fromkeys(it['aliases'] + [a for a in it['redirects'] if seen[a] == 1 and a not in have]))
+
         # if page views mostly failed for this prompt, don't trust them
         with_views = sum(1 for it in items if it.get('views'))
         considered = sum(1 for it in items if it.get('why') != 'long tail: not ranked')
@@ -309,15 +352,21 @@ def main():
         parent[pid] = {norm(a): (it.get('title'), it.get('views') or 0) for it in items for a in [it['name']] + it['aliases']}
         tierize(items)
         cuts = [.12, .28, .48, .68, .86, 1.01]
-        for it in items:   # no views -> hand rank decides (unranked extras count as rare)
+        for it in items:   # no views -> hand rank decides; Wikidata extras with no views get 80 mi, not 100
             if 'tier' in it: it['tier_src'] = 'views'
-            else:
-                h = it.get('hand', n_hand - 1)
+            elif 'hand' in it:
+                h = it['hand']
                 it['tier'], it['tier_src'] = next(k for k, c in enumerate(cuts) if h / n_hand < c), 'hand'
+            else:
+                it['tier'], it['tier_src'] = 4, 'no views'
         items.sort(key=lambda it: (it['tier'], -(it.get('views') or 0)))
 
         tail = lambda it: it.get('why') == 'long tail: not ranked'
-        entry = dict(id=pid, bank=[[it['name'], [a for a in it['aliases'] if a][:3 if tail(it) else 10], it['tier']] for it in items])
+        entry = dict(id=pid, bank=[[it['name'], [a for a in it['aliases'] if a][:3 if tail(it) else 12], it['tier']] for it in items])
+        # page-view floor of each tier, so the game can score an answer found live on Wikipedia/Wikidata the same way
+        ranked_v = [it for it in items if it.get('tier_src') == 'views']
+        if len(ranked_v) >= 10:
+            entry['cut'] = [min((it['views'] for it in ranked_v if it['tier'] <= k), default=0) for k in range(5)]
         live = WD.get(pid, {}).get('live', WD.get(pid, {}).get('body'))
         if live and not MOCK and note.startswith('wikidata ('): entry['live'] = live
         out.append(entry)
@@ -336,7 +385,9 @@ def main():
         w = csv.writer(f)
         w.writerow(['prompt', 'answer', 'wikipedia_title', 'title_status', 'views_24m', 'share_above', 'miles', 'tier_source', 'source'])
         w.writerows(sorted(report, key=lambda r: (r[0], r[6])))
-    print(f'\nwrote data/bank.js and data/report.csv · {len(report)} answers')
+    mix = [sum(1 for r in report if r[6] == m) for m in MILES]
+    print(f'\nwrote data/bank.js and data/report.csv · {len(report)} answers · ' +
+          ', '.join(f'{m} mi {n / len(report):.0%}' for m, n in zip(MILES, mix)))
     if FAILED: print(f'page views failed for {len(FAILED)} titles (scored as no views): ' + ', '.join(FAILED[:30]))
 
 if __name__ == '__main__':

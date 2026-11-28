@@ -26,8 +26,9 @@ jobs:
           path: .cache
           key: wikidata-${{ steps.wk.outputs.week }}
       - run: python3 scripts/build_bank.py
-      - run: node scripts/check_answers.js --warn-only
-      - run: ls -la data/ && python3 scripts/build_site.py && ls -la dist/
+      - run: node scripts/build_schedule.js
+      - run: node scripts/check_answers.js --warn-only --json
+      - run: ls -la data/ && python3 scripts/build_site.py && python3 scripts/build_dashboard.py && ls -la dist/
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -35,3 +36,5 @@ jobs:
           path: |
             data/report.csv
             data/bank.js
+            data/checks.json
+            dist/dash/index.html

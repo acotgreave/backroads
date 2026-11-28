@@ -5,7 +5,11 @@
   "rule": null,
   "strip": [],
   "people": false,
-  "traps": {},
+  "traps": {
+   "washington dc": "DC isn’t a state (yet).",
+   "district of columbia": "DC isn’t a state (yet).",
+   "puerto rico": "A territory, not a state."
+  },
   "items": [
    {
     "name": "California",
@@ -4177,6 +4181,130 @@
    },
    {
     "name": "Bon-Ton",
+    "aliases": []
+   },
+   {
+    "name": "Home Depot",
+    "aliases": []
+   },
+   {
+    "name": "Lowe's",
+    "aliases": [
+     "lowes"
+    ]
+   },
+   {
+    "name": "Best Buy",
+    "aliases": []
+   },
+   {
+    "name": "Walgreens",
+    "aliases": []
+   },
+   {
+    "name": "CVS",
+    "aliases": []
+   },
+   {
+    "name": "Trader Joe's",
+    "aliases": [
+     "trader joes"
+    ]
+   },
+   {
+    "name": "Whole Foods",
+    "aliases": []
+   },
+   {
+    "name": "Kroger",
+    "aliases": []
+   },
+   {
+    "name": "Safeway",
+    "aliases": []
+   },
+   {
+    "name": "Dollar General",
+    "aliases": []
+   },
+   {
+    "name": "Dollar Tree",
+    "aliases": []
+   },
+   {
+    "name": "Bed Bath & Beyond",
+    "aliases": [
+     "bed bath and beyond"
+    ]
+   },
+   {
+    "name": "Toys \"R\" Us",
+    "aliases": [
+     "toys r us"
+    ]
+   },
+   {
+    "name": "RadioShack",
+    "aliases": [
+     "radio shack"
+    ]
+   },
+   {
+    "name": "Barnes & Noble",
+    "aliases": [
+     "barnes and noble"
+    ]
+   },
+   {
+    "name": "Publix",
+    "aliases": []
+   },
+   {
+    "name": "Wegmans",
+    "aliases": []
+   },
+   {
+    "name": "Menards",
+    "aliases": []
+   },
+   {
+    "name": "Petco",
+    "aliases": []
+   },
+   {
+    "name": "PetSmart",
+    "aliases": []
+   },
+   {
+    "name": "Staples",
+    "aliases": []
+   },
+   {
+    "name": "Office Depot",
+    "aliases": []
+   },
+   {
+    "name": "GameStop",
+    "aliases": []
+   },
+   {
+    "name": "Dick's Sporting Goods",
+    "aliases": [
+     "dicks"
+    ]
+   },
+   {
+    "name": "REI",
+    "aliases": []
+   },
+   {
+    "name": "Bass Pro Shops",
+    "aliases": [
+     "bass pro"
+    ]
+   },
+   {
+    "name": "Cabela's",
     "aliases": []
    }
   ]

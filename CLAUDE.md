@@ -35,8 +35,11 @@ Andy wants Boreen's **journey** feel, not Krillion's **dive** feel. This is a fi
 | `src/template.html` → `EXTRAS` | `false` hides the Unlimited and Timer buttons (Andy, 27 Nov 2026); the timer stays on. Set `true` to bring them back. |
 | `scripts/extract_curated.js` | Reads `P` out of the template and writes `data/curated.json`. Keeps the template as the single source of truth. |
 | `scripts/build_bank.py` | Pulls answer lists from Wikidata, gets 24 months of Wikipedia page views, assigns tiers, and writes `data/bank.js` and `data/report.csv`. Python stdlib only. Flags: `--mock` (offline fake views), `--only states,parks`. |
+| `content/answer_tests.yaml` | **Answer tests** Andy can edit: per prompt, `accept` (must count), `reject` (must not), `common` (should score 40 mi or less on the built bank). `check_answers.js` fails the build on accept/reject failures against the hand lists, and reports bank results to `data/checks.json`. |
+| `scripts/build_schedule.js` → `data/schedule.json` | Plans the daily prompts 90 days ahead with the game's own `dayPrompts()` and freezes them: planned days never change, so adding or retiring a prompt only affects unplanned days. Baked into the page at `/*SCHED*/`. |
+| `scripts/build_dashboard.py` → `/dash/` | Engine dashboard built on every deploy: tier mix per prompt, answer tests, next four weeks of prompts. |
 | `scripts/check_answers.js` | Runs the game's own matching code over every answer and alias. Fails on aliases shared by two answers, aliases that score as a different answer, and traps that shadow a right answer. CI runs it hard on the hand lists and as warnings on the built bank. |
-| `src/template.html` → `WIKI` / `wikiCheck` | Last-resort answer check (Andy chose Wikipedia, open source, 27 Nov 2026). When an answer is on neither the list nor Wikidata, the browser looks it up on English Wikipedia: first as an exact title (following redirects), then by search. It accepts at 100 mi when the description or categories match the prompt's `d`/`c` patterns and, for `us:1` prompts, there's US evidence. If the bare answer is a page about something else (Greggs, Toyota), longer titles are not accepted. |
+| `src/template.html` → `WIKI` / `wikiCheck` | Last-resort answer check (Andy chose Wikipedia, open source, 27 Nov 2026). When an answer is on neither the list nor Wikidata, the browser looks it up on English Wikipedia: first as an exact title (following redirects), then by search. It accepts (scored by `liveTier`) when the description or categories match the prompt's `d`/`c` patterns and, for `us:1` prompts, there's US evidence. If the bare answer is a page about something else (Greggs, Toyota), longer titles are not accepted. |
 | `scripts/check_wiki.js` + `wiki-check.yml` | Runs `wikiCheck` against live Wikipedia for known right and wrong answers on branch pushes. Wikipedia rate-limits shared CI addresses, so 429s show as SKIP. |
 | `.github/workflows/bank-check.yml` | On any branch except `main`: builds the bank from live Wikidata without committing or deploying, and uploads `report.csv` + `bank.js` as an artifact. Use it to check query changes. |
 | `scripts/build_site.py` | Copies `public/` into `dist/` and writes `dist/index.html` with the bank baked in. It refuses to publish a mock bank. |
@@ -46,17 +49,20 @@ Andy wants Boreen's **journey** feel, not Krillion's **dive** feel. This is a fi
 
 ### Rarity rule
 
-For each answer, add up the page-view share held by the answers in that prompt that have **more** views. Thresholds: under 0.25 is tier 0, under 0.50 tier 1, under 0.70 tier 2, under 0.85 tier 3, under 0.95 tier 4, and anything else tier 5. Views use the median month × 24, so one news spike can't make an answer "common".
+For each answer, add up the page-view share held by the answers in that prompt that have **more** views. Thresholds: under 0.25 is tier 0, under 0.50 tier 1, under 0.70 tier 2, under 0.85 tier 3, under 0.99 tier 4, and anything else tier 5. (The last cut was 0.95 until 28 Nov 2026, when 65% of all answers scored 100 mi.) Views use the median month × 24, so one news spike can't make an answer "common".
 
 Exceptions:
-- `amwords` keeps hand tiers.
+- `amwords` and `thanks` keep hand tiers (page views for "Turkey" or "Corn" say nothing about Thanksgiving).
+- Page views are fetched for every answer. A Wikidata answer still without views scores 80 mi, never 100 by default.
+- Each prompt in `bank.js` carries `cut`: the page-view floor of each tier. An answer accepted live (Wikidata or Wikipedia check) is scored on that scale from its last 60 days of page views (`liveTier`), so a famous answer missing from the list scores low. Under 1 view a day it is not accepted and is logged as a miss for review.
+- Wikipedia redirects to each answer's page become aliases (up to 12), unless they clash with another answer.
 - The state subsets (`mstates`, `twoword`, `atlantic`, `canada`) reuse the `states` page views.
 - Answers with no usable Wikipedia page fall back to their hand rank.
 - If under 60% of a prompt's answers get page views, the whole prompt falls back to hand tiers.
 
 ### Wikidata prompts
 
-Lists are no longer trimmed. Page views are fetched for hand answers plus the 150 best-known Wikidata answers (by Wikipedia language count); the long tail is still accepted at 100 mi. Prompts whose `WD` entry doesn't say `live=False` also get an in-game live check: an answer not on the list is searched on Wikidata and accepted at 100 mi ("a deep cut") if it matches the prompt's query body.
+Lists are no longer trimmed. Page views are fetched for every answer (up to 1,500 per prompt). Prompts whose `WD` entry doesn't say `live=False` also get an in-game live check: an answer not on the list is searched on Wikidata and, if it matches the prompt's query body, accepted ("a deep cut") and scored by its page views (see `cut` above).
 
 
 These are set in the `WD` dict in `build_bank.py`: states, capitals, parks, presidents, signers, nfl, mlb, nba, rivers (>400 km), simpsons, friends, sesame, dogs, cars, airlines.
