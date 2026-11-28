@@ -1,167 +1,167 @@
 prompt,answer,wikipedia_title,title_status,views_24m,share_above,miles,tier_source,source
 airlines,Continental,United Airlines,ok,2231544,0.000,10,views,wikidata
-airlines,Delta,Delta Air Lines,ok,1997808,0.079,10,views,wikidata
+airlines,Delta,Delta Air Lines,ok,1997808,0.080,10,views,wikidata
 airlines,American Airlines,American Airlines,ok,1750656,0.151,10,views,wikidata
 airlines,Pan Am,Pan Am,ok,1384032,0.213,10,views,wikidata
-airlines,Southwest,Southwest Airlines,ok,1081368,0.262,25,views,wikidata
+airlines,Southwest,Southwest Airlines,ok,1081368,0.263,25,views,wikidata
 airlines,Alaska Airlines,Alaska Airlines,ok,1034016,0.301,25,views,wikidata
 airlines,Spirit,Spirit Airlines,ok,908280,0.338,25,views,wikidata
-airlines,JetBlue,JetBlue,ok,896832,0.370,25,views,wikidata
-airlines,TWA,Trans World Airlines,ok,781440,0.402,25,views,wikidata
+airlines,JetBlue,JetBlue,ok,896832,0.371,25,views,wikidata
+airlines,TWA,Trans World Airlines,ok,781440,0.403,25,views,wikidata
 airlines,Breeze,Breeze Airways,ok,774888,0.430,25,views,wikidata
-airlines,Frontier Airlines,Frontier Airlines,ok,732408,0.457,25,views,wikidata
+airlines,Frontier Airlines,Frontier Airlines,ok,732408,0.458,25,views,wikidata
 airlines,Piedmont,Piedmont,ok,710280,0.484,25,views,hand
-airlines,Allegiant,Allegiant Air,ok,627888,0.509,40,views,wikidata
-airlines,Hawaiian,Hawaiian Airlines,ok,610440,0.531,40,views,wikidata
-airlines,US Airways,US Airways,ok,550632,0.553,40,views,wikidata
+airlines,Allegiant,Allegiant Air,ok,627888,0.510,40,views,wikidata
+airlines,Hawaiian,Hawaiian Airlines,ok,610440,0.532,40,views,wikidata
+airlines,US Airways,US Airways,ok,550632,0.554,40,views,wikidata
 airlines,Continental Airlines,Continental Airlines,ok,484824,0.573,40,views,wikidata
-airlines,Avelo,Avelo Airlines,ok,476376,0.590,40,views,wikidata
-airlines,FedEx Express,FedEx Express,ok,466992,0.607,40,views,wikidata
-airlines,Northwest Airlines,Northwest Airlines,ok,449616,0.623,40,views,wikidata
-airlines,Sun Country,Sun Country Airlines,ok,419832,0.639,40,views,wikidata
-airlines,Atlas Air,Atlas Air,ok,400704,0.654,40,views,wikidata
-airlines,Eastern,Eastern Air Lines,ok,379296,0.669,40,views,wikidata
-airlines,Janet,Janet (airline),ok,360912,0.682,40,views,wikidata
-airlines,Northwest,Points of the compass,ok,337248,0.695,40,views,hand
-airlines,Virgin Galactic,Virgin Galactic,ok,336264,0.707,60,views,wikidata
-airlines,American Eagle,American Eagle (airline brand),ok,312192,0.719,60,views,wikidata
-airlines,Kalitta Air,Kalitta Air,ok,257280,0.730,60,views,wikidata
-airlines,NetJets,NetJets,ok,235392,0.739,60,views,wikidata
-airlines,PSA Airlines,PSA Airlines,ok,223128,0.748,60,views,wikidata
-airlines,Braniff International Airways,Braniff International Airways,ok,219072,0.756,60,views,wikidata
-airlines,United Express,United Express,ok,208848,0.763,60,views,wikidata
-airlines,Air America,Air America (airline),ok,199128,0.771,60,views,wikidata
-airlines,Horizon Air,Horizon Air,ok,177528,0.778,60,views,wikidata
-airlines,Aloha,Aloha,ok,177048,0.784,60,views,hand
-airlines,Delta Connection,Delta Connection,ok,174360,0.791,60,views,wikidata
-airlines,Trump Shuttle,Trump Shuttle,ok,166896,0.797,60,views,wikidata
-airlines,Cape Air,Cape Air,ok,162384,0.803,60,views,wikidata
-airlines,AirTran,AirTran Airways,ok,157152,0.809,60,views,wikidata
-airlines,National Airlines,National Airlines (N8),ok,153168,0.814,60,views,wikidata
-airlines,PSA,Pacific Southwest Airlines,ok,153048,0.820,60,views,wikidata
-airlines,Envoy Air,Envoy Air,ok,152832,0.825,60,views,wikidata
-airlines,Endeavor Air,Endeavor Air,ok,141648,0.831,60,views,wikidata
-airlines,Virgin America,Virgin America,ok,132792,0.836,60,views,wikidata
-airlines,America West,America West Airlines,ok,126408,0.840,60,views,wikidata
-airlines,Hooters Air,Hooters Air,ok,114696,0.845,60,views,wikidata
-airlines,Omni Air International,Omni Air International,ok,109584,0.849,60,views,wikidata
-airlines,Western Airlines,Western Airlines,ok,101712,0.853,80,views,wikidata
-airlines,Silver Airways,Silver Airways,ok,101664,0.856,80,views,wikidata
-airlines,Aloha Airlines,Aloha Airlines,ok,95760,0.860,80,views,wikidata
-airlines,Flying Tiger Line,Flying Tiger Line,ok,91176,0.863,80,views,wikidata
-airlines,Hughes Airwest,Hughes Airwest,ok,89784,0.867,80,views,wikidata
-airlines,GoJet Airlines LLC,GoJet Airlines,ok,82632,0.870,80,views,wikidata
-airlines,Air Wisconsin,Air Wisconsin,ok,82296,0.873,80,views,wikidata
-airlines,Justice Prisoner and Alien Transportation System,Justice Prisoner Air Transportation System,ok,81624,0.876,80,views,wikidata
-airlines,ATA Airlines,ATA Airlines,ok,80976,0.879,80,views,wikidata
-airlines,Midwest,Midwest Airlines,ok,79488,0.882,80,views,wikidata
-airlines,Frontier,Frontier,ok,78192,0.884,80,views,hand
-airlines,People Express,People Express Airlines (1980s),ok,75000,0.887,80,views,wikidata
-airlines,Allegheny Airlines,Allegheny Airlines,ok,74736,0.890,80,views,wikidata
-airlines,"Eastern Airlines, LLC",Eastern Airlines (2018),ok,68664,0.893,80,views,wikidata
-airlines,Omega Aerial Refueling Services,Omega Aerial Refueling Services,ok,68016,0.895,80,views,wikidata
-airlines,Ameriflight,Ameriflight,ok,67944,0.897,80,views,wikidata
-airlines,Polar Air Cargo,Polar Air Cargo,ok,66768,0.900,80,views,wikidata
-airlines,Western Global Airlines,Western Global Airlines,ok,66072,0.902,80,views,wikidata
-airlines,World Airways,World Airways,ok,65832,0.905,80,views,wikidata
-airlines,USA Jet Airlines,USA Jet Airlines,ok,64608,0.907,80,views,wikidata
-airlines,New Pacific Airlines,New Pacific Airlines,ok,63744,0.909,80,views,wikidata
-airlines,Air Florida,Air Florida,ok,63336,0.911,80,views,wikidata
-airlines,Key Lime Air,Key Lime Air,ok,62736,0.914,80,views,wikidata
-airlines,Evergreen International Airlines,Evergreen International Airlines,ok,61992,0.916,80,views,wikidata
-airlines,Mokulele Airlines,Mokulele Airlines,ok,59808,0.918,80,views,wikidata
-airlines,Chalk's International Airlines,Chalk's International Airlines,ok,59424,0.920,80,views,wikidata
-airlines,Air Transport International,Air Transport International,ok,56712,0.922,80,views,wikidata
-airlines,Southern Airways,Southern Airways,ok,54336,0.924,80,views,wikidata
-airlines,ABX Air,ABX Air,ok,53976,0.926,80,views,wikidata
-airlines,Amerijet International,Amerijet International,ok,49896,0.928,80,views,wikidata
-airlines,World Atlantic Airlines,World Atlantic Airlines,ok,46464,0.930,80,views,wikidata
-airlines,Tower Air,Tower Air,ok,46392,0.932,80,views,wikidata
-airlines,Republic Airlines,Republic Airlines,ok,45432,0.933,80,views,wikidata
-airlines,Air California,Air California,ok,43920,0.935,80,views,wikidata
-airlines,Song,Song (airline),ok,42864,0.937,80,views,wikidata
-airlines,ExpressJet,ExpressJet,ok,42696,0.938,80,views,wikidata
-airlines,Northeast Airlines,Northeast Airlines,ok,42624,0.940,80,views,wikidata
-airlines,New Eastern Air Lines,Eastern Air Lines (2015),ok,40080,0.941,80,views,wikidata
-airlines,Comair,Comair (United States),ok,39096,0.943,80,views,wikidata
-airlines,Kalitta Charters,Kalitta Charters,ok,37824,0.944,80,views,wikidata
-airlines,Aloha Air Cargo,Aloha Air Cargo,ok,34800,0.945,80,views,wikidata
-airlines,Capital Airlines,Capital Airlines (United States),ok,34296,0.947,80,views,wikidata
-airlines,Ted,Ted (airline),ok,34248,0.948,80,views,wikidata
-airlines,Atlantic Southeast Airlines,Atlantic Southeast Airlines,ok,34104,0.949,80,views,wikidata
-airlines,Bering Air,Bering Air,ok,32280,0.950,100,views,wikidata
-airlines,North Central Airlines,North Central Airlines,ok,32160,0.951,100,views,wikidata
-airlines,Empire Airlines,Empire Airlines,ok,31848,0.953,100,views,wikidata
-airlines,Braniff,Braniff (1983–1990),ok,31776,0.954,100,views,wikidata
-airlines,Continental Micronesia,Continental Micronesia,ok,31680,0.955,100,views,wikidata
-airlines,Kenmore Air,Kenmore Air,ok,31632,0.956,100,views,wikidata
-airlines,Everts Air,Everts Air,ok,28752,0.957,100,views,wikidata
-airlines,Compass Airlines,Compass Airlines (North America),ok,28632,0.958,100,views,wikidata
-airlines,21 Air,21 Air,ok,28152,0.959,100,views,wikidata
-airlines,Mesaba Airlines,Mesaba Airlines,ok,27984,0.960,100,views,wikidata
-airlines,US Airways Express,US Airways Express,ok,27696,0.961,100,views,wikidata
-airlines,Erickson Inc.,Erickson Inc.,ok,27288,0.962,100,views,wikidata
-airlines,iAero Airways,IAero Airways,ok,26160,0.963,100,views,wikidata
+airlines,Avelo,Avelo Airlines,ok,476376,0.591,40,views,wikidata
+airlines,FedEx Express,FedEx Express,ok,466992,0.608,40,views,wikidata
+airlines,Northwest Airlines,Northwest Airlines,ok,449616,0.624,40,views,wikidata
+airlines,Sun Country,Sun Country Airlines,ok,419832,0.640,40,views,wikidata
+airlines,Atlas Air,Atlas Air,ok,400704,0.655,40,views,wikidata
+airlines,Eastern,Eastern Air Lines,ok,379296,0.670,40,views,wikidata
+airlines,Janet,Janet (airline),ok,360912,0.683,40,views,wikidata
+airlines,Northwest,Points of the compass,ok,337248,0.696,40,views,hand
+airlines,Virgin Galactic,Virgin Galactic,ok,336264,0.708,60,views,wikidata
+airlines,American Eagle,American Eagle (airline brand),ok,312192,0.720,60,views,wikidata
+airlines,Kalitta Air,Kalitta Air,ok,257280,0.731,60,views,wikidata
+airlines,NetJets,NetJets,ok,235392,0.740,60,views,wikidata
+airlines,PSA Airlines,PSA Airlines,ok,223128,0.749,60,views,wikidata
+airlines,Braniff International Airways,Braniff International Airways,ok,219072,0.757,60,views,wikidata
+airlines,United Express,United Express,ok,208848,0.764,60,views,wikidata
+airlines,Air America,Air America (airline),ok,199128,0.772,60,views,wikidata
+airlines,Horizon Air,Horizon Air,ok,177528,0.779,60,views,wikidata
+airlines,Aloha,Aloha,ok,177048,0.785,60,views,hand
+airlines,Delta Connection,Delta Connection,ok,174360,0.792,60,views,wikidata
+airlines,Trump Shuttle,Trump Shuttle,ok,166896,0.798,60,views,wikidata
+airlines,Cape Air,Cape Air,ok,162384,0.804,60,views,wikidata
+airlines,AirTran,AirTran Airways,ok,157152,0.810,60,views,wikidata
+airlines,National Airlines,National Airlines (N8),ok,153168,0.815,60,views,wikidata
+airlines,PSA,Pacific Southwest Airlines,ok,153048,0.821,60,views,wikidata
+airlines,Envoy Air,Envoy Air,ok,152832,0.826,60,views,wikidata
+airlines,Endeavor Air,Endeavor Air,ok,141648,0.832,60,views,wikidata
+airlines,Virgin America,Virgin America,ok,132792,0.837,60,views,wikidata
+airlines,America West,America West Airlines,ok,126408,0.841,60,views,wikidata
+airlines,Hooters Air,Hooters Air,ok,114696,0.846,60,views,wikidata
+airlines,Omni Air International,Omni Air International,ok,109584,0.850,80,views,wikidata
+airlines,Western Airlines,Western Airlines,ok,101712,0.854,80,views,wikidata
+airlines,Silver Airways,Silver Airways,ok,101664,0.858,80,views,wikidata
+airlines,Aloha Airlines,Aloha Airlines,ok,95760,0.861,80,views,wikidata
+airlines,Flying Tiger Line,Flying Tiger Line,ok,91176,0.865,80,views,wikidata
+airlines,Hughes Airwest,Hughes Airwest,ok,89784,0.868,80,views,wikidata
+airlines,GoJet Airlines LLC,GoJet Airlines,ok,82632,0.871,80,views,wikidata
+airlines,Air Wisconsin,Air Wisconsin,ok,82296,0.874,80,views,wikidata
+airlines,Justice Prisoner and Alien Transportation System,Justice Prisoner Air Transportation System,ok,81624,0.877,80,views,wikidata
+airlines,ATA Airlines,ATA Airlines,ok,80976,0.880,80,views,wikidata
+airlines,Midwest,Midwest Airlines,ok,79488,0.883,80,views,wikidata
+airlines,Frontier,Frontier,ok,78192,0.886,80,views,hand
+airlines,People Express,People Express Airlines (1980s),ok,75000,0.888,80,views,wikidata
+airlines,Allegheny Airlines,Allegheny Airlines,ok,74736,0.891,80,views,wikidata
+airlines,"Eastern Airlines, LLC",Eastern Airlines (2018),ok,68664,0.894,80,views,wikidata
+airlines,Omega Aerial Refueling Services,Omega Aerial Refueling Services,ok,68016,0.896,80,views,wikidata
+airlines,Ameriflight,Ameriflight,ok,67944,0.899,80,views,wikidata
+airlines,Polar Air Cargo,Polar Air Cargo,ok,66768,0.901,80,views,wikidata
+airlines,Western Global Airlines,Western Global Airlines,ok,66072,0.903,80,views,wikidata
+airlines,World Airways,World Airways,ok,65832,0.906,80,views,wikidata
+airlines,USA Jet Airlines,USA Jet Airlines,ok,64608,0.908,80,views,wikidata
+airlines,New Pacific Airlines,New Pacific Airlines,ok,63744,0.910,80,views,wikidata
+airlines,Air Florida,Air Florida,ok,63336,0.913,80,views,wikidata
+airlines,Key Lime Air,Key Lime Air,ok,62736,0.915,80,views,wikidata
+airlines,Evergreen International Airlines,Evergreen International Airlines,ok,61992,0.917,80,views,wikidata
+airlines,Mokulele Airlines,Mokulele Airlines,ok,59808,0.919,80,views,wikidata
+airlines,Chalk's International Airlines,Chalk's International Airlines,ok,59424,0.922,80,views,wikidata
+airlines,Air Transport International,Air Transport International,ok,56712,0.924,80,views,wikidata
+airlines,Southern Airways,Southern Airways,ok,54336,0.926,80,views,wikidata
+airlines,ABX Air,ABX Air,ok,53976,0.928,80,views,wikidata
+airlines,Amerijet International,Amerijet International,ok,49896,0.930,80,views,wikidata
+airlines,World Atlantic Airlines,World Atlantic Airlines,ok,46464,0.931,80,views,wikidata
+airlines,Tower Air,Tower Air,ok,46392,0.933,80,views,wikidata
+airlines,Republic Airlines,Republic Airlines,ok,45432,0.935,80,views,wikidata
+airlines,Air California,Air California,ok,43920,0.936,80,views,wikidata
+airlines,Song,Song (airline),ok,42864,0.938,80,views,wikidata
+airlines,ExpressJet,ExpressJet,ok,42696,0.939,80,views,wikidata
+airlines,Northeast Airlines,Northeast Airlines,ok,42624,0.941,80,views,wikidata
+airlines,New Eastern Air Lines,Eastern Air Lines (2015),ok,40080,0.942,80,views,wikidata
+airlines,Comair,Comair (United States),ok,39096,0.944,80,views,wikidata
+airlines,Kalitta Charters,Kalitta Charters,ok,37824,0.945,80,views,wikidata
+airlines,Aloha Air Cargo,Aloha Air Cargo,ok,34800,0.947,80,views,wikidata
+airlines,Capital Airlines,Capital Airlines (United States),ok,34296,0.948,80,views,wikidata
+airlines,Ted,Ted (airline),ok,34248,0.949,80,views,wikidata
+airlines,Atlantic Southeast Airlines,Atlantic Southeast Airlines,ok,34104,0.950,100,views,wikidata
+airlines,Bering Air,Bering Air,ok,32280,0.951,100,views,wikidata
+airlines,North Central Airlines,North Central Airlines,ok,32160,0.953,100,views,wikidata
+airlines,Empire Airlines,Empire Airlines,ok,31848,0.954,100,views,wikidata
+airlines,Braniff,Braniff (1983–1990),ok,31776,0.955,100,views,wikidata
+airlines,Continental Micronesia,Continental Micronesia,ok,31680,0.956,100,views,wikidata
+airlines,Kenmore Air,Kenmore Air,ok,31632,0.957,100,views,wikidata
+airlines,Everts Air,Everts Air,ok,28752,0.958,100,views,wikidata
+airlines,Compass Airlines,Compass Airlines (North America),ok,28632,0.959,100,views,wikidata
+airlines,21 Air,21 Air,ok,28152,0.960,100,views,wikidata
+airlines,Mesaba Airlines,Mesaba Airlines,ok,27984,0.961,100,views,wikidata
+airlines,US Airways Express,US Airways Express,ok,27696,0.962,100,views,wikidata
+airlines,Erickson Inc.,Erickson Inc.,ok,27288,0.963,100,views,wikidata
 airlines,Ryan International Airlines,Ryan International Airlines,ok,25392,0.964,100,views,wikidata
 airlines,Northern Air Cargo,Northern Air Cargo,ok,24720,0.965,100,views,wikidata
 airlines,Sky Lease Cargo,Sky Lease Cargo,ok,24696,0.966,100,views,wikidata
-airlines,Continental Express,Continental Express,ok,23784,0.967,100,views,wikidata
-airlines,Northwest Airlink,Northwest Airlink,ok,23712,0.967,100,views,wikidata
-airlines,SeaPort Airlines,SeaPort Airlines,ok,23664,0.968,100,views,wikidata
-airlines,Great Lakes Airlines,Great Lakes Airlines,ok,23280,0.969,100,views,wikidata
-airlines,Trans Executive Airlines,Trans Executive Airlines,ok,22848,0.970,100,views,wikidata
-airlines,Contract Air Cargo,IFL Group,ok,22848,0.971,100,views,wikidata
-airlines,Grant Aviation,Grant Aviation,ok,22704,0.972,100,views,wikidata
-airlines,PenAir,PenAir,ok,22128,0.972,100,views,wikidata
-airlines,Emery Worldwide,Emery Worldwide Airlines,ok,22104,0.973,100,views,wikidata
-airlines,Pan American-Grace Airways,Pan American-Grace Airways,ok,21624,0.974,100,views,wikidata
-airlines,Overseas National Airways,Overseas National Airways,ok,21408,0.975,100,views,wikidata
+airlines,Skybus Airlines,Skybus Airlines,ok,24528,0.967,100,views,wikidata
+airlines,Continental Express,Continental Express,ok,23784,0.968,100,views,wikidata
+airlines,Northwest Airlink,Northwest Airlink,ok,23712,0.969,100,views,wikidata
+airlines,SeaPort Airlines,SeaPort Airlines,ok,23664,0.970,100,views,wikidata
+airlines,Great Lakes Airlines,Great Lakes Airlines,ok,23280,0.970,100,views,wikidata
+airlines,Trans Executive Airlines,Trans Executive Airlines,ok,22848,0.971,100,views,wikidata
+airlines,Contract Air Cargo,IFL Group,ok,22848,0.972,100,views,wikidata
+airlines,Grant Aviation,Grant Aviation,ok,22704,0.973,100,views,wikidata
+airlines,PenAir,PenAir,ok,22128,0.974,100,views,wikidata
+airlines,Emery Worldwide,Emery Worldwide Airlines,ok,22104,0.974,100,views,wikidata
+airlines,Pan American-Grace Airways,Pan American-Grace Airways,ok,21624,0.975,100,views,wikidata
 airlines,Chautauqua Airlines,Chautauqua Airlines,ok,21144,0.976,100,views,wikidata
-airlines,Trans States Airlines,Trans States Airlines,ok,21072,0.976,100,views,wikidata
-airlines,New York Air,New York Air,ok,20808,0.977,100,views,wikidata
-airlines,Sierra Pacific Airlines,Sierra Pacific Airlines,ok,20760,0.978,100,views,wikidata
-airlines,Lynden Air Cargo,Lynden Air Cargo,ok,20688,0.979,100,views,wikidata
+airlines,Trans States Airlines,Trans States Airlines,ok,21072,0.977,100,views,wikidata
+airlines,New York Air,New York Air,ok,20808,0.978,100,views,wikidata
+airlines,Lynden Air Cargo,Lynden Air Cargo,ok,20688,0.978,100,views,wikidata
 airlines,Asia Pacific Airlines,Asia Pacific Airlines (Guam),ok,20088,0.979,100,views,wikidata
 airlines,Grand Canyon Airlines,Grand Canyon Airlines,ok,19608,0.980,100,views,wikidata
-airlines,Wright Air Service,Wright Air Service,ok,18816,0.981,100,views,wikidata
+airlines,Wright Air Service,Wright Air Service,ok,18816,0.980,100,views,wikidata
 airlines,Era Aviation,Era Aviation,ok,18792,0.981,100,views,wikidata
 airlines,Air Midwest,Air Midwest,ok,18744,0.982,100,views,wikidata
-airlines,North American Airlines,North American Airlines,ok,18696,0.983,100,views,wikidata
+airlines,North American Airlines,North American Airlines,ok,18696,0.982,100,views,wikidata
 airlines,Wien Air Alaska,Wien Air Alaska,ok,18216,0.983,100,views,wikidata
 airlines,Seaborne Airlines,Seaborne Airlines,ok,18144,0.984,100,views,wikidata
-airlines,St. Petersburg-Tampa Airboat Line,St. Petersburg–Tampa Airboat Line,ok,17976,0.985,100,views,wikidata
+airlines,St. Petersburg-Tampa Airboat Line,St. Petersburg–Tampa Airboat Line,ok,17976,0.984,100,views,wikidata
 airlines,Independence Air,Independence Air,ok,17616,0.985,100,views,wikidata
 airlines,Miami Air International,Miami Air International,ok,16920,0.986,100,views,wikidata
-airlines,Air Cargo Carriers,Air Cargo Carriers,ok,16896,0.987,100,views,wikidata
+airlines,Air Cargo Carriers,Air Cargo Carriers,ok,16896,0.986,100,views,wikidata
 airlines,Ameristar Jet Charter,Ameristar Jet Charter,ok,16584,0.987,100,views,wikidata
-airlines,Champion Air,Champion Air,ok,16272,0.988,100,views,wikidata
+airlines,Champion Air,Champion Air,ok,16272,0.987,100,views,wikidata
 airlines,American Overseas Airlines,American Overseas Airlines,ok,16008,0.988,100,views,wikidata
 airlines,Continental Connection,Continental Connection,ok,15864,0.989,100,views,wikidata
 airlines,Shuttle America,Shuttle America,ok,15072,0.989,100,views,wikidata
 airlines,New England Airlines,New England Airlines,ok,15048,0.990,100,views,wikidata
 airlines,Seaboard World Airlines,Seaboard World Airlines,ok,14688,0.990,100,views,wikidata
 airlines,Bemidji Airlines,Bemidji Airlines,ok,14256,0.991,100,views,wikidata
-airlines,Alaska Central Express,Alaska Central Express,ok,13968,0.992,100,views,wikidata
-airlines,Simmons Airlines,Simmons Airlines,ok,13632,0.992,100,views,wikidata
-airlines,Island Air,Island Air (Hawaii),ok,12912,0.993,100,views,wikidata
-airlines,Vision Airlines,Vision Airlines,ok,12552,0.993,100,views,wikidata
+airlines,Alaska Central Express,Alaska Central Express,ok,13968,0.991,100,views,wikidata
+airlines,Island Air,Island Air (Hawaii),ok,12912,0.992,100,views,wikidata
+airlines,Vision Airlines,Vision Airlines,ok,12552,0.992,100,views,wikidata
 airlines,AirNet Express,AirNet Express,ok,12312,0.993,100,views,wikidata
-airlines,Tepper Aviation,Tepper Aviation,ok,11160,0.994,100,views,wikidata
+airlines,Tepper Aviation,Tepper Aviation,ok,11160,0.993,100,views,wikidata
 airlines,Executive Airlines,Executive Airlines,ok,10992,0.994,100,views,wikidata
-airlines,Taquan Air,Taquan Air,ok,10440,0.995,100,views,wikidata
-airlines,Big Sky Airlines,Big Sky Airlines,ok,10056,0.995,100,views,wikidata
+airlines,Taquan Air,Taquan Air,ok,10440,0.994,100,views,wikidata
+airlines,Big Sky Airlines,Big Sky Airlines,ok,10056,0.994,100,views,wikidata
 airlines,Boston-Maine Airways,Boston-Maine Airways,ok,9720,0.995,100,views,wikidata
-airlines,AmericanConnection,AmericanConnection,ok,9408,0.996,100,views,wikidata
-airlines,Centurion Air Cargo,Centurion Air Cargo,ok,9264,0.996,100,views,wikidata
+airlines,AmericanConnection,AmericanConnection,ok,9408,0.995,100,views,wikidata
+airlines,Centurion Air Cargo,Centurion Air Cargo,ok,9264,0.995,100,views,wikidata
 airlines,Eos Airlines,Eos Airlines,ok,8664,0.996,100,views,wikidata
-airlines,USA3000 Airlines,USA3000 Airlines,ok,8544,0.997,100,views,wikidata
-airlines,Slick Airways,Slick Airways,ok,8232,0.997,100,views,wikidata
+airlines,USA3000 Airlines,USA3000 Airlines,ok,8544,0.996,100,views,wikidata
+airlines,Slick Airways,Slick Airways,ok,8232,0.996,100,views,wikidata
+airlines,Jet America Airlines,Jet America Airlines,ok,7800,0.997,100,views,wikidata
+airlines,Warbelow's Air Ventures,Warbelow's Air Ventures,ok,7800,0.997,100,views,wikidata
 airlines,Air Sunshine,Air Sunshine,ok,7680,0.997,100,views,wikidata
-airlines,Air Choice One,Air Choice One,ok,7320,0.998,100,views,wikidata
+airlines,Air Choice One,Air Choice One,ok,7320,0.997,100,views,wikidata
 airlines,Gemini Air Cargo,Gemini Air Cargo,ok,6168,0.998,100,views,wikidata
 airlines,Freedom Airlines,Freedom Airlines,ok,5928,0.998,100,views,wikidata
 airlines,Frontier Flying Service,Frontier Flying Service,ok,5256,0.998,100,views,wikidata
 airlines,Astar Air Cargo,Astar Air Cargo,ok,5088,0.998,100,views,wikidata
+airlines,Pet Airways,Pet Airways,ok,4752,0.998,100,views,wikidata
 airlines,Florida West International Airways,Florida West International Airways,ok,4704,0.999,100,views,wikidata
 airlines,Servant Air,Servant Air,ok,4536,0.999,100,views,wikidata
 airlines,Hageland Aviation Services,Hageland Aviation Services,ok,4320,0.999,100,views,wikidata
@@ -177,10 +177,6 @@ airlines,Lynx Air International,Lynx Air International,ok,1584,1.000,100,views,w
 airlines,Western,Western Airlines (2007),ok,1176,1.000,100,views,wikidata
 airlines,Silver Air,Silver Air (Djibouti),ok,600,1.000,100,views,wikidata
 airlines,Aero Contractors,Triangle Aviation Solutions,ok,0,,100,hand,wikidata
-airlines,Skybus Airlines,Skybus Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Pet Airways,Pet Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Jet America Airlines,Jet America Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Warbelow's Air Ventures,Warbelow's Air Ventures,long tail: not ranked,,,100,hand,wikidata
 airlines,Air Flamenco,Air Flamenco,long tail: not ranked,,,100,hand,wikidata
 airlines,Alpine Air Express,Alpine Air Express,long tail: not ranked,,,100,hand,wikidata
 airlines,Altair Airlines,Altair Airlines,long tail: not ranked,,,100,hand,wikidata
@@ -188,9 +184,6 @@ airlines,Capital Cargo International Airlines,Capital Cargo International Airlin
 airlines,Delta Express,Delta Express,long tail: not ranked,,,100,hand,wikidata
 airlines,Delta Private Jets,Delta Private Jets,long tail: not ranked,,,100,hand,wikidata
 airlines,Express.Net Airlines,Express.Net Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Ultimate Air Shuttle,Ultimate Jet,long tail: not ranked,,,100,hand,wikidata
-airlines,Elite Airways,Elite Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Surf Air,Surf Air,long tail: not ranked,,,100,hand,wikidata
 airlines,Island Airlines,Island Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,MetroJet,MetroJet (American airline),long tail: not ranked,,,100,hand,wikidata
 airlines,Mid Pacific Air,Mid Pacific Air,long tail: not ranked,,,100,hand,wikidata
@@ -198,18 +191,20 @@ airlines,Midway Airlines,Midway Airlines (1976–1991),long tail: not ranked,,,1
 airlines,Pacific Air Lines,Pacific Air Lines,long tail: not ranked,,,100,hand,wikidata
 airlines,Premier Executive Transport Services,Premier Executive Transport Services,long tail: not ranked,,,100,hand,wikidata
 airlines,Scenic Airlines,Scenic Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Ultimate Air Shuttle,Ultimate Jet,long tail: not ranked,,,100,hand,wikidata
+airlines,Elite Airways,Elite Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Surf Air,Surf Air,long tail: not ranked,,,100,hand,wikidata
+airlines,Overseas National Airways,Overseas National Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Simmons Airlines,Simmons Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Sierra Pacific Airlines,Sierra Pacific Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,iAero Airways,IAero Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Nations Air Express,Nations Air,long tail: not ranked,,,100,hand,wikidata
+airlines,Cargo 360,Cargo 360,long tail: not ranked,,,100,hand,wikidata
+airlines,Tempelhof Airways,Tempelhof Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,Branson Air Express,Branson Air Express,long tail: not ranked,,,100,hand,wikidata
 airlines,Continental Air Services,"Continental Air Services, Inc",long tail: not ranked,,,100,hand,wikidata
 airlines,Empire Airways,Empire Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,Freight Runners Express,Freight Runners Express,long tail: not ranked,,,100,hand,wikidata
-airlines,Cargo 360,Cargo 360,long tail: not ranked,,,100,hand,wikidata
-airlines,Tempelhof Airways,Tempelhof Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Federico Bravo,Indigo Partners,long tail: not ranked,,,100,hand,wikidata
-airlines,RegionsAir,RegionsAir,long tail: not ranked,,,100,hand,wikidata
-airlines,Air Grand Canyon,Grand Canyon Scenic Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Songbird Airways,Songbird Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Transcontinental Air Transport,Transcontinental Air Transport,long tail: not ranked,,,100,hand,wikidata
-airlines,US Airways Shuttle,US Airways Shuttle,long tail: not ranked,,,100,hand,wikidata
 airlines,GeorgiaSkies,GeorgiaSkies,long tail: not ranked,,,100,hand,wikidata
 airlines,Primaris Airlines,Primaris Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,ImagineAir,ImagineAir,long tail: not ranked,,,100,hand,wikidata
@@ -232,14 +227,6 @@ airlines,Express One International,Express One International,long tail: not rank
 airlines,Falcon Air Express,Falcon Air Express,long tail: not ranked,,,100,hand,wikidata
 airlines,Flagship Airlines,Flagship Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Freelandia,Freelandia,long tail: not ranked,,,100,hand,wikidata
-airlines,Tahoe Air,Tahoe Air,long tail: not ranked,,,100,hand,wikidata
-airlines,TransMeridian Airlines,TransMeridian Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Vieques Air Link,Vieques Air Link,long tail: not ranked,,,100,hand,wikidata
-airlines,West Coast Airlines,West Coast Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Morris Air,Morris Air,long tail: not ranked,,,100,hand,wikidata
-airlines,IBC Airways,IBC Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Tradewind Aviation,Tradewind Aviation,long tail: not ranked,,,100,hand,wikidata
-airlines,Gulfstream International Airlines,Gulfstream International Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Freedom Air,Freedom Air (Guam),long tail: not ranked,,,100,hand,wikidata
 airlines,Martinaire,Martinaire,long tail: not ranked,,,100,hand,wikidata
 airlines,Mid-Continent Airlines,Mid-Continent Airlines,long tail: not ranked,,,100,hand,wikidata
@@ -248,21 +235,28 @@ airlines,Pace Airlines,Pace Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Phoenix Air,Phoenix Air,long tail: not ranked,,,100,hand,wikidata
 airlines,Reeve Aleutian Airways,Reeve Aleutian Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,Skyway Enterprises,Skyway Enterprises,long tail: not ranked,,,100,hand,wikidata
-airlines,Nations Air Express,Nations Air,long tail: not ranked,,,100,hand,wikidata
+airlines,Tahoe Air,Tahoe Air,long tail: not ranked,,,100,hand,wikidata
+airlines,TransMeridian Airlines,TransMeridian Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Vieques Air Link,Vieques Air Link,long tail: not ranked,,,100,hand,wikidata
+airlines,West Coast Airlines,West Coast Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Morris Air,Morris Air,long tail: not ranked,,,100,hand,wikidata
+airlines,IBC Airways,IBC Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Tradewind Aviation,Tradewind Aviation,long tail: not ranked,,,100,hand,wikidata
+airlines,Gulfstream International Airlines,Gulfstream International Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Federico Bravo,Indigo Partners,long tail: not ranked,,,100,hand,wikidata
+airlines,RegionsAir,RegionsAir,long tail: not ranked,,,100,hand,wikidata
+airlines,Air Grand Canyon,Grand Canyon Scenic Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Songbird Airways,Songbird Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Transcontinental Air Transport,Transcontinental Air Transport,long tail: not ranked,,,100,hand,wikidata
+airlines,US Airways Shuttle,US Airways Shuttle,long tail: not ranked,,,100,hand,wikidata
+airlines,Kitty Hawk Aircargo,Kitty Hawk Aircargo,long tail: not ranked,,,100,hand,wikidata
+airlines,MAXjet Airways,MAXjet Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Pan American Airways,Pan Am (1996–1998),long tail: not ranked,,,100,hand,wikidata
+airlines,Arizona Airways,Arizona Airways (1993–1996),long tail: not ranked,,,100,hand,wikidata
 airlines,Atlantic Gulf Airlines,Atlantic Gulf Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Focus Air Cargo,Focus Air Cargo,long tail: not ranked,,,100,hand,wikidata
 airlines,CSA Air,CSA Air,long tail: not ranked,,,100,hand,wikidata
 airlines,Chicago Express Airlines,Chicago Express Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Arizona Airways,Arizona Airways (1993–1996),long tail: not ranked,,,100,hand,wikidata
-airlines,Aero Union,Aero Union,long tail: not ranked,,,100,hand,wikidata
-airlines,Alaska Coastal Airlines,Alaska Coastal Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Rocky Mountain Airways,Rocky Mountain Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Star Air Service,Star Air Service,long tail: not ranked,,,100,hand,wikidata
-airlines,Sun Air International,Sun Air Express,long tail: not ranked,,,100,hand,wikidata
-airlines,Transocean Airlines,Transocean Air Lines,long tail: not ranked,,,100,hand,wikidata
-airlines,Varney Air Lines,Varney Air Lines,long tail: not ranked,,,100,hand,wikidata
-airlines,WestAir Commuter Airlines,WestAir Commuter Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Midstate Airlines,Midstate Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Mohawk Airlines,Mohawk Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Airlift International,Airlift International,long tail: not ranked,,,100,hand,wikidata
 airlines,Midwest Connect,Midwest Connect,long tail: not ranked,,,100,hand,wikidata
@@ -286,14 +280,6 @@ airlines,Family Airlines,Family Airlines,long tail: not ranked,,,100,hand,wikida
 airlines,Gem State Airlines,Gem State Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Golden Gate Airlines,Golden Gate Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Grand Aire Express,Grand Aire Express,long tail: not ranked,,,100,hand,wikidata
-airlines,Universal Airlines,Universal Airlines (United States),long tail: not ranked,,,100,hand,wikidata
-airlines,XOJET,XOJET,long tail: not ranked,,,100,hand,wikidata
-airlines,Indigo Airlines,Indigo Airlines (American airline),long tail: not ranked,,,100,hand,wikidata
-airlines,San Juan Airlines,San Juan Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Island Airways,Island Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Buzz Airways,Buzz Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,California Central Airlines,California Central Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,GLO Airlines,GLO Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Gulf Air Transport,Gulf Air Transport,long tail: not ranked,,,100,hand,wikidata
 airlines,Independent Air,Independent Air,long tail: not ranked,,,100,hand,wikidata
 airlines,Lake Central Airlines,Lake Central Airlines,long tail: not ranked,,,100,hand,wikidata
@@ -309,11 +295,31 @@ airlines,PlaneSense,PlaneSense,long tail: not ranked,,,100,hand,wikidata
 airlines,Planet Airways,Planet Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,Ransome Airlines,Ransome Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Southern Air Transport,Southern Air Transport,long tail: not ranked,,,100,hand,wikidata
+airlines,Universal Airlines,Universal Airlines (United States),long tail: not ranked,,,100,hand,wikidata
+airlines,XOJET,XOJET,long tail: not ranked,,,100,hand,wikidata
+airlines,Indigo Airlines,Indigo Airlines (American airline),long tail: not ranked,,,100,hand,wikidata
+airlines,San Juan Airlines,San Juan Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Island Airways,Island Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Buzz Airways,Buzz Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,California Central Airlines,California Central Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,GLO Airlines,GLO Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Ohana by Hawaiian,Ohana by Hawaiian,long tail: not ranked,,,100,hand,wikidata
 airlines,Denver Air Connection,Denver Air Connection,long tail: not ranked,,,100,hand,wikidata
-airlines,Kitty Hawk Aircargo,Kitty Hawk Aircargo,long tail: not ranked,,,100,hand,wikidata
-airlines,MAXjet Airways,MAXjet Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Pan American Airways,Pan Am (1996–1998),long tail: not ranked,,,100,hand,wikidata
+airlines,Aero Union,Aero Union,long tail: not ranked,,,100,hand,wikidata
+airlines,Alaska Coastal Airlines,Alaska Coastal Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Rocky Mountain Airways,Rocky Mountain Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Star Air Service,Star Air Service,long tail: not ranked,,,100,hand,wikidata
+airlines,Sun Air International,Sun Air Express,long tail: not ranked,,,100,hand,wikidata
+airlines,Transocean Airlines,Transocean Air Lines,long tail: not ranked,,,100,hand,wikidata
+airlines,Varney Air Lines,Varney Air Lines,long tail: not ranked,,,100,hand,wikidata
+airlines,WestAir Commuter Airlines,WestAir Commuter Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Midstate Airlines,Midstate Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,L-3 Flight International Aviation,L-3 Flight International Aviation,long tail: not ranked,,,100,hand,wikidata
+airlines,L.A.B. Flying Service,L.A.B. Flying Service,long tail: not ranked,,,100,hand,wikidata
+airlines,Merlin Express,Merlin Express,long tail: not ranked,,,100,hand,wikidata
+airlines,Modern Air Transport,Modern Air Transport,long tail: not ranked,,,100,hand,wikidata
+airlines,"New York, Rio, and Buenos Aires Line","New York, Rio, and Buenos Aires Line",long tail: not ranked,,,100,hand,wikidata
+airlines,Pacific Air Transport,Pacific Air Transport,long tail: not ranked,,,100,hand,wikidata
 airlines,Borinquen Air,Borinquen Air,long tail: not ranked,,,100,hand,wikidata
 airlines,Coastal Air,Coastal Air,long tail: not ranked,,,100,hand,wikidata
 airlines,Continental Lite,Continental Lite,long tail: not ranked,,,100,hand,wikidata
@@ -321,23 +327,7 @@ airlines,Corporate Flight Management,Contour Aviation,long tail: not ranked,,,10
 airlines,DayJet,DayJet,long tail: not ranked,,,100,hand,wikidata
 airlines,Essair Airways,Pioneer Air Lines,long tail: not ranked,,,100,hand,wikidata
 airlines,FS Air Service,FS Air Service,long tail: not ranked,,,100,hand,wikidata
-airlines,United States Overseas Airlines,United States Overseas Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Mackey International,Mackey International,long tail: not ranked,,,100,hand,wikidata
-airlines,Monmouth Airlines,Monmouth Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Orange Air,Orange Air,long tail: not ranked,,,100,hand,wikidata
-airlines,OneJet,OneJet,long tail: not ranked,,,100,hand,wikidata
-airlines,Great Lakes Air,Great Lakes Air,long tail: not ranked,,,100,hand,wikidata
-airlines,Ludington Airlines,Ludington Airline,long tail: not ranked,,,100,hand,wikidata
-airlines,AAXICO Airlines,AAXICO Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Aeromarine Airways,Aeromarine West Indies Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Ryan Airline Company,Ryan Airline Company,long tail: not ranked,,,100,hand,wikidata
-airlines,StatesWest Airlines,StatesWest Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,TranStar Airlines,TranStar Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Transwestern Airlines,Transwestern Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,West Air,West Air (United States),long tail: not ranked,,,100,hand,wikidata
-airlines,Zantop International Airlines,Zantop International Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,PEOPLExpress,People Express Airlines (2010s),long tail: not ranked,,,100,hand,wikidata
-airlines,Griffing Flying Service,Griffing Flying Service,long tail: not ranked,,,100,hand,wikidata
+airlines,Texas International Airlines,Texas International Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Salmon Air,Salmon Air,long tail: not ranked,,,100,hand,wikidata
 airlines,Samoa Air,Samoa Air (1987–2003),long tail: not ranked,,,100,hand,wikidata
 airlines,Skyway Airlines,Skyway Airlines,long tail: not ranked,,,100,hand,wikidata
@@ -367,28 +357,6 @@ airlines,GP Express Airlines,GP Express Airlines,long tail: not ranked,,,100,han
 airlines,Galaxy Airlines,Galaxy Airlines (United States),long tail: not ranked,,,100,hand,wikidata
 airlines,Global International Airways,Global International Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,Golden West Airlines,Golden West Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Superior Aviation,Superior Aviation (airline),long tail: not ranked,,,100,hand,wikidata
-airlines,Trans-Colorado Airlines,Trans-Colorado Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Trans-Florida Airlines,Trans-Florida Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,USAfrica Airways,USAfrica Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Vanguard Airlines,Vanguard Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,WinAir Airlines,WinAir Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Yellow Air Taxi,Yellow Air Taxi,long tail: not ranked,,,100,hand,wikidata
-airlines,Lone Star Airlines,Lone Star Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Sunworld International Airways,Sunworld International Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Northcoast Executive Airlines,Northcoast Executive Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Golden Pacific Airlines,Golden Pacific Airlines (1969–1973),long tail: not ranked,,,100,hand,wikidata
-airlines,Makani Kai Air,Makani Kai Air,long tail: not ranked,,,100,hand,wikidata
-airlines,Tailwind Air Service,Tailwind Air,long tail: not ranked,,,100,hand,wikidata
-airlines,Marco Island Airways,Marco Island Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,New York Helicopter,New York Helicopter,long tail: not ranked,,,100,hand,wikidata
-airlines,Air Carolina,Air Carolina,long tail: not ranked,,,100,hand,wikidata
-airlines,Choice Airways,Choice Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,ViaAir,ViaAir,long tail: not ranked,,,100,hand,wikidata
-airlines,Reliant Air,Reliant Air,long tail: not ranked,,,100,hand,wikidata
-airlines,Tropic Ocean Airways,Tropic Ocean Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,TriStar Airlines,TriStar Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Skymax,Skymax,long tail: not ranked,,,100,hand,wikidata
 airlines,Great Plains Airlines,Great Plains Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Heartland Airlines,Heartland Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Jet 24,Jet 24,long tail: not ranked,,,100,hand,wikidata
@@ -419,6 +387,28 @@ airlines,Sky Trek International Air Lines,Sky Trek International Air Lines,long 
 airlines,Smokers Express,Smokers Express,long tail: not ranked,,,100,hand,wikidata
 airlines,South Pacific Island Airways,South Pacific Island Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,Southeast Airlines,Southeast Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Superior Aviation,Superior Aviation (airline),long tail: not ranked,,,100,hand,wikidata
+airlines,Trans-Colorado Airlines,Trans-Colorado Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Trans-Florida Airlines,Trans-Florida Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,USAfrica Airways,USAfrica Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Vanguard Airlines,Vanguard Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,WinAir Airlines,WinAir Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Yellow Air Taxi,Yellow Air Taxi,long tail: not ranked,,,100,hand,wikidata
+airlines,Lone Star Airlines,Lone Star Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Sunworld International Airways,Sunworld International Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Northcoast Executive Airlines,Northcoast Executive Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Golden Pacific Airlines,Golden Pacific Airlines (1969–1973),long tail: not ranked,,,100,hand,wikidata
+airlines,Makani Kai Air,Makani Kai Air,long tail: not ranked,,,100,hand,wikidata
+airlines,Tailwind Air Service,Tailwind Air,long tail: not ranked,,,100,hand,wikidata
+airlines,Marco Island Airways,Marco Island Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,New York Helicopter,New York Helicopter,long tail: not ranked,,,100,hand,wikidata
+airlines,Air Carolina,Air Carolina,long tail: not ranked,,,100,hand,wikidata
+airlines,Choice Airways,Choice Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,ViaAir,ViaAir,long tail: not ranked,,,100,hand,wikidata
+airlines,Reliant Air,Reliant Air,long tail: not ranked,,,100,hand,wikidata
+airlines,Tropic Ocean Airways,Tropic Ocean Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,TriStar Airlines,TriStar Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Skymax,Skymax,long tail: not ranked,,,100,hand,wikidata
 airlines,Holiday Airlines,Holiday Airlines (US airline),long tail: not ranked,,,100,hand,wikidata
 airlines,Advanced Air,Advanced Air,long tail: not ranked,,,100,hand,wikidata
 airlines,Taos Air,Taos Air,long tail: not ranked,,,100,hand,wikidata
@@ -427,24 +417,29 @@ airlines,Airbahn,Airbahn,long tail: not ranked,,,100,hand,wikidata
 airlines,West Isle Air,West Isle Air,long tail: not ranked,,,100,hand,wikidata
 airlines,Wilmington-Catalina Airline,Wilmington-Catalina Airline,long tail: not ranked,,,100,hand,wikidata
 airlines,Allegheny Commuter,Allegheny Commuter,long tail: not ranked,,,100,hand,wikidata
+airlines,Orange Air,Orange Air,long tail: not ranked,,,100,hand,wikidata
+airlines,OneJet,OneJet,long tail: not ranked,,,100,hand,wikidata
+airlines,Great Lakes Air,Great Lakes Air,long tail: not ranked,,,100,hand,wikidata
+airlines,Ludington Airlines,Ludington Airline,long tail: not ranked,,,100,hand,wikidata
+airlines,AAXICO Airlines,AAXICO Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Aeromarine Airways,Aeromarine West Indies Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,McCulloch International Airlines,McCulloch International Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Paradise Airlines,Paradise Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Texas International Airlines,Texas International Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,L-3 Flight International Aviation,L-3 Flight International Aviation,long tail: not ranked,,,100,hand,wikidata
-airlines,L.A.B. Flying Service,L.A.B. Flying Service,long tail: not ranked,,,100,hand,wikidata
-airlines,Merlin Express,Merlin Express,long tail: not ranked,,,100,hand,wikidata
-airlines,Modern Air Transport,Modern Air Transport,long tail: not ranked,,,100,hand,wikidata
-airlines,"New York, Rio, and Buenos Aires Line","New York, Rio, and Buenos Aires Line",long tail: not ranked,,,100,hand,wikidata
-airlines,Pacific Air Transport,Pacific Air Transport,long tail: not ranked,,,100,hand,wikidata
-airlines,Mercer Airlines,Mercer Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,People and Pets Dog Airlines,People and Pets Dog Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Baltia Airlines,USGlobal Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,AccessAir,AccessAir,long tail: not ranked,,,100,hand,wikidata
-airlines,Sunbird Airlines,Sunbird Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Universal Air Lines,Universal Air Lines Corporation,long tail: not ranked,,,100,hand,wikidata
-airlines,Pro Air,Pro Air,long tail: not ranked,,,100,hand,wikidata
-airlines,Wings West Airlines,Wings West Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Gilpin Airlines,Gilpin Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,United States Overseas Airlines,United States Overseas Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Mackey International,Mackey International,long tail: not ranked,,,100,hand,wikidata
+airlines,Monmouth Airlines,Monmouth Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Ryan Airline Company,Ryan Airline Company,long tail: not ranked,,,100,hand,wikidata
+airlines,StatesWest Airlines,StatesWest Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,TranStar Airlines,TranStar Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Transwestern Airlines,Transwestern Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,West Air,West Air (United States),long tail: not ranked,,,100,hand,wikidata
+airlines,Zantop International Airlines,Zantop International Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,PEOPLExpress,People Express Airlines (2010s),long tail: not ranked,,,100,hand,wikidata
+airlines,Griffing Flying Service,Griffing Flying Service,long tail: not ranked,,,100,hand,wikidata
+airlines,Kitty Hawk Airways,Kitty Hawk Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,L'Express Airlines,L'Express Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,National Air Transport,National Air Transport,long tail: not ranked,,,100,hand,wikidata
+airlines,National Parks Airways,National Parks Airways,long tail: not ranked,,,100,hand,wikidata
 airlines,ATA Connection,ATA Connection,long tail: not ranked,,,100,hand,wikidata
 airlines,Air Chaparral,Air Chaparral,long tail: not ranked,,,100,hand,wikidata
 airlines,Air Cortez,Air Cortez,long tail: not ranked,,,100,hand,wikidata
@@ -476,6 +471,34 @@ airlines,Florida Airways,Florida Airways,long tail: not ranked,,,100,hand,wikida
 airlines,Florida Commuter Airlines,Florida Commuter Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Fort Worth Airlines,Fort Worth Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Go!Express,Go!Express,long tail: not ranked,,,100,hand,wikidata
+airlines,Imperial Airlines,Imperial Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,JetAmerica,JetAmerica,long tail: not ranked,,,100,hand,wikidata
+airlines,KentuckySkies,KentuckySkies,long tail: not ranked,,,100,hand,wikidata
+airlines,Key Airlines,Key Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,MAIR Holdings,MAIR Holdings,long tail: not ranked,,,100,hand,wikidata
+airlines,Mall Airways,Mall Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Marquette Airlines,Marquette Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Mayflower Airlines,Mayflower Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Midwest Airways,Midwest Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,Midwest Aviation,Midwest Aviation,long tail: not ranked,,,100,hand,wikidata
+airlines,Millennium Aviation,Millennium Aviation,long tail: not ranked,,,100,hand,wikidata
+airlines,Monarch Airlines,Monarch Air Lines,long tail: not ranked,,,100,hand,wikidata
+airlines,Mountain West Airlines-Idaho,Mountain West Airlines-Idaho,long tail: not ranked,,,100,hand,wikidata
+airlines,New England & Western Air Transportation Co.,New England & Western Air Transportation Co.,long tail: not ranked,,,100,hand,wikidata
+airlines,New England Air Transport,New England Air Transport,long tail: not ranked,,,100,hand,wikidata
+airlines,North Pacific Airlines,North Pacific Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Platinum Airlines,Platinum Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Pride Air,Pride Air,long tail: not ranked,,,100,hand,wikidata
+airlines,Provincetown-Boston Airlines,Provincetown-Boston Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Red Baron Airlines,Red Baron Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Regentair,Regent Air,long tail: not ranked,,,100,hand,wikidata
+airlines,Rio Airways,Rio Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,SATSair,SATSair,long tail: not ranked,,,100,hand,wikidata
+airlines,SeaCoast Airlines,SeaCoast Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Southeastern Airlines,Southeastern Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Southern Skyways,Southern Skyways,long tail: not ranked,,,100,hand,wikidata
+airlines,Southwest Air Fast Express,Southwest Air Fast Express,long tail: not ranked,,,100,hand,wikidata
+airlines,Standard Air Lines,Standard Air Lines,long tail: not ranked,,,100,hand,wikidata
 airlines,Stol Air Commuter,Stol Air Commuter,long tail: not ranked,,,100,hand,wikidata
 airlines,Stout Air Services,Stout Air Services,long tail: not ranked,,,100,hand,wikidata
 airlines,SunCoast Airlines,SunCoast Airlines,long tail: not ranked,,,100,hand,wikidata
@@ -508,34 +531,6 @@ airlines,Shoreline Aviation,Shoreline Aviation,long tail: not ranked,,,100,hand,
 airlines,Aerodynamics Inc.,Aerodynamics Inc.,long tail: not ranked,,,100,hand,wikidata
 airlines,Rectrix Aviation,Rectrix Aviation,long tail: not ranked,,,100,hand,wikidata
 airlines,Boone County Airlines,Boone County Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Imperial Airlines,Imperial Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,JetAmerica,JetAmerica,long tail: not ranked,,,100,hand,wikidata
-airlines,KentuckySkies,KentuckySkies,long tail: not ranked,,,100,hand,wikidata
-airlines,Key Airlines,Key Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,MAIR Holdings,MAIR Holdings,long tail: not ranked,,,100,hand,wikidata
-airlines,Mall Airways,Mall Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Marquette Airlines,Marquette Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Mayflower Airlines,Mayflower Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Midwest Airways,Midwest Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,Midwest Aviation,Midwest Aviation,long tail: not ranked,,,100,hand,wikidata
-airlines,Millennium Aviation,Millennium Aviation,long tail: not ranked,,,100,hand,wikidata
-airlines,Monarch Airlines,Monarch Air Lines,long tail: not ranked,,,100,hand,wikidata
-airlines,Mountain West Airlines-Idaho,Mountain West Airlines-Idaho,long tail: not ranked,,,100,hand,wikidata
-airlines,New England & Western Air Transportation Co.,New England & Western Air Transportation Co.,long tail: not ranked,,,100,hand,wikidata
-airlines,New England Air Transport,New England Air Transport,long tail: not ranked,,,100,hand,wikidata
-airlines,North Pacific Airlines,North Pacific Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Platinum Airlines,Platinum Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Pride Air,Pride Air,long tail: not ranked,,,100,hand,wikidata
-airlines,Provincetown-Boston Airlines,Provincetown-Boston Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Red Baron Airlines,Red Baron Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Regentair,Regent Air,long tail: not ranked,,,100,hand,wikidata
-airlines,Rio Airways,Rio Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,SATSair,SATSair,long tail: not ranked,,,100,hand,wikidata
-airlines,SeaCoast Airlines,SeaCoast Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Southeastern Airlines,Southeastern Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,Southern Skyways,Southern Skyways,long tail: not ranked,,,100,hand,wikidata
-airlines,Southwest Air Fast Express,Southwest Air Fast Express,long tail: not ranked,,,100,hand,wikidata
-airlines,Standard Air Lines,Standard Air Lines,long tail: not ranked,,,100,hand,wikidata
 airlines,Wheeler Airlines,Wheeler Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Wyoming Airlines,Wyoming Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Lynk Air,Lynk Air,long tail: not ranked,,,100,hand,wikidata
@@ -548,10 +543,15 @@ airlines,Bowen Air Lines,Bowen Air Lines,long tail: not ranked,,,100,hand,wikida
 airlines,Dallas Express Airlines,Dallas Express Airlines,long tail: not ranked,,,100,hand,wikidata
 airlines,Air North,Fort Yukon Air Service,long tail: not ranked,,,100,hand,wikidata
 airlines,Yute Commuter Service,Yute Commuter Service,long tail: not ranked,,,100,hand,wikidata
-airlines,Kitty Hawk Airways,Kitty Hawk Airways,long tail: not ranked,,,100,hand,wikidata
-airlines,L'Express Airlines,L'Express Airlines,long tail: not ranked,,,100,hand,wikidata
-airlines,National Air Transport,National Air Transport,long tail: not ranked,,,100,hand,wikidata
-airlines,National Parks Airways,National Parks Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,People and Pets Dog Airlines,People and Pets Dog Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Baltia Airlines,USGlobal Airways,long tail: not ranked,,,100,hand,wikidata
+airlines,AccessAir,AccessAir,long tail: not ranked,,,100,hand,wikidata
+airlines,Mercer Airlines,Mercer Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Sunbird Airlines,Sunbird Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Universal Air Lines,Universal Air Lines Corporation,long tail: not ranked,,,100,hand,wikidata
+airlines,Pro Air,Pro Air,long tail: not ranked,,,100,hand,wikidata
+airlines,Wings West Airlines,Wings West Airlines,long tail: not ranked,,,100,hand,wikidata
+airlines,Gilpin Airlines,Gilpin Airlines,long tail: not ranked,,,100,hand,wikidata
 amwords,Elevator,Elevator,hand tiers,,,10,hand,hand
 amwords,Apartment,Apartment,hand tiers,,,10,hand,hand
 amwords,Cookie,Cookie,hand tiers,,,10,hand,hand
@@ -559,52 +559,93 @@ amwords,French fries,French fries,hand tiers,,,10,hand,hand
 amwords,Truck,Truck,hand tiers,,,10,hand,hand
 amwords,Sidewalk,Sidewalk,hand tiers,,,10,hand,hand
 amwords,Pants,Pants,hand tiers,,,10,hand,hand
-amwords,Trash,Trash,hand tiers,,,25,hand,hand
-amwords,Gas,Gas,hand tiers,,,25,hand,hand
-amwords,Vacation,Vacation,hand tiers,,,25,hand,hand
-amwords,Soccer,Soccer,hand tiers,,,25,hand,hand
-amwords,Candy,Candy,hand tiers,,,25,hand,hand
+amwords,Trash,Trash,hand tiers,,,10,hand,hand
+amwords,Gas,Gas,hand tiers,,,10,hand,hand
+amwords,Vacation,Vacation,hand tiers,,,10,hand,hand
+amwords,Soccer,Soccer,hand tiers,,,10,hand,hand
+amwords,Candy,Candy,hand tiers,,,10,hand,hand
 amwords,Diaper,Diaper,hand tiers,,,25,hand,hand
 amwords,Flashlight,Flashlight,hand tiers,,,25,hand,hand
 amwords,Parking lot,Parking lot,hand tiers,,,25,hand,hand
-amwords,Zucchini,Zucchini,hand tiers,,,40,hand,hand
-amwords,Eggplant,Eggplant,hand tiers,,,40,hand,hand
-amwords,Cell phone,Cell phone,hand tiers,,,40,hand,hand
-amwords,Sweater,Sweater,hand tiers,,,40,hand,hand
-amwords,Faucet,Faucet,hand tiers,,,40,hand,hand
-amwords,Restroom,Restroom,hand tiers,,,40,hand,hand
-amwords,Line,Line,hand tiers,,,40,hand,hand
-amwords,Fall,Fall,hand tiers,,,40,hand,hand
-amwords,Mail,Mail,hand tiers,,,40,hand,hand
-amwords,Hood,Hood,hand tiers,,,40,hand,hand
-amwords,Trunk,Trunk,hand tiers,,,40,hand,hand
-amwords,Windshield,Windshield,hand tiers,,,60,hand,hand
-amwords,Freeway,Freeway,hand tiers,,,60,hand,hand
-amwords,Stroller,Stroller,hand tiers,,,60,hand,hand
-amwords,Pacifier,Pacifier,hand tiers,,,60,hand,hand
-amwords,Drugstore,Drugstore,hand tiers,,,60,hand,hand
-amwords,Eraser,Eraser,hand tiers,,,60,hand,hand
-amwords,Check,Check,hand tiers,,,60,hand,hand
-amwords,Cilantro,Cilantro,hand tiers,,,60,hand,hand
-amwords,Jell-O,Jell-O,hand tiers,,,60,hand,hand
-amwords,Popsicle,Popsicle,hand tiers,,,60,hand,hand
-amwords,Band-Aid,Band-Aid,hand tiers,,,60,hand,hand
-amwords,Bangs,Bangs,hand tiers,,,80,hand,hand
-amwords,Sneakers,Sneakers,hand tiers,,,80,hand,hand
-amwords,Suspenders,Suspenders,hand tiers,,,80,hand,hand
-amwords,Vest,Vest,hand tiers,,,80,hand,hand
-amwords,Closet,Closet,hand tiers,,,80,hand,hand
-amwords,Period,Period,hand tiers,,,80,hand,hand
-amwords,Zip code,Zip code,hand tiers,,,80,hand,hand
-amwords,Overpass,Overpass,hand tiers,,,80,hand,hand
-amwords,Turn signal,Turn signal,hand tiers,,,80,hand,hand
-amwords,Tic-tac-toe,Tic-tac-toe,hand tiers,,,100,hand,hand
-amwords,Arugula,Arugula,hand tiers,,,100,hand,hand
-amwords,Scallion,Scallion,hand tiers,,,100,hand,hand
-amwords,Realtor,Realtor,hand tiers,,,100,hand,hand
-amwords,Broil,Broil,hand tiers,,,100,hand,hand
-amwords,Fanny pack,Fanny pack,hand tiers,,,100,hand,hand
-amwords,Molasses,Molasses,hand tiers,,,100,hand,hand
+amwords,Zucchini,Zucchini,hand tiers,,,25,hand,hand
+amwords,Eggplant,Eggplant,hand tiers,,,25,hand,hand
+amwords,Cell phone,Cell phone,hand tiers,,,25,hand,hand
+amwords,Sweater,Sweater,hand tiers,,,25,hand,hand
+amwords,Faucet,Faucet,hand tiers,,,25,hand,hand
+amwords,Restroom,Restroom,hand tiers,,,25,hand,hand
+amwords,Line,Line,hand tiers,,,25,hand,hand
+amwords,Fall,Fall,hand tiers,,,25,hand,hand
+amwords,Mail,Mail,hand tiers,,,25,hand,hand
+amwords,Hood,Hood,hand tiers,,,25,hand,hand
+amwords,Trunk,Trunk,hand tiers,,,25,hand,hand
+amwords,Windshield,Windshield,hand tiers,,,25,hand,hand
+amwords,Freeway,Freeway,hand tiers,,,40,hand,hand
+amwords,Stroller,Stroller,hand tiers,,,40,hand,hand
+amwords,Pacifier,Pacifier,hand tiers,,,40,hand,hand
+amwords,Drugstore,Drugstore,hand tiers,,,40,hand,hand
+amwords,Eraser,Eraser,hand tiers,,,40,hand,hand
+amwords,Check,Check,hand tiers,,,40,hand,hand
+amwords,Cilantro,Cilantro,hand tiers,,,40,hand,hand
+amwords,Jell-O,Jell-O,hand tiers,,,40,hand,hand
+amwords,Popsicle,Popsicle,hand tiers,,,40,hand,hand
+amwords,Band-Aid,Band-Aid,hand tiers,,,40,hand,hand
+amwords,Bangs,Bangs,hand tiers,,,40,hand,hand
+amwords,Sneakers,Sneakers,hand tiers,,,40,hand,hand
+amwords,Suspenders,Suspenders,hand tiers,,,40,hand,hand
+amwords,Vest,Vest,hand tiers,,,40,hand,hand
+amwords,Closet,Closet,hand tiers,,,40,hand,hand
+amwords,Period,Period,hand tiers,,,40,hand,hand
+amwords,Zip code,Zip code,hand tiers,,,40,hand,hand
+amwords,Overpass,Overpass,hand tiers,,,40,hand,hand
+amwords,Turn signal,Turn signal,hand tiers,,,40,hand,hand
+amwords,Tic-tac-toe,Tic-tac-toe,hand tiers,,,60,hand,hand
+amwords,Arugula,Arugula,hand tiers,,,60,hand,hand
+amwords,Scallion,Scallion,hand tiers,,,60,hand,hand
+amwords,Realtor,Realtor,hand tiers,,,60,hand,hand
+amwords,Broil,Broil,hand tiers,,,60,hand,hand
+amwords,Fanny pack,Fanny pack,hand tiers,,,60,hand,hand
+amwords,Molasses,Molasses,hand tiers,,,60,hand,hand
+amwords,Chips,Chips,hand tiers,,,60,hand,hand
+amwords,Mailman,Mailman,hand tiers,,,60,hand,hand
+amwords,Garbage can,Garbage can,hand tiers,,,60,hand,hand
+amwords,Ground beef,Ground beef,hand tiers,,,60,hand,hand
+amwords,Movie theater,Movie theater,hand tiers,,,60,hand,hand
+amwords,Highway,Highway,hand tiers,,,60,hand,hand
+amwords,Subway,Subway (restaurant),hand tiers,,,60,hand,hand
+amwords,Gas station,Gas station,hand tiers,,,60,hand,hand
+amwords,Takeout,Takeout,hand tiers,,,60,hand,hand
+amwords,Bathroom,Bathroom,hand tiers,,,60,hand,hand
+amwords,Napkin,Napkin,hand tiers,,,60,hand,hand
+amwords,Jelly,Jelly,hand tiers,,,80,hand,hand
+amwords,Math,Math,hand tiers,,,80,hand,hand
+amwords,Undershirt,Undershirt,hand tiers,,,80,hand,hand
+amwords,Panties,Panties,hand tiers,,,80,hand,hand
+amwords,Tuxedo,Tuxedo,hand tiers,,,80,hand,hand
+amwords,Pantyhose,Pantyhose,hand tiers,,,80,hand,hand
+amwords,Wrench,Wrench,hand tiers,,,80,hand,hand
+amwords,Fender,Fender,hand tiers,,,80,hand,hand
+amwords,Detour,Detour,hand tiers,,,80,hand,hand
+amwords,Crosswalk,Crosswalk,hand tiers,,,80,hand,hand
+amwords,Mom,Mom,hand tiers,,,80,hand,hand
+amwords,Can,Can,hand tiers,,,80,hand,hand
+amwords,Pitcher,Pitcher,hand tiers,,,80,hand,hand
+amwords,Stove,Stove,hand tiers,,,80,hand,hand
+amwords,Counterclockwise,Counterclockwise,hand tiers,,,80,hand,hand
+amwords,Semester,Semester,hand tiers,,,80,hand,hand
+amwords,Résumé,Résumé,hand tiers,,,80,hand,hand
+amwords,Attorney,Attorney,hand tiers,,,100,hand,hand
+amwords,Cotton candy,Cotton candy,hand tiers,,,100,hand,hand
+amwords,Cart,Cart,hand tiers,,,100,hand,hand
+amwords,Gotten,Gotten,hand tiers,,,100,hand,hand
+amwords,Sophomore,Sophomore,hand tiers,,,100,hand,hand
+amwords,Daylight saving time,Daylight saving time,hand tiers,,,100,hand,hand
+amwords,Rain check,Rain check,hand tiers,,,100,hand,hand
+amwords,Bill,Bill,hand tiers,,,100,hand,hand
+amwords,Teller,Teller,hand tiers,,,100,hand,hand
+amwords,Kindergarten,Kindergarten,hand tiers,,,100,hand,hand
+amwords,Dumpster,Dumpster,hand tiers,,,100,hand,hand
+amwords,Hood ornament,Hood ornament,hand tiers,,,100,hand,hand
+amwords,Cell,Cell,hand tiers,,,100,hand,hand
 atlantic,Florida,Florida,ok,3048888,0.000,10,views,hand
 atlantic,New York,New York (state),ok,2947968,0.099,10,views,hand
 atlantic,Massachusetts,Massachusetts,ok,2737392,0.195,10,views,hand
@@ -628,12 +669,12 @@ beer,Pabst Blue Ribbon,Pabst Blue Ribbon,ok,327456,0.376,25,views,hand
 beer,Coors,Coors Brewing Company,ok,316080,0.415,25,views,wikidata
 beer,Blue Moon,Blue moon,ok,309120,0.452,25,views,hand
 beer,Miller,Miller Brewing Company,ok,286920,0.488,25,views,wikidata
-beer,Schlitz,Joseph Schlitz Brewing Company,ok,271752,0.521,40,views,hand
+beer,Schlitz,Joseph Schlitz Brewing Company,ok,271752,0.522,40,views,hand
 beer,Pabst Brewing Company,Pabst Brewing Company,ok,267144,0.553,40,views,wikidata
-beer,Miller Lite,Miller Lite,ok,167400,0.584,40,views,hand
+beer,Miller Lite,Miller Lite,ok,167400,0.585,40,views,hand
 beer,Coors Light,Coors Light,ok,150312,0.604,40,views,hand
 beer,Rolling Rock,Rolling Rock,ok,135024,0.622,40,views,hand
-beer,Hamm's,Hamm's Brewery,ok,126048,0.637,40,views,hand
+beer,Hamm's,Hamm's Brewery,ok,126048,0.638,40,views,hand
 beer,Stroh's,Stroh Brewery Company,ok,120792,0.652,40,views,hand
 beer,Boston Beer Company,Boston Beer Company,ok,118008,0.666,40,views,wikidata
 beer,Grain Belt,Corn Belt,ok,116088,0.680,40,views,hand
@@ -641,13 +682,13 @@ beer,BJ's Restaurant & Brewery,BJ's Restaurants,ok,110760,0.694,40,views,wikidat
 beer,Busch,Anheuser-Busch brands,shares page with Bud Light,0,,40,hand,hand
 beer,New Belgium Brewing Company,New Belgium Brewing Company,ok,94320,0.707,60,views,wikidata
 beer,Anchor Steam,Anchor Brewing Company,ok,92400,0.718,60,views,wikidata
-beer,Olympia,Olympia Brewing Company,ok,81096,0.728,60,views,hand
+beer,Olympia,Olympia Brewing Company,ok,81096,0.729,60,views,hand
 beer,Sierra Nevada Brewing Company,Sierra Nevada Brewing Company,ok,75120,0.738,60,views,wikidata
 beer,Lone Star,Lone Star Brewing Company,ok,73704,0.747,60,views,wikidata
-beer,Ballantine Brewery,P. Ballantine and Sons Brewing Company,ok,72672,0.755,60,views,wikidata
+beer,Ballantine Brewery,P. Ballantine and Sons Brewing Company,ok,72672,0.756,60,views,wikidata
 beer,Jacob Leinenkugel Brewing Company,Leinenkugel's,ok,67848,0.764,60,views,wikidata
 beer,Old Milwaukee,Old Milwaukee,ok,65208,0.772,60,views,hand
-beer,Goose Island,Goose Island Brewery,ok,62760,0.779,60,views,wikidata
+beer,Goose Island,Goose Island Brewery,ok,62760,0.780,60,views,wikidata
 beer,Dogfish Head,Dogfish Head Brewery,ok,62568,0.787,60,views,wikidata
 beer,Natural Light,Natural Light,ok,60216,0.794,60,views,hand
 beer,Shiner Bock,Spoetzl Brewery,ok,59736,0.801,60,views,wikidata
@@ -655,84 +696,84 @@ beer,Lagunitas,Lagunitas Brewing Company,ok,59496,0.808,60,views,wikidata
 beer,Athletic Brewing Company,Athletic Brewing Company,ok,58728,0.815,60,views,wikidata
 beer,Firestone Walker Brewing Company,Firestone Walker Brewing Company,ok,49896,0.822,60,views,wikidata
 beer,Narragansett,Narragansett Brewing Company,ok,46992,0.828,60,views,hand
-beer,Keystone,Keystone (beer brand),ok,45264,0.833,60,views,hand
+beer,Keystone,Keystone (beer brand),ok,45264,0.834,60,views,hand
 beer,Brooklyn Lager,Brooklyn Brewery,ok,44976,0.839,60,views,wikidata
 beer,Kona Brewing Company,Kona Brewing Company,ok,44880,0.844,60,views,wikidata
 beer,Bell's,Bell's Brewery,ok,44424,0.849,60,views,wikidata
-beer,Stone Brewing Company,Stone Brewing Co.,ok,41640,0.854,80,views,wikidata
+beer,Stone Brewing Company,Stone Brewing Co.,ok,41640,0.855,80,views,wikidata
 beer,Adolph Coors Company,Adolph Coors Company,ok,41424,0.859,80,views,wikidata
 beer,Ballast Point Brewing Company,Ballast Point Brewing Company,ok,40800,0.864,80,views,wikidata
 beer,Genesee,Genesee Brewing Company,ok,40320,0.869,80,views,wikidata
 beer,Tree House Brewing Company,Tree House Brewing Company,ok,38160,0.874,80,views,wikidata
 beer,Valentin Blatz Brewing Company,Valentin Blatz Brewing Company,ok,37632,0.878,80,views,wikidata
-beer,Milwaukee's Best,Milwaukee's Best,ok,34464,0.882,80,views,hand
-beer,City Brewing Company,City Brewing Company,ok,33744,0.886,80,views,wikidata
-beer,Iron City,Iron City Brewing Company,ok,33624,0.890,80,views,hand
-beer,New Glarus Brewing Company,New Glarus Brewing Company,ok,33144,0.894,80,views,wikidata
+beer,Milwaukee's Best,Milwaukee's Best,ok,34464,0.883,80,views,hand
+beer,City Brewing Company,City Brewing Company,ok,33744,0.887,80,views,wikidata
+beer,Iron City,Iron City Brewing Company,ok,33624,0.891,80,views,hand
+beer,New Glarus Brewing Company,New Glarus Brewing Company,ok,33144,0.895,80,views,wikidata
 beer,Henry Weinhard's,Henry Weinhard's,ok,29928,0.898,80,views,wikidata
 beer,Founders,Founders Brewing Company,ok,29808,0.902,80,views,wikidata
 beer,Minhas Craft Brewery,Minhas Craft Brewery,ok,28656,0.905,80,views,wikidata
 beer,Deschutes Brewery,Deschutes Brewery,ok,26472,0.909,80,views,wikidata
 beer,Flying Dog Brewery,Flying Dog Brewery,ok,23424,0.912,80,views,wikidata
-beer,Elysian Brewing Company,Elysian Brewing Company,ok,22608,0.914,80,views,wikidata
+beer,Elysian Brewing Company,Elysian Brewing Company,ok,22608,0.915,80,views,wikidata
 beer,Rogue Ales,Rogue Ales,ok,22584,0.917,80,views,wikidata
 beer,Christian Schmidt Brewing Company,Christian Schmidt Brewing Company,ok,21216,0.920,80,views,wikidata
 beer,Real American Beer,Real American Beer,ok,19728,0.922,80,views,wikidata
-beer,Great Lakes Brewing Company,Great Lakes Brewing Company,ok,18792,0.924,80,views,wikidata
+beer,Great Lakes Brewing Company,Great Lakes Brewing Company,ok,18792,0.925,80,views,wikidata
 beer,Allagash Brewing Company,Allagash Brewing Company,ok,16608,0.927,80,views,wikidata
 beer,Boulevard Brewing Company,Boulevard Brewing Company,ok,16128,0.929,80,views,wikidata
-beer,Victory Brewing Company,Victory Brewing Company,ok,16056,0.930,80,views,wikidata
-beer,Three Floyds Brewing,Three Floyds Brewing,ok,15576,0.932,80,views,wikidata
+beer,Victory Brewing Company,Victory Brewing Company,ok,16056,0.931,80,views,wikidata
+beer,Three Floyds Brewing,Three Floyds Brewing,ok,15576,0.933,80,views,wikidata
 beer,The Old Brewery,The Old Brewery,ok,15144,0.934,80,views,wikidata
 beer,Haffenreffer Brewery,Haffenreffer Brewery,ok,15000,0.936,80,views,wikidata
 beer,National Brewing Company,National Brewing Company,ok,14256,0.938,80,views,wikidata
-beer,Oskar Blues Brewery,Oskar Blues Brewery,ok,13872,0.939,80,views,wikidata
+beer,Oskar Blues Brewery,Oskar Blues Brewery,ok,13872,0.940,80,views,wikidata
 beer,Magic Hat Brewing Company,Magic Hat Brewing Company,ok,13848,0.941,80,views,wikidata
 beer,Harpoon Brewery,Harpoon Brewery,ok,13536,0.943,80,views,wikidata
-beer,Craft Brew Alliance,Craft Brew Alliance,ok,13008,0.944,80,views,wikidata
+beer,Craft Brew Alliance,Craft Brew Alliance,ok,13008,0.945,80,views,wikidata
 beer,Brewery Ommegang,Brewery Ommegang,ok,12552,0.946,80,views,wikidata
-beer,Pete's Brewing Company,Pete's Brewing Company,ok,11880,0.947,80,views,wikidata
-beer,Karl Strauss Brewing Company,Karl Strauss Brewing Company,ok,11472,0.949,80,views,wikidata
-beer,Duquesne Brewing Company,Duquesne Brewing Company,ok,11448,0.950,80,views,wikidata
-beer,Anheuser-Busch Brewery,Anheuser-Busch Brewery,ok,11136,0.951,100,views,wikidata
-beer,Joseph Huber Brewing Company,Joseph Huber Brewing Company,ok,11136,0.953,100,views,wikidata
-beer,F. & M. Schaefer Brewing Company,F. & M. Schaefer Brewing Company,ok,11064,0.954,100,views,wikidata
-beer,Surly Brewing Company,Surly Brewing Company,ok,10560,0.955,100,views,wikidata
-beer,Pabst Brewery Complex,Pabst Brewery Complex,ok,10416,0.956,100,views,wikidata
-beer,Saint Arnold Brewing Company,Saint Arnold Brewing Company,ok,10200,0.958,100,views,wikidata
-beer,Breckenridge Brewery,Breckenridge Brewery,ok,9984,0.959,100,views,wikidata
-beer,Four Peaks Brewery,Four Peaks Brewery,ok,9984,0.960,100,views,wikidata
-beer,21st Amendment Brewery,21st Amendment Brewery,ok,9864,0.961,100,views,wikidata
-beer,Widmer Brothers Brewery,Widmer Brothers Brewery,ok,9648,0.962,100,views,wikidata
-beer,Left Hand Brewing Company,Left Hand Brewing Company,ok,9528,0.963,100,views,wikidata
-beer,Christian Moerlein Brewing Co.,Christian Moerlein Brewing Co.,ok,9456,0.965,100,views,wikidata
-beer,Stevens Point Brewery,Stevens Point Brewery,ok,9384,0.966,100,views,wikidata
-beer,Rhinegeist,Rhinegeist,ok,9360,0.967,100,views,wikidata
-beer,Green Flash Brewing Company,Green Flash Brewing Company,ok,8952,0.968,100,views,wikidata
+beer,Karl Strauss Brewing Company,Karl Strauss Brewing Company,ok,11472,0.947,80,views,wikidata
+beer,Duquesne Brewing Company,Duquesne Brewing Company,ok,11448,0.949,80,views,wikidata
+beer,Anheuser-Busch Brewery,Anheuser-Busch Brewery,ok,11136,0.950,100,views,wikidata
+beer,Joseph Huber Brewing Company,Joseph Huber Brewing Company,ok,11136,0.951,100,views,wikidata
+beer,F. & M. Schaefer Brewing Company,F. & M. Schaefer Brewing Company,ok,11064,0.953,100,views,wikidata
+beer,Surly Brewing Company,Surly Brewing Company,ok,10560,0.954,100,views,wikidata
+beer,Pabst Brewery Complex,Pabst Brewery Complex,ok,10416,0.955,100,views,wikidata
+beer,Saint Arnold Brewing Company,Saint Arnold Brewing Company,ok,10200,0.957,100,views,wikidata
+beer,Breckenridge Brewery,Breckenridge Brewery,ok,9984,0.958,100,views,wikidata
+beer,Four Peaks Brewery,Four Peaks Brewery,ok,9984,0.959,100,views,wikidata
+beer,21st Amendment Brewery,21st Amendment Brewery,ok,9864,0.960,100,views,wikidata
+beer,Widmer Brothers Brewery,Widmer Brothers Brewery,ok,9648,0.961,100,views,wikidata
+beer,Left Hand Brewing Company,Left Hand Brewing Company,ok,9528,0.962,100,views,wikidata
+beer,Christian Moerlein Brewing Co.,Christian Moerlein Brewing Co.,ok,9456,0.963,100,views,wikidata
+beer,Stevens Point Brewery,Stevens Point Brewery,ok,9384,0.965,100,views,wikidata
+beer,Rhinegeist,Rhinegeist,ok,9360,0.966,100,views,wikidata
+beer,Green Flash Brewing Company,Green Flash Brewing Company,ok,8952,0.967,100,views,wikidata
+beer,Blue Point Brewing Company,Blue Point Brewing Company,ok,8640,0.968,100,views,wikidata
 beer,Evil Twin Brewing,Evil Twin Brewing,ok,8520,0.969,100,views,wikidata
-beer,Revolution Brewing,Revolution Brewing,ok,8352,0.970,100,views,wikidata
-beer,Fat Head's Brewery,Fat Head's Brewery,ok,8208,0.971,100,views,wikidata
-beer,Tivoli Brewery Company,Tivoli Brewery Company (building),ok,7632,0.972,100,views,wikidata
-beer,Alaskan Brewing Company,Alaskan Brewing Company,ok,7536,0.973,100,views,wikidata
-beer,New Holland Brewing Company,New Holland Brewing Company,ok,7344,0.974,100,views,wikidata
-beer,Odell Brewing Company,Odell Brewing Company,ok,7032,0.974,100,views,wikidata
+beer,Fat Head's Brewery,Fat Head's Brewery,ok,8208,0.970,100,views,wikidata
+beer,Tivoli Brewery Company,Tivoli Brewery Company (building),ok,7632,0.971,100,views,wikidata
+beer,Alaskan Brewing Company,Alaskan Brewing Company,ok,7536,0.972,100,views,wikidata
+beer,New Holland Brewing Company,New Holland Brewing Company,ok,7344,0.973,100,views,wikidata
+beer,Odell Brewing Company,Odell Brewing Company,ok,7032,0.973,100,views,wikidata
+beer,BridgePort Brewing Company,BridgePort Brewing Company,ok,6912,0.974,100,views,wikidata
 beer,North Coast Brewing Company,North Coast Brewing Company,ok,6840,0.975,100,views,wikidata
 beer,Holy Cow Casino and Brewery,Holy Cow Casino and Brewery,ok,6816,0.976,100,views,wikidata
 beer,Weinhard Brewery Complex,Weinhard Brewery Complex,ok,6312,0.977,100,views,wikidata
+beer,Alpine Beer Company,Alpine Beer Company,ok,5976,0.977,100,views,wikidata
 beer,"Lakefront Brewery, Inc.",Lakefront Brewery,ok,5832,0.978,100,views,wikidata
-beer,Gunther Brewing Company,Gunther Brewing Company,ok,5832,0.978,100,views,wikidata
+beer,Gunther Brewing Company,Gunther Brewing Company,ok,5832,0.979,100,views,wikidata
 beer,Sun King Brewing,Sun King Brewing,ok,5760,0.979,100,views,wikidata
 beer,Dubuque Star Brewery,Dubuque Star Brewery,ok,5712,0.980,100,views,wikidata
-beer,Conrad Seipp Brewing Company,Conrad Seipp Brewing Company,ok,5304,0.980,100,views,wikidata
+beer,Conrad Seipp Brewing Company,Conrad Seipp Brewing Company,ok,5304,0.981,100,views,wikidata
 beer,Smuttynose Brewing Company,Smuttynose Brewing Company,ok,5232,0.981,100,views,wikidata
 beer,Bosch Brewing Company,Bosch Brewing Company,ok,5016,0.982,100,views,wikidata
-beer,Yakima Brewing,Yakima Brewing,ok,5016,0.982,100,views,wikidata
+beer,Yakima Brewing,Yakima Brewing,ok,5016,0.983,100,views,wikidata
 beer,Heurich Brewery,Christian Heurich Brewing Company,ok,4944,0.983,100,views,wikidata
-beer,Hill Farmstead Brewery,Hill Farmstead Brewery,ok,4824,0.983,100,views,wikidata
-beer,Vennture Brew Company,Vennture Brew Company,ok,4800,0.984,100,views,wikidata
+beer,Hill Farmstead Brewery,Hill Farmstead Brewery,ok,4824,0.984,100,views,wikidata
 beer,Fitger Brewing Company,Fitger's Brewing Company,ok,4776,0.984,100,views,wikidata
 beer,Upland Brewing Company,Upland Brewing Company,ok,4752,0.985,100,views,wikidata
-beer,Fremont Brewing,Fremont Brewing,ok,4680,0.986,100,views,wikidata
+beer,Fremont Brewing,Fremont Brewing,ok,4680,0.985,100,views,wikidata
 beer,Neuweiler Brewery,Neuweiler Brewery,ok,4512,0.986,100,views,wikidata
 beer,AleSmith Brewing Company,AleSmith Brewing Company,ok,4488,0.987,100,views,wikidata
 beer,Bavarian Brewing Company,Bavarian Brewing Company,ok,4416,0.987,100,views,wikidata
@@ -740,138 +781,70 @@ beer,Blackrocks Brewery,Blackrocks Brewery,ok,4392,0.988,100,views,wikidata
 beer,Anderson Valley Brewing Company,Anderson Valley Brewing Company,ok,4176,0.988,100,views,wikidata
 beer,Albion Brewery,Albion Brewery,ok,3720,0.989,100,views,wikidata
 beer,Hair of the Dog Brewing Company,Hair of the Dog Brewing Company,ok,3696,0.989,100,views,wikidata
-beer,Fort Pitt Brewing Company,Fort Pitt Brewing Company,ok,3648,0.990,100,views,wikidata
-beer,Indeed Brewing Company,Indeed Brewing Company,ok,3432,0.990,100,views,wikidata
+beer,Indeed Brewing Company,Indeed Brewing Company,ok,3432,0.989,100,views,wikidata
 beer,pFriem Family Brewers,PFriem Family Brewers,ok,3384,0.990,100,views,wikidata
-beer,The Bruery,The Bruery,ok,3264,0.991,100,views,wikidata
+beer,Captain Lawrence Brewing Company,Captain Lawrence Brewing Company,ok,3360,0.990,100,views,wikidata
 beer,Mission Brewery,Mission Brewery Plaza,ok,2856,0.991,100,views,wikidata
-beer,Indianapolis Brewing Company,Indianapolis Brewing Company,ok,2784,0.992,100,views,wikidata
-beer,John F. Wiessner & Sons,J. F. Wiessner & Sons,ok,2640,0.992,100,views,wikidata
+beer,Indianapolis Brewing Company,Indianapolis Brewing Company,ok,2784,0.991,100,views,wikidata
+beer,John F. Wiessner & Sons,J. F. Wiessner & Sons,ok,2640,0.991,100,views,wikidata
 beer,Dock Street Brewing Company,Dock Street Brewing Company,ok,2568,0.992,100,views,wikidata
-beer,Tired Hands Brewing Company,Tired Hands Brewing Company,ok,2568,0.992,100,views,wikidata
-beer,City Park Brewery,City Park Brewery,ok,2352,0.993,100,views,wikidata
+beer,City Park Brewery,City Park Brewery,ok,2352,0.992,100,views,wikidata
+beer,"Bayern Brewing, Inc.",Bayern Brewing,ok,2304,0.992,100,views,wikidata
+beer,Boulder Beer Company,Boulder Beer Company,ok,2256,0.992,100,views,wikidata
 beer,Frederick Brewing Company,Frederick Brewing Company,ok,2160,0.993,100,views,wikidata
 beer,Ore Dock Brewing Company,Ore Dock Brewing Company,ok,2112,0.993,100,views,wikidata
-beer,Figueroa Mountain Brewing Company,Figueroa Mountain Brewing Company,ok,2064,0.994,100,views,wikidata
+beer,Brown's Brewery,Brown's Brewery,ok,2112,0.993,100,views,wikidata
+beer,Figueroa Mountain Brewing Company,Figueroa Mountain Brewing Company,ok,2064,0.993,100,views,wikidata
+beer,Capital Brewery,Capital Brewery,ok,2064,0.994,100,views,wikidata
 beer,Old Town Pizza,Old Town Pizza,ok,2016,0.994,100,views,wikidata
 beer,Tennessee Brewery,Tennessee Brewery,ok,1896,0.994,100,views,wikidata
 beer,DC Brau Brewing,DC Brau Brewing,ok,1848,0.994,100,views,wikidata
-beer,Abner-Drury Brewery,Abner-Drury Brewery,ok,1608,0.994,100,views,wikidata
+beer,Abner-Drury Brewery,Abner-Drury Brewery,ok,1608,0.995,100,views,wikidata
 beer,Michelob Ultra,Michelob ULTRA,ok,1584,0.995,100,views,wikidata
 beer,Sugar Loaf Brewery,Sugar Loaf Brewery,ok,1584,0.995,100,views,wikidata
-beer,Bent Paddle Brewing Company,Bent Paddle Brewing Company,ok,1560,0.995,100,views,wikidata
 beer,Southwestern Brewery and Ice Company,Southwestern Brewery and Ice Company,ok,1536,0.995,100,views,wikidata
 beer,Aztec Brewing Company,Aztec Brewing Company,ok,1488,0.995,100,views,wikidata
 beer,The Lembeck and Betz Eagle Brewing Company,The Lembeck and Betz Eagle Brewing Company,ok,1440,0.996,100,views,wikidata
 beer,Kamm and Schellinger Brewery,Kamm and Schellinger Brewery,ok,1416,0.996,100,views,wikidata
-beer,Hopworks Urban Brewery,Hopworks Urban Brewery,ok,1392,0.996,100,views,wikidata
 beer,American Brewing Company Plant,American Brewing Company Plant,ok,1368,0.996,100,views,wikidata
 beer,East End Brewing Company,East End Brewing Company,ok,1320,0.996,100,views,wikidata
 beer,Washington Brewery Company,Washington Brewery Company,ok,1296,0.996,100,views,wikidata
 beer,Kips Bay Brewing Company,Kips Bay Brewing Company,ok,1272,0.996,100,views,wikidata
-beer,Neshaminy Creek Brewing Company,Neshaminy Creek Brewing Company,ok,1272,0.997,100,views,wikidata
+beer,Neshaminy Creek Brewing Company,Neshaminy Creek Brewing Company,ok,1272,0.996,100,views,wikidata
 beer,Boundary Bay Brewing Company,Boundary Bay Brewing Company,ok,1200,0.997,100,views,wikidata
-beer,Hilliard's Beer,Hilliard's Beer,ok,1176,0.997,100,views,wikidata
+beer,Bluegrass Brewing Company,Bluegrass Brewing Company,ok,1200,0.997,100,views,wikidata
 beer,Blackstone Brewing Company,Blackstone Brewing Company,ok,1128,0.997,100,views,wikidata
 beer,Burnside Brewing Company,Burnside Brewing Company,ok,1104,0.997,100,views,wikidata
 beer,Lucky Labrador Brewing Company,Lucky Labrador Brewing Company,ok,1104,0.997,100,views,wikidata
+beer,Bachmann's Brewery,Bachmann's Brewery,ok,1104,0.997,100,views,wikidata
 beer,H. & J. Pfaff Brewing Company,H. & J. Pfaff Brewing Company,ok,1080,0.997,100,views,wikidata
 beer,Mount Shasta Brewing Company,Mount Shasta Brewing Company,ok,1080,0.998,100,views,wikidata
 beer,Quinnipiac Brewery,Quinnipiac Brewery,ok,1080,0.998,100,views,wikidata
-beer,Swamp Head Brewery,Swamp Head Brewery,ok,1032,0.998,100,views,wikidata
 beer,Silver Gulch Brewing & Bottling Company,Silver Gulch Brewing & Bottling Company,ok,1032,0.998,100,views,wikidata
-beer,Wayfinder Beer,Wayfinder Beer,ok,1008,0.998,100,views,wikidata
+beer,Swamp Head Brewery,Swamp Head Brewery,ok,1032,0.998,100,views,wikidata
 beer,Mayfield Brewery,Mayfield Brewery,ok,1008,0.998,100,views,wikidata
 beer,Bayou Teche Brewery,Bayou Teche Brewing,ok,1008,0.998,100,views,wikidata
+beer,Wayfinder Beer,Wayfinder Beer,ok,1008,0.998,100,views,wikidata
 beer,National Capital Brewing Company,National Capital Brewing Company,ok,984,0.998,100,views,wikidata
-beer,Black Warrior Brewing Company,Black Warrior Brewing Company,ok,984,0.999,100,views,wikidata
+beer,Cascade Lakes Brewing Company,Cascade Lakes Brewing Company,ok,984,0.999,100,views,wikidata
 beer,Highland Spring Brewery Bottling and Storage Buildings,Highland Spring Brewery Bottling and Storage Buildings,ok,936,0.999,100,views,wikidata
 beer,Peacock Brewery,Peacock Brewery,ok,912,0.999,100,views,wikidata
 beer,Melchoir Brewery and Hotel Ruins,Melchoir Brewery and Hotel Ruins,ok,864,0.999,100,views,wikidata
+beer,Blue Hills Brewery,Blue Hills Brewery,ok,816,0.999,100,views,wikidata
 beer,Union Brewery,Union Brewery (Iowa),ok,792,0.999,100,views,wikidata
-beer,Greenbush Brewing Company,Greenbush Brewing Company,ok,792,0.999,100,views,wikidata
-beer,Gigantic Brewing Company,Gigantic Brewing Company,ok,768,0.999,100,views,wikidata
 beer,Richter Brewery,Richter Brewery,ok,768,0.999,100,views,wikidata
+beer,Gigantic Brewing Company,Gigantic Brewing Company,ok,768,0.999,100,views,wikidata
 beer,Virginia Brewery,Virginia Brewery,ok,720,0.999,100,views,wikidata
+beer,Arsenal Cider House,Arsenal Cider House,ok,720,0.999,100,views,wikidata
 beer,Petaluma and Santa Rosa Railway Powerhouse,Petaluma and Santa Rosa Railway Powerhouse,ok,696,0.999,100,views,wikidata
 beer,Schmidt Brewery,Schmidt Brewery,ok,624,1.000,100,views,wikidata
 beer,Joseph Knoble Brewery,Joseph Knoble Brewery,ok,576,1.000,100,views,wikidata
 beer,Reedsburg Brewery,Reedsburg Brewery,ok,552,1.000,100,views,wikidata
 beer,Old Post Office,"Old Post Office (Pullman, Washington)",ok,528,1.000,100,views,wikidata
 beer,Middle Brow,Middle Brow (restaurant),ok,528,1.000,100,views,wikidata
-beer,Bend Brewing Company,Bend Brewing Company,ok,456,1.000,100,views,wikidata
 beer,North Fork Brewery,North Fork Brewery,ok,432,1.000,100,views,wikidata
 beer,Wieland Brewery Building,Wieland Brewery Building,ok,336,1.000,100,views,wikidata
-beer,Gnarly Cider Brewery,Gnarly Cider Brewery,ok,168,1.000,100,views,wikidata
 beer,Littig Brothers/Mengel & Klindt/Eagle Brewery,Eagle Brewery,ok,0,,100,hand,wikidata
-beer,Auburn Alehouse,Auburn Alehouse,long tail: not ranked,,,100,hand,wikidata
-beer,Dunedin Brewery,Dunedin Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,No-Li Brewhouse,No-Li Brewhouse,long tail: not ranked,,,100,hand,wikidata
-beer,Hibernia Brewing,Hibernia Brewing,long tail: not ranked,,,100,hand,wikidata
-beer,2 Towns Ciderhouse,2 Towns Ciderhouse,long tail: not ranked,,,100,hand,wikidata
-beer,Brasserie Saint James,Brasserie Saint James,long tail: not ranked,,,100,hand,wikidata
-beer,Iron Horse Brewery,Iron Horse Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,Abbey Brewing Company,Abbey Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Dangerous Man Brewing Company,Dangerous Man Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Jester King Brewery,Jester King Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,Bad Martha Brewing Company,Bad Martha Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Tallgrass Brewing Company,Tallgrass Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Dragonmead,Dragonmead,long tail: not ranked,,,100,hand,wikidata
-beer,Rogue Beard Beer,Rogue Beard Beer,long tail: not ranked,,,100,hand,wikidata
-beer,Brew Bus Brewing,Brew Bus Brewing,long tail: not ranked,,,100,hand,wikidata
-beer,Tractor Brewing Company,Tractor Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Hardywood Park Craft Brewery,Hardywood Park Craft Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,Rocket Republic Brewing Company,Rocket Republic Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Ashland Brewing Company,Ashland Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,South Shore Brewery,South Shore Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,5 Rabbit Cervecería,5 Rabbit Cervecería,long tail: not ranked,,,100,hand,wikidata
-beer,Bosque Brewing Company,Bosque Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Saint Archer Brewing,Saint Archer Brewing,long tail: not ranked,,,100,hand,wikidata
-beer,Thieme and Wagner Brewing Company,Thieme and Wagner Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Erie Brewing Company,Erie Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Market Garden Brewery,Market Garden Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,Platform Beer Company,Platform Beer Company,long tail: not ranked,,,100,hand,wikidata
-beer,Karbach Brewing Company,Karbach Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Muessel-Drewry Brewery,Muessel-Drewry Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,Superstition Meadery,Superstition Meadery,long tail: not ranked,,,100,hand,wikidata
-beer,Southern Tier Brewing Company,Southern Tier Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Latitude 42 Brewing Company,Latitude 42 Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,OpenRoad Brewery,OpenRoad Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,De Garde Brewing,De Garde Brewing,long tail: not ranked,,,100,hand,wikidata
-beer,Great South Bay Brewery,Great South Bay Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,Brew Detroit,Brew Detroit,long tail: not ranked,,,100,hand,wikidata
-beer,Metropolitan Lager Bier Brewery,Metropolitan Lager Bier Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,Big Wood Brewery,Big Wood Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,Gizmo Brew Works,Gizmo Brew Works,long tail: not ranked,,,100,hand,wikidata
-beer,Hot Springs Hotel and Brewery,Hot Springs Hotel and Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,Mother Earth Brewing Company,Mother Earth Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Jackie O's Pub & Brewery,Jackie O's Pub & Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,KettleHouse Brewing Company,KettleHouse Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Carton Brewing,Carton Brewing,long tail: not ranked,,,100,hand,wikidata
-beer,Iron Hill Brewery & Restaurant,Iron Hill Brewery & Restaurant,long tail: not ranked,,,100,hand,wikidata
-beer,Paterson Consolidated Brewing Company,Paterson Consolidated Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,SingleCut Beersmiths,SingleCut Beersmiths,long tail: not ranked,,,100,hand,wikidata
-beer,Kane Brewing,Kane Brewing,long tail: not ranked,,,100,hand,wikidata
-beer,A. Gettelman Brewing Company,A. Gettelman Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Barrel Theory Beer Company,Barrel Theory Beer Company,long tail: not ranked,,,100,hand,wikidata
-beer,Peticolas Brewing Company,Peticolas Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Calicraft,Calicraft,long tail: not ranked,,,100,hand,wikidata
-beer,Belching Beaver,Belching Beaver,long tail: not ranked,,,100,hand,wikidata
-beer,Cream City Brewing Company,Cream City Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Alpha Michigan Brewing Company,Alpha Michigan Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Alpine Beer Company,Alpine Beer Company,long tail: not ranked,,,100,hand,wikidata
-beer,Arsenal Cider House,Arsenal Cider House,long tail: not ranked,,,100,hand,wikidata
-beer,Bachmann's Brewery,Bachmann's Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,"Bayern Brewing, Inc.",Bayern Brewing,long tail: not ranked,,,100,hand,wikidata
-beer,Blue Hills Brewery,Blue Hills Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,Blue Point Brewing Company,Blue Point Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Bluegrass Brewing Company,Bluegrass Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Boulder Beer Company,Boulder Beer Company,long tail: not ranked,,,100,hand,wikidata
-beer,BridgePort Brewing Company,BridgePort Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Brown's Brewery,Brown's Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,Capital Brewery,Capital Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,Captain Lawrence Brewing Company,Captain Lawrence Brewing Company,long tail: not ranked,,,100,hand,wikidata
-beer,Cascade Lakes Brewing Company,Cascade Lakes Brewing Company,long tail: not ranked,,,100,hand,wikidata
 beer,Churchkey Can Company,Churchkey Can Company,long tail: not ranked,,,100,hand,wikidata
 beer,Cigar City Brewing,Cigar City Brewing,long tail: not ranked,,,100,hand,wikidata
 beer,Cisco Brewers,Cisco Brewers,long tail: not ranked,,,100,hand,wikidata
@@ -964,12 +937,80 @@ beer,Ninkasi Brewing Company,Ninkasi Brewing Company,long tail: not ranked,,,100
 beer,Jax Beer,Jax Brewing Company,long tail: not ranked,,,100,hand,wikidata
 beer,Empire Brewing Company,Empire Brewing Company,long tail: not ranked,,,100,hand,wikidata
 beer,Fort Collins Brewery,Fort Collins Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,Fort Pitt Brewing Company,Fort Pitt Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Greenbush Brewing Company,Greenbush Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Hilliard's Beer,Hilliard's Beer,long tail: not ranked,,,100,hand,wikidata
+beer,Bent Paddle Brewing Company,Bent Paddle Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Revolution Brewing,Revolution Brewing,long tail: not ranked,,,100,hand,wikidata
+beer,The Bruery,The Bruery,long tail: not ranked,,,100,hand,wikidata
+beer,Pete's Brewing Company,Pete's Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Tired Hands Brewing Company,Tired Hands Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Black Warrior Brewing Company,Black Warrior Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Auburn Alehouse,Auburn Alehouse,long tail: not ranked,,,100,hand,wikidata
+beer,Dunedin Brewery,Dunedin Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,No-Li Brewhouse,No-Li Brewhouse,long tail: not ranked,,,100,hand,wikidata
+beer,Hibernia Brewing,Hibernia Brewing,long tail: not ranked,,,100,hand,wikidata
+beer,2 Towns Ciderhouse,2 Towns Ciderhouse,long tail: not ranked,,,100,hand,wikidata
+beer,Brasserie Saint James,Brasserie Saint James,long tail: not ranked,,,100,hand,wikidata
+beer,Iron Horse Brewery,Iron Horse Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,Abbey Brewing Company,Abbey Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Dangerous Man Brewing Company,Dangerous Man Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Jester King Brewery,Jester King Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,Bad Martha Brewing Company,Bad Martha Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Tallgrass Brewing Company,Tallgrass Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Dragonmead,Dragonmead,long tail: not ranked,,,100,hand,wikidata
+beer,Rogue Beard Beer,Rogue Beard Beer,long tail: not ranked,,,100,hand,wikidata
+beer,Brew Bus Brewing,Brew Bus Brewing,long tail: not ranked,,,100,hand,wikidata
+beer,Tractor Brewing Company,Tractor Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Hardywood Park Craft Brewery,Hardywood Park Craft Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,Rocket Republic Brewing Company,Rocket Republic Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Ashland Brewing Company,Ashland Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,South Shore Brewery,South Shore Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,5 Rabbit Cervecería,5 Rabbit Cervecería,long tail: not ranked,,,100,hand,wikidata
+beer,Bosque Brewing Company,Bosque Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Saint Archer Brewing,Saint Archer Brewing,long tail: not ranked,,,100,hand,wikidata
+beer,Thieme and Wagner Brewing Company,Thieme and Wagner Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Erie Brewing Company,Erie Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Market Garden Brewery,Market Garden Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,Platform Beer Company,Platform Beer Company,long tail: not ranked,,,100,hand,wikidata
+beer,Karbach Brewing Company,Karbach Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Muessel-Drewry Brewery,Muessel-Drewry Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,Superstition Meadery,Superstition Meadery,long tail: not ranked,,,100,hand,wikidata
+beer,Southern Tier Brewing Company,Southern Tier Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Latitude 42 Brewing Company,Latitude 42 Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,OpenRoad Brewery,OpenRoad Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,De Garde Brewing,De Garde Brewing,long tail: not ranked,,,100,hand,wikidata
+beer,Great South Bay Brewery,Great South Bay Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,Brew Detroit,Brew Detroit,long tail: not ranked,,,100,hand,wikidata
+beer,Metropolitan Lager Bier Brewery,Metropolitan Lager Bier Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,Big Wood Brewery,Big Wood Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,Gizmo Brew Works,Gizmo Brew Works,long tail: not ranked,,,100,hand,wikidata
+beer,Hot Springs Hotel and Brewery,Hot Springs Hotel and Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,Mother Earth Brewing Company,Mother Earth Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Jackie O's Pub & Brewery,Jackie O's Pub & Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,KettleHouse Brewing Company,KettleHouse Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Carton Brewing,Carton Brewing,long tail: not ranked,,,100,hand,wikidata
+beer,Iron Hill Brewery & Restaurant,Iron Hill Brewery & Restaurant,long tail: not ranked,,,100,hand,wikidata
+beer,Paterson Consolidated Brewing Company,Paterson Consolidated Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,SingleCut Beersmiths,SingleCut Beersmiths,long tail: not ranked,,,100,hand,wikidata
+beer,Kane Brewing,Kane Brewing,long tail: not ranked,,,100,hand,wikidata
+beer,A. Gettelman Brewing Company,A. Gettelman Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Barrel Theory Beer Company,Barrel Theory Beer Company,long tail: not ranked,,,100,hand,wikidata
+beer,Peticolas Brewing Company,Peticolas Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Calicraft,Calicraft,long tail: not ranked,,,100,hand,wikidata
+beer,Belching Beaver,Belching Beaver,long tail: not ranked,,,100,hand,wikidata
+beer,Cream City Brewing Company,Cream City Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Alpha Michigan Brewing Company,Alpha Michigan Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Hopworks Urban Brewery,Hopworks Urban Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,Bend Brewing Company,Bend Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Vennture Brew Company,Vennture Brew Company,long tail: not ranked,,,100,hand,wikidata
+beer,Gnarly Cider Brewery,Gnarly Cider Brewery,long tail: not ranked,,,100,hand,wikidata
 beer,Sterling Brewers,Sterling Brewers,long tail: not ranked,,,100,hand,wikidata
-beer,Small Town Brewery,Small Town Brewery,long tail: not ranked,,,100,hand,wikidata
-beer,Asheville Brewing Company,Asheville Brewing Company,long tail: not ranked,,,100,hand,wikidata
 beer,John F. Betz & Son Brewery,John F. Betz & Son Brewery,long tail: not ranked,,,100,hand,wikidata
 beer,FIFCO USA,FIFCO USA,long tail: not ranked,,,100,hand,wikidata
 beer,Triangle Brewing Company,Triangle Brewing Company,long tail: not ranked,,,100,hand,wikidata
+beer,Small Town Brewery,Small Town Brewery,long tail: not ranked,,,100,hand,wikidata
+beer,Asheville Brewing Company,Asheville Brewing Company,long tail: not ranked,,,100,hand,wikidata
 beer,Appalachian Brewing Company,Appalachian Brewing Company,long tail: not ranked,,,100,hand,wikidata
 beer,Atlanta Brewing Co,Atlanta Brewing Company,long tail: not ranked,,,100,hand,wikidata
 beer,Eberhardt & Ober Brewery,Eberhardt and Ober Brewery,long tail: not ranked,,,100,hand,wikidata
@@ -990,47 +1031,83 @@ canada,New Hampshire,New Hampshire,ok,1525680,0.864,80,views,hand
 canada,Idaho,Idaho,ok,1366608,0.916,80,views,hand
 canada,North Dakota,North Dakota,ok,1060608,0.964,100,views,hand
 candy,M&M's,M&M's,ok,809904,0.000,10,views,hand
-candy,Snickers,Snickers,ok,486648,0.127,10,views,hand
-candy,Reese's Peanut Butter Cups,Reese's Peanut Butter Cups,ok,415488,0.203,10,views,hand
-candy,Milky Way,Milky Way (chocolate bar),ok,274272,0.268,25,views,hand
-candy,Skittles,Skittles (confectionery),ok,272976,0.311,25,views,hand
-candy,Twix,Twix,ok,263880,0.353,25,views,hand
-candy,Swedish Fish,Swedish Fish,ok,239808,0.395,25,views,hand
-candy,Tootsie Roll,Tootsie Roll,ok,229248,0.432,25,views,hand
-candy,Butterfinger,Butterfinger,ok,221136,0.468,25,views,hand
-candy,Nerds,Nerds (candy),ok,215184,0.502,40,views,hand
-candy,Starburst,Starburst (candy),ok,200376,0.536,40,views,hand
-candy,Sour Patch Kids,Sour Patch Kids,ok,200328,0.567,40,views,hand
-candy,Jolly Rancher,Jolly Rancher,ok,191808,0.599,40,views,hand
-candy,3 Musketeers,3 Musketeers (chocolate bar),ok,183600,0.629,40,views,hand
-candy,Baby Ruth,Baby Ruth,ok,173304,0.657,40,views,hand
-candy,Necco Wafers,Necco Wafers,ok,145416,0.685,40,views,hand
-candy,PayDay,,missing,0,,40,hand,hand
-candy,Candy corn,Candy corn,ok,141912,0.707,60,views,hand
-candy,Twizzlers,Twizzlers,ok,136032,0.730,60,views,hand
-candy,Clark Bar,Clark Bar,ok,131736,0.751,60,views,hand
-candy,Hershey's Kisses,Hershey's Kisses,ok,117096,0.771,60,views,hand
-candy,Hershey's bar,Hershey bar,ok,113592,0.790,60,views,hand
-candy,Airheads,Airheads (candy),ok,112608,0.807,60,views,hand
-candy,Milk Duds,Milk Duds,ok,103464,0.825,60,views,hand
-candy,Heath,Heath bar,ok,91152,0.841,60,views,hand
-candy,Whoppers,,missing,0,,60,hand,hand
-candy,Peeps,Peeps,ok,89256,0.856,80,views,hand
-candy,100 Grand,100 Grand Bar,ok,85632,0.869,80,views,hand
-candy,Almond Joy,Almond Joy,ok,84000,0.883,80,views,hand
-candy,Mounds,Mounds (candy bar),ok,81120,0.896,80,views,hand
-candy,Charleston Chew,Charleston Chew,ok,80112,0.909,80,views,hand
-candy,Chick-O-Stick,Chick-O-Stick,ok,69000,0.921,80,views,hand
-candy,Bit-O-Honey,Bit-O-Honey,ok,63528,0.932,80,views,hand
-candy,Laffy Taffy,Laffy Taffy,ok,63000,0.942,80,views,hand
-candy,Zagnut,Zagnut,ok,50928,0.952,100,views,hand
-candy,Mary Jane,Mary Jane (candy),ok,45000,0.960,100,views,hand
-candy,Goo Goo Cluster,Goo Goo Cluster,ok,43920,0.967,100,views,hand
-candy,Sugar Daddy,Sugar Daddy (candy),ok,42624,0.974,100,views,hand
-candy,Junior Mints,Junior Mints,ok,41472,0.980,100,views,hand
-candy,Abba-Zaba,Abba-Zaba,ok,40368,0.987,100,views,hand
-candy,Mr. Goodbar,Mr. Goodbar,ok,39984,0.993,100,views,hand
+candy,Snickers,Snickers,ok,486648,0.088,10,views,hand
+candy,Reese's Peanut Butter Cups,Reese's Peanut Butter Cups,ok,415488,0.141,10,views,hand
+candy,Milky Way,Milky Way (chocolate bar),ok,274272,0.186,10,views,hand
+candy,Skittles,Skittles (confectionery),ok,272976,0.216,10,views,hand
+candy,Twix,Twix,ok,263880,0.246,10,views,hand
+candy,Smarties,Smarties,ok,262680,0.275,25,views,hand
+candy,Cotton candy,Cotton candy,ok,247152,0.303,25,views,hand
+candy,Saltwater taffy,Taffy (candy),ok,246216,0.330,25,views,hand
+candy,Swedish Fish,Swedish Fish,ok,239808,0.357,25,views,hand
+candy,Tootsie Roll,Tootsie Roll,ok,229248,0.383,25,views,hand
+candy,Butterfinger,Butterfinger,ok,221136,0.408,25,views,hand
+candy,Gobstoppers,Gobstopper,ok,220824,0.432,25,views,hand
+candy,Nerds,Nerds (candy),ok,215184,0.456,25,views,hand
+candy,Starburst,Starburst (candy),ok,200376,0.480,25,views,hand
+candy,PayDay,,missing,0,,25,hand,hand
+candy,Sour Patch Kids,Sour Patch Kids,ok,200328,0.501,40,views,hand
+candy,Jolly Rancher,Jolly Rancher,ok,191808,0.523,40,views,hand
+candy,3 Musketeers,3 Musketeers (chocolate bar),ok,183600,0.544,40,views,hand
+candy,Baby Ruth,Baby Ruth,ok,173304,0.564,40,views,hand
+candy,Reese's Pieces,Reese's Pieces,ok,167640,0.583,40,views,hand
+candy,Pez,Pez,ok,166920,0.601,40,views,hand
+candy,Life Savers,Life Savers,ok,154008,0.619,40,views,hand
+candy,Necco Wafers,Necco Wafers,ok,145416,0.636,40,views,hand
+candy,Candy corn,Candy corn,ok,141912,0.652,40,views,hand
+candy,Twizzlers,Twizzlers,ok,136032,0.667,40,views,hand
+candy,Clark Bar,Clark Bar,ok,131736,0.682,40,views,hand
+candy,Mike and Ike,Mike and Ike,ok,126072,0.696,40,views,hand
+candy,Whoppers,,missing,0,,40,hand,hand
+candy,Hershey's Kisses,Hershey's Kisses,ok,117096,0.710,60,views,hand
+candy,Jelly Belly,Jelly Belly,ok,116352,0.723,60,views,hand
+candy,Hershey's bar,Hershey bar,ok,113592,0.736,60,views,hand
+candy,Airheads,Airheads (candy),ok,112608,0.748,60,views,hand
+candy,Circus peanuts,Circus peanut,ok,109344,0.760,60,views,hand
+candy,Tootsie Pop,Tootsie Pop,ok,108216,0.772,60,views,hand
+candy,Milk Duds,Milk Duds,ok,103464,0.784,60,views,hand
+candy,Heath,Heath bar,ok,91152,0.795,60,views,hand
+candy,Rolo,Rolo,ok,90360,0.805,60,views,hand
+candy,Peeps,Peeps,ok,89256,0.815,60,views,hand
+candy,100 Grand,100 Grand Bar,ok,85632,0.825,60,views,hand
+candy,Almond Joy,Almond Joy,ok,84000,0.834,60,views,hand
+candy,Pixy Stix,Pixy Stix,ok,83760,0.843,60,views,hand
+candy,Lemonheads,,disambiguation,0,,60,hand,hand
+candy,Mounds,Mounds (candy bar),ok,81120,0.852,80,views,hand
+candy,Charleston Chew,Charleston Chew,ok,80112,0.861,80,views,hand
+candy,York Peppermint Pattie,York Peppermint Pattie,ok,74352,0.870,80,views,hand
+candy,Good & Plenty,Good & Plenty,ok,70152,0.878,80,views,hand
+candy,SweeTarts,SweeTarts,ok,69192,0.886,80,views,hand
+candy,Chick-O-Stick,Chick-O-Stick,ok,69000,0.893,80,views,hand
+candy,Bit-O-Honey,Bit-O-Honey,ok,63528,0.901,80,views,hand
+candy,Laffy Taffy,Laffy Taffy,ok,63000,0.907,80,views,hand
+candy,Fun Dip,Fun Dip,ok,59448,0.914,80,views,hand
+candy,Hot Tamales,Hot Tamales,ok,59256,0.921,80,views,hand
+candy,Runts,Runts,ok,58992,0.927,80,views,hand
+candy,Red Vines,Red Vines,ok,56856,0.934,80,views,hand
+candy,Zagnut,Zagnut,ok,50928,0.940,80,views,hand
+candy,Blow Pop,Charms Candy Company,ok,45024,0.945,80,views,hand
+candy,Atomic FireBall,,missing,0,,80,hand,hand
+candy,Whatchamacallit,,disambiguation,0,,80,hand,hand
+candy,Take 5,,disambiguation,0,,80,hand,hand
+candy,Mary Jane,Mary Jane (candy),ok,45000,0.950,100,views,hand
+candy,Goo Goo Cluster,Goo Goo Cluster,ok,43920,0.955,100,views,hand
+candy,Andes mints,Andes chocolate mints,ok,42840,0.960,100,views,hand
+candy,Sugar Daddy,Sugar Daddy (candy),ok,42624,0.965,100,views,hand
+candy,Junior Mints,Junior Mints,ok,41472,0.969,100,views,hand
+candy,Abba-Zaba,Abba-Zaba,ok,40368,0.974,100,views,hand
+candy,Mr. Goodbar,Mr. Goodbar,ok,39984,0.978,100,views,hand
+candy,Ring Pop,Ring Pop,ok,36096,0.983,100,views,hand
+candy,Push Pop,Push Pop,ok,31128,0.986,100,views,hand
+candy,Krackel,Krackel,ok,30816,0.990,100,views,hand
+candy,Cow Tales,Goetze's Candy Company,ok,23208,0.993,100,views,hand
+candy,Razzles,Razzles,ok,20640,0.996,100,views,hand
+candy,Big Hunk,Big Hunk,ok,13032,0.998,100,views,hand
 candy,Kit Kat,KitKat,ok,4032,0.999,100,views,hand
+candy,Dum Dums,Dum Dums,ok,1368,1.000,100,views,hand
+candy,Warheads,,disambiguation,0,,100,hand,hand
+candy,Boston Baked Beans,,missing,0,,100,hand,hand
+candy,Necco Sweethearts,,missing,0,,100,hand,hand
 capitals,Boston,Boston,ok,3019656,0.000,10,views,wikidata
 capitals,Atlanta,Atlanta,ok,2587920,0.069,10,views,wikidata
 capitals,Nashville,"Nashville, Tennessee",ok,1951416,0.127,10,views,wikidata
@@ -1089,97 +1166,98 @@ cars,Chevrolet,Chevrolet,ok,1073808,0.288,25,views,wikidata
 cars,Lucid,Lucid Motors,ok,1019616,0.323,25,views,wikidata
 cars,Jeep,Jeep,ok,1018752,0.356,25,views,wikidata
 cars,Cadillac,Cadillac,ok,1008744,0.389,25,views,wikidata
-cars,Chrysler,Chrysler,ok,995232,0.422,25,views,wikidata
+cars,Chrysler,Chrysler,ok,995232,0.421,25,views,wikidata
 cars,Harley-Davidson,Harley-Davidson,ok,863088,0.454,25,views,wikidata
 cars,Dodge,Dodge,ok,816168,0.482,25,views,wikidata
 cars,Buick,Buick,ok,683904,0.508,40,views,wikidata
-cars,Pontiac,Pontiac (automobile),ok,615912,0.531,40,views,hand
+cars,Pontiac,Pontiac (automobile),ok,615912,0.530,40,views,hand
 cars,Plymouth,Plymouth,ok,557808,0.550,40,views,hand
-cars,AMC,American Motors Corporation,ok,537720,0.569,40,views,wikidata
+cars,AMC,American Motors Corporation,ok,537720,0.568,40,views,wikidata
 cars,Ram,Ram Trucks,ok,514536,0.586,40,views,wikidata
-cars,Oldsmobile,Oldsmobile,ok,504936,0.603,40,views,wikidata
+cars,Oldsmobile,Oldsmobile,ok,504936,0.602,40,views,wikidata
 cars,Lincoln Motor Company,Lincoln Motor Company,ok,501576,0.619,40,views,wikidata
 cars,GMC,GMC (automobile),ok,470616,0.635,40,views,hand
 cars,Hummer,Hummer,ok,458304,0.650,40,views,hand
 cars,Studebaker,Studebaker,ok,421344,0.665,40,views,wikidata
-cars,Indian Motorcycle,Indian Motorcycle,ok,392712,0.679,40,views,wikidata
-cars,International Harvester,International Harvester,ok,383928,0.692,40,views,wikidata
+cars,Indian Motorcycle,Indian Motorcycle,ok,392712,0.678,40,views,wikidata
+cars,International Harvester,International Harvester,ok,383928,0.691,40,views,wikidata
 cars,Saturn,Saturn Corporation,ok,383208,0.704,60,views,wikidata
-cars,Fisker,Fisker Inc.,ok,374760,0.717,60,views,wikidata
-cars,Shelby,Shelby American,ok,342144,0.729,60,views,wikidata
-cars,Packard,Packard,ok,333960,0.740,60,views,hand
-cars,Edsel,Edsel,ok,309096,0.751,60,views,hand
-cars,DeLorean,DeLorean Motor Company,ok,308568,0.761,60,views,wikidata
-cars,PACCAR,Paccar,ok,276312,0.771,60,views,wikidata
-cars,Duesenberg,Duesenberg,ok,276144,0.780,60,views,wikidata
+cars,Fisker,Fisker Inc.,ok,374760,0.716,60,views,wikidata
+cars,Shelby,Shelby American,ok,342144,0.728,60,views,wikidata
+cars,Packard,Packard,ok,333960,0.739,60,views,hand
+cars,Edsel,Edsel,ok,309096,0.750,60,views,hand
+cars,DeLorean,DeLorean Motor Company,ok,308568,0.760,60,views,wikidata
+cars,PACCAR,Paccar,ok,276312,0.770,60,views,wikidata
+cars,Duesenberg,Duesenberg,ok,276144,0.779,60,views,wikidata
 cars,International,International Motors,ok,249432,0.788,60,views,wikidata
-cars,Polaris,Polaris Inc.,ok,241944,0.797,60,views,wikidata
+cars,Polaris,Polaris Inc.,ok,241944,0.796,60,views,wikidata
 cars,AM General,AM General,ok,224808,0.804,60,views,wikidata
-cars,Detroit Diesel,Detroit Diesel,ok,220488,0.812,60,views,wikidata
-cars,Willys,Willys,ok,218520,0.819,60,views,wikidata
-cars,Hudson Motor Car Company,Hudson Motor Car Company,ok,215328,0.826,60,views,wikidata
-cars,Imperial,Imperial (automobile),ok,195072,0.833,60,views,hand
+cars,Detroit Diesel,Detroit Diesel,ok,220488,0.811,60,views,wikidata
+cars,Willys,Willys,ok,218520,0.818,60,views,wikidata
+cars,Hudson Motor Car Company,Hudson Motor Car Company,ok,215328,0.825,60,views,wikidata
+cars,Imperial,Imperial (automobile),ok,195072,0.832,60,views,hand
 cars,DeSoto,DeSoto (automobile),ok,186336,0.839,60,views,hand
 cars,Tucker,Preston Tucker,ok,172536,0.845,60,views,hand
-cars,Saleen,Saleen,ok,153624,0.851,80,views,wikidata
-cars,Western Star Trucks,Western Star Trucks,ok,153096,0.856,80,views,wikidata
-cars,REO Motor Car Company,REO Motor Car Company,ok,137496,0.861,80,views,wikidata
+cars,Saleen,Saleen,ok,153624,0.850,80,views,wikidata
+cars,Western Star Trucks,Western Star Trucks,ok,153096,0.855,80,views,wikidata
+cars,REO Motor Car Company,REO Motor Car Company,ok,137496,0.860,80,views,wikidata
 cars,Nash,Nash Motors,ok,130992,0.865,80,views,wikidata
 cars,Hennessey Performance Engineering,Hennessey Performance Engineering,ok,129144,0.869,80,views,wikidata
-cars,Eagle,Eagle (automobile),ok,125832,0.874,80,views,wikidata
-cars,Geo,Geo (automobile),ok,124944,0.878,80,views,hand
-cars,LaSalle,LaSalle (automobile),ok,115872,0.882,80,views,wikidata
-cars,Excalibur,Excalibur (automobile),ok,108672,0.886,80,views,wikidata
-cars,White Motor Company,White Motor Company,ok,108024,0.889,80,views,wikidata
-cars,Kaiser Motors,Kaiser Motors,ok,106872,0.893,80,views,wikidata
-cars,Buell Motorcycle Company,Buell Motorcycle Company,ok,105288,0.896,80,views,wikidata
+cars,Eagle,Eagle (automobile),ok,125832,0.873,80,views,wikidata
+cars,Geo,Geo (automobile),ok,124944,0.877,80,views,hand
+cars,LaSalle,LaSalle (automobile),ok,115872,0.881,80,views,wikidata
+cars,Excalibur,Excalibur (automobile),ok,108672,0.885,80,views,wikidata
+cars,White Motor Company,White Motor Company,ok,108024,0.888,80,views,wikidata
+cars,Kaiser Motors,Kaiser Motors,ok,106872,0.892,80,views,wikidata
+cars,Buell Motorcycle Company,Buell Motorcycle Company,ok,105288,0.895,80,views,wikidata
 cars,Kaiser Jeep,Kaiser Jeep,ok,101640,0.899,80,views,wikidata
-cars,Henry Ford Company,Henry Ford Company,ok,100032,0.903,80,views,wikidata
-cars,Faraday Future,Faraday Future,ok,93312,0.906,80,views,wikidata
-cars,Canoo,Canoo,ok,87648,0.909,80,views,wikidata
-cars,Checker Motors Corporation,Checker Motors Corporation,ok,83352,0.912,80,views,wikidata
-cars,Pierce-Arrow,Pierce-Arrow Motor Car Company,ok,82056,0.915,80,views,wikidata
+cars,Henry Ford Company,Henry Ford Company,ok,100032,0.902,80,views,wikidata
+cars,Faraday Future,Faraday Future,ok,93312,0.905,80,views,wikidata
+cars,Canoo,Canoo,ok,87648,0.908,80,views,wikidata
+cars,Checker Motors Corporation,Checker Motors Corporation,ok,83352,0.911,80,views,wikidata
+cars,Pierce-Arrow,Pierce-Arrow Motor Car Company,ok,82056,0.914,80,views,wikidata
 cars,Stanley Motor Carriage Company,Stanley Motor Carriage Company,ok,79224,0.917,80,views,wikidata
-cars,Zimmer,Zimmer (automobile),ok,76464,0.920,80,views,wikidata
+cars,Zimmer,Zimmer (automobile),ok,76464,0.919,80,views,wikidata
 cars,Cord,Cord (automobile),ok,71088,0.922,80,views,hand
-cars,Vector Motors,Vector Motors,ok,70800,0.925,80,views,wikidata
-cars,Studebaker-Packard Corporation,Studebaker-Packard Corporation,ok,70584,0.927,80,views,wikidata
-cars,Thomas Built Buses,Thomas Built Buses,ok,69096,0.929,80,views,wikidata
+cars,Vector Motors,Vector Motors,ok,70800,0.924,80,views,wikidata
+cars,Studebaker-Packard Corporation,Studebaker-Packard Corporation,ok,70584,0.926,80,views,wikidata
+cars,Thomas Built Buses,Thomas Built Buses,ok,69096,0.928,80,views,wikidata
 cars,Hupmobile,Hupmobile,ok,64416,0.931,80,views,wikidata
 cars,Scuderia Cameron Glickenhaus,Scuderia Cameron Glickenhaus,ok,63720,0.933,80,views,wikidata
 cars,Fargo Trucks,Fargo Trucks,ok,63336,0.935,80,views,wikidata
-cars,SSC North America,SSC North America,ok,62712,0.938,80,views,wikidata
-cars,Daimler Truck North America,Daimler Truck North America,ok,56400,0.940,80,views,wikidata
+cars,SSC North America,SSC North America,ok,62712,0.937,80,views,wikidata
+cars,Daimler Truck North America,Daimler Truck North America,ok,56400,0.939,80,views,wikidata
 cars,Panoz Auto Development,Panoz,ok,55344,0.941,80,views,wikidata
 cars,Czinger,Czinger,ok,55176,0.943,80,views,wikidata
-cars,Oakland Motor Car Company,Oakland Motor Car Company,ok,54000,0.945,80,views,wikidata
-cars,Diamond-Star Motors,Diamond-Star Motors,ok,51552,0.947,80,views,wikidata
+cars,Oakland Motor Car Company,Oakland Motor Car Company,ok,54000,0.944,80,views,wikidata
+cars,Diamond-Star Motors,Diamond-Star Motors,ok,51552,0.946,80,views,wikidata
 cars,Marmon Motor Car Company,Marmon Motor Car Company,ok,50016,0.948,80,views,wikidata
-cars,Toyota Motor Manufacturing Kentucky,Toyota Motor Manufacturing Kentucky,ok,49320,0.950,100,views,wikidata
-cars,Mosler Automotive,Mosler Automotive,ok,47880,0.952,100,views,wikidata
+cars,Toyota Motor Manufacturing Kentucky,Toyota Motor Manufacturing Kentucky,ok,49320,0.949,80,views,wikidata
+cars,Mosler Automotive,Mosler Automotive,ok,47880,0.951,100,views,wikidata
 cars,Winton Motor Carriage Company,Winton Motor Carriage Company,ok,44712,0.953,100,views,wikidata
-cars,Local Motors,Local Motors,ok,44472,0.955,100,views,wikidata
-cars,Maxwell Motor Company,Maxwell Motor Company,ok,41112,0.956,100,views,wikidata
+cars,Local Motors,Local Motors,ok,44472,0.954,100,views,wikidata
+cars,Maxwell Motor Company,Maxwell Motor Company,ok,41112,0.955,100,views,wikidata
 cars,Baker Motor Vehicle,Baker Motor Vehicle,ok,40536,0.957,100,views,wikidata
-cars,Hodaka,Hodaka (motorcycle),ok,38928,0.959,100,views,wikidata
-cars,Stutz Motor Company,Stutz Motor Car Company,ok,38520,0.960,100,views,wikidata
+cars,Hodaka,Hodaka (motorcycle),ok,38928,0.958,100,views,wikidata
+cars,Stutz Motor Company,Stutz Motor Car Company,ok,38520,0.959,100,views,wikidata
 cars,Zero Motorcycles,Zero Motorcycles,ok,38400,0.961,100,views,wikidata
 cars,Roper steam velocipede,Roper steam velocipede,ok,38328,0.962,100,views,wikidata
-cars,Marmon-Herrington,Marmon-Herrington,ok,35808,0.964,100,views,wikidata
-cars,Peerless,Peerless Motor Company,ok,32328,0.965,100,views,wikidata
-cars,Mercedes-Benz U.S. International,Mercedes-Benz U.S. International,ok,29640,0.966,100,views,wikidata
-cars,Henderson Motorcycle,Henderson Motorcycle,ok,29160,0.967,100,views,wikidata
-cars,Bollinger Motors,Bollinger Motors,ok,28200,0.968,100,views,wikidata
-cars,Intermeccanica,Intermeccanica,ok,27720,0.969,100,views,wikidata
-cars,Star Motorcycles,Star Motorcycles,ok,26280,0.970,100,views,wikidata
+cars,Marmon-Herrington,Marmon-Herrington,ok,35808,0.963,100,views,wikidata
+cars,Peerless,Peerless Motor Company,ok,32328,0.964,100,views,wikidata
+cars,Mercedes-Benz U.S. International,Mercedes-Benz U.S. International,ok,29640,0.965,100,views,wikidata
+cars,Henderson Motorcycle,Henderson Motorcycle,ok,29160,0.966,100,views,wikidata
+cars,Bollinger Motors,Bollinger Motors,ok,28200,0.967,100,views,wikidata
+cars,Intermeccanica,Intermeccanica,ok,27720,0.968,100,views,wikidata
+cars,Star Motorcycles,Star Motorcycles,ok,26280,0.969,100,views,wikidata
 cars,AC Propulsion,AC Propulsion,ok,25704,0.970,100,views,wikidata
 cars,Flxible,Flxible,ok,25416,0.971,100,views,wikidata
-cars,"Subaru of Indiana Automotive, Inc.",Subaru of Indiana Automotive,ok,25176,0.972,100,views,wikidata
-cars,VLF Automotive,VLF Automotive,ok,24312,0.973,100,views,wikidata
-cars,Durant Motors,Durant Motors,ok,22584,0.974,100,views,wikidata
+cars,"Subaru of Indiana Automotive, Inc.",Subaru of Indiana Automotive,ok,25176,0.971,100,views,wikidata
+cars,VLF Automotive,VLF Automotive,ok,24312,0.972,100,views,wikidata
+cars,Durant Motors,Durant Motors,ok,22584,0.973,100,views,wikidata
 cars,Global Electric Motorcars,Global Electric Motorcars,ok,22032,0.974,100,views,wikidata
-cars,Rickenbacker,Rickenbacker (car),ok,20400,0.975,100,views,wikidata
-cars,Overland Automobile,Overland Automobile,ok,20328,0.976,100,views,wikidata
+cars,Rickenbacker,Rickenbacker (car),ok,20400,0.974,100,views,wikidata
+cars,Overland Automobile,Overland Automobile,ok,20328,0.975,100,views,wikidata
+cars,Seagrave Fire Apparatus,Seagrave Fire Apparatus,ok,20280,0.976,100,views,wikidata
 cars,Clénet Coachworks,Clénet Coachworks,ok,20016,0.976,100,views,wikidata
 cars,Superformance,Superformance,ok,19488,0.977,100,views,wikidata
 cars,American Austin Car Company,American Austin Car Company,ok,19392,0.978,100,views,wikidata
@@ -1232,37 +1310,36 @@ cars,Haynes Automobile Company,Haynes Automobile Company,ok,7440,0.996,100,views
 cars,Vectrix,Vectrix,ok,7104,0.996,100,views,wikidata
 cars,Abbott-Detroit,Abbott-Detroit,ok,6720,0.996,100,views,wikidata
 cars,Powell Manufacturing Company,Powell Manufacturing Company,ok,6624,0.996,100,views,wikidata
-cars,McFarlan Automobile,McFarlan Automobile,ok,6336,0.997,100,views,wikidata
+cars,McFarlan Automobile,McFarlan Automobile,ok,6336,0.996,100,views,wikidata
 cars,Flint,Flint (automobile),ok,6288,0.997,100,views,wikidata
-cars,Jewett,Jewett (automobile),ok,5520,0.997,100,views,wikidata
 cars,Barley Motor Car Co.,Barley Motor Car Co.,ok,5520,0.997,100,views,wikidata
+cars,Jewett,Jewett (automobile),ok,5520,0.997,100,views,wikidata
 cars,Sheridan,Sheridan (automobile),ok,5304,0.997,100,views,wikidata
 cars,Rainier Motor Car Company,Rainier Motor Car Company,ok,4800,0.997,100,views,wikidata
 cars,Selden Motor Vehicle Company,Selden Motor Vehicle Company,ok,4656,0.998,100,views,wikidata
+cars,Bright Automotive,Bright Automotive,ok,4512,0.998,100,views,wikidata
 cars,Premier Motor Manufacturing Company,Premier Motor Manufacturing Company,ok,4464,0.998,100,views,wikidata
 cars,Blakely Auto Works,Blakely Auto Works,ok,4344,0.998,100,views,wikidata
 cars,Ace,Ace (1920 automobile),ok,4080,0.998,100,views,wikidata
 cars,Kuzma,Kuzma (constructor),ok,3864,0.998,100,views,wikidata
-cars,American Simplex,American Simplex,ok,3720,0.998,100,views,wikidata
-cars,Moreland Motor Truck Company,Moreland Motor Truck Company,ok,3624,0.998,100,views,wikidata
-cars,Schacht,Schacht (automobile),ok,3288,0.999,100,views,wikidata
+cars,American Motor Car Company,American Motor Car Company,ok,3744,0.998,100,views,wikidata
+cars,American Simplex,American Simplex,ok,3720,0.999,100,views,wikidata
+cars,Moreland Motor Truck Company,Moreland Motor Truck Company,ok,3624,0.999,100,views,wikidata
 cars,"James Cunningham, Son and Company","James Cunningham, Son and Company",ok,3240,0.999,100,views,wikidata
 cars,DeWitt Motor Company,DeWitt Motor Company,ok,3216,0.999,100,views,wikidata
-cars,Marr,Marr (automobile),ok,3000,0.999,100,views,wikidata
 cars,Mercury,Mercury Cyclecar Company,ok,2952,0.999,100,views,wikidata
 cars,Buffum,Buffum,ok,2736,0.999,100,views,wikidata
 cars,Argo,Argo (automobile),ok,2616,0.999,100,views,wikidata
 cars,Briscoe,Briscoe (automobile company),ok,2400,0.999,100,views,wikidata
 cars,Heine-Velox,Heine-Velox,ok,2400,0.999,100,views,wikidata
 cars,Auburn,Auburn Automobile Company,ok,2376,0.999,100,views,hand
-cars,ABC,ABC (1906 automobile),ok,1752,0.999,100,views,wikidata
+cars,ABC,ABC (1906 automobile),ok,1752,1.000,100,views,wikidata
 cars,Dayton Electric,Dayton Electric,ok,1728,1.000,100,views,wikidata
 cars,Lincoln,Lincoln (1914 automobile),ok,1584,1.000,100,views,wikidata
 cars,Lesovsky,Lesovsky,ok,1560,1.000,100,views,wikidata
 cars,O-We-Go,O-We-Go,ok,1512,1.000,100,views,wikidata
 cars,Keeton,Keeton,ok,1416,1.000,100,views,wikidata
 cars,Hackett,Hackett (automobile),ok,1296,1.000,100,views,wikidata
-cars,Marion-Handley,Marion-Handley,ok,1104,1.000,100,views,wikidata
 cars,JPL,JPL (cyclecar),ok,1080,1.000,100,views,wikidata
 cars,Hudson,Hudson (steam automobile),ok,960,1.000,100,views,wikidata
 cars,Lambert Automobile Company,Lambert Automobile Company,ok,744,1.000,100,views,wikidata
@@ -1270,6 +1347,16 @@ cars,Rae,Johnny Rae (motorsport),ok,672,1.000,100,views,wikidata
 cars,Olson,Olson (constructor),ok,528,1.000,100,views,wikidata
 cars,Marchese,Marchese (constructor),ok,336,1.000,100,views,wikidata
 cars,Crosley,Crosley Motors,ok,240,1.000,100,views,wikidata
+cars,Coey,Coey-Mitchell Automobile Company,long tail: not ranked,,,100,hand,wikidata
+cars,Crow-Elkhart,Crow-Elkhart (automobile company),long tail: not ranked,,,100,hand,wikidata
+cars,Davis Motorcar Company,Davis Motorcar Company,long tail: not ranked,,,100,hand,wikidata
+cars,Inter-State,Inter-State Automobile Company,long tail: not ranked,,,100,hand,wikidata
+cars,Rutenber Motor Company,Rutenber Motor Company,long tail: not ranked,,,100,hand,wikidata
+cars,Hawk,Hawk (cyclecar),long tail: not ranked,,,100,hand,wikidata
+cars,American IronHorse,American IronHorse,long tail: not ranked,,,100,hand,wikidata
+cars,Marion-Handley,Marion-Handley,long tail: not ranked,,,100,hand,wikidata
+cars,Marr,Marr (automobile),long tail: not ranked,,,100,hand,wikidata
+cars,Schacht,Schacht (automobile),long tail: not ranked,,,100,hand,wikidata
 cars,Simplex Manufacturing Corporation,Simplex Manufacturing Corporation,long tail: not ranked,,,100,hand,wikidata
 cars,Marman Twin,Marman Twin,long tail: not ranked,,,100,hand,wikidata
 cars,Whizzer,Whizzer (motorcycles),long tail: not ranked,,,100,hand,wikidata
@@ -1313,24 +1400,18 @@ cars,Lincoln Motor Car Works,Lincoln Motor Car Works,long tail: not ranked,,,100
 cars,Thor,Thor (motorcycles),long tail: not ranked,,,100,hand,wikidata
 cars,Manta Cars,Manta Cars,long tail: not ranked,,,100,hand,wikidata
 cars,Shawmut Motor Company,Shawmut Motor Company,long tail: not ranked,,,100,hand,wikidata
-cars,American Motor Car Company,American Motor Car Company,long tail: not ranked,,,100,hand,wikidata
-cars,Seagrave Fire Apparatus,Seagrave Fire Apparatus,long tail: not ranked,,,100,hand,wikidata
-cars,Bright Automotive,Bright Automotive,long tail: not ranked,,,100,hand,wikidata
-cars,Coey,Coey-Mitchell Automobile Company,long tail: not ranked,,,100,hand,wikidata
-cars,Crow-Elkhart,Crow-Elkhart (automobile company),long tail: not ranked,,,100,hand,wikidata
-cars,Davis Motorcar Company,Davis Motorcar Company,long tail: not ranked,,,100,hand,wikidata
-cars,Inter-State,Inter-State Automobile Company,long tail: not ranked,,,100,hand,wikidata
-cars,Rutenber Motor Company,Rutenber Motor Company,long tail: not ranked,,,100,hand,wikidata
-cars,Hawk,Hawk (cyclecar),long tail: not ranked,,,100,hand,wikidata
-cars,American IronHorse,American IronHorse,long tail: not ranked,,,100,hand,wikidata
-cars,Cleveland Motorcycle Manufacturing Company,Cleveland Motorcycle Manufacturing Company,long tail: not ranked,,,100,hand,wikidata
-cars,Glide,Glide (automobile),long tail: not ranked,,,100,hand,wikidata
 cars,Apollo,Apollo (1906 automobile),long tail: not ranked,,,100,hand,wikidata
 cars,Brew-Hatcher,Brew-Hatcher,long tail: not ranked,,,100,hand,wikidata
+cars,Cleveland Motorcycle Manufacturing Company,Cleveland Motorcycle Manufacturing Company,long tail: not ranked,,,100,hand,wikidata
+cars,Glide,Glide (automobile),long tail: not ranked,,,100,hand,wikidata
 cars,Hoffman,Hoffman (Cleveland automobile),long tail: not ranked,,,100,hand,wikidata
 cars,James,James (automobile company),long tail: not ranked,,,100,hand,wikidata
 cars,Telo Trucks,Telo Trucks,long tail: not ranked,,,100,hand,wikidata
 cars,Slate Auto,Slate Auto,long tail: not ranked,,,100,hand,wikidata
+cars,Black Motor Company,Black Motor Company,long tail: not ranked,,,100,hand,wikidata
+cars,Car-Nation,Car-Nation,long tail: not ranked,,,100,hand,wikidata
+cars,Dudly Bug,Dudly Bug,long tail: not ranked,,,100,hand,wikidata
+cars,Flyer,Flyer (1913 automobile),long tail: not ranked,,,100,hand,wikidata
 cars,Cooper,Cooper (motorcycles),long tail: not ranked,,,100,hand,wikidata
 cars,Marion,Marion (automobile),long tail: not ranked,,,100,hand,wikidata
 cars,Nu-Klea Starlite,Nu-Klea Starlite,long tail: not ranked,,,100,hand,wikidata
@@ -1429,18 +1510,16 @@ cars,Spaulding Manufacturing Company,Spaulding Manufacturing Company,long tail: 
 cars,The Adams Brothers Company,Adams Brothers Manufacturing Company,long tail: not ranked,,,100,hand,wikidata
 cars,Reber Manufacturing Company,Reber (automobile),long tail: not ranked,,,100,hand,wikidata
 cars,Pan-American Motor Company,Pan-American Motor Company,long tail: not ranked,,,100,hand,wikidata
-cars,Black Motor Company,Black Motor Company,long tail: not ranked,,,100,hand,wikidata
-cars,Car-Nation,Car-Nation,long tail: not ranked,,,100,hand,wikidata
-cars,Dudly Bug,Dudly Bug,long tail: not ranked,,,100,hand,wikidata
-cars,Flyer,Flyer (1913 automobile),long tail: not ranked,,,100,hand,wikidata
 cars,Arrow,Whitmore Arrow,long tail: not ranked,,,100,hand,wikidata
 cars,Campbell,Campbell Motor Car Company,long tail: not ranked,,,100,hand,wikidata
 cars,Carhartt,Carhartt (automobile),long tail: not ranked,,,100,hand,wikidata
-cars,Mitsubishi Motors North America,Mitsubishi Motors North America,long tail: not ranked,,,100,hand,wikidata
-cars,Pungs Finch,Pungs-Finch,long tail: not ranked,,,100,hand,wikidata
 cars,Ronn Motor Company,Ronn Motor Group,long tail: not ranked,,,100,hand,wikidata
 cars,Staver,Staver,long tail: not ranked,,,100,hand,wikidata
+cars,Mitsubishi Motors North America,Mitsubishi Motors North America,long tail: not ranked,,,100,hand,wikidata
+cars,Pungs Finch,Pungs-Finch,long tail: not ranked,,,100,hand,wikidata
 cars,Roberts Motor Manufacturing Company,Roberts Motor Company,long tail: not ranked,,,100,hand,wikidata
+cars,De Vaux,De Vaux,long tail: not ranked,,,100,hand,wikidata
+cars,Hollier,Hollier,long tail: not ranked,,,100,hand,wikidata
 cars,Excelsior-Henderson Motorcycle,Excelsior-Henderson Motorcycle,long tail: not ranked,,,100,hand,wikidata
 cars,Albatross,Albatross (automobile),long tail: not ranked,,,100,hand,wikidata
 cars,Yenko Chevrolet,Yenko Chevrolet,long tail: not ranked,,,100,hand,wikidata
@@ -1468,13 +1547,11 @@ cars,Alta Motors,Alta Motors,long tail: not ranked,,,100,hand,wikidata
 cars,Maytag-Mason Motor Company,Maytag-Mason Motor Company,long tail: not ranked,,,100,hand,wikidata
 cars,Ajax Motor Vehicle Company,Ajax Motor Vehicle Company,long tail: not ranked,,,100,hand,wikidata
 cars,Maccar Truck Company,Maccar Truck Company,long tail: not ranked,,,100,hand,wikidata
-cars,De Vaux,De Vaux,long tail: not ranked,,,100,hand,wikidata
-cars,Hollier,Hollier,long tail: not ranked,,,100,hand,wikidata
 cars,Corwin Manufacturing Company,Corwin Manufacturing Company,long tail: not ranked,,,100,hand,wikidata
-cars,Ajax Motors Company,Ajax Motors Company,long tail: not ranked,,,100,hand,wikidata
 cars,Single Center,Single Center,long tail: not ranked,,,100,hand,wikidata
 cars,The Hug Company,The Hug Company,long tail: not ranked,,,100,hand,wikidata
 cars,LiveWire,LiveWire (company),long tail: not ranked,,,100,hand,wikidata
+cars,Ajax Motors Company,Ajax Motors Company,long tail: not ranked,,,100,hand,wikidata
 cars,Amalgamated,Amalgamated (1917 automobile),long tail: not ranked,,,100,hand,wikidata
 cars,Anahuac,Anahuac (automobile),long tail: not ranked,,,100,hand,wikidata
 cars,Automodello,Automodello,long tail: not ranked,,,100,hand,wikidata
@@ -1870,38 +1947,64 @@ friends,Gavin Mitchell,,disambiguation,,,100,hand,hand
 friends,Leonard Green,,disambiguation,,,100,hand,hand
 friends,Sandra Green,List of Friends and Joey characters,shares page with Janice,,,100,hand,hand
 friends,Erica,,no page (TITLES),,,100,hand,hand
-holidays,Juneteenth,Juneteenth,ok,1536744,0.000,10,views,hand
-holidays,Christmas,Christmas,ok,1194504,0.125,10,views,hand
-holidays,Halloween,Halloween,ok,1176024,0.221,10,views,hand
-holidays,Mardi Gras,Mardi Gras,ok,925992,0.317,25,views,hand
-holidays,Fourth of July,Independence Day (United States),ok,905856,0.392,25,views,hand
-holidays,Thanksgiving,Thanksgiving,ok,751728,0.465,25,views,hand
-holidays,Memorial Day,Memorial Day,ok,700992,0.526,40,views,hand
-holidays,Kwanzaa,Kwanzaa,ok,645360,0.583,40,views,hand
-holidays,Labor Day,Labor Day,ok,617832,0.635,40,views,hand
-holidays,Cinco de Mayo,Cinco de Mayo,ok,546504,0.685,40,views,hand
-holidays,Black Friday,Black Friday (shopping),ok,426672,0.730,60,views,hand
-holidays,Columbus Day,Columbus Day,ok,413352,0.764,60,views,hand
-holidays,Groundhog Day,Groundhog Day,ok,394728,0.798,60,views,hand
-holidays,Martin Luther King Jr. Day,Martin Luther King Jr. Day,ok,379920,0.830,60,views,hand
-holidays,Earth Day,Earth Day,ok,329448,0.860,80,views,hand
-holidays,Veterans Day,Veterans Day,ok,251880,0.887,80,views,hand
-holidays,Presidents' Day,Presidents' Day,ok,213216,0.908,80,views,hand
-holidays,Arbor Day,Arbor Day,ok,158736,0.925,80,views,hand
-holidays,Patriots' Day,Patriots' Day,ok,143880,0.938,80,views,hand
-holidays,Pi Day,Pi Day,ok,143496,0.949,80,views,hand
-holidays,Leif Erikson Day,Leif Erikson Day,ok,85224,0.961,100,views,hand
-holidays,Cyber Monday,Cyber Monday,ok,68712,0.968,100,views,hand
-holidays,Casimir Pulaski Day,Casimir Pulaski Day,ok,67416,0.973,100,views,hand
-holidays,Tax Day,Tax Day,ok,64920,0.979,100,views,hand
-holidays,Pearl Harbor Remembrance Day,National Pearl Harbor Remembrance Day,ok,46680,0.984,100,views,hand
-holidays,Super Bowl Sunday,Super Bowl Sunday,ok,37032,0.988,100,views,hand
-holidays,Flag Day,Flag Day,ok,36528,0.991,100,views,hand
-holidays,Election Day,Election day,ok,31536,0.994,100,views,hand
-holidays,Constitution Day,Constitution Day,ok,25200,0.996,100,views,hand
-holidays,Kamehameha Day,King Kamehameha Day,ok,13416,0.998,100,views,hand
+holidays,Diwali,Diwali,ok,1614096,0.000,10,views,hand
+holidays,Juneteenth,Juneteenth,ok,1536744,0.063,10,views,hand
+holidays,Eid al-Fitr,Eid al-Fitr,ok,1338192,0.122,10,views,hand
+holidays,Día de los Muertos,Day of the Dead,ok,1292712,0.175,10,views,hand
+holidays,Christmas,Christmas,ok,1194504,0.225,10,views,hand
+holidays,Halloween,Halloween,ok,1176024,0.271,25,views,hand
+holidays,Easter,Easter,ok,977232,0.317,25,views,hand
+holidays,Mardi Gras,Mardi Gras,ok,925992,0.355,25,views,hand
+holidays,Fourth of July,Independence Day (United States),ok,905856,0.391,25,views,hand
+holidays,Yom Kippur,Yom Kippur,ok,877680,0.426,25,views,hand
+holidays,Valentine's Day,Valentine's Day,ok,869184,0.460,25,views,hand
+holidays,Thanksgiving,Thanksgiving,ok,751728,0.494,25,views,hand
+holidays,Passover,Passover,ok,743904,0.523,40,views,hand
+holidays,Mother's Day,Mother's Day,ok,736896,0.552,40,views,hand
+holidays,Memorial Day,Memorial Day,ok,700992,0.581,40,views,hand
+holidays,St. Patrick's Day,Saint Patrick's Day,ok,646896,0.608,40,views,hand
+holidays,Kwanzaa,Kwanzaa,ok,645360,0.633,40,views,hand
+holidays,Father's Day,Father's Day,ok,623856,0.658,40,views,hand
+holidays,Labor Day,Labor Day,ok,617832,0.683,40,views,hand
+holidays,Hanukkah,Hanukkah,ok,611496,0.707,60,views,hand
+holidays,Cinco de Mayo,Cinco de Mayo,ok,546504,0.730,60,views,hand
+holidays,Good Friday,Good Friday,ok,542400,0.752,60,views,hand
+holidays,Rosh Hashanah,Rosh Hashanah,ok,520008,0.773,60,views,hand
+holidays,April Fools' Day,April Fools' Day,ok,498336,0.793,60,views,hand
+holidays,Black Friday,Black Friday (shopping),ok,426672,0.812,60,views,hand
+holidays,Columbus Day,Columbus Day,ok,413352,0.829,60,views,hand
+holidays,Groundhog Day,Groundhog Day,ok,394728,0.845,60,views,hand
+holidays,Evacuation Day,,disambiguation,0,,60,hand,hand
+holidays,Martin Luther King Jr. Day,Martin Luther King Jr. Day,ok,379920,0.860,80,views,hand
+holidays,Earth Day,Earth Day,ok,329448,0.875,80,views,hand
+holidays,New Year's Day,New Year's Day,ok,323856,0.888,80,views,hand
+holidays,New Year's Eve,New Year's Eve,ok,261744,0.900,80,views,hand
+holidays,Veterans Day,Veterans Day,ok,251880,0.911,80,views,hand
+holidays,Lunar New Year,Lunar New Year,ok,243624,0.920,80,views,hand
+holidays,Presidents' Day,Presidents' Day,ok,213216,0.930,80,views,hand
+holidays,Inauguration Day,United States presidential inauguration,ok,178992,0.938,80,views,hand
+holidays,Arbor Day,Arbor Day,ok,158736,0.945,80,views,hand
+holidays,Christmas Eve,Christmas Eve,ok,146784,0.951,100,views,hand
+holidays,Grandparents Day,Grandparents' Day,ok,146592,0.957,100,views,hand
+holidays,Patriots' Day,Patriots' Day,ok,143880,0.963,100,views,hand
+holidays,Pi Day,Pi Day,ok,143496,0.968,100,views,hand
+holidays,Leif Erikson Day,Leif Erikson Day,ok,85224,0.974,100,views,hand
+holidays,Sadie Hawkins Day,Sadie Hawkins Day,ok,84144,0.977,100,views,hand
+holidays,Cyber Monday,Cyber Monday,ok,68712,0.980,100,views,hand
+holidays,Casimir Pulaski Day,Casimir Pulaski Day,ok,67416,0.983,100,views,hand
+holidays,Tax Day,Tax Day,ok,64920,0.986,100,views,hand
+holidays,Pearl Harbor Remembrance Day,National Pearl Harbor Remembrance Day,ok,46680,0.988,100,views,hand
+holidays,National Donut Day,National Donut Day,ok,41208,0.990,100,views,hand
+holidays,Super Bowl Sunday,Super Bowl Sunday,ok,37032,0.992,100,views,hand
+holidays,Flag Day,Flag Day,ok,36528,0.993,100,views,hand
+holidays,Lincoln's Birthday,Lincoln's Birthday,ok,33168,0.995,100,views,hand
+holidays,Election Day,Election day,ok,31536,0.996,100,views,hand
+holidays,Constitution Day,Constitution Day,ok,25200,0.997,100,views,hand
+holidays,Women's Equality Day,Women's Equality Day,ok,20976,0.998,100,views,hand
+holidays,Kamehameha Day,King Kamehameha Day,ok,13416,0.999,100,views,hand
+holidays,Native American Heritage Day,Native American Heritage Day,ok,10464,0.999,100,views,hand
 holidays,Seward's Day,Seward's Day,ok,5232,1.000,100,views,hand
-holidays,Evacuation Day,,disambiguation,0,,100,hand,hand
+holidays,Leap Day,,disambiguation,0,,100,hand,hand
 mlb,New York Yankees,New York Yankees,ok,2596608,0.000,10,views,wikidata
 mlb,Los Angeles Dodgers,Los Angeles Dodgers,ok,2147976,0.078,10,views,wikidata
 mlb,Boston Red Sox,Boston Red Sox,ok,1723512,0.143,10,views,wikidata
@@ -2435,7 +2538,7 @@ simpsons,Krusty the Clown,Krusty the Clown,ok,173088,0.572,40,views,wikidata
 simpsons,The Itchy & Scratchy Show,The Itchy & Scratchy Show,ok,160344,0.591,40,views,wikidata
 simpsons,Moe Szyslak,Moe Szyslak,ok,160128,0.610,40,views,wikidata
 simpsons,Patty and Selma,Patty and Selma,ok,144624,0.628,40,views,wikidata
-simpsons,Milhouse,Milhouse Van Houten,ok,139032,0.644,40,views,wikidata
+simpsons,Milhouse,Milhouse Van Houten,ok,139032,0.645,40,views,wikidata
 simpsons,Smithers,Waylon Smithers,ok,138072,0.660,40,views,wikidata
 simpsons,Lionel Hutz,Lionel Hutz,ok,128640,0.676,40,views,wikidata
 simpsons,Ralph Wiggum,Ralph Wiggum,ok,124632,0.691,40,views,wikidata
@@ -2474,7 +2577,7 @@ simpsons,Otto Mann,Otto Mann,ok,17856,0.944,80,views,wikidata
 simpsons,Hans Moleman,Hans Moleman,ok,16776,0.946,80,views,wikidata
 simpsons,Snake Jailbird,Snake Jailbird,ok,16776,0.948,80,views,wikidata
 simpsons,Sherri and Terri,Sherri and Terri,ok,15936,0.950,80,views,wikidata
-simpsons,Bleeding Gums Murphy,Bleeding Gums Murphy,ok,15216,0.951,100,views,wikidata
+simpsons,Bleeding Gums Murphy,Bleeding Gums Murphy,ok,15216,0.952,100,views,wikidata
 simpsons,Cletus Spuckler,Cletus Spuckler,ok,15168,0.953,100,views,wikidata
 simpsons,Lenny Leonard,Lenny Leonard,ok,14664,0.955,100,views,wikidata
 simpsons,Sideshow Mel,Sideshow Mel,ok,13392,0.957,100,views,wikidata
@@ -2487,7 +2590,7 @@ simpsons,Patty Bouvier,Patty Bouvier,ok,10584,0.965,100,views,wikidata
 simpsons,Springfield Elementary School,Springfield Elementary School,ok,10392,0.966,100,views,wikidata
 simpsons,Fallout Boy,Fallout Boy (The Simpsons),ok,10152,0.967,100,views,wikidata
 simpsons,Bumblebee Man,Bumblebee Man,ok,9936,0.968,100,views,wikidata
-simpsons,Sanjay Nahasapeemapetilon,Sanjay Nahasapeemapetilon,ok,9936,0.969,100,views,wikidata
+simpsons,Sanjay Nahasapeemapetilon,Sanjay Nahasapeemapetilon,ok,9936,0.970,100,views,wikidata
 simpsons,Drederick Tatum,Drederick Tatum,ok,9360,0.971,100,views,wikidata
 simpsons,Agnes Tamzarian,Agnes Skinner,ok,9120,0.972,100,views,wikidata
 simpsons,Selma Bouvier,Selma Bouvier,ok,9048,0.973,100,views,wikidata
@@ -2504,7 +2607,7 @@ simpsons,Sophie Krustofsky,Sophie Krustofsky,ok,5304,0.981,100,views,wikidata
 simpsons,Hank Scorpio,Hank Scorpio,ok,5088,0.982,100,views,wikidata
 simpsons,Dolph,Dolph Starbeam,ok,5016,0.982,100,views,wikidata
 simpsons,Tomacco,Tomacco,ok,4944,0.983,100,views,wikidata
-simpsons,Ruth Powers,Ruth Powers,ok,4872,0.983,100,views,wikidata
+simpsons,Ruth Powers,Ruth Powers,ok,4872,0.984,100,views,wikidata
 simpsons,Disco Stu,Disco Stu,ok,4680,0.984,100,views,wikidata
 simpsons,Gil Gunderson,Gil Gunderson,ok,4608,0.985,100,views,wikidata
 simpsons,Dr. Nick,Dr. Nick,ok,4392,0.985,100,views,wikidata
@@ -2519,13 +2622,13 @@ simpsons,Mrs. Muntz,Mrs. Muntz,ok,3672,0.989,100,views,wikidata
 simpsons,Legs and Louie,Legs and Louie,ok,3648,0.989,100,views,wikidata
 simpsons,Constance Harm,Judge Constance Harm,ok,3528,0.990,100,views,wikidata
 simpsons,Bernice Hibbert,Bernice Hibbert,ok,3408,0.990,100,views,wikidata
-simpsons,Cecil Terwilliger,Cecil Terwilliger,ok,3144,0.990,100,views,wikidata
+simpsons,Cecil Terwilliger,Cecil Terwilliger,ok,3144,0.991,100,views,wikidata
 simpsons,Jebediah Springfield,Jebediah Springfield,ok,2952,0.991,100,views,wikidata
 simpsons,Larry Burns,Larry Burns (The Simpsons),ok,2952,0.991,100,views,wikidata
-simpsons,Elizabeth Hoover,Elizabeth Hoover,ok,2928,0.991,100,views,wikidata
+simpsons,Elizabeth Hoover,Elizabeth Hoover,ok,2928,0.992,100,views,wikidata
 simpsons,Radioactive Man,Radioactive Man (The Simpsons),ok,2904,0.992,100,views,wikidata
 simpsons,Jasper Beardly,Jasper Beardsley,ok,2904,0.992,100,views,wikidata
-simpsons,Krusty Burger,Krusty Burger,ok,2736,0.992,100,views,wikidata
+simpsons,Krusty Burger,Krusty Burger,ok,2736,0.993,100,views,wikidata
 simpsons,Lunchlady Doris,Lunchlady Doris,ok,2664,0.993,100,views,wikidata
 simpsons,Shauna Chalmers,Shauna Chalmers,ok,2328,0.993,100,views,wikidata
 simpsons,Herman Hermann,Herman Hermann,ok,2304,0.993,100,views,wikidata
@@ -2537,18 +2640,17 @@ simpsons,Lucius Sweet,Lucius Sweet,ok,2016,0.995,100,views,wikidata
 simpsons,Crazy Cat Lady,Crazy Cat Lady,ok,1968,0.995,100,views,wikidata
 simpsons,Janey Powell,Janey Powell,ok,1920,0.995,100,views,wikidata
 simpsons,Luigi Risotto,Luigi Risotto,ok,1872,0.995,100,views,wikidata
-simpsons,Martha Quimby,Martha Quimby,ok,1872,0.995,100,views,wikidata
+simpsons,Martha Quimby,Martha Quimby,ok,1872,0.996,100,views,wikidata
 simpsons,Shelbyville,Shelbyville (The Simpsons),ok,1800,0.996,100,views,wikidata
 simpsons,Brandine Spuckler,Brandine Spuckler,ok,1776,0.996,100,views,wikidata
 simpsons,Declan Desmond,Declan Desmond,ok,1632,0.996,100,views,wikidata
 simpsons,Plopper,Plopper,ok,1536,0.996,100,views,wikidata
-simpsons,Database,Database (The Simpsons),ok,1488,0.996,100,views,wikidata
+simpsons,Database,Database (The Simpsons),ok,1488,0.997,100,views,wikidata
 simpsons,Jacqueline Bouvier,Jacqueline Bouvier (The Simpsons),ok,1296,0.997,100,views,wikidata
 simpsons,Charlie,Charlie (The Simpsons),ok,1248,0.997,100,views,wikidata
 simpsons,Judge Snyder,Judge Snyder (The Simpsons),ok,1200,0.997,100,views,wikidata
 simpsons,Hugo Simpson,Hugo Simpson,ok,1176,0.997,100,views,wikidata
 simpsons,Baby Gerald,Baby Gerald,ok,1176,0.997,100,views,wikidata
-simpsons,Amber Simpson,Amber Simpson (The Simpsons),ok,1128,0.997,100,views,wikidata
 simpsons,Eddie and Lou,Eddie and Lou,ok,1104,0.997,100,views,wikidata
 simpsons,Lyle Lanley,Lyle Lanley,ok,960,0.998,100,views,wikidata
 simpsons,Akira Kurosawa,Akira (The Simpsons),ok,960,0.998,100,views,wikidata
@@ -2560,10 +2662,9 @@ simpsons,Buzz Cola,Buzz Cola,ok,768,0.998,100,views,wikidata
 simpsons,Flanders family,Flanders family,ok,744,0.998,100,views,wikidata
 simpsons,Wendell Borton,Wendell Borton,ok,744,0.998,100,views,wikidata
 simpsons,Lois Pennycandy,Lois Pennycandy,ok,744,0.998,100,views,wikidata
-simpsons,Leon Kompowsky,Leon Kompowsky,ok,696,0.999,100,views,wikidata
+simpsons,Leon Kompowsky,Leon Kompowsky,ok,696,0.998,100,views,wikidata
 simpsons,Mindy Simmons,Mindy Simmons,ok,624,0.999,100,views,wikidata
 simpsons,Blinky,Blinky (The Simpsons),ok,576,0.999,100,views,wikidata
-simpsons,Principal Dondelinger,Principal Dondelinger,ok,576,0.999,100,views,wikidata
 simpsons,Doctor Colossus,Doctor Colossus,ok,552,0.999,100,views,wikidata
 simpsons,Gina Vendetti,Gina Vendetti,ok,504,0.999,100,views,wikidata
 simpsons,Wendy Sage,Wendy Sage,ok,504,0.999,100,views,wikidata
@@ -2575,7 +2676,9 @@ simpsons,Gladys Gurney,Gladys Gurney,ok,432,0.999,100,views,wikidata
 simpsons,Larry & Sam,Sam & Larry,ok,432,0.999,100,views,wikidata
 simpsons,Yes Guy,Yes Guy,ok,432,0.999,100,views,wikidata
 simpsons,Van Houten family,Van Houten family,ok,408,0.999,100,views,wikidata
+simpsons,Gloria,Gloria (The Simpsons),ok,408,0.999,100,views,wikidata
 simpsons,Mrs. Glick,Mrs. Glick,ok,384,0.999,100,views,wikidata
+simpsons,Ms. Albright,Ms. Albright,ok,384,0.999,100,views,wikidata
 simpsons,Sneed's Feed & Seed,Sneed's Feed & Seed,ok,384,0.999,100,views,wikidata
 simpsons,Opal,Opal (The Simpsons),ok,360,0.999,100,views,wikidata
 simpsons,State Comptroller Atkins,State Comptroller Atkins,ok,360,1.000,100,views,wikidata
@@ -2586,14 +2689,14 @@ simpsons,Scott Christian,Scott Christian,ok,264,1.000,100,views,wikidata
 simpsons,Asa Phelps,Asa Phelps,ok,216,1.000,100,views,wikidata
 simpsons,Orville Simpson,Orville Simpson,ok,192,1.000,100,views,wikidata
 simpsons,Scratchy,Scratchy (The Simpsons),ok,192,1.000,100,views,wikidata
-simpsons,Juliet Hobbes,Juliet Hobbes,ok,168,1.000,100,views,wikidata
 simpsons,Brad Goodman,Brad Goodman,ok,168,1.000,100,views,wikidata
+simpsons,Juliet Hobbes,Juliet Hobbes,ok,168,1.000,100,views,wikidata
 simpsons,Dr. J. Loren Pryor,Dr. J. Loren Pryor,ok,144,1.000,100,views,wikidata
 simpsons,Aristotle Amadopolis,Aristotle Amadopolis,ok,144,1.000,100,views,wikidata
 simpsons,Itchy,Itchy (The Simpsons),ok,120,1.000,100,views,wikidata
 simpsons,Mary Spuckler,Mary Spuckler,ok,120,1.000,100,views,wikidata
-simpsons,Audrey McConnell,Audrey McConnell,ok,120,1.000,100,views,wikidata
 simpsons,Dave Shutton,Dave Shutton,ok,120,1.000,100,views,wikidata
+simpsons,Audrey McConnell,Audrey McConnell,ok,120,1.000,100,views,wikidata
 simpsons,McBain,McBain (The Simpsons),ok,96,1.000,100,views,wikidata
 simpsons,Steve Mobbs,Steve Mobbs,ok,96,1.000,100,views,wikidata
 simpsons,Abbie Simpson,Abbie Simpson,ok,72,1.000,100,views,wikidata
@@ -2605,22 +2708,22 @@ simpsons,Darcy,Darcy (The Simpsons),ok,48,1.000,100,views,wikidata
 simpsons,Alaska Nebraska,Alaska Nebraska,ok,48,1.000,100,views,wikidata
 simpsons,Red Barclay,Red Barclay,ok,48,1.000,100,views,wikidata
 simpsons,Señor Ding-Dong,Señor Ding-Dong,ok,48,1.000,100,views,wikidata
+simpsons,Dia-Betty,Dia-Betty,ok,48,1.000,100,views,wikidata
 simpsons,Frank Grimes Junior,"Frank Grimes, Jr.",ok,24,1.000,100,views,wikidata
-simpsons,Lucille Botzcowski,Lucille Botzcowski,ok,24,1.000,100,views,wikidata
 simpsons,Yuma Hickman,Yuma Hickman,ok,24,1.000,100,views,wikidata
-simpsons,Beatrice Simmons,Beatrice Simmons,ok,24,1.000,100,views,wikidata
+simpsons,Lucille Botzcowski,Lucille Botzcowski,ok,24,1.000,100,views,wikidata
 simpsons,Mr. Bergstrom,Mr. Bergstrom,ok,24,1.000,100,views,wikidata
 simpsons,Comic Book Gay,Comic Book Gay,ok,24,1.000,100,views,wikidata
 simpsons,Arnie Gumble,Arnie Gumble,ok,24,1.000,100,views,wikidata
 simpsons,Lily Bancroft,Lily Bancroft,ok,24,1.000,100,views,wikidata
 simpsons,Mimsy Bancroft,Mimsy Bancroft,ok,24,1.000,100,views,wikidata
-simpsons,The Winfields,The Winfields,ok,24,1.000,100,views,wikidata
+simpsons,Beatrice Simmons,Beatrice Simmons,ok,24,1.000,100,views,wikidata
 simpsons,Ray Magini,Ray Magini,ok,24,1.000,100,views,wikidata
 simpsons,Homer Glumplich,Homer Glumplich,ok,24,1.000,100,views,wikidata
 simpsons,Roy,Roy (The Simpsons),ok,24,1.000,100,views,wikidata
-simpsons,Dia-Betty,Dia-Betty,long tail: not ranked,,,100,hand,wikidata
-simpsons,Gloria,Gloria (The Simpsons),long tail: not ranked,,,100,hand,wikidata
-simpsons,Ms. Albright,Ms. Albright,long tail: not ranked,,,100,hand,wikidata
+simpsons,Amber Simpson,Amber Simpson (The Simpsons),long tail: not ranked,,,100,hand,wikidata
+simpsons,The Winfields,The Winfields,long tail: not ranked,,,100,hand,wikidata
+simpsons,Principal Dondelinger,Principal Dondelinger,long tail: not ranked,,,100,hand,wikidata
 soda,Coca-Cola,Coca-Cola,ok,2886624,0.000,10,views,hand
 soda,Dr Pepper,Dr Pepper,ok,1663512,0.149,10,views,wikidata
 soda,Pepsi,Pepsi,ok,1258320,0.236,10,views,hand
@@ -2966,21 +3069,21 @@ stores,Wetzel's Pretzels,Wetzel's Pretzels,long tail: not ranked,,,100,hand,wiki
 stores,Murphy USA,Murphy USA,long tail: not ranked,,,100,hand,wikidata
 stores,W. W. Grainger,W. W. Grainger,long tail: not ranked,,,100,hand,wikidata
 stores,76,76 (gas station),long tail: not ranked,,,100,hand,wikidata
-stores,L.L.Bean,L.L.Bean,long tail: not ranked,,,100,hand,wikidata
-stores,Michaels,Michaels,long tail: not ranked,,,100,hand,wikidata
-stores,Noodles & Company,Noodles & Company,long tail: not ranked,,,100,hand,wikidata
-stores,PriceSmart,PriceSmart,long tail: not ranked,,,100,hand,wikidata
+stores,Bruster's Ice Cream,Bruster's Ice Cream,long tail: not ranked,,,100,hand,wikidata
+stores,Dave & Buster's,Dave & Buster's,long tail: not ranked,,,100,hand,wikidata
 stores,Sunglass Hut,Sunglass Hut,long tail: not ranked,,,100,hand,wikidata
 stores,Skyline Chili,Skyline Chili,long tail: not ranked,,,100,hand,wikidata
 stores,Cicis,Cicis Pizza,long tail: not ranked,,,100,hand,wikidata
 stores,Stop & Shop,Stop & Shop,long tail: not ranked,,,100,hand,wikidata
 stores,99 Cents Only Stores,99 Cents Only Stores,long tail: not ranked,,,100,hand,wikidata
-stores,Murphy Oil,Murphy Oil,long tail: not ranked,,,100,hand,wikidata
-stores,Bruster's Ice Cream,Bruster's Ice Cream,long tail: not ranked,,,100,hand,wikidata
-stores,Dave & Buster's,Dave & Buster's,long tail: not ranked,,,100,hand,wikidata
+stores,L.L.Bean,L.L.Bean,long tail: not ranked,,,100,hand,wikidata
 stores,Speedway,Speedway (store),long tail: not ranked,,,100,hand,wikidata
 stores,TravelCenters of America,TravelCenters of America,long tail: not ranked,,,100,hand,wikidata
 stores,True Value,True Value,long tail: not ranked,,,100,hand,wikidata
+stores,Murphy Oil,Murphy Oil,long tail: not ranked,,,100,hand,wikidata
+stores,Michaels,Michaels,long tail: not ranked,,,100,hand,wikidata
+stores,Noodles & Company,Noodles & Company,long tail: not ranked,,,100,hand,wikidata
+stores,PriceSmart,PriceSmart,long tail: not ranked,,,100,hand,wikidata
 stores,Delek US,Delek US,long tail: not ranked,,,100,hand,wikidata
 stores,Theater Owners Booking Association,Theatre Owners Booking Association,long tail: not ranked,,,100,hand,wikidata
 stores,Cabela's,Cabela's,long tail: not ranked,,,100,hand,wikidata
@@ -2994,28 +3097,29 @@ stores,Club 33,Club 33,long tail: not ranked,,,100,hand,wikidata
 stores,Qdoba Mexican Eats,Qdoba,long tail: not ranked,,,100,hand,wikidata
 stores,Pilot Flying J,Pilot Flying J,long tail: not ranked,,,100,hand,wikidata
 stores,Giant Eagle,Giant Eagle,long tail: not ranked,,,100,hand,wikidata
-stores,Fred Harvey Company,Fred Harvey Company,long tail: not ranked,,,100,hand,wikidata
-stores,Graeter's,Graeter's,long tail: not ranked,,,100,hand,wikidata
-stores,Hecht's,Hecht's,long tail: not ranked,,,100,hand,wikidata
-stores,Howard Johnson's,Howard Johnson's,long tail: not ranked,,,100,hand,wikidata
-stores,JoAnn Fabrics,JoAnn Fabrics,long tail: not ranked,,,100,hand,wikidata
-stores,Mattress Firm,Mattress Firm,long tail: not ranked,,,100,hand,wikidata
-stores,Rubio's Coastal Grill,Rubio's Coastal Grill,long tail: not ranked,,,100,hand,wikidata
-stores,Michael Hill Jeweller,Michael Hill Jeweller,long tail: not ranked,,,100,hand,wikidata
-stores,The Children's Place,The Children's Place,long tail: not ranked,,,100,hand,wikidata
-stores,Abraham & Straus,Abraham & Straus,long tail: not ranked,,,100,hand,wikidata
-stores,Ann Taylor,Ann Inc.,long tail: not ranked,,,100,hand,wikidata
 stores,Bruegger's,Bruegger's,long tail: not ranked,,,100,hand,wikidata
 stores,Claim Jumper,Claim Jumper,long tail: not ranked,,,100,hand,wikidata
 stores,Cost Plus World Market,World Market (store),long tail: not ranked,,,100,hand,wikidata
 stores,Così,Così (restaurant),long tail: not ranked,,,100,hand,wikidata
 stores,Ascena Retail Group,KnitWell Group,long tail: not ranked,,,100,hand,wikidata
 stores,Duane Reade,Duane Reade,long tail: not ranked,,,100,hand,wikidata
+stores,Michael Hill Jeweller,Michael Hill Jeweller,long tail: not ranked,,,100,hand,wikidata
+stores,The Children's Place,The Children's Place,long tail: not ranked,,,100,hand,wikidata
+stores,Abraham & Straus,Abraham & Straus,long tail: not ranked,,,100,hand,wikidata
+stores,Ann Taylor,Ann Inc.,long tail: not ranked,,,100,hand,wikidata
+stores,Biggby Coffee,Biggby Coffee,long tail: not ranked,,,100,hand,wikidata
+stores,Fred Harvey Company,Fred Harvey Company,long tail: not ranked,,,100,hand,wikidata
+stores,Graeter's,Graeter's,long tail: not ranked,,,100,hand,wikidata
+stores,Hecht's,Hecht's,long tail: not ranked,,,100,hand,wikidata
+stores,Howard Johnson's,Howard Johnson's,long tail: not ranked,,,100,hand,wikidata
+stores,JoAnn Fabrics,JoAnn Fabrics,long tail: not ranked,,,100,hand,wikidata
 stores,Showcase Cinemas,Showcase Cinemas,long tail: not ranked,,,100,hand,wikidata
 stores,Tropical Smoothie Cafe,Tropical Smoothie Cafe,long tail: not ranked,,,100,hand,wikidata
+stores,Cumberland Farms,Cumberland Farms,long tail: not ranked,,,100,hand,wikidata
 stores,Phở Hòa,Phở Hòa,long tail: not ranked,,,100,hand,wikidata
 stores,The Michaels Companies,The Michaels Companies,long tail: not ranked,,,100,hand,wikidata
-stores,Gyu-Kaku,Gyu-Kaku,long tail: not ranked,,,100,hand,wikidata
+stores,Mattress Firm,Mattress Firm,long tail: not ranked,,,100,hand,wikidata
+stores,Rubio's Coastal Grill,Rubio's Coastal Grill,long tail: not ranked,,,100,hand,wikidata
 stores,Office 1 Superstore,Office 1 Superstore,long tail: not ranked,,,100,hand,wikidata
 stores,Amoeba Music,Amoeba Music,long tail: not ranked,,,100,hand,wikidata
 stores,Bebe Stores,Bebe Stores,long tail: not ranked,,,100,hand,wikidata
@@ -3031,21 +3135,14 @@ stores,Shoney's,Shoney's,long tail: not ranked,,,100,hand,wikidata
 stores,Supercuts,Supercuts,long tail: not ranked,,,100,hand,wikidata
 stores,Marble Slab Creamery,Marble Slab Creamery,long tail: not ranked,,,100,hand,wikidata
 stores,Chicken Salad Chick,Chicken Salad Chick,long tail: not ranked,,,100,hand,wikidata
-stores,Cumberland Farms,Cumberland Farms,long tail: not ranked,,,100,hand,wikidata
-stores,Biggby Coffee,Biggby Coffee,long tail: not ranked,,,100,hand,wikidata
-stores,I. Magnin,I. Magnin,long tail: not ranked,,,100,hand,wikidata
-stores,Jack's,Jack's,long tail: not ranked,,,100,hand,wikidata
-stores,Nestlé Toll House Café,Nestlé Toll House Café,long tail: not ranked,,,100,hand,wikidata
-stores,Ollie's Bargain Outlet,Ollie's Bargain Outlet,long tail: not ranked,,,100,hand,wikidata
-stores,P. C. Richard & Son,P. C. Richard & Son,long tail: not ranked,,,100,hand,wikidata
-stores,Pier 1 Imports,Pier 1 Imports,long tail: not ranked,,,100,hand,wikidata
-stores,Roadhouse Grill,Roadhouse Grill,long tail: not ranked,,,100,hand,wikidata
-stores,Orpheum Circuit,Orpheum Circuit,long tail: not ranked,,,100,hand,wikidata
-stores,Century Theatres,Century Theatres,long tail: not ranked,,,100,hand,wikidata
-stores,Landmark Theatres,Landmark Theatres,long tail: not ranked,,,100,hand,wikidata
-stores,Lee's Famous Recipe Chicken,Lee's Famous Recipe Chicken,long tail: not ranked,,,100,hand,wikidata
+stores,Gyu-Kaku,Gyu-Kaku,long tail: not ranked,,,100,hand,wikidata
 stores,Burgerville,Burgerville,long tail: not ranked,,,100,hand,wikidata
 stores,Capriotti's,Capriotti's Sandwich Shop,long tail: not ranked,,,100,hand,wikidata
+stores,Orpheum Circuit,Orpheum Circuit,long tail: not ranked,,,100,hand,wikidata
+stores,Century Theatres,Century Theatres,long tail: not ranked,,,100,hand,wikidata
+stores,Blake's Lotaburger,Blake's Lotaburger,long tail: not ranked,,,100,hand,wikidata
+stores,I. Magnin,I. Magnin,long tail: not ranked,,,100,hand,wikidata
+stores,Jack's,Jack's,long tail: not ranked,,,100,hand,wikidata
 stores,The Container Store,The Container Store,long tail: not ranked,,,100,hand,wikidata
 stores,The Original Pancake House,The Original Pancake House,long tail: not ranked,,,100,hand,wikidata
 stores,Tilted Kilt Pub & Eatery,Tilted Kilt Pub & Eatery,long tail: not ranked,,,100,hand,wikidata
@@ -3053,6 +3150,13 @@ stores,United Dairy Farmers,United Dairy Farmers,long tail: not ranked,,,100,han
 stores,W. T. Grant,W. T. Grant,long tail: not ranked,,,100,hand,wikidata
 stores,Woodward & Lothrop,Woodward & Lothrop,long tail: not ranked,,,100,hand,wikidata
 stores,Souplantation,Souplantation and Sweet Tomatoes,long tail: not ranked,,,100,hand,wikidata
+stores,Landmark Theatres,Landmark Theatres,long tail: not ranked,,,100,hand,wikidata
+stores,Lee's Famous Recipe Chicken,Lee's Famous Recipe Chicken,long tail: not ranked,,,100,hand,wikidata
+stores,Nestlé Toll House Café,Nestlé Toll House Café,long tail: not ranked,,,100,hand,wikidata
+stores,Ollie's Bargain Outlet,Ollie's Bargain Outlet,long tail: not ranked,,,100,hand,wikidata
+stores,P. C. Richard & Son,P. C. Richard & Son,long tail: not ranked,,,100,hand,wikidata
+stores,Pier 1 Imports,Pier 1 Imports,long tail: not ranked,,,100,hand,wikidata
+stores,Roadhouse Grill,Roadhouse Grill,long tail: not ranked,,,100,hand,wikidata
 stores,Salsarita's Fresh Mexican Grill,Salsarita's Fresh Mexican Grill,long tail: not ranked,,,100,hand,wikidata
 stores,Keith-Albee-Orpheum,Keith-Albee-Orpheum,long tail: not ranked,,,100,hand,wikidata
 stores,Billy Goat Tavern,Billy Goat Tavern,long tail: not ranked,,,100,hand,wikidata
@@ -3089,14 +3193,10 @@ stores,McAlister's Deli,McAlister's Deli,long tail: not ranked,,,100,hand,wikida
 stores,Robeks,Robeks,long tail: not ranked,,,100,hand,wikidata
 stores,Slim Chickens,Slim Chickens,long tail: not ranked,,,100,hand,wikidata
 stores,Freedom Fuel,Freedom Fuel,long tail: not ranked,,,100,hand,wikidata
-stores,Blake's Lotaburger,Blake's Lotaburger,long tail: not ranked,,,100,hand,wikidata
-stores,Gabe's,Gabe's,long tail: not ranked,,,100,hand,wikidata
-stores,Jazzercise,Jazzercise,long tail: not ranked,,,100,hand,wikidata
-stores,Megaplex Theatres,Megaplex Theatres,long tail: not ranked,,,100,hand,wikidata
-stores,Perkins Restaurant & Bakery,Perkins Restaurant & Bakery,long tail: not ranked,,,100,hand,wikidata
-stores,Piccadilly Restaurants,Piccadilly Restaurants,long tail: not ranked,,,100,hand,wikidata
-stores,Quaker Steak & Lube,Quaker Steak & Lube,long tail: not ranked,,,100,hand,wikidata
-stores,QuickChek,QuickChek,long tail: not ranked,,,100,hand,wikidata
+stores,Bright Horizons,Bright Horizons,long tail: not ranked,,,100,hand,wikidata
+stores,Buffalo Wings & Rings,Buffalo Wings & Rings,long tail: not ranked,,,100,hand,wikidata
+stores,Bullock's,Bullock's,long tail: not ranked,,,100,hand,wikidata
+stores,Dinosaur Bar-B-Que,Dinosaur Bar-B-Que,long tail: not ranked,,,100,hand,wikidata
 stores,Pearle Vision,Pearle Vision,long tail: not ranked,,,100,hand,wikidata
 stores,Dolly Parton's Dixie Stampede,Dolly Parton's Stampede,long tail: not ranked,,,100,hand,wikidata
 stores,Aloha Petroleum,Aloha Petroleum,long tail: not ranked,,,100,hand,wikidata
@@ -3104,14 +3204,8 @@ stores,Art Van,Art Van Furniture,long tail: not ranked,,,100,hand,wikidata
 stores,BJ's Restaurant & Brewery,BJ's Restaurants,long tail: not ranked,,,100,hand,wikidata
 stores,Bakers Square,Bakers Square,long tail: not ranked,,,100,hand,wikidata
 stores,Ben Franklin,Ben Franklin (company),long tail: not ranked,,,100,hand,wikidata
-stores,Joseph-Beth Booksellers,Joseph-Beth Booksellers,long tail: not ranked,,,100,hand,wikidata
-stores,Kwik Trip,Kwik Trip,long tail: not ranked,,,100,hand,wikidata
-stores,Lawry's,Lawry's The Prime Rib,long tail: not ranked,,,100,hand,wikidata
-stores,Maggiano's Little Italy,Maggiano's Little Italy,long tail: not ranked,,,100,hand,wikidata
-stores,Bright Horizons,Bright Horizons,long tail: not ranked,,,100,hand,wikidata
-stores,Buffalo Wings & Rings,Buffalo Wings & Rings,long tail: not ranked,,,100,hand,wikidata
-stores,Bullock's,Bullock's,long tail: not ranked,,,100,hand,wikidata
-stores,Dinosaur Bar-B-Que,Dinosaur Bar-B-Que,long tail: not ranked,,,100,hand,wikidata
+stores,Gabe's,Gabe's,long tail: not ranked,,,100,hand,wikidata
+stores,Jazzercise,Jazzercise,long tail: not ranked,,,100,hand,wikidata
 stores,rue21,Rue21,long tail: not ranked,,,100,hand,wikidata
 stores,Sally Beauty Holdings,Sally Beauty Holdings,long tail: not ranked,,,100,hand,wikidata
 stores,Shane Company,Shane Company,long tail: not ranked,,,100,hand,wikidata
@@ -3123,6 +3217,7 @@ stores,The UPS Store,The UPS Store,long tail: not ranked,,,100,hand,wikidata
 stores,The Vitamin Shoppe,The Vitamin Shoppe,long tail: not ranked,,,100,hand,wikidata
 stores,United Club,United Club,long tail: not ranked,,,100,hand,wikidata
 stores,Weathervane Seafood Restaurants,Weathervane Seafood Restaurants,long tail: not ranked,,,100,hand,wikidata
+stores,Bricks & Minifigs,Bricks & Minifigs,long tail: not ranked,,,100,hand,wikidata
 stores,Sweet Frog,Sweet Frog,long tail: not ranked,,,100,hand,wikidata
 stores,L. S. Ayres,L. S. Ayres,long tail: not ranked,,,100,hand,wikidata
 stores,Jason's Deli,Jason's Deli,long tail: not ranked,,,100,hand,wikidata
@@ -3136,8 +3231,16 @@ stores,Hodad's,Hodad's,long tail: not ranked,,,100,hand,wikidata
 stores,Halo Top Creamery,Halo Top Creamery,long tail: not ranked,,,100,hand,wikidata
 stores,uBreakiFix,UBreakiFix,long tail: not ranked,,,100,hand,wikidata
 stores,Primo Hoagies,Primo Hoagies,long tail: not ranked,,,100,hand,wikidata
+stores,Joseph-Beth Booksellers,Joseph-Beth Booksellers,long tail: not ranked,,,100,hand,wikidata
+stores,Kwik Trip,Kwik Trip,long tail: not ranked,,,100,hand,wikidata
+stores,Lawry's,Lawry's The Prime Rib,long tail: not ranked,,,100,hand,wikidata
+stores,Maggiano's Little Italy,Maggiano's Little Italy,long tail: not ranked,,,100,hand,wikidata
+stores,Megaplex Theatres,Megaplex Theatres,long tail: not ranked,,,100,hand,wikidata
+stores,Perkins Restaurant & Bakery,Perkins Restaurant & Bakery,long tail: not ranked,,,100,hand,wikidata
+stores,Piccadilly Restaurants,Piccadilly Restaurants,long tail: not ranked,,,100,hand,wikidata
+stores,Quaker Steak & Lube,Quaker Steak & Lube,long tail: not ranked,,,100,hand,wikidata
+stores,QuickChek,QuickChek,long tail: not ranked,,,100,hand,wikidata
 stores,Cava Group,Cava Group,long tail: not ranked,,,100,hand,wikidata
-stores,Bricks & Minifigs,Bricks & Minifigs,long tail: not ranked,,,100,hand,wikidata
 stores,Atlanta Bread Company,Atlanta Bread Company,long tail: not ranked,,,100,hand,wikidata
 stores,Ten Thousand Villages,Ten Thousand Villages,long tail: not ranked,,,100,hand,wikidata
 stores,The Varsity,The Varsity (restaurant),long tail: not ranked,,,100,hand,wikidata
@@ -3199,6 +3302,14 @@ stores,Licorice Pizza,Licorice Pizza (store),long tail: not ranked,,,100,hand,wi
 stores,Van Leeuwen Ice Cream,Van Leeuwen Ice Cream,long tail: not ranked,,,100,hand,wikidata
 stores,Paseo,Paseo (restaurant),long tail: not ranked,,,100,hand,wikidata
 stores,Trump Burger,Trump Burger,long tail: not ranked,,,100,hand,wikidata
+stores,Buffum's,Buffums,long tail: not ranked,,,100,hand,wikidata
+stores,Buybuy BABY,Buy Buy Baby,long tail: not ranked,,,100,hand,wikidata
+stores,Clark Brands,Clark Brands,long tail: not ranked,,,100,hand,wikidata
+stores,Conn's,Conn's,long tail: not ranked,,,100,hand,wikidata
+stores,Eddie V's,Eddie V's Prime Seafood,long tail: not ranked,,,100,hand,wikidata
+stores,First Watch,First Watch (restaurant chain),long tail: not ranked,,,100,hand,wikidata
+stores,Big Gay Ice Cream,Big Gay Ice Cream,long tail: not ranked,,,100,hand,wikidata
+stores,Bill Miller Bar-B-Q Enterprises,Bill Miller Bar-B-Q Enterprises,long tail: not ranked,,,100,hand,wikidata
 stores,Frisch's,Frisch's,long tail: not ranked,,,100,hand,wikidata
 stores,G. C. Murphy,G. C. Murphy,long tail: not ranked,,,100,hand,wikidata
 stores,At Home,At Home (store),long tail: not ranked,,,100,hand,wikidata
@@ -3207,24 +3318,6 @@ stores,Goodrich Quality Theaters,Goodrich Quality Theaters,long tail: not ranked
 stores,Gott's Roadside,Gott's Roadside,long tail: not ranked,,,100,hand,wikidata
 stores,Harvard/MIT Cooperative Society,MIT Cooperative Society,long tail: not ranked,,,100,hand,wikidata
 stores,High's Dairy Store,High's Dairy Store,long tail: not ranked,,,100,hand,wikidata
-stores,Marie Callender's,Marie Callender's,long tail: not ranked,,,100,hand,wikidata
-stores,McCrory Stores,McCrory Stores,long tail: not ranked,,,100,hand,wikidata
-stores,Applegreen,Applegreen,long tail: not ranked,,,100,hand,wikidata
-stores,Pilot Company,Pilot Company,long tail: not ranked,,,100,hand,wikidata
-stores,Portland's Centers for the Arts,Portland's Centers for the Arts,long tail: not ranked,,,100,hand,wikidata
-stores,Primanti Brothers,Primanti Bros.,long tail: not ranked,,,100,hand,wikidata
-stores,Raleigh Haberdasher,Raleigh Haberdasher,long tail: not ranked,,,100,hand,wikidata
-stores,Big Gay Ice Cream,Big Gay Ice Cream,long tail: not ranked,,,100,hand,wikidata
-stores,Joseph Magnin Co.,Joseph Magnin,long tail: not ranked,,,100,hand,wikidata
-stores,KB Theatres,KB Theatres,long tail: not ranked,,,100,hand,wikidata
-stores,KB Toys,KB Toys,long tail: not ranked,,,100,hand,wikidata
-stores,Kelly-Moore Paints,Kelly-Moore Paints,long tail: not ranked,,,100,hand,wikidata
-stores,Buffum's,Buffums,long tail: not ranked,,,100,hand,wikidata
-stores,Buybuy BABY,Buy Buy Baby,long tail: not ranked,,,100,hand,wikidata
-stores,Clark Brands,Clark Brands,long tail: not ranked,,,100,hand,wikidata
-stores,Conn's,Conn's,long tail: not ranked,,,100,hand,wikidata
-stores,Eddie V's,Eddie V's Prime Seafood,long tail: not ranked,,,100,hand,wikidata
-stores,First Watch,First Watch (restaurant chain),long tail: not ranked,,,100,hand,wikidata
 stores,Sambo's,Sambo's,long tail: not ranked,,,100,hand,wikidata
 stores,"Spec's Wine, Spirits & Finer Foods","Spec's Wine, Spirits & Finer Foods",long tail: not ranked,,,100,hand,wikidata
 stores,T. A. Chapman Co.,T. A. Chapman Co.,long tail: not ranked,,,100,hand,wikidata
@@ -3232,6 +3325,11 @@ stores,Thorntons LLC,Thorntons LLC,long tail: not ranked,,,100,hand,wikidata
 stores,TitleMax,TitleMax,long tail: not ranked,,,100,hand,wikidata
 stores,Wahoo's Fish Taco,Wahoo's Fish Taco,long tail: not ranked,,,100,hand,wikidata
 stores,Western Sizzlin',Western Sizzlin',long tail: not ranked,,,100,hand,wikidata
+stores,Boot Barn,Boot Barn,long tail: not ranked,,,100,hand,wikidata
+stores,Mendocino Farms,Mendocino Farms,long tail: not ranked,,,100,hand,wikidata
+stores,Poodle Dog Restaurants,Poodle Dog Restaurants,long tail: not ranked,,,100,hand,wikidata
+stores,W. S. Butterfield Theatres,W. S. Butterfield Theatres,long tail: not ranked,,,100,hand,wikidata
+stores,Maryland Fried Chicken,Maryland Fried Chicken,long tail: not ranked,,,100,hand,wikidata
 stores,Longs Drugs,Longs Drugs,long tail: not ranked,,,100,hand,wikidata
 stores,Hens and Kelly,Hens and Kelly,long tail: not ranked,,,100,hand,wikidata
 stores,Tire Kingdom,Tire Kingdom,long tail: not ranked,,,100,hand,wikidata
@@ -3247,6 +3345,19 @@ stores,Turkey Hill Minit Markets,Turkey Hill Minit Markets,long tail: not ranked
 stores,Aldens,Aldens (department store),long tail: not ranked,,,100,hand,wikidata
 stores,Ojos Locos,Ojos Locos,long tail: not ranked,,,100,hand,wikidata
 stores,Walker Scott,Walker Scott,long tail: not ranked,,,100,hand,wikidata
+stores,Joseph Magnin Co.,Joseph Magnin,long tail: not ranked,,,100,hand,wikidata
+stores,KB Theatres,KB Theatres,long tail: not ranked,,,100,hand,wikidata
+stores,KB Toys,KB Toys,long tail: not ranked,,,100,hand,wikidata
+stores,Kelly-Moore Paints,Kelly-Moore Paints,long tail: not ranked,,,100,hand,wikidata
+stores,Marie Callender's,Marie Callender's,long tail: not ranked,,,100,hand,wikidata
+stores,McCrory Stores,McCrory Stores,long tail: not ranked,,,100,hand,wikidata
+stores,Applegreen,Applegreen,long tail: not ranked,,,100,hand,wikidata
+stores,Pilot Company,Pilot Company,long tail: not ranked,,,100,hand,wikidata
+stores,Portland's Centers for the Arts,Portland's Centers for the Arts,long tail: not ranked,,,100,hand,wikidata
+stores,Primanti Brothers,Primanti Bros.,long tail: not ranked,,,100,hand,wikidata
+stores,Raleigh Haberdasher,Raleigh Haberdasher,long tail: not ranked,,,100,hand,wikidata
+stores,Mashti Malone's,Mashti Malone's,long tail: not ranked,,,100,hand,wikidata
+stores,Thrifty Ice Cream,Thrifty Ice Cream,long tail: not ranked,,,100,hand,wikidata
 stores,Harris & Frank,Harris & Frank,long tail: not ranked,,,100,hand,wikidata
 stores,Russeks,Russeks,long tail: not ranked,,,100,hand,wikidata
 stores,SuperTarget,SuperTarget,long tail: not ranked,,,100,hand,wikidata
@@ -3254,13 +3365,6 @@ stores,Boston Store,Boston Stores (California-based department store),long tail:
 stores,Broadway Stores,Broadway Stores,long tail: not ranked,,,100,hand,wikidata
 stores,Rodney Scott's Whole Hog BBQ,Rodney Scott's Whole Hog BBQ,long tail: not ranked,,,100,hand,wikidata
 stores,Freeway Insurance,Freeway Insurance,long tail: not ranked,,,100,hand,wikidata
-stores,Boot Barn,Boot Barn,long tail: not ranked,,,100,hand,wikidata
-stores,Mendocino Farms,Mendocino Farms,long tail: not ranked,,,100,hand,wikidata
-stores,Poodle Dog Restaurants,Poodle Dog Restaurants,long tail: not ranked,,,100,hand,wikidata
-stores,W. S. Butterfield Theatres,W. S. Butterfield Theatres,long tail: not ranked,,,100,hand,wikidata
-stores,Maryland Fried Chicken,Maryland Fried Chicken,long tail: not ranked,,,100,hand,wikidata
-stores,Mashti Malone's,Mashti Malone's,long tail: not ranked,,,100,hand,wikidata
-stores,Thrifty Ice Cream,Thrifty Ice Cream,long tail: not ranked,,,100,hand,wikidata
 stores,Sushisamba,Sushisamba,long tail: not ranked,,,100,hand,wikidata
 stores,Taco Mayo,Taco Mayo,long tail: not ranked,,,100,hand,wikidata
 stores,Aladdin's Eatery,Aladdin's Eatery,long tail: not ranked,,,100,hand,wikidata
@@ -3438,24 +3542,6 @@ stores,Dollar General Market,Dollar General Market,long tail: not ranked,,,100,h
 stores,Taqueria El Farolito,Taqueria El Farolito,long tail: not ranked,,,100,hand,wikidata
 stores,Shirtzenpantz,Shirtzenpantz,long tail: not ranked,,,100,hand,wikidata
 stores,Ivar's,Ivar's,long tail: not ranked,,,100,hand,wikidata
-stores,Bill Miller Bar-B-Q Enterprises,Bill Miller Bar-B-Q Enterprises,long tail: not ranked,,,100,hand,wikidata
-stores,Fred Loya Insurance,Fred Loya Insurance,long tail: not ranked,,,100,hand,wikidata
-stores,General Cinema Corporation,General Cinema,long tail: not ranked,,,100,hand,wikidata
-stores,Giant Industries,Giant Industries,long tail: not ranked,,,100,hand,wikidata
-stores,Hard Times Cafe,Hard Times Cafe (chain restaurant),long tail: not ranked,,,100,hand,wikidata
-stores,Health Mart,Health Mart,long tail: not ranked,,,100,hand,wikidata
-stores,Martinizing Dry Cleaning,Martinizing Dry Cleaning,long tail: not ranked,,,100,hand,wikidata
-stores,Milio's Sandwiches,Milio's Sandwiches,long tail: not ranked,,,100,hand,wikidata
-stores,Official All Star Café,Official All Star Café,long tail: not ranked,,,100,hand,wikidata
-stores,Pacific Pride,Pacific Pride,long tail: not ranked,,,100,hand,wikidata
-stores,"Petland Discounts, Inc.",Petland Discounts,long tail: not ranked,,,100,hand,wikidata
-stores,Primrose Schools,Primrose Schools,long tail: not ranked,,,100,hand,wikidata
-stores,Pussycat Theater,Pussycat Theaters,long tail: not ranked,,,100,hand,wikidata
-stores,RibCrib,Rib Crib,long tail: not ranked,,,100,hand,wikidata
-stores,Bigg's,Bigg's,long tail: not ranked,,,100,hand,wikidata
-stores,Best & Co.,Best & Co.,long tail: not ranked,,,100,hand,wikidata
-stores,Sunbrella IMAX 3D Theaters at Jordan's Furniture,Jordan's IMAX,long tail: not ranked,,,100,hand,wikidata
-stores,Kerasotes Theatres,Kerasotes Theatres,long tail: not ranked,,,100,hand,wikidata
 stores,Café Gratitude,Café Gratitude,long tail: not ranked,,,100,hand,wikidata
 stores,Johnny Carino's,Johnny Carino's,long tail: not ranked,,,100,hand,wikidata
 stores,Cheer Athletics,Cheer Athletics,long tail: not ranked,,,100,hand,wikidata
@@ -3465,10 +3551,19 @@ stores,Design Research,Design Research (store),long tail: not ranked,,,100,hand,
 stores,Dopo / Adesso, Adesso,long tail: not ranked,,,100,hand,wikidata
 stores,Fiorella's Jack Stack Barbecue,Fiorella's Jack Stack Barbecue,long tail: not ranked,,,100,hand,wikidata
 stores,Fox's Pizza Den,Fox's Pizza Den,long tail: not ranked,,,100,hand,wikidata
+stores,Bigg's,Bigg's,long tail: not ranked,,,100,hand,wikidata
+stores,Best & Co.,Best & Co.,long tail: not ranked,,,100,hand,wikidata
+stores,Fred Loya Insurance,Fred Loya Insurance,long tail: not ranked,,,100,hand,wikidata
+stores,General Cinema Corporation,General Cinema,long tail: not ranked,,,100,hand,wikidata
+stores,Giant Industries,Giant Industries,long tail: not ranked,,,100,hand,wikidata
+stores,Hard Times Cafe,Hard Times Cafe (chain restaurant),long tail: not ranked,,,100,hand,wikidata
+stores,Health Mart,Health Mart,long tail: not ranked,,,100,hand,wikidata
 stores,Ruth's Hospitality Group,Ruth's Hospitality Group,long tail: not ranked,,,100,hand,wikidata
 stores,Soup Kitchen International,The Original Soupman,long tail: not ranked,,,100,hand,wikidata
 stores,Twistee Treat,Twistee Treat,long tail: not ranked,,,100,hand,wikidata
 stores,Zoës Kitchen,Zoës Kitchen,long tail: not ranked,,,100,hand,wikidata
+stores,Tatte Bakery & Cafe,Tatte Bakery & Café,long tail: not ranked,,,100,hand,wikidata
+stores,Fleet Feet,Fleet Feet,long tail: not ranked,,,100,hand,wikidata
 stores,Tacotote,El Taco Tote,long tail: not ranked,,,100,hand,wikidata
 stores,Laemmle Theatres,Laemmle Theatres,long tail: not ranked,,,100,hand,wikidata
 stores,"Petland, Inc.",Petland,long tail: not ranked,,,100,hand,wikidata
@@ -3478,6 +3573,18 @@ stores,Wong's King,Wong's King,long tail: not ranked,,,100,hand,wikidata
 stores,McCoy Corporation,McCoy's Building Supply,long tail: not ranked,,,100,hand,wikidata
 stores,"Abbey, Schoeffel and Grau","Abbey, Schoeffel and Grau",long tail: not ranked,,,100,hand,wikidata
 stores,Huck's Food & Fuel,Huck's Market,long tail: not ranked,,,100,hand,wikidata
+stores,Sunbrella IMAX 3D Theaters at Jordan's Furniture,Jordan's IMAX,long tail: not ranked,,,100,hand,wikidata
+stores,Kerasotes Theatres,Kerasotes Theatres,long tail: not ranked,,,100,hand,wikidata
+stores,Martinizing Dry Cleaning,Martinizing Dry Cleaning,long tail: not ranked,,,100,hand,wikidata
+stores,Milio's Sandwiches,Milio's Sandwiches,long tail: not ranked,,,100,hand,wikidata
+stores,Official All Star Café,Official All Star Café,long tail: not ranked,,,100,hand,wikidata
+stores,Pacific Pride,Pacific Pride,long tail: not ranked,,,100,hand,wikidata
+stores,"Petland Discounts, Inc.",Petland Discounts,long tail: not ranked,,,100,hand,wikidata
+stores,Primrose Schools,Primrose Schools,long tail: not ranked,,,100,hand,wikidata
+stores,Pussycat Theater,Pussycat Theaters,long tail: not ranked,,,100,hand,wikidata
+stores,RibCrib,Rib Crib,long tail: not ranked,,,100,hand,wikidata
+stores,MOTO Pizza,Moto Pizza,long tail: not ranked,,,100,hand,wikidata
+stores,Apple Cinemas,Apple Cinemas,long tail: not ranked,,,100,hand,wikidata
 stores,Palm Beach Tan,Palm Beach Tan,long tail: not ranked,,,100,hand,wikidata
 stores,Aladdin Bail Bonds,Aladdin Bail Bonds,long tail: not ranked,,,100,hand,wikidata
 stores,Western Dental,Western Dental,long tail: not ranked,,,100,hand,wikidata
@@ -3488,11 +3595,6 @@ stores,DressBarn,Dressbarn,long tail: not ranked,,,100,hand,wikidata
 stores,Marden's,Marden's,long tail: not ranked,,,100,hand,wikidata
 stores,Gingiss Formalwear,Gingiss Formalwear,long tail: not ranked,,,100,hand,wikidata
 stores,Torchy’s Tacos,Torchy's Tacos,long tail: not ranked,,,100,hand,wikidata
-stores,Tatte Bakery & Cafe,Tatte Bakery & Café,long tail: not ranked,,,100,hand,wikidata
-stores,Fleet Feet,Fleet Feet,long tail: not ranked,,,100,hand,wikidata
-stores,MOTO Pizza,Moto Pizza,long tail: not ranked,,,100,hand,wikidata
-stores,Apple Cinemas,Apple Cinemas,long tail: not ranked,,,100,hand,wikidata
-stores,Gasho of Japan,Gasho of Japan,long tail: not ranked,,,100,hand,wikidata
 stores,Abbott's Frozen Custard,Abbott's Frozen Custard,long tail: not ranked,,,100,hand,wikidata
 stores,Al's Formal Wear,Al's Formal Wear,long tail: not ranked,,,100,hand,wikidata
 stores,Amy's Ice Creams,Amy's Ice Creams,long tail: not ranked,,,100,hand,wikidata
@@ -3699,40 +3801,58 @@ stores,Runnings,Runnings,long tail: not ranked,,,100,hand,wikidata
 stores,Value Village,Value Village,long tail: not ranked,,,100,hand,wikidata
 stores,ChòpnBlọk,ChòpnBlọk,long tail: not ranked,,,100,hand,wikidata
 stores,Rainbow Cobblers,Rainbow Cobblers,long tail: not ranked,,,100,hand,wikidata
+stores,Gasho of Japan,Gasho of Japan,long tail: not ranked,,,100,hand,wikidata
 thanks,Corn,Maize,ok,1425048,0.000,10,views,hand
-thanks,Sweet potato casserole,Sweet potato,ok,891312,0.165,10,views,hand
-thanks,Deviled eggs,Deviled egg,ok,554592,0.268,25,views,hand
-thanks,Brussels sprouts,Brussels sprout,ok,535968,0.332,25,views,hand
-thanks,Mac and cheese,Macaroni and cheese,ok,492288,0.394,25,views,hand
-thanks,Collard greens,Collard (plant),ok,462816,0.451,25,views,hand
-thanks,Waldorf salad,Waldorf salad,ok,431808,0.505,40,views,hand
-thanks,Ambrosia salad,Ambrosia (fruit salad),ok,390624,0.554,40,views,hand
-thanks,Butternut squash,Butternut squash,ok,374952,0.600,40,views,hand
-thanks,Ham,Ham,ok,356232,0.643,40,views,hand
-thanks,Gravy,Gravy,ok,332280,0.684,40,views,hand
-thanks,Succotash,Succotash,ok,318144,0.723,60,views,hand
-thanks,Apple pie,Apple pie,ok,287232,0.759,60,views,hand
-thanks,Cornbread,Cornbread,ok,285168,0.793,60,views,hand
-thanks,Mashed potatoes,Mashed potato,ok,224256,0.826,60,views,hand
-thanks,Watergate salad,Watergate salad,ok,183408,0.852,80,views,hand
-thanks,Dinner rolls,Bread roll,ok,133416,0.873,80,views,hand
-thanks,Mincemeat pie,Mince pie,ok,131616,0.888,80,views,hand
-thanks,Pecan pie,Pecan pie,ok,120336,0.903,80,views,hand
-thanks,Chess pie,Chess pie,ok,115776,0.917,80,views,hand
-thanks,Pumpkin pie,Pumpkin pie,ok,87168,0.931,80,views,hand
-thanks,Creamed corn,Creamed corn,ok,85728,0.941,80,views,hand
-thanks,Oyster stuffing,,missing,0,,80,hand,hand
-thanks,Cornbread dressing,,missing,0,,80,hand,hand
-thanks,Giblet gravy,,missing,0,,80,hand,hand
-thanks,Jell-O salad,Jello salad,ok,85440,0.951,100,views,hand
-thanks,Stuffing,Stuffing,ok,76296,0.961,100,views,hand
+thanks,Sweet potato casserole,Sweet potato,ok,891312,0.127,10,views,hand
+thanks,Deviled eggs,Deviled egg,ok,554592,0.207,10,views,hand
+thanks,Brussels sprouts,Brussels sprout,ok,535968,0.257,25,views,hand
+thanks,Mac and cheese,Macaroni and cheese,ok,492288,0.305,25,views,hand
+thanks,Collard greens,Collard (plant),ok,462816,0.349,25,views,hand
+thanks,Waldorf salad,Waldorf salad,ok,431808,0.390,25,views,hand
+thanks,Green beans,Green bean,ok,428160,0.429,25,views,hand
+thanks,Ambrosia salad,Ambrosia (fruit salad),ok,390624,0.467,25,views,hand
+thanks,Butternut squash,Butternut squash,ok,374952,0.502,40,views,hand
+thanks,Biscuits,Biscuit,ok,363192,0.535,40,views,hand
+thanks,Ham,Ham,ok,356232,0.568,40,views,hand
+thanks,Salad,Salad,ok,338880,0.600,40,views,hand
+thanks,Gravy,Gravy,ok,332280,0.630,40,views,hand
+thanks,Succotash,Succotash,ok,318144,0.660,40,views,hand
+thanks,Apple pie,Apple pie,ok,287232,0.688,40,views,hand
+thanks,Wild rice,Wild rice,ok,286128,0.714,60,views,hand
+thanks,Cornbread,Cornbread,ok,285168,0.739,60,views,hand
+thanks,Baked potatoes,Baked potato,ok,258096,0.765,60,views,hand
+thanks,Mashed potatoes,Mashed potato,ok,224256,0.788,60,views,hand
+thanks,Apple cider,Apple cider,ok,222288,0.808,60,views,hand
+thanks,Scalloped potatoes,Gratin,ok,206784,0.828,60,views,hand
+thanks,Watergate salad,Watergate salad,ok,183408,0.846,60,views,hand
+thanks,Oyster stuffing,,missing,0,,60,hand,hand
+thanks,Cornbread dressing,,missing,0,,60,hand,hand
+thanks,Giblet gravy,,missing,0,,60,hand,hand
+thanks,Parker House rolls,,missing,0,,60,hand,hand
+thanks,Turducken,Turducken,ok,182808,0.863,80,views,hand
+thanks,Relish tray,Relish,ok,167952,0.879,80,views,hand
+thanks,Dinner rolls,Bread roll,ok,133416,0.894,80,views,hand
+thanks,Mincemeat pie,Mince pie,ok,131616,0.906,80,views,hand
+thanks,Pecan pie,Pecan pie,ok,120336,0.918,80,views,hand
+thanks,Chess pie,Chess pie,ok,115776,0.929,80,views,hand
+thanks,Pumpkin pie,Pumpkin pie,ok,87168,0.939,80,views,hand
+thanks,Creamed corn,Creamed corn,ok,85728,0.947,80,views,hand
+thanks,Pumpkin roll,,missing,0,,80,hand,hand
+thanks,Jell-O salad,Jello salad,ok,85440,0.954,100,views,hand
+thanks,Stuffing,Stuffing,ok,76296,0.962,100,views,hand
 thanks,Turkey,Turkey as food,ok,71112,0.969,100,views,hand
-thanks,Green bean casserole,Green bean casserole,ok,54960,0.978,100,views,hand
+thanks,Green bean casserole,Green bean casserole,ok,54960,0.975,100,views,hand
+thanks,Cherry pie,Cherry pie,ok,48984,0.980,100,views,hand
 thanks,Sweet potato pie,Sweet potato pie,ok,45432,0.984,100,views,hand
 thanks,Cranberry sauce,Cranberry sauce,ok,36840,0.989,100,views,hand
-thanks,Spoonbread,Spoonbread,ok,36456,0.994,100,views,hand
-thanks,Corn pudding,Corn pudding,ok,19488,0.998,100,views,hand
-thanks,Parker House rolls,,missing,0,,100,hand,hand
+thanks,Spoonbread,Spoonbread,ok,36456,0.992,100,views,hand
+thanks,Pumpkin bread,Pumpkin bread,ok,22920,0.995,100,views,hand
+thanks,Corn pudding,Corn pudding,ok,19488,0.997,100,views,hand
+thanks,Fried turkey,Turkey fryer,ok,8280,0.999,100,views,hand
+thanks,Glazed carrots,Candied carrots,ok,4200,1.000,100,views,hand
+thanks,Cheese ball,,disambiguation,0,,100,hand,hand
+thanks,Roasted vegetables,,missing,0,,100,hand,hand
+thanks,Pumpkin cheesecake,,missing,0,,100,hand,hand
 twoword,New York,New York (state),ok,2947968,0.000,10,views,hand
 twoword,New Jersey,New Jersey,ok,2569704,0.158,10,views,hand
 twoword,North Carolina,North Carolina,ok,2358696,0.296,25,views,hand
