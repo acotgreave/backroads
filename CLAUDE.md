@@ -39,7 +39,7 @@ Andy wants Boreen's **journey** feel, not Krillion's **dive** feel. This is a fi
 | `scripts/build_schedule.js` → `data/schedule.json` | Plans the daily prompts 90 days ahead with the game's own `dayPrompts()` and freezes them: planned days never change, so adding or retiring a prompt only affects unplanned days. Baked into the page at `/*SCHED*/`. |
 | `scripts/build_dashboard.py` → `/dash/` | Engine dashboard built on every deploy: tier mix per prompt, answer tests, next four weeks of prompts. |
 | `scripts/check_answers.js` | Runs the game's own matching code over every answer and alias. Fails on aliases shared by two answers, aliases that score as a different answer, and traps that shadow a right answer. CI runs it hard on the hand lists and as warnings on the built bank. |
-| `src/template.html` → `WIKI` / `wikiCheck` | Last-resort answer check (Andy chose Wikipedia, open source, 27 Nov 2026). When an answer is on neither the list nor Wikidata, the browser looks it up on English Wikipedia: first as an exact title (following redirects), then by search. It accepts at 100 mi when the description or categories match the prompt's `d`/`c` patterns and, for `us:1` prompts, there's US evidence. If the bare answer is a page about something else (Greggs, Toyota), longer titles are not accepted. |
+| `src/template.html` → `WIKI` / `wikiCheck` | Last-resort answer check (Andy chose Wikipedia, open source, 27 Nov 2026). When an answer is on neither the list nor Wikidata, the browser looks it up on English Wikipedia: first as an exact title (following redirects), then by search. It accepts (scored by `liveTier`) when the description or categories match the prompt's `d`/`c` patterns and, for `us:1` prompts, there's US evidence. If the bare answer is a page about something else (Greggs, Toyota), longer titles are not accepted. |
 | `scripts/check_wiki.js` + `wiki-check.yml` | Runs `wikiCheck` against live Wikipedia for known right and wrong answers on branch pushes. Wikipedia rate-limits shared CI addresses, so 429s show as SKIP. |
 | `.github/workflows/bank-check.yml` | On any branch except `main`: builds the bank from live Wikidata without committing or deploying, and uploads `report.csv` + `bank.js` as an artifact. Use it to check query changes. |
 | `scripts/build_site.py` | Copies `public/` into `dist/` and writes `dist/index.html` with the bank baked in. It refuses to publish a mock bank. |
@@ -62,7 +62,7 @@ Exceptions:
 
 ### Wikidata prompts
 
-Lists are no longer trimmed. Page views are fetched for hand answers plus the 150 best-known Wikidata answers (by Wikipedia language count); the long tail is still accepted at 100 mi. Prompts whose `WD` entry doesn't say `live=False` also get an in-game live check: an answer not on the list is searched on Wikidata and accepted at 100 mi ("a deep cut") if it matches the prompt's query body.
+Lists are no longer trimmed. Page views are fetched for every answer (up to 1,500 per prompt). Prompts whose `WD` entry doesn't say `live=False` also get an in-game live check: an answer not on the list is searched on Wikidata and, if it matches the prompt's query body, accepted ("a deep cut") and scored by its page views (see `cut` above).
 
 
 These are set in the `WD` dict in `build_bank.py`: states, capitals, parks, presidents, signers, nfl, mlb, nba, rivers (>400 km), simpsons, friends, sesame, dogs, cars, airlines.
