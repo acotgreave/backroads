@@ -327,9 +327,15 @@ def main():
             key = lambda a: strip_words(a, p['strip']) or norm(a)
             red = redirects([it['title'] for it in items if it.get('title') and it.get('why') == 'ok'])
             names = {key(it['name']) for it in items}
+            # a word shared by several answers' names ("retriever", "airlines") is too generic to be an alias on its own:
+            # the game also matches an alias inside a longer answer, so "Retriever" would swallow "Labrador Retriever"
+            wc = {}
             for it in items:
-                extra = [clean(r) for r in red.get(it.get('title'), []) if not BAD_REDIRECT.search(r) and good_alias(r, it['name'])]
-                it['redirects'] = [key(r) for r in sorted(set(extra), key=len) if key(r) and key(r) not in names][:12]
+                for w in set(key(it['name']).split()): wc[w] = wc.get(w, 0) + 1
+            generic = lambda a: len(a.split()) == 1 and wc.get(a, 0) >= 2
+            for it in items:
+                extra = [clean(r) for r in red.get(it.get('title'), []) if '(' not in r and not BAD_REDIRECT.search(r) and good_alias(r, it['name'])]
+                it['redirects'] = [key(r) for r in sorted(set(extra), key=len) if key(r) and key(r) not in names and not generic(key(r))][:12]
             seen = {}
             for it in items:
                 for a in set(it['redirects']): seen[a] = seen.get(a, 0) + 1

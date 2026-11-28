@@ -78,13 +78,13 @@ function readTests() {
 const TESTS = readTests();
 const RESULTS = {};   // per prompt, for the dashboard (data/checks.json)
 function runTests(label, env, bank) {
-  const { P, prep, judge } = env, fails = [], warns = [];
+  const { P, prep, judge, norm } = env, fails = [], warns = [];
   for (const [id, t] of Object.entries(TESTS)) {
     const raw = P.find(p => p.id === id);
     if (!raw) { fails.push(`${id}: no such prompt`); continue; }
     const p = prep(raw), f0 = fails.length, w0 = warns.length;
     for (const a of t.accept || []) { const r = judge(p, a); if (!r || !r.it) fails.push(`${id}: "${a}" should count but ${r && r.trap ? 'hits a trap' : 'is not accepted'}`); }
-    for (const a of t.reject || []) { const r = judge(p, a); if (r && r.it) fails.push(`${id}: "${a}" should NOT count but scores as "${r.it.name}"`); }
+    for (const a of t.reject || []) { const r = judge(p, a); if (r && r.it) fails.push(`${id}: "${a}" should NOT count but scores as "${r.it.name}"${r.fuzzy ? ' (typo match)' : ` (via "${r.it.al.find(x => (' ' + norm(a) + ' ').includes(' ' + x + ' ')) || '?'}")`}`); }
     if (bank) for (const a of t.common || []) { const r = judge(p, a);
       if (!r || !r.it) fails.push(`${id}: common answer "${a}" is not accepted`);
       else if (r.it.tier > 2) warns.push(`${id}: common answer "${a}" scores ${[10, 25, 40, 60, 80, 100][r.it.tier]} mi`); }
