@@ -15,6 +15,13 @@ if os.path.exists(bank_path):
     print('baked in data/bank.js')
 else:
     print('no data/bank.js: publishing hand-set tiers')
+# the planned daily prompts (scripts/build_schedule.js)
+sched_path = os.path.join(ROOT, 'data/schedule.json')
+if os.path.exists(sched_path):
+    import json as _j
+    sched = _j.load(open(sched_path, encoding='utf8'))
+    html = html.replace('/*SCHED*/{}', _j.dumps({'days': sched['days']}, separators=(',', ':')))
+    print(f"baked in data/schedule.json ({len(sched['days'])} days)")
 # site wording from content/copy.yaml
 import json, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))

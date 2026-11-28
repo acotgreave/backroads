@@ -1,13 +1,14 @@
 // Fails if the daily prompts repeat too soon: a prompt twice in one day, or again within REST days.
-// Simulates the next 400 days with the real dayPrompts() from src/template.html.
+// Simulates the next 400 days with the real dayPrompts() from src/template.html and the frozen data/schedule.json.
 const fs=require('fs');
 const src=fs.readFileSync(__dirname+'/../src/template.html','utf8');
 const grab=(a,b)=>{const i=src.indexOf(a),j=src.indexOf(b,i);if(i<0||j<0)throw new Error('missing '+a);return src.slice(i,j)};
 const code=grab('const CATS=','\n',0)+'\n'+grab('function rng(','function newGame');if(!code.includes('function dayPrompts'))throw new Error('dayPrompts not found');
 const {CATS,dayPrompts}=new Function(code+';return {CATS,dayPrompts}')();
+const sp=__dirname+'/../data/schedule.json',SCHEDULE=fs.existsSync(sp)?JSON.parse(fs.readFileSync(sp,'utf8')):{days:{}};
 const REST=3,DAYS=400,FIRST=3;// days 1-2 were played before this rule
 const last={};let bad=0;const cat={};CATS.forEach(([c,ids])=>ids.forEach(id=>cat[id]=c));
-for(let d=1;d<=DAYS;d++){const qs=dayPrompts(d);
+for(let d=1;d<=DAYS;d++){const qs=dayPrompts(d,SCHEDULE);
   if(qs.length!==7){console.log(`day ${d}: ${qs.length} prompts`);bad++}
   if(new Set(qs).size!==qs.length){console.log(`day ${d}: duplicate in ${qs}`);bad++}
   qs.forEach(id=>{if(!cat[id]){console.log(`day ${d}: unknown prompt ${id}`);bad++}

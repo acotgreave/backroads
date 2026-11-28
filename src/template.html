@@ -231,7 +231,7 @@ pre.share{background:var(--panel2);padding:10px;border-radius:6px;white-space:pr
 <script>
 {
 const P=[
-{id:'states',q:'Name a US state',list:`California|Texas|New York|Florida|Hawaii|Alaska|Washington|Ohio|Georgia|Michigan|Illinois|Arizona|Colorado|Nevada|Pennsylvania|Massachusetts|Oregon|New Jersey|Virginia|North Carolina|Tennessee|Louisiana|Utah|Kentucky|Montana|Minnesota|Wisconsin|Alabama|Mississippi|Missouri|Kansas|Oklahoma|Indiana|Iowa|South Carolina|Maine|Vermont|New Mexico|Connecticut|Maryland|Arkansas|Idaho|Nebraska|Wyoming|West Virginia|New Hampshire|Rhode Island|Delaware|South Dakota|North Dakota`},
+{id:'states',q:'Name a US state',list:`California|Texas|New York|Florida|Hawaii|Alaska|Washington|Ohio|Georgia|Michigan|Illinois|Arizona|Colorado|Nevada|Pennsylvania|Massachusetts|Oregon|New Jersey|Virginia|North Carolina|Tennessee|Louisiana|Utah|Kentucky|Montana|Minnesota|Wisconsin|Alabama|Mississippi|Missouri|Kansas|Oklahoma|Indiana|Iowa|South Carolina|Maine|Vermont|New Mexico|Connecticut|Maryland|Arkansas|Idaho|Nebraska|Wyoming|West Virginia|New Hampshire|Rhode Island|Delaware|South Dakota|North Dakota`,traps:{'washington dc':'DC isn’t a state (yet).','district of columbia':'DC isn’t a state (yet).','puerto rico':'A territory, not a state.'}},
 {id:'mstates',q:'Name a state beginning with M',list:`Michigan|Massachusetts|Montana|Minnesota|Mississippi|Missouri|Maryland|Maine`},
 {id:'twoword',q:'Name a state with a two-word name',list:`New York|New Jersey|North Carolina|South Carolina|New Mexico|West Virginia|North Dakota|South Dakota|New Hampshire|Rhode Island`},
 {id:'atlantic',q:'Name a state with an Atlantic coastline',list:`Florida|New York|Maine|Massachusetts|North Carolina|New Jersey|South Carolina|Georgia|Virginia|Maryland|Connecticut|Rhode Island|Delaware|New Hampshire`,traps:{pennsylvania:'So close: Pennsylvania only reaches the Delaware River estuary, not the ocean.',vermont:'Vermont is landlocked.','washington dc':'DC is on the Potomac, not the coast.'}},
@@ -253,7 +253,7 @@ const P=[
 {id:'thanks',q:'Name a Thanksgiving dish',list:`Turkey|Mashed potatoes|Stuffing=dressing|Pumpkin pie|Cranberry sauce|Gravy|Green bean casserole|Sweet potato casserole=candied yams;yams;sweet potatoes|Mac and cheese=macaroni and cheese|Dinner rolls=rolls|Corn|Cornbread|Pecan pie|Apple pie|Deviled eggs|Brussels sprouts|Collard greens|Sweet potato pie|Corn pudding|Creamed corn|Ham|Butternut squash|Succotash|Ambrosia salad=ambrosia|Jell-O salad=jello salad|Waldorf salad|Watergate salad|Oyster stuffing|Cornbread dressing|Giblet gravy|Parker House rolls|Mincemeat pie|Chess pie|Spoonbread|Turducken|Green beans=string beans|Biscuits|Glazed carrots=carrots|Scalloped potatoes|Baked potatoes|Wild rice|Pumpkin bread|Pumpkin roll|Cherry pie|Cheese ball|Relish tray|Salad=green salad|Apple cider=cider|Roasted vegetables=roast vegetables|Fried turkey=deep fried turkey|Pumpkin cheesecake`},
 {id:'cars',q:'Name an American car brand',rule:'Current or long gone',list:`Ford|Chevrolet=chevy|Tesla|Jeep|Dodge|Cadillac|GMC|Chrysler|Buick|Lincoln|Ram|Pontiac|Oldsmobile|Hummer|Plymouth|Saturn|Mercury|Rivian|Lucid|DeLorean|AMC|Studebaker|Packard|Hudson|Nash|Duesenberg|Edsel|Tucker|Willys|Shelby|Fisker|Saleen|Imperial|DeSoto|Pierce-Arrow|Cord|Auburn|Eagle|Geo`},
 {id:'airlines',q:'Name a US airline',rule:'Flying today or long grounded',list:`Delta|American Airlines=american|United|Southwest|JetBlue|Alaska Airlines=alaska|Spirit|Frontier|Hawaiian|Pan Am=pan american|TWA=trans world airlines|Allegiant|Sun Country|Continental|Northwest|US Airways|Eastern|Virgin America|AirTran|Braniff|Western|Piedmont|People Express|Breeze|Avelo|Midwest|Aloha|America West|PSA=pacific southwest`},
-{id:'stores',q:'Name a US store chain',list:`Walmart|Target|Macy's|Nordstrom|Kohl's|JCPenney=jc penney;penneys;penney s|Sears|Costco|Bloomingdale's=bloomies|Saks Fifth Avenue=saks|Neiman Marcus|Dillard's|Kmart|TJ Maxx=tj maxx|Marshalls|Ross|Burlington|Bergdorf Goodman=bergdorfs|Lord & Taylor|Belk|Barneys|Marshall Field's|Montgomery Ward|Boscov's|Woolworth=woolworths|Gimbels|Wanamaker's|Hudson's|Filene's|Mervyn's|Ames|Zayre|Bon-Ton`},
+{id:'stores',q:'Name a US store chain',list:`Walmart|Target|Macy's|Nordstrom|Kohl's|JCPenney=jc penney;penneys;penney s|Sears|Costco|Bloomingdale's=bloomies|Saks Fifth Avenue=saks|Neiman Marcus|Dillard's|Kmart|TJ Maxx=tj maxx|Marshalls|Ross|Burlington|Bergdorf Goodman=bergdorfs|Lord & Taylor|Belk|Barneys|Marshall Field's|Montgomery Ward|Boscov's|Woolworth=woolworths|Gimbels|Wanamaker's|Hudson's|Filene's|Mervyn's|Ames|Zayre|Bon-Ton|Home Depot|Lowe's=lowes|Best Buy|Walgreens|CVS|Trader Joe's=trader joes|Whole Foods|Kroger|Safeway|Dollar General|Dollar Tree|Bed Bath & Beyond=bed bath and beyond|Toys "R" Us=toys r us|RadioShack=radio shack|Barnes & Noble=barnes and noble|Publix|Wegmans|Menards|Petco|PetSmart|Staples|Office Depot|GameStop|Dick's Sporting Goods=dicks|REI|Bass Pro Shops=bass pro|Cabela's`},
 {id:'beer',q:'Name an American beer',list:`Budweiser=bud|Coors|Miller|Bud Light|Coors Light|Miller Lite|Michelob Ultra=michelob|Pabst Blue Ribbon=pbr;pabst|Samuel Adams=sam adams|Blue Moon|Busch|Natural Light=natty light|Yuengling|Keystone|Rolling Rock|Sierra Nevada|Schlitz|Anchor Steam|Lagunitas|Shiner Bock=shiner|Stroh's|Genesee|Hamm's|Olympia|Narragansett|Old Milwaukee|Milwaukee's Best=beast|Dogfish Head|Goose Island|Brooklyn Lager|Bell's|Founders|Iron City|Lone Star|Grain Belt`},
 {id:'soda',q:'Name an American soda',list:`Coca-Cola=coke;coca cola|Pepsi|Dr Pepper|Mountain Dew=mtn dew|Sprite|7 Up=seven up|A&W Root Beer=a and w|Root beer|Barq's|Sunkist|Mug|Crush|Squirt|RC Cola=royal crown|Big Red|Cheerwine|Vernors|Moxie|Faygo|Shasta|Sierra Mist|Mello Yello|Fresca|Tab|Surge|Sun Drop|IBC|Dad's|Jolt Cola=jolt`,traps:{fanta:'Fanta was invented in Germany.','irn bru':'Nice try. That one’s Scottish.'}},
 {id:'dogs',q:'Name an American dog breed',list:`Boston Terrier|Alaskan Malamute=malamute|American Pit Bull Terrier=pit bull;pitbull|Chesapeake Bay Retriever=chessie|American Eskimo Dog=american eskimo|American Staffordshire Terrier=amstaff|American Bulldog|Coonhound|Bluetick Coonhound|Redbone Coonhound|Treeing Walker Coonhound|Black and Tan Coonhound|American Foxhound|Rat Terrier|Catahoula Leopard Dog=catahoula|Boykin Spaniel|American Water Spaniel|Toy Fox Terrier|Plott Hound=plott|Chinook|American Hairless Terrier|Mountain Cur|Carolina Dog|Alaskan Klee Kai|Australian Shepherd=aussie`,traps:{'siberian husky':'The husky comes from Siberia.',husky:'The husky comes from Siberia.'}}
@@ -265,7 +265,7 @@ const P=[
 ];
 /*BANK*/
 // A generated bank (Wikidata answers + page-view rarity) replaces the hand lists; prompt wording and traps stay curated.
-if(typeof BANK!=='undefined'){const m=Object.fromEntries(BANK.map(b=>[b.id,b]));for(const p of P){const b=m[p.id];if(b&&b.bank&&b.bank.length)p.bank=b.bank;if(b&&b.live)p.live=b.live}}
+if(typeof BANK!=='undefined'){const m=Object.fromEntries(BANK.map(b=>[b.id,b]));for(const p of P){const b=m[p.id];if(b&&b.bank&&b.bank.length)p.bank=b.bank;if(b&&b.live)p.live=b.live;if(b&&b.cut)p.cut=b.cut}}
 const CATS=[['American life',['fastfood','cereal','candy','thanks','beer','soda','stores']],['Geography',['states','mstates','twoword','atlantic','canada','capitals','notstate','parks','rivers']],['Music & entertainment',['simpsons','friends','sesame']],['History',['presidents','firstladies','signers','money']],['Sport',['nfl','mlb','nba']],['Words & culture',['amwords','holidays']],['General knowledge',['cars','airlines','dogs']]];
 for(const [c,ids] of CATS)for(const id of ids){const p=P.find(x=>x.id===id);if(p)p.cat=c}
 // ---------- roads ----------
@@ -321,7 +321,7 @@ function prep(p){
   const n=items.length;
   if(!p.bank)items.forEach(it=>{const q=it.rank/n;it.tier=CUTS.findIndex(c=>q<c)});
   // every prompt must have 100-mile answers: stretch the tiers so the rarest ones reach the top
-  const mx=Math.max(...items.map(it=>it.tier));if(mx>0&&mx<5)items.forEach(it=>{it.tier=Math.round(it.tier*5/mx)});
+  const mx=Math.max(...items.map(it=>it.tier));p.mx=mx>0&&mx<5?mx:5;if(p.mx<5)items.forEach(it=>{it.tier=Math.round(it.tier*5/p.mx)});
   p.items=items;p.trapMap=Object.fromEntries(Object.entries(p.traps||{}).map(([k,v])=>[norm(k),v]));p.ready=true;return p;
 }
 function lev(a,b){if(Math.abs(a.length-b.length)>2)return 9;const d=[...Array(b.length+1).keys()];
@@ -393,23 +393,32 @@ function rng(seed){let h=1779033703^seed.length;for(const ch of seed){h=Math.imu
 // comes back only after every other prompt has had a turn (about every 4-5 days).
 // At most 2 per category and 1 from the "states" family a day. Days 1-2 keep what was
 // actually played before this rule existed. scripts/check_days.js fails the build on repeats.
+// SCHED (data/schedule.json, baked in by build_site.py) freezes days once they are planned, so adding or
+// retiring a prompt never changes a day that is already scheduled; days past the schedule carry on by the same rule.
+const SCHED=/*SCHED*/{};
 const STATESFAM=new Set(['states','mstates','twoword','atlantic','canada','capitals']);
 const LAUNCH=['2026-11-27','2026-11-28'];
-function dayPrompts(d){
+function pickDay(k,last,cat,keep){
+  const all=Object.keys(cat),r=rng('prompts-'+k),tie={};all.forEach(id=>tie[id]=r());
+  const order=all.slice().sort((a,b)=>((last[a]??-99)-(last[b]??-99))||tie[a]-tie[b]);
+  const qs=(keep||[]).filter(id=>cat[id]);
+  for(const [maxC,maxS] of [[2,1],[2,2],[3,7]]){
+    for(const id of order){if(qs.length>=7)break;if(qs.includes(id))continue;
+      if(qs.filter(x=>cat[x]===cat[id]).length>=maxC)continue;
+      if(STATESFAM.has(id)&&qs.filter(x=>STATESFAM.has(x)).length>=maxS)continue;qs.push(id)}}
+  // keep the usual category order on screen
+  const ci=c=>CATS.findIndex(x=>x[0]===c);qs.sort((a,b)=>ci(cat[a])-ci(cat[b])||tie[a]-tie[b]);return qs}
+function dayPrompts(d,sched){
+  sched=sched||SCHED;const plan=sched.days||{};
   const cat={};CATS.forEach(([c,ids])=>ids.forEach(id=>cat[id]=c));
-  const all=Object.keys(cat),last={},days=[];
-  for(let k=1;k<=Math.max(1,d);k++){let qs;
-    if(k<=LAUNCH.length){const r=rng('backroad-'+LAUNCH[k-1]);qs=CATS.map(([c,ids])=>ids[Math.floor(r()*ids.length)])}
-    else{const r=rng('prompts-'+k),tie={};all.forEach(id=>tie[id]=r());
-      const order=all.slice().sort((a,b)=>((last[a]??-99)-(last[b]??-99))||tie[a]-tie[b]);
-      qs=[];for(const [maxC,maxS] of [[2,1],[2,2],[3,7]]){
-        for(const id of order){if(qs.length>=7)break;if(qs.includes(id))continue;
-          if(qs.filter(x=>cat[x]===cat[id]).length>=maxC)continue;
-          if(STATESFAM.has(id)&&qs.filter(x=>STATESFAM.has(x)).length>=maxS)continue;qs.push(id)}}
-      // keep the usual category order on screen
-      const ci=c=>CATS.findIndex(x=>x[0]===c);qs.sort((a,b)=>ci(cat[a])-ci(cat[b])||tie[a]-tie[b])}
-    qs.forEach(id=>last[id]=k);days.push(qs)}
-  return days[days.length-1]}
+  const last={};let qs=[];
+  for(let k=1;k<=Math.max(1,d);k++){
+    const fixed=plan[k];
+    if(fixed){qs=fixed.filter(id=>cat[id]);if(qs.length<7)qs=pickDay(k,last,cat,qs)}   // a retired prompt is topped up
+    else if(k<=LAUNCH.length){const r=rng('backroad-'+LAUNCH[k-1]);qs=CATS.map(([c,ids])=>ids[Math.floor(r()*ids.length)])}
+    else qs=pickDay(k,last,cat);
+    qs.forEach(id=>last[id]=k)}
+  return qs}
 // ---------- end daily prompts
 function newGame(seed){const r=seed?rng(seed):Math.random;
   const rand=CATS.map(([c,ids])=>ids[Math.floor(r()*ids.length)]);// always drawn, so the day's road stays the same
@@ -706,9 +715,10 @@ function ask(){panel.classList.remove('homep');
   $('f').onsubmit=async e=>{e.preventDefault();if(inp.disabled)return;const r=judge(p,inp.value);if(!r)return;
     if(r.trap){noteMiss(p,inp.value);msgEl.textContent=r.trap;inp.select();return}
     if(r.miss&&(p.live||WIKI[p.id])&&inp.value.trim().length>2){   // not on our list: ask Wikidata, then Wikipedia, whether it's a real one
-      inp.disabled=true;msgEl.textContent=C('question.checking','Checking the map…');const name=(p.live&&await liveCheck(p,inp.value))||await wikiCheck(p,inp.value);inp.disabled=false;
+      inp.disabled=true;msgEl.textContent=C('question.checking','Checking the map…');LAST_TITLE=null;const name=(p.live&&await liveCheck(p,inp.value))||await wikiCheck(p,inp.value);
+      const lt=name?await liveTier(p,LAST_TITLE||name):null;inp.disabled=false;
       if(G.i!==qi)return;
-      if(name){const dup=p.items.find(x=>norm(x.name)===norm(name)),it=dup||{name,al:[norm(name)],tier:5,rank:p.items.length,live:true};if(!dup)p.items.push(it);answer(p,it);return}}
+      if(name&&lt!==null){const dup=p.items.find(x=>norm(x.name)===norm(name)),it=dup||{name,al:[norm(name)],tier:lt,rank:p.items.length,live:true};if(!dup)p.items.push(it);answer(p,it);return}}
     if(r.miss){noteMiss(p,inp.value);msgEl.textContent=C('question.not_found','Not on the map. Try another.');inp.focus();inp.select();return}
     answer(p,r.it)};
   $('pass').onclick=()=>answer(p,null);
@@ -762,6 +772,8 @@ const WIKI={
   simpsons:{kw:'Simpsons',d:/\bsimpsons\b/i,c:/\bthe simpsons characters\b/i},
   sesame:{kw:'Sesame Street',d:/\bsesame street\b/i,c:/\bsesame street (characters|muppets)\b/i},
   friends:{kw:'Friends',d:/\bfriends\b/i,c:/\bfriends \(1994 tv series\) characters\b/i},
+  holidays:{kw:'holiday',d:/\b(holiday|observance|celebration|festival|commemoration|feast day|awareness (day|month)|day of (remembrance|observance))\b/i,c:/\b(public holidays in the united states|federal holidays in the united states|observances in the united states|holidays in the united states|american (holidays|observances))\b/i,us:1},
+  firstladies:{kw:'First Lady',d:/\bfirst lady of the united states\b/i,c:/\bfirst ladies (and gentlemen )?of the united states\b/i},
 };
 const NOT_US=/\b(japanese|british|english|scottish|welsh|irish|dutch|german|canadian|mexican|belgian|french|italian|australian|swiss|chinese|korean|swedish|danish|norwegian|indian|brazilian|spanish|czech|austrian|new zealand)\b/i;
 async function wikiCheck(p,raw,fetchFn){
@@ -790,7 +802,7 @@ async function wikiCheck(p,raw,fetchFn){
     let exactFail=false;
     for(const pg of lp){
       if(/same term|disambiguation/i.test(pg.description||''))continue;
-      if(fits(pg,lp)){const r=red.find(x=>x.to===pg.title);return r&&!norm(strip(pg.title)).includes(want)?r.from:strip(pg.title)}
+      if(fits(pg,lp)){const r=red.find(x=>x.to===pg.title);LAST_TITLE=pg.title;return r&&!norm(strip(pg.title)).includes(want)?r.from:strip(pg.title)}
       exactFail=true;
     }
     // 2. search: an exact title (e.g. "Pliny the Younger (beer)") always counts; a longer title ("Fremont Brewing Company")
@@ -801,12 +813,26 @@ async function wikiCheck(p,raw,fetchFn){
       for(const pg of pages){
         const nt=norm(strip(pg.title)),exact=nt===want||lev(nt,want)<=1;
         if(!exact&&(exactFail||!nt.startsWith(want+' ')))continue;
-        if(fits(pg,pages))return strip(pg.title);
+        if(fits(pg,pages)){LAST_TITLE=pg.title;return strip(pg.title)}
       }
     }
     return null;
   }catch(e){return null}finally{to&&clearTimeout(to)}
 }
+// Score an answer found live the same way the weekly build scores listed ones: by its Wikipedia page views,
+// placed on this prompt's own scale (p.cut = the page-view floor of each tier, from data/bank.js).
+// Returns a tier, or null when the page is so little read that it's more likely a loose match than an answer.
+let LAST_TITLE=null;const OBSCURE=1;   // median daily views below this: not accepted, logged for review
+async function liveTier(p,title,fetchFn){
+  fetchFn=fetchFn||fetch;const fall=4;   // no page views to go on: 80 mi
+  try{const j=await (await fetchFn('https://en.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&origin=*&redirects=1&prop=pageviews&pvipdays=60&titles='+encodeURIComponent(title))).json();
+    const pg=((j.query&&j.query.pages)||[])[0],pv=pg&&pg.pageviews;if(!pv)return fall;
+    const d=Object.values(pv).map(v=>v||0).sort((a,b)=>a-b),med=d.length?d[d.length>>1]:0;
+    if(med<OBSCURE)return null;
+    if(!p.cut)return 4;
+    const v=med*730,t=p.cut.findIndex(c=>v>=c),raw=t<0?5:t;
+    return Math.min(5,Math.round(raw*5/(p.mx||5)));
+  }catch(e){return fall}}
 // ---------- end wikipedia check ----------
 // ---------- live check ----------
 // An answer missing from the list is looked up on Wikidata and accepted (at 100 mi) if it is the right kind of thing.
@@ -818,9 +844,9 @@ async function liveCheck(p,raw){
     for(const t of tries){const j=await (await fetch('https://www.wikidata.org/w/api.php?action=wbsearchentities&format=json&origin=*&language=en&uselang=en&type=item&limit=7&search='+encodeURIComponent(t),{signal:ctl.signal})).json();
       const want=norm(t);for(const h of j.search||[]){const mt=norm((h.match&&h.match.text)||h.label||'');if(mt===want||lev(mt,want)<=1||mt.startsWith(want+' '))ids.add(h.id)}}
     if(!ids.size)return null;
-    const sq=`SELECT ?item ?itemLabel WHERE { VALUES ?item { ${[...ids].map(i=>'wd:'+i).join(' ')} } ${p.live} SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } } LIMIT 1`;
+    const sq=`SELECT ?item ?itemLabel ?article WHERE { VALUES ?item { ${[...ids].map(i=>'wd:'+i).join(' ')} } ${p.live} OPTIONAL { ?article schema:about ?item; schema:isPartOf <https://en.wikipedia.org/>. } SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } } LIMIT 1`;
     const j=await (await fetch('https://query.wikidata.org/sparql?format=json&query='+encodeURIComponent(sq),{signal:ctl.signal,headers:{Accept:'application/sparql-results+json'}})).json();
-    const b=j.results.bindings[0];return b?b.itemLabel.value.replace(/\s*\(.*?\)\s*/g,' ').trim():null;
+    const b=j.results.bindings[0];if(b&&b.article)LAST_TITLE=decodeURIComponent(b.article.value.split('/wiki/')[1]||'').replace(/_/g,' ')||null;return b?b.itemLabel.value.replace(/\s*\(.*?\)\s*/g,' ').trim():null;
   }catch(e){return null}finally{clearTimeout(to)}
 }
 
