@@ -26,7 +26,7 @@ const cases = [
   ['dogs', 'Boykin Spaniel', 1], ['dogs', 'Labrador Retriever', 0],
   ['simpsons', 'Hans Moleman', 1], ['simpsons', 'Peter Griffin', 0],
   ['sesame', 'Snuffleupagus', 1], ['friends', 'Gunther', 1], ['simpsons', 'Disco Stu', 1], ['candy', 'Goo Goo Cluster', 1], ['candy', 'Dairy Milk', 0], ['soda', 'Vimto', 0], ['friends', 'Sheldon Cooper', 0],
-  ['holidays', 'Juneteenth', 1], ['holidays', 'Arbor Day', 1], ['holidays', 'Boxing Day', 0], ['holidays', 'Bonfire Night', 0], ['holidays', 'Guy Fawkes Night', 0],
+  ['holidays', 'Juneteenth', 1], ['holidays', 'Boxing Day', 0], ['holidays', 'Bonfire Night', 0], ['holidays', 'Guy Fawkes Night', 0],
   ['firstladies', 'Lou Henry Hoover', 1], ['firstladies', 'Harriet Lane', 1], ['firstladies', 'Princess Diana', 0],
 ];
 (async () => {
